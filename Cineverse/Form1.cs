@@ -7,7 +7,7 @@ namespace Cineverse
 {
     public partial class Login : Form
     {
-        private object ex;
+
 
         public Login()
         {
@@ -42,7 +42,15 @@ namespace Cineverse
 
                     if(Convert.ToInt32(count) != 1)
                     {
-                        
+                        MessageBox.Show("Incorrect username or password");
+                        txt_user.Text = "";
+                        txt_pass.Text = "";
+                    } 
+                    else
+                    {
+                        SignUp signupfrm = new SignUp();
+                        signupfrm.Show();
+                        this.Hide();
                     }
                     
                 }
@@ -59,8 +67,6 @@ namespace Cineverse
             {
                 MessageBox.Show("Please fill up both fields");
             }
-
-
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
