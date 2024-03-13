@@ -97,11 +97,13 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(104, 509);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(317, 20);
+            this.checkBox1.Size = new System.Drawing.Size(318, 20);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "I accept the Terms of Use and Privacy Policy";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -240,7 +242,7 @@
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.Login.Location = new System.Drawing.Point(335, 604);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(55, 19);
+            this.Login.Size = new System.Drawing.Size(56, 19);
             this.Login.TabIndex = 10;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
@@ -253,7 +255,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(135, 604);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 19);
+            this.label4.Size = new System.Drawing.Size(207, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
@@ -275,6 +277,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(375, 40);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Sign Up";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // panel4
             // 
