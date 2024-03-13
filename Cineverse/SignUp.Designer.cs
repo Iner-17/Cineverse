@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1359, 735);
+            this.panel1.Size = new System.Drawing.Size(1375, 774);
             this.panel1.TabIndex = 0;
             // 
             // panel5
@@ -67,7 +67,7 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1321, 20);
+            this.panel5.Location = new System.Drawing.Point(1343, 20);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 3;
@@ -88,7 +88,7 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.txt_email);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(417, 49);
+            this.panel3.Location = new System.Drawing.Point(425, 69);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(524, 636);
             this.panel3.TabIndex = 2;
@@ -337,7 +337,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1359, 735);
+            this.ClientSize = new System.Drawing.Size(1375, 774);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
