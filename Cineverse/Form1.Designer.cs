@@ -46,7 +46,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::Cineverse.Properties.Resources.BG_CINEVERSE;
+            this.panel1.BackgroundImage = global::Cineverse.Properties.Resources.Cineverse_Bg;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
@@ -63,7 +63,7 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1340, 11);
+            this.panel5.Location = new System.Drawing.Point(1337, 21);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 2;
@@ -92,11 +92,11 @@
             this.signup.AutoSize = true;
             this.signup.BackColor = System.Drawing.Color.Transparent;
             this.signup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signup.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.signup.Location = new System.Drawing.Point(312, 589);
+            this.signup.Location = new System.Drawing.Point(320, 589);
             this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(62, 16);
+            this.signup.Size = new System.Drawing.Size(68, 19);
             this.signup.TabIndex = 9;
             this.signup.Text = "Sign Up";
             this.signup.Click += new System.EventHandler(this.signup_Click);
@@ -105,11 +105,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(155, 589);
+            this.label4.Location = new System.Drawing.Point(137, 589);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 16);
+            this.label4.Size = new System.Drawing.Size(189, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 
@@ -153,7 +153,7 @@
             this.guna2Button1.Location = new System.Drawing.Point(77, 487);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(375, 40);
-            this.guna2Button1.TabIndex = 5;
+            this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Login";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -188,7 +188,7 @@
             this.txt_pass.PlaceholderText = "";
             this.txt_pass.SelectedText = "";
             this.txt_pass.Size = new System.Drawing.Size(375, 40);
-            this.txt_pass.TabIndex = 2;
+            this.txt_pass.TabIndex = 3;
             // 
             // txt_user
             // 
@@ -211,7 +211,7 @@
             this.txt_user.PlaceholderText = "";
             this.txt_user.SelectedText = "";
             this.txt_user.Size = new System.Drawing.Size(375, 40);
-            this.txt_user.TabIndex = 1;
+            this.txt_user.TabIndex = 2;
             // 
             // label2
             // 

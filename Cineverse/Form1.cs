@@ -12,6 +12,7 @@ namespace Cineverse
         public Login()
         {
             InitializeComponent();
+            this.ActiveControl = null;
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
