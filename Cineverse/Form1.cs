@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Cineverse
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
+
+        }
+
+      
     }
 }
