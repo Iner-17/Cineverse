@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Cineverse
 {
     public partial class Login : Form
     {
+        private object ex;
+
         public Login()
         {
             InitializeComponent();
@@ -26,6 +23,49 @@ namespace Cineverse
         {
             Login loginfrm = new Login();
             this.Close();
+        }
+
+        public void login()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+            if(txt_user.Text != "" && txt_pass.Text != "")
+            {
+                try
+                {
+                    conn.Open();
+                    string loginQuery = "SELECT COUNT(*) FROM accounts WHERE username=@username AND password=@password;";
+                    MySqlCommand loginCmd = new MySqlCommand(loginQuery, conn);
+                    loginCmd.Parameters.AddWithValue("@username", txt_user.Text);
+                    loginCmd.Parameters.AddWithValue("@password", txt_pass.Text);
+                    object count = loginCmd.ExecuteScalar();
+                    
+
+                    if(Convert.ToInt32(count) != 1)
+                    {
+                        
+                    }
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill up both fields");
+            }
+
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            login();
         }
     }
 }
