@@ -48,9 +48,8 @@ namespace Cineverse
                     } 
                     else
                     {
-                        SignUp signupfrm = new SignUp();
-                        signupfrm.Show();
-                        this.Hide();
+                        MessageBox.Show("Success");
+                        
                     }
                     
                 }
@@ -72,6 +71,13 @@ namespace Cineverse
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             login();
+        }
+
+        private void signup_Click(object sender, EventArgs e)
+        {
+            SignUp signupfrm = new SignUp();
+            signupfrm.Show();
+            this.Hide();
         }
     }
 }

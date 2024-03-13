@@ -30,7 +30,7 @@
         {            this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.signup = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.signup);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label3);
@@ -87,18 +87,19 @@
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label6
+            // signup
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label6.Location = new System.Drawing.Point(312, 589);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Sign Up";
+            this.signup.AutoSize = true;
+            this.signup.BackColor = System.Drawing.Color.Transparent;
+            this.signup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.signup.Location = new System.Drawing.Point(312, 589);
+            this.signup.Name = "signup";
+            this.signup.Size = new System.Drawing.Size(62, 16);
+            this.signup.TabIndex = 9;
+            this.signup.Text = "Sign Up";
+            this.signup.Click += new System.EventHandler(this.signup_Click);
             // 
             // label4
             // 
@@ -265,7 +266,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label signup;
         private System.Windows.Forms.Panel panel5;
     }
 }
