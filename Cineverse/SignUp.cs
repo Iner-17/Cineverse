@@ -176,10 +176,8 @@ namespace Cineverse
 
             if (txt_firstName.Text != "First Name" && txt_lastName.Text != "Last Name" && txt_email.Text != "Email (Optional)" && txt_username.Text != "Username" && txt_password.Text != "Password" && txt_confirmPassword.Text != "Confirm Password")
             {
-
                 if (txt_confirmPassword.Text == txt_password.Text)
                 {
-
                     try
                     {
                         conn.Open();
@@ -197,7 +195,7 @@ namespace Cineverse
                     }
                     catch (Exception ex)
                     {
-
+                        MessageBox.Show(ex.Message);
                     }
                     finally { conn.Close(); }
                 }
@@ -205,7 +203,6 @@ namespace Cineverse
                 {
                     MessageBox.Show("Unmatched Password");
                 }
-
             }
             else
             {
