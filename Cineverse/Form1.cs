@@ -22,7 +22,10 @@ namespace Cineverse
             panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
 
         }
-
-      
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Login loginfrm = new Login();
+            this.Close();
+        }
     }
 }
