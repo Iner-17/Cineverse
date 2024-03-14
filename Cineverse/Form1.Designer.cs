@@ -27,7 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {            this.panel1 = new System.Windows.Forms.Panel();
+        {            this.LoginBg = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.signup = new System.Windows.Forms.Label();
@@ -40,22 +40,22 @@
             this.txt_user = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.LoginBg.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // LoginBg
             // 
-            this.panel1.BackgroundImage = global::Cineverse.Properties.Resources.Cineverse_Bg;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1375, 774);
-            this.panel1.TabIndex = 0;
+            this.LoginBg.BackgroundImage = global::Cineverse.Properties.Resources.Cineverse_Bg;
+            this.LoginBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LoginBg.Controls.Add(this.panel5);
+            this.LoginBg.Controls.Add(this.panel3);
+            this.LoginBg.Controls.Add(this.panel2);
+            this.LoginBg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginBg.Location = new System.Drawing.Point(0, 0);
+            this.LoginBg.Name = "LoginBg";
+            this.LoginBg.Size = new System.Drawing.Size(1375, 774);
+            this.LoginBg.TabIndex = 0;
             // 
             // panel5
             // 
@@ -244,12 +244,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1375, 774);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.LoginBg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cineverse";
-            this.panel1.ResumeLayout(false);
+            this.LoginBg.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -259,7 +259,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel LoginBg;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;

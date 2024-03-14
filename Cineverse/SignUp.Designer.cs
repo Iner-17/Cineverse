@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.SignUpBg = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -44,22 +44,22 @@
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.SignUpBg.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // SignUpBg
             // 
-            this.panel1.BackgroundImage = global::Cineverse.Properties.Resources.Cineverse_Bg;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1375, 774);
-            this.panel1.TabIndex = 0;
+            this.SignUpBg.BackgroundImage = global::Cineverse.Properties.Resources.Cineverse_Bg;
+            this.SignUpBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SignUpBg.Controls.Add(this.panel5);
+            this.SignUpBg.Controls.Add(this.panel3);
+            this.SignUpBg.Controls.Add(this.panel2);
+            this.SignUpBg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SignUpBg.Location = new System.Drawing.Point(0, 0);
+            this.SignUpBg.Name = "SignUpBg";
+            this.SignUpBg.Size = new System.Drawing.Size(1375, 774);
+            this.SignUpBg.TabIndex = 0;
             // 
             // panel5
             // 
@@ -92,6 +92,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(524, 636);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // checkBox1
             // 
@@ -103,7 +104,7 @@
             this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(104, 509);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(318, 20);
+            this.checkBox1.Size = new System.Drawing.Size(317, 20);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "I accept the Terms of Use and Privacy Policy";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -242,7 +243,7 @@
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.Login.Location = new System.Drawing.Point(335, 604);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(56, 19);
+            this.Login.Size = new System.Drawing.Size(55, 19);
             this.Login.TabIndex = 10;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
@@ -255,7 +256,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(135, 604);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 19);
+            this.label4.Size = new System.Drawing.Size(206, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
@@ -341,12 +342,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1375, 774);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SignUpBg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
-            this.panel1.ResumeLayout(false);
+            this.SignUpBg.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -355,7 +356,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel SignUpBg;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label Login;
