@@ -172,5 +172,20 @@
   <ItemGroup>
     <None Include="Resources\Cineverse_Bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turn-offsmol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoutsmol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userbtn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

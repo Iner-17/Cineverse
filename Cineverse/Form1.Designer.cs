@@ -63,7 +63,7 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1337, 21);
+            this.panel5.Location = new System.Drawing.Point(1347, 14);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 2;
@@ -109,7 +109,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(137, 589);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 19);
+            this.label4.Size = new System.Drawing.Size(189, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 

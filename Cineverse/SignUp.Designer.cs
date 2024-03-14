@@ -67,7 +67,7 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1343, 20);
+            this.panel5.Location = new System.Drawing.Point(1347, 14);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 3;
@@ -332,7 +332,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LOGO1;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(37, 32);
+            this.panel2.Location = new System.Drawing.Point(37, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(154, 56);
             this.panel2.TabIndex = 1;
