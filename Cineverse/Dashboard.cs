@@ -83,10 +83,66 @@ namespace Cineverse
             loginfrm.Show();
             this.Close();
         }
-
-        private void lbl_date_Click(object sender, EventArgs e)
+      
+        private void btn_movies_MouseEnter(object sender, EventArgs e)
         {
+            btn_movies.BackColor = Color.FromArgb(31, 178, 198);
+            btn_movies.ForeColor = Color.Black;
+        }
 
+        private void btn_movies_MouseLeave(object sender, EventArgs e)
+        {
+            btn_movies.BackColor = Color.FromArgb(20, 32, 32);
+            btn_movies.ForeColor = Color.White;
+        }
+
+        private void btn_schedule_MouseEnter(object sender, EventArgs e)
+        {
+            btn_schedule.BackColor = Color.FromArgb(31, 178, 198);
+            btn_schedule.ForeColor = Color.Black;
+        }
+
+        private void btn_schedule_MouseLeave(object sender, EventArgs e)
+        {
+            btn_schedule.BackColor = Color.FromArgb(20, 32, 32);
+            btn_schedule.ForeColor = Color.White;
+        }
+
+        private void btn_bookings_MouseEnter(object sender, EventArgs e)
+        {
+            btn_bookings.BackColor = Color.FromArgb(31, 178, 198);
+            btn_bookings.ForeColor = Color.Black;
+        }
+
+        private void btn_bookings_MouseLeave(object sender, EventArgs e)
+        {
+            btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
+            btn_bookings.ForeColor = Color.White;
+        }
+
+        private void btn_user_MouseEnter(object sender, EventArgs e)
+        {
+            btn_user.BackColor = Color.FromArgb(31, 178, 198);
+            btn_user.ForeColor = Color.Black;
+        }
+
+        private void btn_user_MouseLeave(object sender, EventArgs e)
+        {
+            btn_user.BackColor = Color.FromArgb(20, 32, 32);
+            btn_user.ForeColor = Color.White;
+        }
+
+        private void btn_logout_MouseEnter(object sender, EventArgs e)
+        {
+            btn_logout.BackColor = Color.FromArgb(31, 178, 198);
+            btn_logout.ForeColor = Color.Black;
+        }
+
+        private void btn_logout_MouseLeave(object sender, EventArgs e)
+        {
+            btn_logout.BackColor = Color.FromArgb(20, 32, 32);
+            btn_logout.ForeColor = Color.White;
         }
     }
+    
 }
