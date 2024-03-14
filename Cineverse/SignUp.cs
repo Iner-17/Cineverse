@@ -210,5 +210,9 @@ namespace Cineverse
             }
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
+        }
     }
 }
