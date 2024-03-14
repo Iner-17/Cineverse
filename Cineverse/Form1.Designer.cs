@@ -109,7 +109,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(137, 589);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 19);
+            this.label4.Size = new System.Drawing.Size(192, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 
@@ -171,7 +171,7 @@
             // 
             this.txt_pass.BorderRadius = 10;
             this.txt_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_pass.DefaultText = "";
+            this.txt_pass.DefaultText = "Password";
             this.txt_pass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_pass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_pass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -179,7 +179,7 @@
             this.txt_pass.FillColor = System.Drawing.Color.Transparent;
             this.txt_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_pass.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pass.ForeColor = System.Drawing.Color.White;
+            this.txt_pass.ForeColor = System.Drawing.Color.Silver;
             this.txt_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_pass.Location = new System.Drawing.Point(77, 409);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -189,12 +189,14 @@
             this.txt_pass.SelectedText = "";
             this.txt_pass.Size = new System.Drawing.Size(375, 40);
             this.txt_pass.TabIndex = 3;
+            this.txt_pass.Enter += new System.EventHandler(this.txt_pass_Enter);
+            this.txt_pass.Leave += new System.EventHandler(this.txt_pass_Leave);
             // 
             // txt_user
             // 
             this.txt_user.BorderRadius = 10;
             this.txt_user.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_user.DefaultText = "";
+            this.txt_user.DefaultText = "Enter Username or Email";
             this.txt_user.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_user.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_user.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -202,7 +204,7 @@
             this.txt_user.FillColor = System.Drawing.Color.Transparent;
             this.txt_user.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_user.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_user.ForeColor = System.Drawing.Color.White;
+            this.txt_user.ForeColor = System.Drawing.Color.Silver;
             this.txt_user.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_user.Location = new System.Drawing.Point(77, 328);
             this.txt_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -212,6 +214,8 @@
             this.txt_user.SelectedText = "";
             this.txt_user.Size = new System.Drawing.Size(375, 40);
             this.txt_user.TabIndex = 2;
+            this.txt_user.Enter += new System.EventHandler(this.txt_user_Enter);
+            this.txt_user.Leave += new System.EventHandler(this.txt_user_Leave);
             // 
             // label2
             // 

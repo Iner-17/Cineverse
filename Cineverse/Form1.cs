@@ -80,5 +80,51 @@ namespace Cineverse
             signupfrm.Show();
             this.Hide();
         }
+
+        private void txt_user_Enter(object sender, EventArgs e)
+        {
+            if (txt_user.Text == "Enter Username or Email")
+            {
+                txt_user.Text = "";
+                txt_user.ForeColor = Color.White;
+                
+            }
+        }
+
+        private void txt_user_Leave(object sender, EventArgs e)
+        {
+            if (txt_user.Text == "")
+            {
+                txt_user.Text = "Enter Username or Email";
+                txt_user.ForeColor = Color.Silver;
+               
+            }
+        }
+
+        private void txt_pass_Enter(object sender, EventArgs e)
+        {
+            if (txt_pass.Text == "Password")
+            {
+                txt_pass.Text = "";
+                txt_pass.ForeColor = Color.White;
+                if (txt_pass.UseSystemPasswordChar == false)
+                {
+                    txt_pass.UseSystemPasswordChar = true;
+                }
+            }
+        }
+
+        private void txt_pass_Leave(object sender, EventArgs e)
+        {
+            if (txt_pass.Text == "")
+            {
+                txt_pass.Text = "Password";
+                txt_pass.ForeColor = Color.Silver;
+                if (txt_pass.UseSystemPasswordChar == true)
+                {
+                    txt_pass.UseSystemPasswordChar = false;
+                }
+            }
+        }
     }
 }
