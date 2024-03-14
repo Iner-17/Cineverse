@@ -7,12 +7,15 @@ namespace Cineverse
 {
     public partial class Login : Form
     {
-
-
+       
         public Login()
         {
             InitializeComponent();
-            this.ActiveControl = null;
+        }
+
+        public string GetTextBoxValue()
+        {
+            return txt_user.Text;
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -49,8 +52,10 @@ namespace Cineverse
                     } 
                     else
                     {
-                        MessageBox.Show("Success");
-                        
+                        Dashboard dashboard = new Dashboard(this);
+                        dashboard.Show();
+                        this.Hide();
+
                     }
                     
                 }
@@ -71,7 +76,10 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            
             login();
+            
+
         }
 
         private void signup_Click(object sender, EventArgs e)
@@ -125,6 +133,11 @@ namespace Cineverse
                     txt_pass.UseSystemPasswordChar = false;
                 }
             }
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

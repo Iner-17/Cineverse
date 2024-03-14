@@ -68,6 +68,7 @@
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 2;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel3
             // 
@@ -109,7 +110,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(137, 589);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 19);
+            this.label4.Size = new System.Drawing.Size(192, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 

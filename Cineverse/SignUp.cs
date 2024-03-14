@@ -161,7 +161,7 @@ namespace Cineverse
         {
             Login loginfrm = new Login();
             loginfrm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
