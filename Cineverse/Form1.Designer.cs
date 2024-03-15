@@ -68,7 +68,6 @@
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 2;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
-          
             // 
             // panel3
             // 
@@ -179,7 +178,7 @@
             this.txt_pass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_pass.FillColor = System.Drawing.Color.Transparent;
             this.txt_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_pass.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.Color.Silver;
             this.txt_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_pass.Location = new System.Drawing.Point(77, 409);
@@ -190,7 +189,6 @@
             this.txt_pass.SelectedText = "";
             this.txt_pass.Size = new System.Drawing.Size(375, 40);
             this.txt_pass.TabIndex = 3;
-         
             this.txt_pass.Enter += new System.EventHandler(this.txt_pass_Enter);
             this.txt_pass.Leave += new System.EventHandler(this.txt_pass_Leave);
             // 
@@ -205,7 +203,7 @@
             this.txt_user.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_user.FillColor = System.Drawing.Color.Transparent;
             this.txt_user.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_user.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_user.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user.ForeColor = System.Drawing.Color.Silver;
             this.txt_user.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_user.Location = new System.Drawing.Point(77, 328);

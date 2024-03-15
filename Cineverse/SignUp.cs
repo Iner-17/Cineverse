@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -101,6 +103,31 @@ namespace Cineverse
                 txt_username.Text = "Username";
                 txt_username.ForeColor = Color.Silver;
             }
+
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+
+                string checkDupliQuery = "SELECT * FROM accounts WHERE username=@Username";
+                MySqlCommand cmd = new MySqlCommand(checkDupliQuery, conn);
+                cmd.Parameters.AddWithValue("@Username", txt_username.Text);
+                MySqlDataReader reader = cmd.ExecuteReader();
+               
+                if (reader.HasRows)
+                {
+                    MessageBox.Show("Username Already Exists.");
+                    txt_username.Text = "Username";
+                    txt_username.ForeColor = Color.Silver;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
         }
 
         private void txt_password_Enter(object sender, EventArgs e)
@@ -178,26 +205,38 @@ namespace Cineverse
             {
                 if (txt_confirmPassword.Text == txt_password.Text)
                 {
-                    try
-                    {
-                        conn.Open();
+                    string email = txt_email.Text;
+                    Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
+                        + "@"
+                        + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
+                    Match match = regex.Match(email);
+                    if (match.Success) 
+                        {  
+                        try
+                        {
+                            conn.Open();
 
-                        string signupQuery = "INSERT INTO accounts (firstname, lastname, email, username, password) VALUES (@Firstname, @Lastname, @Email, @Username, @Password);";
-                        MySqlCommand signupcmd = new MySqlCommand(signupQuery, conn);
-                        signupcmd.Parameters.AddWithValue("@Firstname", txt_firstName.Text);
-                        signupcmd.Parameters.AddWithValue("@Lastname", txt_lastName.Text);
-                        signupcmd.Parameters.AddWithValue("@Email", txt_email.Text);
-                        signupcmd.Parameters.AddWithValue("@Username", txt_username.Text);
-                        signupcmd.Parameters.AddWithValue("@Password", txt_password.Text);
-                        signupcmd.ExecuteNonQuery();
+                            string signupQuery = "INSERT INTO accounts (firstname, lastname, email, username, password) VALUES (@Firstname, @Lastname, @Email, @Username, @Password);";
+                            MySqlCommand signupcmd = new MySqlCommand(signupQuery, conn);
+                            signupcmd.Parameters.AddWithValue("@Firstname", txt_firstName.Text);
+                            signupcmd.Parameters.AddWithValue("@Lastname", txt_lastName.Text);
+                            signupcmd.Parameters.AddWithValue("@Email", txt_email.Text);
+                            signupcmd.Parameters.AddWithValue("@Username", txt_username.Text);
+                            signupcmd.Parameters.AddWithValue("@Password", txt_password.Text);
+                            signupcmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Successfully Added Account");
-                    }
-                    catch (Exception ex)
+                            MessageBox.Show("Successfully Added Account");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally { conn.Close(); }
+                    } 
+                    else
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show(email + " is not a valid email.");
                     }
-                    finally { conn.Close(); }
                 }
                 else
                 {
@@ -209,6 +248,8 @@ namespace Cineverse
                 MessageBox.Show("Please fill up all fields");
             }
         }
+
+      
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {

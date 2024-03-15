@@ -90,7 +90,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1035, 718);
             this.panel1.TabIndex = 0;
-            
             // 
             // panel4
             // 
@@ -110,7 +109,7 @@
             this.lbl_date.BackColor = System.Drawing.Color.Transparent;
             this.lbl_date.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.ForeColor = System.Drawing.Color.White;
-            this.lbl_date.Location = new System.Drawing.Point(741, 107);
+            this.lbl_date.Location = new System.Drawing.Point(721, 89);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.Size = new System.Drawing.Size(250, 21);
             this.lbl_date.TabIndex = 5;
@@ -122,7 +121,7 @@
             this.lbl_time.BackColor = System.Drawing.Color.Transparent;
             this.lbl_time.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_time.ForeColor = System.Drawing.Color.White;
-            this.lbl_time.Location = new System.Drawing.Point(739, 72);
+            this.lbl_time.Location = new System.Drawing.Point(719, 54);
             this.lbl_time.Name = "lbl_time";
             this.lbl_time.Size = new System.Drawing.Size(279, 35);
             this.lbl_time.TabIndex = 4;

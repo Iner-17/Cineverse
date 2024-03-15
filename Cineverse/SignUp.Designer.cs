@@ -50,12 +50,14 @@
             // 
             // SignUpBg
             // 
+            this.SignUpBg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SignUpBg.BackgroundImage = global::Cineverse.Properties.Resources.Cineverse_Bg;
             this.SignUpBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SignUpBg.Controls.Add(this.panel5);
             this.SignUpBg.Controls.Add(this.panel3);
             this.SignUpBg.Controls.Add(this.panel2);
-            this.SignUpBg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SignUpBg.Location = new System.Drawing.Point(0, 0);
             this.SignUpBg.Name = "SignUpBg";
             this.SignUpBg.Size = new System.Drawing.Size(1375, 774);
@@ -104,7 +106,7 @@
             this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(104, 509);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(317, 20);
+            this.checkBox1.Size = new System.Drawing.Size(305, 22);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "I accept the Terms of Use and Privacy Policy";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -120,7 +122,7 @@
             this.txt_confirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_confirmPassword.FillColor = System.Drawing.Color.Transparent;
             this.txt_confirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_confirmPassword.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_confirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_confirmPassword.ForeColor = System.Drawing.Color.Silver;
             this.txt_confirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_confirmPassword.Location = new System.Drawing.Point(74, 456);
@@ -145,7 +147,7 @@
             this.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_password.FillColor = System.Drawing.Color.Transparent;
             this.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_password.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.Silver;
             this.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_password.Location = new System.Drawing.Point(75, 398);
@@ -170,7 +172,7 @@
             this.txt_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_username.FillColor = System.Drawing.Color.Transparent;
             this.txt_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.Silver;
             this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_username.Location = new System.Drawing.Point(74, 340);
@@ -195,7 +197,7 @@
             this.txt_lastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_lastName.FillColor = System.Drawing.Color.Transparent;
             this.txt_lastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lastName.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lastName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lastName.ForeColor = System.Drawing.Color.Silver;
             this.txt_lastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_lastName.Location = new System.Drawing.Point(268, 228);
@@ -211,6 +213,7 @@
             // 
             // txt_firstName
             // 
+            this.txt_firstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_firstName.BorderRadius = 10;
             this.txt_firstName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_firstName.DefaultText = "First Name";
@@ -220,7 +223,7 @@
             this.txt_firstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_firstName.FillColor = System.Drawing.Color.Transparent;
             this.txt_firstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_firstName.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_firstName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_firstName.ForeColor = System.Drawing.Color.Silver;
             this.txt_firstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_firstName.Location = new System.Drawing.Point(74, 228);
@@ -243,7 +246,7 @@
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.Login.Location = new System.Drawing.Point(335, 604);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(55, 19);
+            this.Login.Size = new System.Drawing.Size(56, 21);
             this.Login.TabIndex = 10;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
@@ -256,7 +259,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(135, 604);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 19);
+            this.label4.Size = new System.Drawing.Size(203, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
@@ -301,7 +304,7 @@
             this.txt_email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_email.FillColor = System.Drawing.Color.Transparent;
             this.txt_email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.Silver;
             this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_email.Location = new System.Drawing.Point(75, 285);
