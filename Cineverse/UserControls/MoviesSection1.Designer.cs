@@ -137,7 +137,7 @@
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
             this.lbl_genre1.Location = new System.Drawing.Point(254, 323);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre1.Size = new System.Drawing.Size(41, 15);
             this.lbl_genre1.TabIndex = 20;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -149,7 +149,7 @@
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
             this.lbl_duration1.Location = new System.Drawing.Point(247, 303);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration1.Size = new System.Drawing.Size(53, 15);
             this.lbl_duration1.TabIndex = 18;
             this.lbl_duration1.Text = "Duration";
             // 
@@ -188,7 +188,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(594, 323);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 14);
+            this.label1.Size = new System.Drawing.Size(41, 15);
             this.label1.TabIndex = 25;
             this.label1.Text = "Genre";
             // 
@@ -200,7 +200,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(587, 303);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 14);
+            this.label3.Size = new System.Drawing.Size(53, 15);
             this.label3.TabIndex = 23;
             this.label3.Text = "Duration";
             // 
@@ -239,7 +239,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(940, 323);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 14);
+            this.label5.Size = new System.Drawing.Size(41, 15);
             this.label5.TabIndex = 30;
             this.label5.Text = "Genre";
             // 
@@ -251,7 +251,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(933, 303);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 14);
+            this.label6.Size = new System.Drawing.Size(53, 15);
             this.label6.TabIndex = 28;
             this.label6.Text = "Duration";
             // 
@@ -290,7 +290,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(940, 648);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 14);
+            this.label8.Size = new System.Drawing.Size(41, 15);
             this.label8.TabIndex = 45;
             this.label8.Text = "Genre";
             // 
@@ -302,7 +302,7 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(933, 628);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 14);
+            this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 43;
             this.label9.Text = "Duration";
             // 
@@ -341,7 +341,7 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(594, 648);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 14);
+            this.label11.Size = new System.Drawing.Size(41, 15);
             this.label11.TabIndex = 40;
             this.label11.Text = "Genre";
             // 
@@ -353,7 +353,7 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(587, 628);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 14);
+            this.label12.Size = new System.Drawing.Size(53, 15);
             this.label12.TabIndex = 38;
             this.label12.Text = "Duration";
             // 
@@ -392,7 +392,7 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(254, 648);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(40, 14);
+            this.label14.Size = new System.Drawing.Size(41, 15);
             this.label14.TabIndex = 35;
             this.label14.Text = "Genre";
             // 
@@ -404,7 +404,7 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(247, 628);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 14);
+            this.label15.Size = new System.Drawing.Size(53, 15);
             this.label15.TabIndex = 33;
             this.label15.Text = "Duration";
             // 

@@ -13,68 +13,34 @@ namespace Cineverse
 {
     public partial class Dashboard : Form
     {
-        private Login loginform;
-        public Dashboard(Login loginform)
+        
+        NavigationControls navigationcontrols;
+        public Dashboard()
         {
             InitializeComponent();
-            this.loginform = loginform;
+            
+
+            InitializeNavigationControl();
         }
 
+        private void InitializeNavigationControl()
+        {
+            List<UserControl> userControls = new List<UserControl>()
+            { 
+                new DashboardSection(),
+                new MoviesSection1()
+            };
+
+            navigationcontrols = new NavigationControls(userControls, panel4);
+            
+            navigationcontrols.Display(0);
+        }
        
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            UpdateTime();
-
-            Timer timer = new Timer();
-            timer.Interval = 1000;
-            timer.Tick += Timer_tick;
-            timer.Start();
-
-            DateTime currentDate = DateTime.Now;
-            string formattedDate = currentDate.ToString("dddd, MMMMM d, yyyy");
-
-            lbl_date.Text = formattedDate;
-
-            MySqlConnection conn = DBConnection.getConnection();
-            string txt_user = loginform.GetTextBoxValue();
-
-
+            //time & date
             
-            try
-            {
-                conn.Open();
-                string query = "SELECT firstname FROM accounts WHERE username=@Ussername;";
-                MySqlCommand hellocmd = new MySqlCommand(query, conn);
-                hellocmd.Parameters.AddWithValue("@Ussername", txt_user);
-                MySqlDataReader reader = hellocmd.ExecuteReader();
-               
-
-                if (reader.Read())
-                {
-                    lbl_hellouser.Text = "Hello, " + reader.GetString(0) + "!";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
-        }
-
-        private void Timer_tick(Object sender, EventArgs e)
-        {
-            UpdateTime();
-        }
-        private void UpdateTime()
-        {
-            lbl_time.Text = DateTime.Now.ToString("HH  :  mm  :  ss   tt").ToUpper();
-        }
-
-        private void panel5_Click(object sender, EventArgs e)
-        {
-            
-            this.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -144,48 +110,22 @@ namespace Cineverse
             btn_logout.ForeColor = Color.White;
         }
 
-        private void btn_getTickets1_MouseEnter(object sender, EventArgs e)
+
+       
+        private void panel5_Click(object sender, EventArgs e)
         {
-            btn_getTickets1.BackColor = Color.FromArgb(31, 178, 198);
-            btn_getTickets1.ForeColor = Color.Black;
+            this.Close();
         }
 
-        private void btn_getTickets1_MouseLeave(object sender, EventArgs e)
+        private void btn_movies_Click(object sender, EventArgs e)
         {
-            btn_getTickets1.BackColor = Color.FromArgb(20, 32, 32);
-            btn_getTickets1.ForeColor = Color.White;
+            navigationcontrols.Display(1);
         }
 
-        private void btn_getTickets2_MouseEnter(object sender, EventArgs e)
+        private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            btn_getTickets2.BackColor = Color.FromArgb(31, 178, 198);
-            btn_getTickets2.ForeColor = Color.Black;
+            navigationcontrols.Display(0);
         }
-
-        private void btn_getTickets2_MouseLeave(object sender, EventArgs e)
-        {
-            btn_getTickets2.BackColor = Color.FromArgb(20, 32, 32);
-            btn_getTickets2.ForeColor = Color.White;
-        }
-
-        private void btn_getTickets3_MouseEnter(object sender, EventArgs e)
-        {
-            btn_getTickets3.BackColor = Color.FromArgb(31, 178, 198);
-            btn_getTickets3.ForeColor = Color.Black;
-        }
-
-        private void btn_getTickets3_MouseLeave(object sender, EventArgs e)
-        {
-            btn_getTickets3.BackColor = Color.FromArgb(20, 32, 32);
-            btn_getTickets3.ForeColor = Color.White;
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        
     }
     
 }

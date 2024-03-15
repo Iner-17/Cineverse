@@ -52,7 +52,9 @@ namespace Cineverse
                     } 
                     else
                     {
-                        Dashboard dashboard = new Dashboard(this);
+                        string userName = GetTextBoxValue();
+
+                        Dashboard dashboard = new Dashboard();
                         dashboard.Show();
                         this.Hide();
 
@@ -76,10 +78,7 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
             login();
-            
-
         }
 
         private void signup_Click(object sender, EventArgs e)
@@ -111,7 +110,7 @@ namespace Cineverse
 
         private void txt_pass_Enter(object sender, EventArgs e)
         {
-            if (txt_pass.Text == "Password")
+            if (txt_pass.Text == "Enter Password")
             {
                 txt_pass.Text = "";
                 txt_pass.ForeColor = Color.White;
@@ -126,7 +125,7 @@ namespace Cineverse
         {
             if (txt_pass.Text == "")
             {
-                txt_pass.Text = "Password";
+                txt_pass.Text = "Enter Password";
                 txt_pass.ForeColor = Color.Silver;
                 if (txt_pass.UseSystemPasswordChar == true)
                 {
@@ -135,9 +134,5 @@ namespace Cineverse
             }
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
     }
 }

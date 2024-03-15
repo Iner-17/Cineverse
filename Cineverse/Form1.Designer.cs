@@ -68,7 +68,7 @@
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 2;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+          
             // 
             // panel3
             // 
@@ -97,7 +97,7 @@
             this.signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.signup.Location = new System.Drawing.Point(320, 589);
             this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(68, 19);
+            this.signup.Size = new System.Drawing.Size(69, 21);
             this.signup.TabIndex = 9;
             this.signup.Text = "Sign Up";
             this.signup.Click += new System.EventHandler(this.signup_Click);
@@ -110,7 +110,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(137, 589);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 19);
+            this.label4.Size = new System.Drawing.Size(186, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 
@@ -172,7 +172,7 @@
             // 
             this.txt_pass.BorderRadius = 10;
             this.txt_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_pass.DefaultText = "Password";
+            this.txt_pass.DefaultText = "Enter Password";
             this.txt_pass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_pass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_pass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -190,6 +190,7 @@
             this.txt_pass.SelectedText = "";
             this.txt_pass.Size = new System.Drawing.Size(375, 40);
             this.txt_pass.TabIndex = 3;
+         
             this.txt_pass.Enter += new System.EventHandler(this.txt_pass_Enter);
             this.txt_pass.Leave += new System.EventHandler(this.txt_pass_Leave);
             // 
