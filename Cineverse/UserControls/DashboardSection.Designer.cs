@@ -86,10 +86,11 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1035, 718);
             this.panel1.TabIndex = 0;
+            
             // 
             // panel4
             // 
@@ -539,6 +540,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DashboardSection";
             this.Size = new System.Drawing.Size(1035, 721);
+            this.Load += new System.EventHandler(this.DashboardSection_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

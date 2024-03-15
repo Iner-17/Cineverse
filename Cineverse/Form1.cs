@@ -54,7 +54,7 @@ namespace Cineverse
                     {
                         string userName = GetTextBoxValue();
 
-                        Dashboard dashboard = new Dashboard();
+                        Dashboard dashboard = new Dashboard(userName);
                         dashboard.Show();
                         this.Hide();
 
