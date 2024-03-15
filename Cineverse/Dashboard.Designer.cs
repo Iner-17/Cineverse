@@ -44,9 +44,16 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.lbl_revenue = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lbl_numSchedMovies = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.lbl_todaysBooking = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_viewAll = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.btn_getTickets3 = new System.Windows.Forms.Button();
             this.lbl_genre3 = new System.Windows.Forms.Label();
@@ -68,13 +75,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lbl_todaysBooking = new System.Windows.Forms.Label();
-            this.lbl_numSchedMovies = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lbl_revenue = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btn_viewAll = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -305,6 +305,30 @@
             this.panel11.Size = new System.Drawing.Size(207, 131);
             this.panel11.TabIndex = 2;
             // 
+            // lbl_revenue
+            // 
+            this.lbl_revenue.AutoSize = true;
+            this.lbl_revenue.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_revenue.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_revenue.ForeColor = System.Drawing.Color.White;
+            this.lbl_revenue.Location = new System.Drawing.Point(17, 57);
+            this.lbl_revenue.Name = "lbl_revenue";
+            this.lbl_revenue.Size = new System.Drawing.Size(171, 35);
+            this.lbl_revenue.TabIndex = 13;
+            this.lbl_revenue.Text = "₱98,217.24";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(33, 38);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(137, 19);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Today\'s Revenue";
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -314,6 +338,30 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(207, 131);
             this.panel10.TabIndex = 1;
+            // 
+            // lbl_numSchedMovies
+            // 
+            this.lbl_numSchedMovies.AutoSize = true;
+            this.lbl_numSchedMovies.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_numSchedMovies.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numSchedMovies.ForeColor = System.Drawing.Color.White;
+            this.lbl_numSchedMovies.Location = new System.Drawing.Point(78, 59);
+            this.lbl_numSchedMovies.Name = "lbl_numSchedMovies";
+            this.lbl_numSchedMovies.Size = new System.Drawing.Size(33, 35);
+            this.lbl_numSchedMovies.TabIndex = 13;
+            this.lbl_numSchedMovies.Text = "9";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(4, 37);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(199, 19);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "No. of Scheduled Movies";
             // 
             // panel9
             // 
@@ -325,6 +373,30 @@
             this.panel9.Size = new System.Drawing.Size(207, 131);
             this.panel9.TabIndex = 0;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // lbl_todaysBooking
+            // 
+            this.lbl_todaysBooking.AutoSize = true;
+            this.lbl_todaysBooking.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_todaysBooking.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_todaysBooking.ForeColor = System.Drawing.Color.White;
+            this.lbl_todaysBooking.Location = new System.Drawing.Point(78, 57);
+            this.lbl_todaysBooking.Name = "lbl_todaysBooking";
+            this.lbl_todaysBooking.Size = new System.Drawing.Size(50, 35);
+            this.lbl_todaysBooking.TabIndex = 4;
+            this.lbl_todaysBooking.Text = "24";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(36, 38);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(134, 19);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Today\'s Booking";
             // 
             // panel7
             // 
@@ -341,6 +413,22 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(785, 545);
             this.panel7.TabIndex = 7;
+            // 
+            // btn_viewAll
+            // 
+            this.btn_viewAll.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_viewAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_viewAll.FlatAppearance.BorderSize = 0;
+            this.btn_viewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_viewAll.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_viewAll.ForeColor = System.Drawing.Color.White;
+            this.btn_viewAll.Location = new System.Drawing.Point(668, 30);
+            this.btn_viewAll.Name = "btn_viewAll";
+            this.btn_viewAll.Size = new System.Drawing.Size(81, 26);
+            this.btn_viewAll.TabIndex = 12;
+            this.btn_viewAll.Text = "View All";
+            this.btn_viewAll.UseVisualStyleBackColor = false;
             // 
             // panel17
             // 
@@ -597,94 +685,6 @@
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 3;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(36, 38);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 19);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Today\'s Booking";
-            // 
-            // lbl_todaysBooking
-            // 
-            this.lbl_todaysBooking.AutoSize = true;
-            this.lbl_todaysBooking.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_todaysBooking.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_todaysBooking.ForeColor = System.Drawing.Color.White;
-            this.lbl_todaysBooking.Location = new System.Drawing.Point(78, 57);
-            this.lbl_todaysBooking.Name = "lbl_todaysBooking";
-            this.lbl_todaysBooking.Size = new System.Drawing.Size(50, 35);
-            this.lbl_todaysBooking.TabIndex = 4;
-            this.lbl_todaysBooking.Text = "24";
-            // 
-            // lbl_numSchedMovies
-            // 
-            this.lbl_numSchedMovies.AutoSize = true;
-            this.lbl_numSchedMovies.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_numSchedMovies.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_numSchedMovies.ForeColor = System.Drawing.Color.White;
-            this.lbl_numSchedMovies.Location = new System.Drawing.Point(78, 59);
-            this.lbl_numSchedMovies.Name = "lbl_numSchedMovies";
-            this.lbl_numSchedMovies.Size = new System.Drawing.Size(33, 35);
-            this.lbl_numSchedMovies.TabIndex = 13;
-            this.lbl_numSchedMovies.Text = "9";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(4, 37);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(199, 19);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "No. of Scheduled Movies";
-            // 
-            // lbl_revenue
-            // 
-            this.lbl_revenue.AutoSize = true;
-            this.lbl_revenue.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_revenue.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_revenue.ForeColor = System.Drawing.Color.White;
-            this.lbl_revenue.Location = new System.Drawing.Point(17, 57);
-            this.lbl_revenue.Name = "lbl_revenue";
-            this.lbl_revenue.Size = new System.Drawing.Size(172, 35);
-            this.lbl_revenue.TabIndex = 13;
-            this.lbl_revenue.Text = "₱98,217.24";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(33, 38);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(137, 19);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Today\'s Revenue";
-            // 
-            // btn_viewAll
-            // 
-            this.btn_viewAll.BackColor = System.Drawing.Color.Transparent;
-            this.btn_viewAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_viewAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_viewAll.FlatAppearance.BorderSize = 0;
-            this.btn_viewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_viewAll.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_viewAll.ForeColor = System.Drawing.Color.White;
-            this.btn_viewAll.Location = new System.Drawing.Point(668, 30);
-            this.btn_viewAll.Name = "btn_viewAll";
-            this.btn_viewAll.Size = new System.Drawing.Size(81, 26);
-            this.btn_viewAll.TabIndex = 12;
-            this.btn_viewAll.Text = "View All";
-            this.btn_viewAll.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
