@@ -26,5 +26,10 @@ namespace Cineverse
         {
 
         }
+
+        private void btn_getTickets2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

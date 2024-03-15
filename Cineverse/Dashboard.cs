@@ -29,7 +29,8 @@ namespace Cineverse
             List<UserControl> userControls = new List<UserControl>()
             { 
                 new DashboardSection(username),
-                new MoviesSection1()
+                new MoviesSection1(),
+                
             };
 
             navigationcontrols = new NavigationControls(userControls, panel4);

@@ -112,6 +112,7 @@
             this.btn_getTickets2.TabIndex = 14;
             this.btn_getTickets2.Text = "Add Movies";
             this.btn_getTickets2.UseVisualStyleBackColor = false;
+            this.btn_getTickets2.Click += new System.EventHandler(this.btn_getTickets2_Click);
             this.btn_getTickets2.MouseEnter += new System.EventHandler(this.btn_getTickets2_MouseEnter);
             // 
             // btn_getTickets1
