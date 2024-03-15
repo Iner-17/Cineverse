@@ -37,7 +37,6 @@
             this.btn_dashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.moviesSection11 = new Cineverse.MoviesSection1();
             this.lbl_date = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_hellouser = new System.Windows.Forms.Label();
@@ -221,7 +220,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel4.Controls.Add(this.moviesSection11);
             this.panel4.Controls.Add(this.lbl_date);
             this.panel4.Controls.Add(this.lbl_time);
             this.panel4.Controls.Add(this.lbl_hellouser);
@@ -230,14 +228,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1035, 164);
             this.panel4.TabIndex = 5;
-            // 
-            // moviesSection11
-            // 
-            this.moviesSection11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.moviesSection11.Location = new System.Drawing.Point(1, 0);
-            this.moviesSection11.Name = "moviesSection11";
-            this.moviesSection11.Size = new System.Drawing.Size(1035, 721);
-            this.moviesSection11.TabIndex = 9;
             // 
             // lbl_date
             // 
@@ -788,6 +778,5 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MoviesSection1 moviesSection11;
     }
 }
