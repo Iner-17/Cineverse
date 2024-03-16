@@ -16,5 +16,11 @@ namespace Cineverse
         {
             InitializeComponent();
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            AddMovie addMovie = new AddMovie();
+            this.Close();
+        }
     }
 }
