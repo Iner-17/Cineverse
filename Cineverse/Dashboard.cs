@@ -102,8 +102,8 @@ namespace Cineverse
 
         private void btn_logout_MouseEnter(object sender, EventArgs e)
         {
-            btn_logout.BackColor = Color.FromArgb(31, 178, 198);
-            btn_logout.ForeColor = Color.Black;
+            btn_logout.BackColor = Color.DarkRed;
+            btn_logout.ForeColor = Color.White;
         }
 
         private void btn_logout_MouseLeave(object sender, EventArgs e)

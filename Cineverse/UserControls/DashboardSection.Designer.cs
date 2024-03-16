@@ -340,6 +340,8 @@
             this.btn_getTickets2.TabIndex = 11;
             this.btn_getTickets2.Text = "Get Tickets";
             this.btn_getTickets2.UseVisualStyleBackColor = false;
+            this.btn_getTickets2.MouseEnter += new System.EventHandler(this.btn_getTickets2_MouseEnter);
+            this.btn_getTickets2.MouseLeave += new System.EventHandler(this.btn_getTickets2_MouseLeave);
             // 
             // lbl_genre2
             // 
@@ -392,6 +394,8 @@
             this.btn_viewAll.TabIndex = 12;
             this.btn_viewAll.Text = "View All";
             this.btn_viewAll.UseVisualStyleBackColor = false;
+            this.btn_viewAll.MouseEnter += new System.EventHandler(this.btn_viewAll_MouseEnter);
+            this.btn_viewAll.MouseLeave += new System.EventHandler(this.btn_viewAll_MouseLeave);
             // 
             // panel17
             // 
@@ -419,6 +423,8 @@
             this.btn_getTickets3.TabIndex = 11;
             this.btn_getTickets3.Text = "Get Tickets";
             this.btn_getTickets3.UseVisualStyleBackColor = false;
+            this.btn_getTickets3.MouseEnter += new System.EventHandler(this.btn_getTickets3_MouseEnter);
+            this.btn_getTickets3.MouseLeave += new System.EventHandler(this.btn_getTickets3_MouseLeave);
             // 
             // lbl_genre3
             // 
@@ -482,6 +488,8 @@
             this.btn_getTickets1.TabIndex = 11;
             this.btn_getTickets1.Text = "Get Tickets";
             this.btn_getTickets1.UseVisualStyleBackColor = false;
+            this.btn_getTickets1.MouseEnter += new System.EventHandler(this.btn_getTickets1_MouseEnter);
+            this.btn_getTickets1.MouseLeave += new System.EventHandler(this.btn_getTickets1_MouseLeave);
             // 
             // lbl_genre1
             // 

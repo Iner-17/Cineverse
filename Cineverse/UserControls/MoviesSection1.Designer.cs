@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_viewAll = new System.Windows.Forms.Button();
-            this.btn_getTickets2 = new System.Windows.Forms.Button();
-            this.btn_getTickets1 = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.btn_addMovies = new System.Windows.Forms.Button();
+            this.btn_gt1 = new System.Windows.Forms.Button();
             this.lbl_genre1 = new System.Windows.Forms.Label();
             this.lbl_duration1 = new System.Windows.Forms.Label();
             this.lbl_title1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_gt2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_gt3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_gt6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_gt5 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_gt4 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -61,17 +61,17 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_gt9 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btn_gt8 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_gt7 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -100,54 +100,58 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "SCHEDULED MOVIES";
             // 
-            // btn_viewAll
+            // btn_back
             // 
-            this.btn_viewAll.BackColor = System.Drawing.Color.Transparent;
-            this.btn_viewAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_viewAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_viewAll.FlatAppearance.BorderSize = 0;
-            this.btn_viewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_viewAll.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_viewAll.ForeColor = System.Drawing.Color.White;
-            this.btn_viewAll.Location = new System.Drawing.Point(928, 25);
-            this.btn_viewAll.Name = "btn_viewAll";
-            this.btn_viewAll.Size = new System.Drawing.Size(81, 26);
-            this.btn_viewAll.TabIndex = 13;
-            this.btn_viewAll.Text = "Back";
-            this.btn_viewAll.UseVisualStyleBackColor = false;
-            this.btn_viewAll.Click += new System.EventHandler(this.btn_viewAll_Click);
+            this.btn_back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_back.FlatAppearance.BorderSize = 0;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.ForeColor = System.Drawing.Color.White;
+            this.btn_back.Location = new System.Drawing.Point(928, 25);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(81, 26);
+            this.btn_back.TabIndex = 13;
+            this.btn_back.Text = "Back";
+            this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.MouseEnter += new System.EventHandler(this.btn_back_MouseEnter);
+            this.btn_back.MouseLeave += new System.EventHandler(this.btn_back_MouseLeave);
             // 
-            // btn_getTickets2
+            // btn_addMovies
             // 
-            this.btn_getTickets2.BackColor = System.Drawing.Color.Transparent;
-            this.btn_getTickets2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_getTickets2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_getTickets2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_getTickets2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_getTickets2.ForeColor = System.Drawing.Color.White;
-            this.btn_getTickets2.Location = new System.Drawing.Point(695, 17);
-            this.btn_getTickets2.Name = "btn_getTickets2";
-            this.btn_getTickets2.Size = new System.Drawing.Size(196, 42);
-            this.btn_getTickets2.TabIndex = 14;
-            this.btn_getTickets2.Text = "Add Movies";
-            this.btn_getTickets2.UseVisualStyleBackColor = false;
-            this.btn_getTickets2.Click += new System.EventHandler(this.btn_getTickets2_Click);
-            this.btn_getTickets2.MouseEnter += new System.EventHandler(this.btn_getTickets2_MouseEnter);
+            this.btn_addMovies.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addMovies.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addMovies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_addMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addMovies.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addMovies.ForeColor = System.Drawing.Color.White;
+            this.btn_addMovies.Location = new System.Drawing.Point(695, 17);
+            this.btn_addMovies.Name = "btn_addMovies";
+            this.btn_addMovies.Size = new System.Drawing.Size(196, 42);
+            this.btn_addMovies.TabIndex = 14;
+            this.btn_addMovies.Text = "Add Movies";
+            this.btn_addMovies.UseVisualStyleBackColor = false;
+            this.btn_addMovies.Click += new System.EventHandler(this.btn_getTickets2_Click);
+            this.btn_addMovies.MouseEnter += new System.EventHandler(this.btn_addMovies_MouseEnter);
+            this.btn_addMovies.MouseLeave += new System.EventHandler(this.btn_addMovies_MouseLeave);
             // 
-            // btn_getTickets1
+            // btn_gt1
             // 
-            this.btn_getTickets1.BackColor = System.Drawing.Color.Transparent;
-            this.btn_getTickets1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_getTickets1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_getTickets1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_getTickets1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_getTickets1.ForeColor = System.Drawing.Color.White;
-            this.btn_getTickets1.Location = new System.Drawing.Point(206, 343);
-            this.btn_getTickets1.Name = "btn_getTickets1";
-            this.btn_getTickets1.Size = new System.Drawing.Size(122, 36);
-            this.btn_getTickets1.TabIndex = 21;
-            this.btn_getTickets1.Text = "Get Tickets";
-            this.btn_getTickets1.UseVisualStyleBackColor = false;
+            this.btn_gt1.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt1.ForeColor = System.Drawing.Color.White;
+            this.btn_gt1.Location = new System.Drawing.Point(206, 343);
+            this.btn_gt1.Name = "btn_gt1";
+            this.btn_gt1.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt1.TabIndex = 21;
+            this.btn_gt1.Text = "Get Tickets";
+            this.btn_gt1.UseVisualStyleBackColor = false;
+            this.btn_gt1.MouseEnter += new System.EventHandler(this.btn_gt1_MouseEnter);
+            this.btn_gt1.MouseLeave += new System.EventHandler(this.btn_gt1_MouseLeave);
             // 
             // lbl_genre1
             // 
@@ -185,20 +189,22 @@
             this.lbl_title1.TabIndex = 19;
             this.lbl_title1.Text = "Title";
             // 
-            // button1
+            // btn_gt2
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(546, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 36);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Get Tickets";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_gt2.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt2.ForeColor = System.Drawing.Color.White;
+            this.btn_gt2.Location = new System.Drawing.Point(546, 343);
+            this.btn_gt2.Name = "btn_gt2";
+            this.btn_gt2.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt2.TabIndex = 26;
+            this.btn_gt2.Text = "Get Tickets";
+            this.btn_gt2.UseVisualStyleBackColor = false;
+            this.btn_gt2.MouseEnter += new System.EventHandler(this.btn_gt2_MouseEnter);
+            this.btn_gt2.MouseLeave += new System.EventHandler(this.btn_gt2_MouseLeave);
             // 
             // label1
             // 
@@ -236,20 +242,22 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "Title";
             // 
-            // button2
+            // btn_gt3
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(892, 343);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 36);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Get Tickets";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_gt3.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt3.ForeColor = System.Drawing.Color.White;
+            this.btn_gt3.Location = new System.Drawing.Point(892, 343);
+            this.btn_gt3.Name = "btn_gt3";
+            this.btn_gt3.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt3.TabIndex = 31;
+            this.btn_gt3.Text = "Get Tickets";
+            this.btn_gt3.UseVisualStyleBackColor = false;
+            this.btn_gt3.MouseEnter += new System.EventHandler(this.btn_gt3_MouseEnter);
+            this.btn_gt3.MouseLeave += new System.EventHandler(this.btn_gt3_MouseLeave);
             // 
             // label5
             // 
@@ -287,20 +295,22 @@
             this.label7.TabIndex = 29;
             this.label7.Text = "Title";
             // 
-            // button3
+            // btn_gt6
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(892, 669);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 36);
-            this.button3.TabIndex = 46;
-            this.button3.Text = "Get Tickets";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_gt6.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt6.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt6.ForeColor = System.Drawing.Color.White;
+            this.btn_gt6.Location = new System.Drawing.Point(892, 669);
+            this.btn_gt6.Name = "btn_gt6";
+            this.btn_gt6.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt6.TabIndex = 46;
+            this.btn_gt6.Text = "Get Tickets";
+            this.btn_gt6.UseVisualStyleBackColor = false;
+            this.btn_gt6.MouseEnter += new System.EventHandler(this.btn_gt6_MouseEnter);
+            this.btn_gt6.MouseLeave += new System.EventHandler(this.btn_gt6_MouseLeave);
             // 
             // label8
             // 
@@ -338,20 +348,22 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "Title";
             // 
-            // button4
+            // btn_gt5
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(546, 669);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 36);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "Get Tickets";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_gt5.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt5.ForeColor = System.Drawing.Color.White;
+            this.btn_gt5.Location = new System.Drawing.Point(546, 669);
+            this.btn_gt5.Name = "btn_gt5";
+            this.btn_gt5.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt5.TabIndex = 41;
+            this.btn_gt5.Text = "Get Tickets";
+            this.btn_gt5.UseVisualStyleBackColor = false;
+            this.btn_gt5.MouseEnter += new System.EventHandler(this.btn_gt5_MouseEnter);
+            this.btn_gt5.MouseLeave += new System.EventHandler(this.btn_gt5_MouseLeave);
             // 
             // label11
             // 
@@ -389,20 +401,22 @@
             this.label13.TabIndex = 39;
             this.label13.Text = "Title";
             // 
-            // button5
+            // btn_gt4
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(206, 669);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(122, 36);
-            this.button5.TabIndex = 36;
-            this.button5.Text = "Get Tickets";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_gt4.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt4.ForeColor = System.Drawing.Color.White;
+            this.btn_gt4.Location = new System.Drawing.Point(206, 669);
+            this.btn_gt4.Name = "btn_gt4";
+            this.btn_gt4.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt4.TabIndex = 36;
+            this.btn_gt4.Text = "Get Tickets";
+            this.btn_gt4.UseVisualStyleBackColor = false;
+            this.btn_gt4.MouseEnter += new System.EventHandler(this.btn_gt4_MouseEnter);
+            this.btn_gt4.MouseLeave += new System.EventHandler(this.btn_gt4_MouseLeave);
             // 
             // label14
             // 
@@ -500,20 +514,22 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // button6
+            // btn_gt9
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(892, 991);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(122, 36);
-            this.button6.TabIndex = 61;
-            this.button6.Text = "Get Tickets";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btn_gt9.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt9.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt9.ForeColor = System.Drawing.Color.White;
+            this.btn_gt9.Location = new System.Drawing.Point(892, 991);
+            this.btn_gt9.Name = "btn_gt9";
+            this.btn_gt9.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt9.TabIndex = 61;
+            this.btn_gt9.Text = "Get Tickets";
+            this.btn_gt9.UseVisualStyleBackColor = false;
+            this.btn_gt9.MouseEnter += new System.EventHandler(this.btn_gt9_MouseEnter);
+            this.btn_gt9.MouseLeave += new System.EventHandler(this.btn_gt9_MouseLeave);
             // 
             // label17
             // 
@@ -561,20 +577,22 @@
             this.pictureBox7.TabIndex = 57;
             this.pictureBox7.TabStop = false;
             // 
-            // button7
+            // btn_gt8
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(546, 991);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(122, 36);
-            this.button7.TabIndex = 56;
-            this.button7.Text = "Get Tickets";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btn_gt8.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt8.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt8.ForeColor = System.Drawing.Color.White;
+            this.btn_gt8.Location = new System.Drawing.Point(546, 991);
+            this.btn_gt8.Name = "btn_gt8";
+            this.btn_gt8.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt8.TabIndex = 56;
+            this.btn_gt8.Text = "Get Tickets";
+            this.btn_gt8.UseVisualStyleBackColor = false;
+            this.btn_gt8.MouseEnter += new System.EventHandler(this.btn_gt8_MouseEnter);
+            this.btn_gt8.MouseLeave += new System.EventHandler(this.btn_gt8_MouseLeave);
             // 
             // label20
             // 
@@ -622,20 +640,22 @@
             this.pictureBox8.TabIndex = 52;
             this.pictureBox8.TabStop = false;
             // 
-            // button8
+            // btn_gt7
             // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(206, 991);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(122, 36);
-            this.button8.TabIndex = 51;
-            this.button8.Text = "Get Tickets";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btn_gt7.BackColor = System.Drawing.Color.Transparent;
+            this.btn_gt7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gt7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_gt7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gt7.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gt7.ForeColor = System.Drawing.Color.White;
+            this.btn_gt7.Location = new System.Drawing.Point(206, 991);
+            this.btn_gt7.Name = "btn_gt7";
+            this.btn_gt7.Size = new System.Drawing.Size(122, 36);
+            this.btn_gt7.TabIndex = 51;
+            this.btn_gt7.Text = "Get Tickets";
+            this.btn_gt7.UseVisualStyleBackColor = false;
+            this.btn_gt7.MouseEnter += new System.EventHandler(this.btn_gt7_MouseEnter);
+            this.btn_gt7.MouseLeave += new System.EventHandler(this.btn_gt7_MouseLeave);
             // 
             // label23
             // 
@@ -688,7 +708,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1027);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1018, 39);
+            this.panel1.Size = new System.Drawing.Size(1014, 39);
             this.panel1.TabIndex = 77;
             // 
             // MoviesSection1
@@ -698,56 +718,56 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_gt9);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btn_gt8);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btn_gt7);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_gt6);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_gt5);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btn_gt4);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_gt3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_gt2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.btn_getTickets1);
+            this.Controls.Add(this.btn_gt1);
             this.Controls.Add(this.lbl_genre1);
             this.Controls.Add(this.lbl_duration1);
             this.Controls.Add(this.lbl_title1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_getTickets2);
-            this.Controls.Add(this.btn_viewAll);
+            this.Controls.Add(this.btn_addMovies);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1018, 721);
+            this.Size = new System.Drawing.Size(1001, 704);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -765,49 +785,49 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_viewAll;
-        private System.Windows.Forms.Button btn_getTickets2;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Button btn_addMovies;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_getTickets1;
+        private System.Windows.Forms.Button btn_gt1;
         private System.Windows.Forms.Label lbl_genre1;
         private System.Windows.Forms.Label lbl_duration1;
         private System.Windows.Forms.Label lbl_title1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_gt2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_gt3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_gt6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_gt5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_gt4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_gt9;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_gt8;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_gt7;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
