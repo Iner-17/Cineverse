@@ -86,7 +86,7 @@
             this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_user.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_user.ForeColor = System.Drawing.Color.White;
-            this.btn_user.Location = new System.Drawing.Point(14, 525);
+            this.btn_user.Location = new System.Drawing.Point(16, 525);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(270, 42);
             this.btn_user.TabIndex = 9;
@@ -103,7 +103,7 @@
             this.btn_bookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bookings.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bookings.ForeColor = System.Drawing.Color.White;
-            this.btn_bookings.Location = new System.Drawing.Point(14, 475);
+            this.btn_bookings.Location = new System.Drawing.Point(16, 475);
             this.btn_bookings.Name = "btn_bookings";
             this.btn_bookings.Size = new System.Drawing.Size(270, 42);
             this.btn_bookings.TabIndex = 8;
@@ -120,7 +120,7 @@
             this.btn_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_schedule.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_schedule.ForeColor = System.Drawing.Color.White;
-            this.btn_schedule.Location = new System.Drawing.Point(14, 425);
+            this.btn_schedule.Location = new System.Drawing.Point(16, 425);
             this.btn_schedule.Name = "btn_schedule";
             this.btn_schedule.Size = new System.Drawing.Size(270, 42);
             this.btn_schedule.TabIndex = 7;
@@ -137,7 +137,7 @@
             this.btn_movies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_movies.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_movies.ForeColor = System.Drawing.Color.White;
-            this.btn_movies.Location = new System.Drawing.Point(14, 374);
+            this.btn_movies.Location = new System.Drawing.Point(16, 374);
             this.btn_movies.Name = "btn_movies";
             this.btn_movies.Size = new System.Drawing.Size(270, 42);
             this.btn_movies.TabIndex = 6;
@@ -154,7 +154,7 @@
             this.btn_dashboard.FlatAppearance.BorderSize = 0;
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashboard.Location = new System.Drawing.Point(14, 324);
+            this.btn_dashboard.Location = new System.Drawing.Point(16, 324);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Size = new System.Drawing.Size(270, 42);
             this.btn_dashboard.TabIndex = 5;

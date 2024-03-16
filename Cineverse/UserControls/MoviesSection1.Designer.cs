@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_back = new System.Windows.Forms.Button();
             this.btn_addMovies = new System.Windows.Forms.Button();
             this.btn_gt1 = new System.Windows.Forms.Button();
             this.lbl_genre1 = new System.Windows.Forms.Label();
@@ -77,6 +76,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_backk = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -94,29 +94,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(15, 16);
+            this.label2.Location = new System.Drawing.Point(15, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(325, 35);
             this.label2.TabIndex = 3;
             this.label2.Text = "SCHEDULED MOVIES";
-            // 
-            // btn_back
-            // 
-            this.btn_back.BackColor = System.Drawing.Color.Transparent;
-            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_back.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_back.FlatAppearance.BorderSize = 0;
-            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back.ForeColor = System.Drawing.Color.White;
-            this.btn_back.Location = new System.Drawing.Point(928, 25);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(81, 26);
-            this.btn_back.TabIndex = 13;
-            this.btn_back.Text = "Back";
-            this.btn_back.UseVisualStyleBackColor = false;
-            this.btn_back.MouseEnter += new System.EventHandler(this.btn_back_MouseEnter);
-            this.btn_back.MouseLeave += new System.EventHandler(this.btn_back_MouseLeave);
             // 
             // btn_addMovies
             // 
@@ -711,12 +693,26 @@
             this.panel1.Size = new System.Drawing.Size(1014, 39);
             this.panel1.TabIndex = 77;
             // 
+            // btn_backk
+            // 
+            this.btn_backk.AutoSize = true;
+            this.btn_backk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_backk.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_backk.ForeColor = System.Drawing.Color.White;
+            this.btn_backk.Location = new System.Drawing.Point(943, 31);
+            this.btn_backk.Name = "btn_backk";
+            this.btn_backk.Size = new System.Drawing.Size(40, 16);
+            this.btn_backk.TabIndex = 78;
+            this.btn_backk.Text = "Back";
+            this.btn_backk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_backk_MouseClick);
+            // 
             // MoviesSection1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.Controls.Add(this.btn_backk);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_gt9);
             this.Controls.Add(this.label17);
@@ -764,7 +760,6 @@
             this.Controls.Add(this.lbl_title1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_addMovies);
-            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
             this.Size = new System.Drawing.Size(1001, 704);
@@ -785,7 +780,6 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_addMovies;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_gt1;
@@ -833,5 +827,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label btn_backk;
     }
 }

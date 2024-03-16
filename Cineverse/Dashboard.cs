@@ -14,7 +14,7 @@ namespace Cineverse
     public partial class Dashboard : Form
     {
         
-        NavigationControls navigationcontrols;
+        public NavigationControls navigationcontrols;
         private string username;
         public Dashboard(string username)
         {
