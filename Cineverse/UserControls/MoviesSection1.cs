@@ -29,8 +29,9 @@ namespace Cineverse
 
         private void btn_getTickets2_Click(object sender, EventArgs e)
         {
-            
-            
+            AddMovie addMovie = new AddMovie();
+            addMovie.ShowDialog();
+            addMovie.BringToFront();
         }
     }
 }
