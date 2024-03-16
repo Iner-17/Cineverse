@@ -30,28 +30,29 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_addTitle = new System.Windows.Forms.TextBox();
+            this.txt_addPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_addGenre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_addDuration = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_add1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btn_addDate = new System.Windows.Forms.Button();
+            this.btn_addTime = new System.Windows.Forms.Button();
+            this.btn_uploadImage = new System.Windows.Forms.Button();
+            this.cmb_datesAdded = new System.Windows.Forms.ComboBox();
+            this.cmb_timeAdded = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_time = new System.Windows.Forms.DateTimePicker();
+            this.dtp_date = new System.Windows.Forms.DateTimePicker();
+            this.btn_saveMovie = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,28 +78,28 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Movie Title";
             // 
-            // textBox1
+            // txt_addTitle
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(62, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 31);
-            this.textBox1.TabIndex = 7;
+            this.txt_addTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_addTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_addTitle.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addTitle.ForeColor = System.Drawing.Color.White;
+            this.txt_addTitle.Location = new System.Drawing.Point(62, 138);
+            this.txt_addTitle.Name = "txt_addTitle";
+            this.txt_addTitle.Size = new System.Drawing.Size(270, 31);
+            this.txt_addTitle.TabIndex = 7;
             // 
-            // textBox2
+            // txt_addPrice
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(387, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 31);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.Text = " ";
+            this.txt_addPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_addPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_addPrice.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addPrice.ForeColor = System.Drawing.Color.White;
+            this.txt_addPrice.Location = new System.Drawing.Point(387, 138);
+            this.txt_addPrice.Name = "txt_addPrice";
+            this.txt_addPrice.Size = new System.Drawing.Size(100, 31);
+            this.txt_addPrice.TabIndex = 9;
+            this.txt_addPrice.Text = " ";
             // 
             // label3
             // 
@@ -111,16 +112,16 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Price";
             // 
-            // textBox3
+            // txt_addGenre
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(517, 138);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 31);
-            this.textBox3.TabIndex = 11;
+            this.txt_addGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_addGenre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_addGenre.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addGenre.ForeColor = System.Drawing.Color.White;
+            this.txt_addGenre.Location = new System.Drawing.Point(517, 138);
+            this.txt_addGenre.Name = "txt_addGenre";
+            this.txt_addGenre.Size = new System.Drawing.Size(193, 31);
+            this.txt_addGenre.TabIndex = 11;
             // 
             // label4
             // 
@@ -133,16 +134,16 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Genre";
             // 
-            // textBox4
+            // txt_addDuration
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(739, 138);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 31);
-            this.textBox4.TabIndex = 13;
+            this.txt_addDuration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_addDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_addDuration.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addDuration.ForeColor = System.Drawing.Color.White;
+            this.txt_addDuration.Location = new System.Drawing.Point(739, 138);
+            this.txt_addDuration.Name = "txt_addDuration";
+            this.txt_addDuration.Size = new System.Drawing.Size(145, 31);
+            this.txt_addDuration.TabIndex = 13;
             // 
             // label5
             // 
@@ -177,66 +178,69 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Enter Screening Time";
             // 
-            // btn_add1
+            // btn_addDate
             // 
-            this.btn_add1.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_add1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add1.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_add1.Location = new System.Drawing.Point(259, 244);
-            this.btn_add1.Name = "btn_add1";
-            this.btn_add1.Size = new System.Drawing.Size(73, 27);
-            this.btn_add1.TabIndex = 19;
-            this.btn_add1.Text = "Add";
-            this.btn_add1.UseVisualStyleBackColor = false;
+            this.btn_addDate.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_addDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addDate.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addDate.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_addDate.Location = new System.Drawing.Point(259, 244);
+            this.btn_addDate.Name = "btn_addDate";
+            this.btn_addDate.Size = new System.Drawing.Size(73, 27);
+            this.btn_addDate.TabIndex = 19;
+            this.btn_addDate.Text = "Add";
+            this.btn_addDate.UseVisualStyleBackColor = false;
+            this.btn_addDate.Click += new System.EventHandler(this.btn_addDate_Click);
             // 
-            // button1
+            // btn_addTime
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(594, 245);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 27);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_addTime.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addTime.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_addTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addTime.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addTime.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_addTime.Location = new System.Drawing.Point(594, 245);
+            this.btn_addTime.Name = "btn_addTime";
+            this.btn_addTime.Size = new System.Drawing.Size(73, 27);
+            this.btn_addTime.TabIndex = 20;
+            this.btn_addTime.Text = "Add";
+            this.btn_addTime.UseVisualStyleBackColor = false;
+            this.btn_addTime.Click += new System.EventHandler(this.btn_addTime_Click);
             // 
-            // button2
+            // btn_uploadImage
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.button2.Location = new System.Drawing.Point(708, 525);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 35);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Upload Image";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_uploadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_uploadImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_uploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_uploadImage.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_uploadImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btn_uploadImage.Location = new System.Drawing.Point(708, 525);
+            this.btn_uploadImage.Name = "btn_uploadImage";
+            this.btn_uploadImage.Size = new System.Drawing.Size(196, 35);
+            this.btn_uploadImage.TabIndex = 22;
+            this.btn_uploadImage.Text = "Upload Image";
+            this.btn_uploadImage.UseVisualStyleBackColor = false;
+            this.btn_uploadImage.Click += new System.EventHandler(this.btn_uploadImage_Click);
             // 
-            // comboBox1
+            // cmb_datesAdded
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(66, 353);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(269, 27);
-            this.comboBox1.TabIndex = 23;
+            this.cmb_datesAdded.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_datesAdded.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_datesAdded.FormattingEnabled = true;
+            this.cmb_datesAdded.Location = new System.Drawing.Point(66, 353);
+            this.cmb_datesAdded.Name = "cmb_datesAdded";
+            this.cmb_datesAdded.Size = new System.Drawing.Size(269, 27);
+            this.cmb_datesAdded.TabIndex = 23;
             // 
-            // comboBox2
+            // cmb_timeAdded
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(430, 353);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(237, 27);
-            this.comboBox2.TabIndex = 24;
+            this.cmb_timeAdded.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_timeAdded.FormattingEnabled = true;
+            this.cmb_timeAdded.Location = new System.Drawing.Point(430, 353);
+            this.cmb_timeAdded.Name = "cmb_timeAdded";
+            this.cmb_timeAdded.Size = new System.Drawing.Size(237, 27);
+            this.cmb_timeAdded.TabIndex = 24;
             // 
             // label8
             // 
@@ -281,6 +285,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(708, 211);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(196, 296);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
@@ -306,37 +311,52 @@
             this.panel5.TabIndex = 4;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
-            // dateTimePicker2
+            // dtp_time
             // 
-            this.dateTimePicker2.Checked = false;
-            this.dateTimePicker2.CustomFormat = "HH:mm";
-            this.dateTimePicker2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(429, 243);
-            this.dateTimePicker2.MaximumSize = new System.Drawing.Size(150, 30);
-            this.dateTimePicker2.MinimumSize = new System.Drawing.Size(150, 30);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(150, 30);
-            this.dateTimePicker2.TabIndex = 27;
-            this.dateTimePicker2.Value = new System.DateTime(2024, 3, 16, 0, 0, 0, 0);
+            this.dtp_time.Checked = false;
+            this.dtp_time.CustomFormat = "HH:mm";
+            this.dtp_time.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_time.Location = new System.Drawing.Point(429, 243);
+            this.dtp_time.MaximumSize = new System.Drawing.Size(150, 30);
+            this.dtp_time.MinimumSize = new System.Drawing.Size(150, 30);
+            this.dtp_time.Name = "dtp_time";
+            this.dtp_time.Size = new System.Drawing.Size(150, 30);
+            this.dtp_time.TabIndex = 27;
+            this.dtp_time.Value = new System.DateTime(2024, 3, 16, 0, 0, 0, 0);
             // 
-            // dateTimePicker1
+            // dtp_date
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Transparent;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
-            this.dateTimePicker1.CustomFormat = "MMM dd, yyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(63, 242);
-            this.dateTimePicker1.MaximumSize = new System.Drawing.Size(180, 30);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(180, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 30);
-            this.dateTimePicker1.TabIndex = 17;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 3, 16, 0, 0, 0, 0);
+            this.dtp_date.CalendarForeColor = System.Drawing.Color.Black;
+            this.dtp_date.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.dtp_date.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.dtp_date.CalendarTitleForeColor = System.Drawing.Color.Transparent;
+            this.dtp_date.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
+            this.dtp_date.CustomFormat = "MMM dd, yyy";
+            this.dtp_date.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_date.Location = new System.Drawing.Point(63, 242);
+            this.dtp_date.MaximumSize = new System.Drawing.Size(180, 30);
+            this.dtp_date.MinimumSize = new System.Drawing.Size(180, 30);
+            this.dtp_date.Name = "dtp_date";
+            this.dtp_date.Size = new System.Drawing.Size(180, 30);
+            this.dtp_date.TabIndex = 17;
+            this.dtp_date.Value = new System.DateTime(2024, 3, 16, 0, 0, 0, 0);
+            // 
+            // btn_saveMovie
+            // 
+            this.btn_saveMovie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_saveMovie.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_saveMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_saveMovie.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_saveMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btn_saveMovie.Location = new System.Drawing.Point(66, 525);
+            this.btn_saveMovie.Name = "btn_saveMovie";
+            this.btn_saveMovie.Size = new System.Drawing.Size(145, 35);
+            this.btn_saveMovie.TabIndex = 29;
+            this.btn_saveMovie.Text = "Save Movie";
+            this.btn_saveMovie.UseVisualStyleBackColor = false;
+            this.btn_saveMovie.Click += new System.EventHandler(this.btn_saveMovie_Click);
             // 
             // AddMovie
             // 
@@ -344,27 +364,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(962, 599);
+            this.Controls.Add(this.btn_saveMovie);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtp_time);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cmb_timeAdded);
+            this.Controls.Add(this.cmb_datesAdded);
+            this.Controls.Add(this.btn_uploadImage);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_add1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btn_addTime);
+            this.Controls.Add(this.btn_addDate);
+            this.Controls.Add(this.dtp_date);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_addDuration);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_addGenre);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_addPrice);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_addTitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
@@ -383,26 +404,27 @@
         private System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_addTitle;
+        private System.Windows.Forms.TextBox txt_addPrice;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_addGenre;
         public System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_addDuration;
         public System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btn_add1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_addDate;
+        private System.Windows.Forms.Button btn_addTime;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_datesAdded;
+        private System.Windows.Forms.ComboBox cmb_timeAdded;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btn_uploadImage;
+        private System.Windows.Forms.DateTimePicker dtp_time;
+        private System.Windows.Forms.DateTimePicker dtp_date;
+        private System.Windows.Forms.Button btn_saveMovie;
     }
 }
