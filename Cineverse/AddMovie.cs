@@ -22,5 +22,10 @@ namespace Cineverse
             AddMovie addMovie = new AddMovie();
             this.Close();
         }
+
+        private void AddMovie_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

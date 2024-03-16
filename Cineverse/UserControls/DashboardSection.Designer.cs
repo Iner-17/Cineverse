@@ -111,7 +111,7 @@
             this.lbl_date.ForeColor = System.Drawing.Color.White;
             this.lbl_date.Location = new System.Drawing.Point(721, 89);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(250, 21);
+            this.lbl_date.Size = new System.Drawing.Size(254, 19);
             this.lbl_date.TabIndex = 5;
             this.lbl_date.Text = "Wednesday, December 30, 2024";
             // 
@@ -131,11 +131,11 @@
             // 
             this.lbl_hellouser.AutoSize = true;
             this.lbl_hellouser.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_hellouser.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hellouser.Font = new System.Drawing.Font("Montserrat", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hellouser.ForeColor = System.Drawing.Color.White;
-            this.lbl_hellouser.Location = new System.Drawing.Point(89, 54);
+            this.lbl_hellouser.Location = new System.Drawing.Point(89, 59);
             this.lbl_hellouser.Name = "lbl_hellouser";
-            this.lbl_hellouser.Size = new System.Drawing.Size(440, 58);
+            this.lbl_hellouser.Size = new System.Drawing.Size(368, 49);
             this.lbl_hellouser.TabIndex = 1;
             this.lbl_hellouser.Text = "Hello, Username!";
             // 
@@ -202,7 +202,7 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(33, 38);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(134, 21);
+            this.label17.Size = new System.Drawing.Size(137, 19);
             this.label17.TabIndex = 14;
             this.label17.Text = "Today\'s Revenue";
             // 
@@ -236,7 +236,7 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(4, 37);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(190, 21);
+            this.label15.Size = new System.Drawing.Size(199, 19);
             this.label15.TabIndex = 14;
             this.label15.Text = "No. of Scheduled Movies";
             // 
@@ -270,7 +270,7 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(36, 38);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 21);
+            this.label12.Size = new System.Drawing.Size(134, 19);
             this.label12.TabIndex = 12;
             this.label12.Text = "Today\'s Booking";
             // 
@@ -292,7 +292,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(527, 72);
+            this.pictureBox3.Location = new System.Drawing.Point(527, 70);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(222, 328);
             this.pictureBox3.TabIndex = 16;
@@ -300,7 +300,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(278, 72);
+            this.pictureBox2.Location = new System.Drawing.Point(278, 70);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(222, 328);
             this.pictureBox2.TabIndex = 15;
@@ -308,7 +308,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(29, 72);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(222, 328);
             this.pictureBox1.TabIndex = 14;
@@ -321,7 +321,7 @@
             this.panel16.Controls.Add(this.lbl_genre2);
             this.panel16.Controls.Add(this.lbl_duration2);
             this.panel16.Controls.Add(this.lbl_title2);
-            this.panel16.Location = new System.Drawing.Point(278, 409);
+            this.panel16.Location = new System.Drawing.Point(278, 407);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(222, 123);
             this.panel16.TabIndex = 12;
@@ -349,7 +349,7 @@
             this.lbl_genre2.ForeColor = System.Drawing.Color.White;
             this.lbl_genre2.Location = new System.Drawing.Point(88, 57);
             this.lbl_genre2.Name = "lbl_genre2";
-            this.lbl_genre2.Size = new System.Drawing.Size(48, 18);
+            this.lbl_genre2.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre2.TabIndex = 8;
             this.lbl_genre2.Text = "Genre";
             // 
@@ -361,7 +361,7 @@
             this.lbl_duration2.ForeColor = System.Drawing.Color.White;
             this.lbl_duration2.Location = new System.Drawing.Point(80, 34);
             this.lbl_duration2.Name = "lbl_duration2";
-            this.lbl_duration2.Size = new System.Drawing.Size(65, 18);
+            this.lbl_duration2.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration2.TabIndex = 6;
             this.lbl_duration2.Text = "Duration";
             // 
@@ -373,7 +373,7 @@
             this.lbl_title2.ForeColor = System.Drawing.Color.White;
             this.lbl_title2.Location = new System.Drawing.Point(93, 11);
             this.lbl_title2.Name = "lbl_title2";
-            this.lbl_title2.Size = new System.Drawing.Size(34, 18);
+            this.lbl_title2.Size = new System.Drawing.Size(36, 16);
             this.lbl_title2.TabIndex = 7;
             this.lbl_title2.Text = "Title";
             // 
@@ -400,7 +400,7 @@
             this.panel17.Controls.Add(this.lbl_genre3);
             this.panel17.Controls.Add(this.lbl_duration3);
             this.panel17.Controls.Add(this.lbl_title3);
-            this.panel17.Location = new System.Drawing.Point(527, 409);
+            this.panel17.Location = new System.Drawing.Point(527, 407);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(222, 123);
             this.panel17.TabIndex = 13;
@@ -428,7 +428,7 @@
             this.lbl_genre3.ForeColor = System.Drawing.Color.White;
             this.lbl_genre3.Location = new System.Drawing.Point(84, 52);
             this.lbl_genre3.Name = "lbl_genre3";
-            this.lbl_genre3.Size = new System.Drawing.Size(48, 18);
+            this.lbl_genre3.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre3.TabIndex = 8;
             this.lbl_genre3.Text = "Genre";
             // 
@@ -440,7 +440,7 @@
             this.lbl_duration3.ForeColor = System.Drawing.Color.White;
             this.lbl_duration3.Location = new System.Drawing.Point(73, 30);
             this.lbl_duration3.Name = "lbl_duration3";
-            this.lbl_duration3.Size = new System.Drawing.Size(65, 18);
+            this.lbl_duration3.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration3.TabIndex = 6;
             this.lbl_duration3.Text = "Duration";
             // 
@@ -452,7 +452,7 @@
             this.lbl_title3.ForeColor = System.Drawing.Color.White;
             this.lbl_title3.Location = new System.Drawing.Point(91, 11);
             this.lbl_title3.Name = "lbl_title3";
-            this.lbl_title3.Size = new System.Drawing.Size(34, 18);
+            this.lbl_title3.Size = new System.Drawing.Size(36, 16);
             this.lbl_title3.TabIndex = 7;
             this.lbl_title3.Text = "Title";
             // 
@@ -463,7 +463,7 @@
             this.panel15.Controls.Add(this.lbl_genre1);
             this.panel15.Controls.Add(this.lbl_duration1);
             this.panel15.Controls.Add(this.lbl_title1);
-            this.panel15.Location = new System.Drawing.Point(29, 409);
+            this.panel15.Location = new System.Drawing.Point(29, 407);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(222, 123);
             this.panel15.TabIndex = 1;
@@ -491,7 +491,7 @@
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
             this.lbl_genre1.Location = new System.Drawing.Point(84, 52);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(48, 18);
+            this.lbl_genre1.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre1.TabIndex = 8;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -503,7 +503,7 @@
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
             this.lbl_duration1.Location = new System.Drawing.Point(73, 30);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(65, 18);
+            this.lbl_duration1.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration1.TabIndex = 6;
             this.lbl_duration1.Text = "Duration";
             // 
@@ -515,7 +515,7 @@
             this.lbl_title1.ForeColor = System.Drawing.Color.White;
             this.lbl_title1.Location = new System.Drawing.Point(91, 11);
             this.lbl_title1.Name = "lbl_title1";
-            this.lbl_title1.Size = new System.Drawing.Size(34, 18);
+            this.lbl_title1.Size = new System.Drawing.Size(36, 16);
             this.lbl_title1.TabIndex = 7;
             this.lbl_title1.Text = "Title";
             // 

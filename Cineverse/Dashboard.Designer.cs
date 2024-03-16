@@ -166,9 +166,9 @@
             // 
             this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(10, 15);
+            this.panel2.Location = new System.Drawing.Point(36, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(282, 149);
+            this.panel2.Size = new System.Drawing.Size(231, 111);
             this.panel2.TabIndex = 1;
             // 
             // panel3
