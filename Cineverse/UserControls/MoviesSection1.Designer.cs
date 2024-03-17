@@ -144,7 +144,7 @@
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
             this.lbl_genre1.Location = new System.Drawing.Point(221, 324);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre1.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre1.TabIndex = 20;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -156,7 +156,7 @@
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
             this.lbl_duration1.Location = new System.Drawing.Point(221, 304);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration1.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration1.TabIndex = 18;
             this.lbl_duration1.Text = "Duration";
             // 
@@ -197,7 +197,7 @@
             this.lbl_genre2.ForeColor = System.Drawing.Color.White;
             this.lbl_genre2.Location = new System.Drawing.Point(565, 324);
             this.lbl_genre2.Name = "lbl_genre2";
-            this.lbl_genre2.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre2.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre2.TabIndex = 25;
             this.lbl_genre2.Text = "Genre";
             // 
@@ -209,7 +209,7 @@
             this.lbl_duration2.ForeColor = System.Drawing.Color.White;
             this.lbl_duration2.Location = new System.Drawing.Point(565, 304);
             this.lbl_duration2.Name = "lbl_duration2";
-            this.lbl_duration2.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration2.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration2.TabIndex = 23;
             this.lbl_duration2.Text = "Duration";
             // 
@@ -233,7 +233,7 @@
             this.btn_gt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_gt3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gt3.ForeColor = System.Drawing.Color.White;
-            this.btn_gt3.Location = new System.Drawing.Point(914, 339);
+            this.btn_gt3.Location = new System.Drawing.Point(892, 342);
             this.btn_gt3.Name = "btn_gt3";
             this.btn_gt3.Size = new System.Drawing.Size(122, 36);
             this.btn_gt3.TabIndex = 31;
@@ -250,7 +250,7 @@
             this.lbl_genre3.ForeColor = System.Drawing.Color.White;
             this.lbl_genre3.Location = new System.Drawing.Point(915, 325);
             this.lbl_genre3.Name = "lbl_genre3";
-            this.lbl_genre3.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre3.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre3.TabIndex = 30;
             this.lbl_genre3.Text = "Genre";
             // 
@@ -262,7 +262,7 @@
             this.lbl_duration3.ForeColor = System.Drawing.Color.White;
             this.lbl_duration3.Location = new System.Drawing.Point(915, 304);
             this.lbl_duration3.Name = "lbl_duration3";
-            this.lbl_duration3.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration3.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration3.TabIndex = 28;
             this.lbl_duration3.Text = "Duration";
             // 
@@ -303,7 +303,7 @@
             this.lbl_genre6.ForeColor = System.Drawing.Color.White;
             this.lbl_genre6.Location = new System.Drawing.Point(915, 650);
             this.lbl_genre6.Name = "lbl_genre6";
-            this.lbl_genre6.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre6.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre6.TabIndex = 45;
             this.lbl_genre6.Text = "Genre";
             // 
@@ -315,7 +315,7 @@
             this.lbl_duration6.ForeColor = System.Drawing.Color.White;
             this.lbl_duration6.Location = new System.Drawing.Point(915, 630);
             this.lbl_duration6.Name = "lbl_duration6";
-            this.lbl_duration6.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration6.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration6.TabIndex = 43;
             this.lbl_duration6.Text = "Duration";
             // 
@@ -356,7 +356,7 @@
             this.lbl_genre5.ForeColor = System.Drawing.Color.White;
             this.lbl_genre5.Location = new System.Drawing.Point(565, 650);
             this.lbl_genre5.Name = "lbl_genre5";
-            this.lbl_genre5.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre5.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre5.TabIndex = 40;
             this.lbl_genre5.Text = "Genre";
             // 
@@ -368,7 +368,7 @@
             this.lbl_duration5.ForeColor = System.Drawing.Color.White;
             this.lbl_duration5.Location = new System.Drawing.Point(565, 630);
             this.lbl_duration5.Name = "lbl_duration5";
-            this.lbl_duration5.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration5.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration5.TabIndex = 38;
             this.lbl_duration5.Text = "Duration";
             // 
@@ -409,7 +409,7 @@
             this.lbl_genre4.ForeColor = System.Drawing.Color.White;
             this.lbl_genre4.Location = new System.Drawing.Point(221, 650);
             this.lbl_genre4.Name = "lbl_genre4";
-            this.lbl_genre4.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre4.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre4.TabIndex = 35;
             this.lbl_genre4.Text = "Genre";
             // 
@@ -421,7 +421,7 @@
             this.lbl_duration4.ForeColor = System.Drawing.Color.White;
             this.lbl_duration4.Location = new System.Drawing.Point(221, 630);
             this.lbl_duration4.Name = "lbl_duration4";
-            this.lbl_duration4.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration4.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration4.TabIndex = 33;
             this.lbl_duration4.Text = "Duration";
             // 
@@ -462,7 +462,7 @@
             this.lbl_genre9.ForeColor = System.Drawing.Color.White;
             this.lbl_genre9.Location = new System.Drawing.Point(915, 973);
             this.lbl_genre9.Name = "lbl_genre9";
-            this.lbl_genre9.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre9.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre9.TabIndex = 60;
             this.lbl_genre9.Text = "Genre";
             // 
@@ -474,7 +474,7 @@
             this.lbl_duration9.ForeColor = System.Drawing.Color.White;
             this.lbl_duration9.Location = new System.Drawing.Point(915, 952);
             this.lbl_duration9.Name = "lbl_duration9";
-            this.lbl_duration9.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration9.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration9.TabIndex = 58;
             this.lbl_duration9.Text = "Duration";
             // 
@@ -515,7 +515,7 @@
             this.lbl_genre8.ForeColor = System.Drawing.Color.White;
             this.lbl_genre8.Location = new System.Drawing.Point(565, 973);
             this.lbl_genre8.Name = "lbl_genre8";
-            this.lbl_genre8.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre8.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre8.TabIndex = 55;
             this.lbl_genre8.Text = "Genre";
             // 
@@ -527,7 +527,7 @@
             this.lbl_duration8.ForeColor = System.Drawing.Color.White;
             this.lbl_duration8.Location = new System.Drawing.Point(565, 952);
             this.lbl_duration8.Name = "lbl_duration8";
-            this.lbl_duration8.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration8.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration8.TabIndex = 53;
             this.lbl_duration8.Text = "Duration";
             // 
@@ -568,7 +568,7 @@
             this.lbl_genre7.ForeColor = System.Drawing.Color.White;
             this.lbl_genre7.Location = new System.Drawing.Point(221, 973);
             this.lbl_genre7.Name = "lbl_genre7";
-            this.lbl_genre7.Size = new System.Drawing.Size(41, 15);
+            this.lbl_genre7.Size = new System.Drawing.Size(40, 14);
             this.lbl_genre7.TabIndex = 50;
             this.lbl_genre7.Text = "Genre";
             // 
@@ -580,7 +580,7 @@
             this.lbl_duration7.ForeColor = System.Drawing.Color.White;
             this.lbl_duration7.Location = new System.Drawing.Point(221, 952);
             this.lbl_duration7.Name = "lbl_duration7";
-            this.lbl_duration7.Size = new System.Drawing.Size(53, 15);
+            this.lbl_duration7.Size = new System.Drawing.Size(55, 14);
             this.lbl_duration7.TabIndex = 48;
             this.lbl_duration7.Text = "Duration";
             // 
@@ -601,7 +601,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1027);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1036, 39);
+            this.panel1.Size = new System.Drawing.Size(1014, 39);
             this.panel1.TabIndex = 77;
             // 
             // btn_backk
@@ -781,7 +781,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(950, 653);
+            this.Size = new System.Drawing.Size(933, 636);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();

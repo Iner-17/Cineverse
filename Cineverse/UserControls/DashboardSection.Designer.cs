@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_date = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
@@ -66,7 +65,6 @@
             this.lbl_duration1 = new System.Windows.Forms.Label();
             this.lbl_title1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -81,16 +79,6 @@
             this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 718);
-            this.panel1.TabIndex = 0;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -98,10 +86,11 @@
             this.panel4.Controls.Add(this.lbl_time);
             this.panel4.Controls.Add(this.lbl_hellouser);
             this.panel4.Controls.Add(this.panel8);
-            this.panel4.Location = new System.Drawing.Point(3, 1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1032, 164);
-            this.panel4.TabIndex = 8;
+            this.panel4.Size = new System.Drawing.Size(1035, 140);
+            this.panel4.TabIndex = 14;
             // 
             // lbl_date
             // 
@@ -109,7 +98,7 @@
             this.lbl_date.BackColor = System.Drawing.Color.Transparent;
             this.lbl_date.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.ForeColor = System.Drawing.Color.White;
-            this.lbl_date.Location = new System.Drawing.Point(721, 89);
+            this.lbl_date.Location = new System.Drawing.Point(723, 77);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.Size = new System.Drawing.Size(254, 19);
             this.lbl_date.TabIndex = 5;
@@ -121,7 +110,7 @@
             this.lbl_time.BackColor = System.Drawing.Color.Transparent;
             this.lbl_time.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_time.ForeColor = System.Drawing.Color.White;
-            this.lbl_time.Location = new System.Drawing.Point(719, 54);
+            this.lbl_time.Location = new System.Drawing.Point(721, 42);
             this.lbl_time.Name = "lbl_time";
             this.lbl_time.Size = new System.Drawing.Size(279, 35);
             this.lbl_time.TabIndex = 4;
@@ -131,11 +120,11 @@
             // 
             this.lbl_hellouser.AutoSize = true;
             this.lbl_hellouser.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_hellouser.Font = new System.Drawing.Font("Montserrat", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hellouser.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hellouser.ForeColor = System.Drawing.Color.White;
-            this.lbl_hellouser.Location = new System.Drawing.Point(89, 59);
+            this.lbl_hellouser.Location = new System.Drawing.Point(91, 47);
             this.lbl_hellouser.Name = "lbl_hellouser";
-            this.lbl_hellouser.Size = new System.Drawing.Size(368, 49);
+            this.lbl_hellouser.Size = new System.Drawing.Size(339, 45);
             this.lbl_hellouser.TabIndex = 1;
             this.lbl_hellouser.Text = "Hello, Username!";
             // 
@@ -143,7 +132,7 @@
             // 
             this.panel8.BackgroundImage = global::Cineverse.Properties.Resources.userbtn;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Location = new System.Drawing.Point(30, 50);
+            this.panel8.Location = new System.Drawing.Point(32, 38);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(53, 65);
             this.panel8.TabIndex = 0;
@@ -155,10 +144,10 @@
             this.panel6.Controls.Add(this.panel11);
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.panel9);
-            this.panel6.Location = new System.Drawing.Point(797, 176);
+            this.panel6.Location = new System.Drawing.Point(794, 154);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(238, 543);
-            this.panel6.TabIndex = 9;
+            this.panel6.Size = new System.Drawing.Size(238, 563);
+            this.panel6.TabIndex = 15;
             // 
             // label3
             // 
@@ -177,7 +166,7 @@
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel11.Controls.Add(this.lbl_revenue);
             this.panel11.Controls.Add(this.label17);
-            this.panel11.Location = new System.Drawing.Point(16, 393);
+            this.panel11.Location = new System.Drawing.Point(16, 414);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(207, 131);
             this.panel11.TabIndex = 2;
@@ -211,7 +200,7 @@
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel10.Controls.Add(this.lbl_numSchedMovies);
             this.panel10.Controls.Add(this.label15);
-            this.panel10.Location = new System.Drawing.Point(16, 239);
+            this.panel10.Location = new System.Drawing.Point(16, 250);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(207, 131);
             this.panel10.TabIndex = 1;
@@ -285,14 +274,14 @@
             this.panel7.Controls.Add(this.panel17);
             this.panel7.Controls.Add(this.panel15);
             this.panel7.Controls.Add(this.label2);
-            this.panel7.Location = new System.Drawing.Point(1, 174);
+            this.panel7.Location = new System.Drawing.Point(0, 154);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(785, 545);
-            this.panel7.TabIndex = 10;
+            this.panel7.Size = new System.Drawing.Size(785, 563);
+            this.panel7.TabIndex = 16;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(527, 70);
+            this.pictureBox3.Location = new System.Drawing.Point(530, 86);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(222, 328);
             this.pictureBox3.TabIndex = 16;
@@ -300,7 +289,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(278, 70);
+            this.pictureBox2.Location = new System.Drawing.Point(281, 86);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(222, 328);
             this.pictureBox2.TabIndex = 15;
@@ -308,7 +297,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(29, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 86);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(222, 328);
             this.pictureBox1.TabIndex = 14;
@@ -321,7 +310,7 @@
             this.panel16.Controls.Add(this.lbl_genre2);
             this.panel16.Controls.Add(this.lbl_duration2);
             this.panel16.Controls.Add(this.lbl_title2);
-            this.panel16.Location = new System.Drawing.Point(278, 407);
+            this.panel16.Location = new System.Drawing.Point(281, 423);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(222, 123);
             this.panel16.TabIndex = 12;
@@ -340,8 +329,6 @@
             this.btn_getTickets2.TabIndex = 11;
             this.btn_getTickets2.Text = "Get Tickets";
             this.btn_getTickets2.UseVisualStyleBackColor = false;
-            this.btn_getTickets2.MouseEnter += new System.EventHandler(this.btn_getTickets2_MouseEnter);
-            this.btn_getTickets2.MouseLeave += new System.EventHandler(this.btn_getTickets2_MouseLeave);
             // 
             // lbl_genre2
             // 
@@ -394,8 +381,6 @@
             this.btn_viewAll.TabIndex = 12;
             this.btn_viewAll.Text = "View All";
             this.btn_viewAll.UseVisualStyleBackColor = false;
-            this.btn_viewAll.MouseEnter += new System.EventHandler(this.btn_viewAll_MouseEnter);
-            this.btn_viewAll.MouseLeave += new System.EventHandler(this.btn_viewAll_MouseLeave);
             // 
             // panel17
             // 
@@ -404,7 +389,7 @@
             this.panel17.Controls.Add(this.lbl_genre3);
             this.panel17.Controls.Add(this.lbl_duration3);
             this.panel17.Controls.Add(this.lbl_title3);
-            this.panel17.Location = new System.Drawing.Point(527, 407);
+            this.panel17.Location = new System.Drawing.Point(530, 423);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(222, 123);
             this.panel17.TabIndex = 13;
@@ -423,8 +408,6 @@
             this.btn_getTickets3.TabIndex = 11;
             this.btn_getTickets3.Text = "Get Tickets";
             this.btn_getTickets3.UseVisualStyleBackColor = false;
-            this.btn_getTickets3.MouseEnter += new System.EventHandler(this.btn_getTickets3_MouseEnter);
-            this.btn_getTickets3.MouseLeave += new System.EventHandler(this.btn_getTickets3_MouseLeave);
             // 
             // lbl_genre3
             // 
@@ -469,7 +452,7 @@
             this.panel15.Controls.Add(this.lbl_genre1);
             this.panel15.Controls.Add(this.lbl_duration1);
             this.panel15.Controls.Add(this.lbl_title1);
-            this.panel15.Location = new System.Drawing.Point(29, 407);
+            this.panel15.Location = new System.Drawing.Point(32, 423);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(222, 123);
             this.panel15.TabIndex = 1;
@@ -488,8 +471,6 @@
             this.btn_getTickets1.TabIndex = 11;
             this.btn_getTickets1.Text = "Get Tickets";
             this.btn_getTickets1.UseVisualStyleBackColor = false;
-            this.btn_getTickets1.MouseEnter += new System.EventHandler(this.btn_getTickets1_MouseEnter);
-            this.btn_getTickets1.MouseLeave += new System.EventHandler(this.btn_getTickets1_MouseLeave);
             // 
             // lbl_genre1
             // 
@@ -544,11 +525,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel7);
             this.Name = "DashboardSection";
             this.Size = new System.Drawing.Size(1035, 721);
             this.Load += new System.EventHandler(this.DashboardSection_Load);
-            this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -576,7 +558,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lbl_date;
+        private System.Windows.Forms.Label lbl_time;
+        private System.Windows.Forms.Label lbl_hellouser;
+        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel11;
@@ -609,10 +595,5 @@
         private System.Windows.Forms.Label lbl_duration1;
         private System.Windows.Forms.Label lbl_title1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lbl_date;
-        private System.Windows.Forms.Label lbl_time;
-        private System.Windows.Forms.Label lbl_hellouser;
-        private System.Windows.Forms.Panel panel8;
     }
 }
