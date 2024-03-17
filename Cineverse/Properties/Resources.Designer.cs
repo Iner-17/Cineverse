@@ -193,6 +193,16 @@ namespace Cineverse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PosterPlaceholder {
+            get {
+                object obj = ResourceManager.GetObject("PosterPlaceholder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap turn_offsmol {
             get {
                 object obj = ResourceManager.GetObject("turn-offsmol", resourceCulture);

@@ -24,6 +24,8 @@ namespace Cineverse
             InitializeNavigationControl();
         }
 
+       
+
         private void InitializeNavigationControl()
         {
             List<UserControl> userControls = new List<UserControl>()

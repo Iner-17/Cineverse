@@ -228,7 +228,9 @@
   <ItemGroup>
     <None Include="Resources\4.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\PosterPlaceholder.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendarDark.png" />
   </ItemGroup>

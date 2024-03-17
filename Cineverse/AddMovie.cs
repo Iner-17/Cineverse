@@ -14,9 +14,16 @@ namespace Cineverse
 {
     public partial class AddMovie : Form
     {
+
+      
+
+        
+
         public AddMovie()
         {
             InitializeComponent();
+
+            
         }
 
         private void AddMovie_Load(object sender, EventArgs e)
@@ -39,6 +46,8 @@ namespace Cineverse
         private void btn_saveMovie_Click(object sender, EventArgs e)
         {
             saveMovie();
+
+            
         }
 
         
@@ -114,6 +123,8 @@ namespace Cineverse
         {
 
         }
+
+       
 
         //CLOSE BUTTON
         private void panel5_Click(object sender, EventArgs e)
