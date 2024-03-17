@@ -15,14 +15,9 @@ namespace Cineverse
     public partial class AddMovie : Form
     {
 
-      
-
-        
-
         public AddMovie()
         {
             InitializeComponent();
-
             
         }
 
@@ -99,6 +94,7 @@ namespace Cineverse
             }
             finally { conn.Close(); }
         }
+   
 
         private void btn_uploadImage_Click(object sender, EventArgs e)
         {
@@ -133,6 +129,33 @@ namespace Cineverse
             this.Close();
         }
 
-       
+        private void btn_addDate_MouseEnter(object sender, EventArgs e)
+        {
+            btn_addDate.BackColor = Color.FromArgb(31, 178, 198);
+            btn_addDate.ForeColor = Color.Black;
+        }
+
+        private void btn_addDate_MouseLeave(object sender, EventArgs e)
+        {
+            btn_addDate.BackColor = Color.FromArgb(20, 32, 32);
+            btn_addDate.ForeColor = Color.White;
+        }
+
+        private void btn_addTime_MouseEnter(object sender, EventArgs e)
+        {
+            btn_addTime.BackColor = Color.FromArgb(31, 178, 198);
+            btn_addTime.ForeColor = Color.Black;
+        }
+
+        private void btn_addTime_MouseLeave(object sender, EventArgs e)
+        {
+            btn_addTime.BackColor = Color.FromArgb(20, 32, 32);
+            btn_addTime.ForeColor = Color.White;
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

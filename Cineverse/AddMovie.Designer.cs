@@ -99,7 +99,6 @@
             this.txt_addPrice.Name = "txt_addPrice";
             this.txt_addPrice.Size = new System.Drawing.Size(100, 31);
             this.txt_addPrice.TabIndex = 9;
-            this.txt_addPrice.Text = " ";
             // 
             // label3
             // 
@@ -192,6 +191,8 @@
             this.btn_addDate.Text = "Add";
             this.btn_addDate.UseVisualStyleBackColor = false;
             this.btn_addDate.Click += new System.EventHandler(this.btn_addDate_Click);
+            this.btn_addDate.MouseEnter += new System.EventHandler(this.btn_addDate_MouseEnter);
+            this.btn_addDate.MouseLeave += new System.EventHandler(this.btn_addDate_MouseLeave);
             // 
             // btn_addTime
             // 
@@ -207,6 +208,8 @@
             this.btn_addTime.Text = "Add";
             this.btn_addTime.UseVisualStyleBackColor = false;
             this.btn_addTime.Click += new System.EventHandler(this.btn_addTime_Click);
+            this.btn_addTime.MouseEnter += new System.EventHandler(this.btn_addTime_MouseEnter);
+            this.btn_addTime.MouseLeave += new System.EventHandler(this.btn_addTime_MouseLeave);
             // 
             // btn_uploadImage
             // 
@@ -305,11 +308,12 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(931, 13);
+            this.panel5.Location = new System.Drawing.Point(934, 13);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 4;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
+           
             // 
             // dtp_time
             // 
@@ -362,7 +366,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(962, 599);
             this.Controls.Add(this.btn_saveMovie);
             this.Controls.Add(this.label10);

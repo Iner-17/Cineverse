@@ -11,6 +11,15 @@ namespace Cineverse
         public Login()
         {
             InitializeComponent();
+            this.AcceptButton = guna2Button1;
+        }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                guna2Button1.PerformClick();
+            }
         }
 
         public string GetTextBoxValue()
@@ -134,5 +143,6 @@ namespace Cineverse
             }
         }
 
+       
     }
 }

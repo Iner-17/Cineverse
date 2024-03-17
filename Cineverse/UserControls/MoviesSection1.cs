@@ -15,16 +15,23 @@ namespace Cineverse
 
     public partial class MoviesSection1 : UserControl
     {
+       
+
         public MoviesSection1()
         {
             InitializeComponent();
+            
         }
 
         private void MoviesSection1_Load(object sender, EventArgs e)
         {
             UpdateMovieList();
+
+            
         }
 
+        //HoverEffects on buttons
+        #region HoverEffects on buttons
         private void btn_getTickets2_Click(object sender, EventArgs e)
         {
             AddMovie addMovie = new AddMovie();
@@ -152,6 +159,8 @@ namespace Cineverse
             btn_addMovies.ForeColor = Color.White;
         }
 
+        #endregion
+
         private void btn_backk_MouseClick(object sender, MouseEventArgs e)
         {
             if (this.ParentForm is Dashboard dashboard)
@@ -218,14 +227,35 @@ namespace Cineverse
 
         }
 
-       
 
-     
-      
+        
+
+        //RELOAD
         private void label1_Click_1(object sender, EventArgs e)
         {
             UpdateMovieList();
+
+            
+        }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.FromArgb(31, 178, 198);
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.White;
+        }
+
+        private void btn_backk_MouseEnter(object sender, EventArgs e)
+        {
+            btn_backk.ForeColor = Color.FromArgb(31, 178, 198);
+        }
+
+        private void btn_backk_MouseLeave(object sender, EventArgs e)
+        {
+            btn_backk.ForeColor = Color.White;
         }
     }
-
 }

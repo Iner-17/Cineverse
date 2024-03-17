@@ -233,7 +233,7 @@
             this.btn_gt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_gt3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_gt3.ForeColor = System.Drawing.Color.White;
-            this.btn_gt3.Location = new System.Drawing.Point(892, 343);
+            this.btn_gt3.Location = new System.Drawing.Point(914, 339);
             this.btn_gt3.Name = "btn_gt3";
             this.btn_gt3.Size = new System.Drawing.Size(122, 36);
             this.btn_gt3.TabIndex = 31;
@@ -601,7 +601,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1027);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1014, 39);
+            this.panel1.Size = new System.Drawing.Size(1036, 39);
             this.panel1.TabIndex = 77;
             // 
             // btn_backk
@@ -616,6 +616,8 @@
             this.btn_backk.TabIndex = 78;
             this.btn_backk.Text = "Back";
             this.btn_backk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_backk_MouseClick);
+            this.btn_backk.MouseEnter += new System.EventHandler(this.btn_backk_MouseEnter);
+            this.btn_backk.MouseLeave += new System.EventHandler(this.btn_backk_MouseLeave);
             // 
             // label1
             // 
@@ -629,6 +631,8 @@
             this.label1.TabIndex = 79;
             this.label1.Text = "Refresh";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // pb_Poster9
             // 
@@ -777,7 +781,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(967, 670);
+            this.Size = new System.Drawing.Size(950, 653);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
