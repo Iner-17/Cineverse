@@ -18,7 +18,6 @@ namespace Cineverse
         {
             InitializeComponent();
             this.username = username;
-
         }
 
         private void DashboardSection_Load(object sender, EventArgs e)
@@ -38,14 +37,12 @@ namespace Cineverse
                 {
                     lbl_hellouser.Text = "Hello, " + reader.GetString(0) + "!";
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
-
 
             //show current time & date
             UpdateTime();
@@ -59,6 +56,8 @@ namespace Cineverse
             string formattedDate = currentDate.ToString("dddd, MMMMM d, yyyy");
 
             lbl_date.Text = formattedDate;
+
+            UpdateNumberOfMovies();
         }
 
         private void Timer_tick(Object sender, EventArgs e)
@@ -70,6 +69,28 @@ namespace Cineverse
             lbl_time.Text = DateTime.Now.ToString("HH  :  mm  :  ss   tt").ToUpper();
         }
 
+        public void UpdateNumberOfMovies()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM movies;";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                int movieCount = Convert.ToInt32(cmd.ExecuteScalar()); 
+                lbl_numSchedMovies.Text = movieCount.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        #region Hover effects
         private void btn_getTickets1_MouseEnter(object sender, EventArgs e)
         {
             btn_getTickets1.BackColor = Color.FromArgb(31, 178, 198);
@@ -117,5 +138,8 @@ namespace Cineverse
             btn_viewAll.BackColor = Color.FromArgb(20, 32, 32);
             btn_viewAll.ForeColor = Color.White;
         }
+        #endregion
+
+
     }
 }

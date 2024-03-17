@@ -16,18 +16,15 @@ namespace Cineverse
     public partial class MoviesSection1 : UserControl
     {
        
-
         public MoviesSection1()
         {
             InitializeComponent();
-            
         }
 
         private void MoviesSection1_Load(object sender, EventArgs e)
         {
             UpdateMovieList();
 
-            
         }
 
         //HoverEffects on buttons
