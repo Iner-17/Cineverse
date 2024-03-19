@@ -208,11 +208,8 @@ namespace Cineverse
                             
 
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
-                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
-
-                            
+                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;  
                         }
-                        
                     }
                     catch (Exception ex)
                     {
@@ -221,11 +218,7 @@ namespace Cineverse
                     finally { conn.Close(); }
                 }
             }
-
         }
-
-
-        
 
         //RELOAD
         private void label1_Click_1(object sender, EventArgs e)

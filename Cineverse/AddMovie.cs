@@ -18,7 +18,6 @@ namespace Cineverse
         public AddMovie()
         {
             InitializeComponent();
-            
         }
 
         private void AddMovie_Load(object sender, EventArgs e)
@@ -45,8 +44,6 @@ namespace Cineverse
             
         }
 
-        
-
         public void saveMovie()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -60,7 +57,6 @@ namespace Cineverse
                 saveMoviecmd.Parameters.AddWithValue("@Price", txt_addPrice.Text);
                 saveMoviecmd.Parameters.AddWithValue("@Genre", txt_addGenre.Text);
                 saveMoviecmd.Parameters.AddWithValue("@Duration", txt_addDuration.Text);
-                
                 
                 byte[] ImageData;
                 FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -119,8 +115,6 @@ namespace Cineverse
         {
 
         }
-
-       
 
         //CLOSE BUTTON
         private void panel5_Click(object sender, EventArgs e)
