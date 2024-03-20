@@ -140,11 +140,11 @@
             // 
             this.lbl_genre1.AutoSize = true;
             this.lbl_genre1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre1.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre1.Location = new System.Drawing.Point(221, 324);
+            this.lbl_genre1.Location = new System.Drawing.Point(211, 322);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre1.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre1.TabIndex = 20;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -152,11 +152,11 @@
             // 
             this.lbl_duration1.AutoSize = true;
             this.lbl_duration1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration1.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration1.Location = new System.Drawing.Point(221, 304);
+            this.lbl_duration1.Location = new System.Drawing.Point(211, 302);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration1.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration1.TabIndex = 18;
             this.lbl_duration1.Text = "Duration";
             // 
@@ -164,11 +164,11 @@
             // 
             this.lbl_title1.AutoSize = true;
             this.lbl_title1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title1.ForeColor = System.Drawing.Color.White;
-            this.lbl_title1.Location = new System.Drawing.Point(221, 284);
+            this.lbl_title1.Location = new System.Drawing.Point(211, 282);
             this.lbl_title1.Name = "lbl_title1";
-            this.lbl_title1.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title1.Size = new System.Drawing.Size(37, 16);
             this.lbl_title1.TabIndex = 19;
             this.lbl_title1.Text = "Title";
             // 
@@ -193,11 +193,11 @@
             // 
             this.lbl_genre2.AutoSize = true;
             this.lbl_genre2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre2.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre2.Location = new System.Drawing.Point(565, 324);
+            this.lbl_genre2.Location = new System.Drawing.Point(551, 322);
             this.lbl_genre2.Name = "lbl_genre2";
-            this.lbl_genre2.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre2.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre2.TabIndex = 25;
             this.lbl_genre2.Text = "Genre";
             // 
@@ -205,11 +205,11 @@
             // 
             this.lbl_duration2.AutoSize = true;
             this.lbl_duration2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration2.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration2.Location = new System.Drawing.Point(565, 304);
+            this.lbl_duration2.Location = new System.Drawing.Point(551, 302);
             this.lbl_duration2.Name = "lbl_duration2";
-            this.lbl_duration2.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration2.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration2.TabIndex = 23;
             this.lbl_duration2.Text = "Duration";
             // 
@@ -217,11 +217,11 @@
             // 
             this.lbl_title2.AutoSize = true;
             this.lbl_title2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title2.ForeColor = System.Drawing.Color.White;
-            this.lbl_title2.Location = new System.Drawing.Point(565, 284);
+            this.lbl_title2.Location = new System.Drawing.Point(551, 282);
             this.lbl_title2.Name = "lbl_title2";
-            this.lbl_title2.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title2.Size = new System.Drawing.Size(37, 16);
             this.lbl_title2.TabIndex = 24;
             this.lbl_title2.Text = "Title";
             // 
@@ -246,11 +246,11 @@
             // 
             this.lbl_genre3.AutoSize = true;
             this.lbl_genre3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre3.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre3.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre3.Location = new System.Drawing.Point(915, 325);
+            this.lbl_genre3.Location = new System.Drawing.Point(897, 323);
             this.lbl_genre3.Name = "lbl_genre3";
-            this.lbl_genre3.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre3.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre3.TabIndex = 30;
             this.lbl_genre3.Text = "Genre";
             // 
@@ -258,11 +258,11 @@
             // 
             this.lbl_duration3.AutoSize = true;
             this.lbl_duration3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration3.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration3.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration3.Location = new System.Drawing.Point(915, 304);
+            this.lbl_duration3.Location = new System.Drawing.Point(897, 302);
             this.lbl_duration3.Name = "lbl_duration3";
-            this.lbl_duration3.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration3.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration3.TabIndex = 28;
             this.lbl_duration3.Text = "Duration";
             // 
@@ -270,11 +270,11 @@
             // 
             this.lbl_title3.AutoSize = true;
             this.lbl_title3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title3.ForeColor = System.Drawing.Color.White;
-            this.lbl_title3.Location = new System.Drawing.Point(915, 284);
+            this.lbl_title3.Location = new System.Drawing.Point(897, 282);
             this.lbl_title3.Name = "lbl_title3";
-            this.lbl_title3.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title3.Size = new System.Drawing.Size(37, 16);
             this.lbl_title3.TabIndex = 29;
             this.lbl_title3.Text = "Title";
             // 
@@ -299,11 +299,11 @@
             // 
             this.lbl_genre6.AutoSize = true;
             this.lbl_genre6.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre6.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre6.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre6.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre6.Location = new System.Drawing.Point(915, 650);
+            this.lbl_genre6.Location = new System.Drawing.Point(897, 652);
             this.lbl_genre6.Name = "lbl_genre6";
-            this.lbl_genre6.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre6.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre6.TabIndex = 45;
             this.lbl_genre6.Text = "Genre";
             // 
@@ -311,11 +311,11 @@
             // 
             this.lbl_duration6.AutoSize = true;
             this.lbl_duration6.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration6.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration6.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration6.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration6.Location = new System.Drawing.Point(915, 630);
+            this.lbl_duration6.Location = new System.Drawing.Point(897, 632);
             this.lbl_duration6.Name = "lbl_duration6";
-            this.lbl_duration6.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration6.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration6.TabIndex = 43;
             this.lbl_duration6.Text = "Duration";
             // 
@@ -323,11 +323,11 @@
             // 
             this.lbl_title6.AutoSize = true;
             this.lbl_title6.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title6.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title6.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title6.ForeColor = System.Drawing.Color.White;
-            this.lbl_title6.Location = new System.Drawing.Point(915, 610);
+            this.lbl_title6.Location = new System.Drawing.Point(897, 612);
             this.lbl_title6.Name = "lbl_title6";
-            this.lbl_title6.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title6.Size = new System.Drawing.Size(37, 16);
             this.lbl_title6.TabIndex = 44;
             this.lbl_title6.Text = "Title";
             // 
@@ -352,11 +352,11 @@
             // 
             this.lbl_genre5.AutoSize = true;
             this.lbl_genre5.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre5.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre5.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre5.Location = new System.Drawing.Point(565, 650);
+            this.lbl_genre5.Location = new System.Drawing.Point(552, 650);
             this.lbl_genre5.Name = "lbl_genre5";
-            this.lbl_genre5.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre5.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre5.TabIndex = 40;
             this.lbl_genre5.Text = "Genre";
             // 
@@ -364,11 +364,11 @@
             // 
             this.lbl_duration5.AutoSize = true;
             this.lbl_duration5.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration5.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration5.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration5.Location = new System.Drawing.Point(565, 630);
+            this.lbl_duration5.Location = new System.Drawing.Point(552, 630);
             this.lbl_duration5.Name = "lbl_duration5";
-            this.lbl_duration5.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration5.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration5.TabIndex = 38;
             this.lbl_duration5.Text = "Duration";
             // 
@@ -376,11 +376,11 @@
             // 
             this.lbl_title5.AutoSize = true;
             this.lbl_title5.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title5.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title5.ForeColor = System.Drawing.Color.White;
-            this.lbl_title5.Location = new System.Drawing.Point(565, 610);
+            this.lbl_title5.Location = new System.Drawing.Point(552, 610);
             this.lbl_title5.Name = "lbl_title5";
-            this.lbl_title5.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title5.Size = new System.Drawing.Size(37, 16);
             this.lbl_title5.TabIndex = 39;
             this.lbl_title5.Text = "Title";
             // 
@@ -405,11 +405,11 @@
             // 
             this.lbl_genre4.AutoSize = true;
             this.lbl_genre4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre4.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre4.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre4.Location = new System.Drawing.Point(221, 650);
+            this.lbl_genre4.Location = new System.Drawing.Point(211, 650);
             this.lbl_genre4.Name = "lbl_genre4";
-            this.lbl_genre4.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre4.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre4.TabIndex = 35;
             this.lbl_genre4.Text = "Genre";
             // 
@@ -417,11 +417,11 @@
             // 
             this.lbl_duration4.AutoSize = true;
             this.lbl_duration4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration4.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration4.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration4.Location = new System.Drawing.Point(221, 630);
+            this.lbl_duration4.Location = new System.Drawing.Point(211, 630);
             this.lbl_duration4.Name = "lbl_duration4";
-            this.lbl_duration4.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration4.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration4.TabIndex = 33;
             this.lbl_duration4.Text = "Duration";
             // 
@@ -429,11 +429,11 @@
             // 
             this.lbl_title4.AutoSize = true;
             this.lbl_title4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title4.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title4.ForeColor = System.Drawing.Color.White;
-            this.lbl_title4.Location = new System.Drawing.Point(221, 610);
+            this.lbl_title4.Location = new System.Drawing.Point(211, 610);
             this.lbl_title4.Name = "lbl_title4";
-            this.lbl_title4.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title4.Size = new System.Drawing.Size(37, 16);
             this.lbl_title4.TabIndex = 34;
             this.lbl_title4.Text = "Title";
             // 
@@ -458,11 +458,11 @@
             // 
             this.lbl_genre9.AutoSize = true;
             this.lbl_genre9.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre9.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre9.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre9.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre9.Location = new System.Drawing.Point(915, 973);
+            this.lbl_genre9.Location = new System.Drawing.Point(897, 975);
             this.lbl_genre9.Name = "lbl_genre9";
-            this.lbl_genre9.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre9.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre9.TabIndex = 60;
             this.lbl_genre9.Text = "Genre";
             // 
@@ -470,11 +470,11 @@
             // 
             this.lbl_duration9.AutoSize = true;
             this.lbl_duration9.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration9.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration9.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration9.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration9.Location = new System.Drawing.Point(915, 952);
+            this.lbl_duration9.Location = new System.Drawing.Point(897, 954);
             this.lbl_duration9.Name = "lbl_duration9";
-            this.lbl_duration9.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration9.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration9.TabIndex = 58;
             this.lbl_duration9.Text = "Duration";
             // 
@@ -482,11 +482,11 @@
             // 
             this.lbl_title9.AutoSize = true;
             this.lbl_title9.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title9.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title9.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title9.ForeColor = System.Drawing.Color.White;
-            this.lbl_title9.Location = new System.Drawing.Point(915, 932);
+            this.lbl_title9.Location = new System.Drawing.Point(897, 934);
             this.lbl_title9.Name = "lbl_title9";
-            this.lbl_title9.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title9.Size = new System.Drawing.Size(37, 16);
             this.lbl_title9.TabIndex = 59;
             this.lbl_title9.Text = "Title";
             // 
@@ -511,11 +511,11 @@
             // 
             this.lbl_genre8.AutoSize = true;
             this.lbl_genre8.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre8.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre8.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre8.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre8.Location = new System.Drawing.Point(565, 973);
+            this.lbl_genre8.Location = new System.Drawing.Point(552, 975);
             this.lbl_genre8.Name = "lbl_genre8";
-            this.lbl_genre8.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre8.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre8.TabIndex = 55;
             this.lbl_genre8.Text = "Genre";
             // 
@@ -523,11 +523,11 @@
             // 
             this.lbl_duration8.AutoSize = true;
             this.lbl_duration8.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration8.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration8.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration8.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration8.Location = new System.Drawing.Point(565, 952);
+            this.lbl_duration8.Location = new System.Drawing.Point(552, 954);
             this.lbl_duration8.Name = "lbl_duration8";
-            this.lbl_duration8.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration8.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration8.TabIndex = 53;
             this.lbl_duration8.Text = "Duration";
             // 
@@ -535,11 +535,11 @@
             // 
             this.lbl_title8.AutoSize = true;
             this.lbl_title8.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title8.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title8.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title8.ForeColor = System.Drawing.Color.White;
-            this.lbl_title8.Location = new System.Drawing.Point(565, 932);
+            this.lbl_title8.Location = new System.Drawing.Point(552, 934);
             this.lbl_title8.Name = "lbl_title8";
-            this.lbl_title8.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title8.Size = new System.Drawing.Size(37, 16);
             this.lbl_title8.TabIndex = 54;
             this.lbl_title8.Text = "Title";
             // 
@@ -564,11 +564,11 @@
             // 
             this.lbl_genre7.AutoSize = true;
             this.lbl_genre7.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre7.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre7.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre7.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre7.Location = new System.Drawing.Point(221, 973);
+            this.lbl_genre7.Location = new System.Drawing.Point(211, 973);
             this.lbl_genre7.Name = "lbl_genre7";
-            this.lbl_genre7.Size = new System.Drawing.Size(40, 14);
+            this.lbl_genre7.Size = new System.Drawing.Size(46, 16);
             this.lbl_genre7.TabIndex = 50;
             this.lbl_genre7.Text = "Genre";
             // 
@@ -576,11 +576,11 @@
             // 
             this.lbl_duration7.AutoSize = true;
             this.lbl_duration7.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration7.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration7.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration7.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration7.Location = new System.Drawing.Point(221, 952);
+            this.lbl_duration7.Location = new System.Drawing.Point(211, 952);
             this.lbl_duration7.Name = "lbl_duration7";
-            this.lbl_duration7.Size = new System.Drawing.Size(55, 14);
+            this.lbl_duration7.Size = new System.Drawing.Size(63, 16);
             this.lbl_duration7.TabIndex = 48;
             this.lbl_duration7.Text = "Duration";
             // 
@@ -588,11 +588,11 @@
             // 
             this.lbl_title7.AutoSize = true;
             this.lbl_title7.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title7.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title7.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title7.ForeColor = System.Drawing.Color.White;
-            this.lbl_title7.Location = new System.Drawing.Point(221, 932);
+            this.lbl_title7.Location = new System.Drawing.Point(211, 932);
             this.lbl_title7.Name = "lbl_title7";
-            this.lbl_title7.Size = new System.Drawing.Size(32, 14);
+            this.lbl_title7.Size = new System.Drawing.Size(37, 16);
             this.lbl_title7.TabIndex = 49;
             this.lbl_title7.Text = "Title";
             // 
@@ -781,7 +781,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(933, 636);
+            this.Size = new System.Drawing.Size(899, 602);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();

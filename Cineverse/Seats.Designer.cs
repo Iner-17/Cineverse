@@ -298,7 +298,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 721);
             this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+          
             // 
             // btn_user
             // 
@@ -2759,7 +2759,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1035, 718);
             this.panel4.TabIndex = 8;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+         
             // 
             // Seats
             // 
