@@ -255,5 +255,8 @@
   <ItemGroup>
     <None Include="Resources\calendarWhite.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screen_smol.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
