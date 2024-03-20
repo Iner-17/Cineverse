@@ -116,6 +116,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="NavigationControls.cs" />
+    <Compile Include="UserControls\BookingSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BookingSection.Designer.cs">
+      <DependentUpon>BookingSection.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DashboardSection.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -144,11 +150,20 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="SolidColorBrush.cs" />
+    <Compile Include="UserControls\ScheduleSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ScheduleSection.Designer.cs">
+      <DependentUpon>ScheduleSection.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddMovie.resx">
       <DependentUpon>AddMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BookingSection.resx">
+      <DependentUpon>BookingSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DashboardSection.resx">
       <DependentUpon>DashboardSection.cs</DependentUpon>
@@ -171,6 +186,9 @@
     </Compile>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ScheduleSection.resx">
+      <DependentUpon>ScheduleSection.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cineverse.UserControls;
 using MySql.Data.MySqlClient;
 
 namespace Cineverse
@@ -32,6 +33,8 @@ namespace Cineverse
             { 
                 new DashboardSection(username),
                 new MoviesSection1(),
+                new ScheduleSection(),
+                new BookingSection()
                 
             };
 
@@ -53,7 +56,9 @@ namespace Cineverse
             loginfrm.Show();
             this.Close();
         }
-      
+
+
+        #region Hover effects
         private void btn_movies_MouseEnter(object sender, EventArgs e)
         {
             btn_movies.BackColor = Color.FromArgb(31, 178, 198);
@@ -114,8 +119,8 @@ namespace Cineverse
             btn_logout.ForeColor = Color.White;
         }
 
+        #endregion
 
-       
         private void panel5_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -129,6 +134,16 @@ namespace Cineverse
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
             navigationcontrols.Display(0);
+        }
+
+        private void btn_schedule_Click(object sender, EventArgs e)
+        {
+            navigationcontrols.Display(2);
+        }
+
+        private void btn_bookings_Click(object sender, EventArgs e)
+        {
+            navigationcontrols.Display(3);
         }
     }
     

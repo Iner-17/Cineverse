@@ -35,10 +35,10 @@
             this.btn_schedule = new System.Windows.Forms.Button();
             this.btn_movies = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,7 @@
             this.btn_bookings.TabIndex = 8;
             this.btn_bookings.Text = "Bookings";
             this.btn_bookings.UseVisualStyleBackColor = false;
+            this.btn_bookings.Click += new System.EventHandler(this.btn_bookings_Click);
             this.btn_bookings.MouseEnter += new System.EventHandler(this.btn_bookings_MouseEnter);
             this.btn_bookings.MouseLeave += new System.EventHandler(this.btn_bookings_MouseLeave);
             // 
@@ -126,6 +127,7 @@
             this.btn_schedule.TabIndex = 7;
             this.btn_schedule.Text = "Schedule";
             this.btn_schedule.UseVisualStyleBackColor = false;
+            this.btn_schedule.Click += new System.EventHandler(this.btn_schedule_Click);
             this.btn_schedule.MouseEnter += new System.EventHandler(this.btn_schedule_MouseEnter);
             this.btn_schedule.MouseLeave += new System.EventHandler(this.btn_schedule_MouseLeave);
             // 
@@ -162,6 +164,15 @@
             this.btn_dashboard.UseVisualStyleBackColor = false;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(36, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(231, 111);
+            this.panel2.TabIndex = 1;
+            // 
             // panel4
             // 
             this.panel4.Location = new System.Drawing.Point(328, 41);
@@ -190,15 +201,6 @@
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 3;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(36, 25);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 111);
-            this.panel2.TabIndex = 1;
             // 
             // Dashboard
             // 
