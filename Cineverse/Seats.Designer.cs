@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_user = new System.Windows.Forms.Button();
-            this.btn_dashboard = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_user = new System.Windows.Forms.Button();
+            this.btn_dashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -243,12 +243,12 @@
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
@@ -298,7 +298,127 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 721);
             this.panel1.TabIndex = 7;
-          
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.label9.Location = new System.Drawing.Point(90, 523);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 23);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "E11, E12, E13";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(12, 488);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(143, 19);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "SEATS SELECTED";
+            // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(16, 410);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(270, 41);
+            this.panel8.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(12, 386);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 19);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "TIME";
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(16, 324);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(270, 41);
+            this.panel7.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(12, 300);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 19);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "DATE";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(195, 249);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 19);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "125 mins.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 249);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 19);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "₱350.00";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(195, 227);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 19);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "DURATION";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 227);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 19);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "TICKET PRICE";
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(16, 157);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(270, 41);
+            this.panel6.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 19);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "MOVIE TITLE";
             // 
             // btn_user
             // 
@@ -328,127 +448,6 @@
             this.btn_dashboard.TabIndex = 5;
             this.btn_dashboard.Text = "Proceed To Payment";
             this.btn_dashboard.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 133);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 19);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "MOVIE TITLE";
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(16, 157);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(270, 41);
-            this.panel6.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 227);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 19);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "TICKET PRICE";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(195, 227);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 19);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "DURATION";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 249);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 19);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "₱350.00";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(195, 249);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 19);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "125 mins.";
-            // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(16, 324);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(270, 41);
-            this.panel7.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(12, 300);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 19);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "DATE";
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(16, 410);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(270, 41);
-            this.panel8.TabIndex = 16;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 386);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 19);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "TIME";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 488);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 19);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "SEATS SELECTED";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label9.Location = new System.Drawing.Point(90, 523);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 23);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "E11, E12, E13";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
@@ -2220,56 +2219,8 @@
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Location = new System.Drawing.Point(62, -20);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(910, 207);
+            this.panel9.Size = new System.Drawing.Size(910, 203);
             this.panel9.TabIndex = 0;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.panel10.Location = new System.Drawing.Point(254, 130);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(30, 30);
-            this.panel10.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.panel11.Location = new System.Drawing.Point(421, 130);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(30, 30);
-            this.panel11.TabIndex = 1;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.panel12.Location = new System.Drawing.Point(576, 130);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(30, 30);
-            this.panel12.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(457, 135);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 19);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Booked";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(612, 135);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 19);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Selected";
             // 
             // label14
             // 
@@ -2277,11 +2228,59 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(288, 135);
+            this.label14.Location = new System.Drawing.Point(288, 147);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(78, 19);
             this.label14.TabIndex = 2;
             this.label14.Text = "Available";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(612, 147);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 19);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Selected";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(457, 147);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 19);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Booked";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.panel12.Location = new System.Drawing.Point(576, 142);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(30, 30);
+            this.panel12.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.panel11.Location = new System.Drawing.Point(421, 142);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(30, 30);
+            this.panel11.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel10.Location = new System.Drawing.Point(254, 142);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(30, 30);
+            this.panel10.TabIndex = 0;
             // 
             // label10
             // 
@@ -2759,7 +2758,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1035, 718);
             this.panel4.TabIndex = 8;
-         
             // 
             // Seats
             // 
