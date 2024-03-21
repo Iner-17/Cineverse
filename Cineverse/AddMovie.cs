@@ -41,7 +41,6 @@ namespace Cineverse
         {
             saveMovie();
 
-            
         }
 
         public void saveMovie()
