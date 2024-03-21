@@ -41,8 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_user = new System.Windows.Forms.Button();
-            this.btn_dashboard = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.btn_payment = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -291,8 +291,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btn_user);
-            this.panel1.Controls.Add(this.btn_dashboard);
+            this.panel1.Controls.Add(this.btn_back);
+            this.panel1.Controls.Add(this.btn_payment);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 41);
             this.panel1.Name = "panel1";
@@ -420,34 +420,34 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "MOVIE TITLE";
             // 
-            // btn_user
+            // btn_back
             // 
-            this.btn_user.BackColor = System.Drawing.Color.Transparent;
-            this.btn_user.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_user.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_user.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_user.ForeColor = System.Drawing.Color.White;
-            this.btn_user.Location = new System.Drawing.Point(16, 676);
-            this.btn_user.Name = "btn_user";
-            this.btn_user.Size = new System.Drawing.Size(270, 42);
-            this.btn_user.TabIndex = 9;
-            this.btn_user.Text = "Back";
-            this.btn_user.UseVisualStyleBackColor = false;
+            this.btn_back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.ForeColor = System.Drawing.Color.White;
+            this.btn_back.Location = new System.Drawing.Point(16, 676);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(270, 42);
+            this.btn_back.TabIndex = 9;
+            this.btn_back.Text = "Back";
+            this.btn_back.UseVisualStyleBackColor = false;
             // 
-            // btn_dashboard
+            // btn_payment
             // 
-            this.btn_dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_dashboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_dashboard.FlatAppearance.BorderSize = 0;
-            this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashboard.Location = new System.Drawing.Point(16, 612);
-            this.btn_dashboard.Name = "btn_dashboard";
-            this.btn_dashboard.Size = new System.Drawing.Size(270, 42);
-            this.btn_dashboard.TabIndex = 5;
-            this.btn_dashboard.Text = "Proceed To Payment";
-            this.btn_dashboard.UseVisualStyleBackColor = false;
+            this.btn_payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_payment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_payment.FlatAppearance.BorderSize = 0;
+            this.btn_payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_payment.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_payment.Location = new System.Drawing.Point(16, 612);
+            this.btn_payment.Name = "btn_payment";
+            this.btn_payment.Size = new System.Drawing.Size(270, 42);
+            this.btn_payment.TabIndex = 5;
+            this.btn_payment.Text = "Proceed To Payment";
+            this.btn_payment.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -2787,8 +2787,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_user;
-        private System.Windows.Forms.Button btn_dashboard;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Button btn_payment;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
