@@ -45,6 +45,7 @@
             this.lbl_todaysBooking = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lbl_viewAll = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,7 +54,6 @@
             this.lbl_genre2 = new System.Windows.Forms.Label();
             this.lbl_duration2 = new System.Windows.Forms.Label();
             this.lbl_title2 = new System.Windows.Forms.Label();
-            this.btn_viewAll = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.btn_getTickets3 = new System.Windows.Forms.Button();
             this.lbl_genre3 = new System.Windows.Forms.Label();
@@ -132,9 +132,9 @@
             // 
             this.panel8.BackgroundImage = global::Cineverse.Properties.Resources.userbtn;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Location = new System.Drawing.Point(32, 38);
+            this.panel8.Location = new System.Drawing.Point(44, 42);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(53, 65);
+            this.panel8.Size = new System.Drawing.Size(41, 54);
             this.panel8.TabIndex = 0;
             // 
             // panel6
@@ -144,9 +144,9 @@
             this.panel6.Controls.Add(this.panel11);
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.panel9);
-            this.panel6.Location = new System.Drawing.Point(794, 154);
+            this.panel6.Location = new System.Drawing.Point(794, 146);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(238, 563);
+            this.panel6.Size = new System.Drawing.Size(238, 571);
             this.panel6.TabIndex = 15;
             // 
             // label3
@@ -155,7 +155,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(30, 24);
+            this.label3.Location = new System.Drawing.Point(33, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 35);
             this.label3.TabIndex = 3;
@@ -166,7 +166,7 @@
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel11.Controls.Add(this.lbl_revenue);
             this.panel11.Controls.Add(this.label17);
-            this.panel11.Location = new System.Drawing.Point(16, 414);
+            this.panel11.Location = new System.Drawing.Point(16, 407);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(207, 131);
             this.panel11.TabIndex = 2;
@@ -200,7 +200,7 @@
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel10.Controls.Add(this.lbl_numSchedMovies);
             this.panel10.Controls.Add(this.label15);
-            this.panel10.Location = new System.Drawing.Point(16, 250);
+            this.panel10.Location = new System.Drawing.Point(16, 244);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(207, 131);
             this.panel10.TabIndex = 1;
@@ -234,7 +234,7 @@
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel9.Controls.Add(this.lbl_todaysBooking);
             this.panel9.Controls.Add(this.label12);
-            this.panel9.Location = new System.Drawing.Point(16, 86);
+            this.panel9.Location = new System.Drawing.Point(16, 78);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(207, 131);
             this.panel9.TabIndex = 0;
@@ -266,22 +266,37 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel7.Controls.Add(this.lbl_viewAll);
             this.panel7.Controls.Add(this.pictureBox3);
             this.panel7.Controls.Add(this.pictureBox2);
             this.panel7.Controls.Add(this.pictureBox1);
             this.panel7.Controls.Add(this.panel16);
-            this.panel7.Controls.Add(this.btn_viewAll);
             this.panel7.Controls.Add(this.panel17);
             this.panel7.Controls.Add(this.panel15);
             this.panel7.Controls.Add(this.label2);
-            this.panel7.Location = new System.Drawing.Point(0, 154);
+            this.panel7.Location = new System.Drawing.Point(0, 146);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(785, 563);
+            this.panel7.Size = new System.Drawing.Size(785, 571);
             this.panel7.TabIndex = 16;
+            // 
+            // lbl_viewAll
+            // 
+            this.lbl_viewAll.AutoSize = true;
+            this.lbl_viewAll.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_viewAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_viewAll.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_viewAll.ForeColor = System.Drawing.Color.White;
+            this.lbl_viewAll.Location = new System.Drawing.Point(691, 31);
+            this.lbl_viewAll.Name = "lbl_viewAll";
+            this.lbl_viewAll.Size = new System.Drawing.Size(61, 16);
+            this.lbl_viewAll.TabIndex = 17;
+            this.lbl_viewAll.Text = "View All";
+            this.lbl_viewAll.MouseEnter += new System.EventHandler(this.lbl_viewAll_MouseEnter);
+            this.lbl_viewAll.MouseLeave += new System.EventHandler(this.lbl_viewAll_MouseLeave);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(530, 86);
+            this.pictureBox3.Location = new System.Drawing.Point(530, 78);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(222, 328);
             this.pictureBox3.TabIndex = 16;
@@ -289,7 +304,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(281, 86);
+            this.pictureBox2.Location = new System.Drawing.Point(281, 78);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(222, 328);
             this.pictureBox2.TabIndex = 15;
@@ -297,7 +312,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(32, 86);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 78);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(222, 328);
             this.pictureBox1.TabIndex = 14;
@@ -310,7 +325,7 @@
             this.panel16.Controls.Add(this.lbl_genre2);
             this.panel16.Controls.Add(this.lbl_duration2);
             this.panel16.Controls.Add(this.lbl_title2);
-            this.panel16.Location = new System.Drawing.Point(281, 423);
+            this.panel16.Location = new System.Drawing.Point(281, 415);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(222, 123);
             this.panel16.TabIndex = 12;
@@ -329,6 +344,8 @@
             this.btn_getTickets2.TabIndex = 11;
             this.btn_getTickets2.Text = "Get Tickets";
             this.btn_getTickets2.UseVisualStyleBackColor = false;
+            this.btn_getTickets2.MouseEnter += new System.EventHandler(this.btn_getTickets2_MouseEnter_1);
+            this.btn_getTickets2.MouseLeave += new System.EventHandler(this.btn_getTickets2_MouseLeave_1);
             // 
             // lbl_genre2
             // 
@@ -358,29 +375,13 @@
             // 
             this.lbl_title2.AutoSize = true;
             this.lbl_title2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title2.ForeColor = System.Drawing.Color.White;
             this.lbl_title2.Location = new System.Drawing.Point(93, 11);
             this.lbl_title2.Name = "lbl_title2";
-            this.lbl_title2.Size = new System.Drawing.Size(36, 16);
+            this.lbl_title2.Size = new System.Drawing.Size(37, 16);
             this.lbl_title2.TabIndex = 7;
             this.lbl_title2.Text = "Title";
-            // 
-            // btn_viewAll
-            // 
-            this.btn_viewAll.BackColor = System.Drawing.Color.Transparent;
-            this.btn_viewAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_viewAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_viewAll.FlatAppearance.BorderSize = 0;
-            this.btn_viewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_viewAll.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_viewAll.ForeColor = System.Drawing.Color.White;
-            this.btn_viewAll.Location = new System.Drawing.Point(668, 30);
-            this.btn_viewAll.Name = "btn_viewAll";
-            this.btn_viewAll.Size = new System.Drawing.Size(81, 26);
-            this.btn_viewAll.TabIndex = 12;
-            this.btn_viewAll.Text = "View All";
-            this.btn_viewAll.UseVisualStyleBackColor = false;
             // 
             // panel17
             // 
@@ -389,7 +390,7 @@
             this.panel17.Controls.Add(this.lbl_genre3);
             this.panel17.Controls.Add(this.lbl_duration3);
             this.panel17.Controls.Add(this.lbl_title3);
-            this.panel17.Location = new System.Drawing.Point(530, 423);
+            this.panel17.Location = new System.Drawing.Point(530, 415);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(222, 123);
             this.panel17.TabIndex = 13;
@@ -408,6 +409,8 @@
             this.btn_getTickets3.TabIndex = 11;
             this.btn_getTickets3.Text = "Get Tickets";
             this.btn_getTickets3.UseVisualStyleBackColor = false;
+            this.btn_getTickets3.MouseEnter += new System.EventHandler(this.btn_getTickets3_MouseEnter_1);
+            this.btn_getTickets3.MouseLeave += new System.EventHandler(this.btn_getTickets3_MouseLeave_1);
             // 
             // lbl_genre3
             // 
@@ -437,11 +440,11 @@
             // 
             this.lbl_title3.AutoSize = true;
             this.lbl_title3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title3.ForeColor = System.Drawing.Color.White;
             this.lbl_title3.Location = new System.Drawing.Point(91, 11);
             this.lbl_title3.Name = "lbl_title3";
-            this.lbl_title3.Size = new System.Drawing.Size(36, 16);
+            this.lbl_title3.Size = new System.Drawing.Size(37, 16);
             this.lbl_title3.TabIndex = 7;
             this.lbl_title3.Text = "Title";
             // 
@@ -452,7 +455,7 @@
             this.panel15.Controls.Add(this.lbl_genre1);
             this.panel15.Controls.Add(this.lbl_duration1);
             this.panel15.Controls.Add(this.lbl_title1);
-            this.panel15.Location = new System.Drawing.Point(32, 423);
+            this.panel15.Location = new System.Drawing.Point(32, 415);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(222, 123);
             this.panel15.TabIndex = 1;
@@ -471,6 +474,8 @@
             this.btn_getTickets1.TabIndex = 11;
             this.btn_getTickets1.Text = "Get Tickets";
             this.btn_getTickets1.UseVisualStyleBackColor = false;
+            this.btn_getTickets1.MouseEnter += new System.EventHandler(this.btn_getTickets1_MouseEnter_1);
+            this.btn_getTickets1.MouseLeave += new System.EventHandler(this.btn_getTickets1_MouseLeave_1);
             // 
             // lbl_genre1
             // 
@@ -500,11 +505,11 @@
             // 
             this.lbl_title1.AutoSize = true;
             this.lbl_title1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title1.ForeColor = System.Drawing.Color.White;
             this.lbl_title1.Location = new System.Drawing.Point(91, 11);
             this.lbl_title1.Name = "lbl_title1";
-            this.lbl_title1.Size = new System.Drawing.Size(36, 16);
+            this.lbl_title1.Size = new System.Drawing.Size(37, 16);
             this.lbl_title1.TabIndex = 7;
             this.lbl_title1.Text = "Title";
             // 
@@ -583,7 +588,6 @@
         private System.Windows.Forms.Label lbl_genre2;
         private System.Windows.Forms.Label lbl_duration2;
         private System.Windows.Forms.Label lbl_title2;
-        private System.Windows.Forms.Button btn_viewAll;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Button btn_getTickets3;
         private System.Windows.Forms.Label lbl_genre3;
@@ -595,5 +599,6 @@
         private System.Windows.Forms.Label lbl_duration1;
         private System.Windows.Forms.Label lbl_title1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_viewAll;
     }
 }

@@ -90,55 +90,50 @@ namespace Cineverse
                 conn.Close();
             }
         }
-        #region Hover effects
-        private void btn_getTickets1_MouseEnter(object sender, EventArgs e)
-        {
-            btn_getTickets1.BackColor = Color.FromArgb(31, 178, 198);
-            btn_getTickets1.ForeColor = Color.Black;
-        }
-
-        private void btn_getTickets1_MouseLeave(object sender, EventArgs e)
-        {
-            btn_getTickets1.BackColor = Color.FromArgb(20, 32, 32);
-            btn_getTickets1.ForeColor = Color.White;
-        }
-
-        private void btn_getTickets2_MouseEnter(object sender, EventArgs e)
-        {
-            btn_getTickets2.BackColor = Color.FromArgb(31, 178, 198);
-            btn_getTickets2.ForeColor = Color.Black;
-        }
-
-        private void btn_getTickets2_MouseLeave(object sender, EventArgs e)
-        {
-            btn_getTickets2.BackColor = Color.FromArgb(20, 32, 32);
-            btn_getTickets2.ForeColor = Color.White;
-        }
-
-        private void btn_getTickets3_MouseEnter(object sender, EventArgs e)
+        private void btn_getTickets3_MouseEnter_1(object sender, EventArgs e)
         {
             btn_getTickets3.BackColor = Color.FromArgb(31, 178, 198);
             btn_getTickets3.ForeColor = Color.Black;
         }
 
-        private void btn_getTickets3_MouseLeave(object sender, EventArgs e)
+        private void btn_getTickets3_MouseLeave_1(object sender, EventArgs e)
         {
             btn_getTickets3.BackColor = Color.FromArgb(20, 32, 32);
             btn_getTickets3.ForeColor = Color.White;
         }
 
-        private void btn_viewAll_MouseEnter(object sender, EventArgs e)
+        private void btn_getTickets1_MouseEnter_1(object sender, EventArgs e)
         {
-            btn_viewAll.BackColor = Color.FromArgb(31, 178, 198);
-            btn_viewAll.ForeColor = Color.Black;
+            btn_getTickets1.BackColor = Color.FromArgb(31, 178, 198);
+            btn_getTickets1.ForeColor = Color.Black;
         }
 
-        private void btn_viewAll_MouseLeave(object sender, EventArgs e)
+        private void btn_getTickets1_MouseLeave_1(object sender, EventArgs e)
         {
-            btn_viewAll.BackColor = Color.FromArgb(20, 32, 32);
-            btn_viewAll.ForeColor = Color.White;
+            btn_getTickets1.BackColor = Color.FromArgb(20, 32, 32);
+            btn_getTickets1.ForeColor = Color.White;
         }
-        #endregion
 
+        private void btn_getTickets2_MouseEnter_1(object sender, EventArgs e)
+        {
+            btn_getTickets2.BackColor = Color.FromArgb(31, 178, 198);
+            btn_getTickets2.ForeColor = Color.Black;
+        }
+
+        private void btn_getTickets2_MouseLeave_1(object sender, EventArgs e)
+        {
+            btn_getTickets2.BackColor = Color.FromArgb(20, 32, 32);
+            btn_getTickets2.ForeColor = Color.White;
+        }
+
+        private void lbl_viewAll_MouseEnter(object sender, EventArgs e)
+        {
+            lbl_viewAll.ForeColor = Color.FromArgb(31, 178, 198);
+        }
+
+        private void lbl_viewAll_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_viewAll.ForeColor = Color.White;
+        }
     }
 }

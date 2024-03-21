@@ -116,6 +116,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="NavigationControls.cs" />
+    <Compile Include="Seats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seats.Designer.cs">
+      <DependentUpon>Seats.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BookingSection.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seats.resx">
+      <DependentUpon>Seats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BookingSection.resx">
       <DependentUpon>BookingSection.cs</DependentUpon>
@@ -257,6 +266,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\screen_smol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screen_smol1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
