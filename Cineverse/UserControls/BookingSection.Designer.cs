@@ -70,7 +70,7 @@
             this.dgv_booking.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_booking.EnableHeadersVisualStyles = false;
             this.dgv_booking.GridColor = System.Drawing.SystemColors.Control;
-            this.dgv_booking.Location = new System.Drawing.Point(121, 130);
+            this.dgv_booking.Location = new System.Drawing.Point(48, 80);
             this.dgv_booking.Name = "dgv_booking";
             this.dgv_booking.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_booking.RowHeadersVisible = false;
@@ -82,14 +82,10 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_booking.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_booking.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
-            this.dgv_booking.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_booking.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_booking.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgv_booking.RowTemplate.Height = 50;
             this.dgv_booking.RowTemplate.ReadOnly = true;
             this.dgv_booking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_booking.Size = new System.Drawing.Size(793, 475);
+            this.dgv_booking.Size = new System.Drawing.Size(938, 603);
             this.dgv_booking.TabIndex = 0;
             // 
             // label2

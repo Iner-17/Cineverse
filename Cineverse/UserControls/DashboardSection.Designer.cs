@@ -132,9 +132,9 @@
             // 
             this.panel8.BackgroundImage = global::Cineverse.Properties.Resources.userbtn;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Location = new System.Drawing.Point(32, 38);
+            this.panel8.Location = new System.Drawing.Point(44, 42);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(53, 65);
+            this.panel8.Size = new System.Drawing.Size(41, 54);
             this.panel8.TabIndex = 0;
             // 
             // panel6
@@ -375,11 +375,11 @@
             // 
             this.lbl_title2.AutoSize = true;
             this.lbl_title2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title2.ForeColor = System.Drawing.Color.White;
             this.lbl_title2.Location = new System.Drawing.Point(93, 11);
             this.lbl_title2.Name = "lbl_title2";
-            this.lbl_title2.Size = new System.Drawing.Size(36, 16);
+            this.lbl_title2.Size = new System.Drawing.Size(37, 16);
             this.lbl_title2.TabIndex = 7;
             this.lbl_title2.Text = "Title";
             // 
@@ -440,11 +440,11 @@
             // 
             this.lbl_title3.AutoSize = true;
             this.lbl_title3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title3.ForeColor = System.Drawing.Color.White;
             this.lbl_title3.Location = new System.Drawing.Point(91, 11);
             this.lbl_title3.Name = "lbl_title3";
-            this.lbl_title3.Size = new System.Drawing.Size(36, 16);
+            this.lbl_title3.Size = new System.Drawing.Size(37, 16);
             this.lbl_title3.TabIndex = 7;
             this.lbl_title3.Text = "Title";
             // 
@@ -505,11 +505,11 @@
             // 
             this.lbl_title1.AutoSize = true;
             this.lbl_title1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title1.ForeColor = System.Drawing.Color.White;
             this.lbl_title1.Location = new System.Drawing.Point(91, 11);
             this.lbl_title1.Name = "lbl_title1";
-            this.lbl_title1.Size = new System.Drawing.Size(36, 16);
+            this.lbl_title1.Size = new System.Drawing.Size(37, 16);
             this.lbl_title1.TabIndex = 7;
             this.lbl_title1.Text = "Title";
             // 
