@@ -272,15 +272,17 @@
             this.label54 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_clearAll = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel1.Controls.Add(this.seatLists);
+            this.panel1.Controls.Add(this.panel13);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.label7);
@@ -302,14 +304,13 @@
             // 
             // seatLists
             // 
-            this.seatLists.AutoSize = true;
             this.seatLists.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seatLists.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.seatLists.Location = new System.Drawing.Point(12, 522);
+            this.seatLists.Location = new System.Drawing.Point(3, 3);
             this.seatLists.Name = "seatLists";
-            this.seatLists.Size = new System.Drawing.Size(0, 23);
+            this.seatLists.Size = new System.Drawing.Size(270, 65);
             this.seatLists.TabIndex = 18;
-            this.seatLists.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seatLists.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
             // 
@@ -632,7 +633,7 @@
             // 
             // A11
             // 
-            this.A11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A11.BackColor = System.Drawing.Color.DarkGray;
             this.A11.Location = new System.Drawing.Point(522, 206);
             this.A11.Name = "A11";
             this.A11.Size = new System.Drawing.Size(30, 30);
@@ -640,7 +641,7 @@
             // 
             // B11
             // 
-            this.B11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B11.BackColor = System.Drawing.Color.DarkGray;
             this.B11.Location = new System.Drawing.Point(522, 245);
             this.B11.Name = "B11";
             this.B11.Size = new System.Drawing.Size(30, 30);
@@ -660,7 +661,7 @@
             // 
             // C11
             // 
-            this.C11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C11.BackColor = System.Drawing.Color.DarkGray;
             this.C11.Location = new System.Drawing.Point(522, 306);
             this.C11.Name = "C11";
             this.C11.Size = new System.Drawing.Size(30, 30);
@@ -668,7 +669,7 @@
             // 
             // G11
             // 
-            this.G11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G11.BackColor = System.Drawing.Color.DarkGray;
             this.G11.Location = new System.Drawing.Point(522, 485);
             this.G11.Name = "G11";
             this.G11.Size = new System.Drawing.Size(30, 30);
@@ -688,7 +689,7 @@
             // 
             // D11
             // 
-            this.D11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D11.BackColor = System.Drawing.Color.DarkGray;
             this.D11.Location = new System.Drawing.Point(522, 345);
             this.D11.Name = "D11";
             this.D11.Size = new System.Drawing.Size(30, 30);
@@ -696,7 +697,7 @@
             // 
             // C2
             // 
-            this.C2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C2.BackColor = System.Drawing.Color.DarkGray;
             this.C2.Location = new System.Drawing.Point(115, 306);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(30, 30);
@@ -704,7 +705,7 @@
             // 
             // H11
             // 
-            this.H11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H11.BackColor = System.Drawing.Color.DarkGray;
             this.H11.Location = new System.Drawing.Point(522, 525);
             this.H11.Name = "H11";
             this.H11.Size = new System.Drawing.Size(30, 30);
@@ -724,7 +725,7 @@
             // 
             // E11
             // 
-            this.E11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E11.BackColor = System.Drawing.Color.DarkGray;
             this.E11.Location = new System.Drawing.Point(522, 385);
             this.E11.Name = "E11";
             this.E11.Size = new System.Drawing.Size(30, 30);
@@ -732,7 +733,7 @@
             // 
             // G2
             // 
-            this.G2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G2.BackColor = System.Drawing.Color.DarkGray;
             this.G2.Location = new System.Drawing.Point(115, 485);
             this.G2.Name = "G2";
             this.G2.Size = new System.Drawing.Size(30, 30);
@@ -740,7 +741,7 @@
             // 
             // I11
             // 
-            this.I11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I11.BackColor = System.Drawing.Color.DarkGray;
             this.I11.Location = new System.Drawing.Point(522, 565);
             this.I11.Name = "I11";
             this.I11.Size = new System.Drawing.Size(30, 30);
@@ -760,7 +761,7 @@
             // 
             // F11
             // 
-            this.F11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F11.BackColor = System.Drawing.Color.DarkGray;
             this.F11.Location = new System.Drawing.Point(522, 425);
             this.F11.Name = "F11";
             this.F11.Size = new System.Drawing.Size(30, 30);
@@ -768,7 +769,7 @@
             // 
             // D2
             // 
-            this.D2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D2.BackColor = System.Drawing.Color.DarkGray;
             this.D2.Location = new System.Drawing.Point(115, 345);
             this.D2.Name = "D2";
             this.D2.Size = new System.Drawing.Size(30, 30);
@@ -776,7 +777,7 @@
             // 
             // J11
             // 
-            this.J11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J11.BackColor = System.Drawing.Color.DarkGray;
             this.J11.Location = new System.Drawing.Point(522, 605);
             this.J11.Name = "J11";
             this.J11.Size = new System.Drawing.Size(30, 30);
@@ -796,7 +797,7 @@
             // 
             // A12
             // 
-            this.A12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A12.BackColor = System.Drawing.Color.DarkGray;
             this.A12.Location = new System.Drawing.Point(565, 206);
             this.A12.Name = "A12";
             this.A12.Size = new System.Drawing.Size(30, 30);
@@ -804,7 +805,7 @@
             // 
             // B12
             // 
-            this.B12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B12.BackColor = System.Drawing.Color.DarkGray;
             this.B12.Location = new System.Drawing.Point(565, 245);
             this.B12.Name = "B12";
             this.B12.Size = new System.Drawing.Size(30, 30);
@@ -812,7 +813,7 @@
             // 
             // H2
             // 
-            this.H2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H2.BackColor = System.Drawing.Color.DarkGray;
             this.H2.Location = new System.Drawing.Point(115, 525);
             this.H2.Name = "H2";
             this.H2.Size = new System.Drawing.Size(30, 30);
@@ -820,7 +821,7 @@
             // 
             // C12
             // 
-            this.C12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C12.BackColor = System.Drawing.Color.DarkGray;
             this.C12.Location = new System.Drawing.Point(565, 306);
             this.C12.Name = "C12";
             this.C12.Size = new System.Drawing.Size(30, 30);
@@ -828,7 +829,7 @@
             // 
             // B3
             // 
-            this.B3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B3.BackColor = System.Drawing.Color.DarkGray;
             this.B3.Location = new System.Drawing.Point(160, 245);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(30, 30);
@@ -836,7 +837,7 @@
             // 
             // G12
             // 
-            this.G12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G12.BackColor = System.Drawing.Color.DarkGray;
             this.G12.Location = new System.Drawing.Point(565, 485);
             this.G12.Name = "G12";
             this.G12.Size = new System.Drawing.Size(30, 30);
@@ -856,7 +857,7 @@
             // 
             // D12
             // 
-            this.D12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D12.BackColor = System.Drawing.Color.DarkGray;
             this.D12.Location = new System.Drawing.Point(565, 345);
             this.D12.Name = "D12";
             this.D12.Size = new System.Drawing.Size(30, 30);
@@ -864,7 +865,7 @@
             // 
             // C3
             // 
-            this.C3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C3.BackColor = System.Drawing.Color.DarkGray;
             this.C3.Location = new System.Drawing.Point(160, 306);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(30, 30);
@@ -872,7 +873,7 @@
             // 
             // A13
             // 
-            this.A13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A13.BackColor = System.Drawing.Color.DarkGray;
             this.A13.Location = new System.Drawing.Point(610, 206);
             this.A13.Name = "A13";
             this.A13.Size = new System.Drawing.Size(30, 30);
@@ -880,7 +881,7 @@
             // 
             // E2
             // 
-            this.E2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E2.BackColor = System.Drawing.Color.DarkGray;
             this.E2.Location = new System.Drawing.Point(115, 385);
             this.E2.Name = "E2";
             this.E2.Size = new System.Drawing.Size(30, 30);
@@ -888,7 +889,7 @@
             // 
             // H12
             // 
-            this.H12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H12.BackColor = System.Drawing.Color.DarkGray;
             this.H12.Location = new System.Drawing.Point(565, 525);
             this.H12.Name = "H12";
             this.H12.Size = new System.Drawing.Size(30, 30);
@@ -896,7 +897,7 @@
             // 
             // G3
             // 
-            this.G3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G3.BackColor = System.Drawing.Color.DarkGray;
             this.G3.Location = new System.Drawing.Point(160, 485);
             this.G3.Name = "G3";
             this.G3.Size = new System.Drawing.Size(30, 30);
@@ -904,7 +905,7 @@
             // 
             // B13
             // 
-            this.B13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B13.BackColor = System.Drawing.Color.DarkGray;
             this.B13.Location = new System.Drawing.Point(610, 245);
             this.B13.Name = "B13";
             this.B13.Size = new System.Drawing.Size(30, 30);
@@ -924,7 +925,7 @@
             // 
             // D3
             // 
-            this.D3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D3.BackColor = System.Drawing.Color.DarkGray;
             this.D3.Location = new System.Drawing.Point(160, 345);
             this.D3.Name = "D3";
             this.D3.Size = new System.Drawing.Size(30, 30);
@@ -932,7 +933,7 @@
             // 
             // E12
             // 
-            this.E12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E12.BackColor = System.Drawing.Color.DarkGray;
             this.E12.Location = new System.Drawing.Point(565, 385);
             this.E12.Name = "E12";
             this.E12.Size = new System.Drawing.Size(30, 30);
@@ -940,7 +941,7 @@
             // 
             // I2
             // 
-            this.I2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I2.BackColor = System.Drawing.Color.DarkGray;
             this.I2.Location = new System.Drawing.Point(115, 565);
             this.I2.Name = "I2";
             this.I2.Size = new System.Drawing.Size(30, 30);
@@ -948,7 +949,7 @@
             // 
             // H3
             // 
-            this.H3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H3.BackColor = System.Drawing.Color.DarkGray;
             this.H3.Location = new System.Drawing.Point(160, 525);
             this.H3.Name = "H3";
             this.H3.Size = new System.Drawing.Size(30, 30);
@@ -956,7 +957,7 @@
             // 
             // I12
             // 
-            this.I12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I12.BackColor = System.Drawing.Color.DarkGray;
             this.I12.Location = new System.Drawing.Point(565, 565);
             this.I12.Name = "I12";
             this.I12.Size = new System.Drawing.Size(30, 30);
@@ -964,7 +965,7 @@
             // 
             // B4
             // 
-            this.B4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B4.BackColor = System.Drawing.Color.DarkGray;
             this.B4.Location = new System.Drawing.Point(205, 245);
             this.B4.Name = "B4";
             this.B4.Size = new System.Drawing.Size(30, 30);
@@ -972,7 +973,7 @@
             // 
             // A14
             // 
-            this.A14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A14.BackColor = System.Drawing.Color.DarkGray;
             this.A14.Location = new System.Drawing.Point(655, 206);
             this.A14.Name = "A14";
             this.A14.Size = new System.Drawing.Size(30, 30);
@@ -992,7 +993,7 @@
             // 
             // C4
             // 
-            this.C4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C4.BackColor = System.Drawing.Color.DarkGray;
             this.C4.Location = new System.Drawing.Point(205, 306);
             this.C4.Name = "C4";
             this.C4.Size = new System.Drawing.Size(30, 30);
@@ -1000,7 +1001,7 @@
             // 
             // B14
             // 
-            this.B14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B14.BackColor = System.Drawing.Color.DarkGray;
             this.B14.Location = new System.Drawing.Point(655, 245);
             this.B14.Name = "B14";
             this.B14.Size = new System.Drawing.Size(30, 30);
@@ -1008,7 +1009,7 @@
             // 
             // E3
             // 
-            this.E3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E3.BackColor = System.Drawing.Color.DarkGray;
             this.E3.Location = new System.Drawing.Point(160, 385);
             this.E3.Name = "E3";
             this.E3.Size = new System.Drawing.Size(30, 30);
@@ -1016,7 +1017,7 @@
             // 
             // C14
             // 
-            this.C14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C14.BackColor = System.Drawing.Color.DarkGray;
             this.C14.Location = new System.Drawing.Point(655, 306);
             this.C14.Name = "C14";
             this.C14.Size = new System.Drawing.Size(30, 30);
@@ -1024,7 +1025,7 @@
             // 
             // G4
             // 
-            this.G4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G4.BackColor = System.Drawing.Color.DarkGray;
             this.G4.Location = new System.Drawing.Point(205, 485);
             this.G4.Name = "G4";
             this.G4.Size = new System.Drawing.Size(30, 30);
@@ -1032,7 +1033,7 @@
             // 
             // F2
             // 
-            this.F2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F2.BackColor = System.Drawing.Color.DarkGray;
             this.F2.Location = new System.Drawing.Point(115, 425);
             this.F2.Name = "F2";
             this.F2.Size = new System.Drawing.Size(30, 30);
@@ -1040,7 +1041,7 @@
             // 
             // G14
             // 
-            this.G14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G14.BackColor = System.Drawing.Color.DarkGray;
             this.G14.Location = new System.Drawing.Point(655, 485);
             this.G14.Name = "G14";
             this.G14.Size = new System.Drawing.Size(30, 30);
@@ -1048,7 +1049,7 @@
             // 
             // D4
             // 
-            this.D4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D4.BackColor = System.Drawing.Color.DarkGray;
             this.D4.Location = new System.Drawing.Point(205, 345);
             this.D4.Name = "D4";
             this.D4.Size = new System.Drawing.Size(30, 30);
@@ -1056,7 +1057,7 @@
             // 
             // F12
             // 
-            this.F12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F12.BackColor = System.Drawing.Color.DarkGray;
             this.F12.Location = new System.Drawing.Point(565, 425);
             this.F12.Name = "F12";
             this.F12.Size = new System.Drawing.Size(30, 30);
@@ -1064,7 +1065,7 @@
             // 
             // I3
             // 
-            this.I3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I3.BackColor = System.Drawing.Color.DarkGray;
             this.I3.Location = new System.Drawing.Point(160, 565);
             this.I3.Name = "I3";
             this.I3.Size = new System.Drawing.Size(30, 30);
@@ -1072,7 +1073,7 @@
             // 
             // D14
             // 
-            this.D14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D14.BackColor = System.Drawing.Color.DarkGray;
             this.D14.Location = new System.Drawing.Point(655, 345);
             this.D14.Name = "D14";
             this.D14.Size = new System.Drawing.Size(30, 30);
@@ -1080,7 +1081,7 @@
             // 
             // A5
             // 
-            this.A5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A5.BackColor = System.Drawing.Color.DarkGray;
             this.A5.Location = new System.Drawing.Point(250, 206);
             this.A5.Name = "A5";
             this.A5.Size = new System.Drawing.Size(30, 30);
@@ -1088,7 +1089,7 @@
             // 
             // H4
             // 
-            this.H4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H4.BackColor = System.Drawing.Color.DarkGray;
             this.H4.Location = new System.Drawing.Point(205, 525);
             this.H4.Name = "H4";
             this.H4.Size = new System.Drawing.Size(30, 30);
@@ -1096,7 +1097,7 @@
             // 
             // A15
             // 
-            this.A15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A15.BackColor = System.Drawing.Color.DarkGray;
             this.A15.Location = new System.Drawing.Point(700, 206);
             this.A15.Name = "A15";
             this.A15.Size = new System.Drawing.Size(30, 30);
@@ -1104,7 +1105,7 @@
             // 
             // B5
             // 
-            this.B5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B5.BackColor = System.Drawing.Color.DarkGray;
             this.B5.Location = new System.Drawing.Point(250, 245);
             this.B5.Name = "B5";
             this.B5.Size = new System.Drawing.Size(30, 30);
@@ -1112,7 +1113,7 @@
             // 
             // H14
             // 
-            this.H14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H14.BackColor = System.Drawing.Color.DarkGray;
             this.H14.Location = new System.Drawing.Point(655, 525);
             this.H14.Name = "H14";
             this.H14.Size = new System.Drawing.Size(30, 30);
@@ -1132,7 +1133,7 @@
             // 
             // B15
             // 
-            this.B15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B15.BackColor = System.Drawing.Color.DarkGray;
             this.B15.Location = new System.Drawing.Point(700, 245);
             this.B15.Name = "B15";
             this.B15.Size = new System.Drawing.Size(30, 30);
@@ -1140,7 +1141,7 @@
             // 
             // C5
             // 
-            this.C5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C5.BackColor = System.Drawing.Color.DarkGray;
             this.C5.Location = new System.Drawing.Point(250, 306);
             this.C5.Name = "C5";
             this.C5.Size = new System.Drawing.Size(30, 30);
@@ -1148,7 +1149,7 @@
             // 
             // C15
             // 
-            this.C15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C15.BackColor = System.Drawing.Color.DarkGray;
             this.C15.Location = new System.Drawing.Point(700, 306);
             this.C15.Name = "C15";
             this.C15.Size = new System.Drawing.Size(30, 30);
@@ -1156,7 +1157,7 @@
             // 
             // E4
             // 
-            this.E4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E4.BackColor = System.Drawing.Color.DarkGray;
             this.E4.Location = new System.Drawing.Point(205, 385);
             this.E4.Name = "E4";
             this.E4.Size = new System.Drawing.Size(30, 30);
@@ -1164,7 +1165,7 @@
             // 
             // E14
             // 
-            this.E14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E14.BackColor = System.Drawing.Color.DarkGray;
             this.E14.Location = new System.Drawing.Point(655, 385);
             this.E14.Name = "E14";
             this.E14.Size = new System.Drawing.Size(30, 30);
@@ -1172,7 +1173,7 @@
             // 
             // G5
             // 
-            this.G5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G5.BackColor = System.Drawing.Color.DarkGray;
             this.G5.Location = new System.Drawing.Point(250, 485);
             this.G5.Name = "G5";
             this.G5.Size = new System.Drawing.Size(30, 30);
@@ -1180,7 +1181,7 @@
             // 
             // G15
             // 
-            this.G15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G15.BackColor = System.Drawing.Color.DarkGray;
             this.G15.Location = new System.Drawing.Point(700, 485);
             this.G15.Name = "G15";
             this.G15.Size = new System.Drawing.Size(30, 30);
@@ -1188,7 +1189,7 @@
             // 
             // F3
             // 
-            this.F3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F3.BackColor = System.Drawing.Color.DarkGray;
             this.F3.Location = new System.Drawing.Point(160, 425);
             this.F3.Name = "F3";
             this.F3.Size = new System.Drawing.Size(30, 30);
@@ -1196,7 +1197,7 @@
             // 
             // D5
             // 
-            this.D5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D5.BackColor = System.Drawing.Color.DarkGray;
             this.D5.Location = new System.Drawing.Point(250, 345);
             this.D5.Name = "D5";
             this.D5.Size = new System.Drawing.Size(30, 30);
@@ -1204,7 +1205,7 @@
             // 
             // D15
             // 
-            this.D15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D15.BackColor = System.Drawing.Color.DarkGray;
             this.D15.Location = new System.Drawing.Point(700, 345);
             this.D15.Name = "D15";
             this.D15.Size = new System.Drawing.Size(30, 30);
@@ -1212,7 +1213,7 @@
             // 
             // I4
             // 
-            this.I4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I4.BackColor = System.Drawing.Color.DarkGray;
             this.I4.Location = new System.Drawing.Point(205, 565);
             this.I4.Name = "I4";
             this.I4.Size = new System.Drawing.Size(30, 30);
@@ -1220,7 +1221,7 @@
             // 
             // I14
             // 
-            this.I14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I14.BackColor = System.Drawing.Color.DarkGray;
             this.I14.Location = new System.Drawing.Point(655, 565);
             this.I14.Name = "I14";
             this.I14.Size = new System.Drawing.Size(30, 30);
@@ -1228,7 +1229,7 @@
             // 
             // A6
             // 
-            this.A6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A6.BackColor = System.Drawing.Color.DarkGray;
             this.A6.Location = new System.Drawing.Point(295, 206);
             this.A6.Name = "A6";
             this.A6.Size = new System.Drawing.Size(30, 30);
@@ -1236,7 +1237,7 @@
             // 
             // A16
             // 
-            this.A16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A16.BackColor = System.Drawing.Color.DarkGray;
             this.A16.Location = new System.Drawing.Point(745, 206);
             this.A16.Name = "A16";
             this.A16.Size = new System.Drawing.Size(30, 30);
@@ -1244,7 +1245,7 @@
             // 
             // H5
             // 
-            this.H5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H5.BackColor = System.Drawing.Color.DarkGray;
             this.H5.Location = new System.Drawing.Point(250, 525);
             this.H5.Name = "H5";
             this.H5.Size = new System.Drawing.Size(30, 30);
@@ -1252,7 +1253,7 @@
             // 
             // H15
             // 
-            this.H15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H15.BackColor = System.Drawing.Color.DarkGray;
             this.H15.Location = new System.Drawing.Point(700, 525);
             this.H15.Name = "H15";
             this.H15.Size = new System.Drawing.Size(30, 30);
@@ -1260,7 +1261,7 @@
             // 
             // B6
             // 
-            this.B6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B6.BackColor = System.Drawing.Color.DarkGray;
             this.B6.Location = new System.Drawing.Point(295, 245);
             this.B6.Name = "B6";
             this.B6.Size = new System.Drawing.Size(30, 30);
@@ -1268,7 +1269,7 @@
             // 
             // B16
             // 
-            this.B16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B16.BackColor = System.Drawing.Color.DarkGray;
             this.B16.Location = new System.Drawing.Point(745, 245);
             this.B16.Name = "B16";
             this.B16.Size = new System.Drawing.Size(30, 30);
@@ -1276,7 +1277,7 @@
             // 
             // J2
             // 
-            this.J2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J2.BackColor = System.Drawing.Color.DarkGray;
             this.J2.Location = new System.Drawing.Point(115, 605);
             this.J2.Name = "J2";
             this.J2.Size = new System.Drawing.Size(30, 30);
@@ -1284,7 +1285,7 @@
             // 
             // J12
             // 
-            this.J12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J12.BackColor = System.Drawing.Color.DarkGray;
             this.J12.Location = new System.Drawing.Point(565, 605);
             this.J12.Name = "J12";
             this.J12.Size = new System.Drawing.Size(30, 30);
@@ -1292,7 +1293,7 @@
             // 
             // C6
             // 
-            this.C6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C6.BackColor = System.Drawing.Color.DarkGray;
             this.C6.Location = new System.Drawing.Point(295, 306);
             this.C6.Name = "C6";
             this.C6.Size = new System.Drawing.Size(30, 30);
@@ -1300,7 +1301,7 @@
             // 
             // C16
             // 
-            this.C16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C16.BackColor = System.Drawing.Color.DarkGray;
             this.C16.Location = new System.Drawing.Point(745, 306);
             this.C16.Name = "C16";
             this.C16.Size = new System.Drawing.Size(30, 30);
@@ -1308,7 +1309,7 @@
             // 
             // E5
             // 
-            this.E5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E5.BackColor = System.Drawing.Color.DarkGray;
             this.E5.Location = new System.Drawing.Point(250, 385);
             this.E5.Name = "E5";
             this.E5.Size = new System.Drawing.Size(30, 30);
@@ -1316,7 +1317,7 @@
             // 
             // E15
             // 
-            this.E15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E15.BackColor = System.Drawing.Color.DarkGray;
             this.E15.Location = new System.Drawing.Point(700, 385);
             this.E15.Name = "E15";
             this.E15.Size = new System.Drawing.Size(30, 30);
@@ -1324,7 +1325,7 @@
             // 
             // G6
             // 
-            this.G6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G6.BackColor = System.Drawing.Color.DarkGray;
             this.G6.Location = new System.Drawing.Point(295, 485);
             this.G6.Name = "G6";
             this.G6.Size = new System.Drawing.Size(30, 30);
@@ -1332,7 +1333,7 @@
             // 
             // G16
             // 
-            this.G16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G16.BackColor = System.Drawing.Color.DarkGray;
             this.G16.Location = new System.Drawing.Point(745, 485);
             this.G16.Name = "G16";
             this.G16.Size = new System.Drawing.Size(30, 30);
@@ -1340,7 +1341,7 @@
             // 
             // F4
             // 
-            this.F4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F4.BackColor = System.Drawing.Color.DarkGray;
             this.F4.Location = new System.Drawing.Point(205, 425);
             this.F4.Name = "F4";
             this.F4.Size = new System.Drawing.Size(30, 30);
@@ -1348,7 +1349,7 @@
             // 
             // F14
             // 
-            this.F14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F14.BackColor = System.Drawing.Color.DarkGray;
             this.F14.Location = new System.Drawing.Point(655, 425);
             this.F14.Name = "F14";
             this.F14.Size = new System.Drawing.Size(30, 30);
@@ -1356,7 +1357,7 @@
             // 
             // D6
             // 
-            this.D6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D6.BackColor = System.Drawing.Color.DarkGray;
             this.D6.Location = new System.Drawing.Point(295, 345);
             this.D6.Name = "D6";
             this.D6.Size = new System.Drawing.Size(30, 30);
@@ -1364,7 +1365,7 @@
             // 
             // D16
             // 
-            this.D16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D16.BackColor = System.Drawing.Color.DarkGray;
             this.D16.Location = new System.Drawing.Point(745, 345);
             this.D16.Name = "D16";
             this.D16.Size = new System.Drawing.Size(30, 30);
@@ -1372,7 +1373,7 @@
             // 
             // I5
             // 
-            this.I5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I5.BackColor = System.Drawing.Color.DarkGray;
             this.I5.Location = new System.Drawing.Point(250, 565);
             this.I5.Name = "I5";
             this.I5.Size = new System.Drawing.Size(30, 30);
@@ -1380,7 +1381,7 @@
             // 
             // I15
             // 
-            this.I15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I15.BackColor = System.Drawing.Color.DarkGray;
             this.I15.Location = new System.Drawing.Point(700, 565);
             this.I15.Name = "I15";
             this.I15.Size = new System.Drawing.Size(30, 30);
@@ -1388,7 +1389,7 @@
             // 
             // A7
             // 
-            this.A7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A7.BackColor = System.Drawing.Color.DarkGray;
             this.A7.Location = new System.Drawing.Point(340, 206);
             this.A7.Name = "A7";
             this.A7.Size = new System.Drawing.Size(30, 30);
@@ -1396,7 +1397,7 @@
             // 
             // H6
             // 
-            this.H6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H6.BackColor = System.Drawing.Color.DarkGray;
             this.H6.Location = new System.Drawing.Point(295, 525);
             this.H6.Name = "H6";
             this.H6.Size = new System.Drawing.Size(30, 30);
@@ -1404,7 +1405,7 @@
             // 
             // H16
             // 
-            this.H16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H16.BackColor = System.Drawing.Color.DarkGray;
             this.H16.Location = new System.Drawing.Point(745, 525);
             this.H16.Name = "H16";
             this.H16.Size = new System.Drawing.Size(30, 30);
@@ -1412,7 +1413,7 @@
             // 
             // B7
             // 
-            this.B7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B7.BackColor = System.Drawing.Color.DarkGray;
             this.B7.Location = new System.Drawing.Point(340, 245);
             this.B7.Name = "B7";
             this.B7.Size = new System.Drawing.Size(30, 30);
@@ -1420,7 +1421,7 @@
             // 
             // B17
             // 
-            this.B17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B17.BackColor = System.Drawing.Color.DarkGray;
             this.B17.Location = new System.Drawing.Point(790, 245);
             this.B17.Name = "B17";
             this.B17.Size = new System.Drawing.Size(30, 30);
@@ -1428,7 +1429,7 @@
             // 
             // J3
             // 
-            this.J3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J3.BackColor = System.Drawing.Color.DarkGray;
             this.J3.Location = new System.Drawing.Point(160, 605);
             this.J3.Name = "J3";
             this.J3.Size = new System.Drawing.Size(30, 30);
@@ -1436,7 +1437,7 @@
             // 
             // C7
             // 
-            this.C7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C7.BackColor = System.Drawing.Color.DarkGray;
             this.C7.Location = new System.Drawing.Point(340, 306);
             this.C7.Name = "C7";
             this.C7.Size = new System.Drawing.Size(30, 30);
@@ -1444,7 +1445,7 @@
             // 
             // C17
             // 
-            this.C17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C17.BackColor = System.Drawing.Color.DarkGray;
             this.C17.Location = new System.Drawing.Point(790, 306);
             this.C17.Name = "C17";
             this.C17.Size = new System.Drawing.Size(30, 30);
@@ -1452,7 +1453,7 @@
             // 
             // E6
             // 
-            this.E6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E6.BackColor = System.Drawing.Color.DarkGray;
             this.E6.Location = new System.Drawing.Point(295, 385);
             this.E6.Name = "E6";
             this.E6.Size = new System.Drawing.Size(30, 30);
@@ -1460,7 +1461,7 @@
             // 
             // E16
             // 
-            this.E16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E16.BackColor = System.Drawing.Color.DarkGray;
             this.E16.Location = new System.Drawing.Point(745, 385);
             this.E16.Name = "E16";
             this.E16.Size = new System.Drawing.Size(30, 30);
@@ -1468,7 +1469,7 @@
             // 
             // G7
             // 
-            this.G7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G7.BackColor = System.Drawing.Color.DarkGray;
             this.G7.Location = new System.Drawing.Point(340, 485);
             this.G7.Name = "G7";
             this.G7.Size = new System.Drawing.Size(30, 30);
@@ -1476,7 +1477,7 @@
             // 
             // G17
             // 
-            this.G17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G17.BackColor = System.Drawing.Color.DarkGray;
             this.G17.Location = new System.Drawing.Point(790, 485);
             this.G17.Name = "G17";
             this.G17.Size = new System.Drawing.Size(30, 30);
@@ -1484,7 +1485,7 @@
             // 
             // F5
             // 
-            this.F5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F5.BackColor = System.Drawing.Color.DarkGray;
             this.F5.Location = new System.Drawing.Point(250, 425);
             this.F5.Name = "F5";
             this.F5.Size = new System.Drawing.Size(30, 30);
@@ -1492,7 +1493,7 @@
             // 
             // F15
             // 
-            this.F15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F15.BackColor = System.Drawing.Color.DarkGray;
             this.F15.Location = new System.Drawing.Point(700, 425);
             this.F15.Name = "F15";
             this.F15.Size = new System.Drawing.Size(30, 30);
@@ -1500,7 +1501,7 @@
             // 
             // D7
             // 
-            this.D7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D7.BackColor = System.Drawing.Color.DarkGray;
             this.D7.Location = new System.Drawing.Point(340, 345);
             this.D7.Name = "D7";
             this.D7.Size = new System.Drawing.Size(30, 30);
@@ -1508,7 +1509,7 @@
             // 
             // D17
             // 
-            this.D17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D17.BackColor = System.Drawing.Color.DarkGray;
             this.D17.Location = new System.Drawing.Point(790, 345);
             this.D17.Name = "D17";
             this.D17.Size = new System.Drawing.Size(30, 30);
@@ -1516,7 +1517,7 @@
             // 
             // I6
             // 
-            this.I6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I6.BackColor = System.Drawing.Color.DarkGray;
             this.I6.Location = new System.Drawing.Point(295, 565);
             this.I6.Name = "I6";
             this.I6.Size = new System.Drawing.Size(30, 30);
@@ -1524,7 +1525,7 @@
             // 
             // I16
             // 
-            this.I16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I16.BackColor = System.Drawing.Color.DarkGray;
             this.I16.Location = new System.Drawing.Point(745, 565);
             this.I16.Name = "I16";
             this.I16.Size = new System.Drawing.Size(30, 30);
@@ -1532,7 +1533,7 @@
             // 
             // A8
             // 
-            this.A8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A8.BackColor = System.Drawing.Color.DarkGray;
             this.A8.Location = new System.Drawing.Point(385, 206);
             this.A8.Name = "A8";
             this.A8.Size = new System.Drawing.Size(30, 30);
@@ -1540,7 +1541,7 @@
             // 
             // H7
             // 
-            this.H7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H7.BackColor = System.Drawing.Color.DarkGray;
             this.H7.Location = new System.Drawing.Point(340, 525);
             this.H7.Name = "H7";
             this.H7.Size = new System.Drawing.Size(30, 30);
@@ -1548,7 +1549,7 @@
             // 
             // H17
             // 
-            this.H17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H17.BackColor = System.Drawing.Color.DarkGray;
             this.H17.Location = new System.Drawing.Point(790, 525);
             this.H17.Name = "H17";
             this.H17.Size = new System.Drawing.Size(30, 30);
@@ -1556,7 +1557,7 @@
             // 
             // B8
             // 
-            this.B8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B8.BackColor = System.Drawing.Color.DarkGray;
             this.B8.Location = new System.Drawing.Point(385, 245);
             this.B8.Name = "B8";
             this.B8.Size = new System.Drawing.Size(30, 30);
@@ -1564,7 +1565,7 @@
             // 
             // B18
             // 
-            this.B18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B18.BackColor = System.Drawing.Color.DarkGray;
             this.B18.Location = new System.Drawing.Point(835, 245);
             this.B18.Name = "B18";
             this.B18.Size = new System.Drawing.Size(30, 30);
@@ -1572,7 +1573,7 @@
             // 
             // J4
             // 
-            this.J4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J4.BackColor = System.Drawing.Color.DarkGray;
             this.J4.Location = new System.Drawing.Point(205, 605);
             this.J4.Name = "J4";
             this.J4.Size = new System.Drawing.Size(30, 30);
@@ -1580,7 +1581,7 @@
             // 
             // J14
             // 
-            this.J14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J14.BackColor = System.Drawing.Color.DarkGray;
             this.J14.Location = new System.Drawing.Point(655, 605);
             this.J14.Name = "J14";
             this.J14.Size = new System.Drawing.Size(30, 30);
@@ -1588,7 +1589,7 @@
             // 
             // C18
             // 
-            this.C18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C18.BackColor = System.Drawing.Color.DarkGray;
             this.C18.Location = new System.Drawing.Point(835, 306);
             this.C18.Name = "C18";
             this.C18.Size = new System.Drawing.Size(30, 30);
@@ -1596,7 +1597,7 @@
             // 
             // E7
             // 
-            this.E7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E7.BackColor = System.Drawing.Color.DarkGray;
             this.E7.Location = new System.Drawing.Point(340, 385);
             this.E7.Name = "E7";
             this.E7.Size = new System.Drawing.Size(30, 30);
@@ -1604,7 +1605,7 @@
             // 
             // E17
             // 
-            this.E17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E17.BackColor = System.Drawing.Color.DarkGray;
             this.E17.Location = new System.Drawing.Point(790, 385);
             this.E17.Name = "E17";
             this.E17.Size = new System.Drawing.Size(30, 30);
@@ -1612,7 +1613,7 @@
             // 
             // G18
             // 
-            this.G18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G18.BackColor = System.Drawing.Color.DarkGray;
             this.G18.Location = new System.Drawing.Point(835, 485);
             this.G18.Name = "G18";
             this.G18.Size = new System.Drawing.Size(30, 30);
@@ -1620,7 +1621,7 @@
             // 
             // F6
             // 
-            this.F6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F6.BackColor = System.Drawing.Color.DarkGray;
             this.F6.Location = new System.Drawing.Point(295, 425);
             this.F6.Name = "F6";
             this.F6.Size = new System.Drawing.Size(30, 30);
@@ -1628,7 +1629,7 @@
             // 
             // F16
             // 
-            this.F16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F16.BackColor = System.Drawing.Color.DarkGray;
             this.F16.Location = new System.Drawing.Point(745, 425);
             this.F16.Name = "F16";
             this.F16.Size = new System.Drawing.Size(30, 30);
@@ -1636,7 +1637,7 @@
             // 
             // D18
             // 
-            this.D18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D18.BackColor = System.Drawing.Color.DarkGray;
             this.D18.Location = new System.Drawing.Point(835, 345);
             this.D18.Name = "D18";
             this.D18.Size = new System.Drawing.Size(30, 30);
@@ -1644,7 +1645,7 @@
             // 
             // I7
             // 
-            this.I7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I7.BackColor = System.Drawing.Color.DarkGray;
             this.I7.Location = new System.Drawing.Point(340, 565);
             this.I7.Name = "I7";
             this.I7.Size = new System.Drawing.Size(30, 30);
@@ -1652,7 +1653,7 @@
             // 
             // I17
             // 
-            this.I17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I17.BackColor = System.Drawing.Color.DarkGray;
             this.I17.Location = new System.Drawing.Point(790, 565);
             this.I17.Name = "I17";
             this.I17.Size = new System.Drawing.Size(30, 30);
@@ -1660,7 +1661,7 @@
             // 
             // H18
             // 
-            this.H18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H18.BackColor = System.Drawing.Color.DarkGray;
             this.H18.Location = new System.Drawing.Point(835, 525);
             this.H18.Name = "H18";
             this.H18.Size = new System.Drawing.Size(30, 30);
@@ -1668,7 +1669,7 @@
             // 
             // J5
             // 
-            this.J5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J5.BackColor = System.Drawing.Color.DarkGray;
             this.J5.Location = new System.Drawing.Point(250, 605);
             this.J5.Name = "J5";
             this.J5.Size = new System.Drawing.Size(30, 30);
@@ -1676,7 +1677,7 @@
             // 
             // J15
             // 
-            this.J15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J15.BackColor = System.Drawing.Color.DarkGray;
             this.J15.Location = new System.Drawing.Point(700, 605);
             this.J15.Name = "J15";
             this.J15.Size = new System.Drawing.Size(30, 30);
@@ -1684,7 +1685,7 @@
             // 
             // E18
             // 
-            this.E18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E18.BackColor = System.Drawing.Color.DarkGray;
             this.E18.Location = new System.Drawing.Point(835, 385);
             this.E18.Name = "E18";
             this.E18.Size = new System.Drawing.Size(30, 30);
@@ -1692,7 +1693,7 @@
             // 
             // B9
             // 
-            this.B9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B9.BackColor = System.Drawing.Color.DarkGray;
             this.B9.Location = new System.Drawing.Point(430, 245);
             this.B9.Name = "B9";
             this.B9.Size = new System.Drawing.Size(30, 30);
@@ -1700,7 +1701,7 @@
             // 
             // F7
             // 
-            this.F7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F7.BackColor = System.Drawing.Color.DarkGray;
             this.F7.Location = new System.Drawing.Point(340, 425);
             this.F7.Name = "F7";
             this.F7.Size = new System.Drawing.Size(30, 30);
@@ -1708,7 +1709,7 @@
             // 
             // F17
             // 
-            this.F17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F17.BackColor = System.Drawing.Color.DarkGray;
             this.F17.Location = new System.Drawing.Point(790, 425);
             this.F17.Name = "F17";
             this.F17.Size = new System.Drawing.Size(30, 30);
@@ -1716,7 +1717,7 @@
             // 
             // C9
             // 
-            this.C9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C9.BackColor = System.Drawing.Color.DarkGray;
             this.C9.Location = new System.Drawing.Point(430, 306);
             this.C9.Name = "C9";
             this.C9.Size = new System.Drawing.Size(30, 30);
@@ -1724,7 +1725,7 @@
             // 
             // C19
             // 
-            this.C19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C19.BackColor = System.Drawing.Color.DarkGray;
             this.C19.Location = new System.Drawing.Point(880, 306);
             this.C19.Name = "C19";
             this.C19.Size = new System.Drawing.Size(30, 30);
@@ -1732,7 +1733,7 @@
             // 
             // I18
             // 
-            this.I18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I18.BackColor = System.Drawing.Color.DarkGray;
             this.I18.Location = new System.Drawing.Point(835, 565);
             this.I18.Name = "I18";
             this.I18.Size = new System.Drawing.Size(30, 30);
@@ -1740,7 +1741,7 @@
             // 
             // G9
             // 
-            this.G9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G9.BackColor = System.Drawing.Color.DarkGray;
             this.G9.Location = new System.Drawing.Point(430, 485);
             this.G9.Name = "G9";
             this.G9.Size = new System.Drawing.Size(30, 30);
@@ -1748,7 +1749,7 @@
             // 
             // G19
             // 
-            this.G19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G19.BackColor = System.Drawing.Color.DarkGray;
             this.G19.Location = new System.Drawing.Point(880, 485);
             this.G19.Name = "G19";
             this.G19.Size = new System.Drawing.Size(30, 30);
@@ -1756,7 +1757,7 @@
             // 
             // J6
             // 
-            this.J6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J6.BackColor = System.Drawing.Color.DarkGray;
             this.J6.Location = new System.Drawing.Point(295, 605);
             this.J6.Name = "J6";
             this.J6.Size = new System.Drawing.Size(30, 30);
@@ -1764,7 +1765,7 @@
             // 
             // J16
             // 
-            this.J16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J16.BackColor = System.Drawing.Color.DarkGray;
             this.J16.Location = new System.Drawing.Point(745, 605);
             this.J16.Name = "J16";
             this.J16.Size = new System.Drawing.Size(30, 30);
@@ -1772,7 +1773,7 @@
             // 
             // D9
             // 
-            this.D9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D9.BackColor = System.Drawing.Color.DarkGray;
             this.D9.Location = new System.Drawing.Point(430, 345);
             this.D9.Name = "D9";
             this.D9.Size = new System.Drawing.Size(30, 30);
@@ -1780,7 +1781,7 @@
             // 
             // D19
             // 
-            this.D19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D19.BackColor = System.Drawing.Color.DarkGray;
             this.D19.Location = new System.Drawing.Point(880, 345);
             this.D19.Name = "D19";
             this.D19.Size = new System.Drawing.Size(30, 30);
@@ -1788,7 +1789,7 @@
             // 
             // F18
             // 
-            this.F18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F18.BackColor = System.Drawing.Color.DarkGray;
             this.F18.Location = new System.Drawing.Point(835, 425);
             this.F18.Name = "F18";
             this.F18.Size = new System.Drawing.Size(30, 30);
@@ -1796,7 +1797,7 @@
             // 
             // H9
             // 
-            this.H9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H9.BackColor = System.Drawing.Color.DarkGray;
             this.H9.Location = new System.Drawing.Point(430, 525);
             this.H9.Name = "H9";
             this.H9.Size = new System.Drawing.Size(30, 30);
@@ -1804,7 +1805,7 @@
             // 
             // H19
             // 
-            this.H19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H19.BackColor = System.Drawing.Color.DarkGray;
             this.H19.Location = new System.Drawing.Point(880, 525);
             this.H19.Name = "H19";
             this.H19.Size = new System.Drawing.Size(30, 30);
@@ -1812,7 +1813,7 @@
             // 
             // B10
             // 
-            this.B10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.B10.BackColor = System.Drawing.Color.DarkGray;
             this.B10.Location = new System.Drawing.Point(475, 245);
             this.B10.Name = "B10";
             this.B10.Size = new System.Drawing.Size(30, 30);
@@ -1820,7 +1821,7 @@
             // 
             // J7
             // 
-            this.J7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J7.BackColor = System.Drawing.Color.DarkGray;
             this.J7.Location = new System.Drawing.Point(340, 605);
             this.J7.Name = "J7";
             this.J7.Size = new System.Drawing.Size(30, 30);
@@ -1828,7 +1829,7 @@
             // 
             // J17
             // 
-            this.J17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J17.BackColor = System.Drawing.Color.DarkGray;
             this.J17.Location = new System.Drawing.Point(790, 605);
             this.J17.Name = "J17";
             this.J17.Size = new System.Drawing.Size(30, 30);
@@ -1836,7 +1837,7 @@
             // 
             // C10
             // 
-            this.C10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.C10.BackColor = System.Drawing.Color.DarkGray;
             this.C10.Location = new System.Drawing.Point(475, 306);
             this.C10.Name = "C10";
             this.C10.Size = new System.Drawing.Size(30, 30);
@@ -1844,7 +1845,7 @@
             // 
             // E9
             // 
-            this.E9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E9.BackColor = System.Drawing.Color.DarkGray;
             this.E9.Location = new System.Drawing.Point(430, 385);
             this.E9.Name = "E9";
             this.E9.Size = new System.Drawing.Size(30, 30);
@@ -1852,7 +1853,7 @@
             // 
             // E19
             // 
-            this.E19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E19.BackColor = System.Drawing.Color.DarkGray;
             this.E19.Location = new System.Drawing.Point(880, 385);
             this.E19.Name = "E19";
             this.E19.Size = new System.Drawing.Size(30, 30);
@@ -1860,7 +1861,7 @@
             // 
             // G10
             // 
-            this.G10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.G10.BackColor = System.Drawing.Color.DarkGray;
             this.G10.Location = new System.Drawing.Point(475, 485);
             this.G10.Name = "G10";
             this.G10.Size = new System.Drawing.Size(30, 30);
@@ -1868,7 +1869,7 @@
             // 
             // J18
             // 
-            this.J18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J18.BackColor = System.Drawing.Color.DarkGray;
             this.J18.Location = new System.Drawing.Point(835, 605);
             this.J18.Name = "J18";
             this.J18.Size = new System.Drawing.Size(30, 30);
@@ -1876,7 +1877,7 @@
             // 
             // D10
             // 
-            this.D10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.D10.BackColor = System.Drawing.Color.DarkGray;
             this.D10.Location = new System.Drawing.Point(475, 345);
             this.D10.Name = "D10";
             this.D10.Size = new System.Drawing.Size(30, 30);
@@ -1884,7 +1885,7 @@
             // 
             // I9
             // 
-            this.I9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I9.BackColor = System.Drawing.Color.DarkGray;
             this.I9.Location = new System.Drawing.Point(430, 565);
             this.I9.Name = "I9";
             this.I9.Size = new System.Drawing.Size(30, 30);
@@ -1892,7 +1893,7 @@
             // 
             // I19
             // 
-            this.I19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I19.BackColor = System.Drawing.Color.DarkGray;
             this.I19.Location = new System.Drawing.Point(880, 565);
             this.I19.Name = "I19";
             this.I19.Size = new System.Drawing.Size(30, 30);
@@ -1900,7 +1901,7 @@
             // 
             // H10
             // 
-            this.H10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.H10.BackColor = System.Drawing.Color.DarkGray;
             this.H10.Location = new System.Drawing.Point(475, 525);
             this.H10.Name = "H10";
             this.H10.Size = new System.Drawing.Size(30, 30);
@@ -1908,7 +1909,7 @@
             // 
             // A9
             // 
-            this.A9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A9.BackColor = System.Drawing.Color.DarkGray;
             this.A9.Location = new System.Drawing.Point(430, 206);
             this.A9.Name = "A9";
             this.A9.Size = new System.Drawing.Size(30, 30);
@@ -1916,7 +1917,7 @@
             // 
             // E10
             // 
-            this.E10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.E10.BackColor = System.Drawing.Color.DarkGray;
             this.E10.Location = new System.Drawing.Point(475, 385);
             this.E10.Name = "E10";
             this.E10.Size = new System.Drawing.Size(30, 30);
@@ -1924,7 +1925,7 @@
             // 
             // F9
             // 
-            this.F9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F9.BackColor = System.Drawing.Color.DarkGray;
             this.F9.Location = new System.Drawing.Point(430, 425);
             this.F9.Name = "F9";
             this.F9.Size = new System.Drawing.Size(30, 30);
@@ -1932,7 +1933,7 @@
             // 
             // F19
             // 
-            this.F19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F19.BackColor = System.Drawing.Color.DarkGray;
             this.F19.Location = new System.Drawing.Point(880, 425);
             this.F19.Name = "F19";
             this.F19.Size = new System.Drawing.Size(30, 30);
@@ -1940,7 +1941,7 @@
             // 
             // I10
             // 
-            this.I10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.I10.BackColor = System.Drawing.Color.DarkGray;
             this.I10.Location = new System.Drawing.Point(475, 565);
             this.I10.Name = "I10";
             this.I10.Size = new System.Drawing.Size(30, 30);
@@ -1948,7 +1949,7 @@
             // 
             // A10
             // 
-            this.A10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.A10.BackColor = System.Drawing.Color.DarkGray;
             this.A10.Location = new System.Drawing.Point(475, 206);
             this.A10.Name = "A10";
             this.A10.Size = new System.Drawing.Size(30, 30);
@@ -1956,7 +1957,7 @@
             // 
             // F10
             // 
-            this.F10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.F10.BackColor = System.Drawing.Color.DarkGray;
             this.F10.Location = new System.Drawing.Point(475, 425);
             this.F10.Name = "F10";
             this.F10.Size = new System.Drawing.Size(30, 30);
@@ -1964,7 +1965,7 @@
             // 
             // J9
             // 
-            this.J9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J9.BackColor = System.Drawing.Color.DarkGray;
             this.J9.Location = new System.Drawing.Point(430, 605);
             this.J9.Name = "J9";
             this.J9.Size = new System.Drawing.Size(30, 30);
@@ -1972,7 +1973,7 @@
             // 
             // J19
             // 
-            this.J19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J19.BackColor = System.Drawing.Color.DarkGray;
             this.J19.Location = new System.Drawing.Point(880, 605);
             this.J19.Name = "J19";
             this.J19.Size = new System.Drawing.Size(30, 30);
@@ -1980,7 +1981,7 @@
             // 
             // J10
             // 
-            this.J10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.J10.BackColor = System.Drawing.Color.DarkGray;
             this.J10.Location = new System.Drawing.Point(475, 605);
             this.J10.Name = "J10";
             this.J10.Size = new System.Drawing.Size(30, 30);
@@ -2283,7 +2284,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel10.BackColor = System.Drawing.Color.DarkGray;
             this.panel10.Location = new System.Drawing.Point(254, 142);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(30, 30);
@@ -2781,6 +2782,14 @@
             this.lbl_clearAll.MouseEnter += new System.EventHandler(this.lbl_clearAll_MouseEnter);
             this.lbl_clearAll.MouseLeave += new System.EventHandler(this.lbl_clearAll_MouseLeave);
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.seatLists);
+            this.panel13.Location = new System.Drawing.Point(9, 522);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(276, 68);
+            this.panel13.TabIndex = 19;
+            // 
             // Seats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2801,6 +2810,7 @@
             this.panel9.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3051,5 +3061,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel E5;
         private System.Windows.Forms.Label lbl_clearAll;
+        private System.Windows.Forms.Panel panel13;
     }
 }

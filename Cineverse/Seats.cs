@@ -14,7 +14,7 @@ namespace Cineverse
     {
 
         Color selectedColor = Color.FromArgb(225, 48, 48);
-        Color availableColor = Color.FromArgb(217, 217, 217);
+        Color availableColor = Color.DarkGray;
         Color bookedColor = Color.FromArgb(31, 178, 198);
         Color glowColor = Color.FromArgb(100, 100, 100);
         public Seats()
@@ -41,7 +41,7 @@ namespace Cineverse
                             {
                                 return;
                             }
-                            seatPanel.BackColor = (seatPanel.BackColor == selectedColor) ? availableColor : selectedColor;
+                        seatPanel.BackColor = (seatPanel.BackColor == selectedColor) ? availableColor : selectedColor;
                         if (seatLists.Text == "")
                         {
                             seatLists.Text += seatPanelName;
