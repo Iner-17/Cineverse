@@ -42,6 +42,13 @@ namespace Cineverse
                                 return;
                             }
                             seatPanel.BackColor = (seatPanel.BackColor == selectedColor) ? availableColor : selectedColor;
+                            if (seatLists.Text == "")
+                            {
+                                seatLists.Text += seatPanelName;
+                            } else 
+                            {
+                                seatLists.Text += ", " + seatPanelName;
+                            }
                         };
                         seatPanel.MouseEnter += (sender, e) =>
                         {
@@ -105,28 +112,33 @@ namespace Cineverse
             btn_payment.ForeColor = Color.White;
         }
 
-       /* private void A5_Click(object sender, EventArgs e)
+        private void seatLists_Click(object sender, EventArgs e)
         {
-            foreach (Control control in Controls)
-            {
-                if (control is Panel A5) // Check if the control is a panel
-                {
-                    A5.Click += A5_Click;
-                }
-            }
-            if (sender is Panel seatPanel)
-            {
 
-                Color selectedColor = Color.FromArgb(225, 48, 48);
-                Color defaultColor = Color.FromArgb(217, 217, 217);
-                Color bookedColor = Color.FromArgb(31, 178, 198);
+        }
 
-                if (A5.BackColor == bookedColor)
-                {
-                    return;
-                }
-                A5.BackColor = (A5.BackColor == selectedColor) ? defaultColor : selectedColor;
-            }
-        }*/
+        /* private void A5_Click(object sender, EventArgs e)
+         {
+             foreach (Control control in Controls)
+             {
+                 if (control is Panel A5) // Check if the control is a panel
+                 {
+                     A5.Click += A5_Click;
+                 }
+             }
+             if (sender is Panel seatPanel)
+             {
+
+                 Color selectedColor = Color.FromArgb(225, 48, 48);
+                 Color defaultColor = Color.FromArgb(217, 217, 217);
+                 Color bookedColor = Color.FromArgb(31, 178, 198);
+
+                 if (A5.BackColor == bookedColor)
+                 {
+                     return;
+                 }
+                 A5.BackColor = (A5.BackColor == selectedColor) ? defaultColor : selectedColor;
+             }
+         }*/
     }
 }

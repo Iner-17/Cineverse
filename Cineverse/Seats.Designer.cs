@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.seatLists = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -279,7 +279,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.seatLists);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.label7);
@@ -299,17 +299,17 @@
             this.panel1.Size = new System.Drawing.Size(303, 721);
             this.panel1.TabIndex = 7;
             // 
-            // label9
+            // seatLists
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label9.Location = new System.Drawing.Point(90, 523);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 23);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "E11, E12, E13";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seatLists.AutoSize = true;
+            this.seatLists.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seatLists.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.seatLists.Location = new System.Drawing.Point(12, 522);
+            this.seatLists.Name = "seatLists";
+            this.seatLists.Size = new System.Drawing.Size(0, 23);
+            this.seatLists.TabIndex = 18;
+            this.seatLists.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seatLists.Click += new System.EventHandler(this.seatLists_Click);
             // 
             // label8
             // 
@@ -2803,7 +2803,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label seatLists;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label7;
