@@ -16,6 +16,7 @@ namespace Cineverse
     public partial class MoviesSection1 : UserControl
     {
         private string username;
+
         public MoviesSection1()
         {
             InitializeComponent();
@@ -251,7 +252,7 @@ namespace Cineverse
         
         private void btn_gt1_Click(object sender, EventArgs e)
         {
-            Seats seatsForm = new Seats();
+            Seats seatsForm = new Seats(username);
             seatsForm.Show();
 
             ((Form)this.TopLevelControl).Hide();

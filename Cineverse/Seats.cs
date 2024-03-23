@@ -12,14 +12,15 @@ namespace Cineverse
 {
     public partial class Seats : Form
     {
-
+        private string username;
         Color selectedColor = Color.FromArgb(225, 48, 48);
         Color availableColor = Color.DarkGray;
         Color bookedColor = Color.FromArgb(31, 178, 198);
         Color glowColor = Color.FromArgb(100, 100, 100);
-        public Seats()
+        public Seats(string username)
         {
             InitializeComponent();
+            this.username = username;
             SelectingSeats();
         }
      
@@ -93,11 +94,8 @@ namespace Cineverse
             
         }
         
-
-
         private void panel5_Click(object sender, EventArgs e)
         {
-            Seats seat = new Seats();
             this.Close();
 
             Application.Exit();
@@ -107,6 +105,7 @@ namespace Cineverse
         {
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
+
 
             this.Close();
         }
@@ -144,6 +143,7 @@ namespace Cineverse
         {
             lbl_clearAll.ForeColor= Color.White;
         }
+
 
         
     }

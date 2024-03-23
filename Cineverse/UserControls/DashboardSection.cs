@@ -13,15 +13,14 @@ namespace Cineverse
 {
     public partial class DashboardSection : UserControl
     {
-        private string username;
-        public DashboardSection(string username)
+        public DashboardSection()
         {
             InitializeComponent();
-            this.username = username;
         }
 
         private void DashboardSection_Load(object sender, EventArgs e)
         {
+            string username = Login.Username;   
             //get firstname from database based on user's username
             MySqlConnection conn = DBConnection.getConnection();
             try
@@ -35,7 +34,9 @@ namespace Cineverse
 
                 if (reader.Read())
                 {
-                    lbl_hellouser.Text = "Hello, " + reader.GetString(0) + "!";
+                    string firstname = reader.GetString(0);
+                    string capitalized = $"{char.ToUpper(firstname[0])}{firstname.Substring(1)}";
+                    lbl_hellouser.Text = "Hello, " + capitalized + "!";
                 }
             }
             catch (Exception ex)

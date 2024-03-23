@@ -16,26 +16,20 @@ namespace Cineverse
     {
         
         public NavigationControls navigationcontrols;
-        private string username;
-        public Dashboard(string username)
-        {
-            InitializeComponent();
-            this.username = username;
-
-            InitializeNavigationControl();
-        }
-
         public Dashboard()
         {
             InitializeComponent();
+
             InitializeNavigationControl();
         }
+
+       
 
         private void InitializeNavigationControl()
         {
             List<UserControl> userControls = new List<UserControl>()
             { 
-                new DashboardSection(username),
+                new DashboardSection(),
                 new MoviesSection1(),
                 new ScheduleSection(),
                 new BookingSection()

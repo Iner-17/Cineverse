@@ -7,7 +7,8 @@ namespace Cineverse
 {
     public partial class Login : Form
     {
-       
+        public static string Username { get; private set; }
+
         public Login()
         {
             InitializeComponent();
@@ -61,9 +62,9 @@ namespace Cineverse
                     } 
                     else
                     {
-                        string userName = GetTextBoxValue();
+                        Username = GetTextBoxValue();
 
-                        Dashboard dashboard = new Dashboard(userName);
+                        Dashboard dashboard = new Dashboard();
                         dashboard.Show();
                         this.Hide();
 
