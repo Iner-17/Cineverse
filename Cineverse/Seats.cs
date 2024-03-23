@@ -17,5 +17,20 @@ namespace Cineverse
             InitializeComponent();
         }
 
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Seats seat = new Seats();
+            this.Close();
+
+            Application.Exit();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+
+            this.Close();
+        }
     }
 }

@@ -25,7 +25,11 @@ namespace Cineverse
             InitializeNavigationControl();
         }
 
-       
+        public Dashboard()
+        {
+            InitializeComponent();
+            InitializeNavigationControl();
+        }
 
         private void InitializeNavigationControl()
         {
