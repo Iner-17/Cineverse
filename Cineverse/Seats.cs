@@ -15,7 +15,55 @@ namespace Cineverse
         public Seats()
         {
             InitializeComponent();
+            SelectingSeats();
         }
+
+        private void SelectingSeats()
+        {
+            Color selectedColor = Color.FromArgb(225, 48, 48);
+            Color availableColor = Color.FromArgb(217, 217, 217);
+            Color bookedColor = Color.FromArgb(31, 178, 198);
+            Color glowColor = Color.FromArgb(100, 100, 100);
+
+
+            for (char row = 'A'; row <= 'J'; row++)
+            {
+                for (int seatNum = 1; seatNum <= 20; seatNum++)
+                {
+                    string seatPanelName = $"{row}{seatNum}";
+
+                    Control[] foundControls = Controls.Find(seatPanelName, true);
+                    if (foundControls.Length > 0 && foundControls[0] is Panel seatPanel)
+                    {
+                        seatPanel.Click += (sender, e) =>
+                        {
+                            if (seatPanel.BackColor == bookedColor)
+                            {
+                                return;
+                            }
+                            seatPanel.BackColor = (seatPanel.BackColor == selectedColor) ? availableColor : selectedColor;
+                        };
+                        seatPanel.MouseEnter += (sender, e) =>
+                        {
+                            if (seatPanel.BackColor != bookedColor && seatPanel.BackColor != selectedColor)
+                            {
+                                seatPanel.BackColor = glowColor;
+                            }
+                                
+                        };
+                        seatPanel.MouseLeave += (sender, e) =>
+                        {
+                            if (seatPanel.BackColor != bookedColor && seatPanel.BackColor != selectedColor)
+                            {
+                                seatPanel.BackColor = availableColor;
+                            }
+                        };
+                    }
+                }
+            }
+        }
+
+
 
         private void panel5_Click(object sender, EventArgs e)
         {
@@ -32,5 +80,53 @@ namespace Cineverse
 
             this.Close();
         }
+
+        private void btn_back_MouseEnter(object sender, EventArgs e)
+        {
+            btn_back.BackColor = Color.FromArgb(31, 178, 198);
+            btn_back.ForeColor = Color.Black;
+        }
+
+        private void btn_back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_back.BackColor = Color.FromArgb(20, 32, 32);
+            btn_back.ForeColor = Color.White;
+        }
+
+        private void btn_payment_MouseEnter(object sender, EventArgs e)
+        {
+            btn_payment.BackColor = Color.FromArgb(31, 178, 198);
+            btn_payment.ForeColor = Color.Black;
+        }
+
+        private void btn_payment_MouseLeave(object sender, EventArgs e)
+        {
+            btn_payment.BackColor = Color.FromArgb(20, 32, 32);
+            btn_payment.ForeColor = Color.White;
+        }
+
+       /* private void A5_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is Panel A5) // Check if the control is a panel
+                {
+                    A5.Click += A5_Click;
+                }
+            }
+            if (sender is Panel seatPanel)
+            {
+
+                Color selectedColor = Color.FromArgb(225, 48, 48);
+                Color defaultColor = Color.FromArgb(217, 217, 217);
+                Color bookedColor = Color.FromArgb(31, 178, 198);
+
+                if (A5.BackColor == bookedColor)
+                {
+                    return;
+                }
+                A5.BackColor = (A5.BackColor == selectedColor) ? defaultColor : selectedColor;
+            }
+        }*/
     }
 }
