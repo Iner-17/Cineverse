@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,6 @@ namespace Cineverse
 {
     public partial class AddMovie : Form
     {
-
         public AddMovie()
         {
             InitializeComponent();
@@ -40,57 +40,83 @@ namespace Cineverse
         private void btn_saveMovie_Click(object sender, EventArgs e)
         {
             saveMovie();
-
         }
 
         public void saveMovie()
         {
             MySqlConnection conn = DBConnection.getConnection();
 
-            try
+            if(txt_addTitle.Text != "" && txt_addPrice.Text != "" && txt_addGenre.Text != "" && txt_addDuration.Text != "" && pictureBox1.Image != null)
             {
-                conn.Open();
-                string saveMovieQuery = "INSERT INTO movies (title, price, genre, duration, photo) VALUES (@Title, @Price, @Genre, @Duration, @Photo);";
-                MySqlCommand saveMoviecmd = new MySqlCommand(saveMovieQuery, conn);
-                saveMoviecmd.Parameters.AddWithValue("@Title", txt_addTitle.Text);
-                saveMoviecmd.Parameters.AddWithValue("@Price", txt_addPrice.Text);
-                saveMoviecmd.Parameters.AddWithValue("@Genre", txt_addGenre.Text);
-                saveMoviecmd.Parameters.AddWithValue("@Duration", txt_addDuration.Text);
-                
-                byte[] ImageData;
-                FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                ImageData = br.ReadBytes((int)fs.Length);
-                br.Close();
-                fs.Close();
-                saveMoviecmd.Parameters.AddWithValue("@Photo", ImageData);
-                saveMoviecmd.ExecuteNonQuery();
-
-
-                int movieId = (int)saveMoviecmd.LastInsertedId;
-
-                foreach (string date in cmb_datesAdded.Items)
+                try
                 {
-                    foreach (string time in cmb_timeAdded.Items)
+                    conn.Open();
+                    string saveMovieQuery = "INSERT INTO movies (title, price, genre, duration, photo) VALUES (@Title, @Price, @Genre, @Duration, @Photo);";
+                    MySqlCommand saveMoviecmd = new MySqlCommand(saveMovieQuery, conn);
+                    saveMoviecmd.Parameters.AddWithValue("@Title", txt_addTitle.Text);
+                    saveMoviecmd.Parameters.AddWithValue("@Price", txt_addPrice.Text);
+                    saveMoviecmd.Parameters.AddWithValue("@Genre", txt_addGenre.Text);
+                    saveMoviecmd.Parameters.AddWithValue("@Duration", txt_addDuration.Text);
+                
+                    byte[] ImageData;
+                    FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    ImageData = br.ReadBytes((int)fs.Length);
+                    br.Close();
+                    fs.Close();
+                    saveMoviecmd.Parameters.AddWithValue("@Photo", ImageData);
+                    saveMoviecmd.ExecuteNonQuery();
+
+                    int movieId = (int)saveMoviecmd.LastInsertedId;
+
+                    MySqlCommand insertScreeningcmd = new MySqlCommand();
+
+                    foreach (string date in cmb_datesAdded.Items)
                     {
-                        string insertScreeningQuery = "INSERT INTO screening (movie_id, date, start_time) VALUES (@Movie_Id, @Date, @Time);";
-                        MySqlCommand insertScreeningcmd = new MySqlCommand(insertScreeningQuery, conn);
-                        insertScreeningcmd.Parameters.AddWithValue("@Movie_Id", movieId);
-                        insertScreeningcmd.Parameters.AddWithValue("@Date", date);
-                        insertScreeningcmd.Parameters.AddWithValue("@Time", time);
-                        insertScreeningcmd.ExecuteNonQuery();
+                        foreach (string time in cmb_timeAdded.Items)
+                        {
+                            string insertScreeningQuery = "INSERT INTO screening (movie_id, date, start_time) VALUES (@Movie_Id, @Date, @Time);";
+                            insertScreeningcmd = new MySqlCommand(insertScreeningQuery, conn);
+                            insertScreeningcmd.Parameters.AddWithValue("@Movie_Id", movieId);
+                            insertScreeningcmd.Parameters.AddWithValue("@Date", date);
+                            insertScreeningcmd.Parameters.AddWithValue("@Time", time);
+                            insertScreeningcmd.ExecuteNonQuery();
+                        }
                     }
+
+                    List<string> excludedSeatCodes = new List<string> { "A2", "A3", "A4", "A17", "A18", "A19", "B2", "B3", "B19", "C8", "C13", "D8", "D13", "E8", "E13", "F8", "F13", "G8", "G13", "H8", "H13", "I8", "I13", "J8", "J13" };
+                    int screeningId = (int)insertScreeningcmd.LastInsertedId;
+                    for (char row = 'A'; row <= 'J';  row++)
+                    {
+                        for (int seatNum = 2; seatNum <= 19; seatNum++)
+                        {
+                            string seatCodes = $"{row}{seatNum}";
+
+                            if(!excludedSeatCodes.Contains(seatCodes))
+                            {
+                                string generateSeatQuery = "INSERT INTO seats (screening_id, seat_code, availability) VALUES (@Screening_Id, @Seat_code, 1);";
+                                MySqlCommand generateSeatcmd = new MySqlCommand(generateSeatQuery, conn);
+                                generateSeatcmd.Parameters.AddWithValue("@Screening_Id", screeningId);
+                                generateSeatcmd.Parameters.AddWithValue("@Seat_code", seatCodes);
+                                generateSeatcmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Successfully Added Movie.");
                 }
-                MessageBox.Show("Successfully Added Movie.");
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("All fields are required.");
             }
-            finally { conn.Close(); }
         }
    
-
         private void btn_uploadImage_Click(object sender, EventArgs e)
         {
             try
