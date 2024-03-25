@@ -138,7 +138,6 @@ namespace Cineverse
 
         private void SaveImage(string filename)
         {
-
         }
 
         //CLOSE BUTTON
