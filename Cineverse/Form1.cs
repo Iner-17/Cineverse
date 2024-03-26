@@ -14,7 +14,6 @@ namespace Cineverse
             InitializeComponent();
             this.AcceptButton = guna2Button1;
         }
-
         private void Login_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
