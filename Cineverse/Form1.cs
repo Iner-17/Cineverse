@@ -8,7 +8,6 @@ namespace Cineverse
     public partial class Login : Form
     {
         public static string Username { get; private set; }
-
         public Login()
         {
             InitializeComponent();
