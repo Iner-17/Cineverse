@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_total1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbl_tcktQuantity = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lbl_total1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.lbl_tcktQuantity);
@@ -80,16 +80,16 @@
             this.panel1.Size = new System.Drawing.Size(303, 721);
             this.panel1.TabIndex = 7;
             // 
-            // label3
+            // lbl_total1
             // 
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(205, 528);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 19);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "P1350";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_total1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total1.ForeColor = System.Drawing.Color.White;
+            this.lbl_total1.Location = new System.Drawing.Point(205, 528);
+            this.lbl_total1.Name = "lbl_total1";
+            this.lbl_total1.Size = new System.Drawing.Size(81, 19);
+            this.lbl_total1.TabIndex = 30;
+            this.lbl_total1.Text = "P1350";
+            this.lbl_total1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
@@ -176,6 +176,7 @@
             this.lbl_seats.TabIndex = 20;
             this.lbl_seats.Text = "E11, E12, E13";
             this.lbl_seats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_seats.Click += new System.EventHandler(this.lbl_seats_Click);
             // 
             // lbl_dateTime
             // 
@@ -368,6 +369,7 @@
             this.Name = "PaymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentForm";
+            this.Load += new System.EventHandler(this.PaymentForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -400,7 +402,7 @@
         private System.Windows.Forms.Label lbl_total2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_paymentInProgress;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_total1;
         private System.Windows.Forms.Label label2;
         private UserControls.ConfirmedPaymentSection confirmedPaymentSection1;
     }

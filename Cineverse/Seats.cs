@@ -19,6 +19,34 @@ namespace Cineverse
         Color bookedColor = Color.FromArgb(31, 178, 198);
         Color glowColor = Color.FromArgb(100, 100, 100);
         private string currentTitle;
+        private string currentDate;
+        private string currentTime;
+        private string seatList;
+
+        private void passDataToPaymentForm()
+        {
+            currentTitle = cbo_titleLists.Text;
+            currentDate = cbo_dateLists.Text;
+            currentTime = cbo_timeLists.Text;
+            seatList = seatLists.Text;
+
+            if(currentTitle != "" && currentDate != "" && seatList != "" && currentTime != "")
+            {
+                PaymentForm paymentForm = new PaymentForm();
+                paymentForm.GetDataFromSeatForm(currentTitle, currentDate, currentTime, seatList);
+                paymentForm.Show();
+
+
+                this.Hide();
+            } else
+            {
+                MessageBox.Show("All fields are required.");
+                
+            }
+        }
+
+      
+      
 
         public Seats(string username)
         {
@@ -53,7 +81,6 @@ namespace Cineverse
                     string movieTitle = getListdata["title"].ToString();
                     cbo_titleLists.Items.Add(movieTitle);
                 }
-
             }
             catch (Exception ex)
             {
@@ -141,6 +168,65 @@ namespace Cineverse
             catch (Exception ex)
             {
                 MessageBox.Show("An error occured." + currentTitle);
+            }
+            finally { conn.Close(); }
+        }
+
+        private void cbo_timeLists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+                currentTitle = cbo_titleLists.Text;
+                currentDate = cbo_dateLists.Text;
+                currentTime = cbo_timeLists.Text;
+                string updateSeatColorQuery = "SELECT seat_code, availability FROM movies m INNER JOIN screening sc ON m.movie_id = sc.movie_id LEFT JOIN seats s ON sc.screening_id = s.screening_id WHERE m.title = @CurrentTitle AND sc.date = @CurrentDate AND sc.start_time = @CurrentTime;";
+                MySqlCommand getAvailabilitycmd = new MySqlCommand(updateSeatColorQuery, conn);
+                getAvailabilitycmd.Parameters.AddWithValue("CurrentTitle", currentTitle);
+                getAvailabilitycmd.Parameters.AddWithValue("CurrentDate", currentDate);
+                getAvailabilitycmd.Parameters.AddWithValue("CurrentTime", currentTime);
+                MySqlDataReader reader = getAvailabilitycmd.ExecuteReader();
+
+                Dictionary<string, int> availabilityDict = new Dictionary<string, int>();
+
+                while (reader.Read())
+                {
+                    string seatCode = reader["seat_code"].ToString();
+                    int availability = Convert.ToInt32(reader["availability"]);
+                    availabilityDict[seatCode] = availability;
+                }
+
+                // Update seatPanel colors based on availability
+
+                for (char row = 'A'; row <= 'J'; row++)
+                {
+                    for (int seatNum = 1; seatNum <= 20; seatNum++)
+                    {
+                        string seatPanelName = $"{row}{seatNum}";
+
+                        Control[] foundControls = Controls.Find(seatPanelName, true);
+                        if (foundControls.Length > 0 && foundControls[0] is Panel seatPanel)
+                        {
+                            if (availabilityDict.ContainsKey(seatPanelName))
+                            {
+                                seatPanel.BackColor = (availabilityDict[seatPanelName] == 0) ? bookedColor : availableColor;
+                            }
+                            else
+                            {
+                                seatPanel.BackColor = availableColor;
+                            }
+                        }
+                    }
+                }
+
+                reader.Close();
+
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show("An error occurred while fetching seat availability.");
             }
             finally { conn.Close(); }
         }
@@ -270,10 +356,10 @@ namespace Cineverse
 
         private void btn_payment_Click(object sender, EventArgs e)
         {
-            PaymentForm paymentForm = new PaymentForm();
-            paymentForm.Show();
+            passDataToPaymentForm();
 
-            this.Hide();
         }
+
+        
     }
 }

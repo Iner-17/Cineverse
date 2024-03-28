@@ -317,6 +317,7 @@
             this.cbo_timeLists.Name = "cbo_timeLists";
             this.cbo_timeLists.Size = new System.Drawing.Size(266, 36);
             this.cbo_timeLists.TabIndex = 23;
+            this.cbo_timeLists.SelectedIndexChanged += new System.EventHandler(this.cbo_timeLists_SelectedIndexChanged);
             // 
             // cbo_dateLists
             // 
