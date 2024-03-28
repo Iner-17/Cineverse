@@ -116,6 +116,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="NavigationControls.cs" />
+    <Compile Include="PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="UserControls\BookingSection.Designer.cs">
       <DependentUpon>BookingSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ConfirmedPaymentSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ConfirmedPaymentSection.Designer.cs">
+      <DependentUpon>ConfirmedPaymentSection.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DashboardSection.cs">
       <SubType>UserControl</SubType>
@@ -168,11 +180,17 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Seats.resx">
       <DependentUpon>Seats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BookingSection.resx">
       <DependentUpon>BookingSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ConfirmedPaymentSection.resx">
+      <DependentUpon>ConfirmedPaymentSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DashboardSection.resx">
       <DependentUpon>DashboardSection.cs</DependentUpon>
@@ -272,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

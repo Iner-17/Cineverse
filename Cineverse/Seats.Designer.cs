@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.seatLists = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -43,9 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_payment = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -242,13 +240,6 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
@@ -272,11 +263,20 @@
             this.label54 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_clearAll = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -301,6 +301,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 721);
             this.panel1.TabIndex = 7;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.seatLists);
+            this.panel13.Location = new System.Drawing.Point(9, 522);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(276, 68);
+            this.panel13.TabIndex = 19;
             // 
             // seatLists
             // 
@@ -455,37 +463,6 @@
             this.btn_payment.UseVisualStyleBackColor = false;
             this.btn_payment.MouseEnter += new System.EventHandler(this.btn_payment_MouseEnter);
             this.btn_payment.MouseLeave += new System.EventHandler(this.btn_payment_MouseLeave);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(63, 25);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 78);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1347, 13);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 19);
-            this.panel5.TabIndex = 6;
-            this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::Cineverse.Properties.Resources.LOGO1;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(12, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(65, 20);
-            this.panel3.TabIndex = 5;
             // 
             // label11
             // 
@@ -2215,81 +2192,6 @@
             this.label52.TabIndex = 249;
             this.label52.Text = "20";
             // 
-            // panel9
-            // 
-            this.panel9.BackgroundImage = global::Cineverse.Properties.Resources.screen;
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Controls.Add(this.label14);
-            this.panel9.Controls.Add(this.label13);
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.Controls.Add(this.panel12);
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(61, -26);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(910, 203);
-            this.panel9.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(288, 147);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 19);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Available";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(612, 147);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 19);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Selected";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(457, 147);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 19);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Booked";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.panel12.Location = new System.Drawing.Point(576, 142);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(30, 30);
-            this.panel12.TabIndex = 2;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.panel11.Location = new System.Drawing.Point(421, 142);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(30, 30);
-            this.panel11.TabIndex = 1;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.DarkGray;
-            this.panel10.Location = new System.Drawing.Point(254, 142);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(30, 30);
-            this.panel10.TabIndex = 0;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -2782,13 +2684,111 @@
             this.lbl_clearAll.MouseEnter += new System.EventHandler(this.lbl_clearAll_MouseEnter);
             this.lbl_clearAll.MouseLeave += new System.EventHandler(this.lbl_clearAll_MouseLeave);
             // 
-            // panel13
+            // panel2
             // 
-            this.panel13.Controls.Add(this.seatLists);
-            this.panel13.Location = new System.Drawing.Point(9, 522);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(276, 68);
-            this.panel13.TabIndex = 19;
+            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(63, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(177, 78);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Location = new System.Drawing.Point(1347, 13);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(16, 19);
+            this.panel5.TabIndex = 6;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = global::Cineverse.Properties.Resources.LOGO1;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(12, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(65, 20);
+            this.panel3.TabIndex = 5;
+            // 
+            // panel9
+            // 
+            this.panel9.BackgroundImage = global::Cineverse.Properties.Resources.screen;
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.label14);
+            this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.panel12);
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Location = new System.Drawing.Point(61, -26);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(910, 203);
+            this.panel9.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(288, 147);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 19);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Available";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(612, 147);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 19);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Selected";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(457, 147);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 19);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Booked";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.panel12.Location = new System.Drawing.Point(576, 142);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(30, 30);
+            this.panel12.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.panel11.Location = new System.Drawing.Point(421, 142);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(30, 30);
+            this.panel11.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DarkGray;
+            this.panel10.Location = new System.Drawing.Point(254, 142);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(30, 30);
+            this.panel10.TabIndex = 0;
             // 
             // Seats
             // 
@@ -2806,11 +2806,11 @@
             this.Text = "Seats";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panel13.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel13.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
