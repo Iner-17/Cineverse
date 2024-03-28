@@ -28,5 +28,31 @@ namespace Cineverse
             btn_back.BackColor = Color.FromArgb(20, 32, 32);
             btn_back.ForeColor = Color.White;
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Seats seats = new Seats();
+            seats.Show();
+
+            this.Hide();
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Seats seats = new Seats();
+            seats.Show();
+
+            this.Hide();
+        }
+
+        private void btn_transactionComplete_Click(object sender, EventArgs e)
+        {
+            confirmedPaymentSection1.Location = new Point(0,0);
+        }
+
+        private void confirmedPaymentSection1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Cineverse
 {
@@ -17,13 +18,133 @@ namespace Cineverse
         Color availableColor = Color.DarkGray;
         Color bookedColor = Color.FromArgb(31, 178, 198);
         Color glowColor = Color.FromArgb(100, 100, 100);
+        private string currentTitle;
+
         public Seats(string username)
         {
             InitializeComponent();
             this.username = username;
             SelectingSeats();
         }
-     
+
+        public Seats ()
+        {
+            InitializeComponent();
+            SelectingSeats();
+        }
+
+        private void Seats_Load(object sender, EventArgs e)
+        {
+
+            MySqlConnection conn = DBConnection.getConnection();
+            //Set movie lists
+            try
+            {
+                conn.Open();
+
+                string getMovieListsQuery = "SELECT title FROM movies;";
+                MySqlCommand getListcmd = new MySqlCommand(getMovieListsQuery, conn);
+                MySqlDataReader getListdata = getListcmd.ExecuteReader();
+
+                cbo_titleLists.Items.Clear();
+
+                while(getListdata.Read())
+                {
+                    string movieTitle = getListdata["title"].ToString();
+                    cbo_titleLists.Items.Add(movieTitle);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured.");
+            }
+            finally { conn.Close(); }
+        }
+
+        private void cbo_titleLists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+            currentTitle = cbo_titleLists.Text;
+
+            cbo_dateLists.Items.Clear();
+            cbo_timeLists.Items.Clear();
+
+            try
+            {
+                conn.Open();
+
+                string setPriceQuery = "SELECT price, duration FROM movies WHERE title=@CurrentTitle;";
+                MySqlCommand setPricecmd = new MySqlCommand(setPriceQuery, conn);
+                setPricecmd.Parameters.AddWithValue("CurrentTitle", currentTitle);
+                MySqlDataReader getPriceData = setPricecmd.ExecuteReader();
+
+                if(getPriceData.Read())
+                lbl_moviePrice.Text = getPriceData["price"].ToString();
+                lbl_movieDuration.Text = getPriceData["duration"].ToString();
+
+                getPriceData.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured.");
+            }
+            finally { conn.Close(); }
+
+            //set dates based on title
+            try
+            {
+                conn.Open();
+
+                string getDateListsQuery = "SELECT DISTINCT date FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE title=@currentTitle;";
+                MySqlCommand getListcmd = new MySqlCommand(getDateListsQuery, conn);
+                getListcmd.Parameters.AddWithValue("currentTitle", currentTitle);
+                MySqlDataReader getListdata = getListcmd.ExecuteReader();
+
+                cbo_dateLists.Items.Clear();
+
+                while (getListdata.Read())
+                {
+                    string movieDate = getListdata["date"].ToString();
+                    cbo_dateLists.Items.Add(movieDate);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured." + currentTitle);
+            }
+            finally { conn.Close(); }
+        }
+
+        private void cbo_dateLists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+            string currentDate = cbo_dateLists.Text;
+
+            try
+            {
+                conn.Open();
+
+                string getTimeListsQuery = "SELECT DISTINCT start_time FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE date=@CurrentDate;";
+                MySqlCommand getListcmd = new MySqlCommand(getTimeListsQuery, conn);
+                getListcmd.Parameters.AddWithValue("CurrentDate", currentDate);
+                MySqlDataReader getListdata = getListcmd.ExecuteReader();
+
+                cbo_timeLists.Items.Clear();
+
+                while (getListdata.Read())
+                {
+                    string movieTime = getListdata["start_time"].ToString();
+                    cbo_timeLists.Items.Add(movieTime);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured." + currentTitle);
+            }
+            finally { conn.Close(); }
+        }
+
         private void SelectingSeats()
         {
             
@@ -43,6 +164,7 @@ namespace Cineverse
                                 return;
                             }
                         seatPanel.BackColor = (seatPanel.BackColor == selectedColor) ? availableColor : selectedColor;
+
                         if (seatLists.Text == "")
                         {
                             seatLists.Text += seatPanelName;
@@ -53,17 +175,19 @@ namespace Cineverse
                             seatLists.Text = "";
                         }
                         else if (seatLists.Text != "" && seatPanel.BackColor == selectedColor)
-                            {
+                        {
 
-                                seatLists.Text += ", " + seatPanelName;
+                            seatLists.Text += ", " + seatPanelName;
                                 
-                            }
-                            else if (seatPanel.BackColor == availableColor) 
-                            {
-                                
-                                seatLists.Text = seatLists.Text.Replace(", " + seatPanelName, "");
-                            }
-                            
+                        }
+                        else if (seatPanel.BackColor == availableColor) 
+                        {
+                            string[] selectedSeats = seatLists.Text.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+
+                            selectedSeats = selectedSeats.Where(seat => seat != seatPanelName).ToArray();
+
+                            seatLists.Text = string.Join(", ", selectedSeats);
+                        }
                         };
                         seatPanel.MouseEnter += (sender, e) =>
                         {
@@ -144,7 +268,12 @@ namespace Cineverse
             lbl_clearAll.ForeColor= Color.White;
         }
 
+        private void btn_payment_Click(object sender, EventArgs e)
+        {
+            PaymentForm paymentForm = new PaymentForm();
+            paymentForm.Show();
 
-        
+            this.Hide();
+        }
     }
 }

@@ -78,6 +78,7 @@
             this.btn_backToDashboard.TabIndex = 30;
             this.btn_backToDashboard.Text = "Back to Dashboard";
             this.btn_backToDashboard.UseVisualStyleBackColor = false;
+            this.btn_backToDashboard.Click += new System.EventHandler(this.btn_backToDashboard_Click);
             // 
             // ConfirmedPaymentSection
             // 

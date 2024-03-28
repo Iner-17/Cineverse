@@ -52,6 +52,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.confirmedPaymentSection1 = new Cineverse.UserControls.ConfirmedPaymentSection();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
@@ -212,6 +213,7 @@
             this.btn_back.TabIndex = 9;
             this.btn_back.Text = "Back";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             this.btn_back.MouseEnter += new System.EventHandler(this.btn_back_MouseEnter);
             this.btn_back.MouseLeave += new System.EventHandler(this.btn_back_MouseLeave);
             // 
@@ -249,10 +251,12 @@
             this.btn_transactionComplete.TabIndex = 5;
             this.btn_transactionComplete.Text = "Transaction Complete";
             this.btn_transactionComplete.UseVisualStyleBackColor = false;
+            this.btn_transactionComplete.Click += new System.EventHandler(this.btn_transactionComplete_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel4.Controls.Add(this.confirmedPaymentSection1);
             this.panel4.Controls.Add(this.lbl_paymentInProgress);
             this.panel4.Controls.Add(this.lbl_total2);
             this.panel4.Controls.Add(this.label1);
@@ -329,6 +333,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 6;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel3
             // 
@@ -339,6 +344,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(65, 20);
             this.panel3.TabIndex = 5;
+            // 
+            // confirmedPaymentSection1
+            // 
+            this.confirmedPaymentSection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.confirmedPaymentSection1.Location = new System.Drawing.Point(0, 654);
+            this.confirmedPaymentSection1.Name = "confirmedPaymentSection1";
+            this.confirmedPaymentSection1.Size = new System.Drawing.Size(1035, 718);
+            this.confirmedPaymentSection1.TabIndex = 30;
+            this.confirmedPaymentSection1.Load += new System.EventHandler(this.confirmedPaymentSection1_Load);
             // 
             // PaymentForm
             // 
@@ -352,6 +366,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PaymentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentForm";
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -387,5 +402,6 @@
         private System.Windows.Forms.Label lbl_paymentInProgress;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private UserControls.ConfirmedPaymentSection confirmedPaymentSection1;
     }
 }

@@ -16,5 +16,13 @@ namespace Cineverse.UserControls
         {
             InitializeComponent();
         }
+
+        private void btn_backToDashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+
+            ((Form)this.TopLevelControl).Hide();
+        }
     }
 }

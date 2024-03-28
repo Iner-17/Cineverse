@@ -376,7 +376,6 @@
             this.btn_getTickets3.TabIndex = 11;
             this.btn_getTickets3.Text = "Get Tickets";
             this.btn_getTickets3.UseVisualStyleBackColor = false;
-            this.btn_getTickets3.Click += new System.EventHandler(this.btn_getTickets3_Click);
             this.btn_getTickets3.MouseEnter += new System.EventHandler(this.btn_getTickets3_MouseEnter_1);
             this.btn_getTickets3.MouseLeave += new System.EventHandler(this.btn_getTickets3_MouseLeave_1);
             // 
