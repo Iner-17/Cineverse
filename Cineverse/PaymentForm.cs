@@ -17,9 +17,16 @@ namespace Cineverse
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btn_back_MouseEnter(object sender, EventArgs e)
         {
+            btn_back.BackColor = Color.FromArgb(31, 178, 198);
+            btn_back.ForeColor = Color.Black;
+        }
 
+        private void btn_back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_back.BackColor = Color.FromArgb(20, 32, 32);
+            btn_back.ForeColor = Color.White;
         }
     }
 }

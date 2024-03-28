@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lbl_tcktQuantity = new System.Windows.Forms.Label();
+            this.lbl_tcktPrice = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_seats = new System.Windows.Forms.Label();
+            this.lbl_dateTime = new System.Windows.Forms.Label();
+            this.lbl_cinemaNo = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
+            this.lbl_titlePayment = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_transactionComplete = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_cinemaNo = new System.Windows.Forms.Label();
-            this.lbl_titlePayment = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbl_dateTime = new System.Windows.Forms.Label();
-            this.lbl_seats = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbl_tcktPrice = new System.Windows.Forms.Label();
-            this.lbl_tcktQuantity = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_total2 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.lbl_paymentInProgress = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_total2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pb_posterSelected = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -78,7 +78,125 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 721);
             this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(205, 528);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 19);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "P1350";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 533);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 19);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Total: ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel6.Location = new System.Drawing.Point(14, 518);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(272, 3);
+            this.panel6.TabIndex = 28;
+            // 
+            // lbl_tcktQuantity
+            // 
+            this.lbl_tcktQuantity.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tcktQuantity.ForeColor = System.Drawing.Color.White;
+            this.lbl_tcktQuantity.Location = new System.Drawing.Point(209, 482);
+            this.lbl_tcktQuantity.Name = "lbl_tcktQuantity";
+            this.lbl_tcktQuantity.Size = new System.Drawing.Size(77, 19);
+            this.lbl_tcktQuantity.TabIndex = 25;
+            this.lbl_tcktQuantity.Text = "3";
+            this.lbl_tcktQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_tcktPrice
+            // 
+            this.lbl_tcktPrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tcktPrice.ForeColor = System.Drawing.Color.White;
+            this.lbl_tcktPrice.Location = new System.Drawing.Point(205, 458);
+            this.lbl_tcktPrice.Name = "lbl_tcktPrice";
+            this.lbl_tcktPrice.Size = new System.Drawing.Size(81, 19);
+            this.lbl_tcktPrice.TabIndex = 24;
+            this.lbl_tcktPrice.Text = "P450";
+            this.lbl_tcktPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(9, 482);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 19);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Ticket/s Quantity:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(9, 458);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(165, 19);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Ticket/s Price:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(9, 305);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(285, 19);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Seats";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_seats
+            // 
+            this.lbl_seats.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_seats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.lbl_seats.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_seats.Location = new System.Drawing.Point(13, 324);
+            this.lbl_seats.Name = "lbl_seats";
+            this.lbl_seats.Size = new System.Drawing.Size(281, 54);
+            this.lbl_seats.TabIndex = 20;
+            this.lbl_seats.Text = "E11, E12, E13";
+            this.lbl_seats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_dateTime
+            // 
+            this.lbl_dateTime.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dateTime.ForeColor = System.Drawing.Color.White;
+            this.lbl_dateTime.Location = new System.Drawing.Point(9, 226);
+            this.lbl_dateTime.Name = "lbl_dateTime";
+            this.lbl_dateTime.Size = new System.Drawing.Size(285, 19);
+            this.lbl_dateTime.TabIndex = 19;
+            this.lbl_dateTime.Text = "March 28, 2024 • Wednesday";
+            this.lbl_dateTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_cinemaNo
+            // 
+            this.lbl_cinemaNo.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cinemaNo.ForeColor = System.Drawing.Color.White;
+            this.lbl_cinemaNo.Location = new System.Drawing.Point(9, 203);
+            this.lbl_cinemaNo.Name = "lbl_cinemaNo";
+            this.lbl_cinemaNo.Size = new System.Drawing.Size(285, 19);
+            this.lbl_cinemaNo.TabIndex = 18;
+            this.lbl_cinemaNo.Text = "Cinema #";
+            this.lbl_cinemaNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_back
             // 
@@ -94,6 +212,29 @@
             this.btn_back.TabIndex = 9;
             this.btn_back.Text = "Back";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.MouseEnter += new System.EventHandler(this.btn_back_MouseEnter);
+            this.btn_back.MouseLeave += new System.EventHandler(this.btn_back_MouseLeave);
+            // 
+            // lbl_titlePayment
+            // 
+            this.lbl_titlePayment.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titlePayment.ForeColor = System.Drawing.Color.White;
+            this.lbl_titlePayment.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_titlePayment.Location = new System.Drawing.Point(11, 149);
+            this.lbl_titlePayment.Name = "lbl_titlePayment";
+            this.lbl_titlePayment.Size = new System.Drawing.Size(281, 54);
+            this.lbl_titlePayment.TabIndex = 17;
+            this.lbl_titlePayment.Text = "Inside Out 2 ";
+            this.lbl_titlePayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(63, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(177, 78);
+            this.panel2.TabIndex = 1;
             // 
             // btn_transactionComplete
             // 
@@ -123,148 +264,6 @@
             this.panel4.Size = new System.Drawing.Size(1035, 718);
             this.panel4.TabIndex = 8;
             // 
-            // lbl_cinemaNo
-            // 
-            this.lbl_cinemaNo.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cinemaNo.ForeColor = System.Drawing.Color.White;
-            this.lbl_cinemaNo.Location = new System.Drawing.Point(9, 203);
-            this.lbl_cinemaNo.Name = "lbl_cinemaNo";
-            this.lbl_cinemaNo.Size = new System.Drawing.Size(285, 19);
-            this.lbl_cinemaNo.TabIndex = 18;
-            this.lbl_cinemaNo.Text = "Cinema #";
-            this.lbl_cinemaNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_titlePayment
-            // 
-            this.lbl_titlePayment.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titlePayment.ForeColor = System.Drawing.Color.White;
-            this.lbl_titlePayment.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl_titlePayment.Location = new System.Drawing.Point(11, 149);
-            this.lbl_titlePayment.Name = "lbl_titlePayment";
-            this.lbl_titlePayment.Size = new System.Drawing.Size(281, 54);
-            this.lbl_titlePayment.TabIndex = 17;
-            this.lbl_titlePayment.Text = "Inside Out 2 ";
-            this.lbl_titlePayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(371, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(292, 25);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "PAYMENT METHOD: CASH";
-            // 
-            // lbl_dateTime
-            // 
-            this.lbl_dateTime.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dateTime.ForeColor = System.Drawing.Color.White;
-            this.lbl_dateTime.Location = new System.Drawing.Point(9, 226);
-            this.lbl_dateTime.Name = "lbl_dateTime";
-            this.lbl_dateTime.Size = new System.Drawing.Size(285, 19);
-            this.lbl_dateTime.TabIndex = 19;
-            this.lbl_dateTime.Text = "March 28, 2024 • Wednesday";
-            this.lbl_dateTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_seats
-            // 
-            this.lbl_seats.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_seats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.lbl_seats.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl_seats.Location = new System.Drawing.Point(13, 324);
-            this.lbl_seats.Name = "lbl_seats";
-            this.lbl_seats.Size = new System.Drawing.Size(281, 54);
-            this.lbl_seats.TabIndex = 20;
-            this.lbl_seats.Text = "E11, E12, E13";
-            this.lbl_seats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(9, 305);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(285, 19);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Seats";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 458);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 19);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Ticket/s Price:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(9, 482);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 19);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Ticket/s Quantity:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_tcktPrice
-            // 
-            this.lbl_tcktPrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tcktPrice.ForeColor = System.Drawing.Color.White;
-            this.lbl_tcktPrice.Location = new System.Drawing.Point(205, 458);
-            this.lbl_tcktPrice.Name = "lbl_tcktPrice";
-            this.lbl_tcktPrice.Size = new System.Drawing.Size(81, 19);
-            this.lbl_tcktPrice.TabIndex = 24;
-            this.lbl_tcktPrice.Text = "P450";
-            this.lbl_tcktPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_tcktQuantity
-            // 
-            this.lbl_tcktQuantity.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tcktQuantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_tcktQuantity.Location = new System.Drawing.Point(209, 482);
-            this.lbl_tcktQuantity.Name = "lbl_tcktQuantity";
-            this.lbl_tcktQuantity.Size = new System.Drawing.Size(77, 19);
-            this.lbl_tcktQuantity.TabIndex = 25;
-            this.lbl_tcktQuantity.Text = "3";
-            this.lbl_tcktQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(375, 413);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 19);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "TOTAL";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_total2
-            // 
-            this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total2.ForeColor = System.Drawing.Color.White;
-            this.lbl_total2.Location = new System.Drawing.Point(375, 432);
-            this.lbl_total2.Name = "lbl_total2";
-            this.lbl_total2.Size = new System.Drawing.Size(285, 54);
-            this.lbl_total2.TabIndex = 27;
-            this.lbl_total2.Text = "₱1350";
-            this.lbl_total2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel6.Location = new System.Drawing.Point(14, 518);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(272, 3);
-            this.panel6.TabIndex = 28;
-            // 
             // lbl_paymentInProgress
             // 
             this.lbl_paymentInProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -277,27 +276,27 @@
             this.lbl_paymentInProgress.Text = "Payment in Progress...";
             this.lbl_paymentInProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lbl_total2
             // 
-            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 533);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 19);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Total: ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total2.ForeColor = System.Drawing.Color.White;
+            this.lbl_total2.Location = new System.Drawing.Point(375, 432);
+            this.lbl_total2.Name = "lbl_total2";
+            this.lbl_total2.Size = new System.Drawing.Size(285, 54);
+            this.lbl_total2.TabIndex = 27;
+            this.lbl_total2.Text = "₱1350";
+            this.lbl_total2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label1
             // 
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(205, 528);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 19);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "P1350";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(375, 413);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(285, 19);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "TOTAL";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pb_posterSelected
             // 
@@ -309,14 +308,16 @@
             this.pb_posterSelected.TabIndex = 16;
             this.pb_posterSelected.TabStop = false;
             // 
-            // panel2
+            // label5
             // 
-            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(63, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 78);
-            this.panel2.TabIndex = 1;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(371, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(292, 25);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "PAYMENT METHOD: CASH";
             // 
             // panel5
             // 

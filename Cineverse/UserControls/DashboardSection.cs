@@ -136,5 +136,6 @@ namespace Cineverse
         {
             lbl_viewAll.ForeColor = Color.White;
         }
+
     }
 }
