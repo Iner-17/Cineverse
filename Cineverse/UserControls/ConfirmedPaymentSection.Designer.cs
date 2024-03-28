@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_total2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_transactionComplete = new System.Windows.Forms.Button();
+            this.btn_backToDashboard = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,26 +65,26 @@
             this.label1.Text = "Payment Completed";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_transactionComplete
+            // btn_backToDashboard
             // 
-            this.btn_transactionComplete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_transactionComplete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_transactionComplete.FlatAppearance.BorderSize = 0;
-            this.btn_transactionComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_transactionComplete.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_transactionComplete.Location = new System.Drawing.Point(385, 380);
-            this.btn_transactionComplete.Name = "btn_transactionComplete";
-            this.btn_transactionComplete.Size = new System.Drawing.Size(270, 53);
-            this.btn_transactionComplete.TabIndex = 30;
-            this.btn_transactionComplete.Text = "Back to Dashboard";
-            this.btn_transactionComplete.UseVisualStyleBackColor = false;
+            this.btn_backToDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_backToDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_backToDashboard.FlatAppearance.BorderSize = 0;
+            this.btn_backToDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_backToDashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_backToDashboard.Location = new System.Drawing.Point(385, 380);
+            this.btn_backToDashboard.Name = "btn_backToDashboard";
+            this.btn_backToDashboard.Size = new System.Drawing.Size(270, 53);
+            this.btn_backToDashboard.TabIndex = 30;
+            this.btn_backToDashboard.Text = "Back to Dashboard";
+            this.btn_backToDashboard.UseVisualStyleBackColor = false;
             // 
             // ConfirmedPaymentSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.Controls.Add(this.btn_transactionComplete);
+            this.Controls.Add(this.btn_backToDashboard);
             this.Controls.Add(this.lbl_total2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -99,6 +99,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_total2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_transactionComplete;
+        private System.Windows.Forms.Button btn_backToDashboard;
     }
 }
