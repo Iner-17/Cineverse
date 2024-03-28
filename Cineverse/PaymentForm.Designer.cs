@@ -102,7 +102,7 @@
             this.btn_transactionComplete.FlatAppearance.BorderSize = 0;
             this.btn_transactionComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_transactionComplete.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_transactionComplete.Location = new System.Drawing.Point(382, 572);
+            this.btn_transactionComplete.Location = new System.Drawing.Point(382, 584);
             this.btn_transactionComplete.Name = "btn_transactionComplete";
             this.btn_transactionComplete.Size = new System.Drawing.Size(270, 53);
             this.btn_transactionComplete.TabIndex = 5;
@@ -151,7 +151,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(371, 45);
+            this.label5.Location = new System.Drawing.Point(371, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(292, 25);
             this.label5.TabIndex = 17;
@@ -239,7 +239,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(375, 401);
+            this.label1.Location = new System.Drawing.Point(375, 413);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(285, 19);
             this.label1.TabIndex = 26;
@@ -250,7 +250,7 @@
             // 
             this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_total2.ForeColor = System.Drawing.Color.White;
-            this.lbl_total2.Location = new System.Drawing.Point(375, 420);
+            this.lbl_total2.Location = new System.Drawing.Point(375, 432);
             this.lbl_total2.Name = "lbl_total2";
             this.lbl_total2.Size = new System.Drawing.Size(285, 54);
             this.lbl_total2.TabIndex = 27;
@@ -270,7 +270,7 @@
             this.lbl_paymentInProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.lbl_paymentInProgress.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_paymentInProgress.ForeColor = System.Drawing.Color.White;
-            this.lbl_paymentInProgress.Location = new System.Drawing.Point(323, 489);
+            this.lbl_paymentInProgress.Location = new System.Drawing.Point(328, 495);
             this.lbl_paymentInProgress.Name = "lbl_paymentInProgress";
             this.lbl_paymentInProgress.Size = new System.Drawing.Size(378, 70);
             this.lbl_paymentInProgress.TabIndex = 29;
@@ -302,7 +302,7 @@
             // pb_posterSelected
             // 
             this.pb_posterSelected.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
-            this.pb_posterSelected.Location = new System.Drawing.Point(419, 93);
+            this.pb_posterSelected.Location = new System.Drawing.Point(419, 105);
             this.pb_posterSelected.Name = "pb_posterSelected";
             this.pb_posterSelected.Size = new System.Drawing.Size(196, 296);
             this.pb_posterSelected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
