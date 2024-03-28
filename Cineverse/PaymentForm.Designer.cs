@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_transactionComplete = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_cinemaNo = new System.Windows.Forms.Label();
             this.lbl_titlePayment = new System.Windows.Forms.Label();
-            this.pb_posterSelected = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_dateTime = new System.Windows.Forms.Label();
             this.lbl_seats = new System.Windows.Forms.Label();
@@ -52,31 +48,14 @@
             this.lbl_paymentInProgress = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pb_posterSelected = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::Cineverse.Properties.Resources.LOGO1;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(12, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(65, 20);
-            this.panel3.TabIndex = 5;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1347, 13);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 19);
-            this.panel5.TabIndex = 6;
             // 
             // panel1
             // 
@@ -116,15 +95,6 @@
             this.btn_back.Text = "Back";
             this.btn_back.UseVisualStyleBackColor = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(63, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 78);
-            this.panel2.TabIndex = 1;
-            // 
             // btn_transactionComplete
             // 
             this.btn_transactionComplete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
@@ -132,7 +102,7 @@
             this.btn_transactionComplete.FlatAppearance.BorderSize = 0;
             this.btn_transactionComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_transactionComplete.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_transactionComplete.Location = new System.Drawing.Point(382, 584);
+            this.btn_transactionComplete.Location = new System.Drawing.Point(382, 572);
             this.btn_transactionComplete.Name = "btn_transactionComplete";
             this.btn_transactionComplete.Size = new System.Drawing.Size(270, 53);
             this.btn_transactionComplete.TabIndex = 5;
@@ -175,16 +145,6 @@
             this.lbl_titlePayment.TabIndex = 17;
             this.lbl_titlePayment.Text = "Inside Out 2 ";
             this.lbl_titlePayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb_posterSelected
-            // 
-            this.pb_posterSelected.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
-            this.pb_posterSelected.Location = new System.Drawing.Point(419, 105);
-            this.pb_posterSelected.Name = "pb_posterSelected";
-            this.pb_posterSelected.Size = new System.Drawing.Size(196, 296);
-            this.pb_posterSelected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_posterSelected.TabIndex = 16;
-            this.pb_posterSelected.TabStop = false;
             // 
             // label5
             // 
@@ -279,7 +239,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(375, 413);
+            this.label1.Location = new System.Drawing.Point(375, 401);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(285, 19);
             this.label1.TabIndex = 26;
@@ -290,7 +250,7 @@
             // 
             this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_total2.ForeColor = System.Drawing.Color.White;
-            this.lbl_total2.Location = new System.Drawing.Point(375, 432);
+            this.lbl_total2.Location = new System.Drawing.Point(375, 420);
             this.lbl_total2.Name = "lbl_total2";
             this.lbl_total2.Size = new System.Drawing.Size(285, 54);
             this.lbl_total2.TabIndex = 27;
@@ -310,7 +270,7 @@
             this.lbl_paymentInProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.lbl_paymentInProgress.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_paymentInProgress.ForeColor = System.Drawing.Color.White;
-            this.lbl_paymentInProgress.Location = new System.Drawing.Point(323, 501);
+            this.lbl_paymentInProgress.Location = new System.Drawing.Point(323, 489);
             this.lbl_paymentInProgress.Name = "lbl_paymentInProgress";
             this.lbl_paymentInProgress.Size = new System.Drawing.Size(378, 70);
             this.lbl_paymentInProgress.TabIndex = 29;
@@ -338,6 +298,46 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "P1350";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pb_posterSelected
+            // 
+            this.pb_posterSelected.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
+            this.pb_posterSelected.Location = new System.Drawing.Point(419, 93);
+            this.pb_posterSelected.Name = "pb_posterSelected";
+            this.pb_posterSelected.Size = new System.Drawing.Size(196, 296);
+            this.pb_posterSelected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_posterSelected.TabIndex = 16;
+            this.pb_posterSelected.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(63, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(177, 78);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Location = new System.Drawing.Point(1347, 13);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(16, 19);
+            this.panel5.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = global::Cineverse.Properties.Resources.LOGO1;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(12, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(65, 20);
+            this.panel3.TabIndex = 5;
             // 
             // PaymentForm
             // 
