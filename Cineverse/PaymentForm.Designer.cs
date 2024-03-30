@@ -54,7 +54,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer_paymentInProgress = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
@@ -351,11 +351,11 @@
             this.panel3.Size = new System.Drawing.Size(65, 20);
             this.panel3.TabIndex = 5;
             // 
-            // timer1
+            // timer_paymentInProgress
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer_paymentInProgress.Enabled = true;
+            this.timer_paymentInProgress.Interval = 500;
+            this.timer_paymentInProgress.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PaymentForm
             // 
@@ -407,6 +407,6 @@
         private System.Windows.Forms.Label lbl_total1;
         private System.Windows.Forms.Label label2;
         private UserControls.ConfirmedPaymentSection confirmedPaymentSection1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer_paymentInProgress;
     }
 }

@@ -151,7 +151,7 @@ namespace Cineverse
 
         private void StartPaymentProcess()
         {
-            timer1.Start();
+            timer_paymentInProgress.Start();
 
             Task.Delay(5000).ContinueWith(_ =>
             {
@@ -161,7 +161,7 @@ namespace Cineverse
 
         private void StopPaymentProcess()
         {
-            timer1.Stop();
+            timer_paymentInProgress.Stop();
         }
     }
 }
