@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_total1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_transactionComplete = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.confirmedPaymentSection1 = new Cineverse.UserControls.ConfirmedPaymentSection();
             this.lbl_paymentInProgress = new System.Windows.Forms.Label();
             this.lbl_total2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +54,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.confirmedPaymentSection1 = new Cineverse.UserControls.ConfirmedPaymentSection();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
@@ -176,7 +178,6 @@
             this.lbl_seats.TabIndex = 20;
             this.lbl_seats.Text = "E11, E12, E13";
             this.lbl_seats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_seats.Click += new System.EventHandler(this.lbl_seats_Click);
             // 
             // lbl_dateTime
             // 
@@ -269,6 +270,14 @@
             this.panel4.Size = new System.Drawing.Size(1035, 718);
             this.panel4.TabIndex = 8;
             // 
+            // confirmedPaymentSection1
+            // 
+            this.confirmedPaymentSection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.confirmedPaymentSection1.Location = new System.Drawing.Point(0, 654);
+            this.confirmedPaymentSection1.Name = "confirmedPaymentSection1";
+            this.confirmedPaymentSection1.Size = new System.Drawing.Size(1035, 718);
+            this.confirmedPaymentSection1.TabIndex = 30;
+            // 
             // lbl_paymentInProgress
             // 
             this.lbl_paymentInProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -278,7 +287,6 @@
             this.lbl_paymentInProgress.Name = "lbl_paymentInProgress";
             this.lbl_paymentInProgress.Size = new System.Drawing.Size(378, 70);
             this.lbl_paymentInProgress.TabIndex = 29;
-            this.lbl_paymentInProgress.Text = "Payment in Progress...";
             this.lbl_paymentInProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_total2
@@ -346,14 +354,11 @@
             this.panel3.Size = new System.Drawing.Size(65, 20);
             this.panel3.TabIndex = 5;
             // 
-            // confirmedPaymentSection1
+            // timer1
             // 
-            this.confirmedPaymentSection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.confirmedPaymentSection1.Location = new System.Drawing.Point(0, 654);
-            this.confirmedPaymentSection1.Name = "confirmedPaymentSection1";
-            this.confirmedPaymentSection1.Size = new System.Drawing.Size(1035, 718);
-            this.confirmedPaymentSection1.TabIndex = 30;
-            this.confirmedPaymentSection1.Load += new System.EventHandler(this.confirmedPaymentSection1_Load);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PaymentForm
             // 
@@ -405,5 +410,6 @@
         private System.Windows.Forms.Label lbl_total1;
         private System.Windows.Forms.Label label2;
         private UserControls.ConfirmedPaymentSection confirmedPaymentSection1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -140,18 +140,28 @@ namespace Cineverse
             confirmedPaymentSection1.Location = new Point(0,0);
         }
 
-       
-
-        private void confirmedPaymentSection1_Load(object sender, EventArgs e)
+        private int dotCount = 0;
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            dotCount = (dotCount + 1) % 4;
 
+            string dots = new string ('.', dotCount);
+            lbl_paymentInProgress.Text = "Payment in Progress" + dots;
         }
 
-        private void lbl_seats_Click(object sender, EventArgs e)
+        private void StartPaymentProcess()
         {
+            timer1.Start();
 
+            Task.Delay(5000).ContinueWith(_ =>
+            {
+                StopPaymentProcess();
+            });
         }
 
-        
+        private void StopPaymentProcess()
+        {
+            timer1.Stop();
+        }
     }
 }

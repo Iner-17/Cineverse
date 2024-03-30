@@ -137,9 +137,5 @@ namespace Cineverse
             lbl_viewAll.ForeColor = Color.White;
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
