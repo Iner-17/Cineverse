@@ -15,9 +15,9 @@ namespace Cineverse
     {
         private string username;
         Color selectedColor = Color.FromArgb(225, 48, 48);
-        Color availableColor = Color.DarkGray;
+        Color availableColor = Color.DimGray;
         Color bookedColor = Color.FromArgb(31, 178, 198);
-        Color glowColor = Color.FromArgb(100, 100, 100);
+        Color glowColor = Color.FromArgb(75, 75, 75);
         private string currentTitle;
         private string currentDate;
         private string currentTime;
@@ -44,9 +44,6 @@ namespace Cineverse
                 
             }
         }
-
-      
-      
 
         public Seats(string username)
         {
@@ -360,6 +357,5 @@ namespace Cineverse
 
         }
 
-        
     }
 }
