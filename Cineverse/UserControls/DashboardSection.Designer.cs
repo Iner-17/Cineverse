@@ -45,32 +45,32 @@
             this.lbl_todaysBooking = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lbl_viewAll = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_getTickets2 = new System.Windows.Forms.Button();
-            this.lbl_genre2 = new System.Windows.Forms.Label();
-            this.lbl_duration2 = new System.Windows.Forms.Label();
-            this.lbl_title2 = new System.Windows.Forms.Label();
+            this.btn_getTickets1 = new System.Windows.Forms.Button();
             this.btn_getTickets3 = new System.Windows.Forms.Button();
+            this.btn_getTickets2 = new System.Windows.Forms.Button();
             this.lbl_genre3 = new System.Windows.Forms.Label();
+            this.lbl_title1 = new System.Windows.Forms.Label();
+            this.pb_dbMovieDisplay3 = new System.Windows.Forms.PictureBox();
             this.lbl_duration3 = new System.Windows.Forms.Label();
+            this.lbl_genre2 = new System.Windows.Forms.Label();
             this.lbl_title3 = new System.Windows.Forms.Label();
+            this.lbl_duration2 = new System.Windows.Forms.Label();
+            this.lbl_viewAll = new System.Windows.Forms.Label();
+            this.lbl_title2 = new System.Windows.Forms.Label();
             this.lbl_genre1 = new System.Windows.Forms.Label();
             this.lbl_duration1 = new System.Windows.Forms.Label();
-            this.lbl_title1 = new System.Windows.Forms.Label();
+            this.pb_dbMovieDisplay2 = new System.Windows.Forms.PictureBox();
+            this.pb_dbMovieDisplay1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_getTickets1 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_dbMovieDisplay3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_dbMovieDisplay2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_dbMovieDisplay1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -96,11 +96,10 @@
             this.lbl_date.Size = new System.Drawing.Size(273, 19);
             this.lbl_date.TabIndex = 5;
             this.lbl_date.Text = "Wednesday, December 30, 2024";
-            this.lbl_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_date.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_time
             // 
-            this.lbl_time.AutoSize = true;
             this.lbl_time.BackColor = System.Drawing.Color.Transparent;
             this.lbl_time.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_time.ForeColor = System.Drawing.Color.White;
@@ -109,6 +108,7 @@
             this.lbl_time.Size = new System.Drawing.Size(279, 35);
             this.lbl_time.TabIndex = 4;
             this.lbl_time.Text = "22  :  22  :  22   AM";
+            this.lbl_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_hellouser
             // 
@@ -265,7 +265,7 @@
             this.panel7.Controls.Add(this.btn_getTickets2);
             this.panel7.Controls.Add(this.lbl_genre3);
             this.panel7.Controls.Add(this.lbl_title1);
-            this.panel7.Controls.Add(this.pictureBox3);
+            this.panel7.Controls.Add(this.pb_dbMovieDisplay3);
             this.panel7.Controls.Add(this.lbl_duration3);
             this.panel7.Controls.Add(this.lbl_genre2);
             this.panel7.Controls.Add(this.lbl_title3);
@@ -274,8 +274,8 @@
             this.panel7.Controls.Add(this.lbl_title2);
             this.panel7.Controls.Add(this.lbl_genre1);
             this.panel7.Controls.Add(this.lbl_duration1);
-            this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Controls.Add(this.pictureBox1);
+            this.panel7.Controls.Add(this.pb_dbMovieDisplay2);
+            this.panel7.Controls.Add(this.pb_dbMovieDisplay1);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Location = new System.Drawing.Point(0, 146);
             this.panel7.Name = "panel7";
@@ -283,97 +283,22 @@
             this.panel7.TabIndex = 16;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
-            // lbl_viewAll
+            // btn_getTickets1
             // 
-            this.lbl_viewAll.AutoSize = true;
-            this.lbl_viewAll.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_viewAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_viewAll.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_viewAll.ForeColor = System.Drawing.Color.White;
-            this.lbl_viewAll.Location = new System.Drawing.Point(691, 31);
-            this.lbl_viewAll.Name = "lbl_viewAll";
-            this.lbl_viewAll.Size = new System.Drawing.Size(61, 16);
-            this.lbl_viewAll.TabIndex = 17;
-            this.lbl_viewAll.Text = "View All";
-            this.lbl_viewAll.MouseEnter += new System.EventHandler(this.lbl_viewAll_MouseEnter);
-            this.lbl_viewAll.MouseLeave += new System.EventHandler(this.lbl_viewAll_MouseLeave);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(530, 78);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(222, 328);
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(284, 78);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(222, 328);
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(32, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 328);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_getTickets2
-            // 
-            this.btn_getTickets2.BackColor = System.Drawing.Color.Transparent;
-            this.btn_getTickets2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_getTickets2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_getTickets2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_getTickets2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_getTickets2.ForeColor = System.Drawing.Color.White;
-            this.btn_getTickets2.Location = new System.Drawing.Point(302, 503);
-            this.btn_getTickets2.Name = "btn_getTickets2";
-            this.btn_getTickets2.Size = new System.Drawing.Size(174, 42);
-            this.btn_getTickets2.TabIndex = 11;
-            this.btn_getTickets2.Text = "Get Tickets";
-            this.btn_getTickets2.UseVisualStyleBackColor = false;
-            this.btn_getTickets2.MouseEnter += new System.EventHandler(this.btn_getTickets2_MouseEnter_1);
-            this.btn_getTickets2.MouseLeave += new System.EventHandler(this.btn_getTickets2_MouseLeave_1);
-            // 
-            // lbl_genre2
-            // 
-            this.lbl_genre2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_genre2.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre2.Location = new System.Drawing.Point(281, 473);
-            this.lbl_genre2.Name = "lbl_genre2";
-            this.lbl_genre2.Size = new System.Drawing.Size(222, 26);
-            this.lbl_genre2.TabIndex = 8;
-            this.lbl_genre2.Text = "Genre";
-            this.lbl_genre2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_duration2
-            // 
-            this.lbl_duration2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_duration2.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration2.Location = new System.Drawing.Point(281, 451);
-            this.lbl_duration2.Name = "lbl_duration2";
-            this.lbl_duration2.Size = new System.Drawing.Size(222, 22);
-            this.lbl_duration2.TabIndex = 6;
-            this.lbl_duration2.Text = "Duration";
-            this.lbl_duration2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_title2
-            // 
-            this.lbl_title2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title2.ForeColor = System.Drawing.Color.White;
-            this.lbl_title2.Location = new System.Drawing.Point(281, 409);
-            this.lbl_title2.Name = "lbl_title2";
-            this.lbl_title2.Size = new System.Drawing.Size(222, 40);
-            this.lbl_title2.TabIndex = 7;
-            this.lbl_title2.Text = "Title";
-            this.lbl_title2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_getTickets1.BackColor = System.Drawing.Color.Transparent;
+            this.btn_getTickets1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_getTickets1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_getTickets1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_getTickets1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_getTickets1.ForeColor = System.Drawing.Color.White;
+            this.btn_getTickets1.Location = new System.Drawing.Point(54, 502);
+            this.btn_getTickets1.Name = "btn_getTickets1";
+            this.btn_getTickets1.Size = new System.Drawing.Size(180, 42);
+            this.btn_getTickets1.TabIndex = 11;
+            this.btn_getTickets1.Text = "Get Tickets";
+            this.btn_getTickets1.UseVisualStyleBackColor = false;
+            this.btn_getTickets1.MouseEnter += new System.EventHandler(this.btn_getTickets1_MouseEnter_1);
+            this.btn_getTickets1.MouseLeave += new System.EventHandler(this.btn_getTickets1_MouseLeave_1);
             // 
             // btn_getTickets3
             // 
@@ -392,6 +317,23 @@
             this.btn_getTickets3.MouseEnter += new System.EventHandler(this.btn_getTickets3_MouseEnter_1);
             this.btn_getTickets3.MouseLeave += new System.EventHandler(this.btn_getTickets3_MouseLeave_1);
             // 
+            // btn_getTickets2
+            // 
+            this.btn_getTickets2.BackColor = System.Drawing.Color.Transparent;
+            this.btn_getTickets2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_getTickets2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_getTickets2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_getTickets2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_getTickets2.ForeColor = System.Drawing.Color.White;
+            this.btn_getTickets2.Location = new System.Drawing.Point(315, 503);
+            this.btn_getTickets2.Name = "btn_getTickets2";
+            this.btn_getTickets2.Size = new System.Drawing.Size(174, 42);
+            this.btn_getTickets2.TabIndex = 11;
+            this.btn_getTickets2.Text = "Get Tickets";
+            this.btn_getTickets2.UseVisualStyleBackColor = false;
+            this.btn_getTickets2.MouseEnter += new System.EventHandler(this.btn_getTickets2_MouseEnter_1);
+            this.btn_getTickets2.MouseLeave += new System.EventHandler(this.btn_getTickets2_MouseLeave_1);
+            // 
             // lbl_genre3
             // 
             this.lbl_genre3.BackColor = System.Drawing.Color.Transparent;
@@ -403,6 +345,28 @@
             this.lbl_genre3.TabIndex = 8;
             this.lbl_genre3.Text = "Genre";
             this.lbl_genre3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_title1
+            // 
+            this.lbl_title1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title1.ForeColor = System.Drawing.Color.White;
+            this.lbl_title1.Location = new System.Drawing.Point(32, 409);
+            this.lbl_title1.Name = "lbl_title1";
+            this.lbl_title1.Size = new System.Drawing.Size(222, 40);
+            this.lbl_title1.TabIndex = 7;
+            this.lbl_title1.Text = "Title";
+            this.lbl_title1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pb_dbMovieDisplay3
+            // 
+            this.pb_dbMovieDisplay3.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
+            this.pb_dbMovieDisplay3.Location = new System.Drawing.Point(530, 78);
+            this.pb_dbMovieDisplay3.Name = "pb_dbMovieDisplay3";
+            this.pb_dbMovieDisplay3.Size = new System.Drawing.Size(222, 328);
+            this.pb_dbMovieDisplay3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_dbMovieDisplay3.TabIndex = 16;
+            this.pb_dbMovieDisplay3.TabStop = false;
             // 
             // lbl_duration3
             // 
@@ -416,6 +380,18 @@
             this.lbl_duration3.Text = "Duration";
             this.lbl_duration3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_genre2
+            // 
+            this.lbl_genre2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_genre2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre2.ForeColor = System.Drawing.Color.White;
+            this.lbl_genre2.Location = new System.Drawing.Point(281, 473);
+            this.lbl_genre2.Name = "lbl_genre2";
+            this.lbl_genre2.Size = new System.Drawing.Size(222, 26);
+            this.lbl_genre2.TabIndex = 8;
+            this.lbl_genre2.Text = "Genre";
+            this.lbl_genre2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbl_title3
             // 
             this.lbl_title3.BackColor = System.Drawing.Color.Transparent;
@@ -427,6 +403,45 @@
             this.lbl_title3.TabIndex = 7;
             this.lbl_title3.Text = "Title";
             this.lbl_title3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_duration2
+            // 
+            this.lbl_duration2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_duration2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration2.ForeColor = System.Drawing.Color.White;
+            this.lbl_duration2.Location = new System.Drawing.Point(281, 451);
+            this.lbl_duration2.Name = "lbl_duration2";
+            this.lbl_duration2.Size = new System.Drawing.Size(222, 22);
+            this.lbl_duration2.TabIndex = 6;
+            this.lbl_duration2.Text = "Duration";
+            this.lbl_duration2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_viewAll
+            // 
+            this.lbl_viewAll.AutoSize = true;
+            this.lbl_viewAll.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_viewAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_viewAll.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_viewAll.ForeColor = System.Drawing.Color.White;
+            this.lbl_viewAll.Location = new System.Drawing.Point(691, 31);
+            this.lbl_viewAll.Name = "lbl_viewAll";
+            this.lbl_viewAll.Size = new System.Drawing.Size(61, 16);
+            this.lbl_viewAll.TabIndex = 17;
+            this.lbl_viewAll.Text = "View All";
+            this.lbl_viewAll.MouseEnter += new System.EventHandler(this.lbl_viewAll_MouseEnter);
+            this.lbl_viewAll.MouseLeave += new System.EventHandler(this.lbl_viewAll_MouseLeave);
+            // 
+            // lbl_title2
+            // 
+            this.lbl_title2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title2.ForeColor = System.Drawing.Color.White;
+            this.lbl_title2.Location = new System.Drawing.Point(281, 409);
+            this.lbl_title2.Name = "lbl_title2";
+            this.lbl_title2.Size = new System.Drawing.Size(222, 40);
+            this.lbl_title2.TabIndex = 7;
+            this.lbl_title2.Text = "Title";
+            this.lbl_title2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_genre1
             // 
@@ -452,17 +467,25 @@
             this.lbl_duration1.Text = "Duration";
             this.lbl_duration1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_title1
+            // pb_dbMovieDisplay2
             // 
-            this.lbl_title1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title1.ForeColor = System.Drawing.Color.White;
-            this.lbl_title1.Location = new System.Drawing.Point(32, 409);
-            this.lbl_title1.Name = "lbl_title1";
-            this.lbl_title1.Size = new System.Drawing.Size(222, 40);
-            this.lbl_title1.TabIndex = 7;
-            this.lbl_title1.Text = "Title";
-            this.lbl_title1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pb_dbMovieDisplay2.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
+            this.pb_dbMovieDisplay2.Location = new System.Drawing.Point(284, 78);
+            this.pb_dbMovieDisplay2.Name = "pb_dbMovieDisplay2";
+            this.pb_dbMovieDisplay2.Size = new System.Drawing.Size(222, 328);
+            this.pb_dbMovieDisplay2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_dbMovieDisplay2.TabIndex = 15;
+            this.pb_dbMovieDisplay2.TabStop = false;
+            // 
+            // pb_dbMovieDisplay1
+            // 
+            this.pb_dbMovieDisplay1.Image = global::Cineverse.Properties.Resources.PosterPlaceholder1;
+            this.pb_dbMovieDisplay1.Location = new System.Drawing.Point(32, 78);
+            this.pb_dbMovieDisplay1.Name = "pb_dbMovieDisplay1";
+            this.pb_dbMovieDisplay1.Size = new System.Drawing.Size(222, 328);
+            this.pb_dbMovieDisplay1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_dbMovieDisplay1.TabIndex = 14;
+            this.pb_dbMovieDisplay1.TabStop = false;
             // 
             // label2
             // 
@@ -475,23 +498,6 @@
             this.label2.Size = new System.Drawing.Size(325, 35);
             this.label2.TabIndex = 2;
             this.label2.Text = "SCHEDULED MOVIES";
-            // 
-            // btn_getTickets1
-            // 
-            this.btn_getTickets1.BackColor = System.Drawing.Color.Transparent;
-            this.btn_getTickets1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_getTickets1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_getTickets1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_getTickets1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_getTickets1.ForeColor = System.Drawing.Color.White;
-            this.btn_getTickets1.Location = new System.Drawing.Point(54, 502);
-            this.btn_getTickets1.Name = "btn_getTickets1";
-            this.btn_getTickets1.Size = new System.Drawing.Size(180, 42);
-            this.btn_getTickets1.TabIndex = 11;
-            this.btn_getTickets1.Text = "Get Tickets";
-            this.btn_getTickets1.UseVisualStyleBackColor = false;
-            this.btn_getTickets1.MouseEnter += new System.EventHandler(this.btn_getTickets1_MouseEnter_1);
-            this.btn_getTickets1.MouseLeave += new System.EventHandler(this.btn_getTickets1_MouseLeave_1);
             // 
             // DashboardSection
             // 
@@ -516,9 +522,9 @@
             this.panel9.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_dbMovieDisplay3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_dbMovieDisplay2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_dbMovieDisplay1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,9 +548,9 @@
         private System.Windows.Forms.Label lbl_todaysBooking;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_dbMovieDisplay3;
+        private System.Windows.Forms.PictureBox pb_dbMovieDisplay2;
+        private System.Windows.Forms.PictureBox pb_dbMovieDisplay1;
         private System.Windows.Forms.Button btn_getTickets2;
         private System.Windows.Forms.Label lbl_genre2;
         private System.Windows.Forms.Label lbl_duration2;
