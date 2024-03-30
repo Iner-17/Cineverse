@@ -90,7 +90,6 @@
             this.lbl_total1.Name = "lbl_total1";
             this.lbl_total1.Size = new System.Drawing.Size(81, 19);
             this.lbl_total1.TabIndex = 30;
-            this.lbl_total1.Text = "P1350";
             this.lbl_total1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
@@ -120,7 +119,6 @@
             this.lbl_tcktQuantity.Name = "lbl_tcktQuantity";
             this.lbl_tcktQuantity.Size = new System.Drawing.Size(77, 19);
             this.lbl_tcktQuantity.TabIndex = 25;
-            this.lbl_tcktQuantity.Text = "3";
             this.lbl_tcktQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_tcktPrice
@@ -131,7 +129,6 @@
             this.lbl_tcktPrice.Name = "lbl_tcktPrice";
             this.lbl_tcktPrice.Size = new System.Drawing.Size(81, 19);
             this.lbl_tcktPrice.TabIndex = 24;
-            this.lbl_tcktPrice.Text = "P450";
             this.lbl_tcktPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
