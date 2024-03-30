@@ -409,25 +409,23 @@
             // 
             // lbl_movieDuration
             // 
-            this.lbl_movieDuration.AutoSize = true;
             this.lbl_movieDuration.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_movieDuration.ForeColor = System.Drawing.Color.White;
-            this.lbl_movieDuration.Location = new System.Drawing.Point(195, 249);
+            this.lbl_movieDuration.Location = new System.Drawing.Point(199, 249);
             this.lbl_movieDuration.Name = "lbl_movieDuration";
-            this.lbl_movieDuration.Size = new System.Drawing.Size(78, 19);
+            this.lbl_movieDuration.Size = new System.Drawing.Size(87, 19);
             this.lbl_movieDuration.TabIndex = 16;
-            this.lbl_movieDuration.Text = "125 mins.";
+            this.lbl_movieDuration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_moviePrice
             // 
-            this.lbl_moviePrice.AutoSize = true;
             this.lbl_moviePrice.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_moviePrice.ForeColor = System.Drawing.Color.White;
-            this.lbl_moviePrice.Location = new System.Drawing.Point(12, 249);
+            this.lbl_moviePrice.Location = new System.Drawing.Point(16, 249);
             this.lbl_moviePrice.Name = "lbl_moviePrice";
-            this.lbl_moviePrice.Size = new System.Drawing.Size(71, 19);
+            this.lbl_moviePrice.Size = new System.Drawing.Size(111, 19);
             this.lbl_moviePrice.TabIndex = 15;
-            this.lbl_moviePrice.Text = "₱350.00";
+            this.lbl_moviePrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
