@@ -356,6 +356,5 @@ namespace Cineverse
             passDataToPaymentForm();
 
         }
-
     }
 }
