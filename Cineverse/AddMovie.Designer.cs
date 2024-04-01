@@ -53,6 +53,10 @@
             this.dtp_time = new System.Windows.Forms.DateTimePicker();
             this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.btn_saveMovie = new System.Windows.Forms.Button();
+            this.txt_Rating = new System.Windows.Forms.TextBox();
+            this.Ratings = new System.Windows.Forms.Label();
+            this.lbl_cinemaNum = new System.Windows.Forms.Label();
+            this.cbo_cinemaNum = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,7 +164,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(61, 211);
+            this.label6.Location = new System.Drawing.Point(59, 294);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(182, 19);
             this.label6.TabIndex = 15;
@@ -171,7 +175,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(426, 211);
+            this.label7.Location = new System.Drawing.Point(424, 294);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(184, 19);
             this.label7.TabIndex = 16;
@@ -184,7 +188,7 @@
             this.btn_addDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addDate.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addDate.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_addDate.Location = new System.Drawing.Point(259, 244);
+            this.btn_addDate.Location = new System.Drawing.Point(257, 327);
             this.btn_addDate.Name = "btn_addDate";
             this.btn_addDate.Size = new System.Drawing.Size(73, 27);
             this.btn_addDate.TabIndex = 19;
@@ -201,7 +205,7 @@
             this.btn_addTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addTime.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addTime.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_addTime.Location = new System.Drawing.Point(594, 245);
+            this.btn_addTime.Location = new System.Drawing.Point(592, 328);
             this.btn_addTime.Name = "btn_addTime";
             this.btn_addTime.Size = new System.Drawing.Size(73, 27);
             this.btn_addTime.TabIndex = 20;
@@ -231,7 +235,7 @@
             this.cmb_datesAdded.BackColor = System.Drawing.SystemColors.Window;
             this.cmb_datesAdded.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_datesAdded.FormattingEnabled = true;
-            this.cmb_datesAdded.Location = new System.Drawing.Point(66, 353);
+            this.cmb_datesAdded.Location = new System.Drawing.Point(64, 436);
             this.cmb_datesAdded.Name = "cmb_datesAdded";
             this.cmb_datesAdded.Size = new System.Drawing.Size(269, 27);
             this.cmb_datesAdded.TabIndex = 23;
@@ -240,7 +244,7 @@
             // 
             this.cmb_timeAdded.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_timeAdded.FormattingEnabled = true;
-            this.cmb_timeAdded.Location = new System.Drawing.Point(430, 353);
+            this.cmb_timeAdded.Location = new System.Drawing.Point(428, 436);
             this.cmb_timeAdded.Name = "cmb_timeAdded";
             this.cmb_timeAdded.Size = new System.Drawing.Size(237, 27);
             this.cmb_timeAdded.TabIndex = 24;
@@ -250,7 +254,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(62, 321);
+            this.label8.Location = new System.Drawing.Point(60, 404);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 19);
             this.label8.TabIndex = 25;
@@ -261,7 +265,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(426, 321);
+            this.label9.Location = new System.Drawing.Point(424, 404);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 19);
             this.label9.TabIndex = 26;
@@ -313,7 +317,6 @@
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 4;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
-           
             // 
             // dtp_time
             // 
@@ -321,7 +324,7 @@
             this.dtp_time.CustomFormat = "HH:mm";
             this.dtp_time.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_time.Location = new System.Drawing.Point(429, 243);
+            this.dtp_time.Location = new System.Drawing.Point(427, 326);
             this.dtp_time.MaximumSize = new System.Drawing.Size(150, 30);
             this.dtp_time.MinimumSize = new System.Drawing.Size(150, 30);
             this.dtp_time.Name = "dtp_time";
@@ -339,7 +342,7 @@
             this.dtp_date.CustomFormat = "MMM dd, yyy";
             this.dtp_date.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_date.Location = new System.Drawing.Point(63, 242);
+            this.dtp_date.Location = new System.Drawing.Point(61, 325);
             this.dtp_date.MaximumSize = new System.Drawing.Size(180, 30);
             this.dtp_date.MinimumSize = new System.Drawing.Size(180, 30);
             this.dtp_date.Name = "dtp_date";
@@ -362,12 +365,65 @@
             this.btn_saveMovie.UseVisualStyleBackColor = false;
             this.btn_saveMovie.Click += new System.EventHandler(this.btn_saveMovie_Click);
             // 
+            // txt_Rating
+            // 
+            this.txt_Rating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_Rating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Rating.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Rating.ForeColor = System.Drawing.Color.White;
+            this.txt_Rating.Location = new System.Drawing.Point(63, 228);
+            this.txt_Rating.Name = "txt_Rating";
+            this.txt_Rating.Size = new System.Drawing.Size(145, 31);
+            this.txt_Rating.TabIndex = 31;
+            // 
+            // Ratings
+            // 
+            this.Ratings.AutoSize = true;
+            this.Ratings.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ratings.ForeColor = System.Drawing.Color.White;
+            this.Ratings.Location = new System.Drawing.Point(59, 199);
+            this.Ratings.Name = "Ratings";
+            this.Ratings.Size = new System.Drawing.Size(117, 19);
+            this.Ratings.TabIndex = 30;
+            this.Ratings.Text = "Movie Rating";
+            // 
+            // lbl_cinemaNum
+            // 
+            this.lbl_cinemaNum.AutoSize = true;
+            this.lbl_cinemaNum.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cinemaNum.ForeColor = System.Drawing.Color.White;
+            this.lbl_cinemaNum.Location = new System.Drawing.Point(383, 199);
+            this.lbl_cinemaNum.Name = "lbl_cinemaNum";
+            this.lbl_cinemaNum.Size = new System.Drawing.Size(88, 19);
+            this.lbl_cinemaNum.TabIndex = 32;
+            this.lbl_cinemaNum.Text = "Cinema #";
+            // 
+            // cbo_cinemaNum
+            // 
+            this.cbo_cinemaNum.BackColor = System.Drawing.SystemColors.MenuText;
+            this.cbo_cinemaNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_cinemaNum.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_cinemaNum.ForeColor = System.Drawing.SystemColors.Menu;
+            this.cbo_cinemaNum.FormattingEnabled = true;
+            this.cbo_cinemaNum.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbo_cinemaNum.Location = new System.Drawing.Point(387, 232);
+            this.cbo_cinemaNum.Name = "cbo_cinemaNum";
+            this.cbo_cinemaNum.Size = new System.Drawing.Size(100, 27);
+            this.cbo_cinemaNum.TabIndex = 34;
+            // 
             // AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(962, 599);
+            this.Controls.Add(this.cbo_cinemaNum);
+            this.Controls.Add(this.lbl_cinemaNum);
+            this.Controls.Add(this.txt_Rating);
+            this.Controls.Add(this.Ratings);
             this.Controls.Add(this.btn_saveMovie);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtp_time);
@@ -430,5 +486,9 @@
         private System.Windows.Forms.DateTimePicker dtp_time;
         private System.Windows.Forms.DateTimePicker dtp_date;
         private System.Windows.Forms.Button btn_saveMovie;
+        private System.Windows.Forms.TextBox txt_Rating;
+        public System.Windows.Forms.Label Ratings;
+        public System.Windows.Forms.Label lbl_cinemaNum;
+        private System.Windows.Forms.ComboBox cbo_cinemaNum;
     }
 }
