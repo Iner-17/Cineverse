@@ -188,7 +188,7 @@
             this.btn_addDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addDate.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addDate.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_addDate.Location = new System.Drawing.Point(257, 327);
+            this.btn_addDate.Location = new System.Drawing.Point(291, 325);
             this.btn_addDate.Name = "btn_addDate";
             this.btn_addDate.Size = new System.Drawing.Size(73, 27);
             this.btn_addDate.TabIndex = 19;
@@ -322,7 +322,7 @@
             // 
             this.dtp_time.Checked = false;
             this.dtp_time.CustomFormat = "HH:mm";
-            this.dtp_time.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_time.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_time.Location = new System.Drawing.Point(427, 326);
             this.dtp_time.MaximumSize = new System.Drawing.Size(150, 30);
@@ -339,16 +339,16 @@
             this.dtp_date.CalendarTitleBackColor = System.Drawing.Color.Black;
             this.dtp_date.CalendarTitleForeColor = System.Drawing.Color.Transparent;
             this.dtp_date.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
-            this.dtp_date.CustomFormat = "MMM dd, yyy";
-            this.dtp_date.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_date.CustomFormat = "MMMM  dd,  yyy";
+            this.dtp_date.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_date.Location = new System.Drawing.Point(61, 325);
-            this.dtp_date.MaximumSize = new System.Drawing.Size(180, 30);
+            this.dtp_date.MaximumSize = new System.Drawing.Size(250, 50);
             this.dtp_date.MinimumSize = new System.Drawing.Size(180, 30);
             this.dtp_date.Name = "dtp_date";
-            this.dtp_date.Size = new System.Drawing.Size(180, 30);
+            this.dtp_date.Size = new System.Drawing.Size(224, 30);
             this.dtp_date.TabIndex = 17;
-            this.dtp_date.Value = new System.DateTime(2024, 3, 16, 0, 0, 0, 0);
+            this.dtp_date.Value = new System.DateTime(2024, 3, 23, 0, 0, 0, 0);
             // 
             // btn_saveMovie
             // 
