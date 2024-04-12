@@ -16,7 +16,7 @@ namespace Cineverse
             MySqlConnection conn = new MySqlConnection(connectionString);
             return conn;
 
-            //test comment
+            
         }
     }
 }
