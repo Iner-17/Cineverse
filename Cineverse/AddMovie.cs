@@ -20,11 +20,6 @@ namespace Cineverse
             InitializeComponent();
         }
 
-        private void AddMovie_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_addDate_Click(object sender, EventArgs e)
         {
             cmb_datesAdded.Items.Add(dtp_date.Text);
@@ -171,9 +166,5 @@ namespace Cineverse
             btn_addTime.ForeColor = Color.White;
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
