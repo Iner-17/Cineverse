@@ -13,7 +13,6 @@ namespace Cineverse
 {
     public partial class PaymentForm : Form
     {
-
         public PaymentForm()
         {
             InitializeComponent();

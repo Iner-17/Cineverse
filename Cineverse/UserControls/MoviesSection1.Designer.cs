@@ -154,7 +154,7 @@
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
             this.lbl_genre1.Location = new System.Drawing.Point(211, 290);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre1.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre1.TabIndex = 20;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -166,7 +166,7 @@
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
             this.lbl_duration1.Location = new System.Drawing.Point(211, 270);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration1.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration1.TabIndex = 18;
             this.lbl_duration1.Text = "Duration";
             // 
@@ -196,6 +196,7 @@
             this.btn_gt2.TabIndex = 26;
             this.btn_gt2.Text = "Get Tickets";
             this.btn_gt2.UseVisualStyleBackColor = false;
+            this.btn_gt2.Click += new System.EventHandler(this.btn_gt2_Click);
             this.btn_gt2.MouseEnter += new System.EventHandler(this.btn_gt2_MouseEnter);
             this.btn_gt2.MouseLeave += new System.EventHandler(this.btn_gt2_MouseLeave);
             // 
@@ -207,7 +208,7 @@
             this.lbl_genre2.ForeColor = System.Drawing.Color.White;
             this.lbl_genre2.Location = new System.Drawing.Point(551, 290);
             this.lbl_genre2.Name = "lbl_genre2";
-            this.lbl_genre2.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre2.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre2.TabIndex = 25;
             this.lbl_genre2.Text = "Genre";
             // 
@@ -219,7 +220,7 @@
             this.lbl_duration2.ForeColor = System.Drawing.Color.White;
             this.lbl_duration2.Location = new System.Drawing.Point(551, 270);
             this.lbl_duration2.Name = "lbl_duration2";
-            this.lbl_duration2.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration2.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration2.TabIndex = 23;
             this.lbl_duration2.Text = "Duration";
             // 
@@ -249,6 +250,7 @@
             this.btn_gt3.TabIndex = 31;
             this.btn_gt3.Text = "Get Tickets";
             this.btn_gt3.UseVisualStyleBackColor = false;
+            this.btn_gt3.Click += new System.EventHandler(this.btn_gt3_Click);
             this.btn_gt3.MouseEnter += new System.EventHandler(this.btn_gt3_MouseEnter);
             this.btn_gt3.MouseLeave += new System.EventHandler(this.btn_gt3_MouseLeave);
             // 
@@ -260,7 +262,7 @@
             this.lbl_genre3.ForeColor = System.Drawing.Color.White;
             this.lbl_genre3.Location = new System.Drawing.Point(897, 291);
             this.lbl_genre3.Name = "lbl_genre3";
-            this.lbl_genre3.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre3.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre3.TabIndex = 30;
             this.lbl_genre3.Text = "Genre";
             // 
@@ -272,7 +274,7 @@
             this.lbl_duration3.ForeColor = System.Drawing.Color.White;
             this.lbl_duration3.Location = new System.Drawing.Point(897, 270);
             this.lbl_duration3.Name = "lbl_duration3";
-            this.lbl_duration3.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration3.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration3.TabIndex = 28;
             this.lbl_duration3.Text = "Duration";
             // 
@@ -302,6 +304,7 @@
             this.btn_gt6.TabIndex = 46;
             this.btn_gt6.Text = "Get Tickets";
             this.btn_gt6.UseVisualStyleBackColor = false;
+            this.btn_gt6.Click += new System.EventHandler(this.btn_gt6_Click);
             this.btn_gt6.MouseEnter += new System.EventHandler(this.btn_gt6_MouseEnter);
             this.btn_gt6.MouseLeave += new System.EventHandler(this.btn_gt6_MouseLeave);
             // 
@@ -313,7 +316,7 @@
             this.lbl_genre6.ForeColor = System.Drawing.Color.White;
             this.lbl_genre6.Location = new System.Drawing.Point(897, 616);
             this.lbl_genre6.Name = "lbl_genre6";
-            this.lbl_genre6.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre6.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre6.TabIndex = 45;
             this.lbl_genre6.Text = "Genre";
             // 
@@ -325,7 +328,7 @@
             this.lbl_duration6.ForeColor = System.Drawing.Color.White;
             this.lbl_duration6.Location = new System.Drawing.Point(897, 596);
             this.lbl_duration6.Name = "lbl_duration6";
-            this.lbl_duration6.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration6.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration6.TabIndex = 43;
             this.lbl_duration6.Text = "Duration";
             // 
@@ -355,6 +358,7 @@
             this.btn_gt5.TabIndex = 41;
             this.btn_gt5.Text = "Get Tickets";
             this.btn_gt5.UseVisualStyleBackColor = false;
+            this.btn_gt5.Click += new System.EventHandler(this.btn_gt5_Click);
             this.btn_gt5.MouseEnter += new System.EventHandler(this.btn_gt5_MouseEnter);
             this.btn_gt5.MouseLeave += new System.EventHandler(this.btn_gt5_MouseLeave);
             // 
@@ -366,7 +370,7 @@
             this.lbl_genre5.ForeColor = System.Drawing.Color.White;
             this.lbl_genre5.Location = new System.Drawing.Point(551, 616);
             this.lbl_genre5.Name = "lbl_genre5";
-            this.lbl_genre5.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre5.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre5.TabIndex = 40;
             this.lbl_genre5.Text = "Genre";
             // 
@@ -378,7 +382,7 @@
             this.lbl_duration5.ForeColor = System.Drawing.Color.White;
             this.lbl_duration5.Location = new System.Drawing.Point(551, 596);
             this.lbl_duration5.Name = "lbl_duration5";
-            this.lbl_duration5.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration5.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration5.TabIndex = 38;
             this.lbl_duration5.Text = "Duration";
             // 
@@ -408,6 +412,7 @@
             this.btn_gt4.TabIndex = 36;
             this.btn_gt4.Text = "Get Tickets";
             this.btn_gt4.UseVisualStyleBackColor = false;
+            this.btn_gt4.Click += new System.EventHandler(this.btn_gt4_Click);
             this.btn_gt4.MouseEnter += new System.EventHandler(this.btn_gt4_MouseEnter);
             this.btn_gt4.MouseLeave += new System.EventHandler(this.btn_gt4_MouseLeave);
             // 
@@ -419,7 +424,7 @@
             this.lbl_genre4.ForeColor = System.Drawing.Color.White;
             this.lbl_genre4.Location = new System.Drawing.Point(211, 616);
             this.lbl_genre4.Name = "lbl_genre4";
-            this.lbl_genre4.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre4.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre4.TabIndex = 35;
             this.lbl_genre4.Text = "Genre";
             // 
@@ -431,7 +436,7 @@
             this.lbl_duration4.ForeColor = System.Drawing.Color.White;
             this.lbl_duration4.Location = new System.Drawing.Point(211, 596);
             this.lbl_duration4.Name = "lbl_duration4";
-            this.lbl_duration4.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration4.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration4.TabIndex = 33;
             this.lbl_duration4.Text = "Duration";
             // 
@@ -461,6 +466,7 @@
             this.btn_gt9.TabIndex = 61;
             this.btn_gt9.Text = "Get Tickets";
             this.btn_gt9.UseVisualStyleBackColor = false;
+            this.btn_gt9.Click += new System.EventHandler(this.btn_gt9_Click);
             this.btn_gt9.MouseEnter += new System.EventHandler(this.btn_gt9_MouseEnter);
             this.btn_gt9.MouseLeave += new System.EventHandler(this.btn_gt9_MouseLeave);
             // 
@@ -472,7 +478,7 @@
             this.lbl_genre9.ForeColor = System.Drawing.Color.White;
             this.lbl_genre9.Location = new System.Drawing.Point(897, 931);
             this.lbl_genre9.Name = "lbl_genre9";
-            this.lbl_genre9.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre9.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre9.TabIndex = 60;
             this.lbl_genre9.Text = "Genre";
             // 
@@ -484,7 +490,7 @@
             this.lbl_duration9.ForeColor = System.Drawing.Color.White;
             this.lbl_duration9.Location = new System.Drawing.Point(897, 910);
             this.lbl_duration9.Name = "lbl_duration9";
-            this.lbl_duration9.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration9.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration9.TabIndex = 58;
             this.lbl_duration9.Text = "Duration";
             // 
@@ -514,6 +520,7 @@
             this.btn_gt8.TabIndex = 56;
             this.btn_gt8.Text = "Get Tickets";
             this.btn_gt8.UseVisualStyleBackColor = false;
+            this.btn_gt8.Click += new System.EventHandler(this.btn_gt8_Click);
             this.btn_gt8.MouseEnter += new System.EventHandler(this.btn_gt8_MouseEnter);
             this.btn_gt8.MouseLeave += new System.EventHandler(this.btn_gt8_MouseLeave);
             // 
@@ -525,7 +532,7 @@
             this.lbl_genre8.ForeColor = System.Drawing.Color.White;
             this.lbl_genre8.Location = new System.Drawing.Point(551, 931);
             this.lbl_genre8.Name = "lbl_genre8";
-            this.lbl_genre8.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre8.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre8.TabIndex = 55;
             this.lbl_genre8.Text = "Genre";
             // 
@@ -537,7 +544,7 @@
             this.lbl_duration8.ForeColor = System.Drawing.Color.White;
             this.lbl_duration8.Location = new System.Drawing.Point(551, 910);
             this.lbl_duration8.Name = "lbl_duration8";
-            this.lbl_duration8.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration8.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration8.TabIndex = 53;
             this.lbl_duration8.Text = "Duration";
             // 
@@ -567,6 +574,7 @@
             this.btn_gt7.TabIndex = 51;
             this.btn_gt7.Text = "Get Tickets";
             this.btn_gt7.UseVisualStyleBackColor = false;
+            this.btn_gt7.Click += new System.EventHandler(this.btn_gt7_Click);
             this.btn_gt7.MouseEnter += new System.EventHandler(this.btn_gt7_MouseEnter);
             this.btn_gt7.MouseLeave += new System.EventHandler(this.btn_gt7_MouseLeave);
             // 
@@ -578,7 +586,7 @@
             this.lbl_genre7.ForeColor = System.Drawing.Color.White;
             this.lbl_genre7.Location = new System.Drawing.Point(211, 931);
             this.lbl_genre7.Name = "lbl_genre7";
-            this.lbl_genre7.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre7.Size = new System.Drawing.Size(48, 18);
             this.lbl_genre7.TabIndex = 50;
             this.lbl_genre7.Text = "Genre";
             // 
@@ -590,7 +598,7 @@
             this.lbl_duration7.ForeColor = System.Drawing.Color.White;
             this.lbl_duration7.Location = new System.Drawing.Point(211, 910);
             this.lbl_duration7.Name = "lbl_duration7";
-            this.lbl_duration7.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration7.Size = new System.Drawing.Size(65, 18);
             this.lbl_duration7.TabIndex = 48;
             this.lbl_duration7.Text = "Duration";
             // 
@@ -908,7 +916,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(865, 568);
+            this.Size = new System.Drawing.Size(831, 534);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();

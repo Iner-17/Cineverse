@@ -14,6 +14,7 @@ namespace Cineverse
     public partial class Seats : Form
     {
         private string username;
+        public string TitleFromMovieSection { get; set; }
         Color selectedColor = Color.FromArgb(225, 48, 48);
         Color availableColor = Color.DimGray;
         Color bookedColor = Color.FromArgb(31, 178, 198);
@@ -60,7 +61,6 @@ namespace Cineverse
 
         private void Seats_Load(object sender, EventArgs e)
         {
-
             MySqlConnection conn = DBConnection.getConnection();
             //Set movie lists
             try
@@ -83,7 +83,14 @@ namespace Cineverse
             {
                 MessageBox.Show("An error occured.");
             }
-            finally { conn.Close(); }
+            finally 
+            { 
+                conn.Close();
+                string titleFromMovieSection = TitleFromMovieSection;
+                cbo_titleLists.Text = titleFromMovieSection;
+            }
+            
+
         }
 
         private void cbo_titleLists_SelectedIndexChanged(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace Cineverse
     public partial class MoviesSection1 : UserControl
     {
         private string username;
-
+        public string Title { get; set; }
         public MoviesSection1()
         {
             InitializeComponent();
@@ -252,11 +252,175 @@ namespace Cineverse
         
         private void btn_gt1_Click(object sender, EventArgs e)
         {
-            Seats seatsForm = new Seats(username);
-            seatsForm.Show();
+            if (lbl_title1.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title1.Text;
 
-            ((Form)this.TopLevelControl).Hide();
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
 
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+
+        }
+
+        private void btn_gt2_Click(object sender, EventArgs e)
+        {
+
+            if (lbl_title2.Text.Equals("Title"))
+            {
+                return;
+            } else
+            {
+                Title = lbl_title2.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+            
+        }
+
+        private void btn_gt3_Click(object sender, EventArgs e)
+        {
+            if (lbl_title3.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title3.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
+
+        private void btn_gt4_Click(object sender, EventArgs e)
+        {
+            if (lbl_title4.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title4.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
+
+        private void btn_gt5_Click(object sender, EventArgs e)
+        {
+            if (lbl_title5.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title5.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
+
+        private void btn_gt6_Click(object sender, EventArgs e)
+        {
+            if (lbl_title6.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title6.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
+
+        private void btn_gt7_Click(object sender, EventArgs e)
+        {
+            if (lbl_title7.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title7.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
+
+        private void btn_gt8_Click(object sender, EventArgs e)
+        {
+            if (lbl_title8.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title8.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
+
+        private void btn_gt9_Click(object sender, EventArgs e)
+        {
+            if (lbl_title9.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title9.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
         }
     }
 }
