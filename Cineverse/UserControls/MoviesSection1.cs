@@ -25,7 +25,6 @@ namespace Cineverse
         private void MoviesSection1_Load(object sender, EventArgs e)
         {
             UpdateMovieList();
-
         }
 
         //HoverEffects on buttons
