@@ -34,7 +34,7 @@ namespace Cineverse
             try
             {
                 conn.Open();
-                string getPriceQuery = "SELECT price, photo FROM movies WHERE title=@Title;";
+                string getPriceQuery = "SELECT price, photo, cinema_number FROM movies WHERE title=@Title;";
                 MySqlCommand cmd = new MySqlCommand(getPriceQuery, conn);
                 cmd.Parameters.AddWithValue("Title", lbl_titlePayment.Text);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -50,7 +50,7 @@ namespace Cineverse
                     {
                         MemoryStream ms = new MemoryStream(imgdata);
                         pb_posterSelected.Image = Image.FromStream(ms);
-
+                        lbl_cinemaNo.Text = "Cinema " + reader["cinema_number"].ToString();
                     }
                 }
 
