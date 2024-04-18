@@ -53,11 +53,11 @@
             this.dtp_time = new System.Windows.Forms.DateTimePicker();
             this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.btn_saveMovie = new System.Windows.Forms.Button();
-            this.txt_Rating = new System.Windows.Forms.TextBox();
+            this.txt_rating = new System.Windows.Forms.TextBox();
             this.Ratings = new System.Windows.Forms.Label();
             this.lbl_cinemaNum = new System.Windows.Forms.Label();
             this.cbo_cinemaNum = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_description = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -177,7 +177,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(490, 441);
+            this.label7.Location = new System.Drawing.Point(461, 441);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(184, 19);
             this.label7.TabIndex = 16;
@@ -207,7 +207,7 @@
             this.btn_addTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addTime.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addTime.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_addTime.Location = new System.Drawing.Point(648, 474);
+            this.btn_addTime.Location = new System.Drawing.Point(621, 472);
             this.btn_addTime.Name = "btn_addTime";
             this.btn_addTime.Size = new System.Drawing.Size(73, 27);
             this.btn_addTime.TabIndex = 20;
@@ -326,7 +326,7 @@
             this.dtp_time.CustomFormat = "HH:mm";
             this.dtp_time.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_time.Location = new System.Drawing.Point(494, 473);
+            this.dtp_time.Location = new System.Drawing.Point(465, 472);
             this.dtp_time.MaximumSize = new System.Drawing.Size(150, 30);
             this.dtp_time.MinimumSize = new System.Drawing.Size(150, 30);
             this.dtp_time.Name = "dtp_time";
@@ -367,16 +367,16 @@
             this.btn_saveMovie.UseVisualStyleBackColor = false;
             this.btn_saveMovie.Click += new System.EventHandler(this.btn_saveMovie_Click);
             // 
-            // txt_Rating
+            // txt_rating
             // 
-            this.txt_Rating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.txt_Rating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Rating.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rating.ForeColor = System.Drawing.Color.White;
-            this.txt_Rating.Location = new System.Drawing.Point(101, 387);
-            this.txt_Rating.Name = "txt_Rating";
-            this.txt_Rating.Size = new System.Drawing.Size(145, 31);
-            this.txt_Rating.TabIndex = 31;
+            this.txt_rating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_rating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_rating.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_rating.ForeColor = System.Drawing.Color.White;
+            this.txt_rating.Location = new System.Drawing.Point(101, 387);
+            this.txt_rating.Name = "txt_rating";
+            this.txt_rating.Size = new System.Drawing.Size(145, 31);
+            this.txt_rating.TabIndex = 31;
             // 
             // Ratings
             // 
@@ -394,7 +394,7 @@
             this.lbl_cinemaNum.AutoSize = true;
             this.lbl_cinemaNum.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cinemaNum.ForeColor = System.Drawing.Color.White;
-            this.lbl_cinemaNum.Location = new System.Drawing.Point(491, 358);
+            this.lbl_cinemaNum.Location = new System.Drawing.Point(461, 358);
             this.lbl_cinemaNum.Name = "lbl_cinemaNum";
             this.lbl_cinemaNum.Size = new System.Drawing.Size(88, 19);
             this.lbl_cinemaNum.TabIndex = 32;
@@ -411,22 +411,22 @@
             "1",
             "2",
             "3"});
-            this.cbo_cinemaNum.Location = new System.Drawing.Point(495, 391);
+            this.cbo_cinemaNum.Location = new System.Drawing.Point(465, 392);
             this.cbo_cinemaNum.Name = "cbo_cinemaNum";
             this.cbo_cinemaNum.Size = new System.Drawing.Size(100, 27);
             this.cbo_cinemaNum.TabIndex = 34;
             // 
-            // textBox1
+            // txt_description
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(101, 228);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(620, 105);
-            this.textBox1.TabIndex = 35;
+            this.txt_description.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_description.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_description.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_description.ForeColor = System.Drawing.Color.White;
+            this.txt_description.Location = new System.Drawing.Point(101, 228);
+            this.txt_description.Multiline = true;
+            this.txt_description.Name = "txt_description";
+            this.txt_description.Size = new System.Drawing.Size(620, 105);
+            this.txt_description.TabIndex = 35;
             // 
             // label11
             // 
@@ -446,10 +446,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(1035, 718);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_description);
             this.Controls.Add(this.cbo_cinemaNum);
             this.Controls.Add(this.lbl_cinemaNum);
-            this.Controls.Add(this.txt_Rating);
+            this.Controls.Add(this.txt_rating);
             this.Controls.Add(this.Ratings);
             this.Controls.Add(this.btn_saveMovie);
             this.Controls.Add(this.label10);
@@ -512,11 +512,11 @@
         private System.Windows.Forms.DateTimePicker dtp_time;
         private System.Windows.Forms.DateTimePicker dtp_date;
         private System.Windows.Forms.Button btn_saveMovie;
-        private System.Windows.Forms.TextBox txt_Rating;
+        private System.Windows.Forms.TextBox txt_rating;
         public System.Windows.Forms.Label Ratings;
         public System.Windows.Forms.Label lbl_cinemaNum;
         private System.Windows.Forms.ComboBox cbo_cinemaNum;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_description;
         public System.Windows.Forms.Label label11;
     }
 }

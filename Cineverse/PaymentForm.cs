@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Cineverse
             try
             {
                 conn.Open();
-                string getPriceQuery = "SELECT price FROM movies WHERE title=@Title;";
+                string getPriceQuery = "SELECT price, photo FROM movies WHERE title=@Title;";
                 MySqlCommand cmd = new MySqlCommand(getPriceQuery, conn);
                 cmd.Parameters.AddWithValue("Title", lbl_titlePayment.Text);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -42,7 +43,19 @@ namespace Cineverse
                 {
                     lbl_tcktPrice.Text = "₱ " + reader["price"].ToString();
                     price = Convert.ToInt32(reader["price"]);
+
+                    byte[] imgdata = (byte[])reader["photo"];
+
+                    if (imgdata != null && imgdata.Length > 0)
+                    {
+                        MemoryStream ms = new MemoryStream(imgdata);
+                        pb_posterSelected.Image = Image.FromStream(ms);
+
+                    }
                 }
+
+
+
             }
             catch (Exception ex) 
             {
