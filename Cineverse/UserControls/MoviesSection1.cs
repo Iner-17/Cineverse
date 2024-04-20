@@ -185,7 +185,7 @@ namespace Cineverse
                     {
                         conn.Open();
 
-                        string query = "SELECT title, genre, duration, price, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
+                        string query = "SELECT title, price, genre, duration, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
                         MySqlCommand cmd = new MySqlCommand(query, conn);   
 
                         MySqlDataReader reader = cmd.ExecuteReader();
@@ -195,7 +195,7 @@ namespace Cineverse
                             string title = reader.GetString("title");
                             string duration = reader.GetInt32("duration").ToString();
                             string genre = reader.GetString("genre");
-                            string price = reader.GetString("price");
+                            string price = reader.GetDouble("price").ToString(); ;
                             byte[] imageData = (byte[])reader["photo"];
 
                             if (imageData != null && imageData.Length > 0) {
@@ -210,12 +210,12 @@ namespace Cineverse
 
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;  
-                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "Price: " + price;
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message + "TITE");
+                        MessageBox.Show(ex.Message);
                     }
                     finally { conn.Close(); }
                 }
@@ -422,6 +422,11 @@ namespace Cineverse
 
                 ((Form)this.TopLevelControl).Hide();
             }
+        }
+
+        private void lbl_price1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

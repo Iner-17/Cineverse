@@ -109,11 +109,27 @@ namespace Cineverse
                 MySqlCommand setPricecmd = new MySqlCommand(setPriceQuery, conn);
                 setPricecmd.Parameters.AddWithValue("CurrentTitle", currentTitle);
                 MySqlDataReader getPriceData = setPricecmd.ExecuteReader();
-
-                if(getPriceData.Read())
-                lbl_moviePrice.Text = getPriceData["price"].ToString();
-                lbl_movieDuration.Text = getPriceData["duration"].ToString();
-
+                
+                int hourCounter = 0;
+                int minCounter = 0;
+                if (getPriceData.Read())
+                {
+                    lbl_moviePrice.Text = getPriceData["price"].ToString() + ".00";
+                    int dur = Convert.ToInt32(getPriceData["duration"].ToString());
+                    if (dur > 120)
+                    {
+                        hourCounter += 2;
+                        minCounter = dur - 60;
+                        lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
+                    } else if (dur > 60)
+                    {
+                        hourCounter += 1;
+                        minCounter = dur - 60;
+                        lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
+                    }
+                   
+                    
+                }
                 getPriceData.Close();
             }
             catch (Exception ex)

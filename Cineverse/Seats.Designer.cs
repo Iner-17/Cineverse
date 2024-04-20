@@ -411,9 +411,9 @@
             // 
             this.lbl_movieDuration.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_movieDuration.ForeColor = System.Drawing.Color.White;
-            this.lbl_movieDuration.Location = new System.Drawing.Point(199, 249);
+            this.lbl_movieDuration.Location = new System.Drawing.Point(162, 249);
             this.lbl_movieDuration.Name = "lbl_movieDuration";
-            this.lbl_movieDuration.Size = new System.Drawing.Size(87, 19);
+            this.lbl_movieDuration.Size = new System.Drawing.Size(124, 19);
             this.lbl_movieDuration.TabIndex = 16;
             this.lbl_movieDuration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -432,7 +432,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(195, 227);
+            this.label3.Location = new System.Drawing.Point(162, 227);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 19);
             this.label3.TabIndex = 14;
