@@ -62,6 +62,9 @@
             this.pb_dbMovieDisplay2 = new System.Windows.Forms.PictureBox();
             this.pb_dbMovieDisplay1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -260,6 +263,9 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.btn_getTickets1);
             this.panel7.Controls.Add(this.btn_getTickets3);
             this.panel7.Controls.Add(this.btn_getTickets2);
@@ -281,6 +287,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(785, 571);
             this.panel7.TabIndex = 16;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // btn_getTickets1
             // 
@@ -290,7 +297,7 @@
             this.btn_getTickets1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_getTickets1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_getTickets1.ForeColor = System.Drawing.Color.White;
-            this.btn_getTickets1.Location = new System.Drawing.Point(54, 502);
+            this.btn_getTickets1.Location = new System.Drawing.Point(53, 510);
             this.btn_getTickets1.Name = "btn_getTickets1";
             this.btn_getTickets1.Size = new System.Drawing.Size(180, 42);
             this.btn_getTickets1.TabIndex = 11;
@@ -307,7 +314,7 @@
             this.btn_getTickets3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_getTickets3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_getTickets3.ForeColor = System.Drawing.Color.White;
-            this.btn_getTickets3.Location = new System.Drawing.Point(560, 503);
+            this.btn_getTickets3.Location = new System.Drawing.Point(559, 511);
             this.btn_getTickets3.Name = "btn_getTickets3";
             this.btn_getTickets3.Size = new System.Drawing.Size(174, 42);
             this.btn_getTickets3.TabIndex = 11;
@@ -324,7 +331,7 @@
             this.btn_getTickets2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_getTickets2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_getTickets2.ForeColor = System.Drawing.Color.White;
-            this.btn_getTickets2.Location = new System.Drawing.Point(315, 503);
+            this.btn_getTickets2.Location = new System.Drawing.Point(314, 511);
             this.btn_getTickets2.Name = "btn_getTickets2";
             this.btn_getTickets2.Size = new System.Drawing.Size(174, 42);
             this.btn_getTickets2.TabIndex = 11;
@@ -338,9 +345,9 @@
             this.lbl_genre3.BackColor = System.Drawing.Color.Transparent;
             this.lbl_genre3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre3.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre3.Location = new System.Drawing.Point(530, 473);
+            this.lbl_genre3.Location = new System.Drawing.Point(530, 457);
             this.lbl_genre3.Name = "lbl_genre3";
-            this.lbl_genre3.Size = new System.Drawing.Size(222, 26);
+            this.lbl_genre3.Size = new System.Drawing.Size(222, 24);
             this.lbl_genre3.TabIndex = 8;
             this.lbl_genre3.Text = "Genre";
             this.lbl_genre3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -350,17 +357,17 @@
             this.lbl_title1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title1.ForeColor = System.Drawing.Color.White;
-            this.lbl_title1.Location = new System.Drawing.Point(32, 409);
+            this.lbl_title1.Location = new System.Drawing.Point(32, 400);
             this.lbl_title1.Name = "lbl_title1";
             this.lbl_title1.Size = new System.Drawing.Size(222, 40);
             this.lbl_title1.TabIndex = 7;
             this.lbl_title1.Text = "Title";
-            this.lbl_title1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_title1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pb_dbMovieDisplay3
             // 
             this.pb_dbMovieDisplay3.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
-            this.pb_dbMovieDisplay3.Location = new System.Drawing.Point(530, 78);
+            this.pb_dbMovieDisplay3.Location = new System.Drawing.Point(530, 69);
             this.pb_dbMovieDisplay3.Name = "pb_dbMovieDisplay3";
             this.pb_dbMovieDisplay3.Size = new System.Drawing.Size(222, 328);
             this.pb_dbMovieDisplay3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -372,7 +379,7 @@
             this.lbl_duration3.BackColor = System.Drawing.Color.Transparent;
             this.lbl_duration3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration3.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration3.Location = new System.Drawing.Point(530, 451);
+            this.lbl_duration3.Location = new System.Drawing.Point(530, 440);
             this.lbl_duration3.Name = "lbl_duration3";
             this.lbl_duration3.Size = new System.Drawing.Size(222, 23);
             this.lbl_duration3.TabIndex = 6;
@@ -384,9 +391,9 @@
             this.lbl_genre2.BackColor = System.Drawing.Color.Transparent;
             this.lbl_genre2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre2.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre2.Location = new System.Drawing.Point(281, 473);
+            this.lbl_genre2.Location = new System.Drawing.Point(281, 457);
             this.lbl_genre2.Name = "lbl_genre2";
-            this.lbl_genre2.Size = new System.Drawing.Size(222, 26);
+            this.lbl_genre2.Size = new System.Drawing.Size(222, 24);
             this.lbl_genre2.TabIndex = 8;
             this.lbl_genre2.Text = "Genre";
             this.lbl_genre2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,19 +403,19 @@
             this.lbl_title3.BackColor = System.Drawing.Color.Transparent;
             this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title3.ForeColor = System.Drawing.Color.White;
-            this.lbl_title3.Location = new System.Drawing.Point(527, 409);
+            this.lbl_title3.Location = new System.Drawing.Point(527, 400);
             this.lbl_title3.Name = "lbl_title3";
             this.lbl_title3.Size = new System.Drawing.Size(225, 40);
             this.lbl_title3.TabIndex = 7;
             this.lbl_title3.Text = "Title";
-            this.lbl_title3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_title3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_duration2
             // 
             this.lbl_duration2.BackColor = System.Drawing.Color.Transparent;
             this.lbl_duration2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration2.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration2.Location = new System.Drawing.Point(281, 451);
+            this.lbl_duration2.Location = new System.Drawing.Point(281, 440);
             this.lbl_duration2.Name = "lbl_duration2";
             this.lbl_duration2.Size = new System.Drawing.Size(222, 22);
             this.lbl_duration2.TabIndex = 6;
@@ -435,21 +442,21 @@
             this.lbl_title2.BackColor = System.Drawing.Color.Transparent;
             this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title2.ForeColor = System.Drawing.Color.White;
-            this.lbl_title2.Location = new System.Drawing.Point(281, 409);
+            this.lbl_title2.Location = new System.Drawing.Point(281, 400);
             this.lbl_title2.Name = "lbl_title2";
             this.lbl_title2.Size = new System.Drawing.Size(222, 40);
             this.lbl_title2.TabIndex = 7;
             this.lbl_title2.Text = "Title";
-            this.lbl_title2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_title2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_genre1
             // 
             this.lbl_genre1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_genre1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre1.Location = new System.Drawing.Point(32, 473);
+            this.lbl_genre1.Location = new System.Drawing.Point(32, 457);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(222, 26);
+            this.lbl_genre1.Size = new System.Drawing.Size(222, 24);
             this.lbl_genre1.TabIndex = 8;
             this.lbl_genre1.Text = "Genre";
             this.lbl_genre1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -459,7 +466,7 @@
             this.lbl_duration1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_duration1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration1.Location = new System.Drawing.Point(32, 451);
+            this.lbl_duration1.Location = new System.Drawing.Point(32, 440);
             this.lbl_duration1.Name = "lbl_duration1";
             this.lbl_duration1.Size = new System.Drawing.Size(222, 22);
             this.lbl_duration1.TabIndex = 6;
@@ -469,7 +476,7 @@
             // pb_dbMovieDisplay2
             // 
             this.pb_dbMovieDisplay2.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
-            this.pb_dbMovieDisplay2.Location = new System.Drawing.Point(284, 78);
+            this.pb_dbMovieDisplay2.Location = new System.Drawing.Point(284, 69);
             this.pb_dbMovieDisplay2.Name = "pb_dbMovieDisplay2";
             this.pb_dbMovieDisplay2.Size = new System.Drawing.Size(222, 328);
             this.pb_dbMovieDisplay2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -479,7 +486,7 @@
             // pb_dbMovieDisplay1
             // 
             this.pb_dbMovieDisplay1.Image = global::Cineverse.Properties.Resources.PosterPlaceholder1;
-            this.pb_dbMovieDisplay1.Location = new System.Drawing.Point(32, 78);
+            this.pb_dbMovieDisplay1.Location = new System.Drawing.Point(32, 69);
             this.pb_dbMovieDisplay1.Name = "pb_dbMovieDisplay1";
             this.pb_dbMovieDisplay1.Size = new System.Drawing.Size(222, 328);
             this.pb_dbMovieDisplay1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -497,6 +504,42 @@
             this.label2.Size = new System.Drawing.Size(325, 35);
             this.label2.TabIndex = 2;
             this.label2.Text = "SCHEDULED MOVIES";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(32, 481);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 26);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Price";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(281, 481);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(222, 26);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Price";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(530, 481);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(222, 26);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Price";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DashboardSection
             // 
@@ -564,5 +607,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_viewAll;
         private System.Windows.Forms.Button btn_getTickets1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

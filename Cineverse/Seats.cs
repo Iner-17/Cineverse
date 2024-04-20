@@ -121,12 +121,12 @@ namespace Cineverse
                     {
                         hourCounter += 2;
                         minCounter = dur - 60;
-                        lbl_movieDuration.Text = hourCounter + " " + minCounter + "mins";
+                        lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
                     } else if (dur > 60)
                     {
                         hourCounter += 1;
                         minCounter = dur - 60;
-                        lbl_movieDuration.Text = hourCounter + " " + minCounter + "mins";
+                        lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
                     }
                    
                     
