@@ -435,9 +435,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(97, 196);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 19);
+            this.label11.Size = new System.Drawing.Size(80, 19);
             this.label11.TabIndex = 36;
-            this.label11.Text = "Description";
+            this.label11.Text = "Synopsis";
             // 
             // AddMovie
             // 

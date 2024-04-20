@@ -237,7 +237,7 @@ namespace Cineverse
 
         private void SelectingSeats()
         {
-            
+           
             for (char row = 'A'; row <= 'J'; row++)
             {
                 for (int seatNum = 1; seatNum <= 20; seatNum++)
@@ -249,35 +249,43 @@ namespace Cineverse
                     {
                         seatPanel.Click += (sender, e) =>
                         {
-                            if (seatPanel.BackColor == bookedColor)
+                            if (cbo_timeLists.Text != "" && cbo_dateLists.Text != "")
+                            {
+
+                                if (seatPanel.BackColor == bookedColor)
+                                {
+                                    return;
+                                }
+                                seatPanel.BackColor = (seatPanel.BackColor == selectedColor) ? availableColor : selectedColor;
+
+                                if (seatLists.Text == "")
+                                {
+                                    seatLists.Text += seatPanelName;
+
+                                }
+                                else if (seatLists.Text == seatPanelName)
+                                {
+                                    seatLists.Text = "";
+                                }
+                                else if (seatLists.Text != "" && seatPanel.BackColor == selectedColor)
+                                {
+
+                                    seatLists.Text += ", " + seatPanelName;
+
+                                }
+                                else if (seatPanel.BackColor == availableColor)
+                                {
+                                    string[] selectedSeats = seatLists.Text.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+
+                                    selectedSeats = selectedSeats.Where(seat => seat != seatPanelName).ToArray();
+
+                                    seatLists.Text = string.Join(", ", selectedSeats);
+                                }
+                            } 
+                            else
                             {
                                 return;
                             }
-                        seatPanel.BackColor = (seatPanel.BackColor == selectedColor) ? availableColor : selectedColor;
-
-                        if (seatLists.Text == "")
-                        {
-                            seatLists.Text += seatPanelName;
-
-                        }
-                        else if (seatLists.Text == seatPanelName)
-                        {
-                            seatLists.Text = "";
-                        }
-                        else if (seatLists.Text != "" && seatPanel.BackColor == selectedColor)
-                        {
-
-                            seatLists.Text += ", " + seatPanelName;
-                                
-                        }
-                        else if (seatPanel.BackColor == availableColor) 
-                        {
-                            string[] selectedSeats = seatLists.Text.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
-
-                            selectedSeats = selectedSeats.Where(seat => seat != seatPanelName).ToArray();
-
-                            seatLists.Text = string.Join(", ", selectedSeats);
-                        }
                         };
                         seatPanel.MouseEnter += (sender, e) =>
                         {
@@ -285,7 +293,7 @@ namespace Cineverse
                             {
                                 seatPanel.BackColor = glowColor;
                             }
-                                
+
                         };
                         seatPanel.MouseLeave += (sender, e) =>
                         {
@@ -305,6 +313,9 @@ namespace Cineverse
                     }
                 }
             }
+            
+
+            
             
         }
         
