@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace Cineverse
             InitializeComponent();
 
             InitializeNavigationControl();
+            
         }
 
        
@@ -40,7 +42,10 @@ namespace Cineverse
             
             navigationcontrols.Display(0);
         }
-       
+        public void navigateToMovies()
+        {
+            navigationcontrols.Display(1);
+        }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -55,6 +60,7 @@ namespace Cineverse
             this.Close();
         }
 
+        
 
         #region Hover effects
         private void btn_movies_MouseEnter(object sender, EventArgs e)
@@ -144,5 +150,8 @@ namespace Cineverse
             navigationcontrols.Display(3);
         }
     }
+
+   
     
+
 }

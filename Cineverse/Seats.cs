@@ -13,6 +13,7 @@ namespace Cineverse
 {
     public partial class Seats : Form
     {
+        public bool BackButtonClicked {get; set; }
         private string username;
         public string TitleFromMovieSection { get; set; }
         Color selectedColor = Color.FromArgb(225, 48, 48);
@@ -120,12 +121,12 @@ namespace Cineverse
                     {
                         hourCounter += 2;
                         minCounter = dur - 60;
-                        lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
+                        lbl_movieDuration.Text = hourCounter + " " + minCounter + "mins";
                     } else if (dur > 60)
                     {
                         hourCounter += 1;
                         minCounter = dur - 60;
-                        lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
+                        lbl_movieDuration.Text = hourCounter + " " + minCounter + "mins";
                     }
                    
                     
@@ -345,9 +346,12 @@ namespace Cineverse
         private void btn_back_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
-            dashboard.Show();
+            
 
-
+            BackButtonClicked = true;
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToMovies();
+            dashboard1.Show();
             this.Close();
         }
 
