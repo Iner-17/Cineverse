@@ -185,7 +185,7 @@ namespace Cineverse
                     {
                         conn.Open();
 
-                        string query = "SELECT title, genre, duration, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
+                        string query = "SELECT title, genre, duration, price, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
                         MySqlCommand cmd = new MySqlCommand(query, conn);   
 
                         MySqlDataReader reader = cmd.ExecuteReader();
@@ -195,6 +195,7 @@ namespace Cineverse
                             string title = reader.GetString("title");
                             string duration = reader.GetInt32("duration").ToString();
                             string genre = reader.GetString("genre");
+                            string price = reader.GetString("price");
                             byte[] imageData = (byte[])reader["photo"];
 
                             if (imageData != null && imageData.Length > 0) {
@@ -209,6 +210,7 @@ namespace Cineverse
 
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;  
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "Price: " + price;
                         }
                     }
                     catch (Exception ex)
