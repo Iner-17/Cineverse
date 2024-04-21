@@ -35,6 +35,8 @@ namespace Cineverse
         private void btn_saveMovie_Click(object sender, EventArgs e)
         {
             saveMovie();
+            MoviesSection1 ms = new MoviesSection1();
+            ms.UpdateMovieList();
         }
 
         public void saveMovie()

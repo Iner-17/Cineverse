@@ -169,7 +169,7 @@ namespace Cineverse
 
 
 
-        private void UpdateMovieList()
+        public void UpdateMovieList()
         {
             MySqlConnection conn = DBConnection.getConnection();
 

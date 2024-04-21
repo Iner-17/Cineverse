@@ -173,8 +173,9 @@ namespace Cineverse
             {
                 conn.Open();
 
-                string getTimeListsQuery = "SELECT DISTINCT start_time FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE date=@CurrentDate;";
+                string getTimeListsQuery = "SELECT DISTINCT start_time FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE date=@CurrentDate AND title=@CurrentTitle;";
                 MySqlCommand getListcmd = new MySqlCommand(getTimeListsQuery, conn);
+                getListcmd.Parameters.AddWithValue("CurrentTitle", currentTitle);
                 getListcmd.Parameters.AddWithValue("CurrentDate", currentDate);
                 MySqlDataReader getListdata = getListcmd.ExecuteReader();
 

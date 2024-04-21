@@ -911,7 +911,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1001, 684);
+            this.Size = new System.Drawing.Size(984, 667);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
@@ -947,10 +947,6 @@
         private System.Windows.Forms.Label lbl_title3;
         private System.Windows.Forms.PictureBox pb_Poster3;
         private System.Windows.Forms.Button btn_gt6;
-        private System.Windows.Forms.Label lbl_genre6;
-        private System.Windows.Forms.Label lbl_duration6;
-        private System.Windows.Forms.Label lbl_title6;
-        private System.Windows.Forms.PictureBox pb_Poster6;
         private System.Windows.Forms.Button btn_gt5;
         private System.Windows.Forms.Label lbl_genre5;
         private System.Windows.Forms.Label lbl_duration5;
@@ -984,9 +980,13 @@
         private System.Windows.Forms.Label lbl_price3;
         private System.Windows.Forms.Label lbl_price4;
         private System.Windows.Forms.Label lbl_price5;
-        private System.Windows.Forms.Label lbl_price6;
         private System.Windows.Forms.Label lbl_price7;
         private System.Windows.Forms.Label lbl_price8;
         private System.Windows.Forms.Label lbl_price9;
+        public System.Windows.Forms.Label lbl_genre6;
+        public System.Windows.Forms.Label lbl_duration6;
+        public System.Windows.Forms.Label lbl_title6;
+        public System.Windows.Forms.PictureBox pb_Poster6;
+        public System.Windows.Forms.Label lbl_price6;
     }
 }
