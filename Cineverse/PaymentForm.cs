@@ -18,7 +18,7 @@ namespace Cineverse
         {
             InitializeComponent();
         }
-
+        private int price = 0;
         public void GetDataFromSeatForm(string title, string date, string time, string seatLists)
         {
             lbl_titlePayment.Text = title;
@@ -30,7 +30,7 @@ namespace Cineverse
         private void PaymentForm_Load(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
-            int price = 0;
+            
             try
             {
                 conn.Open();
@@ -150,6 +150,32 @@ namespace Cineverse
         {
             UpdateAvailabilityToBooked(lbl_seats.Text);
             confirmedPaymentSection1.Location = new Point(0,0);
+
+
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                DateTime dateTime = DateTime.UtcNow.Date;
+
+                conn.Open();
+                string insertBookingData = "INSERT INTO bookings (ticket_quantity   , ticket_total, currentDate) VALUES (@Ticket_quant, @Ticket_Total, @CurrentDate);";
+                MySqlCommand cmd = new MySqlCommand(insertBookingData, conn);
+                cmd.Parameters.AddWithValue("@Ticket_quant", lbl_tcktQuantity.Text);
+                cmd.Parameters.AddWithValue("@Ticket_Total", price * Convert.ToInt32(lbl_tcktQuantity.Text));
+                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy"));
+
+                cmd.ExecuteNonQuery();
+
+
+                
+            } catch (Exception ex)
+            {
+                MessageBox.Show(""  + ex);
+            } finally
+            {
+                conn.Close();
+            }
         }
 
         private int dotCount = 0;

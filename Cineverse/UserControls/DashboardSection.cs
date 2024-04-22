@@ -59,6 +59,43 @@ namespace Cineverse
             lbl_date.Text = formattedDate;
 
             UpdateNumberOfMovies();
+
+            DateTime dateTime = DateTime.UtcNow.Date;
+            
+            //getting total bookings
+            try
+            {
+                conn.Open();
+                string getBookingsData = "SELECT SUM(ticket_quantity) FROM bookings WHERE currentDate = @CurrentDate;";
+                MySqlCommand cmd = new MySqlCommand(getBookingsData, conn);
+                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy"));
+                object result = cmd.ExecuteScalar();
+
+                lbl_todaysBooking.Text = result.ToString();
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            } finally { conn.Close(); }
+
+
+            //getting total revenue
+            try
+            {
+                conn.Open();
+                string getBookingsData = "SELECT SUM(ticket_total) FROM bookings WHERE currentDate = @CurrentDate;";
+                MySqlCommand cmd = new MySqlCommand(getBookingsData, conn);
+                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy"));
+                object result = cmd.ExecuteScalar();
+
+                lbl_revenue.Text = "₱" + result.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+            finally { conn.Close(); }
         }
 
         private void Timer_tick(Object sender, EventArgs e)
@@ -91,6 +128,9 @@ namespace Cineverse
                 conn.Close();
             }
         }
+
+
+
         private void btn_getTickets3_MouseEnter_1(object sender, EventArgs e)
         {
             btn_getTickets3.BackColor = Color.FromArgb(31, 178, 198);
