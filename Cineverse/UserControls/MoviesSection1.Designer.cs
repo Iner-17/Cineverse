@@ -87,6 +87,7 @@
             this.lbl_price7 = new System.Windows.Forms.Label();
             this.lbl_price8 = new System.Windows.Forms.Label();
             this.lbl_price9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster7)).BeginInit();
@@ -845,12 +846,24 @@
             this.lbl_price9.TabIndex = 88;
             this.lbl_price9.Text = "Price";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(211, 266);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 89;
+            this.label3.Text = "synopses";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // MoviesSection1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbl_price9);
             this.Controls.Add(this.lbl_price8);
             this.Controls.Add(this.lbl_price7);
@@ -911,7 +924,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(984, 667);
+            this.Size = new System.Drawing.Size(967, 650);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
@@ -988,5 +1001,6 @@
         public System.Windows.Forms.Label lbl_title6;
         public System.Windows.Forms.PictureBox pb_Poster6;
         public System.Windows.Forms.Label lbl_price6;
+        private System.Windows.Forms.Label label3;
     }
 }

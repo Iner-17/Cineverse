@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Cineverse.UserControls;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -427,6 +428,18 @@ namespace Cineverse
         private void lbl_price1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            Title = lbl_title1.Text;
+            SynopsisSection syn = new SynopsisSection();
+            syn.TitleFromMovieSection = Title;
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
+           
+            
         }
     }
 }

@@ -13,7 +13,6 @@ namespace Cineverse
 {
     public partial class Seats : Form
     {
-        public bool BackButtonClicked {get; set; }
         private string username;
         public string TitleFromMovieSection { get; set; }
         Color selectedColor = Color.FromArgb(225, 48, 48);
@@ -349,7 +348,6 @@ namespace Cineverse
             Dashboard dashboard = new Dashboard();
             
 
-            BackButtonClicked = true;
             Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
             dashboard1.navigateToMovies();
             dashboard1.Show();

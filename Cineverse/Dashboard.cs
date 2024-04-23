@@ -30,12 +30,14 @@ namespace Cineverse
         private void InitializeNavigationControl()
         {
             List<UserControl> userControls = new List<UserControl>()
-            { 
+            {
                 new DashboardSection(),
                 new MoviesSection1(),
                 new ScheduleSection(),
-                new BookingSection()
-                
+                new BookingSection(),
+                new SynopsisSection()
+
+
             };
 
             navigationcontrols = new NavigationControls(userControls, panel4);
@@ -45,6 +47,11 @@ namespace Cineverse
         public void navigateToMovies()
         {
             navigationcontrols.Display(1);
+        }
+
+        public void navigateToSynopsis()
+        {
+            navigationcontrols.Display(4);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -149,6 +156,11 @@ namespace Cineverse
         {
             navigationcontrols.Display(3);
         }
+
+        
+
+        
+
     }
 
    
