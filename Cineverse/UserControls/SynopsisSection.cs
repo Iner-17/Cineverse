@@ -16,9 +16,12 @@ namespace Cineverse.UserControls
     {
 
         public string TitleFromMovieSection { get; set; }
+        public static ComboBox GlobalComboBox { get; set; }
+        public static Label GlobalLabel { get; set; }
         public SynopsisSection()
         {
             InitializeComponent();
+            
         }
 
         private void SynopsisSection_Load(object sender, EventArgs e)
@@ -37,6 +40,7 @@ namespace Cineverse.UserControls
                 while (reader.Read())
                 {
                     cbo_titleLists.Items.Add(reader["title"].ToString());
+                    comboBox1.Items.Add(reader["title"].ToString());
                 }
             }
             catch (Exception ex)
@@ -44,10 +48,42 @@ namespace Cineverse.UserControls
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
+
+            GlobalLabel = lbl_Title1;
+            GlobalComboBox = cbo_titleLists;
         }
-
-     
-
+      
        
+        private void cbo_titleLists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+
+                string query = "select title, price, genre, duration, description from movies where title=@Title;";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("Title", cbo_titleLists.Text);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    lbl_Title1.Text = reader["title"].ToString();
+                    lbl_duration1.Text = reader["duration"].ToString();
+                    lbl_genre1.Text = reader["genre"].ToString();
+                    lbl_price1.Text = reader["price"].ToString();
+                    lbl_description.Text = reader["description"].ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+        }
     }
 }

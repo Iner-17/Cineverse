@@ -18,6 +18,7 @@ namespace Cineverse
     {
         private string username;
         public string Title { get; set; }
+        
         public MoviesSection1()
         {
             InitializeComponent();
@@ -433,13 +434,26 @@ namespace Cineverse
         private void label3_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
-            Title = lbl_title1.Text;
-            SynopsisSection syn = new SynopsisSection();
-            syn.TitleFromMovieSection = Title;
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title1.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title1.Text;
+
             Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
             dashboard1.navigateToSynopsis();
            
-            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title2.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title2.Text;
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
         }
     }
 }

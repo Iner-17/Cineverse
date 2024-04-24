@@ -115,6 +115,7 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovieTitle.cs" />
     <Compile Include="NavigationControls.cs" />
     <Compile Include="PaymentForm.cs">
       <SubType>Form</SubType>

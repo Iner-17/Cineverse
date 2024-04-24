@@ -31,12 +31,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_backk = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_description = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_price1 = new System.Windows.Forms.Label();
             this.lbl_genre1 = new System.Windows.Forms.Label();
             this.lbl_duration1 = new System.Windows.Forms.Label();
-            this.lbl_title1 = new System.Windows.Forms.Label();
+            this.lbl_Title1 = new System.Windows.Forms.Label();
             this.pb_Poster1 = new System.Windows.Forms.PictureBox();
             this.cbo_titleLists = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,28 +73,28 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lbl_description);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbl_price1);
             this.panel1.Controls.Add(this.lbl_genre1);
             this.panel1.Controls.Add(this.lbl_duration1);
-            this.panel1.Controls.Add(this.lbl_title1);
+            this.panel1.Controls.Add(this.lbl_Title1);
             this.panel1.Controls.Add(this.pb_Poster1);
             this.panel1.Location = new System.Drawing.Point(115, 108);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 399);
             this.panel1.TabIndex = 81;
             // 
-            // label3
+            // lbl_description
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(245, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(527, 137);
-            this.label3.TabIndex = 86;
-            this.label3.Text = "Lorem itsum";
+            this.lbl_description.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_description.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_description.ForeColor = System.Drawing.Color.White;
+            this.lbl_description.Location = new System.Drawing.Point(245, 199);
+            this.lbl_description.Name = "lbl_description";
+            this.lbl_description.Size = new System.Drawing.Size(527, 137);
+            this.lbl_description.TabIndex = 86;
+            this.lbl_description.Text = "Lorem itsum";
             // 
             // label1
             // 
@@ -144,16 +144,16 @@
             this.lbl_duration1.TabIndex = 81;
             this.lbl_duration1.Text = "Duration";
             // 
-            // lbl_title1
+            // lbl_Title1
             // 
-            this.lbl_title1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title1.ForeColor = System.Drawing.Color.White;
-            this.lbl_title1.Location = new System.Drawing.Point(244, 76);
-            this.lbl_title1.Name = "lbl_title1";
-            this.lbl_title1.Size = new System.Drawing.Size(450, 34);
-            this.lbl_title1.TabIndex = 82;
-            this.lbl_title1.Text = "Title";
+            this.lbl_Title1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Title1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title1.ForeColor = System.Drawing.Color.White;
+            this.lbl_Title1.Location = new System.Drawing.Point(244, 76);
+            this.lbl_Title1.Name = "lbl_Title1";
+            this.lbl_Title1.Size = new System.Drawing.Size(450, 34);
+            this.lbl_Title1.TabIndex = 82;
+            this.lbl_Title1.Text = "Title";
             // 
             // pb_Poster1
             // 
@@ -181,6 +181,7 @@
             this.cbo_titleLists.Name = "cbo_titleLists";
             this.cbo_titleLists.Size = new System.Drawing.Size(367, 36);
             this.cbo_titleLists.TabIndex = 87;
+            this.cbo_titleLists.SelectedIndexChanged += new System.EventHandler(this.cbo_titleLists_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -245,8 +246,8 @@
         private System.Windows.Forms.Label lbl_price1;
         private System.Windows.Forms.Label lbl_genre1;
         private System.Windows.Forms.Label lbl_duration1;
-        private System.Windows.Forms.Label lbl_title1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_Title1;
+        private System.Windows.Forms.Label lbl_description;
         private Guna.UI2.WinForms.Guna2ComboBox cbo_titleLists;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
