@@ -17,6 +17,11 @@ namespace Cineverse
     {
         
         public NavigationControls navigationcontrols;
+        private bool dashboardisActive = true;
+        private bool moviesisActive = false;
+        private bool scheduleisActive = false;
+        private bool bookingisActive = false;
+        private bool userisActive = false;
         public Dashboard()
         {
             InitializeComponent();
@@ -25,7 +30,10 @@ namespace Cineverse
             
         }
 
-       
+        private void Btn_movies_MouseLeave(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
         private void InitializeNavigationControl()
         {
@@ -67,55 +75,138 @@ namespace Cineverse
             this.Close();
         }
 
-        
+
 
         #region Hover effects
+
+        private void btn_dashboard_MouseEnter(object sender, EventArgs e)
+        {
+            if (dashboardisActive == false)
+            {
+                btn_dashboard.BackColor = Color.FromArgb(31, 178, 198);
+                btn_dashboard.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_dashboard_MouseLeave(object sender, EventArgs e)
+        {
+            if (dashboardisActive == false)
+            {
+                btn_dashboard.BackColor = Color.FromArgb(20, 32, 32);
+                btn_dashboard.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+        }
         private void btn_movies_MouseEnter(object sender, EventArgs e)
         {
-            btn_movies.BackColor = Color.FromArgb(31, 178, 198);
-            btn_movies.ForeColor = Color.Black;
+            if (moviesisActive == false)
+            {
+                btn_movies.BackColor = Color.FromArgb(31, 178, 198);
+                btn_movies.ForeColor = Color.Black;
+            } else
+            {
+                return;
+            }
+            
         }
 
         private void btn_movies_MouseLeave(object sender, EventArgs e)
         {
-            btn_movies.BackColor = Color.FromArgb(20, 32, 32);
-            btn_movies.ForeColor = Color.White;
+            if (moviesisActive == false)
+            {
+                btn_movies.BackColor = Color.FromArgb(20, 32, 32);
+                btn_movies.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+
         }
 
         private void btn_schedule_MouseEnter(object sender, EventArgs e)
         {
-            btn_schedule.BackColor = Color.FromArgb(31, 178, 198);
-            btn_schedule.ForeColor = Color.Black;
+            if (scheduleisActive == false)
+            {
+                btn_schedule.BackColor = Color.FromArgb(31, 178, 198);
+                btn_schedule.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_schedule_MouseLeave(object sender, EventArgs e)
         {
-            btn_schedule.BackColor = Color.FromArgb(20, 32, 32);
-            btn_schedule.ForeColor = Color.White;
+            if (scheduleisActive == false)
+            {
+                btn_schedule.BackColor = Color.FromArgb(20, 32, 32);
+                btn_schedule.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_bookings_MouseEnter(object sender, EventArgs e)
         {
-            btn_bookings.BackColor = Color.FromArgb(31, 178, 198);
-            btn_bookings.ForeColor = Color.Black;
+            if (bookingisActive == false)
+            {
+                btn_bookings.BackColor = Color.FromArgb(31, 178, 198);
+                btn_bookings.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_bookings_MouseLeave(object sender, EventArgs e)
         {
-            btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
-            btn_bookings.ForeColor = Color.White;
+            if (bookingisActive == false)
+            {
+                btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
+                btn_bookings.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_user_MouseEnter(object sender, EventArgs e)
         {
-            btn_user.BackColor = Color.FromArgb(31, 178, 198);
-            btn_user.ForeColor = Color.Black;
+            if (userisActive == false)
+            {
+                btn_user.BackColor = Color.FromArgb(31, 178, 198);
+                btn_user.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_user_MouseLeave(object sender, EventArgs e)
         {
-            btn_user.BackColor = Color.FromArgb(20, 32, 32);
-            btn_user.ForeColor = Color.White;
+            if (userisActive == false)
+            {
+                btn_user.BackColor = Color.FromArgb(20, 32, 32);
+                btn_user.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_logout_MouseEnter(object sender, EventArgs e)
@@ -137,30 +228,132 @@ namespace Cineverse
             this.Close();
         }
 
-        private void btn_movies_Click(object sender, EventArgs e)
-        {
-            navigationcontrols.Display(1);
-        }
-
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
+            btn_dashboard.BackColor = Color.FromArgb(31, 178, 198);
+            btn_dashboard.ForeColor = Color.Black;
+
+            btn_movies.BackColor = Color.FromArgb(20, 32, 32);
+            btn_movies.ForeColor = Color.White;
+
+            btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
+            btn_bookings.ForeColor = Color.White;
+
+            btn_schedule.BackColor = Color.FromArgb(20, 32, 32);
+            btn_schedule.ForeColor = Color.White;
+
+            btn_user.BackColor = Color.FromArgb(20, 32, 32);
+            btn_user.ForeColor = Color.White;
+
+            dashboardisActive = true;
+            moviesisActive = false;
+            bookingisActive = false;
+            scheduleisActive = false;
+            userisActive = false;
+
             navigationcontrols.Display(0);
+        }
+        private void btn_movies_Click(object sender, EventArgs e)
+        {
+            btn_movies.BackColor = Color.FromArgb(31, 178, 198);
+            btn_movies.ForeColor = Color.Black;
+
+            btn_dashboard.BackColor = Color.FromArgb(20, 32, 32);
+            btn_dashboard.ForeColor = Color.White;
+
+            btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
+            btn_bookings.ForeColor = Color.White;
+
+            btn_schedule.BackColor = Color.FromArgb(20, 32, 32);
+            btn_schedule.ForeColor = Color.White;
+
+            btn_user.BackColor = Color.FromArgb(20, 32, 32);
+            btn_user.ForeColor = Color.White;
+
+            dashboardisActive = false;
+            moviesisActive = true;
+            bookingisActive = false;
+            scheduleisActive = false;
+            userisActive = false;
+
+            navigationcontrols.Display(1);
         }
 
         private void btn_schedule_Click(object sender, EventArgs e)
         {
+            btn_schedule.BackColor = Color.FromArgb(31, 178, 198);
+            btn_schedule.ForeColor = Color.Black;
+
+            btn_movies.BackColor = Color.FromArgb(20, 32, 32);
+            btn_movies.ForeColor = Color.White;
+
+            btn_dashboard.BackColor = Color.FromArgb(20, 32, 32);
+            btn_dashboard.ForeColor = Color.White;
+
+            btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
+            btn_bookings.ForeColor = Color.White;
+
+            btn_user.BackColor = Color.FromArgb(20, 32, 32);
+            btn_user.ForeColor = Color.White;
+
+            dashboardisActive = false;
+            moviesisActive = false;
+            bookingisActive = false;
+            scheduleisActive = true;
+            userisActive = false;
+
             navigationcontrols.Display(2);
         }
 
         private void btn_bookings_Click(object sender, EventArgs e)
         {
+            btn_bookings.BackColor = Color.FromArgb(31, 178, 198);
+            btn_bookings.ForeColor = Color.Black;
+
+            btn_movies.BackColor = Color.FromArgb(20, 32, 32);
+            btn_movies.ForeColor = Color.White;
+
+            btn_dashboard.BackColor = Color.FromArgb(20, 32, 32);
+            btn_dashboard.ForeColor = Color.White;
+
+            btn_schedule.BackColor = Color.FromArgb(20, 32, 32);
+            btn_schedule.ForeColor = Color.White;
+
+            btn_user.BackColor = Color.FromArgb(20, 32, 32);
+            btn_user.ForeColor = Color.White;
+
+            dashboardisActive = false;
+            moviesisActive = false;
+            bookingisActive = true;
+            scheduleisActive = false;
+            userisActive = false;
+
             navigationcontrols.Display(3);
         }
 
-        
+        private void btn_user_Click(object sender, EventArgs e)
+        {
+            btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
+            btn_bookings.ForeColor = Color.White;
 
-        
+            btn_movies.BackColor = Color.FromArgb(20, 32, 32);
+            btn_movies.ForeColor = Color.White;
 
+            btn_dashboard.BackColor = Color.FromArgb(20, 32, 32);
+            btn_dashboard.ForeColor = Color.White;
+
+            btn_schedule.BackColor = Color.FromArgb(20, 32, 32);
+            btn_schedule.ForeColor = Color.White;
+
+            btn_user.BackColor = Color.FromArgb(31, 178, 198);
+            btn_user.ForeColor = Color.Black;
+
+            dashboardisActive = false;
+            moviesisActive = false;
+            bookingisActive = false;
+            scheduleisActive = false;
+            userisActive = true;
+        }
     }
 
    

@@ -92,6 +92,7 @@
             this.btn_user.TabIndex = 9;
             this.btn_user.Text = "User";
             this.btn_user.UseVisualStyleBackColor = false;
+            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
             this.btn_user.MouseEnter += new System.EventHandler(this.btn_user_MouseEnter);
             this.btn_user.MouseLeave += new System.EventHandler(this.btn_user_MouseLeave);
             // 
@@ -103,7 +104,7 @@
             this.btn_bookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bookings.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bookings.ForeColor = System.Drawing.Color.White;
-            this.btn_bookings.Location = new System.Drawing.Point(16, 475);
+            this.btn_bookings.Location = new System.Drawing.Point(16, 424);
             this.btn_bookings.Name = "btn_bookings";
             this.btn_bookings.Size = new System.Drawing.Size(270, 42);
             this.btn_bookings.TabIndex = 8;
@@ -121,7 +122,7 @@
             this.btn_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_schedule.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_schedule.ForeColor = System.Drawing.Color.White;
-            this.btn_schedule.Location = new System.Drawing.Point(16, 425);
+            this.btn_schedule.Location = new System.Drawing.Point(16, 473);
             this.btn_schedule.Name = "btn_schedule";
             this.btn_schedule.Size = new System.Drawing.Size(270, 42);
             this.btn_schedule.TabIndex = 7;
@@ -153,7 +154,7 @@
             // 
             this.btn_dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.btn_dashboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_dashboard.FlatAppearance.BorderSize = 0;
+            this.btn_dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dashboard.Location = new System.Drawing.Point(16, 324);
@@ -163,6 +164,8 @@
             this.btn_dashboard.Text = "Dashboard";
             this.btn_dashboard.UseVisualStyleBackColor = false;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
+            this.btn_dashboard.MouseEnter += new System.EventHandler(this.btn_dashboard_MouseEnter);
+            this.btn_dashboard.MouseLeave += new System.EventHandler(this.btn_dashboard_MouseLeave);
             // 
             // panel2
             // 

@@ -45,6 +45,9 @@
             this.lbl_todaysBooking = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_getTickets1 = new System.Windows.Forms.Button();
             this.btn_getTickets3 = new System.Windows.Forms.Button();
             this.btn_getTickets2 = new System.Windows.Forms.Button();
@@ -62,9 +65,6 @@
             this.pb_dbMovieDisplay2 = new System.Windows.Forms.PictureBox();
             this.pb_dbMovieDisplay1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -289,6 +289,42 @@
             this.panel7.TabIndex = 16;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(530, 481);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(222, 26);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Price";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(281, 481);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(222, 26);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Price";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(32, 481);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 26);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Price";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btn_getTickets1
             // 
             this.btn_getTickets1.BackColor = System.Drawing.Color.Transparent;
@@ -504,42 +540,6 @@
             this.label2.Size = new System.Drawing.Size(325, 35);
             this.label2.TabIndex = 2;
             this.label2.Text = "SCHEDULED MOVIES";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 481);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 26);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Price";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(281, 481);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 26);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Price";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(530, 481);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 26);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Price";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DashboardSection
             // 

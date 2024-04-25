@@ -444,13 +444,97 @@ namespace Cineverse
            
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void label4_Click_1(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
 
 
             SynopsisSection.GlobalLabel.Text = lbl_title2.Text;
             SynopsisSection.GlobalComboBox.Text = lbl_title2.Text;
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title3.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title3.Text;
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title4.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title4.Text;
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title5.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title5.Text;
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title6.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title6.Text;
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title7.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title7.Text;
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title8.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title8.Text;
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.navigateToSynopsis();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+
+            SynopsisSection.GlobalLabel.Text = lbl_title9.Text;
+            SynopsisSection.GlobalComboBox.Text = lbl_title9.Text;
 
             Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
             dashboard1.navigateToSynopsis();

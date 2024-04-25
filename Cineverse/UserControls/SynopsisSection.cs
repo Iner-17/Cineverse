@@ -26,7 +26,6 @@ namespace Cineverse.UserControls
 
         private void SynopsisSection_Load(object sender, EventArgs e)
         {
-            label5.Text = TitleFromMovieSection;
             MySqlConnection conn = DBConnection.getConnection();
 
             try
@@ -35,12 +34,10 @@ namespace Cineverse.UserControls
                 string getTitleLists = "SELECT title FROM movies;";
                 MySqlCommand cmd = new MySqlCommand(getTitleLists, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
-                comboBox1.Items.Clear();
 
                 while (reader.Read())
                 {
                     cbo_titleLists.Items.Add(reader["title"].ToString());
-                    comboBox1.Items.Add(reader["title"].ToString());
                 }
             }
             catch (Exception ex)
@@ -85,5 +82,16 @@ namespace Cineverse.UserControls
             }
             finally { conn.Close(); }
         }
+
+        private void btn_backk_MouseEnter(object sender, EventArgs e)
+        {
+            btn_backk.ForeColor = Color.FromArgb(31, 178, 198);
+        }
+
+        private void btn_backk_MouseLeave(object sender, EventArgs e)
+        {
+            btn_backk.ForeColor = Color.White;
+        }
     }
+    
 }
