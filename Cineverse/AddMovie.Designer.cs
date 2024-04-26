@@ -59,6 +59,8 @@
             this.txt_description = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbo_rating = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btn_addScreening = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,7 +168,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(96, 441);
+            this.label6.Location = new System.Drawing.Point(96, 521);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(182, 19);
             this.label6.TabIndex = 15;
@@ -177,7 +179,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(461, 441);
+            this.label7.Location = new System.Drawing.Point(461, 521);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(184, 19);
             this.label7.TabIndex = 16;
@@ -190,7 +192,7 @@
             this.btn_addDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addDate.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addDate.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_addDate.Location = new System.Drawing.Point(328, 472);
+            this.btn_addDate.Location = new System.Drawing.Point(328, 552);
             this.btn_addDate.Name = "btn_addDate";
             this.btn_addDate.Size = new System.Drawing.Size(73, 27);
             this.btn_addDate.TabIndex = 19;
@@ -207,7 +209,7 @@
             this.btn_addTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addTime.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addTime.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_addTime.Location = new System.Drawing.Point(621, 472);
+            this.btn_addTime.Location = new System.Drawing.Point(621, 552);
             this.btn_addTime.Name = "btn_addTime";
             this.btn_addTime.Size = new System.Drawing.Size(73, 27);
             this.btn_addTime.TabIndex = 20;
@@ -237,7 +239,7 @@
             this.cmb_datesAdded.BackColor = System.Drawing.SystemColors.Window;
             this.cmb_datesAdded.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_datesAdded.FormattingEnabled = true;
-            this.cmb_datesAdded.Location = new System.Drawing.Point(101, 583);
+            this.cmb_datesAdded.Location = new System.Drawing.Point(101, 623);
             this.cmb_datesAdded.Name = "cmb_datesAdded";
             this.cmb_datesAdded.Size = new System.Drawing.Size(269, 27);
             this.cmb_datesAdded.TabIndex = 23;
@@ -246,7 +248,7 @@
             // 
             this.cmb_timeAdded.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_timeAdded.FormattingEnabled = true;
-            this.cmb_timeAdded.Location = new System.Drawing.Point(465, 583);
+            this.cmb_timeAdded.Location = new System.Drawing.Point(465, 623);
             this.cmb_timeAdded.Name = "cmb_timeAdded";
             this.cmb_timeAdded.Size = new System.Drawing.Size(237, 27);
             this.cmb_timeAdded.TabIndex = 24;
@@ -256,7 +258,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(97, 551);
+            this.label8.Location = new System.Drawing.Point(97, 591);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 19);
             this.label8.TabIndex = 25;
@@ -267,7 +269,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(461, 551);
+            this.label9.Location = new System.Drawing.Point(461, 591);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 19);
             this.label9.TabIndex = 26;
@@ -326,7 +328,7 @@
             this.dtp_time.CustomFormat = "HH:mm";
             this.dtp_time.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_time.Location = new System.Drawing.Point(465, 472);
+            this.dtp_time.Location = new System.Drawing.Point(465, 552);
             this.dtp_time.MaximumSize = new System.Drawing.Size(150, 30);
             this.dtp_time.MinimumSize = new System.Drawing.Size(150, 30);
             this.dtp_time.Name = "dtp_time";
@@ -344,7 +346,7 @@
             this.dtp_date.CustomFormat = "MMMM  dd,  yyy";
             this.dtp_date.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_date.Location = new System.Drawing.Point(98, 472);
+            this.dtp_date.Location = new System.Drawing.Point(98, 552);
             this.dtp_date.MaximumSize = new System.Drawing.Size(250, 50);
             this.dtp_date.MinimumSize = new System.Drawing.Size(180, 30);
             this.dtp_date.Name = "dtp_date";
@@ -359,7 +361,7 @@
             this.btn_saveMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_saveMovie.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_saveMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.btn_saveMovie.Location = new System.Drawing.Point(100, 655);
+            this.btn_saveMovie.Location = new System.Drawing.Point(98, 450);
             this.btn_saveMovie.Name = "btn_saveMovie";
             this.btn_saveMovie.Size = new System.Drawing.Size(145, 35);
             this.btn_saveMovie.TabIndex = 29;
@@ -447,12 +449,39 @@
             this.cbo_rating.Size = new System.Drawing.Size(147, 27);
             this.cbo_rating.TabIndex = 37;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(9, 76);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(272, 13);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "*Note: Add Movie first before adding a screening dates.*";
+            // 
+            // btn_addScreening
+            // 
+            this.btn_addScreening.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_addScreening.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_addScreening.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addScreening.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addScreening.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btn_addScreening.Location = new System.Drawing.Point(100, 662);
+            this.btn_addScreening.Name = "btn_addScreening";
+            this.btn_addScreening.Size = new System.Drawing.Size(143, 35);
+            this.btn_addScreening.TabIndex = 40;
+            this.btn_addScreening.Text = "Add Screening";
+            this.btn_addScreening.UseVisualStyleBackColor = false;
+            this.btn_addScreening.Click += new System.EventHandler(this.btn_addScreening_Click);
+            // 
             // AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(1035, 718);
+            this.Controls.Add(this.btn_addScreening);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.cbo_rating);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_description);
@@ -487,7 +516,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddMovie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddMovie";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -526,5 +555,7 @@
         private System.Windows.Forms.TextBox txt_description;
         public System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbo_rating;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_addScreening;
     }
 }
