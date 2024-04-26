@@ -53,12 +53,12 @@
             this.dtp_time = new System.Windows.Forms.DateTimePicker();
             this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.btn_saveMovie = new System.Windows.Forms.Button();
-            this.txt_rating = new System.Windows.Forms.TextBox();
             this.Ratings = new System.Windows.Forms.Label();
             this.lbl_cinemaNum = new System.Windows.Forms.Label();
             this.cbo_cinemaNum = new System.Windows.Forms.ComboBox();
             this.txt_description = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.cbo_rating = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -367,17 +367,6 @@
             this.btn_saveMovie.UseVisualStyleBackColor = false;
             this.btn_saveMovie.Click += new System.EventHandler(this.btn_saveMovie_Click);
             // 
-            // txt_rating
-            // 
-            this.txt_rating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.txt_rating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_rating.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_rating.ForeColor = System.Drawing.Color.White;
-            this.txt_rating.Location = new System.Drawing.Point(101, 387);
-            this.txt_rating.Name = "txt_rating";
-            this.txt_rating.Size = new System.Drawing.Size(145, 31);
-            this.txt_rating.TabIndex = 31;
-            // 
             // Ratings
             // 
             this.Ratings.AutoSize = true;
@@ -439,17 +428,36 @@
             this.label11.TabIndex = 36;
             this.label11.Text = "Synopsis";
             // 
+            // cbo_rating
+            // 
+            this.cbo_rating.BackColor = System.Drawing.SystemColors.MenuText;
+            this.cbo_rating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_rating.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_rating.ForeColor = System.Drawing.SystemColors.Menu;
+            this.cbo_rating.FormattingEnabled = true;
+            this.cbo_rating.Items.AddRange(new object[] {
+            "G",
+            "PG",
+            "R",
+            "R-13",
+            "R-16",
+            "R-18"});
+            this.cbo_rating.Location = new System.Drawing.Point(98, 392);
+            this.cbo_rating.Name = "cbo_rating";
+            this.cbo_rating.Size = new System.Drawing.Size(147, 27);
+            this.cbo_rating.TabIndex = 37;
+            // 
             // AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(1035, 718);
+            this.Controls.Add(this.cbo_rating);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_description);
             this.Controls.Add(this.cbo_cinemaNum);
             this.Controls.Add(this.lbl_cinemaNum);
-            this.Controls.Add(this.txt_rating);
             this.Controls.Add(this.Ratings);
             this.Controls.Add(this.btn_saveMovie);
             this.Controls.Add(this.label10);
@@ -512,11 +520,11 @@
         private System.Windows.Forms.DateTimePicker dtp_time;
         private System.Windows.Forms.DateTimePicker dtp_date;
         private System.Windows.Forms.Button btn_saveMovie;
-        private System.Windows.Forms.TextBox txt_rating;
         public System.Windows.Forms.Label Ratings;
         public System.Windows.Forms.Label lbl_cinemaNum;
         private System.Windows.Forms.ComboBox cbo_cinemaNum;
         private System.Windows.Forms.TextBox txt_description;
         public System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbo_rating;
     }
 }

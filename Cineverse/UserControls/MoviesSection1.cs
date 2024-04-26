@@ -179,7 +179,7 @@ namespace Cineverse
             {
                 PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
                 Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
-
+              
                 if(lbl_title != null && lbl_title.Text == "Title")
                 {
                     
@@ -187,7 +187,7 @@ namespace Cineverse
                     {
                         conn.Open();
 
-                        string query = "SELECT title, price, genre, duration, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
+                        string query = "SELECT title, movie_rating, price, genre, duration, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
                         MySqlCommand cmd = new MySqlCommand(query, conn);   
 
                         MySqlDataReader reader = cmd.ExecuteReader();
@@ -195,6 +195,7 @@ namespace Cineverse
                         if(reader.Read())
                         {
                             string title = reader.GetString("title");
+                            string movie_rating = reader.GetString("movie_rating");
                             string duration = reader.GetInt32("duration").ToString();
                             string genre = reader.GetString("genre");
                             string price = reader.GetDouble("price").ToString(); ;
@@ -209,7 +210,7 @@ namespace Cineverse
                                 pb_poster.Image = null;
                             }
                             
-
+                            Controls.Find("lbl_rating" + i, true).FirstOrDefault().Text = movie_rating;
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;  
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
@@ -538,6 +539,11 @@ namespace Cineverse
 
             Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
             dashboard1.navigateToSynopsis();
+        }
+
+        private void lbl_title7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Cineverse.UserControls
             {
                 conn.Open();
 
-                string query = "select title, price, genre, duration, description from movies where title=@Title;";
+                string query = "select title, price, genre, duration, movie_rating, description from movies where title=@Title;";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("Title", cbo_titleLists.Text);
@@ -69,10 +69,12 @@ namespace Cineverse.UserControls
                 while (reader.Read())
                 {
                     lbl_Title1.Text = reader["title"].ToString();
-                    lbl_duration1.Text = reader["duration"].ToString();
+                    lbl_rating.Text = reader["movie_rating"].ToString();
+                    lbl_duration1.Text = reader["duration"].ToString() + " " + "mins.";
                     lbl_genre1.Text = reader["genre"].ToString();
-                    lbl_price1.Text = reader["price"].ToString();
+                    lbl_price1.Text = "₱" + reader["price"].ToString() + ".00";
                     lbl_description.Text = reader["description"].ToString();
+                    
                 }
 
             }

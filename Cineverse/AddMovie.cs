@@ -43,7 +43,7 @@ namespace Cineverse
         {
             MySqlConnection conn = DBConnection.getConnection();
 
-            if(txt_addTitle.Text != "" && txt_addPrice.Text != "" && txt_addGenre.Text != "" && txt_addDuration.Text != "" && pictureBox1.Image != null && txt_description.Text != "" && txt_rating.Text != "" && cbo_cinemaNum.Text != "" )
+            if(txt_addTitle.Text != "" && txt_addPrice.Text != "" && txt_addGenre.Text != "" && txt_addDuration.Text != "" && pictureBox1.Image != null && txt_description.Text != "" && cbo_rating.Text != "" && cbo_cinemaNum.Text != "" )
             {
                 try
                 {
@@ -55,7 +55,7 @@ namespace Cineverse
                     saveMoviecmd.Parameters.AddWithValue("@Genre", txt_addGenre.Text);
                     saveMoviecmd.Parameters.AddWithValue("@Duration", txt_addDuration.Text);
                     saveMoviecmd.Parameters.AddWithValue("@Description", txt_description.Text);
-                    saveMoviecmd.Parameters.AddWithValue("@Rating", txt_rating.Text);
+                    saveMoviecmd.Parameters.AddWithValue("@Rating", cbo_rating.Text);
                     saveMoviecmd.Parameters.AddWithValue("@CinemaNum", cbo_cinemaNum.Text);
                     
 

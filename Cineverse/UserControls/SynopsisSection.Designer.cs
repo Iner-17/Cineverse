@@ -37,9 +37,14 @@
             this.lbl_genre1 = new System.Windows.Forms.Label();
             this.lbl_duration1 = new System.Windows.Forms.Label();
             this.lbl_Title1 = new System.Windows.Forms.Label();
-            this.pb_Poster1 = new System.Windows.Forms.PictureBox();
             this.cbo_titleLists = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pb_Poster1 = new System.Windows.Forms.PictureBox();
+            this.lbl_rating = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +78,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lbl_rating);
             this.panel1.Controls.Add(this.lbl_description);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbl_price1);
@@ -92,7 +102,7 @@
             this.lbl_description.ForeColor = System.Drawing.Color.White;
             this.lbl_description.Location = new System.Drawing.Point(245, 210);
             this.lbl_description.Name = "lbl_description";
-            this.lbl_description.Size = new System.Drawing.Size(527, 126);
+            this.lbl_description.Size = new System.Drawing.Size(527, 137);
             this.lbl_description.TabIndex = 86;
             this.lbl_description.Text = "Lorem itsum";
             // 
@@ -102,7 +112,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label1.Location = new System.Drawing.Point(245, 178);
+            this.label1.Location = new System.Drawing.Point(481, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 19);
             this.label1.TabIndex = 85;
@@ -112,11 +122,11 @@
             // 
             this.lbl_price1.AutoSize = true;
             this.lbl_price1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_price1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_price1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_price1.ForeColor = System.Drawing.Color.White;
-            this.lbl_price1.Location = new System.Drawing.Point(244, 152);
+            this.lbl_price1.Location = new System.Drawing.Point(326, 155);
             this.lbl_price1.Name = "lbl_price1";
-            this.lbl_price1.Size = new System.Drawing.Size(47, 19);
+            this.lbl_price1.Size = new System.Drawing.Size(51, 19);
             this.lbl_price1.TabIndex = 84;
             this.lbl_price1.Text = "Price";
             // 
@@ -124,11 +134,11 @@
             // 
             this.lbl_genre1.AutoSize = true;
             this.lbl_genre1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_genre1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_genre1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
-            this.lbl_genre1.Location = new System.Drawing.Point(244, 130);
+            this.lbl_genre1.Location = new System.Drawing.Point(326, 136);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(46, 16);
+            this.lbl_genre1.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre1.TabIndex = 83;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -136,11 +146,11 @@
             // 
             this.lbl_duration1.AutoSize = true;
             this.lbl_duration1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_duration1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_duration1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
-            this.lbl_duration1.Location = new System.Drawing.Point(244, 110);
+            this.lbl_duration1.Location = new System.Drawing.Point(326, 117);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(63, 16);
+            this.lbl_duration1.Size = new System.Drawing.Size(76, 19);
             this.lbl_duration1.TabIndex = 81;
             this.lbl_duration1.Text = "Duration";
             // 
@@ -149,21 +159,11 @@
             this.lbl_Title1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Title1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title1.ForeColor = System.Drawing.Color.White;
-            this.lbl_Title1.Location = new System.Drawing.Point(244, 76);
+            this.lbl_Title1.Location = new System.Drawing.Point(243, 64);
             this.lbl_Title1.Name = "lbl_Title1";
             this.lbl_Title1.Size = new System.Drawing.Size(450, 34);
             this.lbl_Title1.TabIndex = 82;
             this.lbl_Title1.Text = "Title";
-            // 
-            // pb_Poster1
-            // 
-            this.pb_Poster1.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
-            this.pb_Poster1.Location = new System.Drawing.Point(42, 51);
-            this.pb_Poster1.Name = "pb_Poster1";
-            this.pb_Poster1.Size = new System.Drawing.Size(196, 296);
-            this.pb_Poster1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_Poster1.TabIndex = 16;
-            this.pb_Poster1.TabStop = false;
             // 
             // cbo_titleLists
             // 
@@ -194,6 +194,76 @@
             this.label4.TabIndex = 87;
             this.label4.Text = "- MOVIE TITLE -";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pb_Poster1
+            // 
+            this.pb_Poster1.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
+            this.pb_Poster1.Location = new System.Drawing.Point(42, 51);
+            this.pb_Poster1.Name = "pb_Poster1";
+            this.pb_Poster1.Size = new System.Drawing.Size(196, 296);
+            this.pb_Poster1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Poster1.TabIndex = 16;
+            this.pb_Poster1.TabStop = false;
+            // 
+            // lbl_rating
+            // 
+            this.lbl_rating.AutoSize = true;
+            this.lbl_rating.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_rating.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rating.ForeColor = System.Drawing.Color.White;
+            this.lbl_rating.Location = new System.Drawing.Point(326, 98);
+            this.lbl_rating.Name = "lbl_rating";
+            this.lbl_rating.Size = new System.Drawing.Size(59, 19);
+            this.lbl_rating.TabIndex = 87;
+            this.lbl_rating.Text = "Rating";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(245, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 19);
+            this.label3.TabIndex = 88;
+            this.label3.Text = "Rating: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(245, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 19);
+            this.label5.TabIndex = 89;
+            this.label5.Text = "Duration:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(245, 134);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 19);
+            this.label6.TabIndex = 90;
+            this.label6.Text = "Genre: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(245, 155);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 19);
+            this.label7.TabIndex = 91;
+            this.label7.Text = "Price:";
             // 
             // SynopsisSection
             // 
@@ -230,5 +300,10 @@
         private System.Windows.Forms.Label lbl_description;
         private Guna.UI2.WinForms.Guna2ComboBox cbo_titleLists;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_rating;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
     }
 }
