@@ -1,5 +1,7 @@
 ﻿using Cineverse.UserControls;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -194,7 +196,7 @@ namespace Cineverse
 
                         if(reader.Read())
                         {
-                            string title = reader.GetString("title");
+                            string title = reader.GetString("title").ToUpper();
                             string movie_rating = reader.GetString("movie_rating");
                             string duration = reader.GetInt32("duration").ToString();
                             string genre = reader.GetString("genre");
@@ -214,7 +216,7 @@ namespace Cineverse
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;  
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
-                        }
+                        } 
                     }
                     catch (Exception ex)
                     {
@@ -225,11 +227,27 @@ namespace Cineverse
             }
         }
 
+        private void reset()
+        {
+            for (int i = 1; i <= 9; i++)
+            {
+                PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
+                Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
+                Image placeholder = Cineverse.Properties.Resources.PosterPlaceholder;
+
+                lbl_title.Text = "Title";
+                Controls.Find("lbl_rating" + i, true).FirstOrDefault().Text = "Rating";
+                Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = "Duration";
+                Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = "Genre";
+                Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "Price";
+                pb_poster.Image = placeholder;
+            }
+        }
+
         //RELOAD
         private void label1_Click_1(object sender, EventArgs e)
         {
             UpdateMovieList();
-
             
         }
 
@@ -434,7 +452,6 @@ namespace Cineverse
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
 
 
             SynopsisSection.GlobalLabel.Text = lbl_title1.Text;
@@ -543,6 +560,44 @@ namespace Cineverse
 
         private void lbl_title7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+
+               "Do you really want to delete the movie?",
+               "Delete Confirmation",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question,
+               MessageBoxDefaultButton.Button1 // Default button is "Yes"
+            
+            );
+
+            if (result == DialogResult.Yes) {
+                MySqlConnection conn = DBConnection.getConnection();
+
+                try
+                {
+                    conn.Open();
+                    string deleteMovie = "delete from movies where title = @Title";
+                    MySqlCommand deleteMoviecmd = new MySqlCommand(deleteMovie, conn);
+                    deleteMoviecmd.Parameters.AddWithValue("Title", lbl_title1.Text);
+                    deleteMoviecmd.ExecuteNonQuery();
+                    MessageBox.Show("Movie deleted successfully.");
+                    Image placeholder = Cineverse.Properties.Resources.PosterPlaceholder;
+
+                    reset();
+                    UpdateMovieList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); } 
+            }
+
 
         }
     }

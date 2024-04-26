@@ -117,6 +117,32 @@ namespace Cineverse
 
             if(txt_addTitle.Text != "" && txt_addPrice.Text != "" && txt_addGenre.Text != "" && txt_addDuration.Text != "" && pictureBox1.Image != null && txt_description.Text != "" && cbo_rating.Text != "" && cbo_cinemaNum.Text != "" )
             {
+                int TitleInt = 0;
+                try
+                {
+                    conn.Open();
+                    string titleExists = "SELECT count(title) FROM movies WHERE title = @Title;";
+                    MySqlCommand checkTitlecmd = new MySqlCommand(titleExists, conn);
+                    checkTitlecmd.Parameters.AddWithValue("Title", txt_addTitle.Text);
+
+                    TitleInt = Convert.ToInt32(checkTitlecmd.ExecuteScalar());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
+
+
+                if (TitleInt > 0)
+                {
+                    MessageBox.Show("Movie already exists");
+                } 
+
+
+                else 
+                { 
+
                 try
                 {
                     conn.Open();
@@ -150,11 +176,16 @@ namespace Cineverse
                     MessageBox.Show(ex.Message);
                 }
                 finally { conn.Close(); }
+                }
             }
+
+
+
             else
             {
                 MessageBox.Show("All fields are required.");
             }
+            
         }
    
         private void btn_uploadImage_Click(object sender, EventArgs e)
@@ -211,6 +242,9 @@ namespace Cineverse
             btn_addTime.ForeColor = Color.White;
         }
 
-       
+        private void txt_addTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

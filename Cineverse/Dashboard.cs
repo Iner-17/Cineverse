@@ -62,6 +62,11 @@ namespace Cineverse
             navigationcontrols.Display(4);
         }
 
+        public void navigateToDashboard()
+        {
+            navigationcontrols.Display(0);
+        }
+
         private void Dashboard_Load(object sender, EventArgs e)
         {
             //time & date
@@ -330,6 +335,8 @@ namespace Cineverse
 
             navigationcontrols.Display(3);
         }
+
+        
 
         private void btn_user_Click(object sender, EventArgs e)
         {

@@ -900,6 +900,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(33, 30);
             this.panel3.TabIndex = 99;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // pb_Poster9
             // 
@@ -1288,7 +1289,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(865, 548);
+            this.Size = new System.Drawing.Size(831, 514);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
