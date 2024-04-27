@@ -44,6 +44,7 @@
             this.btn_timeOut = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Panel();
             this.pb_profile = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,6 +136,7 @@
             // 
             this.lbl_changePass.AutoSize = true;
             this.lbl_changePass.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_changePass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_changePass.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_changePass.ForeColor = System.Drawing.Color.White;
             this.lbl_changePass.Location = new System.Drawing.Point(657, 478);
@@ -241,11 +243,24 @@
             this.pb_profile.TabIndex = 7;
             this.pb_profile.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(427, 555);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 19);
+            this.label5.TabIndex = 101;
+            this.label5.Text = "10:00 AM";
+            // 
             // UserSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_timeOut);
             this.Controls.Add(this.label4);
@@ -289,5 +304,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_timeOut;
         private System.Windows.Forms.Panel btn_edit;
+        private System.Windows.Forms.Label label5;
     }
 }
