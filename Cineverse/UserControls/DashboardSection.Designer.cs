@@ -32,6 +32,7 @@
             this.lbl_date = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_hellouser = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -52,6 +53,7 @@
             this.btn_getTickets2 = new System.Windows.Forms.Button();
             this.lbl_genre3 = new System.Windows.Forms.Label();
             this.lbl_title1 = new System.Windows.Forms.Label();
+            this.pb_dbMovieDisplay3 = new System.Windows.Forms.PictureBox();
             this.lbl_duration3 = new System.Windows.Forms.Label();
             this.lbl_genre2 = new System.Windows.Forms.Label();
             this.lbl_title3 = new System.Windows.Forms.Label();
@@ -60,11 +62,10 @@
             this.lbl_title2 = new System.Windows.Forms.Label();
             this.lbl_genre1 = new System.Windows.Forms.Label();
             this.lbl_duration1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pb_dbMovieDisplay3 = new System.Windows.Forms.PictureBox();
             this.pb_dbMovieDisplay2 = new System.Windows.Forms.PictureBox();
             this.pb_dbMovieDisplay1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_refresh = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -124,6 +125,15 @@
             this.lbl_hellouser.Size = new System.Drawing.Size(339, 45);
             this.lbl_hellouser.TabIndex = 1;
             this.lbl_hellouser.Text = "Hello, Username!";
+            // 
+            // panel8
+            // 
+            this.panel8.BackgroundImage = global::Cineverse.Properties.Resources.userbtn;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel8.Location = new System.Drawing.Point(44, 42);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(41, 54);
+            this.panel8.TabIndex = 0;
             // 
             // panel6
             // 
@@ -254,6 +264,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel7.Controls.Add(this.lbl_refresh);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.label1);
@@ -390,6 +401,16 @@
             this.lbl_title1.Text = "Title";
             this.lbl_title1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pb_dbMovieDisplay3
+            // 
+            this.pb_dbMovieDisplay3.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
+            this.pb_dbMovieDisplay3.Location = new System.Drawing.Point(530, 69);
+            this.pb_dbMovieDisplay3.Name = "pb_dbMovieDisplay3";
+            this.pb_dbMovieDisplay3.Size = new System.Drawing.Size(222, 328);
+            this.pb_dbMovieDisplay3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_dbMovieDisplay3.TabIndex = 16;
+            this.pb_dbMovieDisplay3.TabStop = false;
+            // 
             // lbl_duration3
             // 
             this.lbl_duration3.BackColor = System.Drawing.Color.Transparent;
@@ -489,37 +510,6 @@
             this.lbl_duration1.Text = "Duration";
             this.lbl_duration1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(23, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(325, 35);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "SCHEDULED MOVIES";
-            // 
-            // panel8
-            // 
-            this.panel8.BackgroundImage = global::Cineverse.Properties.Resources.userbtn;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Location = new System.Drawing.Point(44, 42);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(41, 54);
-            this.panel8.TabIndex = 0;
-            // 
-            // pb_dbMovieDisplay3
-            // 
-            this.pb_dbMovieDisplay3.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
-            this.pb_dbMovieDisplay3.Location = new System.Drawing.Point(530, 69);
-            this.pb_dbMovieDisplay3.Name = "pb_dbMovieDisplay3";
-            this.pb_dbMovieDisplay3.Size = new System.Drawing.Size(222, 328);
-            this.pb_dbMovieDisplay3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_dbMovieDisplay3.TabIndex = 16;
-            this.pb_dbMovieDisplay3.TabStop = false;
-            // 
             // pb_dbMovieDisplay2
             // 
             this.pb_dbMovieDisplay2.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
@@ -539,6 +529,33 @@
             this.pb_dbMovieDisplay1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_dbMovieDisplay1.TabIndex = 14;
             this.pb_dbMovieDisplay1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(23, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(325, 35);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "SCHEDULED MOVIES";
+            // 
+            // lbl_refresh
+            // 
+            this.lbl_refresh.AutoSize = true;
+            this.lbl_refresh.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_refresh.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_refresh.ForeColor = System.Drawing.Color.White;
+            this.lbl_refresh.Location = new System.Drawing.Point(604, 31);
+            this.lbl_refresh.Name = "lbl_refresh";
+            this.lbl_refresh.Size = new System.Drawing.Size(57, 16);
+            this.lbl_refresh.TabIndex = 21;
+            this.lbl_refresh.Text = "Refresh";
+            this.lbl_refresh.MouseEnter += new System.EventHandler(this.lbl_refresh_MouseEnter);
+            this.lbl_refresh.MouseLeave += new System.EventHandler(this.lbl_refresh_MouseLeave);
             // 
             // DashboardSection
             // 
@@ -609,5 +626,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_refresh;
     }
 }
