@@ -158,6 +158,7 @@
             // lbl_description
             // 
             this.lbl_description.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_description.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_description.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_description.ForeColor = System.Drawing.Color.White;
             this.lbl_description.Location = new System.Drawing.Point(255, 212);

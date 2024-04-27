@@ -1011,7 +1011,7 @@
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel4.ForeColor = System.Drawing.Color.Transparent;
-            this.panel4.Location = new System.Drawing.Point(990, 347);
+            this.panel4.Location = new System.Drawing.Point(987, 347);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(33, 30);
             this.panel4.TabIndex = 101;
@@ -1047,7 +1047,7 @@
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel7.ForeColor = System.Drawing.Color.Transparent;
-            this.panel7.Location = new System.Drawing.Point(990, 672);
+            this.panel7.Location = new System.Drawing.Point(987, 672);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(33, 30);
             this.panel7.TabIndex = 102;
@@ -1083,7 +1083,7 @@
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel10.ForeColor = System.Drawing.Color.Transparent;
-            this.panel10.Location = new System.Drawing.Point(990, 994);
+            this.panel10.Location = new System.Drawing.Point(987, 994);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(33, 30);
             this.panel10.TabIndex = 103;
@@ -1289,7 +1289,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(831, 514);
+            this.Size = new System.Drawing.Size(1018, 704);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
