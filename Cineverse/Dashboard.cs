@@ -43,7 +43,8 @@ namespace Cineverse
                 new MoviesSection1(),
                 new ScheduleSection(),
                 new BookingSection(),
-                new SynopsisSection()
+                new SynopsisSection(),
+                new UserSection()
 
 
             };
@@ -360,6 +361,8 @@ namespace Cineverse
             bookingisActive = false;
             scheduleisActive = false;
             userisActive = true;
+
+            navigationcontrols.Display(5);
         }
     }
 

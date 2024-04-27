@@ -181,6 +181,12 @@
     <Compile Include="UserControls\SynopsisSection.Designer.cs">
       <DependentUpon>SynopsisSection.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserSection.Designer.cs">
+      <DependentUpon>UserSection.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddMovie.resx">
       <DependentUpon>AddMovie.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SynopsisSection.resx">
       <DependentUpon>SynopsisSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserSection.resx">
+      <DependentUpon>UserSection.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -312,6 +321,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProfilePlaceholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
