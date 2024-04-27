@@ -28,5 +28,19 @@ namespace Cineverse.UserControls
             btn_timeOut.BackColor = Color.FromArgb(20, 32, 32);
             btn_timeOut.ForeColor = Color.White;
         }
+
+        private void UserSection_Load(object sender, EventArgs e)
+        {
+
+            DateTime currentDate = DateTime.Now;
+            string formattedDate = currentDate.ToString("dddd, MMMMM d, yyyy");
+
+            lbl_date.Text = formattedDate;
+
+            DateTime dateTime = DateTime.UtcNow.Date;
+        }
+
+        
+        
     }
 }

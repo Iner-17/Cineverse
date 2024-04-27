@@ -69,7 +69,7 @@
             this.lbl_date.Size = new System.Drawing.Size(256, 19);
             this.lbl_date.TabIndex = 6;
             this.lbl_date.Text = "Wednesday, December 30, 2024";
-            this.lbl_date.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_date.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_personalDetails
             // 
@@ -264,6 +264,7 @@
             this.Controls.Add(this.lbl_myProfile);
             this.Name = "UserSection";
             this.Size = new System.Drawing.Size(1035, 721);
+            this.Load += new System.EventHandler(this.UserSection_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
