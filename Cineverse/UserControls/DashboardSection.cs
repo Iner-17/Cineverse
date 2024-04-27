@@ -60,8 +60,16 @@ namespace Cineverse
 
             UpdateNumberOfMovies();
 
-            DateTime dateTime = DateTime.UtcNow.Date;
+           
+            UpdateBookings();
             
+        }
+
+        private void UpdateBookings()
+        {
+
+            DateTime dateTime = DateTime.UtcNow.Date;
+            MySqlConnection conn = DBConnection.getConnection();
             //getting total bookings
             try
             {
@@ -73,10 +81,12 @@ namespace Cineverse
 
                 lbl_todaysBooking.Text = result.ToString();
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("" + ex);
-            } finally { conn.Close(); }
+            }
+            finally { conn.Close(); }
 
 
             //getting total revenue
@@ -185,6 +195,11 @@ namespace Cineverse
         private void lbl_refresh_MouseLeave(object sender, EventArgs e)
         {
             lbl_refresh.ForeColor = Color.White;
+        }
+
+        private void lbl_refresh_Click(object sender, EventArgs e)
+        {
+            UpdateBookings();
         }
     }
 }

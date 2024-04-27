@@ -554,6 +554,7 @@
             this.lbl_refresh.Size = new System.Drawing.Size(57, 16);
             this.lbl_refresh.TabIndex = 21;
             this.lbl_refresh.Text = "Refresh";
+            this.lbl_refresh.Click += new System.EventHandler(this.lbl_refresh_Click);
             this.lbl_refresh.MouseEnter += new System.EventHandler(this.lbl_refresh_MouseEnter);
             this.lbl_refresh.MouseLeave += new System.EventHandler(this.lbl_refresh_MouseLeave);
             // 
