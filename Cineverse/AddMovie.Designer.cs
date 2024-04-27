@@ -96,7 +96,6 @@
             this.txt_addTitle.Name = "txt_addTitle";
             this.txt_addTitle.Size = new System.Drawing.Size(322, 31);
             this.txt_addTitle.TabIndex = 7;
-            this.txt_addTitle.TextChanged += new System.EventHandler(this.txt_addTitle_TextChanged);
             // 
             // txt_addPrice
             // 

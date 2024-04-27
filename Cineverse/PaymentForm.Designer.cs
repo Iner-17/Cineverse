@@ -46,6 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_transactionComplete = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.confirmedPaymentSection1 = new Cineverse.UserControls.ConfirmedPaymentSection();
             this.lbl_paymentInProgress = new System.Windows.Forms.Label();
             this.lbl_total2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer_paymentInProgress = new System.Windows.Forms.Timer(this.components);
-            this.confirmedPaymentSection1 = new Cineverse.UserControls.ConfirmedPaymentSection();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
@@ -267,6 +267,14 @@
             this.panel4.Size = new System.Drawing.Size(1035, 718);
             this.panel4.TabIndex = 8;
             // 
+            // confirmedPaymentSection1
+            // 
+            this.confirmedPaymentSection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.confirmedPaymentSection1.Location = new System.Drawing.Point(0, 654);
+            this.confirmedPaymentSection1.Name = "confirmedPaymentSection1";
+            this.confirmedPaymentSection1.Size = new System.Drawing.Size(1035, 718);
+            this.confirmedPaymentSection1.TabIndex = 30;
+            // 
             // lbl_paymentInProgress
             // 
             this.lbl_paymentInProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -348,14 +356,6 @@
             this.timer_paymentInProgress.Enabled = true;
             this.timer_paymentInProgress.Interval = 500;
             this.timer_paymentInProgress.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // confirmedPaymentSection1
-            // 
-            this.confirmedPaymentSection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.confirmedPaymentSection1.Location = new System.Drawing.Point(0, 654);
-            this.confirmedPaymentSection1.Name = "confirmedPaymentSection1";
-            this.confirmedPaymentSection1.Size = new System.Drawing.Size(1035, 718);
-            this.confirmedPaymentSection1.TabIndex = 30;
             // 
             // PaymentForm
             // 

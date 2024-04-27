@@ -242,9 +242,5 @@ namespace Cineverse
             btn_addTime.ForeColor = Color.White;
         }
 
-        private void txt_addTitle_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

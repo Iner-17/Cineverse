@@ -37,7 +37,7 @@ namespace Cineverse.UserControls
 
                 while (reader.Read())
                 {
-                    cbo_titleLists.Items.Add(reader["title"].ToString());
+                    cbo_titleLists.Items.Add(reader["title"].ToString().ToUpper());
                 }
             }
             catch (Exception ex)
@@ -68,7 +68,7 @@ namespace Cineverse.UserControls
                 
                 while (reader.Read())
                 {
-                    lbl_Title1.Text = reader["title"].ToString();
+                    lbl_Title1.Text = reader["title"].ToString().ToUpper();
                     lbl_rating.Text = reader["movie_rating"].ToString();
                     lbl_duration1.Text = reader["duration"].ToString() + " " + "mins.";
                     lbl_genre1.Text = reader["genre"].ToString();
