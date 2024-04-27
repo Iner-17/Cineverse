@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -59,7 +60,7 @@ namespace Cineverse.UserControls
             {
                 conn.Open();
 
-                string query = "select title, price, genre, duration, movie_rating, description from movies where title=@Title;";
+                string query = "select title, price, genre, duration, movie_rating, description, photo from movies where title=@Title;";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("Title", cbo_titleLists.Text);
@@ -68,13 +69,25 @@ namespace Cineverse.UserControls
                 
                 while (reader.Read())
                 {
+                   
                     lbl_Title1.Text = reader["title"].ToString().ToUpper();
                     lbl_rating.Text = reader["movie_rating"].ToString();
                     lbl_duration1.Text = reader["duration"].ToString() + " " + "mins.";
                     lbl_genre1.Text = reader["genre"].ToString();
                     lbl_price1.Text = "₱" + reader["price"].ToString() + ".00";
                     lbl_description.Text = reader["description"].ToString();
-                    
+                    byte[] imageData = (byte[])reader["photo"];
+
+                    if (imageData != null && imageData.Length > 0)
+                    {
+                        MemoryStream ms = new MemoryStream(imageData);
+                        pb_Poster1.Image = Image.FromStream(ms);
+                    }
+                    else
+                    {
+                        pb_Poster1.Image = null;
+                    }
+
                 }
 
             }
