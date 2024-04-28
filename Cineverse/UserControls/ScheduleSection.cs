@@ -40,5 +40,15 @@ namespace Cineverse.UserControls
             }
             finally { conn.Close(); }
         }
+
+        private void lbl_refresh_MouseEnter(object sender, EventArgs e)
+        {
+            lbl_refresh.ForeColor = Color.FromArgb(31, 178, 198);
+        }
+
+        private void lbl_refresh_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_refresh.ForeColor = Color.White;
+        }
     }
 }

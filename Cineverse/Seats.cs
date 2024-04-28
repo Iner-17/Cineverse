@@ -114,7 +114,7 @@ namespace Cineverse
                 int minCounter = 0;
                 if (getPriceData.Read())
                 {
-                    lbl_moviePrice.Text = getPriceData["price"].ToString() + ".00";
+                    lbl_moviePrice.Text = "₱" + getPriceData["price"].ToString() + ".00";
                     int dur = Convert.ToInt32(getPriceData["duration"].ToString());
                     if (dur > 120)
                     {
@@ -394,9 +394,5 @@ namespace Cineverse
 
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

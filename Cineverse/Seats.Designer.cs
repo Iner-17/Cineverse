@@ -2968,7 +2968,6 @@
             this.panel5.Size = new System.Drawing.Size(16, 19);
             this.panel5.TabIndex = 6;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel3
             // 
