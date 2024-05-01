@@ -234,7 +234,7 @@ namespace Cineverse
             this.Close();
         }
 
-        private void btn_dashboard_Click(object sender, EventArgs e)
+        public void btn_dashboard_Click(object sender, EventArgs e)
         {
             btn_dashboard.BackColor = Color.FromArgb(31, 178, 198);
             btn_dashboard.ForeColor = Color.Black;
@@ -259,7 +259,7 @@ namespace Cineverse
 
             navigationcontrols.Display(0);
         }
-        private void btn_movies_Click(object sender, EventArgs e)
+        public void btn_movies_Click(object sender, EventArgs e)
         {
             btn_movies.BackColor = Color.FromArgb(31, 178, 198);
             btn_movies.ForeColor = Color.Black;
@@ -285,7 +285,7 @@ namespace Cineverse
             navigationcontrols.Display(1);
         }
 
-        private void btn_schedule_Click(object sender, EventArgs e)
+        public void btn_schedule_Click(object sender, EventArgs e)
         {
             btn_schedule.BackColor = Color.FromArgb(31, 178, 198);
             btn_schedule.ForeColor = Color.Black;
@@ -311,7 +311,7 @@ namespace Cineverse
             navigationcontrols.Display(2);
         }
 
-        private void btn_bookings_Click(object sender, EventArgs e)
+        public void btn_bookings_Click(object sender, EventArgs e)
         {
             btn_bookings.BackColor = Color.FromArgb(31, 178, 198);
             btn_bookings.ForeColor = Color.Black;
@@ -337,9 +337,9 @@ namespace Cineverse
             navigationcontrols.Display(3);
         }
 
-        
 
-        private void btn_user_Click(object sender, EventArgs e)
+
+        public void btn_user_Click(object sender, EventArgs e)
         {
             btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
             btn_bookings.ForeColor = Color.White;
@@ -364,9 +364,6 @@ namespace Cineverse
 
             navigationcontrols.Display(5);
         }
+
     }
-
-   
-    
-
 }

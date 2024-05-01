@@ -79,7 +79,15 @@ namespace Cineverse
                 cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy"));
                 object result = cmd.ExecuteScalar();
 
-                lbl_todaysBooking.Text = result.ToString();
+                if (result.ToString().Equals(""))
+                {
+                    lbl_todaysBooking.Text = "0";
+                }
+                else
+                {
+                    lbl_todaysBooking.Text = result.ToString();
+
+                }
 
             }
             catch (Exception ex)
@@ -98,7 +106,16 @@ namespace Cineverse
                 cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy"));
                 object result = cmd.ExecuteScalar();
 
-                lbl_revenue.Text = "₱" + result.ToString();
+                if (result.ToString().Equals(""))
+                {
+                    lbl_revenue.Text = "₱0";
+                }
+                else
+                {
+                lbl_revenue.Text = "₱" + result.ToString() + ".00";
+
+                }
+
 
             }
             catch (Exception ex)
@@ -200,6 +217,13 @@ namespace Cineverse
         private void lbl_refresh_Click(object sender, EventArgs e)
         {
             UpdateBookings();
+        }
+
+        private void lbl_viewAll_Click(object sender, EventArgs e)
+        {
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.btn_movies_Click(this, EventArgs.Empty);
         }
     }
 }

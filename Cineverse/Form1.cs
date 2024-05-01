@@ -55,8 +55,9 @@ namespace Cineverse
                     if(Convert.ToInt32(count) != 1)
                     {
                         MessageBox.Show("Incorrect username or password");
-                        txt_user.Text = "";
-                        txt_pass.Text = "";
+                        txt_pass.UseSystemPasswordChar = false;
+                        txt_user.Text = "Enter Username or Email";
+                        txt_pass.Text = "Enter Password";
                     } 
                     else
                     {

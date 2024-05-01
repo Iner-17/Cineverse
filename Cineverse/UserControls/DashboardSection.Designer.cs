@@ -45,6 +45,7 @@
             this.lbl_todaysBooking = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lbl_refresh = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.pb_dbMovieDisplay2 = new System.Windows.Forms.PictureBox();
             this.pb_dbMovieDisplay1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_refresh = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -189,7 +189,7 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(33, 38);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(137, 19);
+            this.label17.Size = new System.Drawing.Size(134, 21);
             this.label17.TabIndex = 14;
             this.label17.Text = "Today\'s Revenue";
             // 
@@ -223,7 +223,7 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(4, 37);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(199, 19);
+            this.label15.Size = new System.Drawing.Size(190, 21);
             this.label15.TabIndex = 14;
             this.label15.Text = "No. of Scheduled Movies";
             // 
@@ -257,7 +257,7 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(36, 38);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 19);
+            this.label12.Size = new System.Drawing.Size(130, 21);
             this.label12.TabIndex = 12;
             this.label12.Text = "Today\'s Booking";
             // 
@@ -289,6 +289,22 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(785, 571);
             this.panel7.TabIndex = 16;
+            // 
+            // lbl_refresh
+            // 
+            this.lbl_refresh.AutoSize = true;
+            this.lbl_refresh.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_refresh.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_refresh.ForeColor = System.Drawing.Color.White;
+            this.lbl_refresh.Location = new System.Drawing.Point(604, 31);
+            this.lbl_refresh.Name = "lbl_refresh";
+            this.lbl_refresh.Size = new System.Drawing.Size(57, 16);
+            this.lbl_refresh.TabIndex = 21;
+            this.lbl_refresh.Text = "Refresh";
+            this.lbl_refresh.Click += new System.EventHandler(this.lbl_refresh_Click);
+            this.lbl_refresh.MouseEnter += new System.EventHandler(this.lbl_refresh_MouseEnter);
+            this.lbl_refresh.MouseLeave += new System.EventHandler(this.lbl_refresh_MouseLeave);
             // 
             // label5
             // 
@@ -471,6 +487,7 @@
             this.lbl_viewAll.Size = new System.Drawing.Size(61, 16);
             this.lbl_viewAll.TabIndex = 17;
             this.lbl_viewAll.Text = "View All";
+            this.lbl_viewAll.Click += new System.EventHandler(this.lbl_viewAll_Click);
             this.lbl_viewAll.MouseEnter += new System.EventHandler(this.lbl_viewAll_MouseEnter);
             this.lbl_viewAll.MouseLeave += new System.EventHandler(this.lbl_viewAll_MouseLeave);
             // 
@@ -541,22 +558,6 @@
             this.label2.Size = new System.Drawing.Size(325, 35);
             this.label2.TabIndex = 2;
             this.label2.Text = "SCHEDULED MOVIES";
-            // 
-            // lbl_refresh
-            // 
-            this.lbl_refresh.AutoSize = true;
-            this.lbl_refresh.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_refresh.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_refresh.ForeColor = System.Drawing.Color.White;
-            this.lbl_refresh.Location = new System.Drawing.Point(604, 31);
-            this.lbl_refresh.Name = "lbl_refresh";
-            this.lbl_refresh.Size = new System.Drawing.Size(57, 16);
-            this.lbl_refresh.TabIndex = 21;
-            this.lbl_refresh.Text = "Refresh";
-            this.lbl_refresh.Click += new System.EventHandler(this.lbl_refresh_Click);
-            this.lbl_refresh.MouseEnter += new System.EventHandler(this.lbl_refresh_MouseEnter);
-            this.lbl_refresh.MouseLeave += new System.EventHandler(this.lbl_refresh_MouseLeave);
             // 
             // DashboardSection
             // 

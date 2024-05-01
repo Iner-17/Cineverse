@@ -133,6 +133,7 @@
             this.txt_confirmPassword.SelectedText = "";
             this.txt_confirmPassword.Size = new System.Drawing.Size(375, 40);
             this.txt_confirmPassword.TabIndex = 7;
+            this.txt_confirmPassword.TextChanged += new System.EventHandler(this.txt_confirmPassword_TextChanged);
             this.txt_confirmPassword.Enter += new System.EventHandler(this.txt_confirmPassword_Enter);
             this.txt_confirmPassword.Leave += new System.EventHandler(this.txt_confirmPassword_Leave);
             // 
@@ -201,7 +202,7 @@
             this.txt_lastName.ForeColor = System.Drawing.Color.Silver;
             this.txt_lastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_lastName.Location = new System.Drawing.Point(268, 228);
-            this.txt_lastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_lastName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_lastName.Name = "txt_lastName";
             this.txt_lastName.PasswordChar = '\0';
             this.txt_lastName.PlaceholderText = "";

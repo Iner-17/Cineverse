@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,8 @@ namespace Cineverse
                 txt_firstName.Text = "";
                 txt_firstName.ForeColor = Color.White;
             }
+
+            txt_firstName.BorderColor = Color.White;
         }
 
         private void txt_firstName_Leave(object sender, EventArgs e)
@@ -52,6 +55,8 @@ namespace Cineverse
                 txt_lastName.Text = "";
                 txt_lastName.ForeColor = Color.White;
             }
+
+            txt_lastName.BorderColor = Color.White;
         }
 
         private void txt_lastName_Leave(object sender, EventArgs e)
@@ -94,6 +99,8 @@ namespace Cineverse
                 txt_username.Text = "";
                 txt_username.ForeColor = Color.White;
             }
+
+            txt_username.BorderColor = Color.White;
         }
 
         private void txt_username_Leave_1(object sender, EventArgs e)
@@ -141,6 +148,8 @@ namespace Cineverse
                     txt_password.UseSystemPasswordChar = true;
                 } 
             }
+
+            txt_password.BorderColor = Color.White;
         }
 
         private void txt_password_Leave(object sender, EventArgs e)
@@ -167,8 +176,8 @@ namespace Cineverse
                     txt_confirmPassword.UseSystemPasswordChar = true;
                 }
             }
+            txt_confirmPassword.BorderColor = Color.White;
 
-            
         }
 
         private void txt_confirmPassword_Leave(object sender, EventArgs e)
@@ -241,11 +250,35 @@ namespace Cineverse
                 else
                 {
                     MessageBox.Show("Unmatched Password");
+                    txt_confirmPassword.BorderColor = Color.Red;
                 }
             }
             else
             {
                 MessageBox.Show("Please fill up all fields");
+                if (txt_firstName.Text.Equals("First Name"))
+                {
+                    txt_firstName.BorderColor = Color.Red;
+                }
+                if (txt_lastName.Text.Equals("Last Name"))
+                {
+                    txt_lastName.BorderColor = Color.Red;
+                }
+                if (txt_username.Text.Equals("Username"))
+                {
+                    txt_username.BorderColor = Color.Red;
+                }
+                if (txt_password.Text.Equals("Password"))
+                {
+                    txt_password.BorderColor = Color.Red;
+                }
+                if (txt_confirmPassword.Text.Equals("Confirm Password"))
+                {
+                    txt_confirmPassword.BorderColor = Color.Red;
+                }
+                
+
+
             }
         }
 
@@ -254,6 +287,11 @@ namespace Cineverse
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
+        }
+
+        private void txt_confirmPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
