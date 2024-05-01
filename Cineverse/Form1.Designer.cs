@@ -96,6 +96,10 @@
             this.btn_hide.BackColor = System.Drawing.Color.Transparent;
             this.btn_hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_hide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_hide.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_hide.FlatAppearance.BorderSize = 0;
+            this.btn_hide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btn_hide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_hide.Image = global::Cineverse.Properties.Resources.hidesmol;
             this.btn_hide.Location = new System.Drawing.Point(415, 415);
@@ -114,7 +118,7 @@
             this.signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.signup.Location = new System.Drawing.Point(320, 589);
             this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(68, 19);
+            this.signup.Size = new System.Drawing.Size(69, 21);
             this.signup.TabIndex = 9;
             this.signup.Text = "Sign Up";
             this.signup.Click += new System.EventHandler(this.signup_Click);
@@ -123,6 +127,10 @@
             // 
             this.btn_show.BackColor = System.Drawing.Color.Transparent;
             this.btn_show.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_show.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_show.FlatAppearance.BorderSize = 0;
+            this.btn_show.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btn_show.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_show.Image = global::Cineverse.Properties.Resources.showsmol;
             this.btn_show.Location = new System.Drawing.Point(415, 415);
@@ -140,7 +148,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(137, 589);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 19);
+            this.label4.Size = new System.Drawing.Size(186, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 
