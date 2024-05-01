@@ -30,7 +30,9 @@
         {            this.LoginBg = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_hide = new System.Windows.Forms.Button();
             this.signup = new System.Windows.Forms.Label();
+            this.btn_show = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,7 +74,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.btn_hide);
             this.panel3.Controls.Add(this.signup);
+            this.panel3.Controls.Add(this.btn_show);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label3);
@@ -87,6 +91,20 @@
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // btn_hide
+            // 
+            this.btn_hide.BackColor = System.Drawing.Color.Transparent;
+            this.btn_hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_hide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_hide.Image = global::Cineverse.Properties.Resources.hidesmol;
+            this.btn_hide.Location = new System.Drawing.Point(415, 415);
+            this.btn_hide.Name = "btn_hide";
+            this.btn_hide.Size = new System.Drawing.Size(35, 27);
+            this.btn_hide.TabIndex = 5;
+            this.btn_hide.UseVisualStyleBackColor = false;
+            this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);
+            // 
             // signup
             // 
             this.signup.AutoSize = true;
@@ -96,10 +114,23 @@
             this.signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.signup.Location = new System.Drawing.Point(320, 589);
             this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(69, 21);
+            this.signup.Size = new System.Drawing.Size(68, 19);
             this.signup.TabIndex = 9;
             this.signup.Text = "Sign Up";
             this.signup.Click += new System.EventHandler(this.signup_Click);
+            // 
+            // btn_show
+            // 
+            this.btn_show.BackColor = System.Drawing.Color.Transparent;
+            this.btn_show.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_show.Image = global::Cineverse.Properties.Resources.showsmol;
+            this.btn_show.Location = new System.Drawing.Point(415, 415);
+            this.btn_show.Name = "btn_show";
+            this.btn_show.Size = new System.Drawing.Size(35, 27);
+            this.btn_show.TabIndex = 4;
+            this.btn_show.UseVisualStyleBackColor = false;
+            this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
             // 
             // label4
             // 
@@ -109,7 +140,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(137, 589);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 21);
+            this.label4.Size = new System.Drawing.Size(189, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 
@@ -181,6 +212,8 @@
             this.txt_pass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.Color.Silver;
             this.txt_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_pass.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txt_pass.IconRightOffset = new System.Drawing.Point(3, 0);
             this.txt_pass.Location = new System.Drawing.Point(77, 409);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_pass.Name = "txt_pass";
@@ -273,6 +306,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label signup;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_show;
+        private System.Windows.Forms.Button btn_hide;
     }
 }
 

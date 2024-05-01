@@ -143,6 +143,24 @@ namespace Cineverse
             }
         }
 
-       
+        private void btn_show_Click(object sender, EventArgs e)
+        {
+            if (txt_pass.UseSystemPasswordChar == false)
+            {
+                btn_hide.BringToFront();
+                txt_pass.UseSystemPasswordChar = true;
+            }
+            btn_show.BackColor = Color.Black;
+        }
+        private void btn_hide_Click(object sender, EventArgs e)
+        {
+            if (txt_pass.UseSystemPasswordChar == true)
+            {
+               btn_show.BringToFront();
+               txt_pass.UseSystemPasswordChar = false;
+            }
+            btn_hide.BackColor = Color.Black;
+        }
+
     }
 }
