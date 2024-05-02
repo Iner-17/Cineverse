@@ -189,7 +189,7 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(33, 38);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(134, 21);
+            this.label17.Size = new System.Drawing.Size(137, 19);
             this.label17.TabIndex = 14;
             this.label17.Text = "Today\'s Revenue";
             // 
@@ -223,7 +223,7 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(4, 37);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(190, 21);
+            this.label15.Size = new System.Drawing.Size(199, 19);
             this.label15.TabIndex = 14;
             this.label15.Text = "No. of Scheduled Movies";
             // 
@@ -257,7 +257,7 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(36, 38);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 21);
+            this.label12.Size = new System.Drawing.Size(134, 19);
             this.label12.TabIndex = 12;
             this.label12.Text = "Today\'s Booking";
             // 
@@ -411,14 +411,14 @@
             // lbl_title1
             // 
             this.lbl_title1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title1.ForeColor = System.Drawing.Color.White;
             this.lbl_title1.Location = new System.Drawing.Point(32, 400);
             this.lbl_title1.Name = "lbl_title1";
             this.lbl_title1.Size = new System.Drawing.Size(222, 40);
             this.lbl_title1.TabIndex = 7;
             this.lbl_title1.Text = "Title";
-            this.lbl_title1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_title1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pb_dbMovieDisplay3
             // 
@@ -457,14 +457,14 @@
             // lbl_title3
             // 
             this.lbl_title3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title3.ForeColor = System.Drawing.Color.White;
             this.lbl_title3.Location = new System.Drawing.Point(527, 400);
             this.lbl_title3.Name = "lbl_title3";
             this.lbl_title3.Size = new System.Drawing.Size(225, 40);
             this.lbl_title3.TabIndex = 7;
             this.lbl_title3.Text = "Title";
-            this.lbl_title3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_title3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_duration2
             // 
@@ -497,14 +497,14 @@
             // lbl_title2
             // 
             this.lbl_title2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title2.ForeColor = System.Drawing.Color.White;
             this.lbl_title2.Location = new System.Drawing.Point(281, 400);
             this.lbl_title2.Name = "lbl_title2";
             this.lbl_title2.Size = new System.Drawing.Size(222, 40);
             this.lbl_title2.TabIndex = 7;
             this.lbl_title2.Text = "Title";
-            this.lbl_title2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_title2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_genre1
             // 
