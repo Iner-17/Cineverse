@@ -46,9 +46,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lbl_refresh = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_price3 = new System.Windows.Forms.Label();
+            this.lbl_price2 = new System.Windows.Forms.Label();
+            this.lbl_price1 = new System.Windows.Forms.Label();
             this.btn_getTickets1 = new System.Windows.Forms.Button();
             this.btn_getTickets3 = new System.Windows.Forms.Button();
             this.btn_getTickets2 = new System.Windows.Forms.Button();
@@ -265,9 +265,9 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel7.Controls.Add(this.lbl_refresh);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.lbl_price3);
+            this.panel7.Controls.Add(this.lbl_price2);
+            this.panel7.Controls.Add(this.lbl_price1);
             this.panel7.Controls.Add(this.btn_getTickets1);
             this.panel7.Controls.Add(this.btn_getTickets3);
             this.panel7.Controls.Add(this.btn_getTickets2);
@@ -306,41 +306,41 @@
             this.lbl_refresh.MouseEnter += new System.EventHandler(this.lbl_refresh_MouseEnter);
             this.lbl_refresh.MouseLeave += new System.EventHandler(this.lbl_refresh_MouseLeave);
             // 
-            // label5
+            // lbl_price3
             // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(530, 481);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 26);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Price";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_price3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_price3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_price3.ForeColor = System.Drawing.Color.White;
+            this.lbl_price3.Location = new System.Drawing.Point(530, 481);
+            this.lbl_price3.Name = "lbl_price3";
+            this.lbl_price3.Size = new System.Drawing.Size(222, 26);
+            this.lbl_price3.TabIndex = 20;
+            this.lbl_price3.Text = "Price";
+            this.lbl_price3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lbl_price2
             // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(281, 481);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 26);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Price";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_price2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_price2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_price2.ForeColor = System.Drawing.Color.White;
+            this.lbl_price2.Location = new System.Drawing.Point(281, 481);
+            this.lbl_price2.Name = "lbl_price2";
+            this.lbl_price2.Size = new System.Drawing.Size(222, 26);
+            this.lbl_price2.TabIndex = 19;
+            this.lbl_price2.Text = "Price";
+            this.lbl_price2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lbl_price1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 481);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 26);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Price";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_price1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_price1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_price1.ForeColor = System.Drawing.Color.White;
+            this.lbl_price1.Location = new System.Drawing.Point(32, 481);
+            this.lbl_price1.Name = "lbl_price1";
+            this.lbl_price1.Size = new System.Drawing.Size(222, 26);
+            this.lbl_price1.TabIndex = 18;
+            this.lbl_price1.Text = "Price";
+            this.lbl_price1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_getTickets1
             // 
@@ -356,6 +356,7 @@
             this.btn_getTickets1.TabIndex = 11;
             this.btn_getTickets1.Text = "Get Tickets";
             this.btn_getTickets1.UseVisualStyleBackColor = false;
+            this.btn_getTickets1.Click += new System.EventHandler(this.btn_getTickets1_Click);
             this.btn_getTickets1.MouseEnter += new System.EventHandler(this.btn_getTickets1_MouseEnter_1);
             this.btn_getTickets1.MouseLeave += new System.EventHandler(this.btn_getTickets1_MouseLeave_1);
             // 
@@ -373,6 +374,7 @@
             this.btn_getTickets3.TabIndex = 11;
             this.btn_getTickets3.Text = "Get Tickets";
             this.btn_getTickets3.UseVisualStyleBackColor = false;
+            this.btn_getTickets3.Click += new System.EventHandler(this.btn_getTickets3_Click);
             this.btn_getTickets3.MouseEnter += new System.EventHandler(this.btn_getTickets3_MouseEnter_1);
             this.btn_getTickets3.MouseLeave += new System.EventHandler(this.btn_getTickets3_MouseLeave_1);
             // 
@@ -390,6 +392,7 @@
             this.btn_getTickets2.TabIndex = 11;
             this.btn_getTickets2.Text = "Get Tickets";
             this.btn_getTickets2.UseVisualStyleBackColor = false;
+            this.btn_getTickets2.Click += new System.EventHandler(this.btn_getTickets2_Click);
             this.btn_getTickets2.MouseEnter += new System.EventHandler(this.btn_getTickets2_MouseEnter_1);
             this.btn_getTickets2.MouseLeave += new System.EventHandler(this.btn_getTickets2_MouseLeave_1);
             // 
@@ -625,9 +628,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_viewAll;
         private System.Windows.Forms.Button btn_getTickets1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_price1;
+        private System.Windows.Forms.Label lbl_price3;
+        private System.Windows.Forms.Label lbl_price2;
         private System.Windows.Forms.Label lbl_refresh;
     }
 }
