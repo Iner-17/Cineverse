@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,32 @@ namespace Cineverse.UserControls
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
+
+
+
+
+            try
+            {
+                conn.Open();
+
+                string query = "select title from movies";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cbo_movies.Items.Add(reader["title"].ToString().ToUpper());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void lbl_refresh_MouseEnter(object sender, EventArgs e)
@@ -72,7 +99,12 @@ namespace Cineverse.UserControls
         private void btn_thisWeek_MouseLeave(object sender, EventArgs e)
         {
             btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
-            btn_thisWeek.ForeColor= Color.White;
+            btn_thisWeek.ForeColor = Color.White;
+        }
+
+        private void cbo_movies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

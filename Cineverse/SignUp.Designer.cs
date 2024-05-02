@@ -106,7 +106,7 @@
             this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(104, 509);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(305, 22);
+            this.checkBox1.Size = new System.Drawing.Size(317, 20);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "I accept the Terms of Use and Privacy Policy";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -133,7 +133,6 @@
             this.txt_confirmPassword.SelectedText = "";
             this.txt_confirmPassword.Size = new System.Drawing.Size(375, 40);
             this.txt_confirmPassword.TabIndex = 7;
-            this.txt_confirmPassword.TextChanged += new System.EventHandler(this.txt_confirmPassword_TextChanged);
             this.txt_confirmPassword.Enter += new System.EventHandler(this.txt_confirmPassword_Enter);
             this.txt_confirmPassword.Leave += new System.EventHandler(this.txt_confirmPassword_Leave);
             // 
@@ -166,7 +165,7 @@
             // 
             this.txt_username.BorderRadius = 10;
             this.txt_username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_username.DefaultText = "Username";
+            this.txt_username.DefaultText = "Username*";
             this.txt_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -191,7 +190,7 @@
             // 
             this.txt_lastName.BorderRadius = 10;
             this.txt_lastName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_lastName.DefaultText = "Last Name";
+            this.txt_lastName.DefaultText = "Last Name*";
             this.txt_lastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_lastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_lastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -217,7 +216,7 @@
             this.txt_firstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_firstName.BorderRadius = 10;
             this.txt_firstName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_firstName.DefaultText = "First Name";
+            this.txt_firstName.DefaultText = "First Name*";
             this.txt_firstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_firstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_firstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -247,7 +246,7 @@
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.Login.Location = new System.Drawing.Point(335, 604);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(56, 21);
+            this.Login.Size = new System.Drawing.Size(55, 19);
             this.Login.TabIndex = 10;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
@@ -260,7 +259,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(135, 604);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 21);
+            this.label4.Size = new System.Drawing.Size(206, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
@@ -298,7 +297,7 @@
             // 
             this.txt_email.BorderRadius = 10;
             this.txt_email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_email.DefaultText = "Email (Optional)";
+            this.txt_email.DefaultText = "Email*";
             this.txt_email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));

@@ -30,7 +30,7 @@ namespace Cineverse
         private void txt_firstName_Enter(object sender, EventArgs e)
         {
             
-            if (txt_firstName.Text == "First Name")
+            if (txt_firstName.Text == "First Name*")
             {
                 txt_firstName.Text = "";
                 txt_firstName.ForeColor = Color.White;
@@ -43,14 +43,14 @@ namespace Cineverse
         {
             if (txt_firstName.Text == "")
             {
-                txt_firstName.Text = "First Name";
+                txt_firstName.Text = "First Name*";
                 txt_firstName.ForeColor = Color.Silver;
             }
         }
 
         private void txt_lastName_Enter(object sender, EventArgs e)
         {
-            if (txt_lastName.Text == "Last Name")
+            if (txt_lastName.Text == "Last Name*")
             {
                 txt_lastName.Text = "";
                 txt_lastName.ForeColor = Color.White;
@@ -63,7 +63,7 @@ namespace Cineverse
         {
             if (txt_lastName.Text == "")
             {
-                txt_lastName.Text = "Last Name";
+                txt_lastName.Text = "Last Name*";
                 txt_lastName.ForeColor = Color.Silver;
             }
         }
@@ -76,7 +76,7 @@ namespace Cineverse
 
         private void txt_email_Enter(object sender, EventArgs e)
         {
-            if (txt_email.Text == "Email (Optional)")
+            if (txt_email.Text == "Email*")
             {
                 txt_email.Text = "";
                 txt_email.ForeColor = Color.White;
@@ -87,14 +87,14 @@ namespace Cineverse
         {
             if (txt_email.Text == "")
             {
-                txt_email.Text = "Email (Optional)";
+                txt_email.Text = "Email*";
                 txt_email.ForeColor = Color.Silver;
             }
         }
 
         private void txt_username_Enter(object sender, EventArgs e)
         {
-            if (txt_username.Text == "Username")
+            if (txt_username.Text == "Username*")
             {
                 txt_username.Text = "";
                 txt_username.ForeColor = Color.White;
@@ -107,7 +107,7 @@ namespace Cineverse
         {
             if (txt_username.Text == "")
             {
-                txt_username.Text = "Username";
+                txt_username.Text = "Username*";
                 txt_username.ForeColor = Color.Silver;
             }
 
@@ -125,7 +125,7 @@ namespace Cineverse
                 if (reader.HasRows)
                 {
                     MessageBox.Show("Username Already Exists.");
-                    txt_username.Text = "Username";
+                    txt_username.Text = "Username*";
                     txt_username.ForeColor = Color.Silver;
                 }
             }
@@ -210,7 +210,7 @@ namespace Cineverse
             MySqlConnection conn = DBConnection.getConnection();
 
 
-            if (txt_firstName.Text != "First Name" && txt_lastName.Text != "Last Name" && txt_email.Text != "Email (Optional)" && txt_username.Text != "Username" && txt_password.Text != "Password" && txt_confirmPassword.Text != "Confirm Password")
+            if (txt_firstName.Text != "First Name*" && txt_lastName.Text != "Last Name*" && txt_email.Text != "Email*" && txt_username.Text != "Username*" && txt_password.Text != "Password" && txt_confirmPassword.Text != "Confirm Password")
             {
                 if (txt_confirmPassword.Text == txt_password.Text)
                 {
@@ -256,15 +256,19 @@ namespace Cineverse
             else
             {
                 MessageBox.Show("Please fill up all fields");
-                if (txt_firstName.Text.Equals("First Name"))
+                if (txt_firstName.Text.Equals("First Name*"))
                 {
                     txt_firstName.BorderColor = Color.Red;
                 }
-                if (txt_lastName.Text.Equals("Last Name"))
+                if (txt_lastName.Text.Equals("Last Name*"))
                 {
                     txt_lastName.BorderColor = Color.Red;
                 }
-                if (txt_username.Text.Equals("Username"))
+                if (txt_email.Text.Equals("Email*"))
+                {
+                    txt_email.BorderColor = Color.Red;
+                }
+                if (txt_username.Text.Equals("Username*"))
                 {
                     txt_username.BorderColor = Color.Red;
                 }
@@ -289,9 +293,5 @@ namespace Cineverse
             panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
         }
 
-        private void txt_confirmPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
