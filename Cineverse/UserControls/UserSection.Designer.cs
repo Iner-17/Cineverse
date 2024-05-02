@@ -207,7 +207,7 @@
             // 
             // btn_timeOut
             // 
-            this.btn_timeOut.BackColor = System.Drawing.Color.Transparent;
+            this.btn_timeOut.BackColor = System.Drawing.Color.DarkRed;
             this.btn_timeOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_timeOut.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btn_timeOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -219,8 +219,6 @@
             this.btn_timeOut.TabIndex = 99;
             this.btn_timeOut.Text = "Time OUT";
             this.btn_timeOut.UseVisualStyleBackColor = false;
-            this.btn_timeOut.MouseEnter += new System.EventHandler(this.btn_timeOut_MouseEnter);
-            this.btn_timeOut.MouseLeave += new System.EventHandler(this.btn_timeOut_MouseLeave);
             // 
             // btn_edit
             // 

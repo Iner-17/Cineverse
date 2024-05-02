@@ -17,18 +17,6 @@ namespace Cineverse.UserControls
             InitializeComponent();
         }
 
-        private void btn_timeOut_MouseEnter(object sender, EventArgs e)
-        {
-            btn_timeOut.BackColor = Color.DarkRed;
-            btn_timeOut.ForeColor = Color.White;
-        }
-
-        private void btn_timeOut_MouseLeave(object sender, EventArgs e)
-        {
-            btn_timeOut.BackColor = Color.FromArgb(20, 32, 32);
-            btn_timeOut.ForeColor = Color.White;
-        }
-
         private void UserSection_Load(object sender, EventArgs e)
         {
 
