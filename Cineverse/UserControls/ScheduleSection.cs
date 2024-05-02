@@ -50,5 +50,29 @@ namespace Cineverse.UserControls
         {
             lbl_refresh.ForeColor = Color.White;
         }
+
+        private void btn_today_MouseEnter(object sender, EventArgs e)
+        {
+            btn_today.BackColor = Color.FromArgb(31, 178, 198);
+            btn_today.ForeColor = Color.Black;
+        }
+
+        private void btn_today_MouseLeave(object sender, EventArgs e)
+        {
+            btn_today.BackColor = Color.FromArgb(20, 32, 32);
+            btn_today.ForeColor = Color.White;
+        }
+
+        private void btn_thisWeek_MouseEnter(object sender, EventArgs e)
+        {
+            btn_thisWeek.BackColor = Color.FromArgb(31, 178, 198);
+            btn_thisWeek.ForeColor = Color.Black;
+        }
+
+        private void btn_thisWeek_MouseLeave(object sender, EventArgs e)
+        {
+            btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
+            btn_thisWeek.ForeColor= Color.White;
+        }
     }
 }
