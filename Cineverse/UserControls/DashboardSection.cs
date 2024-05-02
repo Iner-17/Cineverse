@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,9 +63,67 @@ namespace Cineverse
 
            
             UpdateBookings();
-            
+
+
+            displayMovieDashboard();
+           
+
         }
 
+        private void displayMovieDashboard()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+
+            for (int i = 1; i <= 3; i++)
+            {
+                PictureBox pb_poster = Controls.Find("pb_dbMovieDisplay" + i, true).FirstOrDefault() as PictureBox;
+                Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
+
+                try
+                {
+                    conn.Open();
+
+                    string getRandomMoviesquery = "SELECT title, duration, genre, price, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
+                    MySqlCommand cmd = new MySqlCommand(getRandomMoviesquery, conn);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string title = reader.GetString("title").ToUpper();
+                        string duration = reader.GetInt32("duration").ToString();
+                        string genre = reader.GetString("genre");
+                        string price = reader.GetDouble("price").ToString(); ;
+                        byte[] imageData = (byte[])reader["photo"];
+
+                        if (imageData != null && imageData.Length > 0)
+                        {
+                            MemoryStream ms = new MemoryStream(imageData);
+                            pb_poster.Image = Image.FromStream(ms);
+                            lbl_title.Text = title;
+                        }
+                        else
+                        {
+                            pb_poster.Image = null;
+                        }
+                        
+                        Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
+                        Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
+                        Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+                    }
+                }
+
+
+                catch (Exception ex1)
+                {
+                    MessageBox.Show(ex1.Message);
+                }
+                finally { conn.Close(); }
+            }
+
+            
+        }
         private void UpdateBookings()
         {
 
@@ -217,6 +276,7 @@ namespace Cineverse
         private void lbl_refresh_Click(object sender, EventArgs e)
         {
             UpdateBookings();
+            displayMovieDashboard();
         }
 
         private void lbl_viewAll_Click(object sender, EventArgs e)
