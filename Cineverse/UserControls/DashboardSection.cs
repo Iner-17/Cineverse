@@ -9,11 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Cineverse
 {
     public partial class DashboardSection : UserControl
     {
+        private string username;
+        public string Title { get; set; }
         public DashboardSection()
         {
             InitializeComponent();
@@ -215,7 +218,62 @@ namespace Cineverse
             }
         }
 
+        private void btn_getTickets1_Click(object sender, EventArgs e)
+        {
+            if (lbl_title1.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title1.Text;
 
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
+
+        private void btn_getTickets2_Click(object sender, EventArgs e)
+        {
+            if (lbl_title1.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title2.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
+
+        private void btn_getTickets3_Click(object sender, EventArgs e)
+        {
+            if (lbl_title1.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title3.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Hide();
+            }
+        }
 
         private void btn_getTickets3_MouseEnter_1(object sender, EventArgs e)
         {
@@ -285,5 +343,7 @@ namespace Cineverse
             Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
             dashboard1.btn_movies_Click(this, EventArgs.Empty);
         }
+
+        
     }
 }
