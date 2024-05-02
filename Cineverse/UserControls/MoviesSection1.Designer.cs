@@ -1004,6 +1004,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(33, 30);
             this.panel2.TabIndex = 100;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // panel4
             // 
@@ -1016,6 +1017,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(33, 30);
             this.panel4.TabIndex = 101;
+            this.panel4.Click += new System.EventHandler(this.panel4_Click);
             // 
             // panel5
             // 
@@ -1028,6 +1030,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(33, 30);
             this.panel5.TabIndex = 100;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel6
             // 
@@ -1040,6 +1043,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(33, 30);
             this.panel6.TabIndex = 101;
+            this.panel6.Click += new System.EventHandler(this.panel6_Click);
             // 
             // panel7
             // 
@@ -1052,6 +1056,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(33, 30);
             this.panel7.TabIndex = 102;
+            this.panel7.Click += new System.EventHandler(this.panel7_Click);
             // 
             // panel8
             // 
@@ -1064,6 +1069,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(33, 30);
             this.panel8.TabIndex = 101;
+            this.panel8.Click += new System.EventHandler(this.panel8_Click);
             // 
             // panel9
             // 
@@ -1076,6 +1082,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(33, 30);
             this.panel9.TabIndex = 102;
+            this.panel9.Click += new System.EventHandler(this.panel9_Click);
             // 
             // panel10
             // 
@@ -1088,6 +1095,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(33, 30);
             this.panel10.TabIndex = 103;
+            this.panel10.Click += new System.EventHandler(this.panel10_Click);
             // 
             // lbl_rating1
             // 
@@ -1290,7 +1298,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1001, 687);
+            this.Size = new System.Drawing.Size(950, 636);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();

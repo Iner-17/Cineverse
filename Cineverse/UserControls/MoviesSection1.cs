@@ -452,111 +452,69 @@ namespace Cineverse
 
         private void label3_Click(object sender, EventArgs e)
         {
-
-
-            SynopsisSection.GlobalLabel.Text = lbl_title1.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title1.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
-           
+            navigateSynopsis(lbl_title1.Text);
         }
 
         private void label4_Click_1(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-
-
-            SynopsisSection.GlobalLabel.Text = lbl_title2.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title2.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
+            navigateSynopsis(lbl_title2.Text);
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-
-
-            SynopsisSection.GlobalLabel.Text = lbl_title3.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title3.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
+            navigateSynopsis(lbl_title3.Text);
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-
-
-            SynopsisSection.GlobalLabel.Text = lbl_title4.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title4.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
+            navigateSynopsis(lbl_title4.Text);
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-
-
-            SynopsisSection.GlobalLabel.Text = lbl_title5.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title5.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
+            navigateSynopsis(lbl_title5.Text);
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-
-
-            SynopsisSection.GlobalLabel.Text = lbl_title6.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title6.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
+            navigateSynopsis(lbl_title6.Text);
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-
-
-            SynopsisSection.GlobalLabel.Text = lbl_title7.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title7.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
+            navigateSynopsis(lbl_title7.Text);
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-
-
-            SynopsisSection.GlobalLabel.Text = lbl_title8.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title8.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
+            navigateSynopsis(lbl_title8.Text);
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
+            navigateSynopsis(lbl_title9.Text);
+        }
+
+        private void navigateSynopsis(string movieTitle)
+        {
             Dashboard dashboard = new Dashboard();
 
+            if (movieTitle != "Title")
+            {
+                SynopsisSection.GlobalLabel.Text = movieTitle;
+                SynopsisSection.GlobalComboBox.Text = movieTitle;
 
-            SynopsisSection.GlobalLabel.Text = lbl_title9.Text;
-            SynopsisSection.GlobalComboBox.Text = lbl_title9.Text;
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.navigateToSynopsis();
+                Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+                dashboard1.navigateToSynopsis();
+            }
+            else
+            {
+                return;
+            }
+            
         }
+
+       
 
         private void lbl_title7_Click(object sender, EventArgs e)
         {
@@ -565,40 +523,93 @@ namespace Cineverse
 
         private void panel3_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
+            deleteButton(lbl_title1.Text);
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title2.Text);
+        }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title3.Text);
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title4.Text);
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title5.Text);
+        }
+
+        private void panel7_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title6.Text);
+        }
+
+        private void panel8_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title7.Text);
+        }
+
+        private void panel9_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title8.Text);
+        }
+
+        private void panel10_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title9.Text);
+        }
+
+        private void deleteButton(string movieTitle)
+        {
+
+            if (movieTitle != "Title") { 
+                DialogResult result = MessageBox.Show(
 
                "Do you really want to delete the movie?",
                "Delete Confirmation",
                MessageBoxButtons.YesNo,
                MessageBoxIcon.Question,
                MessageBoxDefaultButton.Button1 // Default button is "Yes"
-            
+
             );
 
-            if (result == DialogResult.Yes) {
+            if (result == DialogResult.Yes)
+            {
                 MySqlConnection conn = DBConnection.getConnection();
 
-                try
-                {
-                    conn.Open();
-                    string deleteMovie = "delete from movies where title = @Title";
-                    MySqlCommand deleteMoviecmd = new MySqlCommand(deleteMovie, conn);
-                    deleteMoviecmd.Parameters.AddWithValue("Title", lbl_title1.Text);
-                    deleteMoviecmd.ExecuteNonQuery();
-                    MessageBox.Show("Movie deleted successfully.");
-                    Image placeholder = Cineverse.Properties.Resources.PosterPlaceholder;
+                    try
+                    {
+                        conn.Open();
+                        string deleteMovie = "delete from movies where title = @Title";
+                        MySqlCommand deleteMoviecmd = new MySqlCommand(deleteMovie, conn);
+                        deleteMoviecmd.Parameters.AddWithValue("Title", movieTitle);
+                        deleteMoviecmd.ExecuteNonQuery();
+                        MessageBox.Show("Movie deleted successfully.");
+                        Image placeholder = Cineverse.Properties.Resources.PosterPlaceholder;
 
-                    reset();
-                    UpdateMovieList();
-                }
-                catch (Exception ex)
+                        reset();
+                        UpdateMovieList();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally { conn.Close(); }
+                } 
+        
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    return;
                 }
-                finally { conn.Close(); } 
+               
             }
-
-
         }
 
         private void btn_backk_Click(object sender, EventArgs e)
@@ -606,5 +617,7 @@ namespace Cineverse
             Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
             dashboard1.btn_dashboard_Click(this, EventArgs.Empty);
         }
+
+        
     }
 }

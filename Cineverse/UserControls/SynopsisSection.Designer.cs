@@ -72,6 +72,7 @@
             this.btn_backk.Size = new System.Drawing.Size(107, 16);
             this.btn_backk.TabIndex = 79;
             this.btn_backk.Text = "Back to Movies";
+            this.btn_backk.Click += new System.EventHandler(this.btn_backk_Click);
             this.btn_backk.MouseEnter += new System.EventHandler(this.btn_backk_MouseEnter);
             this.btn_backk.MouseLeave += new System.EventHandler(this.btn_backk_MouseLeave);
             // 
@@ -151,7 +152,7 @@
             this.lbl_rating.ForeColor = System.Drawing.Color.White;
             this.lbl_rating.Location = new System.Drawing.Point(343, 100);
             this.lbl_rating.Name = "lbl_rating";
-            this.lbl_rating.Size = new System.Drawing.Size(59, 19);
+            this.lbl_rating.Size = new System.Drawing.Size(60, 21);
             this.lbl_rating.TabIndex = 87;
             this.lbl_rating.Text = "Rating";
             // 
@@ -199,7 +200,7 @@
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
             this.lbl_genre1.Location = new System.Drawing.Point(343, 138);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(54, 19);
+            this.lbl_genre1.Size = new System.Drawing.Size(56, 21);
             this.lbl_genre1.TabIndex = 83;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -211,7 +212,7 @@
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
             this.lbl_duration1.Location = new System.Drawing.Point(343, 119);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(76, 19);
+            this.lbl_duration1.Size = new System.Drawing.Size(75, 21);
             this.lbl_duration1.TabIndex = 81;
             this.lbl_duration1.Text = "Duration";
             // 
