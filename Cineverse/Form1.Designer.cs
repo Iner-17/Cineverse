@@ -56,7 +56,7 @@
             this.LoginBg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginBg.Location = new System.Drawing.Point(0, 0);
             this.LoginBg.Name = "LoginBg";
-            this.LoginBg.Size = new System.Drawing.Size(1519, 952);
+            this.LoginBg.Size = new System.Drawing.Size(1520, 950);
             this.LoginBg.TabIndex = 0;
             // 
             // panel5
@@ -65,7 +65,7 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1485, 33);
+            this.panel5.Location = new System.Drawing.Point(1489, 12);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(19, 26);
             this.panel5.TabIndex = 2;
@@ -275,7 +275,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LOGO1;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(37, 33);
+            this.panel2.Location = new System.Drawing.Point(22, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(154, 56);
             this.panel2.TabIndex = 0;
@@ -284,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1519, 952);
+            this.ClientSize = new System.Drawing.Size(1520, 950);
             this.Controls.Add(this.LoginBg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";

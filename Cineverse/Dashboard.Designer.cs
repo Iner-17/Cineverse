@@ -52,9 +52,9 @@
             this.panel1.Controls.Add(this.btn_movies);
             this.panel1.Controls.Add(this.btn_dashboard);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 41);
+            this.panel1.Location = new System.Drawing.Point(12, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(303, 721);
+            this.panel1.Size = new System.Drawing.Size(320, 865);
             this.panel1.TabIndex = 0;
             // 
             // btn_logout
@@ -67,7 +67,7 @@
             this.btn_logout.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(14, 679);
+            this.btn_logout.Location = new System.Drawing.Point(25, 814);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btn_logout.Size = new System.Drawing.Size(270, 42);
@@ -86,7 +86,7 @@
             this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_user.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_user.ForeColor = System.Drawing.Color.White;
-            this.btn_user.Location = new System.Drawing.Point(16, 525);
+            this.btn_user.Location = new System.Drawing.Point(25, 561);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(270, 42);
             this.btn_user.TabIndex = 9;
@@ -104,7 +104,7 @@
             this.btn_bookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bookings.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bookings.ForeColor = System.Drawing.Color.White;
-            this.btn_bookings.Location = new System.Drawing.Point(16, 424);
+            this.btn_bookings.Location = new System.Drawing.Point(25, 460);
             this.btn_bookings.Name = "btn_bookings";
             this.btn_bookings.Size = new System.Drawing.Size(270, 42);
             this.btn_bookings.TabIndex = 8;
@@ -122,7 +122,7 @@
             this.btn_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_schedule.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_schedule.ForeColor = System.Drawing.Color.White;
-            this.btn_schedule.Location = new System.Drawing.Point(16, 473);
+            this.btn_schedule.Location = new System.Drawing.Point(25, 509);
             this.btn_schedule.Name = "btn_schedule";
             this.btn_schedule.Size = new System.Drawing.Size(270, 42);
             this.btn_schedule.TabIndex = 7;
@@ -140,7 +140,7 @@
             this.btn_movies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_movies.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_movies.ForeColor = System.Drawing.Color.White;
-            this.btn_movies.Location = new System.Drawing.Point(16, 374);
+            this.btn_movies.Location = new System.Drawing.Point(25, 410);
             this.btn_movies.Name = "btn_movies";
             this.btn_movies.Size = new System.Drawing.Size(270, 42);
             this.btn_movies.TabIndex = 6;
@@ -157,7 +157,7 @@
             this.btn_dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashboard.Location = new System.Drawing.Point(16, 324);
+            this.btn_dashboard.Location = new System.Drawing.Point(25, 360);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Size = new System.Drawing.Size(270, 42);
             this.btn_dashboard.TabIndex = 5;
@@ -171,16 +171,16 @@
             // 
             this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(36, 25);
+            this.panel2.Location = new System.Drawing.Point(31, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 111);
+            this.panel2.Size = new System.Drawing.Size(259, 148);
             this.panel2.TabIndex = 1;
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(328, 41);
+            this.panel4.Location = new System.Drawing.Point(343, 54);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1035, 718);
+            this.panel4.Size = new System.Drawing.Size(1165, 865);
             this.panel4.TabIndex = 5;
             // 
             // panel3
@@ -190,7 +190,7 @@
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(65, 20);
+            this.panel3.Size = new System.Drawing.Size(90, 26);
             this.panel3.TabIndex = 4;
             // 
             // panel5
@@ -199,9 +199,9 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1347, 13);
+            this.panel5.Location = new System.Drawing.Point(1489, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 19);
+            this.panel5.Size = new System.Drawing.Size(19, 26);
             this.panel5.TabIndex = 3;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
@@ -211,7 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1375, 774);
+            this.ClientSize = new System.Drawing.Size(1520, 950);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
