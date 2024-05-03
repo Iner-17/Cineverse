@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_payment = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -269,10 +270,9 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -331,7 +331,7 @@
             this.cbo_dateLists.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_dateLists.ForeColor = System.Drawing.Color.White;
             this.cbo_dateLists.ItemHeight = 30;
-            this.cbo_dateLists.Location = new System.Drawing.Point(25, 350);
+            this.cbo_dateLists.Location = new System.Drawing.Point(25, 356);
             this.cbo_dateLists.Name = "cbo_dateLists";
             this.cbo_dateLists.Size = new System.Drawing.Size(270, 36);
             this.cbo_dateLists.TabIndex = 22;
@@ -358,9 +358,9 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.seatLists);
-            this.panel13.Location = new System.Drawing.Point(27, 537);
+            this.panel13.Location = new System.Drawing.Point(25, 544);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(270, 159);
+            this.panel13.Size = new System.Drawing.Size(270, 130);
             this.panel13.TabIndex = 19;
             // 
             // seatLists
@@ -370,7 +370,7 @@
             this.seatLists.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.seatLists.Location = new System.Drawing.Point(3, 3);
             this.seatLists.Name = "seatLists";
-            this.seatLists.Size = new System.Drawing.Size(264, 156);
+            this.seatLists.Size = new System.Drawing.Size(264, 116);
             this.seatLists.TabIndex = 18;
             this.seatLists.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -379,7 +379,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(23, 505);
+            this.label8.Location = new System.Drawing.Point(21, 512);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 19);
             this.label8.TabIndex = 17;
@@ -390,7 +390,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(21, 405);
+            this.label7.Location = new System.Drawing.Point(21, 411);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 19);
             this.label7.TabIndex = 15;
@@ -401,7 +401,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(21, 321);
+            this.label6.Location = new System.Drawing.Point(21, 327);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 19);
             this.label6.TabIndex = 13;
@@ -409,21 +409,21 @@
             // 
             // lbl_movieDuration
             // 
-            this.lbl_movieDuration.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_movieDuration.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_movieDuration.ForeColor = System.Drawing.Color.White;
-            this.lbl_movieDuration.Location = new System.Drawing.Point(169, 289);
+            this.lbl_movieDuration.Location = new System.Drawing.Point(164, 282);
             this.lbl_movieDuration.Name = "lbl_movieDuration";
-            this.lbl_movieDuration.Size = new System.Drawing.Size(128, 19);
+            this.lbl_movieDuration.Size = new System.Drawing.Size(140, 26);
             this.lbl_movieDuration.TabIndex = 16;
             this.lbl_movieDuration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_moviePrice
             // 
-            this.lbl_moviePrice.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_moviePrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_moviePrice.ForeColor = System.Drawing.Color.White;
-            this.lbl_moviePrice.Location = new System.Drawing.Point(21, 289);
+            this.lbl_moviePrice.Location = new System.Drawing.Point(21, 279);
             this.lbl_moviePrice.Name = "lbl_moviePrice";
-            this.lbl_moviePrice.Size = new System.Drawing.Size(107, 19);
+            this.lbl_moviePrice.Size = new System.Drawing.Size(137, 29);
             this.lbl_moviePrice.TabIndex = 15;
             this.lbl_moviePrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -495,6 +495,15 @@
             this.btn_payment.Click += new System.EventHandler(this.btn_payment_Click);
             this.btn_payment.MouseEnter += new System.EventHandler(this.btn_payment_MouseEnter);
             this.btn_payment.MouseLeave += new System.EventHandler(this.btn_payment_MouseLeave);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(58, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(205, 91);
+            this.panel2.TabIndex = 1;
             // 
             // label11
             // 
@@ -2939,14 +2948,14 @@
             this.panel10.Size = new System.Drawing.Size(30, 30);
             this.panel10.TabIndex = 0;
             // 
-            // panel2
+            // panel9
             // 
-            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(58, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(205, 91);
-            this.panel2.TabIndex = 1;
+            this.panel9.BackgroundImage = global::Cineverse.Properties.Resources.screen;
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Location = new System.Drawing.Point(127, 27);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(910, 194);
+            this.panel9.TabIndex = 0;
             // 
             // panel5
             // 
@@ -2969,15 +2978,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(90, 26);
             this.panel3.TabIndex = 5;
-            // 
-            // panel9
-            // 
-            this.panel9.BackgroundImage = global::Cineverse.Properties.Resources.screen;
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Location = new System.Drawing.Point(127, 27);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(910, 194);
-            this.panel9.TabIndex = 0;
             // 
             // Seats
             // 
