@@ -149,7 +149,7 @@
             this.panel6.Controls.Add(this.panel9);
             this.panel6.Location = new System.Drawing.Point(905, 146);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(260, 716);
+            this.panel6.Size = new System.Drawing.Size(260, 719);
             this.panel6.TabIndex = 15;
             // 
             // btn_statistics
@@ -312,7 +312,7 @@
             this.panel7.Controls.Add(this.label2);
             this.panel7.Location = new System.Drawing.Point(0, 146);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(895, 716);
+            this.panel7.Size = new System.Drawing.Size(895, 719);
             this.panel7.TabIndex = 16;
             // 
             // lbl_refresh
@@ -579,11 +579,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(38, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(325, 35);
+            this.label2.Size = new System.Drawing.Size(355, 39);
             this.label2.TabIndex = 2;
             this.label2.Text = "SCHEDULED MOVIES";
             // 

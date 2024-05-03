@@ -59,7 +59,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer_paymentInProgress = new System.Windows.Forms.Timer(this.components);
-            this.confirmedPaymentSection1 = new Cineverse.UserControls.ConfirmedPaymentSection();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
@@ -325,7 +324,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel4.Controls.Add(this.confirmedPaymentSection1);
             this.panel4.Controls.Add(this.lbl_paymentInProgress);
             this.panel4.Controls.Add(this.lbl_total2);
             this.panel4.Controls.Add(this.label1);
@@ -421,11 +419,7 @@
             // 
             // confirmedPaymentSection1
             // 
-            this.confirmedPaymentSection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.confirmedPaymentSection1.Location = new System.Drawing.Point(89, 859);
-            this.confirmedPaymentSection1.Name = "confirmedPaymentSection1";
-            this.confirmedPaymentSection1.Size = new System.Drawing.Size(1035, 718);
-            this.confirmedPaymentSection1.TabIndex = 30;
+           
             // 
             // PaymentForm
             // 
@@ -482,6 +476,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_genre;
         private System.Windows.Forms.Label lbl_time;
-        private UserControls.ConfirmedPaymentSection confirmedPaymentSection1;
     }
 }
