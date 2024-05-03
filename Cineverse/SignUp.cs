@@ -92,7 +92,25 @@ namespace Cineverse
             }
         }
 
-        private void txt_username_Enter(object sender, EventArgs e)
+
+        private void txt_ContactNum_Enter(object sender, EventArgs e)
+        {
+            if (txt_ContactNum.Text == "Contact No.*")
+            {
+                txt_ContactNum.Text = "";
+                txt_ContactNum.ForeColor = Color.White;
+            }
+        }
+
+        private void txt_ContactNum_Leave(object sender, EventArgs e)
+        {
+            if (txt_ContactNum.Text == "")
+            {
+                txt_ContactNum.Text = "Contact No.*";
+                txt_ContactNum.ForeColor = Color.Silver;
+            }
+        }
+            private void txt_username_Enter(object sender, EventArgs e)
         {
             if (txt_username.Text == "Username*")
             {
@@ -280,18 +298,18 @@ namespace Cineverse
                 {
                     txt_confirmPassword.BorderColor = Color.Red;
                 }
-                
+                if (txt_ContactNum.Text.Equals("Contact No.*"))
+                {
+                    txt_ContactNum.BorderColor = Color.Red;
+                }
 
 
             }
         }
 
-      
-
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
         }
-
     }
 }

@@ -44,23 +44,22 @@
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_ContactNum = new Guna.UI2.WinForms.Guna2TextBox();
             this.SignUpBg.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // SignUpBg
             // 
-            this.SignUpBg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.SignUpBg.BackgroundImage = global::Cineverse.Properties.Resources.Cineverse_Bg;
             this.SignUpBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SignUpBg.Controls.Add(this.panel5);
             this.SignUpBg.Controls.Add(this.panel3);
             this.SignUpBg.Controls.Add(this.panel2);
+            this.SignUpBg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SignUpBg.Location = new System.Drawing.Point(0, 0);
             this.SignUpBg.Name = "SignUpBg";
-            this.SignUpBg.Size = new System.Drawing.Size(1375, 774);
+            this.SignUpBg.Size = new System.Drawing.Size(1519, 952);
             this.SignUpBg.TabIndex = 0;
             // 
             // panel5
@@ -69,15 +68,16 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1347, 14);
+            this.panel5.Location = new System.Drawing.Point(1485, 33);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 19);
+            this.panel5.Size = new System.Drawing.Size(19, 26);
             this.panel5.TabIndex = 3;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.txt_ContactNum);
             this.panel3.Controls.Add(this.checkBox1);
             this.panel3.Controls.Add(this.txt_confirmPassword);
             this.panel3.Controls.Add(this.txt_password);
@@ -90,9 +90,9 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.txt_email);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(425, 69);
+            this.panel3.Location = new System.Drawing.Point(449, 113);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(524, 636);
+            this.panel3.Size = new System.Drawing.Size(620, 727);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -102,11 +102,11 @@
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(104, 509);
+            this.checkBox1.Location = new System.Drawing.Point(122, 592);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(317, 20);
+            this.checkBox1.Size = new System.Drawing.Size(377, 23);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "I accept the Terms of Use and Privacy Policy";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -122,10 +122,10 @@
             this.txt_confirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_confirmPassword.FillColor = System.Drawing.Color.Transparent;
             this.txt_confirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_confirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_confirmPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_confirmPassword.ForeColor = System.Drawing.Color.Silver;
             this.txt_confirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_confirmPassword.Location = new System.Drawing.Point(74, 456);
+            this.txt_confirmPassword.Location = new System.Drawing.Point(117, 537);
             this.txt_confirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_confirmPassword.Name = "txt_confirmPassword";
             this.txt_confirmPassword.PasswordChar = '\0';
@@ -147,10 +147,10 @@
             this.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_password.FillColor = System.Drawing.Color.Transparent;
             this.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.Silver;
             this.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_password.Location = new System.Drawing.Point(75, 398);
+            this.txt_password.Location = new System.Drawing.Point(118, 482);
             this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '\0';
@@ -172,10 +172,10 @@
             this.txt_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_username.FillColor = System.Drawing.Color.Transparent;
             this.txt_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.Silver;
             this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.Location = new System.Drawing.Point(74, 340);
+            this.txt_username.Location = new System.Drawing.Point(117, 427);
             this.txt_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_username.Name = "txt_username";
             this.txt_username.PasswordChar = '\0';
@@ -197,10 +197,10 @@
             this.txt_lastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_lastName.FillColor = System.Drawing.Color.Transparent;
             this.txt_lastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lastName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lastName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lastName.ForeColor = System.Drawing.Color.Silver;
             this.txt_lastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lastName.Location = new System.Drawing.Point(268, 228);
+            this.txt_lastName.Location = new System.Drawing.Point(311, 262);
             this.txt_lastName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_lastName.Name = "txt_lastName";
             this.txt_lastName.PasswordChar = '\0';
@@ -223,16 +223,16 @@
             this.txt_firstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_firstName.FillColor = System.Drawing.Color.Transparent;
             this.txt_firstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_firstName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_firstName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_firstName.ForeColor = System.Drawing.Color.Silver;
             this.txt_firstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_firstName.Location = new System.Drawing.Point(74, 228);
+            this.txt_firstName.Location = new System.Drawing.Point(117, 262);
             this.txt_firstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_firstName.Name = "txt_firstName";
             this.txt_firstName.PasswordChar = '\0';
             this.txt_firstName.PlaceholderText = "";
             this.txt_firstName.SelectedText = "";
-            this.txt_firstName.Size = new System.Drawing.Size(182, 40);
+            this.txt_firstName.Size = new System.Drawing.Size(191, 40);
             this.txt_firstName.TabIndex = 2;
             this.txt_firstName.Enter += new System.EventHandler(this.txt_firstName_Enter);
             this.txt_firstName.Leave += new System.EventHandler(this.txt_firstName_Leave);
@@ -242,11 +242,11 @@
             this.Login.AutoSize = true;
             this.Login.BackColor = System.Drawing.Color.Transparent;
             this.Login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Login.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.Login.Location = new System.Drawing.Point(335, 604);
+            this.Login.Location = new System.Drawing.Point(386, 682);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(55, 19);
+            this.Login.Size = new System.Drawing.Size(56, 19);
             this.Login.TabIndex = 10;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
@@ -255,11 +255,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(135, 604);
+            this.label4.Location = new System.Drawing.Point(179, 682);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 19);
+            this.label4.Size = new System.Drawing.Size(211, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
@@ -276,7 +276,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.guna2Button1.Font = new System.Drawing.Font("Montserrat", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(75, 534);
+            this.guna2Button1.Location = new System.Drawing.Point(117, 617);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(375, 40);
             this.guna2Button1.TabIndex = 1;
@@ -288,7 +288,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(123, 15);
+            this.panel4.Location = new System.Drawing.Point(164, 38);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(278, 132);
             this.panel4.TabIndex = 2;
@@ -304,10 +304,10 @@
             this.txt_email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_email.FillColor = System.Drawing.Color.Transparent;
             this.txt_email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txt_email.ForeColor = System.Drawing.Color.Silver;
             this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Location = new System.Drawing.Point(75, 285);
+            this.txt_email.Location = new System.Drawing.Point(117, 317);
             this.txt_email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_email.Name = "txt_email";
             this.txt_email.PasswordChar = '\0';
@@ -322,11 +322,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(181, 167);
+            this.label2.Location = new System.Drawing.Point(200, 188);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 42);
+            this.label2.Size = new System.Drawing.Size(215, 55);
             this.label2.TabIndex = 1;
             this.label2.Text = "SIGN UP";
             // 
@@ -340,11 +340,36 @@
             this.panel2.Size = new System.Drawing.Size(154, 56);
             this.panel2.TabIndex = 1;
             // 
+            // txt_ContactNum
+            // 
+            this.txt_ContactNum.BorderRadius = 10;
+            this.txt_ContactNum.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_ContactNum.DefaultText = "Contact No.*";
+            this.txt_ContactNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_ContactNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_ContactNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_ContactNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_ContactNum.FillColor = System.Drawing.Color.Transparent;
+            this.txt_ContactNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_ContactNum.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ContactNum.ForeColor = System.Drawing.Color.Silver;
+            this.txt_ContactNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_ContactNum.Location = new System.Drawing.Point(117, 372);
+            this.txt_ContactNum.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ContactNum.Name = "txt_ContactNum";
+            this.txt_ContactNum.PasswordChar = '\0';
+            this.txt_ContactNum.PlaceholderText = "";
+            this.txt_ContactNum.SelectedText = "";
+            this.txt_ContactNum.Size = new System.Drawing.Size(375, 40);
+            this.txt_ContactNum.TabIndex = 11;
+            this.txt_ContactNum.Enter += new System.EventHandler(this.txt_ContactNum_Enter);
+            this.txt_ContactNum.Leave += new System.EventHandler(this.txt_ContactNum_Leave);
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1375, 774);
+            this.ClientSize = new System.Drawing.Size(1519, 952);
             this.Controls.Add(this.SignUpBg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
@@ -375,5 +400,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_confirmPassword;
         private Guna.UI2.WinForms.Guna2TextBox txt_password;
         private System.Windows.Forms.CheckBox checkBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_ContactNum;
     }
 }

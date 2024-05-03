@@ -56,7 +56,7 @@
             this.LoginBg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginBg.Location = new System.Drawing.Point(0, 0);
             this.LoginBg.Name = "LoginBg";
-            this.LoginBg.Size = new System.Drawing.Size(1375, 774);
+            this.LoginBg.Size = new System.Drawing.Size(1519, 952);
             this.LoginBg.TabIndex = 0;
             // 
             // panel5
@@ -65,9 +65,9 @@
             this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1347, 14);
+            this.panel5.Location = new System.Drawing.Point(1485, 33);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 19);
+            this.panel5.Size = new System.Drawing.Size(19, 26);
             this.panel5.TabIndex = 2;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
@@ -85,9 +85,9 @@
             this.panel3.Controls.Add(this.txt_pass);
             this.panel3.Controls.Add(this.txt_user);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(724, 72);
+            this.panel3.Location = new System.Drawing.Point(794, 153);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(524, 636);
+            this.panel3.Size = new System.Drawing.Size(597, 656);
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -102,7 +102,7 @@
             this.btn_hide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_hide.Image = global::Cineverse.Properties.Resources.hidesmol;
-            this.btn_hide.Location = new System.Drawing.Point(415, 415);
+            this.btn_hide.Location = new System.Drawing.Point(443, 422);
             this.btn_hide.Name = "btn_hide";
             this.btn_hide.Size = new System.Drawing.Size(35, 27);
             this.btn_hide.TabIndex = 5;
@@ -114,11 +114,11 @@
             this.signup.AutoSize = true;
             this.signup.BackColor = System.Drawing.Color.Transparent;
             this.signup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signup.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signup.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.signup.Location = new System.Drawing.Point(320, 589);
+            this.signup.Location = new System.Drawing.Point(356, 598);
             this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(68, 19);
+            this.signup.Size = new System.Drawing.Size(70, 19);
             this.signup.TabIndex = 9;
             this.signup.Text = "Sign Up";
             this.signup.Click += new System.EventHandler(this.signup_Click);
@@ -133,7 +133,7 @@
             this.btn_show.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_show.Image = global::Cineverse.Properties.Resources.showsmol;
-            this.btn_show.Location = new System.Drawing.Point(415, 415);
+            this.btn_show.Location = new System.Drawing.Point(443, 422);
             this.btn_show.Name = "btn_show";
             this.btn_show.Size = new System.Drawing.Size(35, 27);
             this.btn_show.TabIndex = 4;
@@ -144,11 +144,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(137, 589);
+            this.label4.Location = new System.Drawing.Point(166, 598);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 19);
+            this.label4.Size = new System.Drawing.Size(194, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 
@@ -156,11 +156,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(73, 386);
+            this.label5.Location = new System.Drawing.Point(109, 392);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Password";
             // 
@@ -168,11 +168,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(73, 305);
+            this.label3.Location = new System.Drawing.Point(109, 311);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 16);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Username";
             // 
@@ -187,9 +187,9 @@
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Montserrat", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(77, 487);
+            this.guna2Button1.Location = new System.Drawing.Point(113, 483);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(375, 40);
             this.guna2Button1.TabIndex = 1;
@@ -201,7 +201,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(110, 30);
+            this.panel4.Location = new System.Drawing.Point(147, 38);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(305, 152);
             this.panel4.TabIndex = 2;
@@ -217,12 +217,12 @@
             this.txt_pass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_pass.FillColor = System.Drawing.Color.Transparent;
             this.txt_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_pass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.Color.Silver;
             this.txt_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_pass.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txt_pass.IconRightOffset = new System.Drawing.Point(3, 0);
-            this.txt_pass.Location = new System.Drawing.Point(77, 409);
+            this.txt_pass.Location = new System.Drawing.Point(113, 415);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '\0';
@@ -244,10 +244,10 @@
             this.txt_user.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_user.FillColor = System.Drawing.Color.Transparent;
             this.txt_user.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_user.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_user.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user.ForeColor = System.Drawing.Color.Silver;
             this.txt_user.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_user.Location = new System.Drawing.Point(77, 328);
+            this.txt_user.Location = new System.Drawing.Point(113, 334);
             this.txt_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_user.Name = "txt_user";
             this.txt_user.PasswordChar = '\0';
@@ -262,11 +262,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(180, 230);
+            this.label2.Location = new System.Drawing.Point(216, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 49);
+            this.label2.Size = new System.Drawing.Size(184, 55);
             this.label2.TabIndex = 0;
             this.label2.Text = "LOG IN";
             // 
@@ -284,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1375, 774);
+            this.ClientSize = new System.Drawing.Size(1519, 952);
             this.Controls.Add(this.LoginBg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";

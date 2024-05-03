@@ -44,7 +44,7 @@
             this.btn_timeOut = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Panel();
             this.pb_profile = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_timein = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,6 +219,7 @@
             this.btn_timeOut.TabIndex = 99;
             this.btn_timeOut.Text = "Time OUT";
             this.btn_timeOut.UseVisualStyleBackColor = false;
+            this.btn_timeOut.Click += new System.EventHandler(this.btn_timeOut_Click);
             // 
             // btn_edit
             // 
@@ -226,10 +227,11 @@
             this.btn_edit.BackgroundImage = global::Cineverse.Properties.Resources.edit;
             this.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_edit.Location = new System.Drawing.Point(584, 298);
+            this.btn_edit.Location = new System.Drawing.Point(589, 298);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(18, 21);
             this.btn_edit.TabIndex = 100;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // pb_profile
             // 
@@ -241,24 +243,24 @@
             this.pb_profile.TabIndex = 7;
             this.pb_profile.TabStop = false;
             // 
-            // label5
+            // lbl_timein
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(427, 555);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 19);
-            this.label5.TabIndex = 101;
-            this.label5.Text = "10:00 AM";
+            this.lbl_timein.AutoSize = true;
+            this.lbl_timein.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_timein.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_timein.ForeColor = System.Drawing.Color.White;
+            this.lbl_timein.Location = new System.Drawing.Point(427, 555);
+            this.lbl_timein.Name = "lbl_timein";
+            this.lbl_timein.Size = new System.Drawing.Size(84, 19);
+            this.lbl_timein.TabIndex = 101;
+            this.lbl_timein.Text = "10:00 AM";
             // 
             // UserSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_timein);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_timeOut);
             this.Controls.Add(this.label4);
@@ -302,6 +304,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_timeOut;
         private System.Windows.Forms.Panel btn_edit;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_timein;
     }
 }

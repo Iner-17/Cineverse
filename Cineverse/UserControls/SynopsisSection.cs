@@ -87,9 +87,7 @@ namespace Cineverse.UserControls
                     {
                         pb_Poster1.Image = null;
                     }
-
                 }
-
             }
             catch (Exception ex)
             {
