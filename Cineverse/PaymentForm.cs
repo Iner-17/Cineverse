@@ -149,8 +149,10 @@ namespace Cineverse
         private void btn_transactionComplete_Click(object sender, EventArgs e)
         {
             UpdateAvailabilityToBooked(lbl_seats.Text);
-            confirmedPaymentSection1.Location = new Point(0,0);
-
+            //confirmedPaymentSection1.Location = new Point(0,0);
+            ReceiptForm receiptForm = new ReceiptForm();
+            receiptForm.Show();
+            this.Hide();
 
             MySqlConnection conn = DBConnection.getConnection();
 
@@ -202,5 +204,16 @@ namespace Cineverse
             timer_paymentInProgress.Stop();
         }
 
+        private void btn_voucher_MouseEnter(object sender, EventArgs e)
+        {
+            btn_voucher.BackColor = Color.FromArgb(31, 178, 198);
+            btn_voucher.ForeColor = Color.Black;
+        }
+
+        private void btn_voucher_MouseLeave(object sender, EventArgs e)
+        {
+            btn_voucher.BackColor = Color.FromArgb(20, 32, 32);
+            btn_voucher.ForeColor = Color.White;
+        }
     }
 }

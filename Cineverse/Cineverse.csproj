@@ -123,6 +123,12 @@
     <Compile Include="PaymentForm.Designer.cs">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptForm.Designer.cs">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +140,6 @@
     </Compile>
     <Compile Include="UserControls\BookingSection.Designer.cs">
       <DependentUpon>BookingSection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\ConfirmedPaymentSection.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ConfirmedPaymentSection.Designer.cs">
-      <DependentUpon>ConfirmedPaymentSection.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DashboardSection.cs">
       <SubType>UserControl</SubType>
@@ -196,14 +196,14 @@
     <EmbeddedResource Include="PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Seats.resx">
       <DependentUpon>Seats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BookingSection.resx">
       <DependentUpon>BookingSection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ConfirmedPaymentSection.resx">
-      <DependentUpon>ConfirmedPaymentSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DashboardSection.resx">
       <DependentUpon>DashboardSection.cs</DependentUpon>

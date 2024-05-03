@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Cineverse.UserControls
+namespace Cineverse
 {
-    public partial class ConfirmedPaymentSection : UserControl
+    public partial class ReceiptForm : Form
     {
-        public ConfirmedPaymentSection()
+        public ReceiptForm()
         {
             InitializeComponent();
         }
@@ -24,5 +24,19 @@ namespace Cineverse.UserControls
             dashboard1.Show();
             ((Form)this.TopLevelControl).Close();
         }
+
+        private void btn_print_MouseEnter(object sender, EventArgs e)
+        {
+            btn_print.BackColor = Color.FromArgb(31, 178, 198);
+            btn_print.ForeColor = Color.Black;
+        }
+
+        private void btn_print_MouseLeave(object sender, EventArgs e)
+        {
+            btn_print.BackColor = Color.FromArgb(20, 32, 32);
+            btn_print.ForeColor = Color.White;
+        }
     }
+
+
 }

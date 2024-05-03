@@ -344,6 +344,16 @@ namespace Cineverse
             dashboard1.btn_movies_Click(this, EventArgs.Empty);
         }
 
-        
+        private void btn_statistics_MouseEnter(object sender, EventArgs e)
+        {
+            btn_statistics.BackColor = Color.FromArgb(31, 178, 198);
+            btn_statistics.ForeColor = Color.Black;
+        }
+
+        private void btn_statistics_MouseLeave(object sender, EventArgs e)
+        {
+            btn_statistics.BackColor = Color.FromArgb(20, 32, 32);
+            btn_statistics.ForeColor = Color.White;
+        }
     }
 }
