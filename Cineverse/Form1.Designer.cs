@@ -27,7 +27,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {            this.LoginBg = new System.Windows.Forms.Panel();
+        {            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.LoginBg = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_hide = new System.Windows.Forms.Button();
@@ -223,7 +224,7 @@
             this.txt_pass.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txt_pass.IconRightOffset = new System.Drawing.Point(3, 0);
             this.txt_pass.Location = new System.Drawing.Point(113, 415);
-            this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '\0';
             this.txt_pass.PlaceholderText = "";
@@ -248,7 +249,7 @@
             this.txt_user.ForeColor = System.Drawing.Color.Silver;
             this.txt_user.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_user.Location = new System.Drawing.Point(113, 334);
-            this.txt_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_user.Margin = new System.Windows.Forms.Padding(4);
             this.txt_user.Name = "txt_user";
             this.txt_user.PasswordChar = '\0';
             this.txt_user.PlaceholderText = "";
@@ -287,6 +288,7 @@
             this.ClientSize = new System.Drawing.Size(1520, 950);
             this.Controls.Add(this.LoginBg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cineverse";
