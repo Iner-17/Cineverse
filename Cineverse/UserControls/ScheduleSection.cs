@@ -72,7 +72,7 @@ namespace Cineverse.UserControls
             }
             finally { conn.Close(); }
 
-           
+            cbo_movies.SelectedIndex = -1;
         }
 
         private void btn_all_Click(object sender, EventArgs e)
@@ -83,26 +83,53 @@ namespace Cineverse.UserControls
         private void btn_today_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
-            try
+            if (cbo_movies.Text.Equals(""))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string getListquery = "SELECT title, date, start_time, " +
-                    "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
-                    " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date = @CurrentDate;";
-                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
-                getListcmd.Parameters.AddWithValue("CurrentDate", DateTime.Today.ToString("MMMM  dd,  yyy"));
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
-                DataTable dt = new DataTable();
-                dataAdapter.Fill(dt);
+                    string getListquery = "SELECT title, date, start_time, " +
+                        "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
+                        " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date = @CurrentDate;";
+                    MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                    getListcmd.Parameters.AddWithValue("CurrentDate", DateTime.Today.ToString("MMMM  dd,  yyy"));
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                    DataTable dt = new DataTable();
+                    dataAdapter.Fill(dt);
 
-                dgv_booking.DataSource = dt;
-            }
-            catch (Exception ex)
+                    dgv_booking.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
+            } else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    conn.Open();
+
+                    string getListquery = "SELECT title, date, start_time, " +
+                        "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
+                        " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date = @CurrentDate AND movies.title = @MovieTitle;";
+                    MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                    getListcmd.Parameters.AddWithValue("MovieTitle", cbo_movies.Text);
+                    getListcmd.Parameters.AddWithValue("CurrentDate", DateTime.Today.ToString("MMMM  dd,  yyy"));
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                    DataTable dt = new DataTable();
+                    dataAdapter.Fill(dt);
+
+                    dgv_booking.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
             }
-            finally { conn.Close(); }
+            
 
            
         }
@@ -110,26 +137,30 @@ namespace Cineverse.UserControls
         private void cbo_movies_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
-            try
+            if (!cbo_movies.Text.Equals(""))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string getListquery = "SELECT title, date, start_time, " +
-                    "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
-                    " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE movies.title = @MovieTitle;";
-                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
-                getListcmd.Parameters.AddWithValue("MovieTitle", cbo_movies.Text);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
-                DataTable dt = new DataTable();
-                dataAdapter.Fill(dt);
+                    string getListquery = "SELECT title, date, start_time, " +
+                        "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
+                        " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE movies.title = @MovieTitle;";
+                    MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                    getListcmd.Parameters.AddWithValue("MovieTitle", cbo_movies.Text);
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                    DataTable dt = new DataTable();
+                    dataAdapter.Fill(dt);
 
-                dgv_booking.DataSource = dt;
+                    dgv_booking.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
+            
         }
 
         private void lbl_refresh_MouseEnter(object sender, EventArgs e)
@@ -187,28 +218,56 @@ namespace Cineverse.UserControls
             DateTime currentDate = DateTime.Today;
             DateTime startDate = currentDate.AddDays(-(int)currentDate.DayOfWeek); // Assuming Monday is the start of the week
             DateTime endDate = startDate.AddDays(6);
-
-            try
+            if (cbo_movies.Text.Equals(""))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string getListquery = "SELECT title, date, start_time, " +
-                    "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
-                    " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date BETWEEN @StartDate AND @EndDate";
-                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
-                getListcmd.Parameters.AddWithValue("StartDate",startDate.ToString("MMMM  dd,  yyy"));
-                getListcmd.Parameters.AddWithValue("EndDate",endDate.ToString("MMMM  dd,  yyy"));
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
-                DataTable dt = new DataTable();
-                dataAdapter.Fill(dt);
+                    string getListquery = "SELECT title, date, start_time, " +
+                        "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
+                        " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date BETWEEN @StartDate AND @EndDate";
+                    MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                    getListcmd.Parameters.AddWithValue("StartDate", startDate.ToString("MMMM  dd,  yyy"));
+                    getListcmd.Parameters.AddWithValue("EndDate", endDate.ToString("MMMM  dd,  yyy"));
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                    DataTable dt = new DataTable();
+                    dataAdapter.Fill(dt);
 
-                dgv_booking.DataSource = dt;
-            }
-            catch (Exception ex)
+                    dgv_booking.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
+            } 
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    conn.Open();
+
+                    string getListquery = "SELECT title, date, start_time, " +
+                        "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
+                        " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date BETWEEN @StartDate AND @EndDate AND movies.title = @MovieTitle;";
+                    MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                    getListcmd.Parameters.AddWithValue("MovieTitle", cbo_movies.Text);
+                    getListcmd.Parameters.AddWithValue("StartDate", startDate.ToString("MMMM  dd,  yyy"));
+                    getListcmd.Parameters.AddWithValue("EndDate", endDate.ToString("MMMM  dd,  yyy"));
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                    DataTable dt = new DataTable();
+                    dataAdapter.Fill(dt);
+
+                    dgv_booking.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
             }
-            finally { conn.Close(); }
+
         }
     }
 }
