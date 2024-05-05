@@ -22,13 +22,22 @@ namespace Cineverse
 
         private void btn_addDate_Click(object sender, EventArgs e)
         {
-            if (cmb_datesAdded.Items.Count < 1)
+            if (dtp_date.Value < DateTime.Today)
             {
-                cmb_datesAdded.Items.Add(dtp_date.Text);
+                MessageBox.Show("Cannot set date before " + DateTime.Today.ToString("MMMM dd yyyy"));
             } else
             {
-                MessageBox.Show("Can only set 1 date per screening");
+                if (cmb_datesAdded.Items.Count < 1)
+                {
+                    cmb_datesAdded.Items.Add(dtp_date.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Can only set 1 date per screening");
+                }
             }
+
+            
         }
 
         private void btn_addTime_Click(object sender, EventArgs e)
