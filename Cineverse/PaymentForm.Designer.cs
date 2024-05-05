@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_genre = new System.Windows.Forms.Label();
@@ -417,10 +418,6 @@
             this.timer_paymentInProgress.Interval = 500;
             this.timer_paymentInProgress.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // confirmedPaymentSection1
-            // 
-           
-            // 
             // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,6 +429,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PaymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Seats));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbo_timeLists = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbo_dateLists = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -2990,6 +2991,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Seats";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seats";

@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceiptForm));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_backToDashboard = new System.Windows.Forms.Button();
+            this.lbl_total2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_genre = new System.Windows.Forms.Label();
@@ -50,10 +55,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_backToDashboard = new System.Windows.Forms.Button();
-            this.lbl_total2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +70,52 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1165, 865);
             this.panel4.TabIndex = 12;
+            // 
+            // btn_backToDashboard
+            // 
+            this.btn_backToDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_backToDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_backToDashboard.FlatAppearance.BorderSize = 0;
+            this.btn_backToDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_backToDashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_backToDashboard.Location = new System.Drawing.Point(452, 477);
+            this.btn_backToDashboard.Name = "btn_backToDashboard";
+            this.btn_backToDashboard.Size = new System.Drawing.Size(270, 53);
+            this.btn_backToDashboard.TabIndex = 34;
+            this.btn_backToDashboard.Text = "Back to Dashboard";
+            this.btn_backToDashboard.UseVisualStyleBackColor = false;
+            this.btn_backToDashboard.Click += new System.EventHandler(this.btn_backToDashboard_Click);
+            // 
+            // lbl_total2
+            // 
+            this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total2.ForeColor = System.Drawing.Color.White;
+            this.lbl_total2.Location = new System.Drawing.Point(442, 391);
+            this.lbl_total2.Name = "lbl_total2";
+            this.lbl_total2.Size = new System.Drawing.Size(285, 54);
+            this.lbl_total2.TabIndex = 33;
+            this.lbl_total2.Text = "Success!";
+            this.lbl_total2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(442, 445);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(285, 19);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Payment Completed";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel7
+            // 
+            this.panel7.BackgroundImage = global::Cineverse.Properties.Resources.check;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel7.Location = new System.Drawing.Point(541, 301);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(86, 87);
+            this.panel7.TabIndex = 31;
             // 
             // panel1
             // 
@@ -315,52 +362,6 @@
             this.panel3.Size = new System.Drawing.Size(90, 26);
             this.panel3.TabIndex = 9;
             // 
-            // btn_backToDashboard
-            // 
-            this.btn_backToDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_backToDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_backToDashboard.FlatAppearance.BorderSize = 0;
-            this.btn_backToDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_backToDashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_backToDashboard.Location = new System.Drawing.Point(452, 477);
-            this.btn_backToDashboard.Name = "btn_backToDashboard";
-            this.btn_backToDashboard.Size = new System.Drawing.Size(270, 53);
-            this.btn_backToDashboard.TabIndex = 34;
-            this.btn_backToDashboard.Text = "Back to Dashboard";
-            this.btn_backToDashboard.UseVisualStyleBackColor = false;
-            this.btn_backToDashboard.Click += new System.EventHandler(this.btn_backToDashboard_Click);
-            // 
-            // lbl_total2
-            // 
-            this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total2.ForeColor = System.Drawing.Color.White;
-            this.lbl_total2.Location = new System.Drawing.Point(442, 391);
-            this.lbl_total2.Name = "lbl_total2";
-            this.lbl_total2.Size = new System.Drawing.Size(285, 54);
-            this.lbl_total2.TabIndex = 33;
-            this.lbl_total2.Text = "Success!";
-            this.lbl_total2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(442, 445);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 19);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Payment Completed";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel7
-            // 
-            this.panel7.BackgroundImage = global::Cineverse.Properties.Resources.check;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel7.Location = new System.Drawing.Point(541, 301);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(86, 87);
-            this.panel7.TabIndex = 31;
-            // 
             // ReceiptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,6 +373,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReceiptForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReceiptForm";
