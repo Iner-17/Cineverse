@@ -189,7 +189,7 @@ namespace Cineverse
                     {
                         conn.Open();
 
-                        string query = "SELECT title, movie_rating, price, genre, duration, photo FROM movies WHERE cinema_number = 2 LIMIT 1 OFFSET " + (i-1) + ";";
+                        string query = "SELECT title, movie_rating, price, genre, duration, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
                         MySqlCommand cmd = new MySqlCommand(query, conn);   
 
                         MySqlDataReader reader = cmd.ExecuteReader();

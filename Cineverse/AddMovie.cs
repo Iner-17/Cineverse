@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Cineverse.UserControls;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -118,6 +119,9 @@ namespace Cineverse
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
+
+            ScheduleSection sc = new ScheduleSection();
+            sc.getSchedule();
         }
 
         public void saveMovie()
