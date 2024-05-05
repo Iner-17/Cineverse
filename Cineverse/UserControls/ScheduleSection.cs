@@ -21,6 +21,29 @@ namespace Cineverse.UserControls
 
         private void ScheduleSection_Load(object sender, EventArgs e)
         {
+            MySqlConnection conn = DBConnection.getConnection();
+            try
+            {
+                conn.Open();
+
+                string query = "select distinct title from movies";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cbo_movies.Items.Add(reader["title"].ToString().ToUpper());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
             getSchedule();
         }
 
@@ -49,28 +72,7 @@ namespace Cineverse.UserControls
             }
             finally { conn.Close(); }
 
-            try
-            {
-                conn.Open();
-
-                string query = "select title from movies";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    cbo_movies.Items.Add(reader["title"].ToString().ToUpper());
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+           
         }
 
         private void btn_all_Click(object sender, EventArgs e)
@@ -102,31 +104,33 @@ namespace Cineverse.UserControls
             }
             finally { conn.Close(); }
 
+           
+        }
+
+        private void cbo_movies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
             try
             {
                 conn.Open();
 
-                string query = "select title from movies";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                string getListquery = "SELECT title, date, start_time, " +
+                    "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
+                    " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE movies.title = @MovieTitle;";
+                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                getListcmd.Parameters.AddWithValue("MovieTitle", cbo_movies.Text);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
 
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    cbo_movies.Items.Add(reader["title"].ToString().ToUpper());
-                }
+                dgv_booking.DataSource = dt;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                conn.Close();
-            }
+            finally { conn.Close(); }
         }
-
-       
 
         private void lbl_refresh_MouseEnter(object sender, EventArgs e)
         {
@@ -162,10 +166,7 @@ namespace Cineverse.UserControls
             btn_thisWeek.ForeColor = Color.White;
         }
 
-        private void cbo_movies_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void btn_all_MouseEnter(object sender, EventArgs e)
         {
