@@ -193,7 +193,8 @@ namespace Cineverse
         }
         private void UpdateTime()
         {
-            lbl_time.Text = DateTime.Now.ToString("HH  :  mm  :  ss   tt").ToUpper();
+            lbl_time.Text = string.Format("{0:hh  :  mm  :  ss   tt}", DateTime.Now).ToUpper();
+            //lbl_time.Text = string.Format("{0:hh:mm:ss tt}", DateTime.Now);
         }
 
         public void UpdateNumberOfMovies()
