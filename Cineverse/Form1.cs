@@ -87,8 +87,43 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+           
+            string usernamePlaceholder = "Enter Username or Email";
+            string passwordPlaceholder = "Enter Password";
+
+          
+            string usernameInput = txt_user.Text.Trim();
+
+           
+            if (string.IsNullOrEmpty(usernameInput) || usernameInput == usernamePlaceholder)
+            {
+                ep_username.SetError(txt_user, "Username is Required!");
+                return;
+            }
+            else
+            {
+                ep_username.SetError(txt_user, string.Empty); 
+            }
+
+            
+            string passwordInput = txt_pass.Text.Trim();
+
+          
+            if (string.IsNullOrEmpty(passwordInput) || passwordInput == passwordPlaceholder)
+            {
+                ep_password.SetError(txt_pass, "Password is Required!");
+                return; 
+            }
+            else
+            {
+                ep_password.SetError(txt_pass, string.Empty);
+            }
+
             login();
         }
+
+
+
 
         private void signup_Click(object sender, EventArgs e)
         {

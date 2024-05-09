@@ -27,7 +27,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+        {            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LoginBg = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -44,8 +45,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_forgotPass = new System.Windows.Forms.Label();
+            this.ep_username = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ep_password = new System.Windows.Forms.ErrorProvider(this.components);
             this.LoginBg.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ep_username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ep_password)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginBg
@@ -288,13 +293,23 @@
             this.lbl_forgotPass.AutoSize = true;
             this.lbl_forgotPass.BackColor = System.Drawing.Color.Transparent;
             this.lbl_forgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_forgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_forgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_forgotPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.lbl_forgotPass.Location = new System.Drawing.Point(221, 470);
             this.lbl_forgotPass.Name = "lbl_forgotPass";
-            this.lbl_forgotPass.Size = new System.Drawing.Size(154, 20);
+            this.lbl_forgotPass.Size = new System.Drawing.Size(147, 18);
             this.lbl_forgotPass.TabIndex = 10;
             this.lbl_forgotPass.Text = "Forgot Password?";
+            // 
+            // ep_username
+            // 
+            this.ep_username.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ep_username.ContainerControl = this;
+            // 
+            // ep_password
+            // 
+            this.ep_password.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ep_password.ContainerControl = this;
             // 
             // Login
             // 
@@ -311,6 +326,8 @@
             this.LoginBg.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ep_username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ep_password)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,6 +351,8 @@
         private System.Windows.Forms.Button btn_show;
         private System.Windows.Forms.Button btn_hide;
         private System.Windows.Forms.Label lbl_forgotPass;
+        private System.Windows.Forms.ErrorProvider ep_username;
+        private System.Windows.Forms.ErrorProvider ep_password;
     }
 }
 

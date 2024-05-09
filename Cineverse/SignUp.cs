@@ -216,7 +216,7 @@ namespace Cineverse
                 
             } else
             {
-                MessageBox.Show("Password should have atleast 8 characters, 1 number, 1 symbol, and 1 capital letter.");
+                MessageBox.Show("Password should have atleast 8 characters, 1 number, and 1 symbol.");
                 txt_password.BorderColor = Color.Red;
             }
         }
@@ -260,6 +260,8 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            
+
             signUp();
         }
 
@@ -268,7 +270,7 @@ namespace Cineverse
             MySqlConnection conn = DBConnection.getConnection();
 
 
-            if (txt_firstName.Text != "First Name*" && txt_lastName.Text != "Last Name*" && txt_email.Text != "Email*" && txt_username.Text != "Username*" && txt_password.Text != "Password" && txt_confirmPassword.Text != "Confirm Password")
+            if (txt_firstName.Text != "First Name" && txt_lastName.Text != "Last Name" && txt_email.Text != "Email" && txt_username.Text != "Username" && txt_password.Text != "Password" && txt_confirmPassword.Text != "Confirm Password")
             {
                 if (txt_firstName.TextLength > 2 || txt_username.TextLength > 2)
                 {
@@ -321,49 +323,101 @@ namespace Cineverse
             }
             else
             {
-                MessageBox.Show("Please fill up all fields");
-                if (txt_firstName.Text.Equals("First Name"))
+                string firstNamePlaceholder = "First Name";
+                string lastNamePlaceholder = "Last Name";
+                string emailPlaceholder = "Email";
+                string contactPlaceholder = "Contact No.";
+                string usernamePlaceholder = "Username";
+                string passwordPlaceholder = "Password";
+                string confirmPlaceholder = "Confirm Password";
+
+                string firstNameInput = txt_firstName.Text.Trim();
+                if (string.IsNullOrEmpty(firstNameInput) || firstNameInput == firstNamePlaceholder)
                 {
                     txt_firstName.BorderColor = Color.Red;
+                    ep_FN.SetError(txt_firstName, "What's your First Name?");
                 }
-                if (txt_lastName.Text.Equals("Last Name"))
+                else
+                {
+                    ep_FN.SetError(txt_firstName, string.Empty);
+                }
+
+                string lasttNameInput = txt_lastName.Text.Trim();
+                if (string.IsNullOrEmpty(lasttNameInput) || lasttNameInput == lastNamePlaceholder)
                 {
                     txt_lastName.BorderColor = Color.Red;
+                    ep_FN.SetError(txt_lastName, "What's your Last Name?");
                 }
-                if (txt_email.Text.Equals("Email"))
+                else
+                {
+                    ep_FN.SetError(txt_lastName, string.Empty);
+                }
+
+                string emailInput = txt_email.Text.Trim();
+                if (string.IsNullOrEmpty(emailInput) || emailInput == emailPlaceholder)
                 {
                     txt_email.BorderColor = Color.Red;
+                    ep_FN.SetError(txt_email, "You'll use this when you log in and if you need to reset your Password.");
                 }
-                if (txt_username.Text.Equals("Username"))
+                else
                 {
-                    txt_username.BorderColor = Color.Red;
+                    ep_FN.SetError(txt_email, string.Empty);
                 }
-                if (txt_password.Text.Equals("Password"))
-                {
-                    txt_password.BorderColor = Color.Red;
-                }
-                if (txt_confirmPassword.Text.Equals("Confirm Password"))
-                {
-                    txt_confirmPassword.BorderColor = Color.Red;
-                }
-                if (txt_ContactNum.Text.Equals("Contact No."))
+
+                string contactInput = txt_ContactNum.Text.Trim();
+                if (string.IsNullOrEmpty(contactInput) || contactInput == contactPlaceholder)
                 {
                     txt_ContactNum.BorderColor = Color.Red;
+                    ep_FN.SetError(txt_ContactNum, "What's your Phone Number?");
+                }
+                else
+                {
+                    ep_FN.SetError(txt_ContactNum, string.Empty);
                 }
 
+                string usernameInput = txt_username.Text.Trim();
+                if (string.IsNullOrEmpty(usernameInput) || usernameInput == usernamePlaceholder)
+                {
+                    txt_username.BorderColor = Color.Red;
+                    ep_FN.SetError(txt_username, "You'll use this when you log in.");
+                }
+                else
+                {
+                    ep_FN.SetError(txt_username, string.Empty);
+                }
 
+                string passwordInput = txt_password.Text.Trim();
+                if (string.IsNullOrEmpty(passwordInput) || passwordInput == passwordPlaceholder)
+                {
+                    txt_password.BorderColor = Color.Red;
+                    ep_FN.SetError(txt_password, "Enter a combination of atleast 8 characters, letters, and symbols");
+                }
+                else
+                {
+                    ep_FN.SetError(txt_password, string.Empty);
+                }
+
+                string confirmpasswordInput = txt_confirmPassword.Text.Trim();
+                if (string.IsNullOrEmpty(confirmpasswordInput) || confirmpasswordInput == confirmPlaceholder)
+                {
+                    txt_confirmPassword.BorderColor = Color.Red;
+                    ep_FN.SetError(txt_confirmPassword, "Password and Confirm Password must be the same");
+                }
+                else
+                {
+                    ep_FN.SetError(txt_confirmPassword, string.Empty);
+                }
             }
         }
 
         static bool IsValidPassword(string password)
         {
             var hasNumber = new Regex(@"[0-9]+");
-            var hasUpperChar = new Regex(@"[A-Z]+");
             var hasMinimum8Chars = new Regex(@".{8,}");
             var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
 
 
-            var isValidated = hasNumber.IsMatch(password) && hasUpperChar.IsMatch(password) && hasMinimum8Chars.IsMatch(password) && hasSymbols.IsMatch(password);
+            var isValidated = hasNumber.IsMatch(password) && hasMinimum8Chars.IsMatch(password) && hasSymbols.IsMatch(password);
             return isValidated;
         }
 
@@ -389,6 +443,90 @@ namespace Cineverse
 
             }
 
+        }
+
+        private void txt_firstName_TextChanged(object sender, EventArgs e)
+        {
+            string firstNameInput = txt_firstName.Text.Trim();
+
+           
+            if (!string.IsNullOrEmpty(firstNameInput) && firstNameInput != "First Name")
+            {
+                txt_firstName.BorderColor = SystemColors.ControlDark; 
+                ep_FN.SetError(txt_firstName, string.Empty);
+            }
+        }
+
+        private void txt_lastName_TextChanged(object sender, EventArgs e)
+        {
+            string lastNameInput = txt_lastName.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(lastNameInput) && lastNameInput != "Last Name")
+            {
+                txt_lastName.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_lastName, string.Empty);
+            }
+        }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+            string emailInput = txt_email.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(emailInput) && emailInput != "Email")
+            {
+                txt_email.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_email, string.Empty);
+            }
+        }
+
+        private void txt_ContactNum_TextChanged(object sender, EventArgs e)
+        {
+            string contactInput = txt_ContactNum.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(contactInput) && contactInput != "Contact No.")
+            {
+                txt_ContactNum.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_ContactNum, string.Empty);
+            }
+        }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+            string usernameInput = txt_username.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(usernameInput) && usernameInput != "Username")
+            {
+                txt_username.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_username, string.Empty);
+            }
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+            string passwordInput = txt_password.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(passwordInput) && passwordInput != "Password")
+            {
+                txt_password.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_password, string.Empty);
+            }
+        }
+
+        private void txt_confirmPassword_TextChanged(object sender, EventArgs e)
+        {
+            string confirmInput = txt_confirmPassword.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(confirmInput) && confirmInput != "Confirm Password")
+            {
+                txt_confirmPassword.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_confirmPassword, string.Empty);
+            }
         }
     }
 }

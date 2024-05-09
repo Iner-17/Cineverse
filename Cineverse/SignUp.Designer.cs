@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.SignUpBg = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_astConfirmPass = new System.Windows.Forms.Label();
+            this.lbl_astPass = new System.Windows.Forms.Label();
+            this.lbl_astUsername = new System.Windows.Forms.Label();
+            this.lbl_astContactNo = new System.Windows.Forms.Label();
+            this.lbl_astEmail = new System.Windows.Forms.Label();
+            this.lbl_astLN = new System.Windows.Forms.Label();
+            this.lbl_astFN = new System.Windows.Forms.Label();
             this.txt_ContactNum = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_confirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,15 +53,10 @@
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_astFN = new System.Windows.Forms.Label();
-            this.lbl_astLN = new System.Windows.Forms.Label();
-            this.lbl_astEmail = new System.Windows.Forms.Label();
-            this.lbl_astContactNo = new System.Windows.Forms.Label();
-            this.lbl_astUsername = new System.Windows.Forms.Label();
-            this.lbl_astPass = new System.Windows.Forms.Label();
-            this.lbl_astConfirmPass = new System.Windows.Forms.Label();
+            this.ep_FN = new System.Windows.Forms.ErrorProvider(this.components);
             this.SignUpBg.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ep_FN)).BeginInit();
             this.SuspendLayout();
             // 
             // SignUpBg
@@ -109,6 +112,79 @@
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // lbl_astConfirmPass
+            // 
+            this.lbl_astConfirmPass.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_astConfirmPass.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_astConfirmPass.Location = new System.Drawing.Point(268, 549);
+            this.lbl_astConfirmPass.Name = "lbl_astConfirmPass";
+            this.lbl_astConfirmPass.Size = new System.Drawing.Size(16, 11);
+            this.lbl_astConfirmPass.TabIndex = 18;
+            this.lbl_astConfirmPass.Text = "*";
+            // 
+            // lbl_astPass
+            // 
+            this.lbl_astPass.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_astPass.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_astPass.Location = new System.Drawing.Point(192, 494);
+            this.lbl_astPass.Name = "lbl_astPass";
+            this.lbl_astPass.Size = new System.Drawing.Size(16, 11);
+            this.lbl_astPass.TabIndex = 17;
+            this.lbl_astPass.Text = "*";
+            // 
+            // lbl_astUsername
+            // 
+            this.lbl_astUsername.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_astUsername.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_astUsername.Location = new System.Drawing.Point(200, 439);
+            this.lbl_astUsername.Name = "lbl_astUsername";
+            this.lbl_astUsername.Size = new System.Drawing.Size(16, 11);
+            this.lbl_astUsername.TabIndex = 16;
+            this.lbl_astUsername.Text = "*";
+            // 
+            // lbl_astContactNo
+            // 
+            this.lbl_astContactNo.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_astContactNo.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_astContactNo.Location = new System.Drawing.Point(212, 385);
+            this.lbl_astContactNo.Name = "lbl_astContactNo";
+            this.lbl_astContactNo.Size = new System.Drawing.Size(16, 11);
+            this.lbl_astContactNo.TabIndex = 15;
+            this.lbl_astContactNo.Text = "*";
+            // 
+            // lbl_astEmail
+            // 
+            this.lbl_astEmail.BackColor = System.Drawing.Color.Black;
+            this.lbl_astEmail.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_astEmail.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_astEmail.Location = new System.Drawing.Point(159, 330);
+            this.lbl_astEmail.Name = "lbl_astEmail";
+            this.lbl_astEmail.Size = new System.Drawing.Size(16, 11);
+            this.lbl_astEmail.TabIndex = 14;
+            this.lbl_astEmail.Text = "*";
+            // 
+            // lbl_astLN
+            // 
+            this.lbl_astLN.BackColor = System.Drawing.Color.Black;
+            this.lbl_astLN.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_astLN.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_astLN.Location = new System.Drawing.Point(426, 275);
+            this.lbl_astLN.Name = "lbl_astLN";
+            this.lbl_astLN.Size = new System.Drawing.Size(16, 11);
+            this.lbl_astLN.TabIndex = 13;
+            this.lbl_astLN.Text = "*";
+            // 
+            // lbl_astFN
+            // 
+            this.lbl_astFN.BackColor = System.Drawing.Color.Black;
+            this.lbl_astFN.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_astFN.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_astFN.Location = new System.Drawing.Point(203, 275);
+            this.lbl_astFN.Name = "lbl_astFN";
+            this.lbl_astFN.Size = new System.Drawing.Size(16, 11);
+            this.lbl_astFN.TabIndex = 12;
+            this.lbl_astFN.Text = "*";
+            // 
             // txt_ContactNum
             // 
             this.txt_ContactNum.BorderRadius = 10;
@@ -123,21 +199,18 @@
             this.txt_ContactNum.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ContactNum.ForeColor = System.Drawing.Color.Silver;
             this.txt_ContactNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_ContactNum.Location = new System.Drawing.Point(122, 382);
+            this.txt_ContactNum.Location = new System.Drawing.Point(105, 382);
             this.txt_ContactNum.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ContactNum.Name = "txt_ContactNum";
             this.txt_ContactNum.PasswordChar = '\0';
             this.txt_ContactNum.PlaceholderText = "";
             this.txt_ContactNum.SelectedText = "";
-            this.txt_ContactNum.Size = new System.Drawing.Size(375, 40);
+            this.txt_ContactNum.Size = new System.Drawing.Size(409, 40);
             this.txt_ContactNum.TabIndex = 4;
+            this.txt_ContactNum.TextChanged += new System.EventHandler(this.txt_ContactNum_TextChanged);
             this.txt_ContactNum.Enter += new System.EventHandler(this.txt_ContactNum_Enter);
             this.txt_ContactNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ContactNum_KeyPress);
             this.txt_ContactNum.Leave += new System.EventHandler(this.txt_ContactNum_Leave);
-            // 
-            // checkBox1
-            // 
-            
             // 
             // txt_confirmPassword
             // 
@@ -153,14 +226,15 @@
             this.txt_confirmPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_confirmPassword.ForeColor = System.Drawing.Color.Silver;
             this.txt_confirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_confirmPassword.Location = new System.Drawing.Point(122, 547);
+            this.txt_confirmPassword.Location = new System.Drawing.Point(105, 547);
             this.txt_confirmPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txt_confirmPassword.Name = "txt_confirmPassword";
             this.txt_confirmPassword.PasswordChar = '\0';
             this.txt_confirmPassword.PlaceholderText = "";
             this.txt_confirmPassword.SelectedText = "";
-            this.txt_confirmPassword.Size = new System.Drawing.Size(375, 40);
+            this.txt_confirmPassword.Size = new System.Drawing.Size(409, 40);
             this.txt_confirmPassword.TabIndex = 7;
+            this.txt_confirmPassword.TextChanged += new System.EventHandler(this.txt_confirmPassword_TextChanged);
             this.txt_confirmPassword.Enter += new System.EventHandler(this.txt_confirmPassword_Enter);
             this.txt_confirmPassword.Leave += new System.EventHandler(this.txt_confirmPassword_Leave);
             // 
@@ -178,14 +252,15 @@
             this.txt_password.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.Silver;
             this.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_password.Location = new System.Drawing.Point(123, 492);
+            this.txt_password.Location = new System.Drawing.Point(105, 492);
             this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '\0';
             this.txt_password.PlaceholderText = "";
             this.txt_password.SelectedText = "";
-            this.txt_password.Size = new System.Drawing.Size(375, 40);
+            this.txt_password.Size = new System.Drawing.Size(410, 40);
             this.txt_password.TabIndex = 6;
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
             this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
             // 
@@ -203,14 +278,15 @@
             this.txt_username.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.Silver;
             this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.Location = new System.Drawing.Point(122, 437);
+            this.txt_username.Location = new System.Drawing.Point(105, 437);
             this.txt_username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_username.Name = "txt_username";
             this.txt_username.PasswordChar = '\0';
             this.txt_username.PlaceholderText = "";
             this.txt_username.SelectedText = "";
-            this.txt_username.Size = new System.Drawing.Size(375, 40);
+            this.txt_username.Size = new System.Drawing.Size(409, 40);
             this.txt_username.TabIndex = 5;
+            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             this.txt_username.Enter += new System.EventHandler(this.txt_username_Enter);
             this.txt_username.Leave += new System.EventHandler(this.txt_username_Leave_1);
             // 
@@ -228,14 +304,15 @@
             this.txt_lastName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lastName.ForeColor = System.Drawing.Color.Silver;
             this.txt_lastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lastName.Location = new System.Drawing.Point(316, 272);
+            this.txt_lastName.Location = new System.Drawing.Point(330, 272);
             this.txt_lastName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_lastName.Name = "txt_lastName";
             this.txt_lastName.PasswordChar = '\0';
             this.txt_lastName.PlaceholderText = "";
             this.txt_lastName.SelectedText = "";
-            this.txt_lastName.Size = new System.Drawing.Size(182, 40);
+            this.txt_lastName.Size = new System.Drawing.Size(185, 40);
             this.txt_lastName.TabIndex = 3;
+            this.txt_lastName.TextChanged += new System.EventHandler(this.txt_lastName_TextChanged);
             this.txt_lastName.Enter += new System.EventHandler(this.txt_lastName_Enter);
             this.txt_lastName.Leave += new System.EventHandler(this.txt_lastName_Leave);
             // 
@@ -254,14 +331,15 @@
             this.txt_firstName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_firstName.ForeColor = System.Drawing.Color.Silver;
             this.txt_firstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_firstName.Location = new System.Drawing.Point(122, 272);
+            this.txt_firstName.Location = new System.Drawing.Point(105, 272);
             this.txt_firstName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_firstName.Name = "txt_firstName";
             this.txt_firstName.PasswordChar = '\0';
             this.txt_firstName.PlaceholderText = "";
             this.txt_firstName.SelectedText = "";
-            this.txt_firstName.Size = new System.Drawing.Size(191, 40);
+            this.txt_firstName.Size = new System.Drawing.Size(200, 40);
             this.txt_firstName.TabIndex = 2;
+            this.txt_firstName.TextChanged += new System.EventHandler(this.txt_firstName_TextChanged);
             this.txt_firstName.Enter += new System.EventHandler(this.txt_firstName_Enter);
             this.txt_firstName.Leave += new System.EventHandler(this.txt_firstName_Leave);
             // 
@@ -274,7 +352,7 @@
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.Login.Location = new System.Drawing.Point(386, 682);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(59, 22);
+            this.Login.Size = new System.Drawing.Size(56, 19);
             this.Login.TabIndex = 10;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
@@ -287,7 +365,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(179, 682);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 22);
+            this.label4.Size = new System.Drawing.Size(211, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
@@ -304,9 +382,9 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.guna2Button1.Font = new System.Drawing.Font("Montserrat", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(123, 617);
+            this.guna2Button1.Location = new System.Drawing.Point(105, 617);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(375, 40);
+            this.guna2Button1.Size = new System.Drawing.Size(410, 40);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Sign Up";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -335,14 +413,15 @@
             this.txt_email.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txt_email.ForeColor = System.Drawing.Color.Silver;
             this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Location = new System.Drawing.Point(122, 327);
+            this.txt_email.Location = new System.Drawing.Point(105, 327);
             this.txt_email.Margin = new System.Windows.Forms.Padding(4);
             this.txt_email.Name = "txt_email";
             this.txt_email.PasswordChar = '\0';
             this.txt_email.PlaceholderText = "";
             this.txt_email.SelectedText = "";
-            this.txt_email.Size = new System.Drawing.Size(375, 40);
+            this.txt_email.Size = new System.Drawing.Size(409, 40);
             this.txt_email.TabIndex = 4;
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             this.txt_email.Enter += new System.EventHandler(this.txt_email_Enter);
             this.txt_email.Leave += new System.EventHandler(this.txt_email_Leave);
             // 
@@ -368,75 +447,10 @@
             this.panel2.Size = new System.Drawing.Size(154, 56);
             this.panel2.TabIndex = 1;
             // 
-            // lbl_astFN
+            // ep_FN
             // 
-            this.lbl_astFN.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_astFN.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_astFN.Location = new System.Drawing.Point(220, 278);
-            this.lbl_astFN.Name = "lbl_astFN";
-            this.lbl_astFN.Size = new System.Drawing.Size(19, 16);
-            this.lbl_astFN.TabIndex = 12;
-            this.lbl_astFN.Text = "*";
-            // 
-            // lbl_astLN
-            // 
-            this.lbl_astLN.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_astLN.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_astLN.Location = new System.Drawing.Point(413, 278);
-            this.lbl_astLN.Name = "lbl_astLN";
-            this.lbl_astLN.Size = new System.Drawing.Size(19, 16);
-            this.lbl_astLN.TabIndex = 13;
-            this.lbl_astLN.Text = "*";
-            // 
-            // lbl_astEmail
-            // 
-            this.lbl_astEmail.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_astEmail.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_astEmail.Location = new System.Drawing.Point(177, 332);
-            this.lbl_astEmail.Name = "lbl_astEmail";
-            this.lbl_astEmail.Size = new System.Drawing.Size(19, 16);
-            this.lbl_astEmail.TabIndex = 14;
-            this.lbl_astEmail.Text = "*";
-            // 
-            // lbl_astContactNo
-            // 
-            this.lbl_astContactNo.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_astContactNo.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_astContactNo.Location = new System.Drawing.Point(226, 387);
-            this.lbl_astContactNo.Name = "lbl_astContactNo";
-            this.lbl_astContactNo.Size = new System.Drawing.Size(19, 16);
-            this.lbl_astContactNo.TabIndex = 15;
-            this.lbl_astContactNo.Text = "*";
-            // 
-            // lbl_astUsername
-            // 
-            this.lbl_astUsername.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_astUsername.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_astUsername.Location = new System.Drawing.Point(215, 443);
-            this.lbl_astUsername.Name = "lbl_astUsername";
-            this.lbl_astUsername.Size = new System.Drawing.Size(19, 16);
-            this.lbl_astUsername.TabIndex = 16;
-            this.lbl_astUsername.Text = "*";
-            // 
-            // lbl_astPass
-            // 
-            this.lbl_astPass.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_astPass.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_astPass.Location = new System.Drawing.Point(210, 498);
-            this.lbl_astPass.Name = "lbl_astPass";
-            this.lbl_astPass.Size = new System.Drawing.Size(19, 16);
-            this.lbl_astPass.TabIndex = 17;
-            this.lbl_astPass.Text = "*";
-            // 
-            // lbl_astConfirmPass
-            // 
-            this.lbl_astConfirmPass.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_astConfirmPass.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_astConfirmPass.Location = new System.Drawing.Point(282, 552);
-            this.lbl_astConfirmPass.Name = "lbl_astConfirmPass";
-            this.lbl_astConfirmPass.Size = new System.Drawing.Size(19, 16);
-            this.lbl_astConfirmPass.TabIndex = 18;
-            this.lbl_astConfirmPass.Text = "*";
+            this.ep_FN.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ep_FN.ContainerControl = this;
             // 
             // SignUp
             // 
@@ -452,6 +466,7 @@
             this.SignUpBg.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ep_FN)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +496,6 @@
         private System.Windows.Forms.Label lbl_astConfirmPass;
         private System.Windows.Forms.Label lbl_astPass;
         private System.Windows.Forms.Label lbl_astUsername;
+        private System.Windows.Forms.ErrorProvider ep_FN;
     }
 }
