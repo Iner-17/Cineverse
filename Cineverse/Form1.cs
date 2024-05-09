@@ -86,8 +86,43 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+           
+            string usernamePlaceholder = "Enter Username or Email";
+            string passwordPlaceholder = "Enter Password";
+
+          
+            string usernameInput = txt_user.Text.Trim();
+
+           
+            if (string.IsNullOrEmpty(usernameInput) || usernameInput == usernamePlaceholder)
+            {
+                txt_user.BorderColor = Color.Red;
+                ep_username.SetError(txt_user, "Username is Required!");
+            }
+            else
+            {
+                ep_username.SetError(txt_user, string.Empty); 
+            }
+
+            
+            string passwordInput = txt_pass.Text.Trim();
+
+          
+            if (string.IsNullOrEmpty(passwordInput) || passwordInput == passwordPlaceholder)
+            {
+                txt_pass.BorderColor = Color.Red;
+                ep_password.SetError(txt_pass, "Password is Required!");
+            }
+            else
+            {
+                ep_password.SetError(txt_pass, string.Empty);
+            }
+
             login();
         }
+
+
+
 
         private void signup_Click(object sender, EventArgs e)
         {
@@ -161,5 +196,28 @@ namespace Cineverse
             btn_hide.BackColor = Color.Black;
         }
 
+        private void txt_user_TextChanged(object sender, EventArgs e)
+        {
+            string userInput = txt_user.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(userInput) && userInput != "Enter Username or Email")
+            {
+                txt_user.BorderColor = SystemColors.ControlDark;
+                ep_username.SetError(txt_user, string.Empty);
+            }
+        }
+
+        private void txt_pass_TextChanged(object sender, EventArgs e)
+        {
+            string passInput = txt_pass.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(passInput) && passInput != "Enter Password")
+            {
+                txt_pass.BorderColor = SystemColors.ControlDark;
+                ep_password.SetError(txt_pass, string.Empty);
+            }
+        }
     }
 }

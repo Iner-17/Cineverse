@@ -243,7 +243,7 @@ namespace Cineverse
                 
             } else
             {
-                MessageBox.Show("Password should have atleast 8 characters, 1 number, 1 symbol, and 1 capital letter.");
+                MessageBox.Show("Password should have atleast 8 characters, 1 number, and 1 symbol.");
                 txt_password.BorderColor = Color.Red;
             }
         }
@@ -287,6 +287,8 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            
+
             signUp();
         }
 
@@ -405,12 +407,11 @@ namespace Cineverse
         static bool IsValidPassword(string password)
         {
             var hasNumber = new Regex(@"[0-9]+");
-            var hasUpperChar = new Regex(@"[A-Z]+");
             var hasMinimum8Chars = new Regex(@".{8,}");
             var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
 
 
-            var isValidated = hasNumber.IsMatch(password) && hasUpperChar.IsMatch(password) && hasMinimum8Chars.IsMatch(password) && hasSymbols.IsMatch(password);
+            var isValidated = hasNumber.IsMatch(password) && hasMinimum8Chars.IsMatch(password) && hasSymbols.IsMatch(password);
             return isValidated;
         }
 
@@ -436,6 +437,90 @@ namespace Cineverse
 
             }
 
+        }
+
+        private void txt_firstName_TextChanged(object sender, EventArgs e)
+        {
+            string firstNameInput = txt_firstName.Text.Trim();
+
+           
+            if (!string.IsNullOrEmpty(firstNameInput) && firstNameInput != "First Name")
+            {
+                txt_firstName.BorderColor = SystemColors.ControlDark; 
+                ep_FN.SetError(txt_firstName, string.Empty);
+            }
+        }
+
+        private void txt_lastName_TextChanged(object sender, EventArgs e)
+        {
+            string lastNameInput = txt_lastName.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(lastNameInput) && lastNameInput != "Last Name")
+            {
+                txt_lastName.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_lastName, string.Empty);
+            }
+        }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+            string emailInput = txt_email.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(emailInput) && emailInput != "Email")
+            {
+                txt_email.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_email, string.Empty);
+            }
+        }
+
+        private void txt_ContactNum_TextChanged(object sender, EventArgs e)
+        {
+            string contactInput = txt_ContactNum.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(contactInput) && contactInput != "Contact No.")
+            {
+                txt_ContactNum.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_ContactNum, string.Empty);
+            }
+        }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+            string usernameInput = txt_username.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(usernameInput) && usernameInput != "Username")
+            {
+                txt_username.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_username, string.Empty);
+            }
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+            string passwordInput = txt_password.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(passwordInput) && passwordInput != "Password")
+            {
+                txt_password.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_password, string.Empty);
+            }
+        }
+
+        private void txt_confirmPassword_TextChanged(object sender, EventArgs e)
+        {
+            string confirmInput = txt_confirmPassword.Text.Trim();
+
+
+            if (!string.IsNullOrEmpty(confirmInput) && confirmInput != "Confirm Password")
+            {
+                txt_confirmPassword.BorderColor = SystemColors.ControlDark;
+                ep_FN.SetError(txt_confirmPassword, string.Empty);
+            }
         }
     }
 }
