@@ -46,6 +46,9 @@
             this.lbl_todaysBooking = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lbl_rating3 = new System.Windows.Forms.Label();
+            this.lbl_rating2 = new System.Windows.Forms.Label();
+            this.lbl_rating1 = new System.Windows.Forms.Label();
             this.lbl_refresh = new System.Windows.Forms.Label();
             this.lbl_price3 = new System.Windows.Forms.Label();
             this.lbl_price2 = new System.Windows.Forms.Label();
@@ -67,9 +70,6 @@
             this.pb_dbMovieDisplay2 = new System.Windows.Forms.PictureBox();
             this.pb_dbMovieDisplay1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_rating1 = new System.Windows.Forms.Label();
-            this.lbl_rating2 = new System.Windows.Forms.Label();
-            this.lbl_rating3 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -202,6 +202,7 @@
             this.lbl_revenue.TabIndex = 13;
             this.lbl_revenue.Text = "₱98,217.24";
             this.lbl_revenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_revenue.Click += new System.EventHandler(this.lbl_revenue_Click);
             // 
             // label17
             // 
@@ -314,6 +315,42 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(895, 719);
             this.panel7.TabIndex = 16;
+            // 
+            // lbl_rating3
+            // 
+            this.lbl_rating3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_rating3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rating3.ForeColor = System.Drawing.Color.White;
+            this.lbl_rating3.Location = new System.Drawing.Point(629, 576);
+            this.lbl_rating3.Name = "lbl_rating3";
+            this.lbl_rating3.Size = new System.Drawing.Size(226, 24);
+            this.lbl_rating3.TabIndex = 24;
+            this.lbl_rating3.Text = "Rating";
+            this.lbl_rating3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_rating2
+            // 
+            this.lbl_rating2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_rating2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rating2.ForeColor = System.Drawing.Color.White;
+            this.lbl_rating2.Location = new System.Drawing.Point(336, 576);
+            this.lbl_rating2.Name = "lbl_rating2";
+            this.lbl_rating2.Size = new System.Drawing.Size(222, 24);
+            this.lbl_rating2.TabIndex = 23;
+            this.lbl_rating2.Text = "Rating";
+            this.lbl_rating2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_rating1
+            // 
+            this.lbl_rating1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_rating1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rating1.ForeColor = System.Drawing.Color.White;
+            this.lbl_rating1.Location = new System.Drawing.Point(39, 576);
+            this.lbl_rating1.Name = "lbl_rating1";
+            this.lbl_rating1.Size = new System.Drawing.Size(222, 24);
+            this.lbl_rating1.TabIndex = 22;
+            this.lbl_rating1.Text = "Rating";
+            this.lbl_rating1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_refresh
             // 
@@ -586,42 +623,6 @@
             this.label2.Size = new System.Drawing.Size(355, 39);
             this.label2.TabIndex = 2;
             this.label2.Text = "SCHEDULED MOVIES";
-            // 
-            // lbl_rating1
-            // 
-            this.lbl_rating1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_rating1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rating1.ForeColor = System.Drawing.Color.White;
-            this.lbl_rating1.Location = new System.Drawing.Point(39, 576);
-            this.lbl_rating1.Name = "lbl_rating1";
-            this.lbl_rating1.Size = new System.Drawing.Size(222, 24);
-            this.lbl_rating1.TabIndex = 22;
-            this.lbl_rating1.Text = "Rating";
-            this.lbl_rating1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_rating2
-            // 
-            this.lbl_rating2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_rating2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rating2.ForeColor = System.Drawing.Color.White;
-            this.lbl_rating2.Location = new System.Drawing.Point(336, 576);
-            this.lbl_rating2.Name = "lbl_rating2";
-            this.lbl_rating2.Size = new System.Drawing.Size(222, 24);
-            this.lbl_rating2.TabIndex = 23;
-            this.lbl_rating2.Text = "Rating";
-            this.lbl_rating2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_rating3
-            // 
-            this.lbl_rating3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_rating3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rating3.ForeColor = System.Drawing.Color.White;
-            this.lbl_rating3.Location = new System.Drawing.Point(629, 576);
-            this.lbl_rating3.Name = "lbl_rating3";
-            this.lbl_rating3.Size = new System.Drawing.Size(226, 24);
-            this.lbl_rating3.TabIndex = 24;
-            this.lbl_rating3.Text = "Rating";
-            this.lbl_rating3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DashboardSection
             // 

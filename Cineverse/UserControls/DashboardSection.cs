@@ -356,5 +356,10 @@ namespace Cineverse
             btn_statistics.BackColor = Color.FromArgb(20, 32, 32);
             btn_statistics.ForeColor = Color.White;
         }
+
+        private void lbl_revenue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
