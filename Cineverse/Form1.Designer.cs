@@ -43,6 +43,7 @@
             this.txt_user = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_forgotPass = new System.Windows.Forms.Label();
             this.LoginBg.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.lbl_forgotPass);
             this.panel3.Controls.Add(this.btn_hide);
             this.panel3.Controls.Add(this.signup);
             this.panel3.Controls.Add(this.btn_show);
@@ -190,7 +192,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.guna2Button1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(113, 483);
+            this.guna2Button1.Location = new System.Drawing.Point(113, 512);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(375, 40);
             this.guna2Button1.TabIndex = 1;
@@ -281,6 +283,19 @@
             this.panel2.Size = new System.Drawing.Size(154, 56);
             this.panel2.TabIndex = 0;
             // 
+            // lbl_forgotPass
+            // 
+            this.lbl_forgotPass.AutoSize = true;
+            this.lbl_forgotPass.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_forgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_forgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_forgotPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.lbl_forgotPass.Location = new System.Drawing.Point(221, 470);
+            this.lbl_forgotPass.Name = "lbl_forgotPass";
+            this.lbl_forgotPass.Size = new System.Drawing.Size(154, 20);
+            this.lbl_forgotPass.TabIndex = 10;
+            this.lbl_forgotPass.Text = "Forgot Password?";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +333,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_show;
         private System.Windows.Forms.Button btn_hide;
+        private System.Windows.Forms.Label lbl_forgotPass;
     }
 }
 
