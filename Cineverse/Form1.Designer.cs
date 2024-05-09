@@ -238,6 +238,7 @@
             this.txt_pass.SelectedText = "";
             this.txt_pass.Size = new System.Drawing.Size(375, 40);
             this.txt_pass.TabIndex = 3;
+            this.txt_pass.TextChanged += new System.EventHandler(this.txt_pass_TextChanged);
             this.txt_pass.Enter += new System.EventHandler(this.txt_pass_Enter);
             this.txt_pass.Leave += new System.EventHandler(this.txt_pass_Leave);
             // 
@@ -263,6 +264,7 @@
             this.txt_user.SelectedText = "";
             this.txt_user.Size = new System.Drawing.Size(375, 40);
             this.txt_user.TabIndex = 2;
+            this.txt_user.TextChanged += new System.EventHandler(this.txt_user_TextChanged);
             this.txt_user.Enter += new System.EventHandler(this.txt_user_Enter);
             this.txt_user.Leave += new System.EventHandler(this.txt_user_Leave);
             // 
