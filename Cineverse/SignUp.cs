@@ -29,9 +29,10 @@ namespace Cineverse
 
         private void txt_firstName_Enter(object sender, EventArgs e)
         {
-            
-            if (txt_firstName.Text == "First Name*")
+
+            if (txt_firstName.Text == "First Name")
             {
+                lbl_astFN.Text = "";
                 txt_firstName.Text = "";
                 txt_firstName.ForeColor = Color.White;
             }
@@ -43,15 +44,17 @@ namespace Cineverse
         {
             if (txt_firstName.Text == "")
             {
-                txt_firstName.Text = "First Name*";
+                txt_firstName.Text = "First Name";
+                lbl_astFN.Text = "*";
                 txt_firstName.ForeColor = Color.Silver;
             }
         }
 
         private void txt_lastName_Enter(object sender, EventArgs e)
         {
-            if (txt_lastName.Text == "Last Name*")
+            if (txt_lastName.Text == "Last Name")
             {
+                lbl_astLN.Text = "";
                 txt_lastName.Text = "";
                 txt_lastName.ForeColor = Color.White;
             }
@@ -63,7 +66,8 @@ namespace Cineverse
         {
             if (txt_lastName.Text == "")
             {
-                txt_lastName.Text = "Last Name*";
+                txt_lastName.Text = "Last Name";
+                lbl_astLN.Text = "*";
                 txt_lastName.ForeColor = Color.Silver;
             }
         }
@@ -76,8 +80,9 @@ namespace Cineverse
 
         private void txt_email_Enter(object sender, EventArgs e)
         {
-            if (txt_email.Text == "Email*")
+            if (txt_email.Text == "Email")
             {
+                lbl_astEmail.Text = "";
                 txt_email.Text = "";
                 txt_email.ForeColor = Color.White;
             }
@@ -87,7 +92,8 @@ namespace Cineverse
         {
             if (txt_email.Text == "")
             {
-                txt_email.Text = "Email*";
+                txt_email.Text = "Email";
+                lbl_astEmail.Text= "*";
                 txt_email.ForeColor = Color.Silver;
             }
         }
@@ -95,8 +101,9 @@ namespace Cineverse
 
         private void txt_ContactNum_Enter(object sender, EventArgs e)
         {
-            if (txt_ContactNum.Text == "Contact No.*")
+            if (txt_ContactNum.Text == "Contact No.")
             {
+                lbl_astContactNo.Text = "";
                 txt_ContactNum.Text = "";
                 txt_ContactNum.ForeColor = Color.White;
             }
@@ -106,14 +113,16 @@ namespace Cineverse
         {
             if (txt_ContactNum.Text == "")
             {
-                txt_ContactNum.Text = "Contact No.*";
+                txt_ContactNum.Text = "Contact No.";
+                lbl_astContactNo.Text = "*";
                 txt_ContactNum.ForeColor = Color.Silver;
             }
         }
             private void txt_username_Enter(object sender, EventArgs e)
         {
-            if (txt_username.Text == "Username*")
+            if (txt_username.Text == "Username")
             {
+                lbl_astUsername.Text = "";
                 txt_username.Text = "";
                 txt_username.ForeColor = Color.White;
             }
@@ -125,7 +134,8 @@ namespace Cineverse
         {
             if (txt_username.Text == "")
             {
-                txt_username.Text = "Username*";
+                txt_username.Text = "Username";
+                lbl_astUsername.Text = "*";
                 txt_username.ForeColor = Color.Silver;
             }
 
@@ -160,6 +170,7 @@ namespace Cineverse
             if (txt_password.Text == "Password")
             {
                 txt_password.Text = "";
+                lbl_astPass.Text = "";
                 txt_password.ForeColor = Color.White;
                 if (txt_password.UseSystemPasswordChar == false)
                 {
@@ -175,6 +186,7 @@ namespace Cineverse
             if (txt_password.Text == "")
             {
                 txt_password.Text = "Password";
+                lbl_astPass.Text = "*";
                 txt_password.ForeColor = Color.Silver;
                 if (txt_password.UseSystemPasswordChar == true)
                 {
@@ -188,6 +200,7 @@ namespace Cineverse
             if (txt_confirmPassword.Text == "Confirm Password")
             {
                 txt_confirmPassword.Text = "";
+                lbl_astConfirmPass.Text = "";
                 txt_confirmPassword.ForeColor = Color.White;
                 if (txt_confirmPassword.UseSystemPasswordChar == false)
                 {
@@ -203,6 +216,7 @@ namespace Cineverse
             if (txt_confirmPassword.Text == "")
             {
                 txt_confirmPassword.Text = "Confirm Password";
+                lbl_astConfirmPass.Text = "*";
                 txt_confirmPassword.ForeColor = Color.Silver;
                 if (txt_confirmPassword.UseSystemPasswordChar == true)
                 {
@@ -274,19 +288,19 @@ namespace Cineverse
             else
             {
                 MessageBox.Show("Please fill up all fields");
-                if (txt_firstName.Text.Equals("First Name*"))
+                if (txt_firstName.Text.Equals("First Name"))
                 {
                     txt_firstName.BorderColor = Color.Red;
                 }
-                if (txt_lastName.Text.Equals("Last Name*"))
+                if (txt_lastName.Text.Equals("Last Name"))
                 {
                     txt_lastName.BorderColor = Color.Red;
                 }
-                if (txt_email.Text.Equals("Email*"))
+                if (txt_email.Text.Equals("Email"))
                 {
                     txt_email.BorderColor = Color.Red;
                 }
-                if (txt_username.Text.Equals("Username*"))
+                if (txt_username.Text.Equals("Username"))
                 {
                     txt_username.BorderColor = Color.Red;
                 }
@@ -298,7 +312,7 @@ namespace Cineverse
                 {
                     txt_confirmPassword.BorderColor = Color.Red;
                 }
-                if (txt_ContactNum.Text.Equals("Contact No.*"))
+                if (txt_ContactNum.Text.Equals("Contact No."))
                 {
                     txt_ContactNum.BorderColor = Color.Red;
                 }
