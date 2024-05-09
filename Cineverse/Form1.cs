@@ -33,8 +33,7 @@ namespace Cineverse
         }
         private void panel5_Click(object sender, EventArgs e)
         {
-            Login loginfrm = new Login();
-            this.Close();
+            Application.Exit();
         }
 
         public void login()

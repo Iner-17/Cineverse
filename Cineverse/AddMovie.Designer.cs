@@ -344,7 +344,7 @@
             this.dtp_date.CalendarTitleBackColor = System.Drawing.Color.Black;
             this.dtp_date.CalendarTitleForeColor = System.Drawing.Color.Transparent;
             this.dtp_date.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
-            this.dtp_date.CustomFormat = "MMMM  dd,  yyy";
+            this.dtp_date.CustomFormat = "MMMM  dd,  yyyy";
             this.dtp_date.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_date.Location = new System.Drawing.Point(94, 480);
@@ -457,7 +457,7 @@
             this.label12.ForeColor = System.Drawing.Color.Red;
             this.label12.Location = new System.Drawing.Point(9, 76);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(330, 14);
+            this.label12.Size = new System.Drawing.Size(322, 15);
             this.label12.TabIndex = 39;
             this.label12.Text = "*Note: Save a Movie first before adding a screening dates.*";
             // 

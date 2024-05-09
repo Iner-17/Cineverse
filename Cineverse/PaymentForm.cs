@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Google.Protobuf;
 using MySql.Data.MySqlClient;
 
 namespace Cineverse
@@ -19,13 +20,18 @@ namespace Cineverse
             InitializeComponent();
         }
         private int price = 0;
-        public void GetDataFromSeatForm(string title, string date, string time, string seatLists)
+        public void GetDataFromSeatForm(string title, string date_, string time, string seatLists)
         {
+            DateTime date = DateTime.ParseExact(date_, "MMMM  dd,  yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            string day = date.ToString("dddd");
+
             lbl_titlePayment.Text = title;
-            lbl_dateTime.Text = date + " • " + time;
+            lbl_time.Text = time;
+            lbl_dateTime.Text = date.ToString("MMMM  dd,  yyyy") + " • " + day;
             lbl_seats.Text = seatLists;
         }
 
+        
 
         private void PaymentForm_Load(object sender, EventArgs e)
         {
@@ -34,7 +40,7 @@ namespace Cineverse
             try
             {
                 conn.Open();
-                string getPriceQuery = "SELECT price, photo, cinema_number FROM movies WHERE title=@Title;";
+                string getPriceQuery = "SELECT genre, price, photo, cinema_number FROM movies WHERE title=@Title;";
                 MySqlCommand cmd = new MySqlCommand(getPriceQuery, conn);
                 cmd.Parameters.AddWithValue("Title", lbl_titlePayment.Text);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -43,6 +49,7 @@ namespace Cineverse
                 {
                     lbl_tcktPrice.Text = "₱ " + reader["price"].ToString();
                     price = Convert.ToInt32(reader["price"]);
+                    lbl_genre.Text = reader["genre"].ToString();
 
                     byte[] imgdata = (byte[])reader["photo"];
 
@@ -97,8 +104,8 @@ namespace Cineverse
 
                 // Split lbl_dateTime.Text to extract date and time separately
                 string[] dateTimeParts = lbl_dateTime.Text.Split(new string[] { " • " }, StringSplitOptions.RemoveEmptyEntries);
-                string date = dateTimeParts[0].Trim(); // Assuming date is the first part
-                string time = dateTimeParts[1].Trim(); // Assuming time is the second part
+                string date = dateTimeParts[0].Trim(); // date is the first part
+                string time = dateTimeParts[1].Trim(); // time is the second part
                 updateAvailabilityCmd.Parameters.AddWithValue("@Date", date);
                 updateAvailabilityCmd.Parameters.AddWithValue("@Time", time);
 
@@ -150,22 +157,25 @@ namespace Cineverse
         {
             UpdateAvailabilityToBooked(lbl_seats.Text);
             //confirmedPaymentSection1.Location = new Point(0,0);
-            ReceiptForm receiptForm = new ReceiptForm();
-            receiptForm.Show();
+            ReceiptForm receiptForm1 = new ReceiptForm();
+            receiptForm1.passDataToReceiptForm(lbl_titlePayment.Text, lbl_genre.Text, lbl_cinemaNo.Text, lbl_time.Text, lbl_dateTime.Text, lbl_seats.Text);
+            receiptForm1.Show();
             this.Hide();
 
             MySqlConnection conn = DBConnection.getConnection();
 
             try
             {
-                DateTime dateTime = DateTime.UtcNow.Date;
+                DateTime date = DateTime.UtcNow.Date;
+                DateTime time = DateTime.Now;
 
                 conn.Open();
-                string insertBookingData = "INSERT INTO bookings (ticket_quantity   , ticket_total, currentDate) VALUES (@Ticket_quant, @Ticket_Total, @CurrentDate);";
+                string insertBookingData = "INSERT INTO bookings (ticket_quantity, ticket_total, currentDate, time_booked) VALUES (@Ticket_quant, @Ticket_Total, @CurrentDate, @TimeBooked);";
                 MySqlCommand cmd = new MySqlCommand(insertBookingData, conn);
                 cmd.Parameters.AddWithValue("@Ticket_quant", lbl_tcktQuantity.Text);
                 cmd.Parameters.AddWithValue("@Ticket_Total", price * Convert.ToInt32(lbl_tcktQuantity.Text));
-                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy"));
+                cmd.Parameters.AddWithValue("@CurrentDate", date.ToString("dd/MM/yyyy • dddd"));
+                cmd.Parameters.AddWithValue("@TimeBooked", time.ToString("hh:mm tt"));
 
                 cmd.ExecuteNonQuery();
 
@@ -178,6 +188,9 @@ namespace Cineverse
             {
                 conn.Close();
             }
+
+
+            
         }
 
         private int dotCount = 0;

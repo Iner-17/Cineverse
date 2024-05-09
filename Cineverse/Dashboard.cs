@@ -231,7 +231,7 @@ namespace Cineverse
 
         private void panel5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         public void btn_dashboard_Click(object sender, EventArgs e)

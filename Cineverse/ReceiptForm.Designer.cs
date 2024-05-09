@@ -351,6 +351,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(19, 26);
             this.panel5.TabIndex = 10;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel3
             // 
@@ -377,6 +378,7 @@
             this.Name = "ReceiptForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReceiptForm";
+            this.Load += new System.EventHandler(this.ReceiptForm_Load);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
