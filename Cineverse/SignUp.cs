@@ -71,8 +71,7 @@ namespace Cineverse
 
         private void panel5_Click(object sender, EventArgs e)
         {
-            Login loginfrm = new Login();
-            this.Close();
+            Application.Exit();
         }
 
         private void txt_email_Enter(object sender, EventArgs e)
@@ -256,7 +255,7 @@ namespace Cineverse
 
             if (txt_firstName.Text != "First Name*" && txt_lastName.Text != "Last Name*" && txt_email.Text != "Email*" && txt_username.Text != "Username*" && txt_password.Text != "Password" && txt_confirmPassword.Text != "Confirm Password")
             {
-                if (txt_firstName.TextLength > 2 || txt_username.TextLength > 2)
+                if (txt_firstName.Text.Length > 2 || txt_username.Text.Length > 2)
                 {
                     if (txt_confirmPassword.Text == txt_password.Text)
                     {
