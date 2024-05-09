@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Cineverse
 {
@@ -90,6 +91,17 @@ namespace Cineverse
                 txt_email.Text = "Email*";
                 txt_email.ForeColor = Color.Silver;
             }
+
+            string email = txt_email.Text;
+
+            Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
+                           + "@"
+                           + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
+            Match match = regex.Match(email);
+            if (match.Success && txt_email.BorderColor == Color.Red)
+            {
+                txt_email.BorderColor = Color.White;
+            }
         }
 
 
@@ -100,6 +112,7 @@ namespace Cineverse
                 txt_ContactNum.Text = "";
                 txt_ContactNum.ForeColor = Color.White;
             }
+
         }
 
         private void txt_ContactNum_Leave(object sender, EventArgs e)
@@ -109,8 +122,10 @@ namespace Cineverse
                 txt_ContactNum.Text = "Contact No.*";
                 txt_ContactNum.ForeColor = Color.Silver;
             }
+            
+
         }
-            private void txt_username_Enter(object sender, EventArgs e)
+        private void txt_username_Enter(object sender, EventArgs e)
         {
             if (txt_username.Text == "Username*")
             {
@@ -181,6 +196,17 @@ namespace Cineverse
                     txt_password.UseSystemPasswordChar = false;
                 }
             }
+
+
+            if (IsValidPassword(txt_password.Text))
+            {
+                txt_password.BorderColor = Color.White;
+                
+            } else
+            {
+                MessageBox.Show("Password should have atleast 8 characters, 1 number, 1 symbol, and 1 capital letter.");
+                txt_password.BorderColor = Color.Red;
+            }
         }
 
         private void txt_confirmPassword_Enter(object sender, EventArgs e)
@@ -230,45 +256,53 @@ namespace Cineverse
 
             if (txt_firstName.Text != "First Name*" && txt_lastName.Text != "Last Name*" && txt_email.Text != "Email*" && txt_username.Text != "Username*" && txt_password.Text != "Password" && txt_confirmPassword.Text != "Confirm Password")
             {
-                if (txt_confirmPassword.Text == txt_password.Text)
+                if (txt_firstName.TextLength > 2 || txt_username.TextLength > 2)
                 {
-                    string email = txt_email.Text;
-                    Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
-                        + "@"
-                        + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
-                    Match match = regex.Match(email);
-                    if (match.Success) 
-                        {  
-                        try
+                    if (txt_confirmPassword.Text == txt_password.Text)
+                    {
+                        string email = txt_email.Text;
+                        Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
+                            + "@"
+                            + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
+                        Match match = regex.Match(email);
+                        if (match.Success)
                         {
-                            conn.Open();
+                            try
+                            {
+                                conn.Open();
 
-                            string signupQuery = "INSERT INTO accounts (firstname, lastname, email, username, password) VALUES (@Firstname, @Lastname, @Email, @Username, @Password);";
-                            MySqlCommand signupcmd = new MySqlCommand(signupQuery, conn);
-                            signupcmd.Parameters.AddWithValue("@Firstname", txt_firstName.Text);
-                            signupcmd.Parameters.AddWithValue("@Lastname", txt_lastName.Text);
-                            signupcmd.Parameters.AddWithValue("@Email", txt_email.Text);
-                            signupcmd.Parameters.AddWithValue("@Username", txt_username.Text);
-                            signupcmd.Parameters.AddWithValue("@Password", txt_password.Text);
-                            signupcmd.ExecuteNonQuery();
+                                string signupQuery = "INSERT INTO accounts (firstname, lastname, email, username, password, phone_number) VALUES (@Firstname, @Lastname, @Email, @Username, @Password, @PhoneNumber);";
+                                MySqlCommand signupcmd = new MySqlCommand(signupQuery, conn);
+                                signupcmd.Parameters.AddWithValue("@Firstname", txt_firstName.Text);
+                                signupcmd.Parameters.AddWithValue("@Lastname", txt_lastName.Text);
+                                signupcmd.Parameters.AddWithValue("@Email", txt_email.Text);
+                                signupcmd.Parameters.AddWithValue("@Username", txt_username.Text);
+                                signupcmd.Parameters.AddWithValue("@Password", txt_password.Text);
+                                signupcmd.Parameters.AddWithValue("@PhoneNumber", txt_ContactNum.Text);
+                                signupcmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Successfully Added Account");
+                                MessageBox.Show("Successfully Added Account");
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                            finally { conn.Close(); }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(email + " is not a valid email.");
+                            txt_email.BorderColor = Color.Red;
                         }
-                        finally { conn.Close(); }
-                    } 
+                    }
                     else
                     {
-                        MessageBox.Show(email + " is not a valid email.");
+                        MessageBox.Show("Unmatched Password");
+                        txt_confirmPassword.BorderColor = Color.Red;
                     }
-                }
-                else
+                } else
                 {
-                    MessageBox.Show("Unmatched Password");
-                    txt_confirmPassword.BorderColor = Color.Red;
+                    MessageBox.Show("First Name should have atleast 3 character.");
                 }
             }
             else
@@ -307,9 +341,40 @@ namespace Cineverse
             }
         }
 
+        static bool IsValidPassword(string password)
+        {
+            var hasNumber = new Regex(@"[0-9]+");
+            var hasUpperChar = new Regex(@"[A-Z]+");
+            var hasMinimum8Chars = new Regex(@".{8,}");
+            var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
+
+
+            var isValidated = hasNumber.IsMatch(password) && hasUpperChar.IsMatch(password) && hasMinimum8Chars.IsMatch(password) && hasSymbols.IsMatch(password);
+            return isValidated;
+        }
+
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
+        }
+
+        private void txt_ContactNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // If the key is not a digit or Backspace, ignore it by setting Handled to true
+                e.Handled = true;
+            }
+
+            // Check if the length of the text is already 11 and the pressed key is not Backspace
+            if (txt_ContactNum.Text.Length >= 11 && e.KeyChar != '\b')
+            {
+                // If the text length is already 11 and the key is not Backspace, ignore it by setting Handled to true
+                e.Handled = true;
+                txt_ContactNum.BorderColor = Color.White;
+
+            }
+
         }
     }
 }
