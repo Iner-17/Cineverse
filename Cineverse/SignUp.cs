@@ -106,7 +106,35 @@ namespace Cineverse
             if (match.Success && txt_email.BorderColor == Color.Red)
             {
                 txt_email.BorderColor = Color.White;
+            } else
+            {
+                txt_email.BorderColor= Color.Red;
             }
+
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+
+                string checkDupliQuery = "SELECT * FROM accounts WHERE email=@Email";
+                MySqlCommand cmd = new MySqlCommand(checkDupliQuery, conn);
+                cmd.Parameters.AddWithValue("@Email", txt_email.Text);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    MessageBox.Show("Email Already Exists.");
+                    txt_username.Text = "Email";
+                    txt_username.ForeColor = Color.Silver;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
         }
 
 
@@ -167,7 +195,7 @@ namespace Cineverse
                 if (reader.HasRows)
                 {
                     MessageBox.Show("Username Already Exists.");
-                    txt_username.Text = "Username*";
+                    txt_username.Text = "Username";
                     txt_username.ForeColor = Color.Silver;
                 }
             }
@@ -264,93 +292,113 @@ namespace Cineverse
 
         private void signUp()
         {
+            bool isValidated = false;
+
             MySqlConnection conn = DBConnection.getConnection();
 
-
-            if (txt_firstName.Text != "First Name*" && txt_lastName.Text != "Last Name*" && txt_email.Text != "Email*" && txt_username.Text != "Username*" && txt_password.Text != "Password" && txt_confirmPassword.Text != "Confirm Password")
-            {
-                if (txt_firstName.Text.Length > 2 || txt_username.Text.Length > 2)
+                if (txt_firstName.Text == "First Name" || txt_lastName.Text == "Last Name" || txt_ContactNum.Text == "Contact No." || txt_email.Text == "Email" || txt_username.Text == "Username" || txt_password.Text == "Password" || txt_confirmPassword.Text == "Confirm Password")
                 {
-                    if (txt_confirmPassword.Text == txt_password.Text)
+                    MessageBox.Show("Please fill up all fields");
+                    if (txt_firstName.Text.Equals("First Name"))
                     {
-                        string email = txt_email.Text;
-                        Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
-                            + "@"
-                            + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
-                        Match match = regex.Match(email);
-                        if (match.Success)
-                        {
-                            try
-                            {
-                                conn.Open();
+                        txt_firstName.BorderColor = Color.Red;
+                    }
+                    if (txt_lastName.Text.Equals("Last Name"))
+                    {
+                        txt_lastName.BorderColor = Color.Red;
+                    }
+                    if (txt_email.Text.Equals("Email"))
+                    {
+                        txt_email.BorderColor = Color.Red;
+                    }
+                    if (txt_username.Text.Equals("Username"))
+                    {
+                        txt_username.BorderColor = Color.Red;
+                    }
+                    if (txt_password.Text.Equals("Password"))
+                    {
+                        txt_password.BorderColor = Color.Red;
+                    }
+                    if (txt_confirmPassword.Text.Equals("Confirm Password"))
+                    {
+                        txt_confirmPassword.BorderColor = Color.Red;
+                    }
+                    if (txt_ContactNum.Text.Equals("Contact No."))
+                    {
+                        txt_ContactNum.BorderColor = Color.Red;
+                    }
+                }
+                else if (txt_firstName.TextLength < 3)
+                {
+                    MessageBox.Show("First Name should have at least 3 characters.");
+                    txt_firstName.BorderColor = Color.Red;
+                }
+                else if (txt_username.TextLength < 3)
+                {
+                    MessageBox.Show("Username should have at least 3 characters.");
+                    txt_lastName.BorderColor= Color.Red;
+                }
+                else if (txt_confirmPassword.Text != txt_password.Text)
+                {
+                    MessageBox.Show("Unmatched Password");
+                    txt_confirmPassword.BorderColor = Color.Red;
+                }
+                else
+                {
+                    if (IsValidPassword(txt_password.Text))
+                    {
+                        txt_password.BorderColor = Color.White;
 
-                                string signupQuery = "INSERT INTO accounts (firstname, lastname, email, username, password, phone_number) VALUES (@Firstname, @Lastname, @Email, @Username, @Password, @PhoneNumber);";
-                                MySqlCommand signupcmd = new MySqlCommand(signupQuery, conn);
-                                signupcmd.Parameters.AddWithValue("@Firstname", txt_firstName.Text);
-                                signupcmd.Parameters.AddWithValue("@Lastname", txt_lastName.Text);
-                                signupcmd.Parameters.AddWithValue("@Email", txt_email.Text);
-                                signupcmd.Parameters.AddWithValue("@Username", txt_username.Text);
-                                signupcmd.Parameters.AddWithValue("@Password", txt_password.Text);
-                                signupcmd.Parameters.AddWithValue("@PhoneNumber", txt_ContactNum.Text);
-                                signupcmd.ExecuteNonQuery();
+                    string email = txt_email.Text;
+                    Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
+                        + "@"
+                        + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
+                    Match match = regex.Match(email);
 
-                                MessageBox.Show("Successfully Added Account");
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                            }
-                            finally { conn.Close(); }
-                        }
-                        else
+                    if (match.Success)
+                    {
+                        try
                         {
-                            MessageBox.Show(email + " is not a valid email.");
-                            txt_email.BorderColor = Color.Red;
+                            conn.Open();
+
+                            string signupQuery = "INSERT INTO accounts (firstname, lastname, email, username, password, phone_number) VALUES (@Firstname, @Lastname, @Email, @Username, @Password, @PhoneNumber);";
+                            MySqlCommand signupcmd = new MySqlCommand(signupQuery, conn);
+                            signupcmd.Parameters.AddWithValue("@Firstname", txt_firstName.Text);
+                            signupcmd.Parameters.AddWithValue("@Lastname", txt_lastName.Text);
+                            signupcmd.Parameters.AddWithValue("@Email", txt_email.Text);
+                            signupcmd.Parameters.AddWithValue("@Username", txt_username.Text);
+                            signupcmd.Parameters.AddWithValue("@Password", txt_password.Text);
+                            signupcmd.Parameters.AddWithValue("@PhoneNumber", txt_ContactNum.Text);
+
+                            signupcmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Successfully Added Account");
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally { conn.Close(); }
                     }
                     else
                     {
-                        MessageBox.Show("Unmatched Password");
-                        txt_confirmPassword.BorderColor = Color.Red;
+                        MessageBox.Show(email + " is not a valid email.");
+                        txt_email.BorderColor = Color.Red;
                     }
-                } else
-                {
-                    MessageBox.Show("First Name should have atleast 3 character.");
+
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please fill up all fields");
-                if (txt_firstName.Text.Equals("First Name"))
-                {
-                    txt_firstName.BorderColor = Color.Red;
-                }
-                if (txt_lastName.Text.Equals("Last Name"))
-                {
-                    txt_lastName.BorderColor = Color.Red;
-                }
-                if (txt_email.Text.Equals("Email"))
-                {
-                    txt_email.BorderColor = Color.Red;
-                }
-                if (txt_username.Text.Equals("Username"))
-                {
-                    txt_username.BorderColor = Color.Red;
-                }
-                if (txt_password.Text.Equals("Password"))
-                {
-                    txt_password.BorderColor = Color.Red;
-                }
-                if (txt_confirmPassword.Text.Equals("Confirm Password"))
-                {
-                    txt_confirmPassword.BorderColor = Color.Red;
-                }
-                if (txt_ContactNum.Text.Equals("Contact No."))
-                {
-                    txt_ContactNum.BorderColor = Color.Red;
-                }
+                    else
+                    {
+                        MessageBox.Show("Password should have atleast 8 characters, 1 number, 1 symbol, and 1 capital letter.");
+                        txt_password.BorderColor = Color.Red;
+                    }
+
+                   
 
 
+            
+
+                
             }
         }
 
