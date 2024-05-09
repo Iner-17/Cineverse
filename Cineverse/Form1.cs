@@ -219,5 +219,14 @@ namespace Cineverse
                 ep_password.SetError(txt_pass, string.Empty);
             }
         }
+
+        private void txt_user_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                // Suppress the space character
+                e.Handled = true;
+            }
+        }
     }
 }
