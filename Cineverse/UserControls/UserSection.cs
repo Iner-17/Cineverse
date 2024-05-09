@@ -36,7 +36,7 @@ namespace Cineverse.UserControls
             try
             {
                 conn.Open();
-                string query = "SELECT concat(firstname, ' ' , lastname) as name, email, password FROM accounts where username = @Username";
+                string query = "SELECT concat(firstname, ' ' , lastname) as name, email, password, phone_number FROM accounts where username = @Username";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("Username", Login.Username);
@@ -55,6 +55,7 @@ namespace Cineverse.UserControls
                     lbl_name.Text = reader["name"].ToString();
                     lbl_email.Text = reader["email"].ToString();
                     lbl_pass.Text = reader["password"].ToString().Replace(pass, counter);
+                    lbl_contactNo.Text = reader["phone_number"].ToString();
                 }
 
                 DateTime currentDate = DateTime.Now;

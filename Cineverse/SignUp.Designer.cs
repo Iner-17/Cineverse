@@ -130,9 +130,23 @@
             this.txt_ContactNum.PlaceholderText = "";
             this.txt_ContactNum.SelectedText = "";
             this.txt_ContactNum.Size = new System.Drawing.Size(375, 40);
-            this.txt_ContactNum.TabIndex = 11;
+            this.txt_ContactNum.TabIndex = 4;
             this.txt_ContactNum.Enter += new System.EventHandler(this.txt_ContactNum_Enter);
+            this.txt_ContactNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ContactNum_KeyPress);
             this.txt_ContactNum.Leave += new System.EventHandler(this.txt_ContactNum_Leave);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(122, 592);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(377, 26);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "I accept the Terms of Use and Privacy Policy";
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // txt_confirmPassword
             // 
@@ -269,7 +283,7 @@
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.Login.Location = new System.Drawing.Point(386, 682);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(56, 19);
+            this.Login.Size = new System.Drawing.Size(59, 22);
             this.Login.TabIndex = 10;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
@@ -282,7 +296,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(179, 682);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 19);
+            this.label4.Size = new System.Drawing.Size(215, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
