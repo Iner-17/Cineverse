@@ -25,7 +25,7 @@ namespace Cineverse.UserControls
             
         }
 
-        private void SynopsisSection_Load(object sender, EventArgs e)
+        public void SynopsisSection_Load(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
 
@@ -49,6 +49,45 @@ namespace Cineverse.UserControls
 
             GlobalLabel = lbl_Title1;
             GlobalComboBox = cbo_titleLists;
+
+            try
+            {
+                conn.Open();
+
+                string query = "select title, price, genre, duration, movie_rating, description, photo from movies where title=@Title;";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("Title", lbl_Title1.Text);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    lbl_Title1.Text = reader["title"].ToString().ToUpper();
+                    lbl_rating.Text = reader["movie_rating"].ToString();
+                    lbl_duration1.Text = reader["duration"].ToString() + " " + "mins.";
+                    lbl_genre1.Text = reader["genre"].ToString();
+                    lbl_price1.Text = "₱" + reader["price"].ToString() + ".00";
+                    lbl_description.Text = reader["description"].ToString();
+                    byte[] imageData = (byte[])reader["photo"];
+
+                    if (imageData != null && imageData.Length > 0)
+                    {
+                        MemoryStream ms = new MemoryStream(imageData);
+                        pb_Poster1.Image = Image.FromStream(ms);
+                    }
+                    else
+                    {
+                        pb_Poster1.Image = null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
         }
       
        

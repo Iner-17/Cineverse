@@ -18,7 +18,7 @@ namespace Cineverse.UserControls
             InitializeComponent();
         }
 
-        private void BookingSection_Load(object sender, EventArgs e)
+        public void BookingSection_Load(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
 
@@ -31,6 +31,29 @@ namespace Cineverse.UserControls
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
                 DataTable dt = new DataTable();
                 dataAdapter.Fill(dt);   
+
+                dgv_booking.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+
+                string getListquery = "SELECT title, time_booked, seats_booked, ticket_quantity, ticket_total FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id;";
+                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
 
                 dgv_booking.DataSource = dt;
             }
@@ -73,13 +96,30 @@ namespace Cineverse.UserControls
                 try
                 {
                     conn.Open();
-                    string query = "SELECT movie_title, genre, cinema_number, time, date, seats_booked";
-                    
+                    string query = "SELECT  rec.movie_title, rec.genre, rec.cinema_number, rec.time, rec.date, book.seats_booked, book.ticket_quantity, book.ticket_total FROM bookings as book INNER JOIN receipt as rec ON book.booking_id = rec.booking_id WHERE rec.booking_id = @BookingId;";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("BookingId", bookingId);
 
-                    while (reader.Read())
+                    MySqlDataReader reader2 = cmd.ExecuteReader();
+
+
+
+                    while(reader2.Read())
                     {
+                        double quant = Convert.ToDouble(reader2["ticket_quantity"]);
+                        double total = Convert.ToDouble(reader2["ticket_total"]);
 
+                        lbl_titlePayment.Text = reader2["movie_title"].ToString();
+                        lbl_genre.Text = reader2["genre"].ToString();
+                        lbl_cinemaNo.Text = reader2["cinema_number"].ToString();
+                        lbl_time.Text = reader2["time"].ToString();
+                        lbl_dateTime.Text = reader2["date"].ToString();
+                        lbl_seats.Text = reader2["seats_booked"].ToString();
+                        lbl_quant.Text = reader2["ticket_quantity"].ToString();
+                        lbl_ticketPrice.Text = (total / quant).ToString();
+                        lbl_priceTotal.Text = reader2["ticket_total"].ToString();
                     }
+                   
                 }
                 catch (Exception ex)
                 {
@@ -92,5 +132,7 @@ namespace Cineverse.UserControls
 
             
         }
+
+        
     }
 }

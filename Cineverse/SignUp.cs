@@ -501,14 +501,11 @@ namespace Cineverse
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                // If the key is not a digit or Backspace, ignore it by setting Handled to true
                 e.Handled = true;
             }
 
-            // Check if the length of the text is already 11 and the pressed key is not Backspace
             if (txt_ContactNum.Text.Length >= 11 && e.KeyChar != '\b')
             {
-                // If the text length is already 11 and the key is not Backspace, ignore it by setting Handled to true
                 e.Handled = true;
                 txt_ContactNum.BorderColor = Color.White;
 

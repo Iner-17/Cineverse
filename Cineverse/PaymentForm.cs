@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cineverse.UserControls;
 using Google.Protobuf;
 using MySql.Data.MySqlClient;
 
@@ -109,9 +110,8 @@ namespace Cineverse
                 // Split lbl_dateTime.Text to extract date and time separately
                 string[] dateTimeParts = lbl_dateTime.Text.Split(new string[] { " • " }, StringSplitOptions.RemoveEmptyEntries);
                 string date = dateTimeParts[0].Trim(); // date is the first part
-                string time = dateTimeParts[1].Trim(); // time is the second part
                 updateAvailabilityCmd.Parameters.AddWithValue("@Date", date);
-                updateAvailabilityCmd.Parameters.AddWithValue("@Time", time);
+                updateAvailabilityCmd.Parameters.AddWithValue("@Time", lbl_time.Text);
 
                 // Add parameters for each seat code
                 for (int i = 0; i < selectedSeats.Length; i++)
@@ -234,12 +234,15 @@ namespace Cineverse
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
                 conn.Close();
             }
+
+            BookingSection booking = new BookingSection();
+            booking.BookingSection_Load(this, EventArgs.Empty);
 
         }
 

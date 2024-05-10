@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_booking = new System.Windows.Forms.DataGridView();
             this.pnl_receipt = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_genre = new System.Windows.Forms.Label();
             this.lbl_discount = new System.Windows.Forms.Label();
@@ -43,8 +44,8 @@
             this.lbl_total1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.lbl_tcktQuantity = new System.Windows.Forms.Label();
-            this.lbl_tcktPrice = new System.Windows.Forms.Label();
+            this.lbl_ticketPrice = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,7 +54,10 @@
             this.lbl_cinemaNo = new System.Windows.Forms.Label();
             this.lbl_titlePayment = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_quant = new System.Windows.Forms.Label();
+            this.lbl_disc = new System.Windows.Forms.Label();
+            this.lbl_priceTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_booking)).BeginInit();
             this.pnl_receipt.SuspendLayout();
             this.SuspendLayout();
@@ -74,54 +78,54 @@
             // 
             this.dgv_booking.AllowUserToResizeColumns = false;
             this.dgv_booking.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_booking.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_booking.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_booking.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_booking.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.dgv_booking.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_booking.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_booking.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_booking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.NullValue = null;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_booking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_booking.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_booking.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_booking.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_booking.EnableHeadersVisualStyles = false;
             this.dgv_booking.GridColor = System.Drawing.Color.Black;
             this.dgv_booking.Location = new System.Drawing.Point(39, 109);
             this.dgv_booking.Name = "dgv_booking";
             this.dgv_booking.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_booking.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_booking.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_booking.RowHeadersVisible = false;
             this.dgv_booking.RowHeadersWidth = 40;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_booking.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_booking.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_booking.RowTemplate.Height = 50;
             this.dgv_booking.RowTemplate.ReadOnly = true;
             this.dgv_booking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -133,6 +137,9 @@
             // 
             this.pnl_receipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.pnl_receipt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_receipt.Controls.Add(this.lbl_priceTotal);
+            this.pnl_receipt.Controls.Add(this.lbl_disc);
+            this.pnl_receipt.Controls.Add(this.lbl_quant);
             this.pnl_receipt.Controls.Add(this.label5);
             this.pnl_receipt.Controls.Add(this.lbl_time);
             this.pnl_receipt.Controls.Add(this.lbl_genre);
@@ -141,8 +148,8 @@
             this.pnl_receipt.Controls.Add(this.lbl_total1);
             this.pnl_receipt.Controls.Add(this.label1);
             this.pnl_receipt.Controls.Add(this.panel6);
-            this.pnl_receipt.Controls.Add(this.lbl_tcktQuantity);
-            this.pnl_receipt.Controls.Add(this.lbl_tcktPrice);
+            this.pnl_receipt.Controls.Add(this.lbl_ticketPrice);
+            this.pnl_receipt.Controls.Add(this.lbl_total);
             this.pnl_receipt.Controls.Add(this.label7);
             this.pnl_receipt.Controls.Add(this.label6);
             this.pnl_receipt.Controls.Add(this.label4);
@@ -155,6 +162,17 @@
             this.pnl_receipt.Name = "pnl_receipt";
             this.pnl_receipt.Size = new System.Drawing.Size(263, 672);
             this.pnl_receipt.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(3, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(253, 18);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "March 28, 2024 • Wednesday";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_time
             // 
@@ -228,25 +246,25 @@
             this.panel6.Size = new System.Drawing.Size(272, 3);
             this.panel6.TabIndex = 28;
             // 
-            // lbl_tcktQuantity
+            // lbl_ticketPrice
             // 
-            this.lbl_tcktQuantity.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tcktQuantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_tcktQuantity.Location = new System.Drawing.Point(192, 609);
-            this.lbl_tcktQuantity.Name = "lbl_tcktQuantity";
-            this.lbl_tcktQuantity.Size = new System.Drawing.Size(103, 19);
-            this.lbl_tcktQuantity.TabIndex = 25;
-            this.lbl_tcktQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_ticketPrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ticketPrice.ForeColor = System.Drawing.Color.White;
+            this.lbl_ticketPrice.Location = new System.Drawing.Point(155, 526);
+            this.lbl_ticketPrice.Name = "lbl_ticketPrice";
+            this.lbl_ticketPrice.Size = new System.Drawing.Size(103, 19);
+            this.lbl_ticketPrice.TabIndex = 25;
+            this.lbl_ticketPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbl_tcktPrice
+            // lbl_total
             // 
-            this.lbl_tcktPrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tcktPrice.ForeColor = System.Drawing.Color.White;
-            this.lbl_tcktPrice.Location = new System.Drawing.Point(182, 575);
-            this.lbl_tcktPrice.Name = "lbl_tcktPrice";
-            this.lbl_tcktPrice.Size = new System.Drawing.Size(113, 29);
-            this.lbl_tcktPrice.TabIndex = 24;
-            this.lbl_tcktPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_total.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.ForeColor = System.Drawing.Color.White;
+            this.lbl_total.Location = new System.Drawing.Point(145, 594);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(113, 29);
+            this.lbl_total.TabIndex = 24;
+            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
@@ -336,22 +354,55 @@
             this.panel2.Size = new System.Drawing.Size(187, 83);
             this.panel2.TabIndex = 1;
             // 
-            // label5
+            // label8
             // 
-            this.label5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(253, 18);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "March 28, 2024 • Wednesday";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(1057, 41);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 19);
+            this.label8.TabIndex = 80;
+            this.label8.Text = "Refresh";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // lbl_quant
+            // 
+            this.lbl_quant.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_quant.ForeColor = System.Drawing.Color.White;
+            this.lbl_quant.Location = new System.Drawing.Point(153, 545);
+            this.lbl_quant.Name = "lbl_quant";
+            this.lbl_quant.Size = new System.Drawing.Size(103, 19);
+            this.lbl_quant.TabIndex = 36;
+            this.lbl_quant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_disc
+            // 
+            this.lbl_disc.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_disc.ForeColor = System.Drawing.Color.White;
+            this.lbl_disc.Location = new System.Drawing.Point(153, 564);
+            this.lbl_disc.Name = "lbl_disc";
+            this.lbl_disc.Size = new System.Drawing.Size(103, 19);
+            this.lbl_disc.TabIndex = 37;
+            this.lbl_disc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_priceTotal
+            // 
+            this.lbl_priceTotal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_priceTotal.ForeColor = System.Drawing.Color.White;
+            this.lbl_priceTotal.Location = new System.Drawing.Point(153, 594);
+            this.lbl_priceTotal.Name = "lbl_priceTotal";
+            this.lbl_priceTotal.Size = new System.Drawing.Size(103, 19);
+            this.lbl_priceTotal.TabIndex = 38;
+            this.lbl_priceTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // BookingSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.pnl_receipt);
             this.Controls.Add(this.dgv_booking);
             this.Controls.Add(this.label2);
@@ -376,8 +427,8 @@
         private System.Windows.Forms.Label lbl_total1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label lbl_tcktQuantity;
-        private System.Windows.Forms.Label lbl_tcktPrice;
+        private System.Windows.Forms.Label lbl_ticketPrice;
+        private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
@@ -387,5 +438,9 @@
         private System.Windows.Forms.Label lbl_titlePayment;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_priceTotal;
+        private System.Windows.Forms.Label lbl_disc;
+        private System.Windows.Forms.Label lbl_quant;
     }
 }

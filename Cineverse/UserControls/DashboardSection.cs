@@ -138,7 +138,7 @@ namespace Cineverse
                 conn.Open();
                 string getBookingsData = "SELECT SUM(ticket_quantity) FROM bookings WHERE currentDate = @CurrentDate;";
                 MySqlCommand cmd = new MySqlCommand(getBookingsData, conn);
-                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy"));
+                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy • dddd"));
                 object result = cmd.ExecuteScalar();
 
                 if (result.ToString().Equals(""))
@@ -165,7 +165,7 @@ namespace Cineverse
                 conn.Open();
                 string getBookingsData = "SELECT SUM(ticket_total) FROM bookings WHERE currentDate = @CurrentDate;";
                 MySqlCommand cmd = new MySqlCommand(getBookingsData, conn);
-                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy"));
+                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy • dddd"));
                 object result = cmd.ExecuteScalar();
 
                 if (result.ToString().Equals(""))
