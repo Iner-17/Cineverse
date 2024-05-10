@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -14,6 +15,10 @@ namespace Cineverse.UserControls
 {
     public partial class ScheduleSection : UserControl
     {
+        private bool allButtonisActive = false;
+        private bool todayButtonisActive = false;
+        private bool thisWeekButtonisActive = false;
+
         public ScheduleSection()
         {
             InitializeComponent();
@@ -77,6 +82,19 @@ namespace Cineverse.UserControls
 
         private void btn_all_Click(object sender, EventArgs e)
         {
+            btn_all.BackColor = Color.FromArgb(31, 178, 198);
+            btn_all.ForeColor = Color.Black;
+
+            btn_today.BackColor = Color.FromArgb(20, 32, 32);
+            btn_today.ForeColor = Color.White;
+
+            btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
+            btn_thisWeek.ForeColor = Color.White;
+
+            allButtonisActive = true;
+            todayButtonisActive = false;
+            thisWeekButtonisActive = false;
+
             getSchedule();
         }
 
@@ -129,9 +147,20 @@ namespace Cineverse.UserControls
                 }
                 finally { conn.Close(); }
             }
-            
 
-           
+            btn_all.BackColor = Color.FromArgb(20, 32, 32);
+            btn_all.ForeColor = Color.White;
+
+            btn_today.BackColor = Color.FromArgb(31, 178, 198);
+            btn_today.ForeColor = Color.Black;
+
+            btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
+            btn_thisWeek.ForeColor = Color.White;
+
+            allButtonisActive = false;
+            todayButtonisActive = true;
+            thisWeekButtonisActive = false;
+
         }
 
         private void cbo_movies_SelectedIndexChanged(object sender, EventArgs e)
@@ -175,40 +204,84 @@ namespace Cineverse.UserControls
 
         private void btn_today_MouseEnter(object sender, EventArgs e)
         {
-            btn_today.BackColor = Color.FromArgb(31, 178, 198);
-            btn_today.ForeColor = Color.Black;
+            if (todayButtonisActive == false)
+            { 
+                btn_today.BackColor = Color.FromArgb(31, 178, 198);
+                btn_today.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_today_MouseLeave(object sender, EventArgs e)
         {
-            btn_today.BackColor = Color.FromArgb(20, 32, 32);
-            btn_today.ForeColor = Color.White;
+            if (todayButtonisActive == false)
+            {
+                btn_today.BackColor = Color.FromArgb(20, 32, 32);
+                btn_today.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_thisWeek_MouseEnter(object sender, EventArgs e)
         {
-            btn_thisWeek.BackColor = Color.FromArgb(31, 178, 198);
-            btn_thisWeek.ForeColor = Color.Black;
+            if (thisWeekButtonisActive == false)
+            {
+                btn_thisWeek.BackColor = Color.FromArgb(31, 178, 198);
+                btn_thisWeek.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btn_thisWeek_MouseLeave(object sender, EventArgs e)
         {
-            btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
-            btn_thisWeek.ForeColor = Color.White;
+            if (thisWeekButtonisActive == false)
+            {
+                btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
+                btn_thisWeek.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
         }
 
        
 
         private void btn_all_MouseEnter(object sender, EventArgs e)
         {
-            btn_all.BackColor = Color.FromArgb(31, 178, 198);
-            btn_all.ForeColor = Color.Black;
+            if (allButtonisActive == false)
+            {
+                btn_all.BackColor = Color.FromArgb(31, 178, 198);
+                btn_all.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+            
         }
 
         private void btn_all_MouseLeave(object sender, EventArgs e)
         {
-            btn_all.BackColor = Color.FromArgb(20, 32, 32);
-            btn_all.ForeColor = Color.White;
+            if (allButtonisActive == false)
+            {
+                btn_all.BackColor = Color.FromArgb(20, 32, 32);
+                btn_all.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+            
         }
 
         private void btn_thisWeek_Click(object sender, EventArgs e)
@@ -266,8 +339,21 @@ namespace Cineverse.UserControls
                     MessageBox.Show(ex.Message);
                 }
                 finally { conn.Close(); }
+
             }
 
+            btn_all.BackColor = Color.FromArgb(20, 32, 32);
+            btn_all.ForeColor = Color.White;
+
+            btn_today.BackColor = Color.FromArgb(20, 32, 32);
+            btn_today.ForeColor = Color.White;
+
+            btn_thisWeek.BackColor = Color.FromArgb(31, 178, 198);
+            btn_thisWeek.ForeColor = Color.Black;
+
+            allButtonisActive = false;
+            todayButtonisActive = false;
+            thisWeekButtonisActive = true;
         }
     }
 }

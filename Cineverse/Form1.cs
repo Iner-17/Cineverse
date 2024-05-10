@@ -204,6 +204,7 @@ namespace Cineverse
             {
                 txt_user.BorderColor = SystemColors.ControlDark;
                 ep_username.SetError(txt_user, string.Empty);
+
             }
         }
 
