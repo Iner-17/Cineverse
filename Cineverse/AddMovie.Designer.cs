@@ -402,7 +402,8 @@
             this.cbo_cinemaNum.Items.AddRange(new object[] {
             "1",
             "2",
-            "3"});
+            "3",
+            "4"});
             this.cbo_cinemaNum.Location = new System.Drawing.Point(597, 223);
             this.cbo_cinemaNum.Name = "cbo_cinemaNum";
             this.cbo_cinemaNum.Size = new System.Drawing.Size(113, 27);

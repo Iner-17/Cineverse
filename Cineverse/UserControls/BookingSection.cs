@@ -41,6 +41,56 @@ namespace Cineverse.UserControls
             finally { conn.Close(); }
         }
 
-      
+        private void dgv_booking_SelectionChanged(object sender, EventArgs e)
+        {
+            int bookingId = 0;
+            if (dgv_booking.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgv_booking.SelectedRows[0];
+
+                MySqlConnection conn = DBConnection.getConnection();
+                try
+                {
+                    conn.Open();
+                    string getBookingId = "SELECT book.booking_id FROM bookings as book INNER JOIN receipt as rec ON book.booking_id = rec.booking_id WHERE time_booked = @TimeBooked AND movie_title = @Title;";
+                    MySqlCommand getBookingidcmd = new MySqlCommand(getBookingId, conn);
+                    getBookingidcmd.Parameters.AddWithValue("TimeBooked", selectedRow.Cells["time_booked"].Value.ToString());
+                    getBookingidcmd.Parameters.AddWithValue("Title", selectedRow.Cells["title"].Value.ToString());
+
+                    MySqlDataReader reader = getBookingidcmd.ExecuteReader();
+
+                    while(reader.Read())
+                    {
+                        bookingId = reader.GetInt32("booking_id");
+                    }
+                }
+                catch ( Exception ex )
+                {
+                    MessageBox.Show(ex.Message + "Ads");
+                }
+                finally { conn.Close(); }
+
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT movie_title, genre, cinema_number, time, date, seats_booked";
+                    
+
+                    while (reader.Read())
+                    {
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "Ads");
+                }
+                finally { conn.Close(); }
+
+
+            }
+
+            
+        }
     }
 }

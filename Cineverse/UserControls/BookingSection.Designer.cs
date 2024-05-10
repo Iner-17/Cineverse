@@ -126,6 +126,7 @@
             this.dgv_booking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_booking.Size = new System.Drawing.Size(706, 672);
             this.dgv_booking.TabIndex = 6;
+            this.dgv_booking.SelectionChanged += new System.EventHandler(this.dgv_booking_SelectionChanged);
             // 
             // panel1
             // 
