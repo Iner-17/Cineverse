@@ -288,6 +288,7 @@
             this.txt_username.TabIndex = 5;
             this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             this.txt_username.Enter += new System.EventHandler(this.txt_username_Enter);
+            this.txt_username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_username_KeyPress);
             this.txt_username.Leave += new System.EventHandler(this.txt_username_Leave_1);
             // 
             // txt_lastName
@@ -352,7 +353,7 @@
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.Login.Location = new System.Drawing.Point(386, 682);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(56, 19);
+            this.Login.Size = new System.Drawing.Size(59, 22);
             this.Login.TabIndex = 10;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
@@ -365,7 +366,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(179, 682);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 19);
+            this.label4.Size = new System.Drawing.Size(215, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
@@ -423,6 +424,7 @@
             this.txt_email.TabIndex = 4;
             this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             this.txt_email.Enter += new System.EventHandler(this.txt_email_Enter);
+            this.txt_email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_email_KeyPress);
             this.txt_email.Leave += new System.EventHandler(this.txt_email_Leave);
             // 
             // label2
