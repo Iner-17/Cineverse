@@ -151,8 +151,6 @@ namespace Cineverse
                 {
                     MessageBox.Show("Movie already exists");
                 } 
-
-
                 else 
                 { 
 
@@ -170,26 +168,26 @@ namespace Cineverse
                     saveMoviecmd.Parameters.AddWithValue("@CinemaNum", cbo_cinemaNum.Text);
                     
 
-                    byte[] ImageData;
-                    FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
-                    ImageData = br.ReadBytes((int)fs.Length);
-                    br.Close();
-                    fs.Close();
-                    saveMoviecmd.Parameters.AddWithValue("@Photo", ImageData);
-                    saveMoviecmd.ExecuteNonQuery();
+                        byte[] ImageData;
+                        FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                        BinaryReader br = new BinaryReader(fs);
+                        ImageData = br.ReadBytes((int)fs.Length);
+                        br.Close();
+                        fs.Close();
+                        saveMoviecmd.Parameters.AddWithValue("@Photo", ImageData);
+                        saveMoviecmd.ExecuteNonQuery();
 
-                    movieId = (int)saveMoviecmd.LastInsertedId;
+                        movieId = (int)saveMoviecmd.LastInsertedId;
 
                     
-                    MessageBox.Show("Successfully Added Movie.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally { conn.Close(); }
-                }
+                        MessageBox.Show("Successfully Added Movie.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally { conn.Close(); }
+                    }
             }
 
 

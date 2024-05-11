@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Mail;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -17,6 +19,7 @@ namespace Cineverse
 {
     public partial class SignUp : Form
     {
+        
         public SignUp()
         {
             InitializeComponent();
@@ -305,7 +308,25 @@ namespace Cineverse
             signUp();
         }
 
-        private void signUp()
+        public static string ComputeSha256Hash(string password)
+        {
+            // Create a SHA256 hash from the given string
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // ComputeHash - returns byte array
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                // Convert byte array to a string
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        public void signUp()
         {
             MySqlConnection conn = DBConnection.getConnection();
             string firstNamePlaceholder = "First Name";
@@ -315,6 +336,9 @@ namespace Cineverse
             string usernamePlaceholder = "Username";
             string passwordPlaceholder = "Password";
             string confirmPlaceholder = "Confirm Password";
+
+            string hashedPassword = SignUp.ComputeSha256Hash(txt_password.Text);
+
 
             if (txt_firstName.Text == "First Name" || txt_lastName.Text == "Last Name" || txt_ContactNum.Text == "Contact No." || txt_email.Text == "Email" || txt_username.Text == "Username" || txt_password.Text == "Password" || txt_confirmPassword.Text == "Confirm Password")
             {
@@ -443,7 +467,7 @@ namespace Cineverse
                             signupcmd.Parameters.AddWithValue("@Lastname", txt_lastName.Text);
                             signupcmd.Parameters.AddWithValue("@Email", txt_email.Text);
                             signupcmd.Parameters.AddWithValue("@Username", txt_username.Text);
-                            signupcmd.Parameters.AddWithValue("@Password", txt_password.Text);
+                            signupcmd.Parameters.AddWithValue("@Password", hashedPassword);
                             signupcmd.Parameters.AddWithValue("@PhoneNumber", txt_ContactNum.Text);
                             signupcmd.ExecuteNonQuery();
 
