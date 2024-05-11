@@ -177,19 +177,19 @@ namespace Cineverse
         {
             MySqlConnection conn = DBConnection.getConnection();
 
-            for (int i = 1; i <= 9; i++) 
+            for (int i = 1; i <= 3; i++) 
             {
                 PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
                 Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
               
                 if(lbl_title != null && lbl_title.Text == "Title")
                 {
-                    
+
+                    //cinema number 1
                     try
                     {
                         conn.Open();
-
-                        string query = "SELECT title, movie_rating, price, genre, duration, photo FROM movies LIMIT 1 OFFSET " + (i-1) + ";";
+                        string query = "SELECT title, movie_rating, price, genre, duration, photo FROM movies WHERE cinema_number = 1 LIMIT 1 OFFSET " + (i-1) + ";";
                         MySqlCommand cmd = new MySqlCommand(query, conn);   
 
                         MySqlDataReader reader = cmd.ExecuteReader();
@@ -217,6 +217,166 @@ namespace Cineverse
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;  
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
                         } 
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally { conn.Close(); }
+                }
+            }
+
+
+            //cinema number 2
+
+            for (int i = 4; i <= 6; i++)
+            {
+                PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
+                Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
+
+                if (lbl_title != null && lbl_title.Text == "Title")
+                {
+
+                    try
+                    {
+                        conn.Open();
+                        string query = "SELECT title, movie_rating, price, genre, duration, photo FROM movies WHERE cinema_number = 2 LIMIT 1 OFFSET " + (i - 4) + ";";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            string title = reader.GetString("title").ToUpper();
+                            string movie_rating = reader.GetString("movie_rating");
+                            string duration = reader.GetInt32("duration").ToString();
+                            string genre = reader.GetString("genre");
+                            string price = reader.GetDouble("price").ToString(); ;
+                            byte[] imageData = (byte[])reader["photo"];
+
+                            if (imageData != null && imageData.Length > 0)
+                            {
+                                MemoryStream ms = new MemoryStream(imageData);
+                                pb_poster.Image = Image.FromStream(ms);
+                                lbl_title.Text = title;
+                            }
+                            else
+                            {
+                                pb_poster.Image = null;
+                            }
+
+                            Controls.Find("lbl_rating" + i, true).FirstOrDefault().Text = movie_rating;
+                            Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
+                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally { conn.Close(); }
+                }
+            }
+
+
+            //cinema number 2
+
+            for (int i = 7; i <= 9; i++)
+            {
+                PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
+                Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
+
+                if (lbl_title != null && lbl_title.Text == "Title")
+                {
+
+                    try
+                    {
+                        conn.Open();
+                        string query = "SELECT title, movie_rating, price, genre, duration, photo FROM movies WHERE cinema_number = 3 LIMIT 1 OFFSET " + (i - 7) + ";";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            string title = reader.GetString("title").ToUpper();
+                            string movie_rating = reader.GetString("movie_rating");
+                            string duration = reader.GetInt32("duration").ToString();
+                            string genre = reader.GetString("genre");
+                            string price = reader.GetDouble("price").ToString(); ;
+                            byte[] imageData = (byte[])reader["photo"];
+
+                            if (imageData != null && imageData.Length > 0)
+                            {
+                                MemoryStream ms = new MemoryStream(imageData);
+                                pb_poster.Image = Image.FromStream(ms);
+                                lbl_title.Text = title;
+                            }
+                            else
+                            {
+                                pb_poster.Image = null;
+                            }
+
+                            Controls.Find("lbl_rating" + i, true).FirstOrDefault().Text = movie_rating;
+                            Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
+                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally { conn.Close(); }
+                }
+            }
+
+
+
+            //cinema number 2
+
+            for (int i = 10; i <= 12; i++)
+            {
+                PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
+                Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
+
+                if (lbl_title != null && lbl_title.Text == "Title")
+                {
+
+                    try
+                    {
+                        conn.Open();
+                        string query = "SELECT title, movie_rating, price, genre, duration, photo FROM movies WHERE cinema_number = 4 LIMIT 1 OFFSET " + (i - 10) + ";";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            string title = reader.GetString("title").ToUpper();
+                            string movie_rating = reader.GetString("movie_rating");
+                            string duration = reader.GetInt32("duration").ToString();
+                            string genre = reader.GetString("genre");
+                            string price = reader.GetDouble("price").ToString(); ;
+                            byte[] imageData = (byte[])reader["photo"];
+
+                            if (imageData != null && imageData.Length > 0)
+                            {
+                                MemoryStream ms = new MemoryStream(imageData);
+                                pb_poster.Image = Image.FromStream(ms);
+                                lbl_title.Text = title;
+                            }
+                            else
+                            {
+                                pb_poster.Image = null;
+                            }
+
+                            Controls.Find("lbl_rating" + i, true).FirstOrDefault().Text = movie_rating;
+                            Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
+                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -618,6 +778,6 @@ namespace Cineverse
             dashboard1.btn_dashboard_Click(this, EventArgs.Empty);
         }
 
-        
+    
     }
 }

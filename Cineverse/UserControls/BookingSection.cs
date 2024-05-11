@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace Cineverse.UserControls
 {
@@ -39,6 +40,8 @@ namespace Cineverse.UserControls
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
+
+          
         }
 
         private void label8_Click(object sender, EventArgs e)

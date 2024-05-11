@@ -673,7 +673,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1664);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1148, 39);
+            this.panel1.Size = new System.Drawing.Size(1144, 39);
             this.panel1.TabIndex = 77;
             // 
             // btn_backk
@@ -1732,7 +1732,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1148, 865);
+            this.Size = new System.Drawing.Size(1131, 848);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();

@@ -151,45 +151,42 @@ namespace Cineverse
                 {
                     MessageBox.Show("Movie already exists");
                 } 
-
-
                 else 
                 { 
-
-                try
-                {
-                    conn.Open();
-                    string saveMovieQuery = "INSERT INTO movies (title, price, genre, duration, photo, description, movie_rating, cinema_number) VALUES (@Title, @Price, @Genre, @Duration, @Photo, @Description, @Rating, @CinemaNum);";
-                    MySqlCommand saveMoviecmd = new MySqlCommand(saveMovieQuery, conn);
-                    saveMoviecmd.Parameters.AddWithValue("@Title", txt_addTitle.Text);
-                    saveMoviecmd.Parameters.AddWithValue("@Price", txt_addPrice.Text);
-                    saveMoviecmd.Parameters.AddWithValue("@Genre", txt_addGenre.Text);
-                    saveMoviecmd.Parameters.AddWithValue("@Duration", txt_addDuration.Text);
-                    saveMoviecmd.Parameters.AddWithValue("@Description", txt_description.Text);
-                    saveMoviecmd.Parameters.AddWithValue("@Rating", cbo_rating.Text);
-                    saveMoviecmd.Parameters.AddWithValue("@CinemaNum", cbo_cinemaNum.Text);
+                    try
+                    {
+                        conn.Open();
+                        string saveMovieQuery = "INSERT INTO movies (title, price, genre, duration, photo, description, movie_rating, cinema_number) VALUES (@Title, @Price, @Genre, @Duration, @Photo, @Description, @Rating, @CinemaNum);";
+                        MySqlCommand saveMoviecmd = new MySqlCommand(saveMovieQuery, conn);
+                        saveMoviecmd.Parameters.AddWithValue("@Title", txt_addTitle.Text);
+                        saveMoviecmd.Parameters.AddWithValue("@Price", txt_addPrice.Text);
+                        saveMoviecmd.Parameters.AddWithValue("@Genre", txt_addGenre.Text);
+                        saveMoviecmd.Parameters.AddWithValue("@Duration", txt_addDuration.Text);
+                        saveMoviecmd.Parameters.AddWithValue("@Description", txt_description.Text);
+                        saveMoviecmd.Parameters.AddWithValue("@Rating", cbo_rating.Text);
+                        saveMoviecmd.Parameters.AddWithValue("@CinemaNum", cbo_cinemaNum.Text);
                     
 
-                    byte[] ImageData;
-                    FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
-                    ImageData = br.ReadBytes((int)fs.Length);
-                    br.Close();
-                    fs.Close();
-                    saveMoviecmd.Parameters.AddWithValue("@Photo", ImageData);
-                    saveMoviecmd.ExecuteNonQuery();
+                        byte[] ImageData;
+                        FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                        BinaryReader br = new BinaryReader(fs);
+                        ImageData = br.ReadBytes((int)fs.Length);
+                        br.Close();
+                        fs.Close();
+                        saveMoviecmd.Parameters.AddWithValue("@Photo", ImageData);
+                        saveMoviecmd.ExecuteNonQuery();
 
-                    movieId = (int)saveMoviecmd.LastInsertedId;
+                        movieId = (int)saveMoviecmd.LastInsertedId;
 
                     
-                    MessageBox.Show("Successfully Added Movie.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally { conn.Close(); }
-                }
+                        MessageBox.Show("Successfully Added Movie.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally { conn.Close(); }
+                    }
             }
 
 

@@ -1,13 +1,18 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
+using System.IO;
+using System.Security.Cryptography;
 using System.Windows.Forms;
+using static Mysqlx.Expect.Open.Types.Condition.Types;
 
 namespace Cineverse
 {
     public partial class Login : Form
     {
         public static string Username { get; private set; }
+
+        
         public Login()
         {
             InitializeComponent();
@@ -36,25 +41,31 @@ namespace Cineverse
             Application.Exit();
         }
 
+
         public void login()
         {
             MySqlConnection conn = DBConnection.getConnection();
-            if(txt_user.Text != "" && txt_pass.Text != "")
+            SignUp signupform = new SignUp();
+
+            if (txt_user.Text != "" && txt_pass.Text != "")
             {
                 try
                 {
+                    string hashedPassword = "";
+
                     conn.Open();
-                    string loginQuery = "SELECT COUNT(*) FROM accounts WHERE username=@username AND password=@password;";
+                    string loginQuery = "SELECT password FROM accounts WHERE username=@username";
                     MySqlCommand loginCmd = new MySqlCommand(loginQuery, conn);
                     loginCmd.Parameters.AddWithValue("@username", txt_user.Text);
-                    loginCmd.Parameters.AddWithValue("@password", txt_pass.Text);
-                    object count = loginCmd.ExecuteScalar();
+                    MySqlDataReader reader = loginCmd.ExecuteReader();
+                    while (reader.Read()) { 
+                    hashedPassword = reader["password"].ToString();
+                    }
+
 
                     if (txt_user.Text.Equals("Enter Username or Email") && txt_pass.Text.Equals("Enter Password")) {
                         string usernamePlaceholder = "Enter Username or Email";
                         string passwordPlaceholder = "Enter Password";
-
-
                         string usernameInput = txt_user.Text.Trim();
 
 
@@ -82,16 +93,9 @@ namespace Cineverse
                             ep_password.SetError(txt_pass, string.Empty);
                         }
                     }
-
-                    else if(Convert.ToInt32(count) != 1)
+                    else if(hashedPassword.Equals(SignUp.ComputeSha256Hash(txt_pass.Text)))
                     {
-                        MessageBox.Show("Incorrect username or password");
-                        txt_pass.UseSystemPasswordChar = false;
-                        txt_user.Text = "Enter Username or Email";
-                        txt_pass.Text = "Enter Password";
-                    } 
-                    else
-                    {
+                        
                         Username = GetTextBoxValue();
 
                         Dashboard dashboard = new Dashboard();
@@ -99,7 +103,14 @@ namespace Cineverse
                         this.Hide();
 
                     }
-                    
+                    else
+                    {
+                        MessageBox.Show("Incorrect username or password");
+                        txt_pass.UseSystemPasswordChar = false;
+                        txt_user.Text = "Enter Username or Email";
+                        txt_pass.Text = "Enter Password";
+
+                    }
                 }
                 catch (Exception ex)
                 {
