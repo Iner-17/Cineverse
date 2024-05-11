@@ -148,6 +148,42 @@ namespace Cineverse
             btn_gt9.ForeColor = Color.White;
         }
 
+        private void btn_gt10_MouseEnter(object sender, EventArgs e)
+        {
+            btn_gt10.BackColor = Color.FromArgb(31, 178, 198);
+            btn_gt10.ForeColor = Color.Black;
+        }
+
+        private void btn_gt10_MouseLeave(object sender, EventArgs e)
+        {
+            btn_gt10.BackColor = Color.FromArgb(20, 32, 32);
+            btn_gt10.ForeColor = Color.White;
+        }
+
+        private void btn_gt11_MouseEnter(object sender, EventArgs e)
+        {
+            btn_gt11.BackColor = Color.FromArgb(31, 178, 198);
+            btn_gt11.ForeColor = Color.Black;
+        }
+
+        private void btn_gt11_MouseLeave(object sender, EventArgs e)
+        {
+            btn_gt11.BackColor = Color.FromArgb(20, 32, 32);
+            btn_gt11.ForeColor = Color.White;
+        }
+
+        private void btn_gt12_MouseEnter(object sender, EventArgs e)
+        {
+            btn_gt12.BackColor = Color.FromArgb(31, 178, 198);
+            btn_gt12.ForeColor = Color.Black;
+        }
+
+        private void btn_gt12_MouseLeave(object sender, EventArgs e)
+        {
+            btn_gt12.BackColor = Color.FromArgb(20, 32, 32);
+            btn_gt12.ForeColor = Color.White;
+        }
+
         private void btn_addMovies_MouseEnter(object sender, EventArgs e)
         {
             btn_addMovies.BackColor = Color.FromArgb(31, 178, 198);
@@ -618,6 +654,6 @@ namespace Cineverse
             dashboard1.btn_dashboard_Click(this, EventArgs.Empty);
         }
 
-        
+
     }
 }
