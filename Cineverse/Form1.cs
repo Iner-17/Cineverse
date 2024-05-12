@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ExpenseApp;
+using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
@@ -93,15 +94,13 @@ namespace Cineverse
                             ep_password.SetError(txt_pass, string.Empty);
                         }
                     }
-                    else if(hashedPassword.Equals(SignUp.ComputeSha256Hash(txt_pass.Text)))
+                    else if(hashedPassword.Equals(Security.Encrypt(txt_pass.Text)))
                     {
-                        
                         Username = GetTextBoxValue();
 
                         Dashboard dashboard = new Dashboard();
                         dashboard.Show();
                         this.Hide();
-
                     }
                     else
                     {

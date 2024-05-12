@@ -135,6 +135,7 @@
     <Compile Include="Seats.Designer.cs">
       <DependentUpon>Seats.cs</DependentUpon>
     </Compile>
+    <Compile Include="Security.cs" />
     <Compile Include="UserControls\BookingSection.cs">
       <SubType>UserControl</SubType>
     </Compile>

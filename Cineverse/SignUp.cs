@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ExpenseApp;
+using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
@@ -308,23 +309,7 @@ namespace Cineverse
             signUp();
         }
 
-        public static string ComputeSha256Hash(string password)
-        {
-            // Create a SHA256 hash from the given string
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                // ComputeHash - returns byte array
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-                // Convert byte array to a string
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("x2"));
-                }
-                return builder.ToString();
-            }
-        }
+   
 
         public void signUp()
         {
@@ -336,8 +321,6 @@ namespace Cineverse
             string usernamePlaceholder = "Username";
             string passwordPlaceholder = "Password";
             string confirmPlaceholder = "Confirm Password";
-
-            string hashedPassword = SignUp.ComputeSha256Hash(txt_password.Text);
 
 
             if (txt_firstName.Text == "First Name" || txt_lastName.Text == "Last Name" || txt_ContactNum.Text == "Contact No." || txt_email.Text == "Email" || txt_username.Text == "Username" || txt_password.Text == "Password" || txt_confirmPassword.Text == "Confirm Password")
@@ -461,13 +444,15 @@ namespace Cineverse
                         {
                             conn.Open();
 
+                            string password = Security.Encrypt(txt_password.Text);
+
                             string signupQuery = "INSERT INTO accounts (firstname, lastname, email, username, password, phone_number) VALUES (@Firstname, @Lastname, @Email, @Username, @Password, @PhoneNumber);";
                             MySqlCommand signupcmd = new MySqlCommand(signupQuery, conn);
                             signupcmd.Parameters.AddWithValue("@Firstname", txt_firstName.Text);
                             signupcmd.Parameters.AddWithValue("@Lastname", txt_lastName.Text);
                             signupcmd.Parameters.AddWithValue("@Email", txt_email.Text);
                             signupcmd.Parameters.AddWithValue("@Username", txt_username.Text);
-                            signupcmd.Parameters.AddWithValue("@Password", hashedPassword);
+                            signupcmd.Parameters.AddWithValue("@Password", password);
                             signupcmd.Parameters.AddWithValue("@PhoneNumber", txt_ContactNum.Text);
                             signupcmd.ExecuteNonQuery();
 
