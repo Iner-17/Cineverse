@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ExpenseApp;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +47,8 @@ namespace Cineverse.UserControls
                 {
                     string pass = reader["password"].ToString();
                     string counter = "";
+                    string decryptedPass = Security.Decrypt(pass);
+
 
                     for (int i = 0; i < pass.Length; i++)
                     {
@@ -54,7 +57,7 @@ namespace Cineverse.UserControls
 
                     lbl_name.Text = reader["name"].ToString();
                     lbl_email.Text = reader["email"].ToString();
-                    lbl_pass.Text = reader["password"].ToString().Replace(pass, counter);
+                    lbl_pass.Text = decryptedPass.Replace(decryptedPass, counter);
                     lbl_contactNo.Text = reader["phone_number"].ToString();
                 }
 
