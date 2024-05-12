@@ -235,11 +235,12 @@
             // 
             // pb_profile
             // 
+            this.pb_profile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_profile.Image = global::Cineverse.Properties.Resources.ProfilePlaceholder;
             this.pb_profile.Location = new System.Drawing.Point(495, 174);
             this.pb_profile.Name = "pb_profile";
             this.pb_profile.Size = new System.Drawing.Size(150, 150);
-            this.pb_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_profile.TabIndex = 7;
             this.pb_profile.TabStop = false;
             // 

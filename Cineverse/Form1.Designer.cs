@@ -139,7 +139,7 @@
             this.signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.signup.Location = new System.Drawing.Point(356, 598);
             this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(74, 22);
+            this.signup.Size = new System.Drawing.Size(70, 19);
             this.signup.TabIndex = 9;
             this.signup.Text = "Sign Up";
             this.signup.Click += new System.EventHandler(this.signup_Click);
@@ -169,7 +169,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(166, 598);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 22);
+            this.label4.Size = new System.Drawing.Size(194, 19);
             this.label4.TabIndex = 8;
             this.label4.Text = "Don\'t have an account?\r\n";
             // 

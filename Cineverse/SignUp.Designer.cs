@@ -206,7 +206,7 @@
             this.txt_ContactNum.PlaceholderText = "";
             this.txt_ContactNum.SelectedText = "";
             this.txt_ContactNum.Size = new System.Drawing.Size(409, 40);
-            this.txt_ContactNum.TabIndex = 4;
+            this.txt_ContactNum.TabIndex = 5;
             this.txt_ContactNum.TextChanged += new System.EventHandler(this.txt_ContactNum_TextChanged);
             this.txt_ContactNum.Enter += new System.EventHandler(this.txt_ContactNum_Enter);
             this.txt_ContactNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ContactNum_KeyPress);
@@ -233,7 +233,7 @@
             this.txt_confirmPassword.PlaceholderText = "";
             this.txt_confirmPassword.SelectedText = "";
             this.txt_confirmPassword.Size = new System.Drawing.Size(409, 40);
-            this.txt_confirmPassword.TabIndex = 7;
+            this.txt_confirmPassword.TabIndex = 8;
             this.txt_confirmPassword.TextChanged += new System.EventHandler(this.txt_confirmPassword_TextChanged);
             this.txt_confirmPassword.Enter += new System.EventHandler(this.txt_confirmPassword_Enter);
             this.txt_confirmPassword.Leave += new System.EventHandler(this.txt_confirmPassword_Leave);
@@ -259,7 +259,7 @@
             this.txt_password.PlaceholderText = "";
             this.txt_password.SelectedText = "";
             this.txt_password.Size = new System.Drawing.Size(410, 40);
-            this.txt_password.TabIndex = 6;
+            this.txt_password.TabIndex = 7;
             this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
             this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
@@ -285,7 +285,7 @@
             this.txt_username.PlaceholderText = "";
             this.txt_username.SelectedText = "";
             this.txt_username.Size = new System.Drawing.Size(409, 40);
-            this.txt_username.TabIndex = 5;
+            this.txt_username.TabIndex = 6;
             this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             this.txt_username.Enter += new System.EventHandler(this.txt_username_Enter);
             this.txt_username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_username_KeyPress);
@@ -353,8 +353,8 @@
             this.Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.Login.Location = new System.Drawing.Point(386, 682);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(59, 22);
-            this.Login.TabIndex = 10;
+            this.Login.Size = new System.Drawing.Size(56, 19);
+            this.Login.TabIndex = 9;
             this.Login.Text = "Log in";
             this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
@@ -366,7 +366,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(179, 682);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 22);
+            this.label4.Size = new System.Drawing.Size(211, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Already have an account?\r\n";
             // 
@@ -398,7 +398,7 @@
             this.panel4.Location = new System.Drawing.Point(171, 38);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(278, 132);
-            this.panel4.TabIndex = 2;
+            this.panel4.TabIndex = 1;
             // 
             // txt_email
             // 
