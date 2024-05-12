@@ -252,16 +252,9 @@ namespace Cineverse
                 }
             }
 
-
             if (IsValidPassword(txt_password.Text))
             {
                 txt_password.BorderColor = Color.White;
-
-            }
-            else
-            {
-                MessageBox.Show("Password should have atleast 8 characters, 1 number, and 1 symbol.");
-                txt_password.BorderColor = Color.Red;
             }
         }
 
@@ -304,7 +297,7 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            
 
             signUp();
         }
@@ -488,6 +481,10 @@ namespace Cineverse
                 }
                
             }
+
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
 
         static bool IsValidPassword(string password)

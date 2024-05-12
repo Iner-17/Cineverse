@@ -94,7 +94,7 @@ namespace Cineverse
                             ep_password.SetError(txt_pass, string.Empty);
                         }
                     }
-                    else if(hashedPassword.Equals(Security.Encrypt(txt_pass.Text)))
+                    else if (hashedPassword.Equals(Security.Encrypt(txt_pass.Text)))
                     {
                         Username = GetTextBoxValue();
 
@@ -124,14 +124,8 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
-            
-
             login();
         }
-
-
-
 
         private void signup_Click(object sender, EventArgs e)
         {
@@ -146,7 +140,6 @@ namespace Cineverse
             {
                 txt_user.Text = "";
                 txt_user.ForeColor = Color.White;
-                
             }
         }
 
