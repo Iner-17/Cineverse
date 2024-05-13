@@ -30,6 +30,8 @@ namespace Cineverse.UserControls
             getUserInfo();
         }
 
+        int userId = 0;
+
         private void getUserInfo()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -37,20 +39,18 @@ namespace Cineverse.UserControls
             try
             {
                 conn.Open();
-                string query = "SELECT concat(firstname, ' ' , lastname) as name, email, password, phone_number FROM accounts where username = @Username";
+                string query = "SELECT concat(firstname, ' ' , lastname) as name, email, password, phone_number, time_in FROM accounts INNER JOIN employee ON accounts.user_id = employee.user_id where accounts.username = @Username";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("Username", Login.Username);
                 MySqlDataReader reader = cmd.ExecuteReader();
-
                 while (reader.Read())
                 {
                     string pass = reader["password"].ToString();
                     string counter = "";
                     string decryptedPass = Security.Decrypt(pass);
 
-
-                    for (int i = 0; i < pass.Length; i++)
+                    for (int i = 0; i < decryptedPass.Length; i++)
                     {
                         counter += '*';
                     }
@@ -59,13 +59,9 @@ namespace Cineverse.UserControls
                     lbl_email.Text = reader["email"].ToString();
                     lbl_pass.Text = decryptedPass.Replace(decryptedPass, counter);
                     lbl_contactNo.Text = reader["phone_number"].ToString();
+                    lbl_timein.Text = reader["time_in"].ToString();
+                    
                 }
-
-                DateTime currentDate = DateTime.Now;
-                string formattedTime = currentDate.ToString("hh:mm") + " AM";
-
-                lbl_timein.Text = formattedTime.ToString();
-
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
             finally { conn.Close(); }
@@ -93,13 +89,15 @@ namespace Cineverse.UserControls
         private void SaveImage(string filename)
         {
         }
-
+        
         private void btn_timeOut_Click(object sender, EventArgs e)
         {
+            TimeINOUT.TimeOut();
+
             Login login = new Login();
             login.Show();
 
-            this.Hide();
+            this.ParentForm.Close();
         }
     }
 }

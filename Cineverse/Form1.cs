@@ -43,6 +43,8 @@ namespace Cineverse
         }
 
 
+        
+
         public void login()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -55,14 +57,14 @@ namespace Cineverse
                     string hashedPassword = "";
 
                     conn.Open();
-                    string loginQuery = "SELECT password FROM accounts WHERE username=@username";
+                    string loginQuery = "SELECT user_id, password FROM accounts WHERE username=@username";
                     MySqlCommand loginCmd = new MySqlCommand(loginQuery, conn);
                     loginCmd.Parameters.AddWithValue("@username", txt_user.Text);
                     MySqlDataReader reader = loginCmd.ExecuteReader();
                     while (reader.Read()) { 
                     hashedPassword = reader["password"].ToString();
+                        TimeINOUT.user_id = Convert.ToInt32(reader["user_id"].ToString());
                     }
-
 
                     if (txt_user.Text.Equals("Enter Username or Email") && txt_pass.Text.Equals("Enter Password")) {
                         string usernamePlaceholder = "Enter Username or Email";
@@ -80,9 +82,7 @@ namespace Cineverse
                             ep_username.SetError(txt_user, string.Empty);
                         }
 
-
                         string passwordInput = txt_pass.Text.Trim();
-
 
                         if (string.IsNullOrEmpty(passwordInput) || passwordInput == passwordPlaceholder)
                         {
@@ -98,6 +98,8 @@ namespace Cineverse
                     {
                         Username = GetTextBoxValue();
 
+                        TimeINOUT.TimeIn();
+
                         Dashboard dashboard = new Dashboard();
                         dashboard.Show();
                         this.Hide();
@@ -110,6 +112,8 @@ namespace Cineverse
                         txt_pass.Text = "Enter Password";
 
                     }
+
+
                 }
                 catch (Exception ex)
                 {
@@ -124,8 +128,6 @@ namespace Cineverse
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
-            
             login();
         }
 
