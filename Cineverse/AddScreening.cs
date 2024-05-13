@@ -14,6 +14,10 @@ namespace Cineverse
 {
     public partial class AddScreening : Form
     {
+        private bool cinema1isActive = false;
+        private bool cinema2isActive = false;
+        private bool cinema3isActive = false;
+        private bool cinema4isActive = false;
         public AddScreening()
         {
             InitializeComponent();
@@ -177,6 +181,190 @@ namespace Cineverse
             dashboard.Show();
 
             this.Close();
+        }
+
+        private void btn_cinema1_Click(object sender, EventArgs e)
+        {
+            btn_cinema1.BackColor = Color.FromArgb(31, 178, 198);
+            btn_cinema1.ForeColor = Color.Black;
+
+            btn_cinema2.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema2.ForeColor = Color.White;
+
+            btn_cinema3.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema3.ForeColor = Color.White;
+
+            btn_cinema4.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema4.ForeColor = Color.White;
+
+            cinema1isActive = true;
+            cinema2isActive = false;
+            cinema3isActive = false;
+            cinema4isActive = false;
+        }
+
+        private void btn_cinema2_Click(object sender, EventArgs e)
+        {
+            btn_cinema1.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema1.ForeColor = Color.White;
+
+            btn_cinema2.BackColor = Color.FromArgb(31, 178, 198);
+            btn_cinema2.ForeColor = Color.Black;
+
+            btn_cinema3.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema3.ForeColor = Color.White;
+
+            btn_cinema4.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema4.ForeColor = Color.White;
+
+            cinema1isActive = false;
+            cinema2isActive = true;
+            cinema3isActive = false;
+            cinema4isActive = false;
+        }
+
+        private void btn_cinema3_Click(object sender, EventArgs e)
+        {
+            btn_cinema1.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema1.ForeColor = Color.White;
+
+            btn_cinema2.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema2.ForeColor = Color.White;
+
+            btn_cinema3.BackColor = Color.FromArgb(31, 178, 198);
+            btn_cinema3.ForeColor = Color.Black;
+
+            btn_cinema4.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema4.ForeColor = Color.White;
+
+            cinema1isActive = false;
+            cinema2isActive = false;
+            cinema3isActive = true;
+            cinema4isActive = false;
+        }
+
+        private void btn_cinema4_Click(object sender, EventArgs e)
+        {
+            btn_cinema1.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema1.ForeColor = Color.White;
+
+            btn_cinema2.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema2.ForeColor = Color.White;
+
+            btn_cinema3.BackColor = Color.FromArgb(20, 32, 32);
+            btn_cinema3.ForeColor = Color.White;
+
+            btn_cinema4.BackColor = Color.FromArgb(31, 178, 198);
+            btn_cinema4.ForeColor = Color.Black;
+
+            cinema1isActive = false;
+            cinema2isActive = false;
+            cinema3isActive = false;
+            cinema4isActive = true;
+        }
+
+        private void btn_cinema1_MouseEnter(object sender, EventArgs e)
+        {
+            if (cinema1isActive == false)
+            {
+                btn_cinema1.BackColor = Color.FromArgb(31, 178, 198);
+                btn_cinema1.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_cinema1_MouseLeave(object sender, EventArgs e)
+        {
+            if (cinema1isActive == false)
+            {
+                btn_cinema1.BackColor = Color.FromArgb(20, 32, 32);
+                btn_cinema1.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_cinema2_MouseEnter(object sender, EventArgs e)
+        {
+            if (cinema2isActive == false)
+            {
+                btn_cinema2.BackColor = Color.FromArgb(31, 178, 198);
+                btn_cinema2.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_cinema2_MouseLeave(object sender, EventArgs e)
+        {
+            if (cinema2isActive == false)
+            {
+                btn_cinema2.BackColor = Color.FromArgb(20, 32, 32);
+                btn_cinema2.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_cinema3_MouseEnter(object sender, EventArgs e)
+        {
+            if (cinema3isActive == false)
+            {
+                btn_cinema3.BackColor = Color.FromArgb(31, 178, 198);
+                btn_cinema3.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_cinema3_MouseLeave(object sender, EventArgs e)
+        {
+            if (cinema3isActive == false)
+            {
+                btn_cinema3.BackColor = Color.FromArgb(20, 32, 32);
+                btn_cinema3.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_cinema4_MouseEnter(object sender, EventArgs e)
+        {
+            if (cinema4isActive == false)
+            {
+                btn_cinema4.BackColor = Color.FromArgb(31, 178, 198);
+                btn_cinema4.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_cinema4_MouseLeave(object sender, EventArgs e)
+        {
+            if (cinema4isActive == false)
+            {
+                btn_cinema4.BackColor = Color.FromArgb(20, 32, 32);
+                btn_cinema4.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

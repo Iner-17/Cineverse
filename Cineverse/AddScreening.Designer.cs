@@ -217,12 +217,17 @@
             this.btn_cinema4.TabIndex = 57;
             this.btn_cinema4.Text = "Cinema 4";
             this.btn_cinema4.UseVisualStyleBackColor = false;
+            this.btn_cinema4.Click += new System.EventHandler(this.btn_cinema4_Click);
+            this.btn_cinema4.MouseEnter += new System.EventHandler(this.btn_cinema4_MouseEnter);
+            this.btn_cinema4.MouseLeave += new System.EventHandler(this.btn_cinema4_MouseLeave);
             // 
             // btn_cinema2
             // 
             this.btn_cinema2.BackColor = System.Drawing.Color.Transparent;
             this.btn_cinema2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cinema2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_cinema2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_cinema2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.btn_cinema2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cinema2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cinema2.ForeColor = System.Drawing.Color.White;
@@ -232,6 +237,9 @@
             this.btn_cinema2.TabIndex = 56;
             this.btn_cinema2.Text = "Cinema 2";
             this.btn_cinema2.UseVisualStyleBackColor = false;
+            this.btn_cinema2.Click += new System.EventHandler(this.btn_cinema2_Click);
+            this.btn_cinema2.MouseEnter += new System.EventHandler(this.btn_cinema2_MouseEnter);
+            this.btn_cinema2.MouseLeave += new System.EventHandler(this.btn_cinema2_MouseLeave);
             // 
             // btn_cinema3
             // 
@@ -247,12 +255,17 @@
             this.btn_cinema3.TabIndex = 55;
             this.btn_cinema3.Text = "Cinema 3";
             this.btn_cinema3.UseVisualStyleBackColor = false;
+            this.btn_cinema3.Click += new System.EventHandler(this.btn_cinema3_Click);
+            this.btn_cinema3.MouseEnter += new System.EventHandler(this.btn_cinema3_MouseEnter);
+            this.btn_cinema3.MouseLeave += new System.EventHandler(this.btn_cinema3_MouseLeave);
             // 
             // btn_cinema1
             // 
             this.btn_cinema1.BackColor = System.Drawing.Color.Transparent;
             this.btn_cinema1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cinema1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_cinema1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_cinema1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.btn_cinema1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cinema1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cinema1.ForeColor = System.Drawing.Color.White;
@@ -262,6 +275,9 @@
             this.btn_cinema1.TabIndex = 54;
             this.btn_cinema1.Text = "Cinema 1";
             this.btn_cinema1.UseVisualStyleBackColor = false;
+            this.btn_cinema1.Click += new System.EventHandler(this.btn_cinema1_Click);
+            this.btn_cinema1.MouseEnter += new System.EventHandler(this.btn_cinema1_MouseEnter);
+            this.btn_cinema1.MouseLeave += new System.EventHandler(this.btn_cinema1_MouseLeave);
             // 
             // lbl_screeningdate
             // 

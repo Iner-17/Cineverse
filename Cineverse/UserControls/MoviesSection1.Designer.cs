@@ -68,7 +68,6 @@
             this.lbl_title7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_backk = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbl_price1 = new System.Windows.Forms.Label();
             this.lbl_price2 = new System.Windows.Forms.Label();
             this.lbl_price3 = new System.Windows.Forms.Label();
@@ -179,7 +178,7 @@
             this.btn_addMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addMovies.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addMovies.ForeColor = System.Drawing.Color.White;
-            this.btn_addMovies.Location = new System.Drawing.Point(747, 15);
+            this.btn_addMovies.Location = new System.Drawing.Point(789, 21);
             this.btn_addMovies.Name = "btn_addMovies";
             this.btn_addMovies.Size = new System.Drawing.Size(196, 42);
             this.btn_addMovies.TabIndex = 14;
@@ -691,21 +690,6 @@
             this.btn_backk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_backk_MouseClick);
             this.btn_backk.MouseEnter += new System.EventHandler(this.btn_backk_MouseEnter);
             this.btn_backk.MouseLeave += new System.EventHandler(this.btn_backk_MouseLeave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(961, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 19);
-            this.label1.TabIndex = 79;
-            this.label1.Text = "Refresh";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // lbl_price1
             // 
@@ -1573,7 +1557,7 @@
             this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(3, 92);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(1141, 51);
+            this.label30.Size = new System.Drawing.Size(1141, 44);
             this.label30.TabIndex = 141;
             this.label30.Text = "CINEMA 1";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1585,7 +1569,7 @@
             this.label31.ForeColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(3, 494);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(1141, 51);
+            this.label31.Size = new System.Drawing.Size(1141, 44);
             this.label31.TabIndex = 142;
             this.label31.Text = "CINEMA 2";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1597,7 +1581,7 @@
             this.label32.ForeColor = System.Drawing.Color.White;
             this.label32.Location = new System.Drawing.Point(3, 887);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(1141, 51);
+            this.label32.Size = new System.Drawing.Size(1141, 44);
             this.label32.TabIndex = 143;
             this.label32.Text = "CINEMA 3";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1607,9 +1591,9 @@
             this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label33.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(3, 1286);
+            this.label33.Location = new System.Drawing.Point(3, 1288);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(1141, 51);
+            this.label33.Size = new System.Drawing.Size(1141, 44);
             this.label33.TabIndex = 144;
             this.label33.Text = "CINEMA 4";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1687,7 +1671,6 @@
             this.Controls.Add(this.lbl_price3);
             this.Controls.Add(this.lbl_price2);
             this.Controls.Add(this.lbl_price1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_backk);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_gt9);
@@ -1738,7 +1721,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1131, 848);
+            this.Size = new System.Drawing.Size(1097, 814);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
@@ -1804,7 +1787,6 @@
         private System.Windows.Forms.PictureBox pb_Poster7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label btn_backk;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_price1;
         private System.Windows.Forms.Label lbl_price2;
         private System.Windows.Forms.Label lbl_price3;
