@@ -438,21 +438,8 @@ namespace Cineverse
         }
 
         //RELOAD
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-            UpdateMovieList();
-            
-        }
+      
 
-        private void label1_MouseEnter(object sender, EventArgs e)
-        {
-            label1.ForeColor = Color.FromArgb(31, 178, 198);
-        }
-
-        private void label1_MouseLeave(object sender, EventArgs e)
-        {
-            label1.ForeColor = Color.White;
-        }
 
         private void btn_backk_MouseEnter(object sender, EventArgs e)
         {
@@ -856,6 +843,14 @@ namespace Cineverse
             dashboard1.btn_dashboard_Click(this, EventArgs.Empty);
         }
 
-        
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
     }
 }

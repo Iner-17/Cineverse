@@ -26,11 +26,7 @@ namespace Cineverse
 
         private void btn_saveMovie_Click(object sender, EventArgs e)
         {
-            saveMovie();
-
-            AddScreening addScreening = new AddScreening();
-            addScreening.Show();
-            this.Close();
+            saveMovie(); 
 
         }
 
@@ -93,7 +89,12 @@ namespace Cineverse
 
                     
                         MessageBox.Show("Successfully Added Movie.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        AddScreening addScreening = new AddScreening();
+                        addScreening.Show();
+                        this.Close();
                     }
+
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
