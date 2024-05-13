@@ -397,13 +397,13 @@ namespace Cineverse
                     ep_FN.SetError(txt_confirmPassword, string.Empty);
                 }
             }
-            else if (txt_firstName.TextLength < 3)
+            else if (txt_firstName.TextLength < 2)
             {
-                MessageBox.Show("First Name should have at least 3 characters.");
+                MessageBox.Show("First Name should have at least 2 characters.");
             }
-            else if (txt_lastName.TextLength < 3)
+            else if (txt_lastName.TextLength < 2)
             {
-                MessageBox.Show("Last Name should have at least 3 characters.");
+                MessageBox.Show("Last Name should have at least 2 characters.");
             }
             else if (txt_confirmPassword.Text != txt_password.Text)
             {

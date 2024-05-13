@@ -94,7 +94,7 @@ namespace Cineverse
                             ep_password.SetError(txt_pass, string.Empty);
                         }
                     }
-                    else if (hashedPassword.Equals(Security.Encrypt(txt_pass.Text)) || txt_user.Text.Equals("admin") && txt_pass.Text.Equals("test"))
+                    else if (hashedPassword.Equals(Security.Encrypt(txt_pass.Text)))
                     {
                         Username = GetTextBoxValue();
 
@@ -104,7 +104,7 @@ namespace Cineverse
                     }
                     else
                     {
-                        MessageBox.Show("Incorrect username or password");
+                        MessageBox.Show("Incorrect username or password", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         txt_pass.UseSystemPasswordChar = false;
                         txt_user.Text = "Enter Username or Email";
                         txt_pass.Text = "Enter Password";
