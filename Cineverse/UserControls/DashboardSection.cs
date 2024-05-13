@@ -73,7 +73,7 @@ namespace Cineverse
 
         }
 
-        private void displayMovieDashboard()
+        public void displayMovieDashboard()
         {
             MySqlConnection conn = DBConnection.getConnection();
 

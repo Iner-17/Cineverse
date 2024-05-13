@@ -1,4 +1,5 @@
 ﻿using Cineverse.UserControls;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -61,8 +62,9 @@ namespace Cineverse
         private void btn_saveMovie_Click(object sender, EventArgs e)
         {
             saveMovie();
-            MoviesSection1 ms = new MoviesSection1();
-            ms.UpdateMovieList();
+
+            MoviesSection1 moviesection1 = new MoviesSection1();
+            moviesection1.UpdateMovieList();
         }
 
         private int movieId = 0;
@@ -226,6 +228,10 @@ namespace Cineverse
         private void panel5_Click(object sender, EventArgs e)
         {
             AddMovie addMovie = new AddMovie();
+
+            Dashboard dashboard = new Dashboard();
+            dashboard.btn_movies_Click(this, EventArgs.Empty);
+            dashboard.Show();
             this.Close();
         }
 
