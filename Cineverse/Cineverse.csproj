@@ -109,6 +109,12 @@
     <Compile Include="AddMovie.Designer.cs">
       <DependentUpon>AddMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddScreening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddScreening.Designer.cs">
+      <DependentUpon>AddScreening.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </Compile>
     <EmbeddedResource Include="AddMovie.resx">
       <DependentUpon>AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddScreening.resx">
+      <DependentUpon>AddScreening.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
