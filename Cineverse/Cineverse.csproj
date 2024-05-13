@@ -135,6 +135,12 @@
     <Compile Include="ReceiptForm.Designer.cs">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPasswordForm.Designer.cs">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiptForm.resx">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPasswordForm.resx">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seats.resx">
       <DependentUpon>Seats.cs</DependentUpon>
@@ -353,6 +362,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\forgot pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset pass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

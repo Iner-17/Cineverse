@@ -313,6 +313,16 @@ namespace Cineverse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reset_pass {
+            get {
+                object obj = ResourceManager.GetObject("reset pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap screen {
             get {
                 object obj = ResourceManager.GetObject("screen", resourceCulture);
