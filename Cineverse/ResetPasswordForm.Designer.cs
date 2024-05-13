@@ -169,8 +169,8 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(462, 64);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Create a new password that is at least 8 characters long.\r\nA strong password is c" +
-    "ombination of letters, numbers, and symbols.";
+            this.label1.Text = "Create a new password that is at least 8 characters long.\r\nA strong password is a" +
+    " combination of letters, numbers, and symbols.";
             // 
             // label3
             // 
