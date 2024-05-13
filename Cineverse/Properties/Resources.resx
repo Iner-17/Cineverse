@@ -196,6 +196,9 @@
   <data name="LogoCiniverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoCiniverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hidesmol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hidesmol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,7 +214,7 @@
   <data name="screen_smol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\screen_smol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hidesmol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hidesmol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forgot pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forgot pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
