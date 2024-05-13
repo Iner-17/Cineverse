@@ -235,5 +235,11 @@ namespace Cineverse
                 e.Handled = true;
             }
         }
+
+        private void lbl_forgotPass_Click(object sender, EventArgs e)
+        {
+            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
+            forgotPasswordForm.ShowDialog();
+        }
     }
 }

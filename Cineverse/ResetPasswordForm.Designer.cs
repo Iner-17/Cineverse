@@ -131,6 +131,7 @@
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(19, 26);
             this.btn_exit.TabIndex = 10;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // panel3
             // 

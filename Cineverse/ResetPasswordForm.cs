@@ -57,5 +57,12 @@ namespace Cineverse
             btn_confirmHide.BackColor = Color.Black;
 
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }

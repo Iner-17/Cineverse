@@ -128,6 +128,7 @@
             this.btn_sendCode.Size = new System.Drawing.Size(155, 40);
             this.btn_sendCode.TabIndex = 6;
             this.btn_sendCode.Text = "Send Code";
+            this.btn_sendCode.Click += new System.EventHandler(this.btn_sendCode_Click);
             // 
             // btn_submit
             // 
@@ -147,6 +148,7 @@
             this.btn_submit.Size = new System.Drawing.Size(135, 40);
             this.btn_submit.TabIndex = 7;
             this.btn_submit.Text = "Submit";
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // btn_cancel
             // 
@@ -177,6 +179,7 @@
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(19, 26);
             this.btn_exit.TabIndex = 9;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // panel3
             // 
