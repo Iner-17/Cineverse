@@ -26,6 +26,7 @@ namespace Cineverse
             Random random = new Random();
             otp = random.Next(100000, 999999);
 
+
             MailMessage message = new MailMessage();
             message.From = new MailAddress("cineverse24@gmail.com");
             message.To.Add(txt_email.Text);

@@ -17,47 +17,6 @@ namespace Cineverse
             InitializeComponent();
         }
 
-        private void btn_show_Click(object sender, EventArgs e)
-        {
-            if (txt_newPass.UseSystemPasswordChar == false)
-            {
-                btn_hide.BringToFront();
-                txt_newPass.UseSystemPasswordChar = true;
-            }
-            btn_show.BackColor = Color.Black;
-        }
-
-        private void btn_hide_Click(object sender, EventArgs e)
-        {
-            if (txt_newPass.UseSystemPasswordChar == true)
-            {
-                btn_show.BringToFront();
-                txt_newPass.UseSystemPasswordChar = false;
-            }
-            btn_hide.BackColor = Color.Black;
-        }
-
-        private void btn_confirmShow_Click(object sender, EventArgs e)
-        {
-            if (txt_confirmPass.UseSystemPasswordChar == false)
-            {
-                btn_confirmHide.BringToFront();
-                txt_confirmPass.UseSystemPasswordChar = true;
-            }
-            btn_confirmShow.BackColor = Color.Black;
-        }
-
-        private void btn_confirmHide_Click(object sender, EventArgs e)
-        {
-            if (txt_confirmPass.UseSystemPasswordChar == true)
-            {
-                btn_confirmShow.BringToFront();
-                txt_confirmPass.UseSystemPasswordChar = false;
-            }
-            btn_confirmHide.BackColor = Color.Black;
-
-        }
-
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Login login = new Login();
