@@ -620,5 +620,45 @@ namespace Cineverse
                 e.Handled = true;
             }
         }
+
+        private void btn_show_Click(object sender, EventArgs e)
+        {
+            if (txt_password.UseSystemPasswordChar == false)
+            {
+                btn_hide.BringToFront();
+                txt_password.UseSystemPasswordChar = true;
+            }
+            btn_show.BackColor = Color.Black;
+        }
+
+        private void btn_hide_Click(object sender, EventArgs e)
+        {
+            if (txt_password.UseSystemPasswordChar == true)
+            {
+                btn_show.BringToFront();
+                txt_password.UseSystemPasswordChar = false;
+            }
+            btn_hide.BackColor = Color.Black;
+        }
+
+        private void btn_confirmShow_Click(object sender, EventArgs e)
+        {
+            if (txt_confirmPassword.UseSystemPasswordChar == false)
+            {
+                btn_confirmHide.BringToFront();
+                txt_confirmPassword.UseSystemPasswordChar = true;
+            }
+            btn_confirmShow.BackColor = Color.Black;
+        }
+
+        private void btn_confirmHide_Click(object sender, EventArgs e)
+        {
+            if (txt_confirmPassword.UseSystemPasswordChar == true)
+            {
+                btn_confirmShow.BringToFront();
+                txt_confirmPassword.UseSystemPasswordChar = false;
+            }
+            btn_confirmHide.BackColor = Color.Black;
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace Cineverse
                 }
                 else
                 {
-                    MessageBox.Show("Can only set 1 date per screening");
+                    MessageBox.Show("Can only set 1 Date per Screening", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
