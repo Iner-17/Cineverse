@@ -312,7 +312,6 @@ namespace Cineverse
                 }
             }
 
-
             //cinema number 2
 
             for (int i = 7; i <= 9; i++)
@@ -830,6 +829,8 @@ namespace Cineverse
                         deleteMoviecmd.ExecuteNonQuery();
                         MessageBox.Show("Movie deleted successfully.");
                         Image placeholder = Cineverse.Properties.Resources.PosterPlaceholder;
+
+                        SynopsisSection.GlobalComboBox.Items.Remove(movieTitle);
 
                         reset();
                         UpdateMovieList();
