@@ -26,7 +26,7 @@ namespace Cineverse
             InitializeComponent();
         }
 
-        private void MoviesSection1_Load(object sender, EventArgs e)
+        public void MoviesSection1_Load(object sender, EventArgs e)
         {
             UpdateMovieList();
         }
@@ -36,8 +36,7 @@ namespace Cineverse
         private void btn_getTickets2_Click(object sender, EventArgs e)
         {
             AddMovie addMovie = new AddMovie();
-            addMovie.ShowDialog();
-            addMovie.BringToFront();
+            addMovie.Show();
         }
 
         private void btn_gt1_MouseEnter(object sender, EventArgs e)
@@ -368,7 +367,7 @@ namespace Cineverse
 
 
 
-            //cinema number 2
+            //cinema number 4
 
             for (int i = 10; i <= 12; i++)
             {
@@ -419,11 +418,12 @@ namespace Cineverse
                     finally { conn.Close(); }
                 }
             }
+
         }
 
         private void reset()
         {
-            for (int i = 1; i <= 9; i++)
+            for (int i = 1; i <= 12; i++)
             {
                 PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
                 Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
@@ -707,8 +707,6 @@ namespace Cineverse
             }
             
         }
-
-       
 
         private void lbl_title7_Click(object sender, EventArgs e)
         {

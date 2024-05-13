@@ -68,10 +68,16 @@ namespace Cineverse
             navigationcontrols.Display(0);
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+        public void UpdateMovieList()
+        {
+            
+        }
+
+        public void Dashboard_Load(object sender, EventArgs e)
         {
             //time & date
-            
+            MoviesSection1 moviesSection1 = new MoviesSection1();
+            moviesSection1.UpdateMovieList();
         }
 
         private void button6_Click(object sender, EventArgs e)
