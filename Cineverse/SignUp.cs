@@ -127,7 +127,7 @@ namespace Cineverse
 
                 if (reader.HasRows)
                 {
-                    MessageBox.Show("Email Already Exists.");
+                    MessageBox.Show("Email Already Exists.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_email.Text = "Email";
                     txt_email.ForeColor = Color.Silver;
                 }
@@ -163,13 +163,13 @@ namespace Cineverse
 
             if (!txt_ContactNum.Text.StartsWith("09"))
             {
-                MessageBox.Show("Contact Number should start with 09");
+                MessageBox.Show("Contact Number should start with 09", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_ContactNum.Text = "Contact No.";
             }
 
             if (txt_ContactNum.TextLength != 11)
             {
-                MessageBox.Show("Number should be a minimum of 11 digits.");
+                MessageBox.Show("Number should be a minimum of 11 digits.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -207,8 +207,9 @@ namespace Cineverse
 
                 if (reader.HasRows)
                 {
-                    MessageBox.Show("Username Already Exists.");
-                    txt_username.Text = "Username*";
+                    MessageBox.Show("Username Already Exists.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_username.Text = "Username";
+                    txt_username.Focus();
                     txt_username.ForeColor = Color.Silver;
                 }
             }
@@ -217,11 +218,7 @@ namespace Cineverse
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
-        
             }
-
-
-            
 
         private void txt_password_Enter(object sender, EventArgs e)
         {
@@ -461,6 +458,10 @@ namespace Cineverse
 
                             txt_password.Text = "Password";
                             txt_confirmPassword.Text = "Confirm Password";
+
+                            Login login = new Login();
+                            login.Show();
+                            this.Close();
                         }
                         catch (Exception ex)
                         {
@@ -482,9 +483,7 @@ namespace Cineverse
                
             }
 
-            Login login = new Login();
-            login.Show();
-            this.Close();
+           
         }
 
         static bool IsValidPassword(string password)
