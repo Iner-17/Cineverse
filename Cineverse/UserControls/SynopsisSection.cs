@@ -16,9 +16,16 @@ namespace Cineverse.UserControls
     public partial class SynopsisSection : UserControl
     {
 
-        public string TitleFromMovieSection { get; set; }
         public static ComboBox GlobalComboBox { get; set; }
-        public static Label GlobalLabel { get; set; }
+        public static Label GlobalLabelTitle { get; set; }
+        public static Label GlobalLabelRating { get; set; }
+        public static Label GlobalLabelDuration { get; set; }
+        public static Label GlobalLabelGenre { get; set; }
+        public static Label GlobalLabelPrice { get; set; }
+        public static Label GlobalLabelDescription { get; set; }
+
+        public static PictureBox GlobalPictureBox { get; set; }
+
         public SynopsisSection()
         {
             InitializeComponent();
@@ -47,8 +54,14 @@ namespace Cineverse.UserControls
             }
             finally { conn.Close(); }
 
-            GlobalLabel = lbl_Title1;
+            GlobalLabelTitle = lbl_Title1;
+            GlobalLabelRating = lbl_rating;
+            GlobalLabelDuration = lbl_duration1;
+            GlobalLabelGenre = lbl_genre1;
+            GlobalLabelPrice = lbl_price1;
+            GlobalLabelDescription = lbl_description;
             GlobalComboBox = cbo_titleLists;
+            GlobalPictureBox = pb_Poster1;
 
             try
             {

@@ -229,9 +229,19 @@ namespace Cineverse
         {
             AddMovie addMovie = new AddMovie();
 
-            Dashboard dashboard = new Dashboard();
-            dashboard.btn_movies_Click(this, EventArgs.Empty);
+            Dashboard dashboard = Application.OpenForms.OfType<Dashboard>().FirstOrDefault();
+
+            if (dashboard != null)
+            {
+                // Close the other form if it's open
+                dashboard.Close();
+            }
+
+            // Open the other form
+            dashboard = new Dashboard();
+            dashboard.navigateToMovies();
             dashboard.Show();
+
             this.Close();
         }
 

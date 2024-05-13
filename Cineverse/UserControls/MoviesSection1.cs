@@ -418,7 +418,7 @@ namespace Cineverse
                     finally { conn.Close(); }
                 }
             }
-
+          
         }
 
         private void reset()
@@ -691,12 +691,57 @@ namespace Cineverse
 
         private void navigateSynopsis(string movieTitle)
         {
-            Dashboard dashboard = new Dashboard();
+
+            MySqlConnection conn = DBConnection.getConnection();
+            string title = "",cinemaRating = "", duration = "",description = "", genre = "", price = "";
+
 
             if (movieTitle != "Title")
             {
-                SynopsisSection.GlobalLabel.Text = movieTitle;
-                SynopsisSection.GlobalComboBox.Text = movieTitle;
+                try
+                {
+                    conn.Open();
+                    string getMovieData = "SELECT title, price, genre, duration, description, photo, movie_rating FROM movies WHERE title = @Title;";
+                    MySqlCommand cmd = new MySqlCommand(getMovieData, conn);
+                    cmd.Parameters.AddWithValue("Title", movieTitle);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        title = reader["title"].ToString();
+                        cinemaRating = reader["movie_rating"].ToString();
+                        duration = reader["duration"].ToString();
+                        description = reader["description"].ToString();
+                        genre = reader["genre"].ToString();
+                        price = reader["price"].ToString();
+
+                        byte[] imageData = (byte[])reader["photo"];
+
+                        if (imageData != null && imageData.Length > 0)
+                        {
+                            MemoryStream ms = new MemoryStream(imageData);
+                            SynopsisSection.GlobalPictureBox.Image = Image.FromStream(ms);
+                        }
+                        else
+                        {
+                            SynopsisSection.GlobalPictureBox.Image = null;
+                        }
+                    }
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
+                SynopsisSection.GlobalLabelTitle.Text = title;
+                SynopsisSection.GlobalLabelRating.Text = cinemaRating;
+                SynopsisSection.GlobalLabelDuration.Text = duration;
+                SynopsisSection.GlobalLabelDescription.Text = description;
+                SynopsisSection.GlobalLabelGenre.Text = genre;
+                SynopsisSection.GlobalLabelPrice.Text = price;
+
+                SynopsisSection.GlobalComboBox.Text = title;
 
                 Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
                 dashboard1.navigateToSynopsis();
