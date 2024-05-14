@@ -104,7 +104,7 @@
             this.lbl_forgotPass.AutoSize = true;
             this.lbl_forgotPass.BackColor = System.Drawing.Color.Transparent;
             this.lbl_forgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_forgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_forgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_forgotPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.lbl_forgotPass.Location = new System.Drawing.Point(221, 470);
             this.lbl_forgotPass.Name = "lbl_forgotPass";
@@ -112,8 +112,6 @@
             this.lbl_forgotPass.TabIndex = 10;
             this.lbl_forgotPass.Text = "Forgot Password?";
             this.lbl_forgotPass.Click += new System.EventHandler(this.lbl_forgotPass_Click);
-            this.lbl_forgotPass.MouseEnter += new System.EventHandler(this.lbl_forgotPass_MouseEnter);
-            this.lbl_forgotPass.MouseLeave += new System.EventHandler(this.lbl_forgotPass_MouseLeave);
             // 
             // btn_hide
             // 

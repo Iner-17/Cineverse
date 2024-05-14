@@ -43,7 +43,7 @@ namespace Cineverse
             btn_print.ForeColor = Color.White;
         }
 
-        public void passDataToReceiptForm(string title, string genre, string date, string time, string cinema_number, string seatLists)
+        public void passDataToReceiptForm(string title, string genre, string cinema_number, string time, string date, string seatLists)
         {
             movieTitle = title;
 
