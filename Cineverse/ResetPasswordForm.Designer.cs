@@ -38,7 +38,6 @@
             this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.chk_showPass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -55,7 +54,7 @@
             this.btn_confirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.btn_confirm.Font = new System.Drawing.Font("Montserrat", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirm.ForeColor = System.Drawing.Color.White;
-            this.btn_confirm.Location = new System.Drawing.Point(175, 469);
+            this.btn_confirm.Location = new System.Drawing.Point(175, 448);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(135, 35);
             this.btn_confirm.TabIndex = 14;
@@ -75,7 +74,7 @@
             this.txt_confirmPass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_confirmPass.ForeColor = System.Drawing.Color.Silver;
             this.txt_confirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_confirmPass.Location = new System.Drawing.Point(122, 363);
+            this.txt_confirmPass.Location = new System.Drawing.Point(122, 344);
             this.txt_confirmPass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_confirmPass.Name = "txt_confirmPass";
             this.txt_confirmPass.PasswordChar = '\0';
@@ -110,7 +109,7 @@
             this.txt_newPass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_newPass.ForeColor = System.Drawing.Color.Silver;
             this.txt_newPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_newPass.Location = new System.Drawing.Point(122, 311);
+            this.txt_newPass.Location = new System.Drawing.Point(122, 292);
             this.txt_newPass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_newPass.Name = "txt_newPass";
             this.txt_newPass.PasswordChar = '\0';
@@ -154,7 +153,7 @@
             this.btn_cancel.FillColor = System.Drawing.Color.LightGray;
             this.btn_cancel.Font = new System.Drawing.Font("Montserrat", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancel.Location = new System.Drawing.Point(328, 469);
+            this.btn_cancel.Location = new System.Drawing.Point(328, 448);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(135, 35);
             this.btn_cancel.TabIndex = 15;
@@ -165,7 +164,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(89, 170);
+            this.label1.Location = new System.Drawing.Point(89, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(462, 64);
             this.label1.TabIndex = 21;
@@ -178,30 +177,18 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(88, 134);
+            this.label3.Location = new System.Drawing.Point(88, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 25);
             this.label3.TabIndex = 22;
             this.label3.Text = "Hi, Bianca! ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(202, 260);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(235, 23);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "biancatutri@gmail.com";
             // 
             // chk_showPass
             // 
             this.chk_showPass.AutoSize = true;
             this.chk_showPass.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_showPass.ForeColor = System.Drawing.Color.White;
-            this.chk_showPass.Location = new System.Drawing.Point(122, 410);
+            this.chk_showPass.Location = new System.Drawing.Point(122, 391);
             this.chk_showPass.Name = "chk_showPass";
             this.chk_showPass.Size = new System.Drawing.Size(150, 23);
             this.chk_showPass.TabIndex = 24;
@@ -215,7 +202,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(638, 552);
             this.Controls.Add(this.chk_showPass);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_cancel);
@@ -246,7 +232,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chk_showPass;
     }
 }

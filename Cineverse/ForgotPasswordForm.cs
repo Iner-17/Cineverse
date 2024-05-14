@@ -7,8 +7,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Cineverse
 {
@@ -29,7 +31,20 @@ namespace Cineverse
 
             MailMessage message = new MailMessage();
             message.From = new MailAddress("cineverse24@gmail.com");
-            message.To.Add(txt_email.Text);
+            //email validation
+            Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
+            + "@"
+                        + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
+            Match match = regex.Match(txt_email.Text);
+            if (match.Success)
+            {
+                message.To.Add(txt_email.Text);
+
+            } else
+            {
+                MessageBox.Show("Invalid Email.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             message.Subject = "One Time Password (OTP)";
             message.Body = "Your OTP is: " + otp;
 
@@ -47,7 +62,6 @@ namespace Cineverse
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
             }
         }
 
