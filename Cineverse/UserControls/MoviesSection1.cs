@@ -20,7 +20,7 @@ namespace Cineverse
     {
         private string username;
         public string Title { get; set; }
-        
+
         public MoviesSection1()
         {
             InitializeComponent();
@@ -821,6 +821,9 @@ namespace Cineverse
 
                         reset();
                         UpdateMovieList();
+
+                        DashboardSection dashboardSection = new DashboardSection();
+                        dashboardSection.displayMovieDashboard();
                     }
                     catch (Exception ex)
                     {
@@ -840,6 +843,7 @@ namespace Cineverse
                     // Open the other form
                     dashboard = new Dashboard();
                     dashboard.btn_movies_Click(this, EventArgs.Empty);
+   
                     dashboard.Show();
                 } 
         
@@ -847,7 +851,7 @@ namespace Cineverse
             {
                 return;
             }
-               
+                
             }
         }
 
@@ -861,7 +865,6 @@ namespace Cineverse
         {
 
         }
-
         private void label1_MouseLeave(object sender, EventArgs e)
         {
 

@@ -22,18 +22,19 @@ namespace Cineverse
         private bool scheduleisActive = false;
         private bool bookingisActive = false;
         private bool userisActive = false;
+        
         public Dashboard()
         {
             InitializeComponent();
-
             InitializeNavigationControl();
-            
         }
 
         private void Btn_movies_MouseLeave(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
+
+
 
         private void InitializeNavigationControl()
         {
@@ -79,6 +80,9 @@ namespace Cineverse
             MoviesSection1 moviesSection1 = new MoviesSection1();
             moviesSection1.UpdateMovieList();
         }
+
+
+
 
         private void button6_Click(object sender, EventArgs e)
         {
