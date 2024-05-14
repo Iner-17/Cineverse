@@ -264,6 +264,7 @@ namespace Cineverse
             userisActive = false;
 
             navigationcontrols.Display(0);
+            
         }
         public void btn_movies_Click(object sender, EventArgs e)
         {
@@ -371,5 +372,6 @@ namespace Cineverse
             navigationcontrols.Display(5);
         }
 
+        
     }
 }

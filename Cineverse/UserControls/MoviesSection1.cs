@@ -467,7 +467,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
 
         }
@@ -526,7 +526,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -826,13 +826,27 @@ namespace Cineverse
                     {
                         MessageBox.Show(ex.Message);
                     }
-                    finally { conn.Close(); }
+                    finally { conn.Close(); 
+                    }
+
+                    Dashboard dashboard = Application.OpenForms.OfType<Dashboard>().FirstOrDefault();
+
+                    if (dashboard != null)
+                    {
+                        // Close the other form if it's open
+                        dashboard.Close();
+                    }
+
+                    // Open the other form
+                    dashboard = new Dashboard();
+                    dashboard.btn_movies_Click(this, EventArgs.Empty);
+                    dashboard.Show();
                 } 
         
-                else
-                {
-                    return;
-                }
+            else
+            {
+                return;
+            }
                
             }
         }
@@ -852,5 +866,7 @@ namespace Cineverse
         {
 
         }
+
+
     }
 }

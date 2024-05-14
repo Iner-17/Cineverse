@@ -346,9 +346,9 @@ namespace Cineverse
             Dashboard dashboard = new Dashboard();
             
 
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            Dashboard dashboard1 = new Dashboard();
             dashboard1.btn_movies_Click(this, EventArgs.Empty);
-            dashboard1.Show();
+            dashboard1.ShowDialog();
             this.Close();
         }
 

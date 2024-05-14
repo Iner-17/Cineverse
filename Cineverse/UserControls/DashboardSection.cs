@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Cineverse.Properties;
+using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -114,6 +116,13 @@ namespace Cineverse
                         Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                         Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
                         Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+                    } else
+                    {
+                        lbl_title.Text = "Title";
+                        pb_poster.Image = Properties.Resources.PosterPlaceholder1;
+                        Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = "Duration";
+                        Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = "Genre";
+                        Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "Price";
                     }
                 }
 
@@ -127,7 +136,7 @@ namespace Cineverse
 
             
         }
-        private void UpdateBookings()
+        public void UpdateBookings()
         {
 
             DateTime dateTime = DateTime.UtcNow.Date;

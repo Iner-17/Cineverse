@@ -148,11 +148,13 @@ namespace Cineverse
 
             // Open the other form
             dashboard = new Dashboard();
-            dashboard.navigateToMovies();
+            dashboard.btn_movies_Click(this, EventArgs.Empty);
+            
             dashboard.Show();
-
             this.Close();
+
         }
 
+       
     }
 }

@@ -25,8 +25,8 @@ namespace Cineverse
 
         private void btn_backToDashboard_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.btn_dashboard_Click(this, EventArgs.Empty);
+            Dashboard dashboard1 = new Dashboard();
+            //dashboard1.btn_dashboard_Click(this, EventArgs.Empty);
             dashboard1.Show();
             ((Form)this.TopLevelControl).Close();
         }

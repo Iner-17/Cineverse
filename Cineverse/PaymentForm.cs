@@ -244,6 +244,9 @@ namespace Cineverse
             BookingSection booking = new BookingSection();
             booking.BookingSection_Load(this, EventArgs.Empty);
 
+            DashboardSection dashboardSection = new DashboardSection();
+            dashboardSection.UpdateBookings();
+
         }
 
         private int dotCount = 0;
