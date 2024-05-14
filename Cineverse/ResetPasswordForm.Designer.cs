@@ -77,7 +77,7 @@
             this.txt_confirmPass.Location = new System.Drawing.Point(122, 344);
             this.txt_confirmPass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_confirmPass.Name = "txt_confirmPass";
-            this.txt_confirmPass.PasswordChar = '\0';
+            this.txt_confirmPass.PasswordChar = '●';
             this.txt_confirmPass.PlaceholderText = "Confirm Password";
             this.txt_confirmPass.SelectedText = "";
             this.txt_confirmPass.Size = new System.Drawing.Size(394, 40);
@@ -112,7 +112,7 @@
             this.txt_newPass.Location = new System.Drawing.Point(122, 292);
             this.txt_newPass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_newPass.Name = "txt_newPass";
-            this.txt_newPass.PasswordChar = '\0';
+            this.txt_newPass.PasswordChar = '●';
             this.txt_newPass.PlaceholderText = "New Password";
             this.txt_newPass.SelectedText = "";
             this.txt_newPass.Size = new System.Drawing.Size(394, 40);
@@ -186,14 +186,18 @@
             // chk_showPass
             // 
             this.chk_showPass.AutoSize = true;
+            this.chk_showPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk_showPass.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_showPass.ForeColor = System.Drawing.Color.White;
+            this.chk_showPass.ForeColor = System.Drawing.SystemColors.Window;
             this.chk_showPass.Location = new System.Drawing.Point(122, 391);
             this.chk_showPass.Name = "chk_showPass";
             this.chk_showPass.Size = new System.Drawing.Size(150, 23);
             this.chk_showPass.TabIndex = 24;
             this.chk_showPass.Text = "Show Password";
             this.chk_showPass.UseVisualStyleBackColor = true;
+            this.chk_showPass.CheckedChanged += new System.EventHandler(this.chk_showPass_CheckedChanged);
+            this.chk_showPass.MouseEnter += new System.EventHandler(this.chk_showPass_MouseEnter);
+            this.chk_showPass.MouseLeave += new System.EventHandler(this.chk_showPass_MouseLeave);
             // 
             // ResetPasswordForm
             // 

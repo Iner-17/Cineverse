@@ -238,8 +238,9 @@ namespace Cineverse
 
         private void lbl_forgotPass_Click(object sender, EventArgs e)
         {
-            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
+            ResetPasswordForm forgotPasswordForm = new ResetPasswordForm();
             forgotPasswordForm.ShowDialog();
         }
+
     }
 }
