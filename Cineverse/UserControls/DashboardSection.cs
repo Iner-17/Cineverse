@@ -243,7 +243,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -262,7 +262,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -281,7 +281,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 

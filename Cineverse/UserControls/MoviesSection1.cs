@@ -487,7 +487,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
             
         }
@@ -507,7 +507,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -545,7 +545,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -564,7 +564,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -583,7 +583,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -602,7 +602,7 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -621,7 +621,64 @@ namespace Cineverse
 
                 seatsForm.Show();
 
-                ((Form)this.TopLevelControl).Hide();
+                ((Form)this.TopLevelControl).Close();
+            }
+        }
+
+        private void btn_gt10_Click(object sender, EventArgs e)
+        {
+            if (lbl_title10.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title10.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Close();
+            }
+        }
+
+        private void btn_gt11_Click(object sender, EventArgs e)
+        {
+            if (lbl_title11.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title11.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Close();
+            }
+        }
+
+        private void btn_gt12_Click(object sender, EventArgs e)
+        {
+            if (lbl_title12.Text.Equals("Title"))
+            {
+                return;
+            }
+            else
+            {
+                Title = lbl_title12.Text;
+
+                Seats seatsForm = new Seats(username);
+                seatsForm.TitleFromMovieSection = Title;
+
+                seatsForm.Show();
+
+                ((Form)this.TopLevelControl).Close();
             }
         }
 
@@ -789,6 +846,21 @@ namespace Cineverse
             deleteButton(lbl_title9.Text);
         }
 
+        private void panel13_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title10.Text);
+        }
+
+        private void panel12_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title11.Text);
+        }
+
+        private void panel11_Click(object sender, EventArgs e)
+        {
+            deleteButton(lbl_title12.Text);
+        }
+
         private void deleteButton(string movieTitle)
         {
 
@@ -870,6 +942,6 @@ namespace Cineverse
 
         }
 
-
+       
     }
 }

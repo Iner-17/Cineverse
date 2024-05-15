@@ -77,7 +77,7 @@
             // dtp_time
             // 
             this.dtp_time.Checked = false;
-            this.dtp_time.CustomFormat = "HH:mm ";
+            this.dtp_time.CustomFormat = "HH:mm";
             this.dtp_time.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_time.Location = new System.Drawing.Point(97, 402);
@@ -180,6 +180,7 @@
             this.dtp_date.Size = new System.Drawing.Size(224, 30);
             this.dtp_date.TabIndex = 43;
             this.dtp_date.Value = new System.DateTime(2024, 4, 26, 0, 0, 0, 0);
+            this.dtp_date.ValueChanged += new System.EventHandler(this.dtp_date_ValueChanged);
             // 
             // label7
             // 
@@ -440,7 +441,6 @@
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "AddScreening";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddScreening";

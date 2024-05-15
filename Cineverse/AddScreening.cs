@@ -28,6 +28,47 @@ namespace Cineverse
 
         }
 
+        private void currentDateScreenings()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+
+                string getListquery = "SELECT title as Title, start_time as Time, duration as xDuration FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date = @SelectedDate;";
+                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                getListcmd.Parameters.AddWithValue("SelectedDate", dtp_date.Text);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+
+                dt.Columns.Add("Duration", typeof(string));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int duration = Convert.ToInt32(row["xDuration"]);
+                    int hours = duration / 60;
+                    int minutes = duration % 60;
+                    row["Duration"] = $"{hours}hr {minutes}mins";
+                }
+
+                dt.Columns.Remove("xDuration");
+
+                dgv_booking.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
+        }
+        private void dtp_date_ValueChanged(object sender, EventArgs e)
+        {
+            currentDateScreenings();
+        }
+
         private void btn_addDate_Click_1(object sender, EventArgs e)
         {
             if (dtp_date.Value < DateTime.Today)
@@ -61,6 +102,8 @@ namespace Cineverse
                 cmb_timeAdded.Items.Add(dtp_time.Text + " PM");
             }
         }
+
+        
 
         private void btn_addScreening_Click(object sender, EventArgs e)
         {
@@ -160,9 +203,9 @@ namespace Cineverse
             dashboard.btn_movies_Click(this, EventArgs.Empty);
             dashboard.Show();
             this.Close();
-
-
         }
+
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -367,5 +410,7 @@ namespace Cineverse
                 return;
             }
         }
+
+        
     }
 }

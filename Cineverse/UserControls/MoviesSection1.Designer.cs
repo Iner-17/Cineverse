@@ -1270,6 +1270,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(33, 30);
             this.panel11.TabIndex = 136;
+            this.panel11.Click += new System.EventHandler(this.panel11_Click);
             // 
             // panel12
             // 
@@ -1282,6 +1283,7 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(33, 30);
             this.panel12.TabIndex = 135;
+            this.panel12.Click += new System.EventHandler(this.panel12_Click);
             // 
             // panel13
             // 
@@ -1294,6 +1296,7 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(33, 30);
             this.panel13.TabIndex = 134;
+            this.panel13.Click += new System.EventHandler(this.panel13_Click);
             // 
             // label15
             // 
@@ -1378,6 +1381,7 @@
             this.btn_gt12.TabIndex = 127;
             this.btn_gt12.Text = "Get Tickets";
             this.btn_gt12.UseVisualStyleBackColor = false;
+            this.btn_gt12.Click += new System.EventHandler(this.btn_gt12_Click);
             this.btn_gt12.MouseEnter += new System.EventHandler(this.btn_gt12_MouseEnter);
             this.btn_gt12.MouseLeave += new System.EventHandler(this.btn_gt12_MouseLeave);
             // 
@@ -1440,6 +1444,7 @@
             this.btn_gt11.TabIndex = 122;
             this.btn_gt11.Text = "Get Tickets";
             this.btn_gt11.UseVisualStyleBackColor = false;
+            this.btn_gt11.Click += new System.EventHandler(this.btn_gt11_Click);
             this.btn_gt11.MouseEnter += new System.EventHandler(this.btn_gt11_MouseEnter);
             this.btn_gt11.MouseLeave += new System.EventHandler(this.btn_gt11_MouseLeave);
             // 
@@ -1502,6 +1507,7 @@
             this.btn_gt10.TabIndex = 117;
             this.btn_gt10.Text = "Get Tickets";
             this.btn_gt10.UseVisualStyleBackColor = false;
+            this.btn_gt10.Click += new System.EventHandler(this.btn_gt10_Click);
             this.btn_gt10.MouseEnter += new System.EventHandler(this.btn_gt10_MouseEnter);
             this.btn_gt10.MouseLeave += new System.EventHandler(this.btn_gt10_MouseLeave);
             // 
@@ -1721,7 +1727,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1097, 814);
+            this.Size = new System.Drawing.Size(1080, 797);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
