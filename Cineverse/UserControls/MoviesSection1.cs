@@ -816,6 +816,21 @@ namespace Cineverse
             navigateSynopsis(lbl_title9.Text);
         }
 
+        private void synopsis10_Click(object sender, EventArgs e)
+        {
+            navigateSynopsis(lbl_title10.Text);
+        }
+
+        private void synopsis11_Click(object sender, EventArgs e)
+        {
+            navigateSynopsis(lbl_title11.Text);
+        }
+
+        private void synopsis12_Click(object sender, EventArgs e)
+        {
+            navigateSynopsis(lbl_title12.Text);
+        }
+
         private void navigateSynopsis(string movieTitle)
         {
 
@@ -1010,5 +1025,7 @@ namespace Cineverse
                 
             }
         }
+
+        
     }
 }

@@ -37,7 +37,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.user_firstName = new System.Windows.Forms.Label();
             this.chk_showPass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -171,17 +171,17 @@
             this.label1.Text = "Create a new password that is at least 8 characters long.\r\nA strong password is a" +
     " combination of letters, numbers, and symbols.";
             // 
-            // label3
+            // user_firstName
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(88, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 25);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Hi, Bianca! ";
+            this.user_firstName.AutoSize = true;
+            this.user_firstName.BackColor = System.Drawing.Color.Transparent;
+            this.user_firstName.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_firstName.ForeColor = System.Drawing.Color.White;
+            this.user_firstName.Location = new System.Drawing.Point(88, 157);
+            this.user_firstName.Name = "user_firstName";
+            this.user_firstName.Size = new System.Drawing.Size(128, 25);
+            this.user_firstName.TabIndex = 22;
+            this.user_firstName.Text = "Hi, Bianca! ";
             // 
             // chk_showPass
             // 
@@ -191,7 +191,7 @@
             this.chk_showPass.ForeColor = System.Drawing.SystemColors.Window;
             this.chk_showPass.Location = new System.Drawing.Point(122, 391);
             this.chk_showPass.Name = "chk_showPass";
-            this.chk_showPass.Size = new System.Drawing.Size(150, 23);
+            this.chk_showPass.Size = new System.Drawing.Size(146, 25);
             this.chk_showPass.TabIndex = 24;
             this.chk_showPass.Text = "Show Password";
             this.chk_showPass.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(638, 552);
             this.Controls.Add(this.chk_showPass);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.user_firstName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_exit);
@@ -220,6 +220,7 @@
             this.Name = "ResetPasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResetPasswordForm";
+            this.Load += new System.EventHandler(this.ResetPasswordForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +236,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_newPass;
         private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label user_firstName;
         private System.Windows.Forms.CheckBox chk_showPass;
     }
 }
