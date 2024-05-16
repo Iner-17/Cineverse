@@ -166,6 +166,7 @@
             this.btn_statistics.TabIndex = 22;
             this.btn_statistics.Text = "View Statistics";
             this.btn_statistics.UseVisualStyleBackColor = false;
+            this.btn_statistics.Click += new System.EventHandler(this.btn_statistics_Click);
             this.btn_statistics.MouseEnter += new System.EventHandler(this.btn_statistics_MouseEnter);
             this.btn_statistics.MouseLeave += new System.EventHandler(this.btn_statistics_MouseLeave);
             // 

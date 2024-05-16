@@ -370,5 +370,12 @@ namespace Cineverse
         {
 
         }
+
+        private void btn_statistics_Click(object sender, EventArgs e)
+        {
+            StatisticsForm statisticsForm = new StatisticsForm();
+            statisticsForm.Show();
+            ((Form)this.TopLevelControl).Close();
+        }
     }
 }
