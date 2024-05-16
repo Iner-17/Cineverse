@@ -75,7 +75,7 @@ namespace Cineverse
                     saveMoviecmd.Parameters.AddWithValue("@Rating", cbo_rating.Text);
                     saveMoviecmd.Parameters.AddWithValue("@CinemaNum", cbo_cinemaNum.Text);
                     
-
+                        // SAVE IMAGE TO DATABSE
                         byte[] ImageData;
                         FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
                         BinaryReader br = new BinaryReader(fs);
@@ -109,8 +109,8 @@ namespace Cineverse
             }
             
         }
-   
-        private void btn_uploadImage_Click(object sender, EventArgs e)
+           // UPLOAD IMAGE
+        private void btn_uploadImage_Click(object sender, EventArgs e) 
         {
             try
             {

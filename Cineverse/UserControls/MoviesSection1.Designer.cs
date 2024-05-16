@@ -67,7 +67,6 @@
             this.lbl_duration7 = new System.Windows.Forms.Label();
             this.lbl_title7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_backk = new System.Windows.Forms.Label();
             this.lbl_price1 = new System.Windows.Forms.Label();
             this.lbl_price2 = new System.Windows.Forms.Label();
             this.lbl_price3 = new System.Windows.Forms.Label();
@@ -86,7 +85,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.delete1 = new System.Windows.Forms.Panel();
             this.pb_Poster9 = new System.Windows.Forms.PictureBox();
             this.pb_Poster8 = new System.Windows.Forms.PictureBox();
             this.pb_Poster7 = new System.Windows.Forms.PictureBox();
@@ -96,8 +95,8 @@
             this.pb_Poster3 = new System.Windows.Forms.PictureBox();
             this.pb_Poster2 = new System.Windows.Forms.PictureBox();
             this.pb_Poster1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.delete2 = new System.Windows.Forms.Panel();
+            this.delete3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -144,6 +143,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster7)).BeginInit();
@@ -178,9 +178,9 @@
             this.btn_addMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addMovies.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addMovies.ForeColor = System.Drawing.Color.White;
-            this.btn_addMovies.Location = new System.Drawing.Point(789, 21);
+            this.btn_addMovies.Location = new System.Drawing.Point(986, 25);
             this.btn_addMovies.Name = "btn_addMovies";
-            this.btn_addMovies.Size = new System.Drawing.Size(196, 42);
+            this.btn_addMovies.Size = new System.Drawing.Size(145, 42);
             this.btn_addMovies.TabIndex = 14;
             this.btn_addMovies.Text = "Add Movies";
             this.btn_addMovies.UseVisualStyleBackColor = false;
@@ -202,6 +202,7 @@
             this.btn_gt1.TabIndex = 21;
             this.btn_gt1.Text = "Get Tickets";
             this.btn_gt1.UseVisualStyleBackColor = false;
+            this.btn_gt1.Visible = false;
             this.btn_gt1.Click += new System.EventHandler(this.btn_gt1_Click);
             this.btn_gt1.MouseEnter += new System.EventHandler(this.btn_gt1_MouseEnter);
             this.btn_gt1.MouseLeave += new System.EventHandler(this.btn_gt1_MouseLeave);
@@ -217,6 +218,7 @@
             this.lbl_genre1.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre1.TabIndex = 20;
             this.lbl_genre1.Text = "Genre";
+            this.lbl_genre1.Visible = false;
             // 
             // lbl_duration1
             // 
@@ -229,6 +231,7 @@
             this.lbl_duration1.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration1.TabIndex = 18;
             this.lbl_duration1.Text = "Duration";
+            this.lbl_duration1.Visible = false;
             // 
             // lbl_title1
             // 
@@ -240,6 +243,7 @@
             this.lbl_title1.Size = new System.Drawing.Size(154, 58);
             this.lbl_title1.TabIndex = 19;
             this.lbl_title1.Text = "Title";
+            this.lbl_title1.Visible = false;
             // 
             // btn_gt2
             // 
@@ -255,6 +259,7 @@
             this.btn_gt2.TabIndex = 26;
             this.btn_gt2.Text = "Get Tickets";
             this.btn_gt2.UseVisualStyleBackColor = false;
+            this.btn_gt2.Visible = false;
             this.btn_gt2.Click += new System.EventHandler(this.btn_gt2_Click);
             this.btn_gt2.MouseEnter += new System.EventHandler(this.btn_gt2_MouseEnter);
             this.btn_gt2.MouseLeave += new System.EventHandler(this.btn_gt2_MouseLeave);
@@ -270,6 +275,7 @@
             this.lbl_genre2.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre2.TabIndex = 25;
             this.lbl_genre2.Text = "Genre";
+            this.lbl_genre2.Visible = false;
             // 
             // lbl_duration2
             // 
@@ -282,6 +288,7 @@
             this.lbl_duration2.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration2.TabIndex = 23;
             this.lbl_duration2.Text = "Duration";
+            this.lbl_duration2.Visible = false;
             // 
             // lbl_title2
             // 
@@ -293,6 +300,7 @@
             this.lbl_title2.Size = new System.Drawing.Size(155, 58);
             this.lbl_title2.TabIndex = 24;
             this.lbl_title2.Text = "Title";
+            this.lbl_title2.Visible = false;
             // 
             // btn_gt3
             // 
@@ -308,6 +316,7 @@
             this.btn_gt3.TabIndex = 31;
             this.btn_gt3.Text = "Get Tickets";
             this.btn_gt3.UseVisualStyleBackColor = false;
+            this.btn_gt3.Visible = false;
             this.btn_gt3.Click += new System.EventHandler(this.btn_gt3_Click);
             this.btn_gt3.MouseEnter += new System.EventHandler(this.btn_gt3_MouseEnter);
             this.btn_gt3.MouseLeave += new System.EventHandler(this.btn_gt3_MouseLeave);
@@ -323,6 +332,7 @@
             this.lbl_genre3.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre3.TabIndex = 30;
             this.lbl_genre3.Text = "Genre";
+            this.lbl_genre3.Visible = false;
             // 
             // lbl_duration3
             // 
@@ -335,6 +345,7 @@
             this.lbl_duration3.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration3.TabIndex = 28;
             this.lbl_duration3.Text = "Duration";
+            this.lbl_duration3.Visible = false;
             // 
             // lbl_title3
             // 
@@ -346,6 +357,7 @@
             this.lbl_title3.Size = new System.Drawing.Size(154, 58);
             this.lbl_title3.TabIndex = 29;
             this.lbl_title3.Text = "Title";
+            this.lbl_title3.Visible = false;
             // 
             // btn_gt6
             // 
@@ -361,6 +373,7 @@
             this.btn_gt6.TabIndex = 46;
             this.btn_gt6.Text = "Get Tickets";
             this.btn_gt6.UseVisualStyleBackColor = false;
+            this.btn_gt6.Visible = false;
             this.btn_gt6.Click += new System.EventHandler(this.btn_gt6_Click);
             this.btn_gt6.MouseEnter += new System.EventHandler(this.btn_gt6_MouseEnter);
             this.btn_gt6.MouseLeave += new System.EventHandler(this.btn_gt6_MouseLeave);
@@ -376,6 +389,7 @@
             this.lbl_genre6.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre6.TabIndex = 45;
             this.lbl_genre6.Text = "Genre";
+            this.lbl_genre6.Visible = false;
             // 
             // lbl_duration6
             // 
@@ -388,6 +402,7 @@
             this.lbl_duration6.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration6.TabIndex = 43;
             this.lbl_duration6.Text = "Duration";
+            this.lbl_duration6.Visible = false;
             // 
             // lbl_title6
             // 
@@ -399,6 +414,7 @@
             this.lbl_title6.Size = new System.Drawing.Size(153, 58);
             this.lbl_title6.TabIndex = 44;
             this.lbl_title6.Text = "Title";
+            this.lbl_title6.Visible = false;
             // 
             // btn_gt5
             // 
@@ -414,6 +430,7 @@
             this.btn_gt5.TabIndex = 41;
             this.btn_gt5.Text = "Get Tickets";
             this.btn_gt5.UseVisualStyleBackColor = false;
+            this.btn_gt5.Visible = false;
             this.btn_gt5.Click += new System.EventHandler(this.btn_gt5_Click);
             this.btn_gt5.MouseEnter += new System.EventHandler(this.btn_gt5_MouseEnter);
             this.btn_gt5.MouseLeave += new System.EventHandler(this.btn_gt5_MouseLeave);
@@ -429,6 +446,7 @@
             this.lbl_genre5.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre5.TabIndex = 40;
             this.lbl_genre5.Text = "Genre";
+            this.lbl_genre5.Visible = false;
             // 
             // lbl_duration5
             // 
@@ -441,6 +459,7 @@
             this.lbl_duration5.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration5.TabIndex = 38;
             this.lbl_duration5.Text = "Duration";
+            this.lbl_duration5.Visible = false;
             // 
             // lbl_title5
             // 
@@ -452,6 +471,7 @@
             this.lbl_title5.Size = new System.Drawing.Size(154, 58);
             this.lbl_title5.TabIndex = 39;
             this.lbl_title5.Text = "Title";
+            this.lbl_title5.Visible = false;
             // 
             // btn_gt4
             // 
@@ -467,6 +487,7 @@
             this.btn_gt4.TabIndex = 36;
             this.btn_gt4.Text = "Get Tickets";
             this.btn_gt4.UseVisualStyleBackColor = false;
+            this.btn_gt4.Visible = false;
             this.btn_gt4.Click += new System.EventHandler(this.btn_gt4_Click);
             this.btn_gt4.MouseEnter += new System.EventHandler(this.btn_gt4_MouseEnter);
             this.btn_gt4.MouseLeave += new System.EventHandler(this.btn_gt4_MouseLeave);
@@ -482,6 +503,7 @@
             this.lbl_genre4.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre4.TabIndex = 35;
             this.lbl_genre4.Text = "Genre";
+            this.lbl_genre4.Visible = false;
             // 
             // lbl_duration4
             // 
@@ -494,6 +516,7 @@
             this.lbl_duration4.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration4.TabIndex = 33;
             this.lbl_duration4.Text = "Duration";
+            this.lbl_duration4.Visible = false;
             // 
             // lbl_title4
             // 
@@ -506,6 +529,7 @@
             this.lbl_title4.Size = new System.Drawing.Size(153, 58);
             this.lbl_title4.TabIndex = 34;
             this.lbl_title4.Text = "Title";
+            this.lbl_title4.Visible = false;
             // 
             // btn_gt9
             // 
@@ -521,6 +545,7 @@
             this.btn_gt9.TabIndex = 61;
             this.btn_gt9.Text = "Get Tickets";
             this.btn_gt9.UseVisualStyleBackColor = false;
+            this.btn_gt9.Visible = false;
             this.btn_gt9.Click += new System.EventHandler(this.btn_gt9_Click);
             this.btn_gt9.MouseEnter += new System.EventHandler(this.btn_gt9_MouseEnter);
             this.btn_gt9.MouseLeave += new System.EventHandler(this.btn_gt9_MouseLeave);
@@ -536,6 +561,7 @@
             this.lbl_genre9.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre9.TabIndex = 60;
             this.lbl_genre9.Text = "Genre";
+            this.lbl_genre9.Visible = false;
             // 
             // lbl_duration9
             // 
@@ -548,6 +574,7 @@
             this.lbl_duration9.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration9.TabIndex = 58;
             this.lbl_duration9.Text = "Duration";
+            this.lbl_duration9.Visible = false;
             // 
             // lbl_title9
             // 
@@ -559,6 +586,7 @@
             this.lbl_title9.Size = new System.Drawing.Size(153, 58);
             this.lbl_title9.TabIndex = 59;
             this.lbl_title9.Text = "Title";
+            this.lbl_title9.Visible = false;
             // 
             // btn_gt8
             // 
@@ -574,6 +602,7 @@
             this.btn_gt8.TabIndex = 56;
             this.btn_gt8.Text = "Get Tickets";
             this.btn_gt8.UseVisualStyleBackColor = false;
+            this.btn_gt8.Visible = false;
             this.btn_gt8.Click += new System.EventHandler(this.btn_gt8_Click);
             this.btn_gt8.MouseEnter += new System.EventHandler(this.btn_gt8_MouseEnter);
             this.btn_gt8.MouseLeave += new System.EventHandler(this.btn_gt8_MouseLeave);
@@ -589,6 +618,7 @@
             this.lbl_genre8.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre8.TabIndex = 55;
             this.lbl_genre8.Text = "Genre";
+            this.lbl_genre8.Visible = false;
             // 
             // lbl_duration8
             // 
@@ -601,6 +631,7 @@
             this.lbl_duration8.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration8.TabIndex = 53;
             this.lbl_duration8.Text = "Duration";
+            this.lbl_duration8.Visible = false;
             // 
             // lbl_title8
             // 
@@ -612,6 +643,7 @@
             this.lbl_title8.Size = new System.Drawing.Size(153, 58);
             this.lbl_title8.TabIndex = 54;
             this.lbl_title8.Text = "Title";
+            this.lbl_title8.Visible = false;
             // 
             // btn_gt7
             // 
@@ -627,6 +659,7 @@
             this.btn_gt7.TabIndex = 51;
             this.btn_gt7.Text = "Get Tickets";
             this.btn_gt7.UseVisualStyleBackColor = false;
+            this.btn_gt7.Visible = false;
             this.btn_gt7.Click += new System.EventHandler(this.btn_gt7_Click);
             this.btn_gt7.MouseEnter += new System.EventHandler(this.btn_gt7_MouseEnter);
             this.btn_gt7.MouseLeave += new System.EventHandler(this.btn_gt7_MouseLeave);
@@ -642,6 +675,7 @@
             this.lbl_genre7.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre7.TabIndex = 50;
             this.lbl_genre7.Text = "Genre";
+            this.lbl_genre7.Visible = false;
             // 
             // lbl_duration7
             // 
@@ -654,6 +688,7 @@
             this.lbl_duration7.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration7.TabIndex = 48;
             this.lbl_duration7.Text = "Duration";
+            this.lbl_duration7.Visible = false;
             // 
             // lbl_title7
             // 
@@ -665,6 +700,7 @@
             this.lbl_title7.Size = new System.Drawing.Size(152, 58);
             this.lbl_title7.TabIndex = 49;
             this.lbl_title7.Text = "Title";
+            this.lbl_title7.Visible = false;
             this.lbl_title7.Click += new System.EventHandler(this.lbl_title7_Click);
             // 
             // panel1
@@ -672,24 +708,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1664);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1144, 39);
+            this.panel1.Size = new System.Drawing.Size(1148, 39);
             this.panel1.TabIndex = 77;
-            // 
-            // btn_backk
-            // 
-            this.btn_backk.AutoSize = true;
-            this.btn_backk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_backk.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_backk.ForeColor = System.Drawing.Color.White;
-            this.btn_backk.Location = new System.Drawing.Point(1054, 27);
-            this.btn_backk.Name = "btn_backk";
-            this.btn_backk.Size = new System.Drawing.Size(46, 19);
-            this.btn_backk.TabIndex = 78;
-            this.btn_backk.Text = "Back";
-            this.btn_backk.Click += new System.EventHandler(this.btn_backk_Click);
-            this.btn_backk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_backk_MouseClick);
-            this.btn_backk.MouseEnter += new System.EventHandler(this.btn_backk_MouseEnter);
-            this.btn_backk.MouseLeave += new System.EventHandler(this.btn_backk_MouseLeave);
+            this.panel1.Visible = false;
             // 
             // lbl_price1
             // 
@@ -702,6 +723,7 @@
             this.lbl_price1.Size = new System.Drawing.Size(60, 23);
             this.lbl_price1.TabIndex = 80;
             this.lbl_price1.Text = "Price";
+            this.lbl_price1.Visible = false;
             this.lbl_price1.Click += new System.EventHandler(this.lbl_price1_Click);
             // 
             // lbl_price2
@@ -715,6 +737,7 @@
             this.lbl_price2.Size = new System.Drawing.Size(60, 23);
             this.lbl_price2.TabIndex = 81;
             this.lbl_price2.Text = "Price";
+            this.lbl_price2.Visible = false;
             // 
             // lbl_price3
             // 
@@ -727,6 +750,7 @@
             this.lbl_price3.Size = new System.Drawing.Size(60, 23);
             this.lbl_price3.TabIndex = 82;
             this.lbl_price3.Text = "Price";
+            this.lbl_price3.Visible = false;
             // 
             // lbl_price4
             // 
@@ -739,6 +763,7 @@
             this.lbl_price4.Size = new System.Drawing.Size(60, 23);
             this.lbl_price4.TabIndex = 83;
             this.lbl_price4.Text = "Price";
+            this.lbl_price4.Visible = false;
             // 
             // lbl_price5
             // 
@@ -751,6 +776,7 @@
             this.lbl_price5.Size = new System.Drawing.Size(60, 23);
             this.lbl_price5.TabIndex = 84;
             this.lbl_price5.Text = "Price";
+            this.lbl_price5.Visible = false;
             // 
             // lbl_price6
             // 
@@ -763,6 +789,7 @@
             this.lbl_price6.Size = new System.Drawing.Size(60, 23);
             this.lbl_price6.TabIndex = 85;
             this.lbl_price6.Text = "Price";
+            this.lbl_price6.Visible = false;
             // 
             // lbl_price7
             // 
@@ -775,6 +802,7 @@
             this.lbl_price7.Size = new System.Drawing.Size(60, 23);
             this.lbl_price7.TabIndex = 86;
             this.lbl_price7.Text = "Price";
+            this.lbl_price7.Visible = false;
             // 
             // lbl_price8
             // 
@@ -787,6 +815,7 @@
             this.lbl_price8.Size = new System.Drawing.Size(60, 23);
             this.lbl_price8.TabIndex = 87;
             this.lbl_price8.Text = "Price";
+            this.lbl_price8.Visible = false;
             // 
             // lbl_price9
             // 
@@ -799,6 +828,7 @@
             this.lbl_price9.Size = new System.Drawing.Size(60, 23);
             this.lbl_price9.TabIndex = 88;
             this.lbl_price9.Text = "Price";
+            this.lbl_price9.Visible = false;
             // 
             // label3
             // 
@@ -810,6 +840,7 @@
             this.label3.Size = new System.Drawing.Size(115, 20);
             this.label3.TabIndex = 89;
             this.label3.Text = "Synopsis";
+            this.label3.Visible = false;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -822,6 +853,7 @@
             this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 90;
             this.label4.Text = "Synopsis";
+            this.label4.Visible = false;
             this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label5
@@ -834,6 +866,7 @@
             this.label5.Size = new System.Drawing.Size(87, 20);
             this.label5.TabIndex = 91;
             this.label5.Text = "Synopsis";
+            this.label5.Visible = false;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
@@ -846,6 +879,7 @@
             this.label6.Size = new System.Drawing.Size(87, 20);
             this.label6.TabIndex = 92;
             this.label6.Text = "Synopsis";
+            this.label6.Visible = false;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
@@ -858,6 +892,7 @@
             this.label7.Size = new System.Drawing.Size(87, 20);
             this.label7.TabIndex = 93;
             this.label7.Text = "Synopsis";
+            this.label7.Visible = false;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
@@ -870,6 +905,7 @@
             this.label8.Size = new System.Drawing.Size(87, 20);
             this.label8.TabIndex = 94;
             this.label8.Text = "Synopsis";
+            this.label8.Visible = false;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
@@ -882,6 +918,7 @@
             this.label9.Size = new System.Drawing.Size(87, 20);
             this.label9.TabIndex = 95;
             this.label9.Text = "Synopsis";
+            this.label9.Visible = false;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
@@ -894,6 +931,7 @@
             this.label10.Size = new System.Drawing.Size(87, 20);
             this.label10.TabIndex = 96;
             this.label10.Text = "Synopsis";
+            this.label10.Visible = false;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
@@ -906,20 +944,22 @@
             this.label11.Size = new System.Drawing.Size(87, 20);
             this.label11.TabIndex = 97;
             this.label11.Text = "Synopsis";
+            this.label11.Visible = false;
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // panel3
+            // delete1
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.ForeColor = System.Drawing.Color.Transparent;
-            this.panel3.Location = new System.Drawing.Point(348, 421);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(33, 30);
-            this.panel3.TabIndex = 99;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            this.delete1.BackColor = System.Drawing.Color.Transparent;
+            this.delete1.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete1.ForeColor = System.Drawing.Color.Transparent;
+            this.delete1.Location = new System.Drawing.Point(348, 421);
+            this.delete1.Name = "delete1";
+            this.delete1.Size = new System.Drawing.Size(33, 30);
+            this.delete1.TabIndex = 99;
+            this.delete1.Visible = false;
+            this.delete1.Click += new System.EventHandler(this.panel3_Click);
             // 
             // pb_Poster9
             // 
@@ -930,6 +970,7 @@
             this.pb_Poster9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster9.TabIndex = 57;
             this.pb_Poster9.TabStop = false;
+            this.pb_Poster9.Visible = false;
             // 
             // pb_Poster8
             // 
@@ -940,6 +981,7 @@
             this.pb_Poster8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster8.TabIndex = 52;
             this.pb_Poster8.TabStop = false;
+            this.pb_Poster8.Visible = false;
             // 
             // pb_Poster7
             // 
@@ -950,6 +992,7 @@
             this.pb_Poster7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster7.TabIndex = 47;
             this.pb_Poster7.TabStop = false;
+            this.pb_Poster7.Visible = false;
             // 
             // pb_Poster6
             // 
@@ -960,6 +1003,7 @@
             this.pb_Poster6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster6.TabIndex = 42;
             this.pb_Poster6.TabStop = false;
+            this.pb_Poster6.Visible = false;
             // 
             // pb_Poster5
             // 
@@ -970,6 +1014,7 @@
             this.pb_Poster5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster5.TabIndex = 37;
             this.pb_Poster5.TabStop = false;
+            this.pb_Poster5.Visible = false;
             // 
             // pb_Poster4
             // 
@@ -980,6 +1025,7 @@
             this.pb_Poster4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster4.TabIndex = 32;
             this.pb_Poster4.TabStop = false;
+            this.pb_Poster4.Visible = false;
             // 
             // pb_Poster3
             // 
@@ -990,6 +1036,7 @@
             this.pb_Poster3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster3.TabIndex = 27;
             this.pb_Poster3.TabStop = false;
+            this.pb_Poster3.Visible = false;
             // 
             // pb_Poster2
             // 
@@ -1000,6 +1047,7 @@
             this.pb_Poster2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster2.TabIndex = 22;
             this.pb_Poster2.TabStop = false;
+            this.pb_Poster2.Visible = false;
             // 
             // pb_Poster1
             // 
@@ -1010,32 +1058,35 @@
             this.pb_Poster1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster1.TabIndex = 15;
             this.pb_Poster1.TabStop = false;
+            this.pb_Poster1.Visible = false;
             // 
-            // panel2
+            // delete2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.ForeColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(731, 421);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(33, 30);
-            this.panel2.TabIndex = 100;
-            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.delete2.BackColor = System.Drawing.Color.Transparent;
+            this.delete2.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete2.ForeColor = System.Drawing.Color.Transparent;
+            this.delete2.Location = new System.Drawing.Point(731, 421);
+            this.delete2.Name = "delete2";
+            this.delete2.Size = new System.Drawing.Size(33, 30);
+            this.delete2.TabIndex = 100;
+            this.delete2.Visible = false;
+            this.delete2.Click += new System.EventHandler(this.panel2_Click);
             // 
-            // panel4
+            // delete3
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel4.ForeColor = System.Drawing.Color.Transparent;
-            this.panel4.Location = new System.Drawing.Point(1111, 421);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(33, 30);
-            this.panel4.TabIndex = 101;
-            this.panel4.Click += new System.EventHandler(this.panel4_Click);
+            this.delete3.BackColor = System.Drawing.Color.Transparent;
+            this.delete3.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete3.ForeColor = System.Drawing.Color.Transparent;
+            this.delete3.Location = new System.Drawing.Point(1111, 421);
+            this.delete3.Name = "delete3";
+            this.delete3.Size = new System.Drawing.Size(33, 30);
+            this.delete3.TabIndex = 101;
+            this.delete3.Visible = false;
+            this.delete3.Click += new System.EventHandler(this.panel4_Click);
             // 
             // panel5
             // 
@@ -1048,6 +1099,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(33, 30);
             this.panel5.TabIndex = 100;
+            this.panel5.Visible = false;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
             // panel6
@@ -1061,6 +1113,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(33, 30);
             this.panel6.TabIndex = 101;
+            this.panel6.Visible = false;
             this.panel6.Click += new System.EventHandler(this.panel6_Click);
             // 
             // panel7
@@ -1074,6 +1127,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(33, 30);
             this.panel7.TabIndex = 102;
+            this.panel7.Visible = false;
             this.panel7.Click += new System.EventHandler(this.panel7_Click);
             // 
             // panel8
@@ -1087,6 +1141,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(33, 30);
             this.panel8.TabIndex = 101;
+            this.panel8.Visible = false;
             this.panel8.Click += new System.EventHandler(this.panel8_Click);
             // 
             // panel9
@@ -1100,6 +1155,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(33, 30);
             this.panel9.TabIndex = 102;
+            this.panel9.Visible = false;
             this.panel9.Click += new System.EventHandler(this.panel9_Click);
             // 
             // panel10
@@ -1113,6 +1169,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(33, 30);
             this.panel10.TabIndex = 103;
+            this.panel10.Visible = false;
             this.panel10.Click += new System.EventHandler(this.panel10_Click);
             // 
             // lbl_rating1
@@ -1126,6 +1183,7 @@
             this.lbl_rating1.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating1.TabIndex = 104;
             this.lbl_rating1.Text = "Rating";
+            this.lbl_rating1.Visible = false;
             // 
             // lbl_rating2
             // 
@@ -1138,6 +1196,7 @@
             this.lbl_rating2.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating2.TabIndex = 105;
             this.lbl_rating2.Text = "Rating";
+            this.lbl_rating2.Visible = false;
             // 
             // lbl_rating3
             // 
@@ -1150,6 +1209,7 @@
             this.lbl_rating3.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating3.TabIndex = 106;
             this.lbl_rating3.Text = "Rating";
+            this.lbl_rating3.Visible = false;
             // 
             // lbl_rating4
             // 
@@ -1162,6 +1222,7 @@
             this.lbl_rating4.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating4.TabIndex = 107;
             this.lbl_rating4.Text = "Rating";
+            this.lbl_rating4.Visible = false;
             // 
             // lbl_rating5
             // 
@@ -1174,6 +1235,7 @@
             this.lbl_rating5.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating5.TabIndex = 108;
             this.lbl_rating5.Text = "Rating";
+            this.lbl_rating5.Visible = false;
             // 
             // lbl_rating6
             // 
@@ -1186,6 +1248,7 @@
             this.lbl_rating6.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating6.TabIndex = 109;
             this.lbl_rating6.Text = "Rating";
+            this.lbl_rating6.Visible = false;
             // 
             // lbl_rating7
             // 
@@ -1198,6 +1261,7 @@
             this.lbl_rating7.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating7.TabIndex = 110;
             this.lbl_rating7.Text = "Rating";
+            this.lbl_rating7.Visible = false;
             // 
             // lbl_rating8
             // 
@@ -1210,6 +1274,7 @@
             this.lbl_rating8.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating8.TabIndex = 111;
             this.lbl_rating8.Text = "Rating";
+            this.lbl_rating8.Visible = false;
             // 
             // lbl_rating9
             // 
@@ -1222,6 +1287,7 @@
             this.lbl_rating9.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating9.TabIndex = 112;
             this.lbl_rating9.Text = "Rating";
+            this.lbl_rating9.Visible = false;
             // 
             // lbl_rating12
             // 
@@ -1234,6 +1300,7 @@
             this.lbl_rating12.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating12.TabIndex = 139;
             this.lbl_rating12.Text = "Rating";
+            this.lbl_rating12.Visible = false;
             // 
             // lbl_rating11
             // 
@@ -1246,6 +1313,7 @@
             this.lbl_rating11.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating11.TabIndex = 138;
             this.lbl_rating11.Text = "Rating";
+            this.lbl_rating11.Visible = false;
             // 
             // lbl_rating10
             // 
@@ -1258,6 +1326,7 @@
             this.lbl_rating10.Size = new System.Drawing.Size(60, 19);
             this.lbl_rating10.TabIndex = 137;
             this.lbl_rating10.Text = "Rating";
+            this.lbl_rating10.Visible = false;
             // 
             // panel11
             // 
@@ -1270,6 +1339,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(33, 30);
             this.panel11.TabIndex = 136;
+            this.panel11.Visible = false;
             this.panel11.Click += new System.EventHandler(this.panel11_Click);
             // 
             // panel12
@@ -1283,6 +1353,7 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(33, 30);
             this.panel12.TabIndex = 135;
+            this.panel12.Visible = false;
             this.panel12.Click += new System.EventHandler(this.panel12_Click);
             // 
             // panel13
@@ -1296,6 +1367,7 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(33, 30);
             this.panel13.TabIndex = 134;
+            this.panel13.Visible = false;
             this.panel13.Click += new System.EventHandler(this.panel13_Click);
             // 
             // label15
@@ -1308,6 +1380,7 @@
             this.label15.Size = new System.Drawing.Size(87, 20);
             this.label15.TabIndex = 133;
             this.label15.Text = "Synopsis";
+            this.label15.Visible = false;
             // 
             // label16
             // 
@@ -1319,6 +1392,7 @@
             this.label16.Size = new System.Drawing.Size(87, 20);
             this.label16.TabIndex = 132;
             this.label16.Text = "Synopsis";
+            this.label16.Visible = false;
             // 
             // label17
             // 
@@ -1330,6 +1404,7 @@
             this.label17.Size = new System.Drawing.Size(87, 20);
             this.label17.TabIndex = 131;
             this.label17.Text = "Synopsis";
+            this.label17.Visible = false;
             // 
             // lbl_price12
             // 
@@ -1342,6 +1417,7 @@
             this.lbl_price12.Size = new System.Drawing.Size(60, 23);
             this.lbl_price12.TabIndex = 130;
             this.lbl_price12.Text = "Price";
+            this.lbl_price12.Visible = false;
             // 
             // lbl_price11
             // 
@@ -1354,6 +1430,7 @@
             this.lbl_price11.Size = new System.Drawing.Size(60, 23);
             this.lbl_price11.TabIndex = 129;
             this.lbl_price11.Text = "Price";
+            this.lbl_price11.Visible = false;
             // 
             // lbl_price10
             // 
@@ -1366,6 +1443,7 @@
             this.lbl_price10.Size = new System.Drawing.Size(60, 23);
             this.lbl_price10.TabIndex = 128;
             this.lbl_price10.Text = "Price";
+            this.lbl_price10.Visible = false;
             // 
             // btn_gt12
             // 
@@ -1381,6 +1459,7 @@
             this.btn_gt12.TabIndex = 127;
             this.btn_gt12.Text = "Get Tickets";
             this.btn_gt12.UseVisualStyleBackColor = false;
+            this.btn_gt12.Visible = false;
             this.btn_gt12.Click += new System.EventHandler(this.btn_gt12_Click);
             this.btn_gt12.MouseEnter += new System.EventHandler(this.btn_gt12_MouseEnter);
             this.btn_gt12.MouseLeave += new System.EventHandler(this.btn_gt12_MouseLeave);
@@ -1396,6 +1475,7 @@
             this.lbl_genre12.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre12.TabIndex = 126;
             this.lbl_genre12.Text = "Genre";
+            this.lbl_genre12.Visible = false;
             // 
             // lbl_duration12
             // 
@@ -1408,6 +1488,7 @@
             this.lbl_duration12.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration12.TabIndex = 124;
             this.lbl_duration12.Text = "Duration";
+            this.lbl_duration12.Visible = false;
             // 
             // lbl_title12
             // 
@@ -1419,6 +1500,7 @@
             this.lbl_title12.Size = new System.Drawing.Size(153, 58);
             this.lbl_title12.TabIndex = 125;
             this.lbl_title12.Text = "Title";
+            this.lbl_title12.Visible = false;
             // 
             // pb_Poster12
             // 
@@ -1429,6 +1511,7 @@
             this.pb_Poster12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster12.TabIndex = 123;
             this.pb_Poster12.TabStop = false;
+            this.pb_Poster12.Visible = false;
             // 
             // btn_gt11
             // 
@@ -1444,6 +1527,7 @@
             this.btn_gt11.TabIndex = 122;
             this.btn_gt11.Text = "Get Tickets";
             this.btn_gt11.UseVisualStyleBackColor = false;
+            this.btn_gt11.Visible = false;
             this.btn_gt11.Click += new System.EventHandler(this.btn_gt11_Click);
             this.btn_gt11.MouseEnter += new System.EventHandler(this.btn_gt11_MouseEnter);
             this.btn_gt11.MouseLeave += new System.EventHandler(this.btn_gt11_MouseLeave);
@@ -1459,6 +1543,7 @@
             this.lbl_genre11.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre11.TabIndex = 121;
             this.lbl_genre11.Text = "Genre";
+            this.lbl_genre11.Visible = false;
             // 
             // lbl_duration11
             // 
@@ -1471,6 +1556,7 @@
             this.lbl_duration11.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration11.TabIndex = 119;
             this.lbl_duration11.Text = "Duration";
+            this.lbl_duration11.Visible = false;
             // 
             // lbl_title11
             // 
@@ -1482,6 +1568,7 @@
             this.lbl_title11.Size = new System.Drawing.Size(153, 58);
             this.lbl_title11.TabIndex = 120;
             this.lbl_title11.Text = "Title";
+            this.lbl_title11.Visible = false;
             // 
             // pb_Poster11
             // 
@@ -1492,6 +1579,7 @@
             this.pb_Poster11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster11.TabIndex = 118;
             this.pb_Poster11.TabStop = false;
+            this.pb_Poster11.Visible = false;
             // 
             // btn_gt10
             // 
@@ -1507,6 +1595,7 @@
             this.btn_gt10.TabIndex = 117;
             this.btn_gt10.Text = "Get Tickets";
             this.btn_gt10.UseVisualStyleBackColor = false;
+            this.btn_gt10.Visible = false;
             this.btn_gt10.Click += new System.EventHandler(this.btn_gt10_Click);
             this.btn_gt10.MouseEnter += new System.EventHandler(this.btn_gt10_MouseEnter);
             this.btn_gt10.MouseLeave += new System.EventHandler(this.btn_gt10_MouseLeave);
@@ -1522,6 +1611,7 @@
             this.lbl_genre10.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre10.TabIndex = 116;
             this.lbl_genre10.Text = "Genre";
+            this.lbl_genre10.Visible = false;
             // 
             // lbl_duration10
             // 
@@ -1534,6 +1624,7 @@
             this.lbl_duration10.Size = new System.Drawing.Size(77, 19);
             this.lbl_duration10.TabIndex = 114;
             this.lbl_duration10.Text = "Duration";
+            this.lbl_duration10.Visible = false;
             // 
             // lbl_title10
             // 
@@ -1545,6 +1636,7 @@
             this.lbl_title10.Size = new System.Drawing.Size(152, 58);
             this.lbl_title10.TabIndex = 115;
             this.lbl_title10.Text = "Title";
+            this.lbl_title10.Visible = false;
             // 
             // pb_Poster10
             // 
@@ -1555,6 +1647,7 @@
             this.pb_Poster10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Poster10.TabIndex = 113;
             this.pb_Poster10.TabStop = false;
+            this.pb_Poster10.Visible = false;
             // 
             // label30
             // 
@@ -1656,9 +1749,9 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.delete3);
+            this.Controls.Add(this.delete2);
+            this.Controls.Add(this.delete1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -1677,7 +1770,6 @@
             this.Controls.Add(this.lbl_price3);
             this.Controls.Add(this.lbl_price2);
             this.Controls.Add(this.lbl_price1);
-            this.Controls.Add(this.btn_backk);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_gt9);
             this.Controls.Add(this.lbl_genre9);
@@ -1727,7 +1819,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1080, 797);
+            this.Size = new System.Drawing.Size(1148, 865);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
@@ -1792,7 +1884,6 @@
         private System.Windows.Forms.Label lbl_title7;
         private System.Windows.Forms.PictureBox pb_Poster7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label btn_backk;
         private System.Windows.Forms.Label lbl_price1;
         private System.Windows.Forms.Label lbl_price2;
         private System.Windows.Forms.Label lbl_price3;
@@ -1815,9 +1906,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel delete1;
+        private System.Windows.Forms.Panel delete2;
+        private System.Windows.Forms.Panel delete3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
@@ -1864,5 +1955,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

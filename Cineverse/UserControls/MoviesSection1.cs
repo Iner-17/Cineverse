@@ -249,13 +249,37 @@ namespace Cineverse
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;  
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
-                        } 
+
+                            pb_poster.Visible = true;
+                            
+                            lbl_title.Visible = true;
+                            Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("delete" + i, true).FirstOrDefault().Visible = true;
+
+                        }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
                     finally { conn.Close(); }
+                } 
+                else
+                {
+                    pb_poster.Visible = false;
+
+                    lbl_title.Visible = false;
+                    Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_genre" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("delete" + i, true).FirstOrDefault().Visible = false;
+
                 }
             }
 
@@ -439,19 +463,6 @@ namespace Cineverse
 
         //RELOAD
       
-
-
-        private void btn_backk_MouseEnter(object sender, EventArgs e)
-        {
-            btn_backk.ForeColor = Color.FromArgb(31, 178, 198);
-        }
-
-        private void btn_backk_MouseLeave(object sender, EventArgs e)
-        {
-            btn_backk.ForeColor = Color.White;
-        }
-
-        
         private void btn_gt1_Click(object sender, EventArgs e)
         {
             if (lbl_title1.Text.Equals("Title"))
@@ -926,22 +937,5 @@ namespace Cineverse
                 
             }
         }
-
-        private void btn_backk_Click(object sender, EventArgs e)
-        {
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.btn_dashboard_Click(this, EventArgs.Empty);
-        }
-
-        private void label1_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-        private void label1_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }
