@@ -25,7 +25,7 @@ namespace Cineverse
             RevenueChart.Series.Clear();
             if (tbl == null) return;
 
-            var sortedRevenue = tbl.AsEnumerable().OrderBy(row => row.Field<String>("time_booked")); 
+            var sortedRevenue = tbl.AsEnumerable().OrderBy(row => DateTime.Parse(row.Field<string>("time_booked"))); 
 
 
             Series splineSeries = new Series("Total Revenue")
@@ -34,7 +34,7 @@ namespace Cineverse
                 BorderWidth = 2,
                 Color = Color.FromArgb(31, 178, 198),
                 MarkerStyle = MarkerStyle.Circle,
-                MarkerSize = 5
+                MarkerSize = 10
             };
 
             Series areaSeries = new Series("Gradient Area")
@@ -45,21 +45,22 @@ namespace Cineverse
             areaSeries.BackGradientStyle = GradientStyle.TopBottom;
             foreach (var row in sortedRevenue)
             {
-                String date = row.Field<String>("time_booked");
-                double totalRevenue = row.Field<double>("Revenue");
+                DateTime date = DateTime.Parse(row.Field<string>("time_booked"));   
+                double totalRevenue = row.Field<double>("Revenue"); 
 
                 DataPoint dataPoint = new DataPoint();
-                dataPoint.AxisLabel = date.ToString();
+                dataPoint.AxisLabel = date.ToString("HH tt");
                 dataPoint.SetValueXY(date, totalRevenue);
 
-                splineSeries.Points.AddXY(date.ToString(), totalRevenue);
-                areaSeries.Points.AddXY(date.ToString(), totalRevenue);
+                splineSeries.Points.AddXY(date.ToString("h:mm tt"), totalRevenue);
+                areaSeries.Points.AddXY(date.ToString("h:mm tt"), totalRevenue);
                 revenueDataPoints.Add(dataPoint);
             }
             areaSeries.Color = System.Drawing.Color.FromArgb(31, 178, 198);
             RevenueChart.Series.Add(splineSeries);
             RevenueChart.Series.Add(areaSeries);
-            
+            var chartArea = RevenueChart.ChartAreas[0];
+            chartArea.AxisX.Interval = 2;
         }
 
         private void StatisticsForm_Load(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace Cineverse
             {
                 conn.Open();
 
-                string getListquery = "SELECT title, time_booked, seats_booked, ticket_quantity, ticket_total as Revenue FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id;";
+                string getListquery = "SELECT time_booked, ticket_quantity, ticket_total as Revenue FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id;";
                 MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
                 DataTable dt = new DataTable();
@@ -85,6 +86,13 @@ namespace Cineverse
             }
             finally { conn.Close(); }
 
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Close();
         }
     }
 }
