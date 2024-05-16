@@ -49,7 +49,6 @@
             this.lbl_rating3 = new System.Windows.Forms.Label();
             this.lbl_rating2 = new System.Windows.Forms.Label();
             this.lbl_rating1 = new System.Windows.Forms.Label();
-            this.lbl_refresh = new System.Windows.Forms.Label();
             this.lbl_price3 = new System.Windows.Forms.Label();
             this.lbl_price2 = new System.Windows.Forms.Label();
             this.lbl_price1 = new System.Windows.Forms.Label();
@@ -203,7 +202,6 @@
             this.lbl_revenue.TabIndex = 13;
             this.lbl_revenue.Text = "₱98,217.24";
             this.lbl_revenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_revenue.Click += new System.EventHandler(this.lbl_revenue_Click);
             // 
             // label17
             // 
@@ -291,7 +289,6 @@
             this.panel7.Controls.Add(this.lbl_rating3);
             this.panel7.Controls.Add(this.lbl_rating2);
             this.panel7.Controls.Add(this.lbl_rating1);
-            this.panel7.Controls.Add(this.lbl_refresh);
             this.panel7.Controls.Add(this.lbl_price3);
             this.panel7.Controls.Add(this.lbl_price2);
             this.panel7.Controls.Add(this.lbl_price1);
@@ -352,22 +349,6 @@
             this.lbl_rating1.TabIndex = 22;
             this.lbl_rating1.Text = "Rating";
             this.lbl_rating1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_refresh
-            // 
-            this.lbl_refresh.AutoSize = true;
-            this.lbl_refresh.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_refresh.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_refresh.ForeColor = System.Drawing.Color.White;
-            this.lbl_refresh.Location = new System.Drawing.Point(681, 31);
-            this.lbl_refresh.Name = "lbl_refresh";
-            this.lbl_refresh.Size = new System.Drawing.Size(68, 19);
-            this.lbl_refresh.TabIndex = 21;
-            this.lbl_refresh.Text = "Refresh";
-            this.lbl_refresh.Click += new System.EventHandler(this.lbl_refresh_Click);
-            this.lbl_refresh.MouseEnter += new System.EventHandler(this.lbl_refresh_MouseEnter);
-            this.lbl_refresh.MouseLeave += new System.EventHandler(this.lbl_refresh_MouseLeave);
             // 
             // lbl_price3
             // 
@@ -694,7 +675,6 @@
         private System.Windows.Forms.Label lbl_price1;
         private System.Windows.Forms.Label lbl_price3;
         private System.Windows.Forms.Label lbl_price2;
-        private System.Windows.Forms.Label lbl_refresh;
         private System.Windows.Forms.Button btn_statistics;
         private System.Windows.Forms.Label lbl_rating2;
         private System.Windows.Forms.Label lbl_rating1;
