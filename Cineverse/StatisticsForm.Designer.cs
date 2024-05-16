@@ -33,7 +33,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatisticsForm));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_exit = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lbl_totalRevenue = new System.Windows.Forms.Label();
@@ -61,16 +61,17 @@
             this.panel3.Size = new System.Drawing.Size(90, 26);
             this.panel3.TabIndex = 6;
             // 
-            // panel5
+            // btn_exit
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(1489, 12);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(19, 26);
-            this.panel5.TabIndex = 7;
+            this.btn_exit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_exit.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
+            this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.Location = new System.Drawing.Point(1489, 12);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(19, 26);
+            this.btn_exit.TabIndex = 7;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // label2
             // 
@@ -243,7 +244,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.RevenueChart);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel9);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -264,7 +265,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel btn_exit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label lbl_totalRevenue;
