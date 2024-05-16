@@ -121,6 +121,9 @@
   <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="reset pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reset pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PosterPlaceholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PosterPlaceholder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,7 +220,7 @@
   <data name="screen_smol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\screen_smol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reset pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reset pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoCineverseBooking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoCineverseBooking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -221,7 +221,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
+            this.panel4.BackgroundImage = global::Cineverse.Properties.Resources.LogoCineverseBooking;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.Location = new System.Drawing.Point(147, 38);
             this.panel4.Name = "panel4";

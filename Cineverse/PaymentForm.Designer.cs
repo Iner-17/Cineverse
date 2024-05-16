@@ -300,7 +300,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
+            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.LogoCineverseBooking;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Location = new System.Drawing.Point(58, 27);
             this.panel2.Name = "panel2";

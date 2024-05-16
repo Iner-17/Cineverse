@@ -253,6 +253,16 @@ namespace Cineverse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LogoCineverseBooking {
+            get {
+                object obj = ResourceManager.GetObject("LogoCineverseBooking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoCiniverse {
             get {
                 object obj = ResourceManager.GetObject("LogoCiniverse", resourceCulture);

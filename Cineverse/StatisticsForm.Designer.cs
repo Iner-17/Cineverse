@@ -46,6 +46,7 @@
             this.btn_thisWeek = new System.Windows.Forms.Button();
             this.btn_thisMonth = new System.Windows.Forms.Button();
             this.btn_today = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RevenueChart)).BeginInit();
             this.panel1.SuspendLayout();
@@ -89,7 +90,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel9.Controls.Add(this.lbl_totalRevenue);
-            this.panel9.Location = new System.Drawing.Point(21, 169);
+            this.panel9.Location = new System.Drawing.Point(525, 156);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(315, 134);
             this.panel9.TabIndex = 9;
@@ -111,7 +112,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
             this.label1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(76, 146);
+            this.label1.Location = new System.Drawing.Point(580, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 50);
             this.label1.TabIndex = 12;
@@ -124,7 +125,7 @@
             this.RevenueChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.RevenueChart.Legends.Add(legend1);
-            this.RevenueChart.Location = new System.Drawing.Point(21, 356);
+            this.RevenueChart.Location = new System.Drawing.Point(534, 343);
             this.RevenueChart.Name = "RevenueChart";
             this.RevenueChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
@@ -132,7 +133,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.RevenueChart.Series.Add(series1);
-            this.RevenueChart.Size = new System.Drawing.Size(941, 553);
+            this.RevenueChart.Size = new System.Drawing.Size(932, 553);
             this.RevenueChart.TabIndex = 10;
             this.RevenueChart.Text = "chart1";
             // 
@@ -140,7 +141,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel1.Controls.Add(this.lbl_totalTransactions);
-            this.panel1.Location = new System.Drawing.Point(350, 169);
+            this.panel1.Location = new System.Drawing.Point(854, 156);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(312, 134);
             this.panel1.TabIndex = 13;
@@ -162,7 +163,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
             this.label3.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(401, 144);
+            this.label3.Location = new System.Drawing.Point(905, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 50);
             this.label3.TabIndex = 12;
@@ -177,7 +178,7 @@
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_all.ForeColor = System.Drawing.Color.White;
-            this.btn_all.Location = new System.Drawing.Point(674, 186);
+            this.btn_all.Location = new System.Drawing.Point(1178, 173);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(138, 42);
             this.btn_all.TabIndex = 23;
@@ -192,7 +193,7 @@
             this.btn_thisWeek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thisWeek.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thisWeek.ForeColor = System.Drawing.Color.White;
-            this.btn_thisWeek.Location = new System.Drawing.Point(674, 243);
+            this.btn_thisWeek.Location = new System.Drawing.Point(1178, 230);
             this.btn_thisWeek.Name = "btn_thisWeek";
             this.btn_thisWeek.Size = new System.Drawing.Size(138, 42);
             this.btn_thisWeek.TabIndex = 24;
@@ -207,7 +208,7 @@
             this.btn_thisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thisMonth.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thisMonth.ForeColor = System.Drawing.Color.White;
-            this.btn_thisMonth.Location = new System.Drawing.Point(824, 243);
+            this.btn_thisMonth.Location = new System.Drawing.Point(1328, 230);
             this.btn_thisMonth.Name = "btn_thisMonth";
             this.btn_thisMonth.Size = new System.Drawing.Size(138, 42);
             this.btn_thisMonth.TabIndex = 26;
@@ -222,12 +223,22 @@
             this.btn_today.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_today.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_today.ForeColor = System.Drawing.Color.White;
-            this.btn_today.Location = new System.Drawing.Point(824, 186);
+            this.btn_today.Location = new System.Drawing.Point(1328, 173);
             this.btn_today.Name = "btn_today";
             this.btn_today.Size = new System.Drawing.Size(138, 42);
             this.btn_today.TabIndex = 25;
             this.btn_today.Text = "Today";
             this.btn_today.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = global::Cineverse.Properties.Resources.LogoCineverseBooking;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.Location = new System.Drawing.Point(104, 83);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(278, 132);
+            this.panel4.TabIndex = 27;
             // 
             // StatisticsForm
             // 
@@ -235,6 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1520, 950);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.btn_thisMonth);
             this.Controls.Add(this.btn_today);
             this.Controls.Add(this.btn_thisWeek);
@@ -278,5 +290,6 @@
         private System.Windows.Forms.Button btn_thisWeek;
         private System.Windows.Forms.Button btn_thisMonth;
         private System.Windows.Forms.Button btn_today;
+        private System.Windows.Forms.Panel panel4;
     }
 }

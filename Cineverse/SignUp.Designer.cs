@@ -33,6 +33,10 @@
             this.SignUpBg = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_confirmHide = new System.Windows.Forms.Button();
+            this.btn_confirmShow = new System.Windows.Forms.Button();
+            this.btn_hide = new System.Windows.Forms.Button();
+            this.btn_show = new System.Windows.Forms.Button();
             this.lbl_astConfirmPass = new System.Windows.Forms.Label();
             this.lbl_astPass = new System.Windows.Forms.Label();
             this.lbl_astUsername = new System.Windows.Forms.Label();
@@ -54,10 +58,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ep_FN = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_show = new System.Windows.Forms.Button();
-            this.btn_hide = new System.Windows.Forms.Button();
-            this.btn_confirmShow = new System.Windows.Forms.Button();
-            this.btn_confirmHide = new System.Windows.Forms.Button();
             this.SignUpBg.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ep_FN)).BeginInit();
@@ -119,6 +119,76 @@
             this.panel3.Size = new System.Drawing.Size(620, 727);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // btn_confirmHide
+            // 
+            this.btn_confirmHide.BackColor = System.Drawing.Color.Transparent;
+            this.btn_confirmHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_confirmHide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_confirmHide.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_confirmHide.FlatAppearance.BorderSize = 0;
+            this.btn_confirmHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btn_confirmHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_confirmHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_confirmHide.Image = global::Cineverse.Properties.Resources.hidesmol;
+            this.btn_confirmHide.Location = new System.Drawing.Point(477, 554);
+            this.btn_confirmHide.Name = "btn_confirmHide";
+            this.btn_confirmHide.Size = new System.Drawing.Size(35, 27);
+            this.btn_confirmHide.TabIndex = 22;
+            this.btn_confirmHide.UseVisualStyleBackColor = false;
+            this.btn_confirmHide.Click += new System.EventHandler(this.btn_confirmHide_Click);
+            // 
+            // btn_confirmShow
+            // 
+            this.btn_confirmShow.BackColor = System.Drawing.Color.Transparent;
+            this.btn_confirmShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_confirmShow.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_confirmShow.FlatAppearance.BorderSize = 0;
+            this.btn_confirmShow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btn_confirmShow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_confirmShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_confirmShow.Image = global::Cineverse.Properties.Resources.showsmol;
+            this.btn_confirmShow.Location = new System.Drawing.Point(477, 554);
+            this.btn_confirmShow.Name = "btn_confirmShow";
+            this.btn_confirmShow.Size = new System.Drawing.Size(35, 27);
+            this.btn_confirmShow.TabIndex = 21;
+            this.btn_confirmShow.UseVisualStyleBackColor = false;
+            this.btn_confirmShow.Click += new System.EventHandler(this.btn_confirmShow_Click);
+            // 
+            // btn_hide
+            // 
+            this.btn_hide.BackColor = System.Drawing.Color.Transparent;
+            this.btn_hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_hide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_hide.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_hide.FlatAppearance.BorderSize = 0;
+            this.btn_hide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btn_hide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_hide.Image = global::Cineverse.Properties.Resources.hidesmol;
+            this.btn_hide.Location = new System.Drawing.Point(477, 499);
+            this.btn_hide.Name = "btn_hide";
+            this.btn_hide.Size = new System.Drawing.Size(35, 27);
+            this.btn_hide.TabIndex = 20;
+            this.btn_hide.UseVisualStyleBackColor = false;
+            this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);
+            // 
+            // btn_show
+            // 
+            this.btn_show.BackColor = System.Drawing.Color.Transparent;
+            this.btn_show.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_show.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_show.FlatAppearance.BorderSize = 0;
+            this.btn_show.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btn_show.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_show.Image = global::Cineverse.Properties.Resources.showsmol;
+            this.btn_show.Location = new System.Drawing.Point(477, 499);
+            this.btn_show.Name = "btn_show";
+            this.btn_show.Size = new System.Drawing.Size(35, 27);
+            this.btn_show.TabIndex = 19;
+            this.btn_show.UseVisualStyleBackColor = false;
+            this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
             // 
             // lbl_astConfirmPass
             // 
@@ -401,7 +471,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::Cineverse.Properties.Resources.LogoCiniverse;
+            this.panel4.BackgroundImage = global::Cineverse.Properties.Resources.LogoCineverseBooking;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.Location = new System.Drawing.Point(171, 38);
             this.panel4.Name = "panel4";
@@ -461,76 +531,6 @@
             // 
             this.ep_FN.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.ep_FN.ContainerControl = this;
-            // 
-            // btn_show
-            // 
-            this.btn_show.BackColor = System.Drawing.Color.Transparent;
-            this.btn_show.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_show.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_show.FlatAppearance.BorderSize = 0;
-            this.btn_show.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btn_show.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_show.Image = global::Cineverse.Properties.Resources.showsmol;
-            this.btn_show.Location = new System.Drawing.Point(477, 499);
-            this.btn_show.Name = "btn_show";
-            this.btn_show.Size = new System.Drawing.Size(35, 27);
-            this.btn_show.TabIndex = 19;
-            this.btn_show.UseVisualStyleBackColor = false;
-            this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
-            // 
-            // btn_hide
-            // 
-            this.btn_hide.BackColor = System.Drawing.Color.Transparent;
-            this.btn_hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_hide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_hide.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_hide.FlatAppearance.BorderSize = 0;
-            this.btn_hide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btn_hide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_hide.Image = global::Cineverse.Properties.Resources.hidesmol;
-            this.btn_hide.Location = new System.Drawing.Point(477, 499);
-            this.btn_hide.Name = "btn_hide";
-            this.btn_hide.Size = new System.Drawing.Size(35, 27);
-            this.btn_hide.TabIndex = 20;
-            this.btn_hide.UseVisualStyleBackColor = false;
-            this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);
-            // 
-            // btn_confirmShow
-            // 
-            this.btn_confirmShow.BackColor = System.Drawing.Color.Transparent;
-            this.btn_confirmShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_confirmShow.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_confirmShow.FlatAppearance.BorderSize = 0;
-            this.btn_confirmShow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btn_confirmShow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_confirmShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_confirmShow.Image = global::Cineverse.Properties.Resources.showsmol;
-            this.btn_confirmShow.Location = new System.Drawing.Point(477, 554);
-            this.btn_confirmShow.Name = "btn_confirmShow";
-            this.btn_confirmShow.Size = new System.Drawing.Size(35, 27);
-            this.btn_confirmShow.TabIndex = 21;
-            this.btn_confirmShow.UseVisualStyleBackColor = false;
-            this.btn_confirmShow.Click += new System.EventHandler(this.btn_confirmShow_Click);
-            // 
-            // btn_confirmHide
-            // 
-            this.btn_confirmHide.BackColor = System.Drawing.Color.Transparent;
-            this.btn_confirmHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_confirmHide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_confirmHide.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_confirmHide.FlatAppearance.BorderSize = 0;
-            this.btn_confirmHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btn_confirmHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_confirmHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_confirmHide.Image = global::Cineverse.Properties.Resources.hidesmol;
-            this.btn_confirmHide.Location = new System.Drawing.Point(477, 554);
-            this.btn_confirmHide.Name = "btn_confirmHide";
-            this.btn_confirmHide.Size = new System.Drawing.Size(35, 27);
-            this.btn_confirmHide.TabIndex = 22;
-            this.btn_confirmHide.UseVisualStyleBackColor = false;
-            this.btn_confirmHide.Click += new System.EventHandler(this.btn_confirmHide_Click);
             // 
             // SignUp
             // 
