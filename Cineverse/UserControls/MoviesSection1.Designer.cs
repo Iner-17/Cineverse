@@ -76,15 +76,15 @@
             this.lbl_price7 = new System.Windows.Forms.Label();
             this.lbl_price8 = new System.Windows.Forms.Label();
             this.lbl_price9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.synopsis1 = new System.Windows.Forms.Label();
+            this.synopsis2 = new System.Windows.Forms.Label();
+            this.synopsis3 = new System.Windows.Forms.Label();
+            this.synopsis4 = new System.Windows.Forms.Label();
+            this.synopsis5 = new System.Windows.Forms.Label();
+            this.synopsis6 = new System.Windows.Forms.Label();
+            this.synopsis7 = new System.Windows.Forms.Label();
+            this.synopsis8 = new System.Windows.Forms.Label();
+            this.synopsis9 = new System.Windows.Forms.Label();
             this.delete1 = new System.Windows.Forms.Panel();
             this.pb_Poster9 = new System.Windows.Forms.PictureBox();
             this.pb_Poster8 = new System.Windows.Forms.PictureBox();
@@ -97,12 +97,12 @@
             this.pb_Poster1 = new System.Windows.Forms.PictureBox();
             this.delete2 = new System.Windows.Forms.Panel();
             this.delete3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.delete4 = new System.Windows.Forms.Panel();
+            this.delete5 = new System.Windows.Forms.Panel();
+            this.delete6 = new System.Windows.Forms.Panel();
+            this.delete7 = new System.Windows.Forms.Panel();
+            this.delete8 = new System.Windows.Forms.Panel();
+            this.delete9 = new System.Windows.Forms.Panel();
             this.lbl_rating1 = new System.Windows.Forms.Label();
             this.lbl_rating2 = new System.Windows.Forms.Label();
             this.lbl_rating3 = new System.Windows.Forms.Label();
@@ -115,12 +115,12 @@
             this.lbl_rating12 = new System.Windows.Forms.Label();
             this.lbl_rating11 = new System.Windows.Forms.Label();
             this.lbl_rating10 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.delete12 = new System.Windows.Forms.Panel();
+            this.delete11 = new System.Windows.Forms.Panel();
+            this.delete10 = new System.Windows.Forms.Panel();
+            this.synopsis12 = new System.Windows.Forms.Label();
+            this.synopsis11 = new System.Windows.Forms.Label();
+            this.synopsis10 = new System.Windows.Forms.Label();
             this.lbl_price12 = new System.Windows.Forms.Label();
             this.lbl_price11 = new System.Windows.Forms.Label();
             this.lbl_price10 = new System.Windows.Forms.Label();
@@ -708,9 +708,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1664);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1148, 39);
+            this.panel1.Size = new System.Drawing.Size(1144, 39);
             this.panel1.TabIndex = 77;
-            this.panel1.Visible = false;
             // 
             // lbl_price1
             // 
@@ -830,122 +829,122 @@
             this.lbl_price9.Text = "Price";
             this.lbl_price9.Visible = false;
             // 
-            // label3
+            // synopsis1
             // 
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label3.Location = new System.Drawing.Point(228, 309);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 20);
-            this.label3.TabIndex = 89;
-            this.label3.Text = "Synopsis";
-            this.label3.Visible = false;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.synopsis1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis1.Location = new System.Drawing.Point(228, 309);
+            this.synopsis1.Name = "synopsis1";
+            this.synopsis1.Size = new System.Drawing.Size(115, 20);
+            this.synopsis1.TabIndex = 89;
+            this.synopsis1.Text = "Synopsis";
+            this.synopsis1.Visible = false;
+            this.synopsis1.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // synopsis2
             // 
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label4.Location = new System.Drawing.Point(611, 309);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 20);
-            this.label4.TabIndex = 90;
-            this.label4.Text = "Synopsis";
-            this.label4.Visible = false;
-            this.label4.Click += new System.EventHandler(this.label4_Click_1);
+            this.synopsis2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis2.Location = new System.Drawing.Point(611, 309);
+            this.synopsis2.Name = "synopsis2";
+            this.synopsis2.Size = new System.Drawing.Size(87, 20);
+            this.synopsis2.TabIndex = 90;
+            this.synopsis2.Text = "Synopsis";
+            this.synopsis2.Visible = false;
+            this.synopsis2.Click += new System.EventHandler(this.label4_Click_1);
             // 
-            // label5
+            // synopsis3
             // 
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label5.Location = new System.Drawing.Point(991, 309);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 20);
-            this.label5.TabIndex = 91;
-            this.label5.Text = "Synopsis";
-            this.label5.Visible = false;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.synopsis3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis3.Location = new System.Drawing.Point(991, 309);
+            this.synopsis3.Name = "synopsis3";
+            this.synopsis3.Size = new System.Drawing.Size(87, 20);
+            this.synopsis3.TabIndex = 91;
+            this.synopsis3.Text = "Synopsis";
+            this.synopsis3.Visible = false;
+            this.synopsis3.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label6
+            // synopsis4
             // 
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label6.Location = new System.Drawing.Point(227, 716);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 20);
-            this.label6.TabIndex = 92;
-            this.label6.Text = "Synopsis";
-            this.label6.Visible = false;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.synopsis4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis4.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis4.Location = new System.Drawing.Point(227, 716);
+            this.synopsis4.Name = "synopsis4";
+            this.synopsis4.Size = new System.Drawing.Size(87, 20);
+            this.synopsis4.TabIndex = 92;
+            this.synopsis4.Text = "Synopsis";
+            this.synopsis4.Visible = false;
+            this.synopsis4.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label7
+            // synopsis5
             // 
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label7.Location = new System.Drawing.Point(611, 716);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 20);
-            this.label7.TabIndex = 93;
-            this.label7.Text = "Synopsis";
-            this.label7.Visible = false;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.synopsis5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis5.Location = new System.Drawing.Point(611, 716);
+            this.synopsis5.Name = "synopsis5";
+            this.synopsis5.Size = new System.Drawing.Size(87, 20);
+            this.synopsis5.TabIndex = 93;
+            this.synopsis5.Text = "Synopsis";
+            this.synopsis5.Visible = false;
+            this.synopsis5.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label8
+            // synopsis6
             // 
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label8.Location = new System.Drawing.Point(991, 716);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 20);
-            this.label8.TabIndex = 94;
-            this.label8.Text = "Synopsis";
-            this.label8.Visible = false;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.synopsis6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis6.Location = new System.Drawing.Point(991, 716);
+            this.synopsis6.Name = "synopsis6";
+            this.synopsis6.Size = new System.Drawing.Size(87, 20);
+            this.synopsis6.TabIndex = 94;
+            this.synopsis6.Text = "Synopsis";
+            this.synopsis6.Visible = false;
+            this.synopsis6.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label9
+            // synopsis7
             // 
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label9.Location = new System.Drawing.Point(228, 1107);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 20);
-            this.label9.TabIndex = 95;
-            this.label9.Text = "Synopsis";
-            this.label9.Visible = false;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.synopsis7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis7.Location = new System.Drawing.Point(228, 1107);
+            this.synopsis7.Name = "synopsis7";
+            this.synopsis7.Size = new System.Drawing.Size(87, 20);
+            this.synopsis7.TabIndex = 95;
+            this.synopsis7.Text = "Synopsis";
+            this.synopsis7.Visible = false;
+            this.synopsis7.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label10
+            // synopsis8
             // 
-            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label10.Location = new System.Drawing.Point(611, 1107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 20);
-            this.label10.TabIndex = 96;
-            this.label10.Text = "Synopsis";
-            this.label10.Visible = false;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.synopsis8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis8.Location = new System.Drawing.Point(611, 1107);
+            this.synopsis8.Name = "synopsis8";
+            this.synopsis8.Size = new System.Drawing.Size(87, 20);
+            this.synopsis8.TabIndex = 96;
+            this.synopsis8.Text = "Synopsis";
+            this.synopsis8.Visible = false;
+            this.synopsis8.Click += new System.EventHandler(this.label10_Click);
             // 
-            // label11
+            // synopsis9
             // 
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label11.Location = new System.Drawing.Point(991, 1107);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 20);
-            this.label11.TabIndex = 97;
-            this.label11.Text = "Synopsis";
-            this.label11.Visible = false;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.synopsis9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis9.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis9.Location = new System.Drawing.Point(991, 1107);
+            this.synopsis9.Name = "synopsis9";
+            this.synopsis9.Size = new System.Drawing.Size(87, 20);
+            this.synopsis9.TabIndex = 97;
+            this.synopsis9.Text = "Synopsis";
+            this.synopsis9.Visible = false;
+            this.synopsis9.Click += new System.EventHandler(this.label11_Click);
             // 
             // delete1
             // 
@@ -1088,89 +1087,89 @@
             this.delete3.Visible = false;
             this.delete3.Click += new System.EventHandler(this.panel4_Click);
             // 
-            // panel5
+            // delete4
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.ForeColor = System.Drawing.Color.Transparent;
-            this.panel5.Location = new System.Drawing.Point(348, 832);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(33, 30);
-            this.panel5.TabIndex = 100;
-            this.panel5.Visible = false;
-            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            this.delete4.BackColor = System.Drawing.Color.Transparent;
+            this.delete4.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete4.ForeColor = System.Drawing.Color.Transparent;
+            this.delete4.Location = new System.Drawing.Point(348, 832);
+            this.delete4.Name = "delete4";
+            this.delete4.Size = new System.Drawing.Size(33, 30);
+            this.delete4.TabIndex = 100;
+            this.delete4.Visible = false;
+            this.delete4.Click += new System.EventHandler(this.panel5_Click);
             // 
-            // panel6
+            // delete5
             // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel6.ForeColor = System.Drawing.Color.Transparent;
-            this.panel6.Location = new System.Drawing.Point(731, 832);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(33, 30);
-            this.panel6.TabIndex = 101;
-            this.panel6.Visible = false;
-            this.panel6.Click += new System.EventHandler(this.panel6_Click);
+            this.delete5.BackColor = System.Drawing.Color.Transparent;
+            this.delete5.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete5.ForeColor = System.Drawing.Color.Transparent;
+            this.delete5.Location = new System.Drawing.Point(731, 832);
+            this.delete5.Name = "delete5";
+            this.delete5.Size = new System.Drawing.Size(33, 30);
+            this.delete5.TabIndex = 101;
+            this.delete5.Visible = false;
+            this.delete5.Click += new System.EventHandler(this.panel6_Click);
             // 
-            // panel7
+            // delete6
             // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel7.ForeColor = System.Drawing.Color.Transparent;
-            this.panel7.Location = new System.Drawing.Point(1111, 832);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(33, 30);
-            this.panel7.TabIndex = 102;
-            this.panel7.Visible = false;
-            this.panel7.Click += new System.EventHandler(this.panel7_Click);
+            this.delete6.BackColor = System.Drawing.Color.Transparent;
+            this.delete6.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete6.ForeColor = System.Drawing.Color.Transparent;
+            this.delete6.Location = new System.Drawing.Point(1111, 832);
+            this.delete6.Name = "delete6";
+            this.delete6.Size = new System.Drawing.Size(33, 30);
+            this.delete6.TabIndex = 102;
+            this.delete6.Visible = false;
+            this.delete6.Click += new System.EventHandler(this.panel7_Click);
             // 
-            // panel8
+            // delete7
             // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel8.ForeColor = System.Drawing.Color.Transparent;
-            this.panel8.Location = new System.Drawing.Point(348, 1223);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(33, 30);
-            this.panel8.TabIndex = 101;
-            this.panel8.Visible = false;
-            this.panel8.Click += new System.EventHandler(this.panel8_Click);
+            this.delete7.BackColor = System.Drawing.Color.Transparent;
+            this.delete7.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete7.ForeColor = System.Drawing.Color.Transparent;
+            this.delete7.Location = new System.Drawing.Point(348, 1223);
+            this.delete7.Name = "delete7";
+            this.delete7.Size = new System.Drawing.Size(33, 30);
+            this.delete7.TabIndex = 101;
+            this.delete7.Visible = false;
+            this.delete7.Click += new System.EventHandler(this.panel8_Click);
             // 
-            // panel9
+            // delete8
             // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel9.ForeColor = System.Drawing.Color.Transparent;
-            this.panel9.Location = new System.Drawing.Point(731, 1223);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(33, 30);
-            this.panel9.TabIndex = 102;
-            this.panel9.Visible = false;
-            this.panel9.Click += new System.EventHandler(this.panel9_Click);
+            this.delete8.BackColor = System.Drawing.Color.Transparent;
+            this.delete8.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete8.ForeColor = System.Drawing.Color.Transparent;
+            this.delete8.Location = new System.Drawing.Point(731, 1223);
+            this.delete8.Name = "delete8";
+            this.delete8.Size = new System.Drawing.Size(33, 30);
+            this.delete8.TabIndex = 102;
+            this.delete8.Visible = false;
+            this.delete8.Click += new System.EventHandler(this.panel9_Click);
             // 
-            // panel10
+            // delete9
             // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel10.ForeColor = System.Drawing.Color.Transparent;
-            this.panel10.Location = new System.Drawing.Point(1111, 1223);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(33, 30);
-            this.panel10.TabIndex = 103;
-            this.panel10.Visible = false;
-            this.panel10.Click += new System.EventHandler(this.panel10_Click);
+            this.delete9.BackColor = System.Drawing.Color.Transparent;
+            this.delete9.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete9.ForeColor = System.Drawing.Color.Transparent;
+            this.delete9.Location = new System.Drawing.Point(1111, 1223);
+            this.delete9.Name = "delete9";
+            this.delete9.Size = new System.Drawing.Size(33, 30);
+            this.delete9.TabIndex = 103;
+            this.delete9.Visible = false;
+            this.delete9.Click += new System.EventHandler(this.panel10_Click);
             // 
             // lbl_rating1
             // 
@@ -1328,83 +1327,83 @@
             this.lbl_rating10.Text = "Rating";
             this.lbl_rating10.Visible = false;
             // 
-            // panel11
+            // delete12
             // 
-            this.panel11.BackColor = System.Drawing.Color.Transparent;
-            this.panel11.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel11.ForeColor = System.Drawing.Color.Transparent;
-            this.panel11.Location = new System.Drawing.Point(1111, 1631);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(33, 30);
-            this.panel11.TabIndex = 136;
-            this.panel11.Visible = false;
-            this.panel11.Click += new System.EventHandler(this.panel11_Click);
+            this.delete12.BackColor = System.Drawing.Color.Transparent;
+            this.delete12.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete12.ForeColor = System.Drawing.Color.Transparent;
+            this.delete12.Location = new System.Drawing.Point(1111, 1631);
+            this.delete12.Name = "delete12";
+            this.delete12.Size = new System.Drawing.Size(33, 30);
+            this.delete12.TabIndex = 136;
+            this.delete12.Visible = false;
+            this.delete12.Click += new System.EventHandler(this.panel11_Click);
             // 
-            // panel12
+            // delete11
             // 
-            this.panel12.BackColor = System.Drawing.Color.Transparent;
-            this.panel12.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel12.ForeColor = System.Drawing.Color.Transparent;
-            this.panel12.Location = new System.Drawing.Point(731, 1631);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(33, 30);
-            this.panel12.TabIndex = 135;
-            this.panel12.Visible = false;
-            this.panel12.Click += new System.EventHandler(this.panel12_Click);
+            this.delete11.BackColor = System.Drawing.Color.Transparent;
+            this.delete11.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete11.ForeColor = System.Drawing.Color.Transparent;
+            this.delete11.Location = new System.Drawing.Point(731, 1631);
+            this.delete11.Name = "delete11";
+            this.delete11.Size = new System.Drawing.Size(33, 30);
+            this.delete11.TabIndex = 135;
+            this.delete11.Visible = false;
+            this.delete11.Click += new System.EventHandler(this.panel12_Click);
             // 
-            // panel13
+            // delete10
             // 
-            this.panel13.BackColor = System.Drawing.Color.Transparent;
-            this.panel13.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
-            this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel13.ForeColor = System.Drawing.Color.Transparent;
-            this.panel13.Location = new System.Drawing.Point(348, 1631);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(33, 30);
-            this.panel13.TabIndex = 134;
-            this.panel13.Visible = false;
-            this.panel13.Click += new System.EventHandler(this.panel13_Click);
+            this.delete10.BackColor = System.Drawing.Color.Transparent;
+            this.delete10.BackgroundImage = global::Cineverse.Properties.Resources.delete__1_;
+            this.delete10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete10.ForeColor = System.Drawing.Color.Transparent;
+            this.delete10.Location = new System.Drawing.Point(348, 1631);
+            this.delete10.Name = "delete10";
+            this.delete10.Size = new System.Drawing.Size(33, 30);
+            this.delete10.TabIndex = 134;
+            this.delete10.Visible = false;
+            this.delete10.Click += new System.EventHandler(this.panel13_Click);
             // 
-            // label15
+            // synopsis12
             // 
-            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label15.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label15.Location = new System.Drawing.Point(991, 1515);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 20);
-            this.label15.TabIndex = 133;
-            this.label15.Text = "Synopsis";
-            this.label15.Visible = false;
+            this.synopsis12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis12.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis12.Location = new System.Drawing.Point(991, 1515);
+            this.synopsis12.Name = "synopsis12";
+            this.synopsis12.Size = new System.Drawing.Size(87, 20);
+            this.synopsis12.TabIndex = 133;
+            this.synopsis12.Text = "Synopsis";
+            this.synopsis12.Visible = false;
             // 
-            // label16
+            // synopsis11
             // 
-            this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label16.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label16.Location = new System.Drawing.Point(611, 1515);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(87, 20);
-            this.label16.TabIndex = 132;
-            this.label16.Text = "Synopsis";
-            this.label16.Visible = false;
+            this.synopsis11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis11.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis11.Location = new System.Drawing.Point(611, 1515);
+            this.synopsis11.Name = "synopsis11";
+            this.synopsis11.Size = new System.Drawing.Size(87, 20);
+            this.synopsis11.TabIndex = 132;
+            this.synopsis11.Text = "Synopsis";
+            this.synopsis11.Visible = false;
             // 
-            // label17
+            // synopsis10
             // 
-            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label17.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label17.Location = new System.Drawing.Point(228, 1515);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(87, 20);
-            this.label17.TabIndex = 131;
-            this.label17.Text = "Synopsis";
-            this.label17.Visible = false;
+            this.synopsis10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.synopsis10.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsis10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.synopsis10.Location = new System.Drawing.Point(228, 1515);
+            this.synopsis10.Name = "synopsis10";
+            this.synopsis10.Size = new System.Drawing.Size(87, 20);
+            this.synopsis10.TabIndex = 131;
+            this.synopsis10.Text = "Synopsis";
+            this.synopsis10.Visible = false;
             // 
             // lbl_price12
             // 
@@ -1710,12 +1709,12 @@
             this.Controls.Add(this.lbl_rating12);
             this.Controls.Add(this.lbl_rating11);
             this.Controls.Add(this.lbl_rating10);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.panel12);
-            this.Controls.Add(this.panel13);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.delete12);
+            this.Controls.Add(this.delete11);
+            this.Controls.Add(this.delete10);
+            this.Controls.Add(this.synopsis12);
+            this.Controls.Add(this.synopsis11);
+            this.Controls.Add(this.synopsis10);
             this.Controls.Add(this.lbl_price12);
             this.Controls.Add(this.lbl_price11);
             this.Controls.Add(this.lbl_price10);
@@ -1743,24 +1742,24 @@
             this.Controls.Add(this.lbl_rating3);
             this.Controls.Add(this.lbl_rating2);
             this.Controls.Add(this.lbl_rating1);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.delete9);
+            this.Controls.Add(this.delete8);
+            this.Controls.Add(this.delete7);
+            this.Controls.Add(this.delete6);
+            this.Controls.Add(this.delete5);
+            this.Controls.Add(this.delete4);
             this.Controls.Add(this.delete3);
             this.Controls.Add(this.delete2);
             this.Controls.Add(this.delete1);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.synopsis9);
+            this.Controls.Add(this.synopsis8);
+            this.Controls.Add(this.synopsis7);
+            this.Controls.Add(this.synopsis6);
+            this.Controls.Add(this.synopsis5);
+            this.Controls.Add(this.synopsis4);
+            this.Controls.Add(this.synopsis3);
+            this.Controls.Add(this.synopsis2);
+            this.Controls.Add(this.synopsis1);
             this.Controls.Add(this.lbl_price9);
             this.Controls.Add(this.lbl_price8);
             this.Controls.Add(this.lbl_price7);
@@ -1819,7 +1818,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1148, 865);
+            this.Size = new System.Drawing.Size(1131, 848);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
@@ -1897,24 +1896,24 @@
         public System.Windows.Forms.Label lbl_title6;
         public System.Windows.Forms.PictureBox pb_Poster6;
         public System.Windows.Forms.Label lbl_price6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label synopsis1;
+        private System.Windows.Forms.Label synopsis2;
+        private System.Windows.Forms.Label synopsis3;
+        private System.Windows.Forms.Label synopsis4;
+        private System.Windows.Forms.Label synopsis5;
+        private System.Windows.Forms.Label synopsis6;
+        private System.Windows.Forms.Label synopsis7;
+        private System.Windows.Forms.Label synopsis8;
+        private System.Windows.Forms.Label synopsis9;
         private System.Windows.Forms.Panel delete1;
         private System.Windows.Forms.Panel delete2;
         private System.Windows.Forms.Panel delete3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel delete4;
+        private System.Windows.Forms.Panel delete5;
+        private System.Windows.Forms.Panel delete6;
+        private System.Windows.Forms.Panel delete7;
+        private System.Windows.Forms.Panel delete8;
+        private System.Windows.Forms.Panel delete9;
         private System.Windows.Forms.Label lbl_rating1;
         private System.Windows.Forms.Label lbl_rating2;
         private System.Windows.Forms.Label lbl_rating3;
@@ -1927,12 +1926,12 @@
         private System.Windows.Forms.Label lbl_rating12;
         private System.Windows.Forms.Label lbl_rating11;
         private System.Windows.Forms.Label lbl_rating10;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel delete12;
+        private System.Windows.Forms.Panel delete11;
+        private System.Windows.Forms.Panel delete10;
+        private System.Windows.Forms.Label synopsis12;
+        private System.Windows.Forms.Label synopsis11;
+        private System.Windows.Forms.Label synopsis10;
         private System.Windows.Forms.Label lbl_price12;
         private System.Windows.Forms.Label lbl_price11;
         private System.Windows.Forms.Label lbl_price10;

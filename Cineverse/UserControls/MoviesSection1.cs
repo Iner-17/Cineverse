@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -251,7 +252,6 @@ namespace Cineverse
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
 
                             pb_poster.Visible = true;
-                            
                             lbl_title.Visible = true;
                             Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = true;
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = true;
@@ -259,7 +259,7 @@ namespace Cineverse
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = true;
                             Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = true;
                             Controls.Find("delete" + i, true).FirstOrDefault().Visible = true;
-
+                            Controls.Find("synopsis" + i, true).FirstOrDefault().Visible = true;
                         }
                     }
                     catch (Exception ex)
@@ -271,7 +271,6 @@ namespace Cineverse
                 else
                 {
                     pb_poster.Visible = false;
-
                     lbl_title.Visible = false;
                     Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = false;
                     Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = false;
@@ -279,7 +278,7 @@ namespace Cineverse
                     Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = false;
                     Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = false;
                     Controls.Find("delete" + i, true).FirstOrDefault().Visible = false;
-
+                    Controls.Find("synopsis" + i, true).FirstOrDefault().Visible = false;
                 }
             }
 
@@ -326,6 +325,17 @@ namespace Cineverse
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+
+                            // DISPLAY MOVIES
+                            pb_poster.Visible = true;
+                            lbl_title.Visible = true;
+                            Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("delete" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("synopsis" + i, true).FirstOrDefault().Visible = true;
                         }
                     }
                     catch (Exception ex)
@@ -333,6 +343,20 @@ namespace Cineverse
                         MessageBox.Show(ex.Message);
                     }
                     finally { conn.Close(); }
+                    
+                }
+                else
+                {
+                    // HIDE MOVIE PLACEHOLDERS WHEN EMPTY
+                    pb_poster.Visible = false;
+                    lbl_title.Visible = false;
+                    Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_genre" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("delete" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("synopsis" + i, true).FirstOrDefault().Visible = false;
                 }
             }
 
@@ -378,6 +402,18 @@ namespace Cineverse
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+
+
+                            // DISPLAY MOVIES
+                            pb_poster.Visible = true;
+                            lbl_title.Visible = true;
+                            Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("delete" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("synopsis" + i, true).FirstOrDefault().Visible = true;
                         }
                     }
                     catch (Exception ex)
@@ -385,6 +421,19 @@ namespace Cineverse
                         MessageBox.Show(ex.Message);
                     }
                     finally { conn.Close(); }
+                }
+                else
+                {
+                    // HIDE MOVIE PLACEHOLDERS WHEN EMPTY
+                    pb_poster.Visible = false;
+                    lbl_title.Visible = false;
+                    Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_genre" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("delete" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("synopsis" + i, true).FirstOrDefault().Visible = false;
                 }
             }
 
@@ -432,6 +481,17 @@ namespace Cineverse
                             Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                             Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
                             Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+
+                            // DISPLAY MOVIES
+                            pb_poster.Visible = true;
+                            lbl_title.Visible = true;
+                            Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_genre" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("delete" + i, true).FirstOrDefault().Visible = true;
+                            Controls.Find("synopsis" + i, true).FirstOrDefault().Visible = true;
                         }
                     }
                     catch (Exception ex)
@@ -439,6 +499,19 @@ namespace Cineverse
                         MessageBox.Show(ex.Message);
                     }
                     finally { conn.Close(); }
+                }
+                else
+                {
+                    // HIDE MOVIE PLACEHOLDERS WHEN EMPTY
+                    pb_poster.Visible = false;
+                    lbl_title.Visible = false;
+                    Controls.Find("lbl_rating" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_duration" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_genre" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("lbl_price" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("btn_gt" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("delete" + i, true).FirstOrDefault().Visible = false;
+                    Controls.Find("synopsis" + i, true).FirstOrDefault().Visible = false;
                 }
             }
           
