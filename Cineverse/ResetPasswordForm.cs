@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +13,57 @@ namespace Cineverse
 {
     public partial class ResetPasswordForm : Form
     {
+
+        private string firstName = "";
+        private string email = "";
+        ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
         public ResetPasswordForm()
         {
             InitializeComponent();
             this.chk_showPass.CheckedChanged += new System.EventHandler(this.chk_showPass_CheckedChanged);
+ 
+        }
+
+        private void ResetPasswordForm_Load(object sender, EventArgs e)
+        {
+            
+
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+
+                string getFirstName = "SELECT firstname FROM accounts WHERE email = @Email;";
+                MySqlCommand getFirstNamecmd = new MySqlCommand(getFirstName, conn);
+                getFirstNamecmd.Parameters.AddWithValue("Email", email);
+                MySqlDataReader reader = getFirstNamecmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    firstName = reader["firstname"].ToString();
+                    user_firstName.Text = "Hi, " + firstName;
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            MessageBox.Show(email);
+        }
+
+        public void getEmail(string Email)
+        {
+            email = Email.Trim();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
             this.Close();
         }
+
+        
 
         private void chk_showPass_CheckedChanged(object sender, EventArgs e)
         {
@@ -55,5 +95,7 @@ namespace Cineverse
             chk_showPass.ForeColor = SystemColors.Window; 
             chk_showPass.Font = new Font(chk_showPass.Font, FontStyle.Regular); // Remove underline
         }
+
+        
     }
 }

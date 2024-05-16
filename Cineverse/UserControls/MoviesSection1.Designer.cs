@@ -1380,6 +1380,7 @@
             this.synopsis12.TabIndex = 133;
             this.synopsis12.Text = "Synopsis";
             this.synopsis12.Visible = false;
+            this.synopsis12.Click += new System.EventHandler(this.synopsis12_Click);
             // 
             // synopsis11
             // 
@@ -1392,6 +1393,7 @@
             this.synopsis11.TabIndex = 132;
             this.synopsis11.Text = "Synopsis";
             this.synopsis11.Visible = false;
+            this.synopsis11.Click += new System.EventHandler(this.synopsis11_Click);
             // 
             // synopsis10
             // 
@@ -1404,6 +1406,7 @@
             this.synopsis10.TabIndex = 131;
             this.synopsis10.Text = "Synopsis";
             this.synopsis10.Visible = false;
+            this.synopsis10.Click += new System.EventHandler(this.synopsis10_Click);
             // 
             // lbl_price12
             // 
@@ -1818,7 +1821,7 @@
             this.Controls.Add(this.btn_addMovies);
             this.Controls.Add(this.label2);
             this.Name = "MoviesSection1";
-            this.Size = new System.Drawing.Size(1131, 848);
+            this.Size = new System.Drawing.Size(1114, 831);
             this.Load += new System.EventHandler(this.MoviesSection1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster8)).EndInit();
