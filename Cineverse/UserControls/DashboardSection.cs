@@ -99,7 +99,7 @@ namespace Cineverse
                         string title = reader.GetString("title").ToUpper();
                         string duration = reader.GetInt32("duration").ToString();
                         string genre = reader.GetString("genre");
-                        string price = reader.GetDouble("price").ToString(); ;
+                        string price = reader.GetDouble("price").ToString("F2");
                         byte[] imageData = (byte[])reader["photo"];
 
                         if (imageData != null && imageData.Length > 0)
@@ -115,7 +115,7 @@ namespace Cineverse
                         
                         Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                         Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
-                        Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price + ".00";
+                        Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price;
                     } else
                     {
                         lbl_title.Text = "Title";
@@ -183,7 +183,7 @@ namespace Cineverse
                 }
                 else
                 {
-                lbl_revenue.Text = "₱" + result.ToString() + ".00";
+                lbl_revenue.Text = "₱" + result.ToString();
 
                 }
 

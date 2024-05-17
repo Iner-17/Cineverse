@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceiptForm));
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_backToDashboard = new System.Windows.Forms.Button();
-            this.lbl_total2 = new System.Windows.Forms.Label();
+            this.lbl_success = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,7 +63,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel4.Controls.Add(this.btn_backToDashboard);
-            this.panel4.Controls.Add(this.lbl_total2);
+            this.panel4.Controls.Add(this.lbl_success);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Location = new System.Drawing.Point(343, 54);
@@ -86,16 +86,16 @@
             this.btn_backToDashboard.UseVisualStyleBackColor = false;
             this.btn_backToDashboard.Click += new System.EventHandler(this.btn_backToDashboard_Click);
             // 
-            // lbl_total2
+            // lbl_success
             // 
-            this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total2.ForeColor = System.Drawing.Color.White;
-            this.lbl_total2.Location = new System.Drawing.Point(442, 391);
-            this.lbl_total2.Name = "lbl_total2";
-            this.lbl_total2.Size = new System.Drawing.Size(285, 54);
-            this.lbl_total2.TabIndex = 33;
-            this.lbl_total2.Text = "Success!";
-            this.lbl_total2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_success.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_success.ForeColor = System.Drawing.Color.White;
+            this.lbl_success.Location = new System.Drawing.Point(442, 391);
+            this.lbl_success.Name = "lbl_success";
+            this.lbl_success.Size = new System.Drawing.Size(285, 54);
+            this.lbl_success.TabIndex = 33;
+            this.lbl_success.Text = "Success!";
+            this.lbl_success.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -410,7 +410,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_backToDashboard;
-        private System.Windows.Forms.Label lbl_total2;
+        private System.Windows.Forms.Label lbl_success;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
     }

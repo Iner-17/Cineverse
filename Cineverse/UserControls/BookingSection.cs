@@ -111,6 +111,7 @@ namespace Cineverse.UserControls
                     {
                         double quant = Convert.ToDouble(reader2["ticket_quantity"]);
                         double total = Convert.ToDouble(reader2["ticket_total"]);
+                        double price = total / quant;
 
                         lbl_titlePayment.Text = reader2["movie_title"].ToString();
                         lbl_genre.Text = reader2["genre"].ToString();
@@ -119,8 +120,8 @@ namespace Cineverse.UserControls
                         lbl_dateTime.Text = reader2["date"].ToString();
                         lbl_seats.Text = reader2["seats_booked"].ToString();
                         lbl_quant.Text = reader2["ticket_quantity"].ToString();
-                        lbl_ticketPrice.Text = (total / quant).ToString();
-                        lbl_priceTotal.Text = reader2["ticket_total"].ToString();
+                        lbl_ticketPrice.Text = "₱" + price.ToString("F2");
+                        lbl_priceTotal.Text = "₱" + reader2["ticket_total"].ToString();
                     }
                    
                 }

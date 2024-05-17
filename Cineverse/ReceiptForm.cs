@@ -15,7 +15,7 @@ namespace Cineverse
     public partial class ReceiptForm : Form
     {
         private string movieTitle = "";
-        private int price = 0;
+        private double price = 0;
         public ReceiptForm()
         {
             InitializeComponent();
@@ -70,8 +70,8 @@ namespace Cineverse
 
                 while (reader.Read())
                 {
-                    lbl_tcktPrice.Text = "₱ " + reader["price"].ToString();
-                    price = Convert.ToInt32(reader["price"]);
+                    lbl_tcktPrice.Text = "₱ " + Convert.ToDouble(reader["price"]).ToString("F2");
+                    price = Convert.ToDouble(reader["price"]);
                 }
 
 
@@ -89,8 +89,7 @@ namespace Cineverse
 
             lbl_tcktQuantity.Text = countSeat.ToString();
 
-            lbl_total1.Text = "₱ " + (countSeat * price).ToString();
-            lbl_total2.Text = lbl_total1.Text;
+            lbl_total1.Text = "₱ " + (countSeat * price).ToString("F2");
         }
 
         private void panel5_Click(object sender, EventArgs e)

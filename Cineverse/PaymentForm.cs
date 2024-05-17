@@ -20,7 +20,7 @@ namespace Cineverse
         {
             InitializeComponent();
         }
-        private int price = 0;
+        private double price = 0;
         private string movieTitle = "";
         public void GetDataFromSeatForm(string title, string date_, string time, string seatLists)
         {
@@ -52,8 +52,8 @@ namespace Cineverse
 
                 while(reader.Read())
                 {
-                    lbl_tcktPrice.Text = "₱ " + reader["price"].ToString();
-                    price = Convert.ToInt32(reader["price"]);
+                    lbl_tcktPrice.Text = "₱ " + Convert.ToDouble(reader["price"]).ToString("F2");
+                    price = Convert.ToDouble(reader["price"]);
                     lbl_genre.Text = reader["genre"].ToString();
 
                     byte[] imgdata = (byte[])reader["photo"];
@@ -81,8 +81,8 @@ namespace Cineverse
 
             lbl_tcktQuantity.Text = countSeat.ToString();
 
-            lbl_total1.Text = "₱ " + (countSeat * price).ToString();
-            lbl_total2.Text = lbl_total1.Text;
+            lbl_total1.Text = "₱ " + (countSeat * price).ToString("F2");
+            lbl_total2.Text = lbl_total1.Text   ;
         }
 
         private void UpdateAvailabilityToBooked(string seatList)
