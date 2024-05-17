@@ -21,6 +21,7 @@ namespace Cineverse
             InitializeComponent();
         }
         private double price = 0;
+        private int countSeat = 0;
         private string movieTitle = "";
         public void GetDataFromSeatForm(string title, string date_, string time, string seatLists)
         {
@@ -77,7 +78,7 @@ namespace Cineverse
 
 
             string[] listArray = lbl_seats.Text.Split(new string[] {", "}, StringSplitOptions.RemoveEmptyEntries);
-            int countSeat = listArray.Length;
+            countSeat = listArray.Length;
 
             lbl_tcktQuantity.Text = countSeat.ToString();
 
@@ -159,94 +160,105 @@ namespace Cineverse
 
         private void btn_transactionComplete_Click(object sender, EventArgs e)
         {
-            UpdateAvailabilityToBooked(lbl_seats.Text);
 
-            int movie_id = 0;
-            ReceiptForm receiptForm1 = new ReceiptForm();
-            receiptForm1.passDataToReceiptForm(lbl_titlePayment.Text, lbl_genre.Text, lbl_cinemaNo.Text, lbl_time.Text, lbl_dateTime.Text, lbl_seats.Text);
-            receiptForm1.Show();
-            this.Hide();
-
-            MySqlConnection conn = DBConnection.getConnection();
-            
-            try
+            if (lbl_change.Text.Equals("CHANGE: ₱"))
             {
-                conn.Open();
-                string query = "SELECT movie_id FROM movies WHERE title = @Title";
-                MySqlCommand getMovieIdcmd = new MySqlCommand(query, conn);
-                getMovieIdcmd.Parameters.AddWithValue("Title", movieTitle);
+                return;
+            }
+            else
+            {
 
-                MySqlDataReader reader = getMovieIdcmd.ExecuteReader();
-                if (reader.Read())
+
+                UpdateAvailabilityToBooked(lbl_seats.Text);
+
+                int movie_id = 0;
+                ReceiptForm receiptForm1 = new ReceiptForm();
+                receiptForm1.passDataToReceiptForm(lbl_titlePayment.Text, lbl_genre.Text, lbl_cinemaNo.Text, lbl_time.Text, lbl_dateTime.Text, lbl_seats.Text);
+                receiptForm1.Show();
+                this.Hide();
+
+                MySqlConnection conn = DBConnection.getConnection();
+
+                try
                 {
-                    movie_id = reader.GetInt32("movie_id");
+                    conn.Open();
+                    string query = "SELECT movie_id FROM movies WHERE title = @Title";
+                    MySqlCommand getMovieIdcmd = new MySqlCommand(query, conn);
+                    getMovieIdcmd.Parameters.AddWithValue("Title", movieTitle);
+
+                    MySqlDataReader reader = getMovieIdcmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        movie_id = reader.GetInt32("movie_id");
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
+
+                MySqlCommand cmd = new MySqlCommand();
+
+                try
+                {
+                    DateTime date = DateTime.UtcNow.Date;
+                    DateTime time = DateTime.Now;
+
+                    conn.Open();
+                    string insertBookingData = "INSERT INTO bookings (ticket_quantity, ticket_total, currentDate, time_booked, movie_id, seats_booked) VALUES (@Ticket_quant, @Ticket_Total, @CurrentDate, @TimeBooked, @Movie_ID, @SeatsBooked);";
+                    cmd = new MySqlCommand(insertBookingData, conn);
+                    cmd.Parameters.AddWithValue("@Ticket_quant", lbl_tcktQuantity.Text);
+                    cmd.Parameters.AddWithValue("@Ticket_Total", price * Convert.ToInt32(lbl_tcktQuantity.Text));
+                    cmd.Parameters.AddWithValue("@CurrentDate", date.ToString("dd/MM/yyyy • dddd"));
+                    cmd.Parameters.AddWithValue("@TimeBooked", time.ToString("hh:mm tt"));
+                    cmd.Parameters.AddWithValue("@Movie_ID", movie_id);
+                    cmd.Parameters.AddWithValue("@SeatsBooked", lbl_seats.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+                try
+                {
+                    int bookingId = (int)cmd.LastInsertedId;
+
+                    conn.Open();
+                    string insertBookingData = "INSERT INTO receipt (booking_id, movie_title, genre, cinema_number, time, date) VALUES (@BookingID, @Title, @Genre, @CinemaNumber, @Time, @Date);";
+                    cmd = new MySqlCommand(insertBookingData, conn);
+                    cmd.Parameters.AddWithValue("@BookingID", bookingId);
+                    cmd.Parameters.AddWithValue("@Title", lbl_titlePayment.Text);
+                    cmd.Parameters.AddWithValue("@Genre", lbl_genre.Text);
+                    cmd.Parameters.AddWithValue("@CinemaNumber", lbl_cinemaNo.Text);
+                    cmd.Parameters.AddWithValue("@Time", lbl_time.Text);
+                    cmd.Parameters.AddWithValue("@Date", lbl_dateTime.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+                BookingSection booking = new BookingSection();
+                booking.BookingSection_Load(this, EventArgs.Empty);
+
+                DashboardSection dashboardSection = new DashboardSection();
+                dashboardSection.UpdateBookings();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
-
-            MySqlCommand cmd = new MySqlCommand();
-
-            try
-            {
-                DateTime date = DateTime.UtcNow.Date;
-                DateTime time = DateTime.Now;
-
-                conn.Open();
-                string insertBookingData = "INSERT INTO bookings (ticket_quantity, ticket_total, currentDate, time_booked, movie_id, seats_booked) VALUES (@Ticket_quant, @Ticket_Total, @CurrentDate, @TimeBooked, @Movie_ID, @SeatsBooked);";
-                cmd = new MySqlCommand(insertBookingData, conn);
-                cmd.Parameters.AddWithValue("@Ticket_quant", lbl_tcktQuantity.Text);
-                cmd.Parameters.AddWithValue("@Ticket_Total", price * Convert.ToInt32(lbl_tcktQuantity.Text));
-                cmd.Parameters.AddWithValue("@CurrentDate", date.ToString("dd/MM/yyyy • dddd"));
-                cmd.Parameters.AddWithValue("@TimeBooked", time.ToString("hh:mm tt"));
-                cmd.Parameters.AddWithValue("@Movie_ID", movie_id);
-                cmd.Parameters.AddWithValue("@SeatsBooked", lbl_seats.Text);
-
-                cmd.ExecuteNonQuery();
-
-            } catch (Exception ex)
-            {
-                MessageBox.Show(""  + ex);
-            } finally
-            {
-                conn.Close();
-            }
-            
-            try
-            {
-                int bookingId = (int)cmd.LastInsertedId;
-
-                conn.Open();
-                string insertBookingData = "INSERT INTO receipt (booking_id, movie_title, genre, cinema_number, time, date) VALUES (@BookingID, @Title, @Genre, @CinemaNumber, @Time, @Date);";
-                cmd = new MySqlCommand(insertBookingData, conn);
-                cmd.Parameters.AddWithValue("@BookingID", bookingId);
-                cmd.Parameters.AddWithValue("@Title", lbl_titlePayment.Text);
-                cmd.Parameters.AddWithValue("@Genre", lbl_genre.Text);
-                cmd.Parameters.AddWithValue("@CinemaNumber", lbl_cinemaNo.Text);
-                cmd.Parameters.AddWithValue("@Time", lbl_time.Text);
-                cmd.Parameters.AddWithValue("@Date", lbl_dateTime.Text);
-
-                cmd.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-            BookingSection booking = new BookingSection();
-            booking.BookingSection_Load(this, EventArgs.Empty);
-
-            DashboardSection dashboardSection = new DashboardSection();
-            dashboardSection.UpdateBookings();
-
         }
 
         private int dotCount = 0;
@@ -283,6 +295,35 @@ namespace Cineverse
         {
             btn_voucher.BackColor = Color.FromArgb(20, 32, 32);
             btn_voucher.ForeColor = Color.White;
+        }
+
+        private void pb_posterSelected_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
+
+        private void txt_cash_TextChanged(object sender, EventArgs e)
+        {
+            double cashPayement = 0;
+            if (txt_cash.Text.Equals(""))
+            {
+                return;
+            } else
+            {
+               cashPayement = Convert.ToDouble(txt_cash.Text);
+
+            }
+
+            if (cashPayement > (countSeat * price))
+            {
+                lbl_change.Text = "CHANGE: ₱" + (cashPayement - (countSeat * price));
+            }
+            else
+            {
+                lbl_change.Text = "CHANGE: ₱";
+            }
         }
     }
 }

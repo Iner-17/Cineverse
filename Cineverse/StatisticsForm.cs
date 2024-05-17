@@ -36,7 +36,7 @@ namespace Cineverse
                 MarkerStyle = MarkerStyle.Circle,
                 MarkerSize = 10
             };
-
+            
             Series areaSeries = new Series("Gradient Area")
             {
                 ChartType = SeriesChartType.SplineArea,
@@ -74,6 +74,7 @@ namespace Cineverse
                 string getListquery = "SELECT time_booked, ticket_quantity, ticket_total as Revenue FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id;";
                 MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+
                 DataTable dt = new DataTable();
                 dataAdapter.Fill(dt);
 
