@@ -217,6 +217,7 @@
             this.btn_thisWeek.TabIndex = 24;
             this.btn_thisWeek.Text = "This Week";
             this.btn_thisWeek.UseVisualStyleBackColor = false;
+            this.btn_thisWeek.Click += new System.EventHandler(this.btn_thisWeek_Click);
             // 
             // btn_thisMonth
             // 
@@ -247,6 +248,7 @@
             this.btn_today.TabIndex = 25;
             this.btn_today.Text = "Today";
             this.btn_today.UseVisualStyleBackColor = false;
+            this.btn_today.Click += new System.EventHandler(this.btn_today_Click);
             // 
             // panel4
             // 
