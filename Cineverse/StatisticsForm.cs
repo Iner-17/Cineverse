@@ -61,6 +61,13 @@ namespace Cineverse
             RevenueChart.Series.Add(areaSeries);
             var chartArea = RevenueChart.ChartAreas[0];
             chartArea.AxisX.Interval = 2;
+
+            RevenueChart.ChartAreas["ChartArea1"].AxisX.IntervalType = DateTimeIntervalType.Hours;
+            RevenueChart.ChartAreas["ChartArea1"].AxisX.LabelStyle.Format = "HH";
+
+            this.RevenueChart.BackColor = Color.FromArgb(27, 28, 30);
+            this.RevenueChart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            this.RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
         }
 
         private void StatisticsForm_Load(object sender, EventArgs e)
