@@ -16,6 +16,8 @@ namespace Cineverse
     {
         private string movieTitle = "";
         private double price = 0;
+        public static string Cash { get; set; }
+        public static string Change { get; set; }
         public ReceiptForm()
         {
             InitializeComponent();
@@ -88,8 +90,18 @@ namespace Cineverse
             int countSeat = listArray.Length;
 
             lbl_tcktQuantity.Text = countSeat.ToString();
-
+            double cash = Convert.ToDouble(Cash);
+            double change = Convert.ToDouble(Change);
             lbl_total1.Text = "₱ " + (countSeat * price).ToString("F2");
+            lbl_cash.Text = "₱ " + cash.ToString("F2");
+            if (change == 0)
+            {
+                lbl_change.Text = change.ToString();
+            } else
+            {
+                lbl_change.Text = "₱ " + change.ToString("F2");
+
+            }
         }
 
         private void panel5_Click(object sender, EventArgs e)

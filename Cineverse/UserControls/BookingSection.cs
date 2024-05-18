@@ -96,12 +96,14 @@ namespace Cineverse.UserControls
 
 
 
-                    while(reader2.Read())
+                    while (reader2.Read())
                     {
                         double quant = Convert.ToDouble(reader2["ticket_quantity"]);
                         double total = Convert.ToDouble(reader2["ticket_total"]);
                         double priceTotal = Convert.ToDouble(reader2["ticket_total"]);
                         double price = total / quant;
+                        double cash = Convert.ToDouble(ReceiptForm.Cash);
+                        double change = Convert.ToDouble(ReceiptForm.Change);
 
                         lbl_titlePayment.Text = reader2["movie_title"].ToString();
                         lbl_genre.Text = reader2["genre"].ToString();
@@ -112,8 +114,17 @@ namespace Cineverse.UserControls
                         lbl_quant.Text = reader2["ticket_quantity"].ToString();
                         lbl_ticketPrice.Text = "₱" + price.ToString("F2");
                         lbl_priceTotal.Text = "₱" + priceTotal.ToString("F2");
+
+                        lbl_cash.Text = "₱ " + cash.ToString("F2");
+                        if (change == 0)
+                        {
+                            lbl_change.Text = change.ToString();
+                        }
+                        else
+                        {
+                            lbl_change.Text = "₱ " + change.ToString("F2");
+                        }
                     }
-                   
                 }
                 catch (Exception ex)
                 {

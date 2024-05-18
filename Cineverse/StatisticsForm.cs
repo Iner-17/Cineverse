@@ -38,6 +38,7 @@ namespace Cineverse
             chartArea.AxisX.LabelStyle.Enabled = true;
         }
 
+        //HOURLY REVENUE
         private void displayTodaysRevenueChart(DataTable tbl)
         {
             RevenueChart.Series.Clear();
@@ -99,6 +100,7 @@ namespace Cineverse
           
         }
 
+        //DAILY REVENUE
         private void displayDailyRevenueChart(DataTable tbl)
         {
             RevenueChart.Series.Clear();
@@ -175,12 +177,10 @@ namespace Cineverse
             RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
         }
 
-            private void StatisticsForm_Load(object sender, EventArgs e)
+        private void StatisticsForm_Load(object sender, EventArgs e)
         {
             btn_today_Click(this, EventArgs.Empty);
-
             TodayStatisticsRevenue();
-
         }
 
        
@@ -260,6 +260,7 @@ namespace Cineverse
             RevenueChart.Titles.Add(chartTitle);
 
         }
+
 
 
         private void btn_exit_Click(object sender, EventArgs e)

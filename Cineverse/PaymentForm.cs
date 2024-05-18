@@ -164,12 +164,11 @@ namespace Cineverse
 
             if (lbl_change.Text.Equals("CHANGE: ₱"))
             {
-                return;
+                MessageBox.Show("Insufficient Cash.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             else
             {
-
-
                 UpdateAvailabilityToBooked(lbl_seats.Text);
 
                 int movie_id = 0;
@@ -308,10 +307,12 @@ namespace Cineverse
         private void txt_cash_TextChanged(object sender, EventArgs e)
         {
             double cashPayement = 0;
+            double change = 0;
             if (txt_cash.Text.Equals(""))
             {
                 return;
-            } else
+            } 
+            else
             {
                cashPayement = Convert.ToDouble(txt_cash.Text);
 
@@ -320,10 +321,25 @@ namespace Cineverse
             if (cashPayement > (countSeat * price))
             {
                 lbl_change.Text = "CHANGE: ₱" + (cashPayement - (countSeat * price));
+                change = (cashPayement - (countSeat * price));
             }
-            else
+            else if (cashPayement == (countSeat * price))
+            {
+                lbl_change.Text = "CHANGE: ₱ ";
+                change = (cashPayement - (countSeat * price));
+            } else
             {
                 lbl_change.Text = "CHANGE: ₱";
+            }
+            ReceiptForm.Cash = cashPayement.ToString();
+            ReceiptForm.Change = change.ToString();
+        }
+
+        private void txt_cash_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

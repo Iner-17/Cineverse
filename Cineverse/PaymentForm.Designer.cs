@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_currentDateAndTime = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_genre = new System.Windows.Forms.Label();
             this.btn_voucher = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer_paymentInProgress = new System.Windows.Forms.Timer(this.components);
-            this.lbl_currentDateAndTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
@@ -99,6 +99,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 865);
             this.panel1.TabIndex = 7;
+            // 
+            // lbl_currentDateAndTime
+            // 
+            this.lbl_currentDateAndTime.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_currentDateAndTime.ForeColor = System.Drawing.Color.White;
+            this.lbl_currentDateAndTime.Location = new System.Drawing.Point(27, 124);
+            this.lbl_currentDateAndTime.Name = "lbl_currentDateAndTime";
+            this.lbl_currentDateAndTime.Size = new System.Drawing.Size(266, 19);
+            this.lbl_currentDateAndTime.TabIndex = 40;
+            this.lbl_currentDateAndTime.Text = "March 28, 2024 • 4:30 PM";
+            this.lbl_currentDateAndTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_time
             // 
@@ -355,6 +366,7 @@
             this.txt_cash.Size = new System.Drawing.Size(227, 66);
             this.txt_cash.TabIndex = 31;
             this.txt_cash.TextChanged += new System.EventHandler(this.txt_cash_TextChanged);
+            this.txt_cash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cash_KeyPress);
             // 
             // lbl_paymentInProgress
             // 
@@ -486,17 +498,6 @@
             this.timer_paymentInProgress.Enabled = true;
             this.timer_paymentInProgress.Interval = 500;
             this.timer_paymentInProgress.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lbl_currentDateAndTime
-            // 
-            this.lbl_currentDateAndTime.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_currentDateAndTime.ForeColor = System.Drawing.Color.White;
-            this.lbl_currentDateAndTime.Location = new System.Drawing.Point(27, 124);
-            this.lbl_currentDateAndTime.Name = "lbl_currentDateAndTime";
-            this.lbl_currentDateAndTime.Size = new System.Drawing.Size(266, 19);
-            this.lbl_currentDateAndTime.TabIndex = 40;
-            this.lbl_currentDateAndTime.Text = "March 28, 2024 • 4:30 PM";
-            this.lbl_currentDateAndTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // PaymentForm
             // 
