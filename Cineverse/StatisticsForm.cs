@@ -82,7 +82,7 @@ namespace Cineverse
             RevenueChart.Series.Clear();
             if (tbl == null || tbl.Rows.Count == 0) return;
 
-            string[] daysOfWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+            string[] daysOfWeek = { "Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 
             var sortedRevenue = tbl.AsEnumerable().OrderBy(row =>
             {
@@ -139,7 +139,7 @@ namespace Cineverse
             chartArea.AxisX.CustomLabels.Clear();
             for (int i = 0; i < daysOfWeek.Length; i++)
             {
-                chartArea.AxisX.CustomLabels.Add(i + 0.3, i + 1.5   , daysOfWeek[i]);
+                chartArea.AxisX.CustomLabels.Add(i + 0.3, i + 1.5, daysOfWeek[i]);
             }
 
             // Customize chart appearance
