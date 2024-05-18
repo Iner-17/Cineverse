@@ -36,6 +36,7 @@ namespace Cineverse
         private void displayRevenueChart(DataTable tbl)
         {
             RevenueChart.Series.Clear();
+            ResetChartArea();
             if (tbl == null) return;
 
             var sortedRevenue = tbl.AsEnumerable().OrderBy(row => DateTime.Parse(row.Field<string>("time_booked")));
@@ -89,6 +90,7 @@ namespace Cineverse
             this.RevenueChart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
             this.RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
         }
+
         private void displayWeeklyRevenueChart(DataTable tbl)
         {
             RevenueChart.Series.Clear();
@@ -120,14 +122,13 @@ namespace Cineverse
             };
             areaSeries.BackGradientStyle = GradientStyle.TopBottom;
 
-            for (int i = 0; i < daysOfWeek.Length; i++)
+            foreach (var dayOfWeek in daysOfWeek)
             {
-                var dayOfWeek = daysOfWeek[i];
                 var row = sortedRevenue.FirstOrDefault(r => r.Field<string>("DayOfWeek").Contains(dayOfWeek));
                 double totalRevenue = row != null ? Convert.ToDouble(row["Revenue"]) : 0;
 
                 // Map day of week to X-axis position
-                int dayIndex = i + 1; // Adding 1 to match 1-based index of X-axis
+                int dayIndex = Array.IndexOf(daysOfWeek, dayOfWeek) + 1; // Adding 1 to match 1-based index of X-axis
 
                 DataPoint dataPoint = new DataPoint(dayIndex, totalRevenue); // X-axis position starts from 1
                 dataPoint.MarkerStyle = MarkerStyle.Circle; // Set marker style
