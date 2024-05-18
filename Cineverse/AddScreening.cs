@@ -101,6 +101,7 @@ namespace Cineverse
 
         private void btn_addTime_Click(object sender, EventArgs e)
         {
+
             string inputTime = dtp_time.Text;
             DateTime startTime = DateTime.ParseExact(inputTime, "HH:mm", null);
 
