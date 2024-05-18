@@ -27,32 +27,17 @@ namespace Cineverse.UserControls
             {
                 conn.Open();
 
-                string getListquery = "SELECT title, time_booked, seats_booked, ticket_quantity, ticket_total FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id;";
-                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
-                DataTable dt = new DataTable();
-                dataAdapter.Fill(dt);   
+                string getListquery = @"
+                        SELECT 
+                            title AS Title, 
+                            time_booked AS `Time Booked`, 
+                            seats_booked AS `Seats Booked`, 
+                            ticket_quantity AS `Quantity`, 
+                            ticket_total AS `Ticket Total` 
+                        FROM 
+                            movies 
+                            INNER JOIN bookings ON movies.movie_id = bookings.movie_id;";
 
-                dgv_booking.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
-
-          
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-            MySqlConnection conn = DBConnection.getConnection();
-
-            try
-            {
-                conn.Open();
-
-                string getListquery = "SELECT title, time_booked, seats_booked, ticket_quantity, ticket_total FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id;";
                 MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
                 DataTable dt = new DataTable();
@@ -64,8 +49,12 @@ namespace Cineverse.UserControls
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { conn.Close(); }
+            finally
+            {
+                conn.Close();
+            }
         }
+
 
         private void dgv_booking_SelectionChanged(object sender, EventArgs e)
         {
@@ -80,7 +69,7 @@ namespace Cineverse.UserControls
                     conn.Open();
                     string getBookingId = "SELECT book.booking_id FROM bookings as book INNER JOIN receipt as rec ON book.booking_id = rec.booking_id WHERE time_booked = @TimeBooked AND movie_title = @Title;";
                     MySqlCommand getBookingidcmd = new MySqlCommand(getBookingId, conn);
-                    getBookingidcmd.Parameters.AddWithValue("TimeBooked", selectedRow.Cells["time_booked"].Value.ToString());
+                    getBookingidcmd.Parameters.AddWithValue("TimeBooked", selectedRow.Cells["Time Booked"].Value.ToString());
                     getBookingidcmd.Parameters.AddWithValue("Title", selectedRow.Cells["title"].Value.ToString());
 
                     MySqlDataReader reader = getBookingidcmd.ExecuteReader();

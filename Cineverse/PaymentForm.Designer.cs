@@ -52,19 +52,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_transactionComplete = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_change = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.txt_cash = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.lbl_paymentInProgress = new System.Windows.Forms.Label();
             this.lbl_total2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pb_posterSelected = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_change = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer_paymentInProgress = new System.Windows.Forms.Timer(this.components);
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.lbl_currentDateAndTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
@@ -74,6 +75,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.lbl_currentDateAndTime);
             this.panel1.Controls.Add(this.lbl_time);
             this.panel1.Controls.Add(this.lbl_genre);
             this.panel1.Controls.Add(this.btn_voucher);
@@ -343,30 +345,6 @@
             this.panel4.Size = new System.Drawing.Size(1165, 865);
             this.panel4.TabIndex = 8;
             // 
-            // lbl_change
-            // 
-            this.lbl_change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.lbl_change.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_change.ForeColor = System.Drawing.Color.White;
-            this.lbl_change.Location = new System.Drawing.Point(53, 163);
-            this.lbl_change.Name = "lbl_change";
-            this.lbl_change.Size = new System.Drawing.Size(270, 51);
-            this.lbl_change.TabIndex = 33;
-            this.lbl_change.Text = "CHANGE: ₱";
-            this.lbl_change.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label8.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(52, 76);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 66);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "₱";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txt_cash
             // 
             this.txt_cash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
@@ -377,18 +355,6 @@
             this.txt_cash.Size = new System.Drawing.Size(227, 66);
             this.txt_cash.TabIndex = 31;
             this.txt_cash.TextChanged += new System.EventHandler(this.txt_cash_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label9.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(53, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(270, 30);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "CASH AMOUNT";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_paymentInProgress
             // 
@@ -445,6 +411,54 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "PAYMENT METHOD: CASH";
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.lbl_change);
+            this.panel7.Controls.Add(this.btn_transactionComplete);
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Location = new System.Drawing.Point(560, 321);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(374, 304);
+            this.panel7.TabIndex = 29;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.label8.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(52, 76);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(38, 66);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "₱";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_change
+            // 
+            this.lbl_change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.lbl_change.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_change.ForeColor = System.Drawing.Color.White;
+            this.lbl_change.Location = new System.Drawing.Point(53, 163);
+            this.lbl_change.Name = "lbl_change";
+            this.lbl_change.Size = new System.Drawing.Size(270, 51);
+            this.lbl_change.TabIndex = 33;
+            this.lbl_change.Text = "CHANGE: ₱";
+            this.lbl_change.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.label9.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(53, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(270, 30);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "CASH TENDERED";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
@@ -473,17 +487,16 @@
             this.timer_paymentInProgress.Interval = 500;
             this.timer_paymentInProgress.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel7
+            // lbl_currentDateAndTime
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.lbl_change);
-            this.panel7.Controls.Add(this.btn_transactionComplete);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(560, 321);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(374, 304);
-            this.panel7.TabIndex = 29;
+            this.lbl_currentDateAndTime.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_currentDateAndTime.ForeColor = System.Drawing.Color.White;
+            this.lbl_currentDateAndTime.Location = new System.Drawing.Point(27, 124);
+            this.lbl_currentDateAndTime.Name = "lbl_currentDateAndTime";
+            this.lbl_currentDateAndTime.Size = new System.Drawing.Size(266, 19);
+            this.lbl_currentDateAndTime.TabIndex = 40;
+            this.lbl_currentDateAndTime.Text = "March 28, 2024 • 4:30 PM";
+            this.lbl_currentDateAndTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // PaymentForm
             // 
@@ -547,5 +560,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbl_change;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lbl_currentDateAndTime;
     }
 }
