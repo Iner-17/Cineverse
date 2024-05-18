@@ -35,6 +35,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_currentDateAndTime = new System.Windows.Forms.Label();
+            this.lbl_cash = new System.Windows.Forms.Label();
+            this.lbl_change = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_genre = new System.Windows.Forms.Label();
             this.lbl_discount = new System.Windows.Forms.Label();
@@ -55,11 +60,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbl_change = new System.Windows.Forms.Label();
-            this.lbl_cash = new System.Windows.Forms.Label();
-            this.lbl_currentTimeAndDate = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -126,7 +126,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.lbl_currentTimeAndDate);
+            this.panel1.Controls.Add(this.lbl_currentDateAndTime);
             this.panel1.Controls.Add(this.lbl_cash);
             this.panel1.Controls.Add(this.lbl_change);
             this.panel1.Controls.Add(this.label8);
@@ -153,6 +153,59 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 865);
             this.panel1.TabIndex = 11;
+            // 
+            // lbl_currentDateAndTime
+            // 
+            this.lbl_currentDateAndTime.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_currentDateAndTime.ForeColor = System.Drawing.Color.White;
+            this.lbl_currentDateAndTime.Location = new System.Drawing.Point(25, 133);
+            this.lbl_currentDateAndTime.Name = "lbl_currentDateAndTime";
+            this.lbl_currentDateAndTime.Size = new System.Drawing.Size(266, 19);
+            this.lbl_currentDateAndTime.TabIndex = 39;
+            this.lbl_currentDateAndTime.Text = "March 28, 2024 • 4:30 PM";
+            this.lbl_currentDateAndTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_cash
+            // 
+            this.lbl_cash.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cash.ForeColor = System.Drawing.Color.White;
+            this.lbl_cash.Location = new System.Drawing.Point(182, 688);
+            this.lbl_cash.Name = "lbl_cash";
+            this.lbl_cash.Size = new System.Drawing.Size(113, 33);
+            this.lbl_cash.TabIndex = 38;
+            this.lbl_cash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_change
+            // 
+            this.lbl_change.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_change.ForeColor = System.Drawing.Color.White;
+            this.lbl_change.Location = new System.Drawing.Point(182, 727);
+            this.lbl_change.Name = "lbl_change";
+            this.lbl_change.Size = new System.Drawing.Size(113, 33);
+            this.lbl_change.TabIndex = 37;
+            this.lbl_change.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(19, 731);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 19);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Change:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(21, 705);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 19);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Cash Tendered:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_time
             // 
@@ -373,59 +426,6 @@
             this.panel3.Size = new System.Drawing.Size(90, 26);
             this.panel3.TabIndex = 9;
             // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 705);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 19);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "CASH:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(19, 731);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 19);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "CHANGE:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_change
-            // 
-            this.lbl_change.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_change.ForeColor = System.Drawing.Color.White;
-            this.lbl_change.Location = new System.Drawing.Point(182, 727);
-            this.lbl_change.Name = "lbl_change";
-            this.lbl_change.Size = new System.Drawing.Size(113, 33);
-            this.lbl_change.TabIndex = 37;
-            this.lbl_change.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_cash
-            // 
-            this.lbl_cash.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cash.ForeColor = System.Drawing.Color.White;
-            this.lbl_cash.Location = new System.Drawing.Point(182, 688);
-            this.lbl_cash.Name = "lbl_cash";
-            this.lbl_cash.Size = new System.Drawing.Size(113, 33);
-            this.lbl_cash.TabIndex = 38;
-            this.lbl_cash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_currentTimeAndDate
-            // 
-            this.lbl_currentTimeAndDate.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_currentTimeAndDate.ForeColor = System.Drawing.Color.White;
-            this.lbl_currentTimeAndDate.Location = new System.Drawing.Point(25, 133);
-            this.lbl_currentTimeAndDate.Name = "lbl_currentTimeAndDate";
-            this.lbl_currentTimeAndDate.Size = new System.Drawing.Size(266, 19);
-            this.lbl_currentTimeAndDate.TabIndex = 39;
-            this.lbl_currentTimeAndDate.Text = "March 28, 2024 • 4:30 PM";
-            this.lbl_currentTimeAndDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // ReceiptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +480,6 @@
         private System.Windows.Forms.Label lbl_change;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lbl_currentTimeAndDate;
+        private System.Windows.Forms.Label lbl_currentDateAndTime;
     }
 }

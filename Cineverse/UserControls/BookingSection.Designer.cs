@@ -36,19 +36,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_booking = new System.Windows.Forms.DataGridView();
             this.pnl_receipt = new System.Windows.Forms.Panel();
+            this.lbl_change = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_cash = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.lbl_priceTotal = new System.Windows.Forms.Label();
-            this.lbl_disc = new System.Windows.Forms.Label();
+            this.lbl_discount = new System.Windows.Forms.Label();
             this.lbl_quant = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_currentDateAndTime = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_genre = new System.Windows.Forms.Label();
-            this.lbl_discount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_total1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbl_ticketPrice = new System.Windows.Forms.Label();
-            this.lbl_total = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +59,6 @@
             this.lbl_cinemaNo = new System.Windows.Forms.Label();
             this.lbl_titlePayment = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_booking)).BeginInit();
             this.pnl_receipt.SuspendLayout();
             this.SuspendLayout();
@@ -129,7 +130,7 @@
             this.dgv_booking.RowTemplate.Height = 50;
             this.dgv_booking.RowTemplate.ReadOnly = true;
             this.dgv_booking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_booking.Size = new System.Drawing.Size(802, 672);
+            this.dgv_booking.Size = new System.Drawing.Size(819, 672);
             this.dgv_booking.TabIndex = 6;
             this.dgv_booking.SelectionChanged += new System.EventHandler(this.dgv_booking_SelectionChanged);
             // 
@@ -137,19 +138,21 @@
             // 
             this.pnl_receipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.pnl_receipt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_receipt.Controls.Add(this.lbl_change);
+            this.pnl_receipt.Controls.Add(this.label11);
+            this.pnl_receipt.Controls.Add(this.lbl_cash);
+            this.pnl_receipt.Controls.Add(this.label9);
             this.pnl_receipt.Controls.Add(this.lbl_priceTotal);
-            this.pnl_receipt.Controls.Add(this.lbl_disc);
+            this.pnl_receipt.Controls.Add(this.lbl_discount);
             this.pnl_receipt.Controls.Add(this.lbl_quant);
-            this.pnl_receipt.Controls.Add(this.label5);
+            this.pnl_receipt.Controls.Add(this.lbl_currentDateAndTime);
             this.pnl_receipt.Controls.Add(this.lbl_time);
             this.pnl_receipt.Controls.Add(this.lbl_genre);
-            this.pnl_receipt.Controls.Add(this.lbl_discount);
             this.pnl_receipt.Controls.Add(this.label3);
             this.pnl_receipt.Controls.Add(this.lbl_total1);
             this.pnl_receipt.Controls.Add(this.label1);
             this.pnl_receipt.Controls.Add(this.panel6);
             this.pnl_receipt.Controls.Add(this.lbl_ticketPrice);
-            this.pnl_receipt.Controls.Add(this.lbl_total);
             this.pnl_receipt.Controls.Add(this.label7);
             this.pnl_receipt.Controls.Add(this.label6);
             this.pnl_receipt.Controls.Add(this.label4);
@@ -158,51 +161,93 @@
             this.pnl_receipt.Controls.Add(this.lbl_cinemaNo);
             this.pnl_receipt.Controls.Add(this.lbl_titlePayment);
             this.pnl_receipt.Controls.Add(this.panel2);
-            this.pnl_receipt.Location = new System.Drawing.Point(855, 109);
+            this.pnl_receipt.Location = new System.Drawing.Point(875, 109);
             this.pnl_receipt.Name = "pnl_receipt";
             this.pnl_receipt.Size = new System.Drawing.Size(263, 672);
             this.pnl_receipt.TabIndex = 12;
+            // 
+            // lbl_change
+            // 
+            this.lbl_change.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_change.ForeColor = System.Drawing.Color.White;
+            this.lbl_change.Location = new System.Drawing.Point(153, 614);
+            this.lbl_change.Name = "lbl_change";
+            this.lbl_change.Size = new System.Drawing.Size(103, 19);
+            this.lbl_change.TabIndex = 42;
+            this.lbl_change.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(5, 614);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(134, 19);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Change:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_cash
+            // 
+            this.lbl_cash.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cash.ForeColor = System.Drawing.Color.White;
+            this.lbl_cash.Location = new System.Drawing.Point(153, 592);
+            this.lbl_cash.Name = "lbl_cash";
+            this.lbl_cash.Size = new System.Drawing.Size(103, 19);
+            this.lbl_cash.TabIndex = 40;
+            this.lbl_cash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(5, 595);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 19);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Cash Tendered:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_priceTotal
             // 
             this.lbl_priceTotal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_priceTotal.ForeColor = System.Drawing.Color.White;
-            this.lbl_priceTotal.Location = new System.Drawing.Point(153, 594);
+            this.lbl_priceTotal.Location = new System.Drawing.Point(153, 570);
             this.lbl_priceTotal.Name = "lbl_priceTotal";
             this.lbl_priceTotal.Size = new System.Drawing.Size(103, 19);
             this.lbl_priceTotal.TabIndex = 38;
             this.lbl_priceTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbl_disc
+            // lbl_discount
             // 
-            this.lbl_disc.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_disc.ForeColor = System.Drawing.Color.White;
-            this.lbl_disc.Location = new System.Drawing.Point(153, 564);
-            this.lbl_disc.Name = "lbl_disc";
-            this.lbl_disc.Size = new System.Drawing.Size(103, 19);
-            this.lbl_disc.TabIndex = 37;
-            this.lbl_disc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_discount.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_discount.ForeColor = System.Drawing.Color.White;
+            this.lbl_discount.Location = new System.Drawing.Point(153, 541);
+            this.lbl_discount.Name = "lbl_discount";
+            this.lbl_discount.Size = new System.Drawing.Size(103, 19);
+            this.lbl_discount.TabIndex = 37;
+            this.lbl_discount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_quant
             // 
             this.lbl_quant.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_quant.ForeColor = System.Drawing.Color.White;
-            this.lbl_quant.Location = new System.Drawing.Point(153, 545);
+            this.lbl_quant.Location = new System.Drawing.Point(153, 521);
             this.lbl_quant.Name = "lbl_quant";
             this.lbl_quant.Size = new System.Drawing.Size(103, 19);
             this.lbl_quant.TabIndex = 36;
             this.lbl_quant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // lbl_currentDateAndTime
             // 
-            this.label5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(253, 18);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "March 28, 2024 • Wednesday";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_currentDateAndTime.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_currentDateAndTime.ForeColor = System.Drawing.Color.White;
+            this.lbl_currentDateAndTime.Location = new System.Drawing.Point(3, 113);
+            this.lbl_currentDateAndTime.Name = "lbl_currentDateAndTime";
+            this.lbl_currentDateAndTime.Size = new System.Drawing.Size(253, 18);
+            this.lbl_currentDateAndTime.TabIndex = 35;
+            this.lbl_currentDateAndTime.Text = "March 28, 2024 • 4:00 PM";
+            this.lbl_currentDateAndTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_time
             // 
@@ -226,23 +271,13 @@
             this.lbl_genre.Text = "Genre";
             this.lbl_genre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_discount
-            // 
-            this.lbl_discount.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_discount.ForeColor = System.Drawing.Color.White;
-            this.lbl_discount.Location = new System.Drawing.Point(182, 628);
-            this.lbl_discount.Name = "lbl_discount";
-            this.lbl_discount.Size = new System.Drawing.Size(113, 29);
-            this.lbl_discount.TabIndex = 32;
-            this.lbl_discount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 564);
+            this.label3.Location = new System.Drawing.Point(3, 540);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 19);
+            this.label3.Size = new System.Drawing.Size(136, 19);
             this.label3.TabIndex = 31;
             this.label3.Text = "Discount:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,7 +296,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(5, 594);
+            this.label1.Location = new System.Drawing.Point(5, 570);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 19);
             this.label1.TabIndex = 29;
@@ -271,7 +306,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel6.Location = new System.Drawing.Point(-4, 588);
+            this.panel6.Location = new System.Drawing.Point(-4, 564);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(272, 3);
             this.panel6.TabIndex = 28;
@@ -280,29 +315,19 @@
             // 
             this.lbl_ticketPrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ticketPrice.ForeColor = System.Drawing.Color.White;
-            this.lbl_ticketPrice.Location = new System.Drawing.Point(155, 526);
+            this.lbl_ticketPrice.Location = new System.Drawing.Point(153, 498);
             this.lbl_ticketPrice.Name = "lbl_ticketPrice";
             this.lbl_ticketPrice.Size = new System.Drawing.Size(103, 19);
             this.lbl_ticketPrice.TabIndex = 25;
             this.lbl_ticketPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbl_total
-            // 
-            this.lbl_total.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.ForeColor = System.Drawing.Color.White;
-            this.lbl_total.Location = new System.Drawing.Point(145, 594);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(113, 29);
-            this.lbl_total.TabIndex = 24;
-            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 545);
+            this.label7.Location = new System.Drawing.Point(3, 521);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 19);
+            this.label7.Size = new System.Drawing.Size(153, 19);
             this.label7.TabIndex = 23;
             this.label7.Text = "Ticket/s Quantity:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,9 +336,9 @@
             // 
             this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 526);
+            this.label6.Location = new System.Drawing.Point(3, 500);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 19);
+            this.label6.Size = new System.Drawing.Size(136, 19);
             this.label6.TabIndex = 22;
             this.label6.Text = "Ticket/s Price:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,7 +347,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(5, 362);
+            this.label4.Location = new System.Drawing.Point(5, 346);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(249, 30);
             this.label4.TabIndex = 21;
@@ -334,7 +359,7 @@
             this.lbl_seats.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_seats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.lbl_seats.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl_seats.Location = new System.Drawing.Point(-2, 402);
+            this.lbl_seats.Location = new System.Drawing.Point(-2, 386);
             this.lbl_seats.Name = "lbl_seats";
             this.lbl_seats.Size = new System.Drawing.Size(263, 84);
             this.lbl_seats.TabIndex = 20;
@@ -384,25 +409,11 @@
             this.panel2.Size = new System.Drawing.Size(187, 83);
             this.panel2.TabIndex = 1;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1057, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 19);
-            this.label8.TabIndex = 80;
-            this.label8.Text = "Refresh";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
             // BookingSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.pnl_receipt);
             this.Controls.Add(this.dgv_booking);
             this.Controls.Add(this.label2);
@@ -422,13 +433,11 @@
         private System.Windows.Forms.Panel pnl_receipt;
         private System.Windows.Forms.Label lbl_time;
         private System.Windows.Forms.Label lbl_genre;
-        private System.Windows.Forms.Label lbl_discount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_total1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lbl_ticketPrice;
-        private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
@@ -437,10 +446,13 @@
         private System.Windows.Forms.Label lbl_cinemaNo;
         private System.Windows.Forms.Label lbl_titlePayment;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_currentDateAndTime;
         private System.Windows.Forms.Label lbl_priceTotal;
-        private System.Windows.Forms.Label lbl_disc;
+        private System.Windows.Forms.Label lbl_discount;
         private System.Windows.Forms.Label lbl_quant;
+        private System.Windows.Forms.Label lbl_cash;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_change;
     }
 }

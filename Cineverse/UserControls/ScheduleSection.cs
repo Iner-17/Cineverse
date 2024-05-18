@@ -61,7 +61,7 @@ namespace Cineverse.UserControls
             {
                 conn.Open();
 
-                string getListquery = "SELECT title, date, start_time, " +
+                string getListquery = "SELECT title AS Title, date AS Date, start_time AS Time, " +
                     "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
                     " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id;";
                 MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
