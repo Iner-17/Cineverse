@@ -224,6 +224,7 @@
             this.cbo_cinemaNum.Name = "cbo_cinemaNum";
             this.cbo_cinemaNum.Size = new System.Drawing.Size(100, 27);
             this.cbo_cinemaNum.TabIndex = 34;
+            this.cbo_cinemaNum.SelectedIndexChanged += new System.EventHandler(this.cbo_cinemaNum_SelectedIndexChanged);
             // 
             // txt_description
             // 
