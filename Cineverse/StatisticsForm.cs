@@ -315,7 +315,8 @@ namespace Cineverse
                 }
                 else
                 {
-                    lbl_totalRevenue.Text = "₱" + result.ToString();
+                    double totalRev = Convert.ToDouble(result.ToString());
+                    lbl_totalRevenue.Text = "₱" + totalRev.ToString("F2");
 
                 }
 
