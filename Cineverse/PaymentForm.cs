@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -202,7 +203,7 @@ namespace Cineverse
 
                 try
                 {
-                    DateTime date = DateTime.UtcNow.Date;
+                    DateTime date = DateTime.Now;
                     DateTime time = DateTime.Now;
 
                     conn.Open();
@@ -210,7 +211,7 @@ namespace Cineverse
                     cmd = new MySqlCommand(insertBookingData, conn);
                     cmd.Parameters.AddWithValue("@Ticket_quant", lbl_tcktQuantity.Text);
                     cmd.Parameters.AddWithValue("@Ticket_Total", price * Convert.ToInt32(lbl_tcktQuantity.Text));
-                    cmd.Parameters.AddWithValue("@CurrentDate", date.ToString("dd/MM/yyyy • dddd"));
+                    cmd.Parameters.AddWithValue("@CurrentDate", date.ToString("dd/MM/yyyy • dddd", new CultureInfo("en-PH")));
                     cmd.Parameters.AddWithValue("@TimeBooked", time.ToString("hh:mm tt"));
                     cmd.Parameters.AddWithValue("@Movie_ID", movie_id);
                     cmd.Parameters.AddWithValue("@SeatsBooked", lbl_seats.Text);

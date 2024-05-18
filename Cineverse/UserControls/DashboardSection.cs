@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -147,9 +148,8 @@ namespace Cineverse
                 conn.Open();
                 string getBookingsData = "SELECT SUM(ticket_quantity) FROM bookings WHERE currentDate = @CurrentDate;";
                 MySqlCommand cmd = new MySqlCommand(getBookingsData, conn);
-                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy • dddd"));
+                cmd.Parameters.AddWithValue("@CurrentDate", dateTime.ToString("dd/MM/yyyy • dddd", new CultureInfo("en-PH")));
                 object result = cmd.ExecuteScalar();
-
                 if (result.ToString().Equals(""))
                 {
                     lbl_todaysBooking.Text = "0";

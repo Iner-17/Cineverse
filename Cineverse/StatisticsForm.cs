@@ -188,6 +188,7 @@ namespace Cineverse
         {
             MySqlConnection conn = DBConnection.getConnection();
             DateTime CurrentTime = DateTime.Now;
+            MessageBox.Show(CurrentTime.ToString());
             try
             {
                 conn.Open();
