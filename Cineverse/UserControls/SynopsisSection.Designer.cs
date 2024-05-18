@@ -152,7 +152,7 @@
             this.lbl_rating.ForeColor = System.Drawing.Color.White;
             this.lbl_rating.Location = new System.Drawing.Point(354, 122);
             this.lbl_rating.Name = "lbl_rating";
-            this.lbl_rating.Size = new System.Drawing.Size(59, 19);
+            this.lbl_rating.Size = new System.Drawing.Size(60, 21);
             this.lbl_rating.TabIndex = 87;
             this.lbl_rating.Text = "Rating";
             // 
@@ -162,7 +162,7 @@
             this.lbl_description.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_description.Font = new System.Drawing.Font("Montserrat", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_description.ForeColor = System.Drawing.Color.White;
-            this.lbl_description.Location = new System.Drawing.Point(253, 246);
+            this.lbl_description.Location = new System.Drawing.Point(255, 249);
             this.lbl_description.Name = "lbl_description";
             this.lbl_description.Size = new System.Drawing.Size(517, 201);
             this.lbl_description.TabIndex = 86;
@@ -199,7 +199,7 @@
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
             this.lbl_genre1.Location = new System.Drawing.Point(354, 160);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(54, 19);
+            this.lbl_genre1.Size = new System.Drawing.Size(56, 21);
             this.lbl_genre1.TabIndex = 83;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -211,7 +211,7 @@
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
             this.lbl_duration1.Location = new System.Drawing.Point(354, 141);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(76, 19);
+            this.lbl_duration1.Size = new System.Drawing.Size(75, 21);
             this.lbl_duration1.TabIndex = 81;
             this.lbl_duration1.Text = "Duration";
             // 

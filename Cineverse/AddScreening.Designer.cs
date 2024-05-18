@@ -45,10 +45,6 @@
             this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_cinema4 = new System.Windows.Forms.Button();
-            this.btn_cinema2 = new System.Windows.Forms.Button();
-            this.btn_cinema3 = new System.Windows.Forms.Button();
-            this.btn_cinema1 = new System.Windows.Forms.Button();
             this.lbl_screeningdate = new System.Windows.Forms.Label();
             this.dgv_booking = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,6 +52,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_cinemaNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_booking)).BeginInit();
             this.SuspendLayout();
             // 
@@ -204,82 +202,6 @@
             this.label6.TabIndex = 41;
             this.label6.Text = "Enter Screening Date";
             // 
-            // btn_cinema4
-            // 
-            this.btn_cinema4.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cinema4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cinema4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_cinema4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cinema4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cinema4.ForeColor = System.Drawing.Color.White;
-            this.btn_cinema4.Location = new System.Drawing.Point(818, 234);
-            this.btn_cinema4.Name = "btn_cinema4";
-            this.btn_cinema4.Size = new System.Drawing.Size(199, 42);
-            this.btn_cinema4.TabIndex = 57;
-            this.btn_cinema4.Text = "Cinema 4";
-            this.btn_cinema4.UseVisualStyleBackColor = false;
-            this.btn_cinema4.Click += new System.EventHandler(this.btn_cinema4_Click);
-            this.btn_cinema4.MouseEnter += new System.EventHandler(this.btn_cinema4_MouseEnter);
-            this.btn_cinema4.MouseLeave += new System.EventHandler(this.btn_cinema4_MouseLeave);
-            // 
-            // btn_cinema2
-            // 
-            this.btn_cinema2.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cinema2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cinema2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_cinema2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_cinema2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_cinema2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cinema2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cinema2.ForeColor = System.Drawing.Color.White;
-            this.btn_cinema2.Location = new System.Drawing.Point(818, 176);
-            this.btn_cinema2.Name = "btn_cinema2";
-            this.btn_cinema2.Size = new System.Drawing.Size(199, 42);
-            this.btn_cinema2.TabIndex = 56;
-            this.btn_cinema2.Text = "Cinema 2";
-            this.btn_cinema2.UseVisualStyleBackColor = false;
-            this.btn_cinema2.Click += new System.EventHandler(this.btn_cinema2_Click);
-            this.btn_cinema2.MouseEnter += new System.EventHandler(this.btn_cinema2_MouseEnter);
-            this.btn_cinema2.MouseLeave += new System.EventHandler(this.btn_cinema2_MouseLeave);
-            // 
-            // btn_cinema3
-            // 
-            this.btn_cinema3.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cinema3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cinema3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_cinema3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cinema3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cinema3.ForeColor = System.Drawing.Color.White;
-            this.btn_cinema3.Location = new System.Drawing.Point(595, 234);
-            this.btn_cinema3.Name = "btn_cinema3";
-            this.btn_cinema3.Size = new System.Drawing.Size(199, 42);
-            this.btn_cinema3.TabIndex = 55;
-            this.btn_cinema3.Text = "Cinema 3";
-            this.btn_cinema3.UseVisualStyleBackColor = false;
-            this.btn_cinema3.Click += new System.EventHandler(this.btn_cinema3_Click);
-            this.btn_cinema3.MouseEnter += new System.EventHandler(this.btn_cinema3_MouseEnter);
-            this.btn_cinema3.MouseLeave += new System.EventHandler(this.btn_cinema3_MouseLeave);
-            // 
-            // btn_cinema1
-            // 
-            this.btn_cinema1.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cinema1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cinema1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_cinema1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_cinema1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_cinema1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cinema1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cinema1.ForeColor = System.Drawing.Color.White;
-            this.btn_cinema1.Location = new System.Drawing.Point(595, 176);
-            this.btn_cinema1.Name = "btn_cinema1";
-            this.btn_cinema1.Size = new System.Drawing.Size(199, 42);
-            this.btn_cinema1.TabIndex = 54;
-            this.btn_cinema1.Text = "Cinema 1";
-            this.btn_cinema1.UseVisualStyleBackColor = false;
-            this.btn_cinema1.Click += new System.EventHandler(this.btn_cinema1_Click);
-            this.btn_cinema1.MouseEnter += new System.EventHandler(this.btn_cinema1_MouseEnter);
-            this.btn_cinema1.MouseLeave += new System.EventHandler(this.btn_cinema1_MouseLeave);
-            // 
             // lbl_screeningdate
             // 
             this.lbl_screeningdate.BackColor = System.Drawing.Color.Transparent;
@@ -411,21 +333,43 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(530, 234);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 38);
+            this.label3.TabIndex = 62;
+            this.label3.Text = "CINEMA ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_cinemaNumber
+            // 
+            this.lbl_cinemaNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_cinemaNumber.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cinemaNumber.ForeColor = System.Drawing.Color.White;
+            this.lbl_cinemaNumber.Location = new System.Drawing.Point(658, 234);
+            this.lbl_cinemaNumber.Name = "lbl_cinemaNumber";
+            this.lbl_cinemaNumber.Size = new System.Drawing.Size(55, 38);
+            this.lbl_cinemaNumber.TabIndex = 63;
+            this.lbl_cinemaNumber.Text = "2";
+            this.lbl_cinemaNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AddScreening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(1138, 732);
+            this.Controls.Add(this.lbl_cinemaNumber);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_cinema4);
-            this.Controls.Add(this.btn_cinema2);
-            this.Controls.Add(this.btn_cinema3);
-            this.Controls.Add(this.btn_cinema1);
             this.Controls.Add(this.lbl_screeningdate);
             this.Controls.Add(this.dgv_booking);
             this.Controls.Add(this.btn_addScreening);
@@ -464,10 +408,6 @@
         private System.Windows.Forms.DateTimePicker dtp_date;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_cinema4;
-        private System.Windows.Forms.Button btn_cinema2;
-        private System.Windows.Forms.Button btn_cinema3;
-        private System.Windows.Forms.Button btn_cinema1;
         public System.Windows.Forms.Label lbl_screeningdate;
         private System.Windows.Forms.DataGridView dgv_booking;
         public System.Windows.Forms.Label label1;
@@ -475,5 +415,7 @@
         private System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lbl_cinemaNumber;
     }
 }
