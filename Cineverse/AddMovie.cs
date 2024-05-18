@@ -87,7 +87,9 @@ namespace Cineverse
 
                         movieId = (int)saveMoviecmd.LastInsertedId;
 
-                    
+                        AddScreening.GlobalLabelCinemaNumber = cbo_cinemaNum.Text;
+                        AddScreening.GlobalDuration = txt_addDuration.Text;
+
                         MessageBox.Show("Successfully Added Movie.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         AddScreening addScreening = new AddScreening();
@@ -127,6 +129,8 @@ namespace Cineverse
             {
                 MessageBox.Show(ex.Message);
             }
+
+
         }
 
         private void SaveImage(string filename)
@@ -167,19 +171,22 @@ namespace Cineverse
                 countCinemaNumbercmd.Parameters.AddWithValue("CinemaInput", Convert.ToInt32(cbo_cinemaNum.Text));
 
                 MySqlDataReader reader = countCinemaNumbercmd.ExecuteReader();
+            
 
                 if (reader.Read())
                 {
                     if (Convert.ToInt32(reader["count"].ToString()) == 3)
                     {
                         MessageBox.Show("Cinema Number " + cbo_cinemaNum.Text + " is full!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        cbo_cinemaNum.Text = "";
+                        cbo_cinemaNum.SelectedIndex = - 1;
+                        btn_saveMovie.Focus();
                     }
+
+
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }   
         }

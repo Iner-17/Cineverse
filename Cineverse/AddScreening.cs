@@ -7,8 +7,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cineverse
 {
@@ -18,6 +20,10 @@ namespace Cineverse
         private bool cinema2isActive = false;
         private bool cinema3isActive = false;
         private bool cinema4isActive = false;
+        public static string GlobalLabelCinemaNumber { get; set; }
+        public static string GlobalDuration { get; set; }
+
+        int cinemaNum = 0;
         public AddScreening()
         {
             InitializeComponent();
@@ -25,10 +31,11 @@ namespace Cineverse
 
         private void AddScreening_Load(object sender, EventArgs e)
         {
-
+            lbl_cinemaNumber.Text = GlobalLabelCinemaNumber;
+            cinemaNum = Convert.ToInt32(lbl_cinemaNumber.Text);
         }
 
-        private void currentDateScreenings()
+        private void currentDateScreeningsWithCinemaNumber(int cinemaNumber)
         {
             MySqlConnection conn = DBConnection.getConnection();
 
@@ -36,10 +43,11 @@ namespace Cineverse
             {
                 conn.Open();
 
-                string getListquery = "SELECT title as Title, start_time as Time, duration as xDuration FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date = @SelectedDate;";
+                string getListquery = "SELECT title as Title, start_time as Time, duration as xDuration FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id WHERE screening.date = @SelectedDate AND movies.cinema_number = @CinemaNumber;";
                 MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
                 getListcmd.Parameters.AddWithValue("SelectedDate", dtp_date.Text);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+                getListcmd.Parameters.AddWithValue("CinemaNumber", cinemaNumber);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);    
                 DataTable dt = new DataTable();
                 dataAdapter.Fill(dt);
 
@@ -64,10 +72,13 @@ namespace Cineverse
             finally { conn.Close(); }
 
         }
+
         private void dtp_date_ValueChanged(object sender, EventArgs e)
         {
-            currentDateScreenings();
+            currentDateScreeningsWithCinemaNumber(cinemaNum);
         }
+
+
 
         private void btn_addDate_Click_1(object sender, EventArgs e)
         {
@@ -90,20 +101,53 @@ namespace Cineverse
 
         private void btn_addTime_Click(object sender, EventArgs e)
         {
-            string[] time = dtp_time.Text.Split(':');
-            int timeInt = int.Parse(time[0] + time[1]);
+            string inputTime = dtp_time.Text;
+            DateTime startTime = DateTime.ParseExact(inputTime, "HH:mm", null);
 
-            if (timeInt >= 1000 && timeInt <= 1159)
-            {
-                cmb_timeAdded.Items.Add(dtp_time.Text + " AM");
-            }
-            else if (timeInt >= 1200 && timeInt <= 1259 || timeInt >= 100 && timeInt <= 959)
-            {
-                cmb_timeAdded.Items.Add(dtp_time.Text + " PM");
-            }
-        }
+            int lastIndexAddedTime = cmb_timeAdded.Items.Count - 1;
+            int lastIndexDGVTime = dgv_booking.Rows.Count - 2;
 
-        
+            bool isConflict = false;
+
+            if (dgv_booking.Rows.Count > 1)
+            {
+                object lastDGVTime = dgv_booking.Rows[lastIndexDGVTime].Cells["Time"].Value;
+                // Parse time from DataGridView with AM/PM
+                DateTime endTimeFromDGV = DateTime.Parse(lastDGVTime.ToString());
+
+                endTimeFromDGV = endTimeFromDGV.AddMinutes(Convert.ToInt32(GlobalDuration));
+
+                if (startTime <= endTimeFromDGV)
+                {
+                    isConflict = true;
+                }
+            }
+
+            if (lastIndexAddedTime >= 0 && !isConflict)
+            {
+                object mostCurrentItem = cmb_timeAdded.Items[lastIndexAddedTime];
+                // Parse time from ComboBox with AM/PM
+                DateTime endTime = DateTime.Parse(mostCurrentItem.ToString());
+                endTime = endTime.AddMinutes(Convert.ToInt32(GlobalDuration));
+
+                if (startTime <= endTime)
+                {
+                    isConflict = true;
+                }
+            }
+
+            if (!isConflict)
+            {
+                string formattedInputTime = startTime.ToString("h:mm tt");
+                cmb_timeAdded.Items.Add(formattedInputTime);
+            }
+            else
+            {
+                MessageBox.Show("There'll be conflicts with your time");
+            }
+        }   
+
+
 
         private void btn_addScreening_Click(object sender, EventArgs e)
         {
@@ -226,191 +270,6 @@ namespace Cineverse
 
             this.Close();
         }
-
-        private void btn_cinema1_Click(object sender, EventArgs e)
-        {
-            btn_cinema1.BackColor = Color.FromArgb(31, 178, 198);
-            btn_cinema1.ForeColor = Color.Black;
-
-            btn_cinema2.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema2.ForeColor = Color.White;
-
-            btn_cinema3.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema3.ForeColor = Color.White;
-
-            btn_cinema4.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema4.ForeColor = Color.White;
-
-            cinema1isActive = true;
-            cinema2isActive = false;
-            cinema3isActive = false;
-            cinema4isActive = false;
-        }
-
-        private void btn_cinema2_Click(object sender, EventArgs e)
-        {
-            btn_cinema1.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema1.ForeColor = Color.White;
-
-            btn_cinema2.BackColor = Color.FromArgb(31, 178, 198);
-            btn_cinema2.ForeColor = Color.Black;
-
-            btn_cinema3.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema3.ForeColor = Color.White;
-
-            btn_cinema4.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema4.ForeColor = Color.White;
-
-            cinema1isActive = false;
-            cinema2isActive = true;
-            cinema3isActive = false;
-            cinema4isActive = false;
-        }
-
-        private void btn_cinema3_Click(object sender, EventArgs e)
-        {
-            btn_cinema1.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema1.ForeColor = Color.White;
-
-            btn_cinema2.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema2.ForeColor = Color.White;
-
-            btn_cinema3.BackColor = Color.FromArgb(31, 178, 198);
-            btn_cinema3.ForeColor = Color.Black;
-
-            btn_cinema4.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema4.ForeColor = Color.White;
-
-            cinema1isActive = false;
-            cinema2isActive = false;
-            cinema3isActive = true;
-            cinema4isActive = false;
-        }
-
-        private void btn_cinema4_Click(object sender, EventArgs e)
-        {
-            btn_cinema1.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema1.ForeColor = Color.White;
-
-            btn_cinema2.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema2.ForeColor = Color.White;
-
-            btn_cinema3.BackColor = Color.FromArgb(20, 32, 32);
-            btn_cinema3.ForeColor = Color.White;
-
-            btn_cinema4.BackColor = Color.FromArgb(31, 178, 198);
-            btn_cinema4.ForeColor = Color.Black;
-
-            cinema1isActive = false;
-            cinema2isActive = false;
-            cinema3isActive = false;
-            cinema4isActive = true;
-        }
-
-        private void btn_cinema1_MouseEnter(object sender, EventArgs e)
-        {
-            if (cinema1isActive == false)
-            {
-                btn_cinema1.BackColor = Color.FromArgb(31, 178, 198);
-                btn_cinema1.ForeColor = Color.Black;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_cinema1_MouseLeave(object sender, EventArgs e)
-        {
-            if (cinema1isActive == false)
-            {
-                btn_cinema1.BackColor = Color.FromArgb(20, 32, 32);
-                btn_cinema1.ForeColor = Color.White;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_cinema2_MouseEnter(object sender, EventArgs e)
-        {
-            if (cinema2isActive == false)
-            {
-                btn_cinema2.BackColor = Color.FromArgb(31, 178, 198);
-                btn_cinema2.ForeColor = Color.Black;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_cinema2_MouseLeave(object sender, EventArgs e)
-        {
-            if (cinema2isActive == false)
-            {
-                btn_cinema2.BackColor = Color.FromArgb(20, 32, 32);
-                btn_cinema2.ForeColor = Color.White;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_cinema3_MouseEnter(object sender, EventArgs e)
-        {
-            if (cinema3isActive == false)
-            {
-                btn_cinema3.BackColor = Color.FromArgb(31, 178, 198);
-                btn_cinema3.ForeColor = Color.Black;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_cinema3_MouseLeave(object sender, EventArgs e)
-        {
-            if (cinema3isActive == false)
-            {
-                btn_cinema3.BackColor = Color.FromArgb(20, 32, 32);
-                btn_cinema3.ForeColor = Color.White;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_cinema4_MouseEnter(object sender, EventArgs e)
-        {
-            if (cinema4isActive == false)
-            {
-                btn_cinema4.BackColor = Color.FromArgb(31, 178, 198);
-                btn_cinema4.ForeColor = Color.Black;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_cinema4_MouseLeave(object sender, EventArgs e)
-        {
-            if (cinema4isActive == false)
-            {
-                btn_cinema4.BackColor = Color.FromArgb(20, 32, 32);
-                btn_cinema4.ForeColor = Color.White;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        
+    
     }
 }
