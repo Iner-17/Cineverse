@@ -14,6 +14,10 @@ namespace Cineverse
 {
     public partial class StatisticsForm : Form
     {
+
+        private bool todayButtonisActive = false;
+        private bool thisWeekButtonisActive = false;
+        private bool thisMonthButtonisActive = false;
         public StatisticsForm()
         {
             InitializeComponent();
@@ -89,6 +93,8 @@ namespace Cineverse
             this.RevenueChart.BackColor = Color.FromArgb(27, 28, 30);
             this.RevenueChart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
             this.RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+
+          
         }
 
         private void displayWeeklyRevenueChart(DataTable tbl)
@@ -167,8 +173,9 @@ namespace Cineverse
             RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
         }
 
-        private void StatisticsForm_Load(object sender, EventArgs e)
+            private void StatisticsForm_Load(object sender, EventArgs e)
         {
+            btn_today_Click(this, EventArgs.Empty);
 
         }
 
@@ -196,6 +203,17 @@ namespace Cineverse
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
+
+            // Adding and configuring the title
+            Title chartTitle = new Title("Hourly Revenue")
+            {
+                Font = new Font("Montserrat", 18, FontStyle.Bold),
+                ForeColor = Color.FromArgb(31, 178, 198),
+                Alignment = ContentAlignment.TopCenter
+            };
+
+            RevenueChart.Titles.Clear();
+            RevenueChart.Titles.Add(chartTitle);
         }
 
         private void weeklyRevenue()
@@ -224,6 +242,17 @@ namespace Cineverse
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
+
+            Title chartTitle = new Title("Daily Revenue")
+            {
+                Font = new Font("Montserrat", 18, FontStyle.Bold),
+                ForeColor = Color.FromArgb(31, 178, 198),
+                Alignment = ContentAlignment.TopCenter
+            };
+
+            RevenueChart.Titles.Clear();
+            RevenueChart.Titles.Add(chartTitle);
+
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -235,12 +264,137 @@ namespace Cineverse
 
         private void btn_today_Click(object sender, EventArgs e)
         {
+            btn_today.BackColor = Color.FromArgb(31, 178, 198);
+            btn_today.ForeColor = Color.Black;
+
+            btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
+            btn_thisWeek.ForeColor = Color.White;
+
+            btn_thisMonth.BackColor = Color.FromArgb(20, 32, 32);
+            btn_thisMonth.ForeColor = Color.White;
+
+            todayButtonisActive = true;
+            thisWeekButtonisActive = false;
+            thisMonthButtonisActive = false;
+
             todayRevenue();
         }
 
         private void btn_thisWeek_Click(object sender, EventArgs e)
         {
+            btn_today.BackColor = Color.FromArgb(20, 32, 32);
+            btn_today.ForeColor = Color.White;
+
+            btn_thisWeek.BackColor = Color.FromArgb(31, 178, 198);
+            btn_thisWeek.ForeColor = Color.Black;
+
+            btn_thisMonth.BackColor = Color.FromArgb(20, 32, 32);
+            btn_thisMonth.ForeColor = Color.White;
+
+            todayButtonisActive = false;
+            thisWeekButtonisActive = true;
+            thisMonthButtonisActive = false;
+
             weeklyRevenue();
+        }
+
+        private void btn_today_MouseEnter(object sender, EventArgs e)
+        {
+            if (todayButtonisActive == false)
+            {
+                btn_today.BackColor = Color.FromArgb(31, 178, 198);
+                btn_today.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_today_MouseLeave(object sender, EventArgs e)
+        {
+            if (todayButtonisActive == false)
+            {
+                btn_today.BackColor = Color.FromArgb(20, 32, 32);
+                btn_today.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_thisWeek_MouseEnter(object sender, EventArgs e)
+        {
+            if (thisWeekButtonisActive == false)
+            {
+                btn_thisWeek.BackColor = Color.FromArgb(31, 178, 198);
+                btn_thisWeek.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_thisWeek_MouseLeave(object sender, EventArgs e)
+        {
+            if (thisWeekButtonisActive == false)
+            {
+                btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
+                btn_thisWeek.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_thisMonth_MouseEnter(object sender, EventArgs e)
+        {
+            if (thisMonthButtonisActive == false)
+            {
+                btn_thisMonth.BackColor = Color.FromArgb(31, 178, 198);
+                btn_thisMonth.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_thisMonth_MouseLeave(object sender, EventArgs e)
+        {
+            if (thisMonthButtonisActive == false)
+            {
+                btn_thisMonth.BackColor = Color.FromArgb(20, 32, 32);
+                btn_thisMonth.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_thisMonth_Click(object sender, EventArgs e)
+        {
+            btn_today.BackColor = Color.FromArgb(20, 32, 32);
+            btn_today.ForeColor = Color.White;
+
+            btn_thisWeek.BackColor = Color.FromArgb(20, 32, 32);
+            btn_thisWeek.ForeColor = Color.White;
+
+            btn_thisMonth.BackColor = Color.FromArgb(31, 178, 198);
+            btn_thisMonth.ForeColor = Color.Black;
+
+            todayButtonisActive = false;
+            thisWeekButtonisActive = false;
+            thisMonthButtonisActive = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

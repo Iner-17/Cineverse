@@ -33,7 +33,7 @@ namespace Cineverse.UserControls
                             time_booked AS `Time Booked`, 
                             seats_booked AS `Seats Booked`, 
                             ticket_quantity AS `Quantity`, 
-                            ticket_total AS `Ticket Total` 
+                            ticket_total AS `Total` 
                         FROM 
                             movies 
                             INNER JOIN bookings ON movies.movie_id = bookings.movie_id;";
