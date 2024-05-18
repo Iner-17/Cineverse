@@ -38,18 +38,19 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_exit = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbl_totalRevenue = new System.Windows.Forms.Label();
             this.RevenueChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_totalTransactions = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_thisWeek = new System.Windows.Forms.Button();
-            this.btn_thisMonth = new System.Windows.Forms.Button();
+            this.btn_daily = new System.Windows.Forms.Button();
+            this.btn_monthly = new System.Windows.Forms.Button();
             this.btn_today = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_weekly = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.TopMoviesChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RevenueChart)).BeginInit();
@@ -90,6 +91,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(296, 113);
             this.panel9.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(83, -13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 38);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Total Revenue";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_totalRevenue
             // 
@@ -182,45 +194,45 @@
             this.label3.Text = "Total Transactions";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_thisWeek
+            // btn_daily
             // 
-            this.btn_thisWeek.BackColor = System.Drawing.Color.Transparent;
-            this.btn_thisWeek.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_thisWeek.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_thisWeek.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_thisWeek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_thisWeek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thisWeek.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thisWeek.ForeColor = System.Drawing.Color.White;
-            this.btn_thisWeek.Location = new System.Drawing.Point(365, 187);
-            this.btn_thisWeek.Name = "btn_thisWeek";
-            this.btn_thisWeek.Size = new System.Drawing.Size(241, 42);
-            this.btn_thisWeek.TabIndex = 24;
-            this.btn_thisWeek.Text = "This Week";
-            this.btn_thisWeek.UseVisualStyleBackColor = false;
-            this.btn_thisWeek.Click += new System.EventHandler(this.btn_thisWeek_Click);
-            this.btn_thisWeek.MouseEnter += new System.EventHandler(this.btn_thisWeek_MouseEnter);
-            this.btn_thisWeek.MouseLeave += new System.EventHandler(this.btn_thisWeek_MouseLeave);
+            this.btn_daily.BackColor = System.Drawing.Color.Transparent;
+            this.btn_daily.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_daily.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_daily.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_daily.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_daily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_daily.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_daily.ForeColor = System.Drawing.Color.White;
+            this.btn_daily.Location = new System.Drawing.Point(264, 186);
+            this.btn_daily.Name = "btn_daily";
+            this.btn_daily.Size = new System.Drawing.Size(211, 42);
+            this.btn_daily.TabIndex = 24;
+            this.btn_daily.Text = "Daily";
+            this.btn_daily.UseVisualStyleBackColor = false;
+            this.btn_daily.Click += new System.EventHandler(this.btn_daily_Click);
+            this.btn_daily.MouseEnter += new System.EventHandler(this.btn_daily_MouseEnter);
+            this.btn_daily.MouseLeave += new System.EventHandler(this.btn_daily_MouseLeave);
             // 
-            // btn_thisMonth
+            // btn_monthly
             // 
-            this.btn_thisMonth.BackColor = System.Drawing.Color.Transparent;
-            this.btn_thisMonth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_thisMonth.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_thisMonth.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_thisMonth.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_thisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thisMonth.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thisMonth.ForeColor = System.Drawing.Color.White;
-            this.btn_thisMonth.Location = new System.Drawing.Point(617, 186);
-            this.btn_thisMonth.Name = "btn_thisMonth";
-            this.btn_thisMonth.Size = new System.Drawing.Size(241, 42);
-            this.btn_thisMonth.TabIndex = 26;
-            this.btn_thisMonth.Text = "This Month";
-            this.btn_thisMonth.UseVisualStyleBackColor = false;
-            this.btn_thisMonth.Click += new System.EventHandler(this.btn_thisMonth_Click);
-            this.btn_thisMonth.MouseEnter += new System.EventHandler(this.btn_thisMonth_MouseEnter);
-            this.btn_thisMonth.MouseLeave += new System.EventHandler(this.btn_thisMonth_MouseLeave);
+            this.btn_monthly.BackColor = System.Drawing.Color.Transparent;
+            this.btn_monthly.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_monthly.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_monthly.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_monthly.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_monthly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_monthly.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_monthly.ForeColor = System.Drawing.Color.White;
+            this.btn_monthly.Location = new System.Drawing.Point(728, 186);
+            this.btn_monthly.Name = "btn_monthly";
+            this.btn_monthly.Size = new System.Drawing.Size(211, 42);
+            this.btn_monthly.TabIndex = 26;
+            this.btn_monthly.Text = "Monthly";
+            this.btn_monthly.UseVisualStyleBackColor = false;
+            this.btn_monthly.Click += new System.EventHandler(this.btn_monthly_Click);
+            this.btn_monthly.MouseEnter += new System.EventHandler(this.btn_monthly_MouseEnter);
+            this.btn_monthly.MouseLeave += new System.EventHandler(this.btn_monthly_MouseLeave);
             // 
             // btn_today
             // 
@@ -232,9 +244,9 @@
             this.btn_today.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_today.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_today.ForeColor = System.Drawing.Color.White;
-            this.btn_today.Location = new System.Drawing.Point(113, 187);
+            this.btn_today.Location = new System.Drawing.Point(32, 186);
             this.btn_today.Name = "btn_today";
-            this.btn_today.Size = new System.Drawing.Size(241, 42);
+            this.btn_today.Size = new System.Drawing.Size(211, 42);
             this.btn_today.TabIndex = 25;
             this.btn_today.Text = "Today";
             this.btn_today.UseVisualStyleBackColor = false;
@@ -255,14 +267,35 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel2.Controls.Add(this.btn_weekly);
             this.panel2.Controls.Add(this.RevenueChart);
-            this.panel2.Controls.Add(this.btn_thisWeek);
+            this.panel2.Controls.Add(this.btn_daily);
             this.panel2.Controls.Add(this.btn_today);
-            this.panel2.Controls.Add(this.btn_thisMonth);
+            this.panel2.Controls.Add(this.btn_monthly);
             this.panel2.Location = new System.Drawing.Point(539, 54);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(969, 865);
             this.panel2.TabIndex = 13;
+            // 
+            // btn_weekly
+            // 
+            this.btn_weekly.BackColor = System.Drawing.Color.Transparent;
+            this.btn_weekly.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_weekly.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_weekly.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_weekly.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_weekly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_weekly.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_weekly.ForeColor = System.Drawing.Color.White;
+            this.btn_weekly.Location = new System.Drawing.Point(496, 186);
+            this.btn_weekly.Name = "btn_weekly";
+            this.btn_weekly.Size = new System.Drawing.Size(211, 42);
+            this.btn_weekly.TabIndex = 27;
+            this.btn_weekly.Text = "Weekly";
+            this.btn_weekly.UseVisualStyleBackColor = false;
+            this.btn_weekly.Click += new System.EventHandler(this.btn_weekly_Click);
+            this.btn_weekly.MouseEnter += new System.EventHandler(this.btn_weekly_MouseEnter);
+            this.btn_weekly.MouseLeave += new System.EventHandler(this.btn_weekly_MouseLeave);
             // 
             // panel5
             // 
@@ -274,20 +307,10 @@
             this.panel5.Size = new System.Drawing.Size(518, 865);
             this.panel5.TabIndex = 27;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, -13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 38);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Total Revenue";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // TopMoviesChart
             // 
             this.TopMoviesChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
             chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
             chartArea2.Name = "ChartArea1";
             this.TopMoviesChart.ChartAreas.Add(chartArea2);
@@ -343,13 +366,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_totalTransactions;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_thisWeek;
-        private System.Windows.Forms.Button btn_thisMonth;
+        private System.Windows.Forms.Button btn_daily;
+        private System.Windows.Forms.Button btn_monthly;
         private System.Windows.Forms.Button btn_today;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart TopMoviesChart;
+        private System.Windows.Forms.Button btn_weekly;
     }
 }

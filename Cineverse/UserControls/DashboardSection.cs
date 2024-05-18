@@ -139,7 +139,7 @@ namespace Cineverse
         public void UpdateBookings()
         {
 
-            DateTime dateTime = DateTime.UtcNow.Date;
+            DateTime dateTime = DateTime.Now;
             MySqlConnection conn = DBConnection.getConnection();
             //getting total bookings
             try
@@ -186,7 +186,7 @@ namespace Cineverse
                 lbl_revenue.Text = "₱" + result.ToString();
 
                 }
-
+                
 
             }
             catch (Exception ex)
