@@ -155,6 +155,33 @@ namespace Cineverse
 
         }
 
-       
+        private void cbo_cinemaNum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+                string countCinemaNumber = "SELECT Count(cinema_number) as count from movies where cinema_number = @CinemaInput;";
+                MySqlCommand countCinemaNumbercmd = new MySqlCommand(countCinemaNumber, conn);
+                countCinemaNumbercmd.Parameters.AddWithValue("CinemaInput", Convert.ToInt32(cbo_cinemaNum.Text));
+
+                MySqlDataReader reader = countCinemaNumbercmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    if (Convert.ToInt32(reader["count"].ToString()) == 3)
+                    {
+                        MessageBox.Show("Cinema Number " + cbo_cinemaNum.Text + " is full!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        cbo_cinemaNum.Text = "";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }   
+        }
     }
 }
