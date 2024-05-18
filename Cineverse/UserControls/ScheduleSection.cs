@@ -61,9 +61,19 @@ namespace Cineverse.UserControls
             {
                 conn.Open();
 
-                string getListquery = "SELECT title AS Title, date AS Date, start_time AS Time, " +
-                    "(SELECT COUNT(*) FROM seats WHERE screening_id = screening.screening_id AND availability = 1) AS available_seats, cinema_number" +
-                    " FROM movies INNER JOIN screening ON movies.movie_id = screening.movie_id;";
+                string getListquery = @"
+            SELECT 
+                title AS Title, 
+                date AS Date, 
+                start_time AS Time, 
+                (SELECT COUNT(*) 
+                 FROM seats 
+                 WHERE screening_id = screening.screening_id AND availability = 1) AS `Available Seats`, 
+                cinema_number AS `Cinema Num`
+            FROM 
+                movies 
+                INNER JOIN screening ON movies.movie_id = screening.movie_id;";
+
                 MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
                 DataTable dt = new DataTable();
@@ -75,10 +85,14 @@ namespace Cineverse.UserControls
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { conn.Close(); }
+            finally
+            {
+                conn.Close();
+            }
 
             cbo_movies.SelectedIndex = -1;
         }
+
 
         private void btn_all_Click(object sender, EventArgs e)
         {
