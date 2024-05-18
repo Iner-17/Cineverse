@@ -82,7 +82,7 @@ namespace Cineverse
             RevenueChart.Series.Clear();
             if (tbl == null || tbl.Rows.Count == 0) return;
 
-            string[] daysOfWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+            string[] daysOfWeek = { "Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 
             var sortedRevenue = tbl.AsEnumerable().OrderBy(row =>
             {
