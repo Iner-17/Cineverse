@@ -101,7 +101,7 @@ namespace Cineverse
                 lbl_total1.Text = "₱ " + (total - discountedTotal).ToString("F2");
                 lbl_total2.Text = lbl_total1.Text;
                 txt_cash.Text = "";
-                lbl_change.Text = "CHANGE: ₱";
+                lbl_change.Text = "CHANGE: ₱ ";
             }
             else if (voucherActivated == true)
             {
@@ -336,9 +336,6 @@ namespace Cineverse
                 }
 
 
-                MessageBox.Show(bookingId.ToString());
-
-
                 BookingSection booking = new BookingSection();
                 booking.BookingSection_Load(this, EventArgs.Empty);
 
@@ -414,6 +411,9 @@ namespace Cineverse
             {
                 lbl_change.Text = "CHANGE: ₱ ";
                 change = (cashPayement - total2);
+            } else if (cashPayement == ((countSeat * price) / 2))
+            {
+                lbl_change.Text = "CHANGE: ₱ ";
             } else
             {
                 lbl_change.Text = "CHANGE: ₱";
@@ -468,6 +468,9 @@ namespace Cineverse
             this.Hide();
         }
 
-        
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
