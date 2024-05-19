@@ -56,6 +56,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RevenueChart)).BeginInit();
             this.panel1.SuspendLayout();
@@ -304,6 +305,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Controls.Add(this.TopMoviesChart);
             this.panel5.Location = new System.Drawing.Point(12, 54);
@@ -320,14 +322,14 @@
             this.TopMoviesChart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.TopMoviesChart.Legends.Add(legend2);
-            this.TopMoviesChart.Location = new System.Drawing.Point(20, 205);
+            this.TopMoviesChart.Location = new System.Drawing.Point(20, 303);
             this.TopMoviesChart.Name = "TopMoviesChart";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.TopMoviesChart.Series.Add(series2);
-            this.TopMoviesChart.Size = new System.Drawing.Size(478, 337);
+            this.TopMoviesChart.Size = new System.Drawing.Size(478, 538);
             this.TopMoviesChart.TabIndex = 0;
             this.TopMoviesChart.Text = "chart1";
             // 
@@ -375,6 +377,18 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Total Transactions";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.label5.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(108, 203);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(303, 78);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "TOP 5 BEST SELLING MOVIES";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StatisticsForm
             // 
@@ -430,5 +444,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
