@@ -44,7 +44,7 @@ namespace Cineverse
 
 
         
-
+        // LOGIN QUERY
         public void login()
         {
             MySqlConnection conn = DBConnection.getConnection();
