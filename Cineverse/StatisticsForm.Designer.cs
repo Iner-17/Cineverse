@@ -38,8 +38,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_exit = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbl_totalRevenue = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.RevenueChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_totalTransactions = new System.Windows.Forms.Label();
@@ -51,12 +51,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_weekly = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.TopMoviesChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RevenueChart)).BeginInit();
             this.panel1.SuspendLayout();
@@ -98,17 +98,6 @@
             this.panel9.Size = new System.Drawing.Size(296, 84);
             this.panel9.TabIndex = 9;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.label1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(169, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 38);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Total Revenue";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbl_totalRevenue
             // 
             this.lbl_totalRevenue.BackColor = System.Drawing.Color.Transparent;
@@ -120,6 +109,17 @@
             this.lbl_totalRevenue.TabIndex = 4;
             this.lbl_totalRevenue.Text = "₱250,000,000.00";
             this.lbl_totalRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(169, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 38);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Total Revenue";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RevenueChart
             // 
@@ -313,6 +313,18 @@
             this.panel5.Size = new System.Drawing.Size(518, 865);
             this.panel5.TabIndex = 27;
             // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.label5.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(108, 203);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(303, 78);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "TOP 5 BEST SELLING MOVIES";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TopMoviesChart
             // 
             this.TopMoviesChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
@@ -327,7 +339,7 @@
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "topMovieSeries";
             this.TopMoviesChart.Series.Add(series2);
             this.TopMoviesChart.Size = new System.Drawing.Size(478, 538);
             this.TopMoviesChart.TabIndex = 0;
@@ -377,18 +389,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Total Transactions";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.label5.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(108, 203);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(303, 78);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "TOP 5 BEST SELLING MOVIES";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StatisticsForm
             // 
