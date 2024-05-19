@@ -61,6 +61,8 @@ namespace Cineverse
 
         private void Seats_Load(object sender, EventArgs e)
         {
+            
+
             MySqlConnection conn = DBConnection.getConnection();
             //Set movie lists
             try
@@ -89,8 +91,32 @@ namespace Cineverse
                 string titleFromMovieSection = TitleFromMovieSection;
                 cbo_titleLists.Text = titleFromMovieSection;
             }
-            
 
+            try
+            {
+                conn.Open();
+
+                string getMovieListsQuery = "SELECT cinema_number FROM movies WHERE title = @Title;";
+                MySqlCommand getListcmd = new MySqlCommand(getMovieListsQuery, conn);
+                getListcmd.Parameters.AddWithValue("Title", cbo_titleLists.Text);
+                MySqlDataReader getListdata = getListcmd.ExecuteReader();
+
+                while (getListdata.Read())
+                {
+                    string cinemaNum = getListdata["cinema_number"].ToString();
+                    lbl_cinemaNumber.Text = "CINEMA " + cinemaNum;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured.");
+            }
+            finally
+            {
+                conn.Close();
+                string titleFromMovieSection = TitleFromMovieSection;
+                cbo_titleLists.Text = titleFromMovieSection;
+            }
         }
 
         private void cbo_titleLists_SelectedIndexChanged(object sender, EventArgs e)

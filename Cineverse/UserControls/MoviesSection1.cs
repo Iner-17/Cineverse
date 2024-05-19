@@ -21,6 +21,7 @@ namespace Cineverse
     {
         private string username;
         public string Title { get; set; }
+        public static string CinemaNumber { get; set; }
 
         public MoviesSection1()
         {
@@ -545,7 +546,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title1.Text;
-
+                CinemaNumber = "1";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -565,7 +566,7 @@ namespace Cineverse
             } else
             {
                 Title = lbl_title2.Text;
-
+                CinemaNumber = "1";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -585,7 +586,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title3.Text;
-
+                CinemaNumber = "1";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -604,7 +605,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title4.Text;
-
+                CinemaNumber = "2";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -623,7 +624,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title5.Text;
-
+                CinemaNumber = "2";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -642,7 +643,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title6.Text;
-
+                CinemaNumber = "2";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -661,7 +662,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title7.Text;
-
+                CinemaNumber = "3";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -680,7 +681,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title8.Text;
-
+                CinemaNumber = "3";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -699,7 +700,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title9.Text;
-
+                CinemaNumber = "3";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -718,7 +719,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title10.Text;
-
+                CinemaNumber = "4";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -737,7 +738,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title11.Text;
-
+                CinemaNumber = "4";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
@@ -756,7 +757,7 @@ namespace Cineverse
             else
             {
                 Title = lbl_title12.Text;
-
+                CinemaNumber = "4";
                 Seats seatsForm = new Seats(username);
                 seatsForm.TitleFromMovieSection = Title;
 
