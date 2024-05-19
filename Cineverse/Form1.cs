@@ -27,6 +27,7 @@ namespace Cineverse
             }
         }
 
+        //send username to dashboard
         public string GetTextBoxValue()
         {
             return txt_user.Text;
@@ -35,15 +36,8 @@ namespace Cineverse
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
-
         }
-        private void panel5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-
-        
+       
 
         public void login()
         {
@@ -227,11 +221,12 @@ namespace Cineverse
             }
         }
 
+
+        //space disabled
         private void txt_user_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
             {
-                // Suppress the space character
                 e.Handled = true;
             }
         }
@@ -240,6 +235,11 @@ namespace Cineverse
         {
             ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
             forgotPasswordForm.ShowDialog();
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
     }
