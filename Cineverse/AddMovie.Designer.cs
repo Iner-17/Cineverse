@@ -96,6 +96,7 @@
             this.txt_addPrice.Name = "txt_addPrice";
             this.txt_addPrice.Size = new System.Drawing.Size(100, 31);
             this.txt_addPrice.TabIndex = 9;
+            this.txt_addPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_addPrice_KeyPress);
             // 
             // label3
             // 
@@ -129,6 +130,7 @@
             this.txt_addDuration.Name = "txt_addDuration";
             this.txt_addDuration.Size = new System.Drawing.Size(136, 31);
             this.txt_addDuration.TabIndex = 13;
+            this.txt_addDuration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_addDuration_KeyPress);
             // 
             // label5
             // 

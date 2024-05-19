@@ -39,7 +39,7 @@ namespace Cineverse
 
             string mostSoldMovie = "SELECT movies.title, SUM(cineverse_revenue.total_amount) AS Total " +
                 "FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id " +
-                "LEFT JOIN cineverse_revenue ON bookings.booking_id = cineverse_revenue.booking_id GROUP BY movies.title";
+                "INNER JOIN cineverse_revenue ON bookings.booking_id = cineverse_revenue.booking_id GROUP BY movies.title";
             MySqlCommand mostSoldMoviecmd = new MySqlCommand(mostSoldMovie, conn);
 
             DataTable dt = new DataTable();
@@ -61,10 +61,9 @@ namespace Cineverse
                 string title = row["title"].ToString();
                 double totalSale = Convert.ToDouble(row["Total"]);
 
-                // Add both the title and total sale as data points to the series
                 DataPoint dataPoint = series.Points.Add(totalSale);
-                dataPoint.Label = $"₱ {totalSale}"; // Set the label to display the total sale value
-                dataPoint.AxisLabel = title; // Set the axis label to the movie title
+                dataPoint.Label = $"₱ {totalSale.ToString("F2")}"; 
+                dataPoint.AxisLabel = title;
                 dataPoint.LegendText = title;
             }
 
