@@ -97,7 +97,9 @@ namespace Cineverse
             this.RevenueChart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
             this.RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
 
-          
+            chartArea.AxisX.Title = "TIME (HOUR)";
+            chartArea.AxisY.Title = "REVENUE ₱";
+
         }
 
         //DAILY REVENUE
@@ -175,6 +177,9 @@ namespace Cineverse
             RevenueChart.ChartAreas[0].AxisY.LineColor = Color.White;
             RevenueChart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
             RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+
+            chartArea.AxisX.Title = "DAYS";
+            chartArea.AxisY.Title = "REVENUE ₱";
         }
 
         private void StatisticsForm_Load(object sender, EventArgs e)
@@ -188,7 +193,7 @@ namespace Cineverse
         {
             MySqlConnection conn = DBConnection.getConnection();
             DateTime CurrentTime = DateTime.Now;
-            MessageBox.Show(CurrentTime.ToString());
+           
             try
             {
                 conn.Open();
@@ -211,10 +216,10 @@ namespace Cineverse
             finally { conn.Close(); }
 
             // Adding and configuring the title
-            Title chartTitle = new Title("Hourly Revenue")
+            Title chartTitle = new Title("CINÉVERSE'S HOURLY REVENUE")
             {
-                Font = new Font("Montserrat", 18, FontStyle.Bold),
-                ForeColor = Color.FromArgb(31, 178, 198),
+                Font = new Font("Montserrat", 20, FontStyle.Bold),
+                ForeColor = Color.White,
                 Alignment = ContentAlignment.TopCenter
             };
 
@@ -249,16 +254,17 @@ namespace Cineverse
             }
             finally { conn.Close(); }
 
-            Title chartTitle = new Title("Daily Revenue")
+            Title chartTitle = new Title("CINÉVERSE'S DAILY REVENUE")
             {
-                Font = new Font("Montserrat", 18, FontStyle.Bold),
-                ForeColor = Color.FromArgb(31, 178, 198),
+                Font = new Font("Montserrat", 20, FontStyle.Bold),
+                ForeColor = Color.White,
                 Alignment = ContentAlignment.TopCenter
             };
 
             RevenueChart.Titles.Clear();
             RevenueChart.Titles.Add(chartTitle);
 
+            
         }
 
 
