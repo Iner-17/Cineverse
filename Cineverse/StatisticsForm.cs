@@ -52,6 +52,10 @@ namespace Cineverse
                 ChartType = SeriesChartType.Doughnut
             };
 
+            series.Font = new Font("Montserrat", 10, FontStyle.Bold); 
+            series.LabelForeColor = Color.Black; 
+
+
             foreach (DataRow row in dt.Rows)
             {
                 string title = row["title"].ToString();

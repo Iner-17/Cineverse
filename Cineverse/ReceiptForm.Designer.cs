@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_vat = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lbl_currentDateAndTime = new System.Windows.Forms.Label();
             this.lbl_cash = new System.Windows.Forms.Label();
             this.lbl_change = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_vat = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -158,6 +158,27 @@
             this.panel1.Size = new System.Drawing.Size(320, 865);
             this.panel1.TabIndex = 11;
             // 
+            // lbl_vat
+            // 
+            this.lbl_vat.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_vat.ForeColor = System.Drawing.Color.White;
+            this.lbl_vat.Location = new System.Drawing.Point(182, 585);
+            this.lbl_vat.Name = "lbl_vat";
+            this.lbl_vat.Size = new System.Drawing.Size(113, 25);
+            this.lbl_vat.TabIndex = 44;
+            this.lbl_vat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(23, 588);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 19);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "VAT:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lbl_currentDateAndTime
             // 
             this.lbl_currentDateAndTime.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,9 +194,9 @@
             // 
             this.lbl_cash.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cash.ForeColor = System.Drawing.Color.White;
-            this.lbl_cash.Location = new System.Drawing.Point(182, 697);
+            this.lbl_cash.Location = new System.Drawing.Point(182, 706);
             this.lbl_cash.Name = "lbl_cash";
-            this.lbl_cash.Size = new System.Drawing.Size(113, 33);
+            this.lbl_cash.Size = new System.Drawing.Size(113, 29);
             this.lbl_cash.TabIndex = 38;
             this.lbl_cash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -183,9 +204,9 @@
             // 
             this.lbl_change.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_change.ForeColor = System.Drawing.Color.White;
-            this.lbl_change.Location = new System.Drawing.Point(182, 736);
+            this.lbl_change.Location = new System.Drawing.Point(182, 739);
             this.lbl_change.Name = "lbl_change";
-            this.lbl_change.Size = new System.Drawing.Size(113, 33);
+            this.lbl_change.Size = new System.Drawing.Size(113, 29);
             this.lbl_change.TabIndex = 37;
             this.lbl_change.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -193,7 +214,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(19, 740);
+            this.label8.Location = new System.Drawing.Point(23, 739);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 19);
             this.label8.TabIndex = 36;
@@ -204,7 +225,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 714);
+            this.label5.Location = new System.Drawing.Point(21, 715);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 19);
             this.label5.TabIndex = 35;
@@ -429,27 +450,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(90, 26);
             this.panel3.TabIndex = 9;
-            // 
-            // lbl_vat
-            // 
-            this.lbl_vat.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_vat.ForeColor = System.Drawing.Color.White;
-            this.lbl_vat.Location = new System.Drawing.Point(182, 585);
-            this.lbl_vat.Name = "lbl_vat";
-            this.lbl_vat.Size = new System.Drawing.Size(113, 25);
-            this.lbl_vat.TabIndex = 44;
-            this.lbl_vat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(23, 588);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 19);
-            this.label10.TabIndex = 43;
-            this.label10.Text = "VAT:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ReceiptForm
             // 
