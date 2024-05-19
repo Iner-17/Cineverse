@@ -59,6 +59,7 @@
             this.btn_confirm.Size = new System.Drawing.Size(135, 35);
             this.btn_confirm.TabIndex = 14;
             this.btn_confirm.Text = "Confirm";
+            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
             // 
             // txt_confirmPass
             // 
@@ -158,6 +159,7 @@
             this.btn_cancel.Size = new System.Drawing.Size(135, 35);
             this.btn_cancel.TabIndex = 15;
             this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // label1
             // 

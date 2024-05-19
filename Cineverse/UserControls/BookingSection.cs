@@ -55,7 +55,6 @@ namespace Cineverse.UserControls
             }
         }
 
-
         private void dgv_booking_SelectionChanged(object sender, EventArgs e)
         {
             int bookingId = 0;
@@ -111,7 +110,7 @@ namespace Cineverse.UserControls
                         lbl_time.Text = reader2["time"].ToString();
                         lbl_dateTime.Text = reader2["date"].ToString();
                         lbl_seats.Text = reader2["seats_booked"].ToString();
-                        lbl_quant.Text = reader2["ticket_quantity"].ToString();
+                        lbl_quant.Text = reader2["ticket_quantity"].ToString(); 
                         lbl_ticketPrice.Text = "₱" + price.ToString("F2");
                         lbl_priceTotal.Text = "₱" + priceTotal.ToString("F2");
 

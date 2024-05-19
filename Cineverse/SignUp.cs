@@ -484,7 +484,7 @@ namespace Cineverse
            
         }
 
-        static bool IsValidPassword(string password)
+        public static bool IsValidPassword(string password)
         {
             var hasNumber = new Regex(@"[0-9]+");
             var hasMinimum8Chars = new Regex(@".{8,}");

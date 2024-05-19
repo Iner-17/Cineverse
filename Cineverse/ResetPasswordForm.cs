@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ExpenseApp;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,6 +97,50 @@ namespace Cineverse
             chk_showPass.Font = new Font(chk_showPass.Font, FontStyle.Regular); // Remove underline
         }
 
-        
+        private void btn_confirm_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+            string password = Security.Encrypt(txt_confirmPass.Text);
+
+            if(SignUp.IsValidPassword(txt_newPass.Text))
+            {       
+                if (txt_newPass.Text == txt_confirmPass.Text)
+                {
+                    try
+                    {
+                        conn.Open();
+
+                        string changePass = "UPDATE accounts SET password = @Password WHERE email = @Email ";
+                        MySqlCommand changePasscmd = new MySqlCommand(changePass, conn);
+
+                        changePasscmd.Parameters.AddWithValue("Password", password);
+                        changePasscmd.Parameters.AddWithValue("Email", email);
+                        changePasscmd.ExecuteNonQuery();
+                        MessageBox.Show("Password Changed Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally { conn.Close(); }
+                }
+                else
+                {
+                    MessageBox.Show("Password doesn't match", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            } else
+            {
+                MessageBox.Show("Password should have atleast 8 characters, 1 number, and 1 symbol.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
+            
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

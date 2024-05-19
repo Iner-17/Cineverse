@@ -248,6 +248,12 @@
     <Compile Include="UserControls\UserSection.Designer.cs">
       <DependentUpon>UserSection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher.Designer.cs">
+      <DependentUpon>Voucher.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddMovie.resx">
       <DependentUpon>AddMovie.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserSection.resx">
       <DependentUpon>UserSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher.resx">
+      <DependentUpon>Voucher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Cineverse_TemporaryKey.pfx" />
     <None Include="packages.config" />

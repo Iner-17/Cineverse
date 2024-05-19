@@ -174,6 +174,7 @@ namespace Cineverse
 
                         List<string> excludedSeatCodes = new List<string> { "A2", "A3", "A4", "A17", "A18", "A19", "B2", "B3", "B19", "C8", "C13", "D8", "D13", "E8", "E13", "F8", "F13", "G8", "G13", "H8", "H13", "I8", "I13", "J8", "J13" };
                         int screeningId = (int)insertScreeningcmd.LastInsertedId;
+
                         for (char row = 'A'; row <= 'J'; row++)
                         {
                             for (int seatNum = 2; seatNum <= 19; seatNum++)
