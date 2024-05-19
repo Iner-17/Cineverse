@@ -16,5 +16,10 @@ namespace Cineverse
         {
             InitializeComponent();
         }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

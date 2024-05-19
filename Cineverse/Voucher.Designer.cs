@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Voucher));
             this.txt_voucher = new System.Windows.Forms.TextBox();
             this.btn_submit = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // txt_voucher
@@ -57,12 +58,25 @@
             this.btn_submit.Text = "Submit";
             this.btn_submit.UseVisualStyleBackColor = false;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Location = new System.Drawing.Point(597, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(19, 26);
+            this.panel5.TabIndex = 7;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            // 
             // Voucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(628, 270);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.txt_voucher);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -79,5 +93,6 @@
 
         private System.Windows.Forms.TextBox txt_voucher;
         private System.Windows.Forms.Button btn_submit;
+        private System.Windows.Forms.Panel panel5;
     }
 }

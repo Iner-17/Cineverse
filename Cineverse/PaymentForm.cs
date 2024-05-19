@@ -17,6 +17,7 @@ namespace Cineverse
 {
     public partial class PaymentForm : Form
     {
+        bool voucherActivated = false;
         public PaymentForm()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace Cineverse
         private double price = 0;
         private int countSeat = 0;
         private string movieTitle = "";
+        private double discountFromVoucher = 0;
         public void GetDataFromSeatForm(string title, string date_, string time, string seatLists)
         {
             DateTime date = DateTime.ParseExact(date_, "MMMM  dd,  yyyy", System.Globalization.CultureInfo.InvariantCulture);
@@ -90,7 +92,7 @@ namespace Cineverse
 
         private void ckb_seniorDiscount_CheckedChanged(object sender, EventArgs e)
         {
-            if(ckb_seniorDiscount.Checked)
+            if(ckb_seniorDiscount.Checked && voucherActivated == false)
             {
                 lbl_discount.Text = "50%";
                 double total = Convert.ToDouble(lbl_total1.Text.Replace("₱ ", ""));
@@ -100,6 +102,20 @@ namespace Cineverse
                 lbl_total2.Text = lbl_total1.Text;
                 txt_cash.Text = "";
                 lbl_change.Text = "CHANGE: ₱";
+            }
+            else if (voucherActivated == true)
+            {
+                lbl_discount.Text = "50%";
+
+                double total = Convert.ToDouble(lbl_total1.Text.Replace("₱ ", ""));
+                double discountedTotal = Convert.ToDouble(lbl_total1.Text.Replace("₱ ", ""));
+                discountedTotal = discountedTotal * .10;
+                lbl_total1.Text = "₱ " + ((total + discountFromVoucher) / 2).ToString("F2");
+                lbl_total2.Text = lbl_total1.Text;
+                txt_cash.Text = "";
+                lbl_change.Text = "CHANGE: ₱";
+
+                voucherActivated = false;
             }
             else
             {
@@ -111,6 +127,49 @@ namespace Cineverse
                 txt_cash.Text = "";
                 lbl_change.Text = "CHANGE: ₱";
             }
+        }
+
+
+        private void btn_voucher_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+            try
+            {
+                conn.Open();
+                string deleteVoucher = "DELETE FROM vouchers WHERE voucher_code = @VoucherInput";
+                MySqlCommand cmd = new MySqlCommand(deleteVoucher, conn);
+                cmd.Parameters.AddWithValue("VoucherInput", txt_voucherCode.Text);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    lbl_discount.Text = "10%";
+
+                    double total = Convert.ToDouble(lbl_total1.Text.Replace("₱ ", ""));
+                    double discountedTotal = Convert.ToDouble(lbl_total1.Text.Replace("₱ ", ""));
+                    discountedTotal = discountedTotal * .10;
+                    lbl_total1.Text = "₱ " + (total - discountedTotal).ToString("F2");
+                    lbl_total2.Text = lbl_total1.Text;
+                    txt_cash.Text = "";
+                    lbl_change.Text = "CHANGE: ₱";
+
+                    discountFromVoucher = discountedTotal;
+                    voucherActivated = true;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Voucher Code", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
+            Voucher voucher = new Voucher();
+            voucher.Show();
         }
 
         private void UpdateAvailabilityToBooked(string seatList)
@@ -232,8 +291,7 @@ namespace Cineverse
                 //Insert into receipt
                 try
                 {
-                    
-
+                
                     conn.Open();
                     string insertBookingData = "INSERT INTO receipt (booking_id, movie_title, genre, cinema_number, time, date) VALUES (@BookingID, @Title, @Genre, @CinemaNumber, @Time, @Date);";
                     cmd = new MySqlCommand(insertBookingData, conn);
@@ -245,7 +303,6 @@ namespace Cineverse
                     cmd.Parameters.AddWithValue("@Date", lbl_dateTime.Text);
 
                     cmd.ExecuteNonQuery();
-
                 }
                 catch (Exception ex)
                 {
@@ -263,7 +320,7 @@ namespace Cineverse
                     string insertBookingData = "INSERT INTO cineverse_revenue (booking_id, total_amount, vatValue) VALUES (@BookingID, @Cineverse_revenue, @VatValue);";
                     cmd = new MySqlCommand(insertBookingData, conn);
                     cmd.Parameters.AddWithValue("@BookingID", bookingId);
-                    cmd.Parameters.AddWithValue("@Cineverse_revenue", Convert.ToDouble(lbl_total1.Text.Replace("₱", "")) + Convert.ToDouble(lbl_vat.Text));
+                    cmd.Parameters.AddWithValue("@Cineverse_revenue", Convert.ToDouble(lbl_total1.Text.Replace("₱", "")) - Convert.ToDouble(lbl_vat.Text));
                     cmd.Parameters.AddWithValue("@vatValue", Convert.ToDouble(lbl_vat.Text));
                    
                     cmd.ExecuteNonQuery();
@@ -316,14 +373,14 @@ namespace Cineverse
 
         private void btn_voucher_MouseEnter(object sender, EventArgs e)
         {
-            btn_voucher.BackColor = Color.FromArgb(31, 178, 198);
-            btn_voucher.ForeColor = Color.Black;
+            btn_submit.BackColor = Color.FromArgb(31, 178, 198);
+            btn_submit.ForeColor = Color.Black;
         }
 
         private void btn_voucher_MouseLeave(object sender, EventArgs e)
         {
-            btn_voucher.BackColor = Color.FromArgb(20, 32, 32);
-            btn_voucher.ForeColor = Color.White;
+            btn_submit.BackColor = Color.FromArgb(20, 32, 32);
+            btn_submit.ForeColor = Color.White;
         }
 
         private void pb_posterSelected_Click(object sender, EventArgs e)
@@ -411,5 +468,6 @@ namespace Cineverse
             this.Hide();
         }
 
+        
     }
 }
