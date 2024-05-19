@@ -361,7 +361,7 @@
             this.lbl_seats.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbl_seats.Location = new System.Drawing.Point(2, 386);
             this.lbl_seats.Name = "lbl_seats";
-            this.lbl_seats.Size = new System.Drawing.Size(254, 80);
+            this.lbl_seats.Size = new System.Drawing.Size(241, 80);
             this.lbl_seats.TabIndex = 20;
             this.lbl_seats.Text = "E11, E12, E13";
             this.lbl_seats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
