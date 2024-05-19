@@ -29,70 +29,60 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Voucher));
-            this.txt_voucher = new System.Windows.Forms.TextBox();
-            this.btn_submit = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_backToDashboard = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txt_voucher
+            // label1
             // 
-            this.txt_voucher.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_voucher.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_voucher.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_voucher.ForeColor = System.Drawing.Color.White;
-            this.txt_voucher.Location = new System.Drawing.Point(54, 121);
-            this.txt_voucher.Name = "txt_voucher";
-            this.txt_voucher.Size = new System.Drawing.Size(356, 40);
-            this.txt_voucher.TabIndex = 0;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(177, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(445, 130);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Congratulations!\r\nYour voucher code has been redeemed.\r\nEnjoy your well-deserved " +
+    "reward!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_submit
+            // btn_backToDashboard
             // 
-            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_submit.FlatAppearance.BorderSize = 0;
-            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_submit.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_submit.Location = new System.Drawing.Point(428, 125);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(146, 33);
-            this.btn_submit.TabIndex = 1;
-            this.btn_submit.Text = "Submit";
-            this.btn_submit.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = global::Cineverse.Properties.Resources.Close_Button;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(597, 12);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(19, 26);
-            this.panel5.TabIndex = 7;
-            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            this.btn_backToDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_backToDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_backToDashboard.FlatAppearance.BorderSize = 0;
+            this.btn_backToDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_backToDashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_backToDashboard.ForeColor = System.Drawing.Color.Black;
+            this.btn_backToDashboard.Location = new System.Drawing.Point(319, 178);
+            this.btn_backToDashboard.Name = "btn_backToDashboard";
+            this.btn_backToDashboard.Size = new System.Drawing.Size(132, 37);
+            this.btn_backToDashboard.TabIndex = 35;
+            this.btn_backToDashboard.Text = "OK";
+            this.btn_backToDashboard.UseVisualStyleBackColor = false;
             // 
             // Voucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.BackgroundImage = global::Cineverse.Properties.Resources.discount;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(628, 270);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.btn_submit);
-            this.Controls.Add(this.txt_voucher);
+            this.Controls.Add(this.btn_backToDashboard);
+            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Voucher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Voucher";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txt_voucher;
-        private System.Windows.Forms.Button btn_submit;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_backToDashboard;
     }
 }
