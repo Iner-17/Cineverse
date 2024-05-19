@@ -60,6 +60,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_vat = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +128,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbl_vat);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lbl_currentDateAndTime);
             this.panel1.Controls.Add(this.lbl_cash);
             this.panel1.Controls.Add(this.lbl_change);
@@ -169,7 +173,7 @@
             // 
             this.lbl_cash.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cash.ForeColor = System.Drawing.Color.White;
-            this.lbl_cash.Location = new System.Drawing.Point(182, 688);
+            this.lbl_cash.Location = new System.Drawing.Point(182, 697);
             this.lbl_cash.Name = "lbl_cash";
             this.lbl_cash.Size = new System.Drawing.Size(113, 33);
             this.lbl_cash.TabIndex = 38;
@@ -179,7 +183,7 @@
             // 
             this.lbl_change.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_change.ForeColor = System.Drawing.Color.White;
-            this.lbl_change.Location = new System.Drawing.Point(182, 727);
+            this.lbl_change.Location = new System.Drawing.Point(182, 736);
             this.lbl_change.Name = "lbl_change";
             this.lbl_change.Size = new System.Drawing.Size(113, 33);
             this.lbl_change.TabIndex = 37;
@@ -189,7 +193,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(19, 731);
+            this.label8.Location = new System.Drawing.Point(19, 740);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 19);
             this.label8.TabIndex = 36;
@@ -200,7 +204,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 705);
+            this.label5.Location = new System.Drawing.Point(21, 714);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 19);
             this.label5.TabIndex = 35;
@@ -233,7 +237,7 @@
             // 
             this.lbl_discount.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_discount.ForeColor = System.Drawing.Color.White;
-            this.lbl_discount.Location = new System.Drawing.Point(182, 606);
+            this.lbl_discount.Location = new System.Drawing.Point(182, 615);
             this.lbl_discount.Name = "lbl_discount";
             this.lbl_discount.Size = new System.Drawing.Size(113, 29);
             this.lbl_discount.TabIndex = 32;
@@ -243,7 +247,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(21, 611);
+            this.label3.Location = new System.Drawing.Point(21, 620);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 19);
             this.label3.TabIndex = 31;
@@ -254,7 +258,7 @@
             // 
             this.lbl_total1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_total1.ForeColor = System.Drawing.Color.White;
-            this.lbl_total1.Location = new System.Drawing.Point(182, 648);
+            this.lbl_total1.Location = new System.Drawing.Point(182, 657);
             this.lbl_total1.Name = "lbl_total1";
             this.lbl_total1.Size = new System.Drawing.Size(113, 33);
             this.lbl_total1.TabIndex = 30;
@@ -264,7 +268,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(21, 655);
+            this.label2.Location = new System.Drawing.Point(21, 664);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 19);
             this.label2.TabIndex = 29;
@@ -274,7 +278,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel6.Location = new System.Drawing.Point(23, 638);
+            this.panel6.Location = new System.Drawing.Point(23, 647);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(272, 3);
             this.panel6.TabIndex = 28;
@@ -283,7 +287,7 @@
             // 
             this.lbl_tcktQuantity.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tcktQuantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_tcktQuantity.Location = new System.Drawing.Point(182, 585);
+            this.lbl_tcktQuantity.Location = new System.Drawing.Point(182, 563);
             this.lbl_tcktQuantity.Name = "lbl_tcktQuantity";
             this.lbl_tcktQuantity.Size = new System.Drawing.Size(113, 19);
             this.lbl_tcktQuantity.TabIndex = 25;
@@ -293,7 +297,7 @@
             // 
             this.lbl_tcktPrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tcktPrice.ForeColor = System.Drawing.Color.White;
-            this.lbl_tcktPrice.Location = new System.Drawing.Point(182, 551);
+            this.lbl_tcktPrice.Location = new System.Drawing.Point(182, 529);
             this.lbl_tcktPrice.Name = "lbl_tcktPrice";
             this.lbl_tcktPrice.Size = new System.Drawing.Size(113, 29);
             this.lbl_tcktPrice.TabIndex = 24;
@@ -303,7 +307,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(21, 585);
+            this.label7.Location = new System.Drawing.Point(21, 563);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(165, 19);
             this.label7.TabIndex = 23;
@@ -314,7 +318,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(21, 561);
+            this.label6.Location = new System.Drawing.Point(21, 539);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 19);
             this.label6.TabIndex = 22;
@@ -426,6 +430,27 @@
             this.panel3.Size = new System.Drawing.Size(90, 26);
             this.panel3.TabIndex = 9;
             // 
+            // lbl_vat
+            // 
+            this.lbl_vat.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_vat.ForeColor = System.Drawing.Color.White;
+            this.lbl_vat.Location = new System.Drawing.Point(182, 585);
+            this.lbl_vat.Name = "lbl_vat";
+            this.lbl_vat.Size = new System.Drawing.Size(113, 25);
+            this.lbl_vat.TabIndex = 44;
+            this.lbl_vat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(23, 588);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 19);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "VAT:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ReceiptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,5 +506,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_currentDateAndTime;
+        private System.Windows.Forms.Label lbl_vat;
+        private System.Windows.Forms.Label label10;
     }
 }
