@@ -77,14 +77,40 @@ namespace Cineverse
             } 
             finally { conn.Close(); }
 
-
+            lbl_discount.Text = "0";
+            double discount = 0;
             string[] listArray = lbl_seats.Text.Split(new string[] {", "}, StringSplitOptions.RemoveEmptyEntries);
             countSeat = listArray.Length;
-
+            double vatValue = (countSeat * price) * .12;
             lbl_tcktQuantity.Text = countSeat.ToString();
+            lbl_vat.Text = vatValue.ToString("F2");
+            lbl_total1.Text = "₱ " + ((countSeat * price) - discount).ToString("F2");
+            lbl_total2.Text = lbl_total1.Text;
+        }
 
-            lbl_total1.Text = "₱ " + (countSeat * price).ToString("F2");
-            lbl_total2.Text = lbl_total1.Text   ;
+        private void ckb_seniorDiscount_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ckb_seniorDiscount.Checked)
+            {
+                lbl_discount.Text = "50%";
+                double total = Convert.ToDouble(lbl_total1.Text.Replace("₱ ", ""));
+                double discountedTotal = Convert.ToDouble(lbl_total1.Text.Replace("₱ ", ""));
+                discountedTotal = discountedTotal * .50;
+                lbl_total1.Text = "₱ " + (total - discountedTotal).ToString("F2");
+                lbl_total2.Text = lbl_total1.Text;
+                txt_cash.Text = "";
+                lbl_change.Text = "CHANGE: ₱";
+            }
+            else
+            {
+                lbl_discount.Text = "0";
+                double total = Convert.ToDouble(lbl_total1.Text.Replace("₱ ", ""));
+                
+                lbl_total1.Text = "₱ " + (total * 2).ToString("F2");
+                lbl_total2.Text = lbl_total1.Text;
+                txt_cash.Text = "";
+                lbl_change.Text = "CHANGE: ₱";
+            }
         }
 
         private void UpdateAvailabilityToBooked(string seatList)
@@ -131,33 +157,7 @@ namespace Cineverse
             finally { conn.Close(); }
         }
 
-        private void btn_back_MouseEnter(object sender, EventArgs e)
-        {
-            btn_back.BackColor = Color.FromArgb(31, 178, 198);
-            btn_back.ForeColor = Color.Black;
-        }
-
-        private void btn_back_MouseLeave(object sender, EventArgs e)
-        {
-            btn_back.BackColor = Color.FromArgb(20, 32, 32);
-            btn_back.ForeColor = Color.White;
-        }
-
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            Seats seats = new Seats();
-            seats.Show();
-
-            this.Hide();
-        }
-
-        private void panel5_Click(object sender, EventArgs e)
-        {
-            Seats seats = new Seats();
-            seats.Show();
-
-            this.Hide();
-        }
+        int lastInsertedId = 0;
 
         private void btn_transactionComplete_Click(object sender, EventArgs e)
         {
@@ -173,7 +173,7 @@ namespace Cineverse
 
                 int movie_id = 0;
                 ReceiptForm receiptForm1 = new ReceiptForm();
-                receiptForm1.passDataToReceiptForm(lbl_titlePayment.Text, lbl_genre.Text, lbl_cinemaNo.Text, lbl_time.Text, lbl_dateTime.Text, lbl_seats.Text);
+                receiptForm1.passDataToReceiptForm(lbl_titlePayment.Text, lbl_genre.Text, lbl_cinemaNo.Text, lbl_time.Text, lbl_dateTime.Text, lbl_seats.Text, lbl_vat.Text, lbl_discount.Text, lbl_total2.Text);
                 receiptForm1.Show();
                 this.Hide();
 
@@ -199,7 +199,8 @@ namespace Cineverse
                 finally { conn.Close(); }
 
                 MySqlCommand cmd = new MySqlCommand();
-
+                int bookingId = 0;
+                //Insert into bookings
                 try
                 {
                     DateTime date = DateTime.Now;
@@ -208,14 +209,16 @@ namespace Cineverse
                     conn.Open();
                     string insertBookingData = "INSERT INTO bookings (ticket_quantity, ticket_total, currentDate, time_booked, movie_id, seats_booked) VALUES (@Ticket_quant, @Ticket_Total, @CurrentDate, @TimeBooked, @Movie_ID, @SeatsBooked);";
                     cmd = new MySqlCommand(insertBookingData, conn);
-                    cmd.Parameters.AddWithValue("@Ticket_quant", lbl_tcktQuantity.Text);
-                    cmd.Parameters.AddWithValue("@Ticket_Total", price * Convert.ToInt32(lbl_tcktQuantity.Text));
+                    cmd.Parameters.AddWithValue("@Ticket_quant", lbl_tcktQuantity.Text);        
+                    cmd.Parameters.AddWithValue("@Ticket_Total", Convert.ToDouble(lbl_total1.Text.Replace("₱", "")));
                     cmd.Parameters.AddWithValue("@CurrentDate", date.ToString("dd/MM/yyyy • dddd", new CultureInfo("en-PH")));
                     cmd.Parameters.AddWithValue("@TimeBooked", time.ToString("hh:mm tt"));
                     cmd.Parameters.AddWithValue("@Movie_ID", movie_id);
                     cmd.Parameters.AddWithValue("@SeatsBooked", lbl_seats.Text);
 
                     cmd.ExecuteNonQuery();
+
+                    bookingId = (int)cmd.LastInsertedId;
 
                 }
                 catch (Exception ex)
@@ -226,10 +229,10 @@ namespace Cineverse
                 {
                     conn.Close();
                 }
-
+                //Insert into receipt
                 try
                 {
-                    int bookingId = (int)cmd.LastInsertedId;
+                    
 
                     conn.Open();
                     string insertBookingData = "INSERT INTO receipt (booking_id, movie_title, genre, cinema_number, time, date) VALUES (@BookingID, @Title, @Genre, @CinemaNumber, @Time, @Date);";
@@ -252,6 +255,32 @@ namespace Cineverse
                 {
                     conn.Close();
                 }
+                //insert into cineverse revenue
+                try
+                {
+
+                    conn.Open();
+                    string insertBookingData = "INSERT INTO cineverse_revenue (booking_id, total_amount, vatValue) VALUES (@BookingID, @Cineverse_revenue, @VatValue);";
+                    cmd = new MySqlCommand(insertBookingData, conn);
+                    cmd.Parameters.AddWithValue("@BookingID", bookingId);
+                    cmd.Parameters.AddWithValue("@Cineverse_revenue", Convert.ToDouble(lbl_total1.Text.Replace("₱", "")) + Convert.ToDouble(lbl_vat.Text));
+                    cmd.Parameters.AddWithValue("@vatValue", Convert.ToDouble(lbl_vat.Text));
+                   
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+
+                MessageBox.Show(bookingId.ToString());
+
 
                 BookingSection booking = new BookingSection();
                 booking.BookingSection_Load(this, EventArgs.Empty);
@@ -315,18 +344,19 @@ namespace Cineverse
             else
             {
                cashPayement = Convert.ToDouble(txt_cash.Text);
-
             }
 
-            if (cashPayement > (countSeat * price))
+            double total2 = Convert.ToDouble(lbl_total2.Text.Replace("₱", ""));
+
+            if (cashPayement > total2)
             {
-                lbl_change.Text = "CHANGE: ₱" + (cashPayement - (countSeat * price));
-                change = (cashPayement - (countSeat * price));
+                lbl_change.Text = "CHANGE: ₱" + (cashPayement - total2);
+                change = (cashPayement - total2);
             }
             else if (cashPayement == (countSeat * price))
             {
                 lbl_change.Text = "CHANGE: ₱ ";
-                change = (cashPayement - (countSeat * price));
+                change = (cashPayement - total2);
             } else
             {
                 lbl_change.Text = "CHANGE: ₱";
@@ -343,9 +373,43 @@ namespace Cineverse
             }
         }
 
+
+
+
+
+
+
         private void label11_Click(object sender, EventArgs e)
         {
 
         }
+        private void btn_back_MouseEnter(object sender, EventArgs e)
+        {
+            btn_back.BackColor = Color.FromArgb(31, 178, 198);
+            btn_back.ForeColor = Color.Black;
+        }
+
+        private void btn_back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_back.BackColor = Color.FromArgb(20, 32, 32);
+            btn_back.ForeColor = Color.White;
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Seats seats = new Seats();
+            seats.Show();
+
+            this.Hide();
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Seats seats = new Seats();
+            seats.Show();
+
+            this.Hide();
+        }
+
     }
 }

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_vat = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lbl_currentDateAndTime = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_genre = new System.Windows.Forms.Label();
@@ -60,15 +62,13 @@
             this.pb_posterSelected = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.ckb_seniorDiscount = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lbl_change = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer_paymentInProgress = new System.Windows.Forms.Timer(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbl_vat = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
@@ -104,6 +104,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 865);
             this.panel1.TabIndex = 7;
+            // 
+            // lbl_vat
+            // 
+            this.lbl_vat.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_vat.ForeColor = System.Drawing.Color.White;
+            this.lbl_vat.Location = new System.Drawing.Point(182, 641);
+            this.lbl_vat.Name = "lbl_vat";
+            this.lbl_vat.Size = new System.Drawing.Size(113, 25);
+            this.lbl_vat.TabIndex = 42;
+            this.lbl_vat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_vat.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(22, 647);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 19);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "VAT:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_currentDateAndTime
             // 
@@ -431,7 +453,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel7.Controls.Add(this.checkBox1);
+            this.panel7.Controls.Add(this.ckb_seniorDiscount);
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.lbl_change);
             this.panel7.Controls.Add(this.btn_transactionComplete);
@@ -440,6 +462,19 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(374, 364);
             this.panel7.TabIndex = 29;
+            // 
+            // ckb_seniorDiscount
+            // 
+            this.ckb_seniorDiscount.AutoSize = true;
+            this.ckb_seniorDiscount.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_seniorDiscount.ForeColor = System.Drawing.Color.White;
+            this.ckb_seniorDiscount.Location = new System.Drawing.Point(63, 236);
+            this.ckb_seniorDiscount.Name = "ckb_seniorDiscount";
+            this.ckb_seniorDiscount.Size = new System.Drawing.Size(252, 23);
+            this.ckb_seniorDiscount.TabIndex = 34;
+            this.ckb_seniorDiscount.Text = "SENIOR CITIZEN DISCOUNT";
+            this.ckb_seniorDiscount.UseVisualStyleBackColor = true;
+            this.ckb_seniorDiscount.CheckedChanged += new System.EventHandler(this.ckb_seniorDiscount_CheckedChanged);
             // 
             // label8
             // 
@@ -504,40 +539,6 @@
             this.timer_paymentInProgress.Enabled = true;
             this.timer_paymentInProgress.Interval = 500;
             this.timer_paymentInProgress.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(22, 647);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 19);
-            this.label10.TabIndex = 41;
-            this.label10.Text = "VAT:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_vat
-            // 
-            this.lbl_vat.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_vat.ForeColor = System.Drawing.Color.White;
-            this.lbl_vat.Location = new System.Drawing.Point(182, 641);
-            this.lbl_vat.Name = "lbl_vat";
-            this.lbl_vat.Size = new System.Drawing.Size(113, 25);
-            this.lbl_vat.TabIndex = 42;
-            this.lbl_vat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_vat.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(63, 236);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(252, 23);
-            this.checkBox1.TabIndex = 34;
-            this.checkBox1.Text = "SENIOR CITIZEN DISCOUNT";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // PaymentForm
             // 
@@ -605,6 +606,6 @@
         private System.Windows.Forms.Label lbl_currentDateAndTime;
         private System.Windows.Forms.Label lbl_vat;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ckb_seniorDiscount;
     }
 }

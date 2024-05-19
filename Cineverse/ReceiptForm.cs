@@ -45,7 +45,7 @@ namespace Cineverse
             btn_print.ForeColor = Color.White;
         }
 
-        public void passDataToReceiptForm(string title, string genre, string cinema_number, string time, string date, string seatLists)
+        public void passDataToReceiptForm(string title, string genre, string cinema_number, string time, string date, string seatLists, string vatValue, string discout, string totalAmount)
         {
             movieTitle = title;
 
@@ -55,6 +55,10 @@ namespace Cineverse
             lbl_time.Text = time;
             lbl_dateTime.Text = date;
             lbl_seats.Text = seatLists;
+            lbl_vat.Text = vatValue;    
+            lbl_discount.Text = discout;
+            double total = Convert.ToDouble(totalAmount.Replace("₱", ""));
+            lbl_total1.Text = total.ToString("F2");
             
         }
 
@@ -92,7 +96,6 @@ namespace Cineverse
             lbl_tcktQuantity.Text = countSeat.ToString();
             double cash = Convert.ToDouble(Cash);
             double change = Convert.ToDouble(Change);
-            lbl_total1.Text = "₱ " + (countSeat * price).ToString("F2");
             lbl_cash.Text = "₱ " + cash.ToString("F2");
             if (change == 0)
             {
