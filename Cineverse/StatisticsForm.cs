@@ -103,20 +103,120 @@ namespace Cineverse
         }
 
         //DAILY REVENUE
-        private void displayDailyRevenueChart(DataTable tbl)
+            private void displayDailyRevenueChart(DataTable tbl)
+            {
+                RevenueChart.Series.Clear();
+                ResetChartArea();
+                if (tbl == null || tbl.Rows.Count == 0) return;
+
+                string[] daysOfWeek = { "Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+
+                var sortedRevenue = tbl.AsEnumerable().OrderBy(row =>
+                {
+                    string dayOfWeekFull = row.Field<string>("DayOfWeek");
+                    string dayOfWeek = dayOfWeekFull.Split('•')[1]?.Trim(); // Extracting the day of the week portion
+                    return Array.IndexOf(daysOfWeek, dayOfWeek); // Sort based on the index of the day in the daysOfWeek array
+                });
+
+                Series splineSeries = new Series("Total Revenue")
+                {
+                    ChartType = SeriesChartType.Spline,
+                    BorderWidth = 2,
+                    Color = Color.FromArgb(31, 178, 198),
+                    MarkerStyle = MarkerStyle.Circle,
+                    MarkerSize = 10
+                };
+
+                Series areaSeries = new Series("Gradient Area")
+                {
+                    ChartType = SeriesChartType.SplineArea,
+                    BorderWidth = 0
+                };
+                areaSeries.BackGradientStyle = GradientStyle.TopBottom;
+
+                foreach (var dayOfWeek in daysOfWeek)
+                {
+                    var row = sortedRevenue.FirstOrDefault(r => r.Field<string>("DayOfWeek").Contains(dayOfWeek));
+                    double totalRevenue = row != null ? Convert.ToDouble(row["Revenue"]) : 0;
+
+                    // Map day of week to X-axis position
+                    int dayIndex = Array.IndexOf(daysOfWeek, dayOfWeek) + 1; // Adding 1 to match 1-based index of X-axis
+
+                    DataPoint dataPoint = new DataPoint(dayIndex, totalRevenue); // X-axis position starts from 1
+                    dataPoint.MarkerStyle = MarkerStyle.Circle; // Set marker style
+                    dataPoint.MarkerSize = 10; // Set marker size   
+                    dataPoint.BorderWidth = 2;
+                    dataPoint.MarkerSize = 10;
+                    splineSeries.Points.Add(dataPoint);
+                    areaSeries.Points.Add(dataPoint);
+                }
+
+                areaSeries.Color = Color.FromArgb(31, 178, 198);
+                RevenueChart.Series.Add(splineSeries);
+                RevenueChart.Series.Add(areaSeries);
+
+                var chartArea = RevenueChart.ChartAreas[0];
+                chartArea.AxisX.Minimum = 0.5; // Slightly before Sunday
+                chartArea.AxisX.Maximum = 7.5; // Slightly after Saturday
+                chartArea.AxisX.Interval = 1; // 1 day interval
+                chartArea.AxisX.LabelStyle.Interval = 1; // Show labels for each day
+                chartArea.AxisX.LabelStyle.Enabled = true; // Enable custom labels
+
+                // Customize X-axis labels
+                chartArea.AxisX.CustomLabels.Clear();
+                for (int i = 0; i < daysOfWeek.Length; i++)
+                {
+                    chartArea.AxisX.CustomLabels.Add(i + 0.5, i + 1.5, daysOfWeek[i]);
+                }
+
+                // Customize chart appearance
+                RevenueChart.BackColor = Color.FromArgb(27, 28, 30);
+                RevenueChart.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(64, 64, 64);
+                RevenueChart.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(64, 64, 64);
+                RevenueChart.ChartAreas[0].AxisX.LineColor = Color.White;
+                RevenueChart.ChartAreas[0].AxisY.LineColor = Color.White;
+                RevenueChart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+                RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+
+                chartArea.AxisX.Title = "DAYS";
+                chartArea.AxisY.Title = "REVENUE ₱";
+            }
+
+
+        //WEEKLY
+        private void DisplayWeeklyRevenueChart(DataTable tbl)
         {
             RevenueChart.Series.Clear();
             ResetChartArea();
             if (tbl == null || tbl.Rows.Count == 0) return;
 
-            string[] daysOfWeek = { "Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+            DateTime currentDate = DateTime.Today;
+            DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
+            DateTime lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
 
-            var sortedRevenue = tbl.AsEnumerable().OrderBy(row =>
+            // Calculate the number of weeks in the current month
+            int weeksInMonth = (int)Math.Min(Math.Ceiling((double)(lastDayOfMonth.Day + (int)firstDayOfMonth.DayOfWeek) / 7), 4);
+
+            string[] weekLabels = new string[weeksInMonth];
+            for (int i = 0; i < weeksInMonth; i++)
             {
-                string dayOfWeekFull = row.Field<string>("DayOfWeek");
-                string dayOfWeek = dayOfWeekFull.Split('•')[1]?.Trim(); // Extracting the day of the week portion
-                return Array.IndexOf(daysOfWeek, dayOfWeek); // Sort based on the index of the day in the daysOfWeek array
-            });
+                if (i == 0)
+                {
+                    weekLabels[i] = "1st week";
+                }
+                else if (i == 1)
+                {
+                    weekLabels[i] = "2nd week";
+                }
+                else if (i == 2)
+                {
+                    weekLabels[i] = "3rd week";
+                }
+                else
+                {
+                    weekLabels[i] = (i + 1) + "th week";
+                }
+            }
 
             Series splineSeries = new Series("Total Revenue")
             {
@@ -134,19 +234,102 @@ namespace Cineverse
             };
             areaSeries.BackGradientStyle = GradientStyle.TopBottom;
 
-            foreach (var dayOfWeek in daysOfWeek)
+            for (int weekIndex = 0; weekIndex < weeksInMonth; weekIndex++)
             {
-                var row = sortedRevenue.FirstOrDefault(r => r.Field<string>("DayOfWeek").Contains(dayOfWeek));
-                double totalRevenue = row != null ? Convert.ToDouble(row["Revenue"]) : 0;
+                // Check if the current week index is within the available data range
+                if (weekIndex < tbl.Rows.Count)
+                {
+                    var row = tbl.Rows[weekIndex];
+                    double totalRevenue = Convert.ToDouble(row["Revenue"]);
 
-                // Map day of week to X-axis position
-                int dayIndex = Array.IndexOf(daysOfWeek, dayOfWeek) + 1; // Adding 1 to match 1-based index of X-axis
+                    DataPoint dataPoint = new DataPoint(weekIndex + 1, totalRevenue);
+                    dataPoint.MarkerStyle = MarkerStyle.Circle;
+                    dataPoint.MarkerSize = 10;
+                    dataPoint.BorderWidth = 2;
+                    splineSeries.Points.Add(dataPoint);
+                    areaSeries.Points.Add(dataPoint);
+                }
+                else
+                {
+                    // If data is not available for this week, add a zero value data point
+                    DataPoint zeroDataPoint = new DataPoint(weekIndex + 1, 0);
+                    splineSeries.Points.Add(zeroDataPoint);
+                    areaSeries.Points.Add(zeroDataPoint);
+                }
+            }
 
-                DataPoint dataPoint = new DataPoint(dayIndex, totalRevenue); // X-axis position starts from 1
-                dataPoint.MarkerStyle = MarkerStyle.Circle; // Set marker style
-                dataPoint.MarkerSize = 10; // Set marker size   
-                dataPoint.BorderWidth = 2;
+            areaSeries.Color = Color.FromArgb(31, 178, 198);
+            RevenueChart.Series.Add(splineSeries);
+            RevenueChart.Series.Add(areaSeries);
+
+            var chartArea = RevenueChart.ChartAreas[0];
+            chartArea.AxisX.Minimum = 0.5; // Slightly before Week 1
+            chartArea.AxisX.Maximum = weeksInMonth + 0.5; // Slightly after the last week
+            chartArea.AxisX.Interval = 1; // Interval of 1 (weeks)
+            chartArea.AxisX.LabelStyle.Interval = 1; // Show labels for each week
+            chartArea.AxisX.LabelStyle.Enabled = true; // Enable custom labels
+
+            // Customize X-axis labels
+            chartArea.AxisX.CustomLabels.Clear();
+            for (int i = 0; i < weeksInMonth; i++)
+            {
+                chartArea.AxisX.CustomLabels.Add(i + 0.5, i + 1.5, weekLabels[i]);
+            }
+
+            // Customize chart appearance (similar to your original styling)
+            RevenueChart.BackColor = Color.FromArgb(27, 28, 30);
+            // ... other styling settings ...
+
+            chartArea.AxisX.Title = "WEEKS";
+            chartArea.AxisY.Title = "REVENUE ₱";
+        }
+        private void StatisticsForm_Load(object sender, EventArgs e)
+        {
+            btn_today_Click(this, EventArgs.Empty);
+            TodayStatisticsRevenue();
+        }
+
+
+        //monthly
+
+        private void DisplayMonthlyRevenueChart(DataTable tbl)
+        {
+            RevenueChart.Series.Clear();
+            ResetChartArea();
+            if (tbl == null || tbl.Rows.Count == 0) return;
+
+            int monthsInYear = 12; // There are 12 months in a year
+
+            string[] monthLabels = {
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    };
+
+            Series splineSeries = new Series("Total Revenue")
+            {
+                ChartType = SeriesChartType.Spline,
+                BorderWidth = 2,
+                Color = Color.FromArgb(31, 178, 198),
+                MarkerStyle = MarkerStyle.Circle,
+                MarkerSize = 10
+            };
+
+            Series areaSeries = new Series("Gradient Area")
+            {
+                ChartType = SeriesChartType.SplineArea,
+                BorderWidth = 0
+            };
+            areaSeries.BackGradientStyle = GradientStyle.TopBottom;
+
+            for (int monthIndex = 0; monthIndex < monthsInYear; monthIndex++)
+            {
+                DataRow[] rows = tbl.Select("MonthNumber = " + (monthIndex + 1));
+                double totalRevenue = rows.Length > 0 ? Convert.ToDouble(rows[0]["Revenue"]) : 0;
+
+                DataPoint dataPoint = new DataPoint(monthIndex + 1, totalRevenue);
+                dataPoint.MarkerStyle = MarkerStyle.Circle;
                 dataPoint.MarkerSize = 10;
+                dataPoint.BorderWidth = 2;
                 splineSeries.Points.Add(dataPoint);
                 areaSeries.Points.Add(dataPoint);
             }
@@ -156,39 +339,36 @@ namespace Cineverse
             RevenueChart.Series.Add(areaSeries);
 
             var chartArea = RevenueChart.ChartAreas[0];
-            chartArea.AxisX.Minimum = 0.5; // Slightly before Sunday
-            chartArea.AxisX.Maximum = 7.5; // Slightly after Saturday
-            chartArea.AxisX.Interval = 1; // 1 day interval
-            chartArea.AxisX.LabelStyle.Interval = 1; // Show labels for each day
+            chartArea.AxisX.Minimum = 0.5; // Slightly before January
+            chartArea.AxisX.Maximum = monthsInYear + 0.5; // Slightly after December
+            chartArea.AxisX.Interval = 1; // Interval of 1 (months)
+            chartArea.AxisX.LabelStyle.Interval = 1; // Show labels for each month
             chartArea.AxisX.LabelStyle.Enabled = true; // Enable custom labels
 
             // Customize X-axis labels
             chartArea.AxisX.CustomLabels.Clear();
-            for (int i = 0; i < daysOfWeek.Length; i++)
+            for (int i = 0; i < monthsInYear; i++)
             {
-                chartArea.AxisX.CustomLabels.Add(i + 0.5, i + 1.5, daysOfWeek[i]);
+                chartArea.AxisX.CustomLabels.Add(i + 0.5, i + 1.5, monthLabels[i]);
             }
 
-            // Customize chart appearance
+            // Customize chart appearance (similar to your original styling)
             RevenueChart.BackColor = Color.FromArgb(27, 28, 30);
-            RevenueChart.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(64, 64, 64);
-            RevenueChart.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(64, 64, 64);
-            RevenueChart.ChartAreas[0].AxisX.LineColor = Color.White;
-            RevenueChart.ChartAreas[0].AxisY.LineColor = Color.White;
-            RevenueChart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
-            RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+            // ... other styling settings ...
 
-            chartArea.AxisX.Title = "DAYS";
+            chartArea.AxisX.Title = "MONTHS";
             chartArea.AxisY.Title = "REVENUE ₱";
+
+            foreach (DataRow row in tbl.Rows)
+            {
+                foreach (var item in row.ItemArray)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine();
+            }
         }
 
-        private void StatisticsForm_Load(object sender, EventArgs e)
-        {
-            btn_today_Click(this, EventArgs.Empty);
-            TodayStatisticsRevenue();
-        }
-
-       
         private void todayRevenue()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -263,12 +443,116 @@ namespace Cineverse
 
             RevenueChart.Titles.Clear();
             RevenueChart.Titles.Add(chartTitle);
-
-            
         }
 
+        //weekly revenue
+        private void WeeklyRevenue()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+            DateTime currentDate = DateTime.Today;
+            DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
+            DateTime lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
 
+            try
+            {
+                conn.Open();
 
+                string getListquery = @"
+               SELECT 
+                    WEEK(STR_TO_DATE(currentDate, '%d/%m/%Y')) AS WeekNumber, 
+                    SUM(ticket_total) AS Revenue 
+                FROM 
+                    bookings 
+                WHERE 
+                    STR_TO_DATE(currentDate, '%d/%m/%Y') BETWEEN STR_TO_DATE(@StartDate, '%d/%m/%Y') AND STR_TO_DATE(@EndDate, '%d/%m/%Y')
+                GROUP BY 
+                    WEEK(STR_TO_DATE(currentDate, '%d/%m/%Y'));";
+
+                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                getListcmd.Parameters.AddWithValue("@StartDate", firstDayOfMonth.ToString("dd/MM/yyyy • dddd"));
+                getListcmd.Parameters.AddWithValue("@EndDate", lastDayOfMonth.ToString("dd/MM/yyyy • dddd"));
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+
+                // Display the weekly revenue chart using the method
+                DisplayWeeklyRevenueChart(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            Title chartTitle = new Title("CINÉVERSE'S WEEKLY REVENUE")
+            {
+                Font = new Font("Montserrat", 20, FontStyle.Bold),
+                ForeColor = Color.White,
+                Alignment = ContentAlignment.TopCenter
+            };
+
+            RevenueChart.Titles.Clear();
+            RevenueChart.Titles.Add(chartTitle);
+        }
+
+        //monthly revenue
+
+        private void MonthlyRevenue()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+            DateTime currentDate = DateTime.Today;
+            DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
+            DateTime lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+
+            try
+            {
+                conn.Open();
+
+                string getListquery = @"
+                SELECT 
+                    MONTH(STR_TO_DATE(currentDate, '%d/%m/%Y')) AS MonthNumber, 
+                    SUM(ticket_total) AS Revenue 
+                FROM 
+                    bookings 
+                WHERE 
+                    STR_TO_DATE(currentDate, '%d/%m/%Y') BETWEEN STR_TO_DATE(@StartDate, '%d/%m/%Y') AND STR_TO_DATE(@EndDate, '%d/%m/%Y')
+                GROUP BY 
+                    MONTH(STR_TO_DATE(currentDate, '%d/%m/%Y'))";
+
+                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                getListcmd.Parameters.AddWithValue("@StartDate", firstDayOfMonth.ToString("dd/MM/yyyy • dddd"));
+                getListcmd.Parameters.AddWithValue("@EndDate", lastDayOfMonth.ToString("dd/MM/yyyy • dddd"));
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+
+                // Display the monthly revenue chart using the method
+                DisplayMonthlyRevenueChart(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            Title chartTitle = new Title("CINÉVERSE'S MONTHLY REVENUE")
+            {
+                Font = new Font("Montserrat", 20, FontStyle.Bold),
+                ForeColor = Color.White,
+                Alignment = ContentAlignment.TopCenter
+            };
+
+            RevenueChart.Titles.Clear();
+            RevenueChart.Titles.Add(chartTitle);
+        }
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
@@ -325,10 +609,7 @@ namespace Cineverse
                 {
                     double totalRev = Convert.ToDouble(result.ToString());
                     lbl_totalRevenue.Text = "₱" + totalRev.ToString("F2");
-
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -452,6 +733,8 @@ namespace Cineverse
             dailyButtonisActive = false;
             weeklyButtonisActive = true;
             monthlyButtonisActive = false;
+
+            WeeklyRevenue();
         }
 
         private void btn_weekly_MouseEnter(object sender, EventArgs e)
@@ -498,6 +781,9 @@ namespace Cineverse
             dailyButtonisActive = false;
             weeklyButtonisActive = false;
             monthlyButtonisActive = true;
+
+
+            MonthlyRevenue();
         }
 
         private void btn_monthly_MouseEnter(object sender, EventArgs e)
