@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbl_changePass = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_contactNo = new System.Windows.Forms.Label();
@@ -56,9 +55,9 @@
             this.lbl_myProfile.ForeColor = System.Drawing.Color.White;
             this.lbl_myProfile.Location = new System.Drawing.Point(32, 21);
             this.lbl_myProfile.Name = "lbl_myProfile";
-            this.lbl_myProfile.Size = new System.Drawing.Size(216, 39);
+            this.lbl_myProfile.Size = new System.Drawing.Size(281, 39);
             this.lbl_myProfile.TabIndex = 4;
-            this.lbl_myProfile.Text = "MY PROFILE";
+            this.lbl_myProfile.Text = "ADMIN PROFILE";
             // 
             // lbl_date
             // 
@@ -131,19 +130,6 @@
             this.label3.Size = new System.Drawing.Size(98, 20);
             this.label3.TabIndex = 92;
             this.label3.Text = "Password:";
-            // 
-            // lbl_changePass
-            // 
-            this.lbl_changePass.AutoSize = true;
-            this.lbl_changePass.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_changePass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_changePass.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_changePass.ForeColor = System.Drawing.Color.White;
-            this.lbl_changePass.Location = new System.Drawing.Point(686, 534);
-            this.lbl_changePass.Name = "lbl_changePass";
-            this.lbl_changePass.Size = new System.Drawing.Size(116, 15);
-            this.lbl_changePass.TabIndex = 93;
-            this.lbl_changePass.Text = "Change Password";
             // 
             // lbl_name
             // 
@@ -269,7 +255,6 @@
             this.Controls.Add(this.lbl_contactNo);
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.lbl_name);
-            this.Controls.Add(this.lbl_changePass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -297,7 +282,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbl_changePass;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.Label lbl_contactNo;
