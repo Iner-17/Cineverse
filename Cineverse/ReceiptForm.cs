@@ -58,7 +58,7 @@ namespace Cineverse
             lbl_vat.Text = vatValue;    
             lbl_discount.Text = discout;
             double total = Convert.ToDouble(totalAmount.Replace("₱", ""));
-            lbl_total1.Text = total.ToString("F2");
+            lbl_total1.Text = "₱" + total.ToString("F2");
             
         }
 

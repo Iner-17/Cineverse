@@ -29,8 +29,10 @@ namespace Cineverse.UserControls
 
                 string getListquery = @"
                         SELECT 
-                            title AS Title, 
+                            booking_id AS `Transaction ID`,
+                            title AS `Title`, 
                             time_booked AS `Time Booked`, 
+                            currentDate as `Date Booked`,
                             seats_booked AS `Seats Booked`, 
                             ticket_quantity AS `Quantity`, 
                             ticket_total AS `Total` 
@@ -41,9 +43,13 @@ namespace Cineverse.UserControls
                 MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
                 DataTable dt = new DataTable();
-                dataAdapter.Fill(dt);
 
+                dataAdapter.Fill(dt);
+                dt.Columns[6].DataType = typeof(double);
                 dgv_booking.DataSource = dt;
+
+                dgv_booking.Columns["Total"].DefaultCellStyle.Format = "0.00";
+
             }
             catch (Exception ex)
             {
@@ -87,7 +93,7 @@ namespace Cineverse.UserControls
                 try
                 {
                     conn.Open();
-                    string query = "SELECT  rec.movie_title, rec.genre, rec.cinema_number, rec.time, rec.date, book.seats_booked, book.ticket_quantity, book.ticket_total FROM bookings as book INNER JOIN receipt as rec ON book.booking_id = rec.booking_id WHERE rec.booking_id = @BookingId;";
+                    string query = "SELECT  rec.movie_title, rec.genre, rec.cinema_number, rec.time, rec.date, book.seats_booked, book.currentDate, book.ticket_quantity, book.ticket_total FROM bookings as book INNER JOIN receipt as rec ON book.booking_id = rec.booking_id WHERE rec.booking_id = @BookingId;";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("BookingId", bookingId);
 
@@ -109,6 +115,7 @@ namespace Cineverse.UserControls
                         lbl_cinemaNo.Text = reader2["cinema_number"].ToString();
                         lbl_time.Text = reader2["time"].ToString();
                         lbl_dateTime.Text = reader2["date"].ToString();
+                        lbl_currentDateAndTime.Text = reader2["currentDate"].ToString();
                         lbl_seats.Text = reader2["seats_booked"].ToString();
                         lbl_quant.Text = reader2["ticket_quantity"].ToString(); 
                         lbl_ticketPrice.Text = "₱" + price.ToString("F2");
@@ -127,7 +134,7 @@ namespace Cineverse.UserControls
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "Ads");
+                    MessageBox.Show(ex.Message);
                 }
                 finally { conn.Close(); }
 

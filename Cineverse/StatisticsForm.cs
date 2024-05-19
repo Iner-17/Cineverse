@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace Cineverse
 {
@@ -34,12 +35,11 @@ namespace Cineverse
         private void populateDonutChart()
         {
             TopMoviesChart.Series.Clear();
-
             MySqlConnection conn = DBConnection.getConnection();
 
             string mostSoldMovie = "SELECT movies.title, SUM(cineverse_revenue.total_amount) AS Total " +
-                                    "FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id " +
-                                    "LEFT JOIN cineverse_revenue ON bookings.booking_id GROUP BY movies.title";
+                "FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id " +
+                "LEFT JOIN cineverse_revenue ON bookings.booking_id = cineverse_revenue.booking_id GROUP BY movies.title";
             MySqlCommand mostSoldMoviecmd = new MySqlCommand(mostSoldMovie, conn);
 
             DataTable dt = new DataTable();
@@ -760,6 +760,7 @@ namespace Cineverse
                 MySqlCommand cmd = new MySqlCommand(getBookingsData, conn);
                 cmd.Parameters.AddWithValue("@StartDate", firstDayOfWeek.ToString("dd/MM/yyyy • dddd"));
                 cmd.Parameters.AddWithValue("@EndDate", lastDayOfWeek.ToString("dd/MM/yyyy • dddd"));
+
                 object result = cmd.ExecuteScalar();
 
                 if (result.ToString().Equals(""))
