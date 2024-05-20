@@ -16,6 +16,7 @@ namespace Cineverse
     {
         private string movieTitle = "";
         private double price = 0;
+        DateTime currentDate = DateTime.Now;
         public static string Cash { get; set; }
         public static string Change { get; set; }
         public ReceiptForm()
@@ -48,7 +49,7 @@ namespace Cineverse
         public void passDataToReceiptForm(string title, string genre, string cinema_number, string time, string date, string seatLists, string vatValue, string discout, string totalAmount)
         {
             movieTitle = title;
-
+            lbl_currentDateAndTime.Text = currentDate.ToString("dd/MM/yyyy • hh:mm tt");
             lbl_titlePayment.Text = title;
             lbl_genre.Text = genre;
             lbl_cinemaNo.Text = cinema_number;

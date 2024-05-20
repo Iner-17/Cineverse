@@ -77,10 +77,7 @@ namespace Cineverse
             }
         }
 
-        private void panel5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void txt_email_Enter(object sender, EventArgs e)
         {
@@ -112,8 +109,6 @@ namespace Cineverse
                 txt_email.BorderColor = Color.White;
             } 
             
-
-
             MySqlConnection conn = DBConnection.getConnection();
 
             try
@@ -137,7 +132,6 @@ namespace Cineverse
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
-
         }
 
 
@@ -296,8 +290,6 @@ namespace Cineverse
         {
             signUp();
         }
-
-   
 
         public void signUp()
         {
@@ -484,6 +476,7 @@ namespace Cineverse
            
         }
 
+        //Method for checking password if valid
         public static bool IsValidPassword(string password)
         {
             var hasNumber = new Regex(@"[0-9]+");
@@ -516,6 +509,8 @@ namespace Cineverse
 
         }
 
+
+        #region text change effects
         private void txt_firstName_TextChanged(object sender, EventArgs e)
         {
             string firstNameInput = txt_firstName.Text.Trim();
@@ -600,12 +595,12 @@ namespace Cineverse
                 ep_FN.SetError(txt_confirmPassword, string.Empty);
             }
         }
+#endregion
 
         private void txt_email_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
             {
-                // Suppress the space character
                 e.Handled = true;
             }
         }
@@ -614,7 +609,6 @@ namespace Cineverse
         {
             if (e.KeyChar == ' ')
             {
-                // Suppress the space character
                 e.Handled = true;
             }
         }
@@ -657,6 +651,12 @@ namespace Cineverse
                 txt_confirmPassword.UseSystemPasswordChar = false;
             }
             btn_confirmHide.BackColor = Color.Black;
+        }
+
+        //EXIT BUTTON
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

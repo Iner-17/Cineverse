@@ -18,29 +18,30 @@ namespace Cineverse
     public partial class PaymentForm : Form
     {
         bool voucherActivated = false;
-        public PaymentForm()
-        {
-            InitializeComponent();
-        }
         private double price = 0;
         private int countSeat = 0;
         private string movieTitle = "";
         private double discountFromVoucher = 0;
+
+        public PaymentForm()
+        {
+            InitializeComponent();
+        }
+        
         public void GetDataFromSeatForm(string title, string date_, string time, string seatLists)
         {
             DateTime date = DateTime.ParseExact(date_, "MMMM  dd,  yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime currentDate = DateTime.Now;
             string day = date.ToString("dddd");
 
             lbl_titlePayment.Text = title;
             lbl_time.Text = time;
             lbl_dateTime.Text = date.ToString("MMMM  dd,  yyyy") + " • " + day;
             lbl_seats.Text = seatLists;
-
+            lbl_currentDateAndTime.Text = currentDate.ToString("dd/MM/yyyy • hh:mm tt");
 
             movieTitle = title;
         }
-
-        
 
         private void PaymentForm_Load(object sender, EventArgs e)
         {
@@ -69,9 +70,6 @@ namespace Cineverse
                         lbl_cinemaNo.Text = "Cinema " + reader["cinema_number"].ToString();
                     }
                 }
-
-
-
             }
             catch (Exception ex) 
             {
@@ -90,6 +88,8 @@ namespace Cineverse
             lbl_total2.Text = lbl_total1.Text;
         }
 
+
+        //SENIOR DISCOUNT [CHECK BOX]
         private void ckb_seniorDiscount_CheckedChanged(object sender, EventArgs e)
         {
             if(ckb_seniorDiscount.Checked && voucherActivated == false)
