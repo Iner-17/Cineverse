@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_enterVoucherCode = new System.Windows.Forms.Button();
             this.lbl_vat = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbl_currentDateAndTime = new System.Windows.Forms.Label();
@@ -54,34 +55,40 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_transactionComplete = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lbl_paymentInProgress = new System.Windows.Forms.Label();
+            this.pnl_voucher = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.lbl_total2 = new System.Windows.Forms.Label();
-            this.ckb_seniorDiscount = new System.Windows.Forms.CheckBox();
+            this.btn_submit = new System.Windows.Forms.Button();
             this.txt_voucherCode = new System.Windows.Forms.TextBox();
+            this.lbl_total2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pb_posterSelected = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pnl_progress = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.ckb_seniorDiscount = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lbl_paymentInProgress = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txt_cash = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lbl_change = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btn_submit = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer_paymentInProgress = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.pnl_voucher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).BeginInit();
+            this.pnl_progress.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.btn_enterVoucherCode);
             this.panel1.Controls.Add(this.lbl_vat);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lbl_currentDateAndTime);
@@ -107,6 +114,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 865);
             this.panel1.TabIndex = 7;
+            // 
+            // btn_enterVoucherCode
+            // 
+            this.btn_enterVoucherCode.BackColor = System.Drawing.Color.Transparent;
+            this.btn_enterVoucherCode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enterVoucherCode.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_enterVoucherCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_enterVoucherCode.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_enterVoucherCode.ForeColor = System.Drawing.Color.White;
+            this.btn_enterVoucherCode.Location = new System.Drawing.Point(23, 505);
+            this.btn_enterVoucherCode.Name = "btn_enterVoucherCode";
+            this.btn_enterVoucherCode.Size = new System.Drawing.Size(270, 43);
+            this.btn_enterVoucherCode.TabIndex = 36;
+            this.btn_enterVoucherCode.Text = "ENTER VOUCHER CODE";
+            this.btn_enterVoucherCode.UseVisualStyleBackColor = false;
+            this.btn_enterVoucherCode.Click += new System.EventHandler(this.btn_enterVoucherCode_Click);
+            this.btn_enterVoucherCode.MouseEnter += new System.EventHandler(this.btn_enterVoucherCode_MouseEnter_1);
+            this.btn_enterVoucherCode.MouseLeave += new System.EventHandler(this.btn_enterVoucherCode_MouseLeave_1);
             // 
             // lbl_vat
             // 
@@ -346,7 +371,7 @@
             this.btn_transactionComplete.FlatAppearance.BorderSize = 0;
             this.btn_transactionComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_transactionComplete.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_transactionComplete.Location = new System.Drawing.Point(236, 613);
+            this.btn_transactionComplete.Location = new System.Drawing.Point(662, 605);
             this.btn_transactionComplete.Name = "btn_transactionComplete";
             this.btn_transactionComplete.Size = new System.Drawing.Size(270, 53);
             this.btn_transactionComplete.TabIndex = 5;
@@ -357,85 +382,59 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.lbl_paymentInProgress);
-            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.pnl_voucher);
             this.panel4.Controls.Add(this.lbl_total2);
-            this.panel4.Controls.Add(this.ckb_seniorDiscount);
-            this.panel4.Controls.Add(this.txt_voucherCode);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.pb_posterSelected);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.btn_transactionComplete);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.btn_submit);
-            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.pnl_progress);
             this.panel4.Location = new System.Drawing.Point(343, 54);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1165, 865);
             this.panel4.TabIndex = 8;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // label13
+            // pnl_voucher
             // 
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label13.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(559, 495);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(374, 30);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "DISCOUNTS";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_paymentInProgress
-            // 
-            this.lbl_paymentInProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.lbl_paymentInProgress.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_paymentInProgress.ForeColor = System.Drawing.Color.White;
-            this.lbl_paymentInProgress.Location = new System.Drawing.Point(559, 163);
-            this.lbl_paymentInProgress.Name = "lbl_paymentInProgress";
-            this.lbl_paymentInProgress.Size = new System.Drawing.Size(374, 70);
-            this.lbl_paymentInProgress.TabIndex = 29;
-            this.lbl_paymentInProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnl_voucher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.pnl_voucher.Controls.Add(this.label11);
+            this.pnl_voucher.Controls.Add(this.btn_submit);
+            this.pnl_voucher.Controls.Add(this.txt_voucherCode);
+            this.pnl_voucher.Location = new System.Drawing.Point(222, 587);
+            this.pnl_voucher.Name = "pnl_voucher";
+            this.pnl_voucher.Size = new System.Drawing.Size(374, 109);
+            this.pnl_voucher.TabIndex = 29;
+            this.pnl_voucher.Visible = false;
             // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label11.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.label11.Location = new System.Drawing.Point(559, 590);
+            this.label11.Location = new System.Drawing.Point(4, 18);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(374, 25);
+            this.label11.Size = new System.Drawing.Size(367, 25);
             this.label11.TabIndex = 32;
             this.label11.Text = "ENTER VOUCHER CODE";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_total2
+            // btn_submit
             // 
-            this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total2.ForeColor = System.Drawing.Color.White;
-            this.lbl_total2.Location = new System.Drawing.Point(231, 530);
-            this.lbl_total2.Name = "lbl_total2";
-            this.lbl_total2.Size = new System.Drawing.Size(285, 54);
-            this.lbl_total2.TabIndex = 27;
-            this.lbl_total2.Text = "₱1350.00";
-            this.lbl_total2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ckb_seniorDiscount
-            // 
-            this.ckb_seniorDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.ckb_seniorDiscount.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_seniorDiscount.ForeColor = System.Drawing.Color.White;
-            this.ckb_seniorDiscount.Location = new System.Drawing.Point(611, 549);
-            this.ckb_seniorDiscount.Name = "ckb_seniorDiscount";
-            this.ckb_seniorDiscount.Size = new System.Drawing.Size(272, 23);
-            this.ckb_seniorDiscount.TabIndex = 34;
-            this.ckb_seniorDiscount.Text = "SENIOR CITIZEN DISCOUNT";
-            this.ckb_seniorDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ckb_seniorDiscount.UseVisualStyleBackColor = false;
-            this.ckb_seniorDiscount.CheckedChanged += new System.EventHandler(this.ckb_seniorDiscount_CheckedChanged);
+            this.btn_submit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_submit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_submit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_submit.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_submit.ForeColor = System.Drawing.Color.White;
+            this.btn_submit.Location = new System.Drawing.Point(222, 53);
+            this.btn_submit.Name = "btn_submit";
+            this.btn_submit.Size = new System.Drawing.Size(116, 43);
+            this.btn_submit.TabIndex = 31;
+            this.btn_submit.Text = "Submit";
+            this.btn_submit.UseVisualStyleBackColor = false;
+            this.btn_submit.Click += new System.EventHandler(this.btn_voucher_Click);
+            this.btn_submit.MouseEnter += new System.EventHandler(this.btn_voucher_MouseEnter);
+            this.btn_submit.MouseLeave += new System.EventHandler(this.btn_voucher_MouseLeave);
             // 
             // txt_voucherCode
             // 
@@ -443,17 +442,28 @@
             this.txt_voucherCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_voucherCode.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_voucherCode.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_voucherCode.Location = new System.Drawing.Point(591, 623);
+            this.txt_voucherCode.Location = new System.Drawing.Point(31, 51);
             this.txt_voucherCode.Name = "txt_voucherCode";
             this.txt_voucherCode.Size = new System.Drawing.Size(184, 47);
             this.txt_voucherCode.TabIndex = 32;
             this.txt_voucherCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // lbl_total2
+            // 
+            this.lbl_total2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total2.ForeColor = System.Drawing.Color.White;
+            this.lbl_total2.Location = new System.Drawing.Point(657, 522);
+            this.lbl_total2.Name = "lbl_total2";
+            this.lbl_total2.Size = new System.Drawing.Size(285, 54);
+            this.lbl_total2.TabIndex = 27;
+            this.lbl_total2.Text = "₱1350.00";
+            this.lbl_total2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(231, 505);
+            this.label1.Location = new System.Drawing.Point(657, 497);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(285, 25);
             this.label1.TabIndex = 26;
@@ -463,7 +473,7 @@
             // pb_posterSelected
             // 
             this.pb_posterSelected.Image = global::Cineverse.Properties.Resources.PosterPlaceholder;
-            this.pb_posterSelected.Location = new System.Drawing.Point(267, 198);
+            this.pb_posterSelected.Location = new System.Drawing.Point(693, 190);
             this.pb_posterSelected.Name = "pb_posterSelected";
             this.pb_posterSelected.Size = new System.Drawing.Size(196, 296);
             this.pb_posterSelected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -482,6 +492,65 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "PAYMENT METHOD: CASH";
             // 
+            // pnl_progress
+            // 
+            this.pnl_progress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.pnl_progress.Controls.Add(this.panel8);
+            this.pnl_progress.Controls.Add(this.label13);
+            this.pnl_progress.Controls.Add(this.lbl_paymentInProgress);
+            this.pnl_progress.Controls.Add(this.panel7);
+            this.pnl_progress.Location = new System.Drawing.Point(209, 152);
+            this.pnl_progress.Name = "pnl_progress";
+            this.pnl_progress.Size = new System.Drawing.Size(399, 436);
+            this.pnl_progress.TabIndex = 35;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel8.Controls.Add(this.ckb_seniorDiscount);
+            this.panel8.Location = new System.Drawing.Point(12, 373);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(374, 50);
+            this.panel8.TabIndex = 29;
+            // 
+            // ckb_seniorDiscount
+            // 
+            this.ckb_seniorDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.ckb_seniorDiscount.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_seniorDiscount.ForeColor = System.Drawing.Color.White;
+            this.ckb_seniorDiscount.Location = new System.Drawing.Point(59, 13);
+            this.ckb_seniorDiscount.Name = "ckb_seniorDiscount";
+            this.ckb_seniorDiscount.Size = new System.Drawing.Size(265, 23);
+            this.ckb_seniorDiscount.TabIndex = 34;
+            this.ckb_seniorDiscount.Text = "SENIOR CITIZEN DISCOUNT";
+            this.ckb_seniorDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ckb_seniorDiscount.UseVisualStyleBackColor = false;
+            this.ckb_seniorDiscount.CheckedChanged += new System.EventHandler(this.ckb_seniorDiscount_CheckedChanged);
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.label13.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.Location = new System.Drawing.Point(11, 315);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(375, 46);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "DISCOUNTS";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_paymentInProgress
+            // 
+            this.lbl_paymentInProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.lbl_paymentInProgress.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_paymentInProgress.ForeColor = System.Drawing.Color.White;
+            this.lbl_paymentInProgress.Location = new System.Drawing.Point(12, 12);
+            this.lbl_paymentInProgress.Name = "lbl_paymentInProgress";
+            this.lbl_paymentInProgress.Size = new System.Drawing.Size(374, 70);
+            this.lbl_paymentInProgress.TabIndex = 29;
+            this.lbl_paymentInProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -489,7 +558,7 @@
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.lbl_change);
             this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(559, 251);
+            this.panel7.Location = new System.Drawing.Point(12, 95);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(374, 210);
             this.panel7.TabIndex = 29;
@@ -543,35 +612,6 @@
             this.label9.Text = "CASH TENDERED";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_submit
-            // 
-            this.btn_submit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_submit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_submit.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_submit.ForeColor = System.Drawing.Color.White;
-            this.btn_submit.Location = new System.Drawing.Point(782, 625);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(116, 43);
-            this.btn_submit.TabIndex = 31;
-            this.btn_submit.Text = "Submit";
-            this.btn_submit.UseVisualStyleBackColor = false;
-            this.btn_submit.Click += new System.EventHandler(this.btn_voucher_Click);
-            this.btn_submit.MouseEnter += new System.EventHandler(this.btn_voucher_MouseEnter);
-            this.btn_submit.MouseLeave += new System.EventHandler(this.btn_voucher_MouseLeave);
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label12.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(559, 479);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(374, 222);
-            this.label12.TabIndex = 35;
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
@@ -619,7 +659,11 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.pnl_voucher.ResumeLayout(false);
+            this.pnl_voucher.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_posterSelected)).EndInit();
+            this.pnl_progress.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
@@ -670,6 +714,9 @@
         private System.Windows.Forms.Button btn_submit;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_enterVoucherCode;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel pnl_voucher;
+        private System.Windows.Forms.Panel pnl_progress;
     }
 }
