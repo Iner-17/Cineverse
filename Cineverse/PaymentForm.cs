@@ -467,10 +467,37 @@ namespace Cineverse
 
             this.Hide();
         }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void btn_enterVoucherCode_MouseEnter_1(object sender, EventArgs e)
         {
-
+            btn_enterVoucherCode.BackColor = Color.FromArgb(31, 178, 198);
+            btn_enterVoucherCode.ForeColor = Color.Black;
         }
+
+        private void btn_enterVoucherCode_MouseLeave_1(object sender, EventArgs e)
+        {
+            btn_enterVoucherCode.BackColor = Color.FromArgb(20, 32, 32);
+            btn_enterVoucherCode.ForeColor = Color.White;
+        }
+
+
+        private void btn_enterVoucherCode_Click(object sender, EventArgs e)
+        {
+            if (pnl_voucher.Visible == false)
+            {
+                pnl_voucher.Visible = true;
+                pnl_progress.Location = new Point(209, 152);
+
+            }
+            else
+            {
+                pnl_voucher.Visible = false;
+                pnl_progress.Location = new Point(206, 222);
+
+            }
+
+          
+        }
+
+       
     }
 }
