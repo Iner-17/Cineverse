@@ -60,6 +60,7 @@
             this.btn_backToDashboard.TabIndex = 35;
             this.btn_backToDashboard.Text = "OK";
             this.btn_backToDashboard.UseVisualStyleBackColor = false;
+            this.btn_backToDashboard.Click += new System.EventHandler(this.btn_backToDashboard_Click);
             // 
             // Voucher
             // 

@@ -101,7 +101,7 @@ namespace Cineverse
                 lbl_total1.Text = "₱ " + (total - discountedTotal).ToString("F2");
                 lbl_total2.Text = lbl_total1.Text;
                 txt_cash.Text = "";
-                lbl_change.Text = "CHANGE: ₱ ";
+                lbl_change.Text = "CHANGE: ₱  ";
             }
             else if (voucherActivated == true)
             {
@@ -156,6 +156,9 @@ namespace Cineverse
 
                     discountFromVoucher = discountedTotal;
                     voucherActivated = true;
+
+                    Voucher voucher = new Voucher();
+                    voucher.Show();
                 }
                 else
                 {
@@ -168,8 +171,7 @@ namespace Cineverse
             }
             finally { conn.Close(); }
 
-            Voucher voucher = new Voucher();
-            voucher.Show();
+            
         }
 
         private void UpdateAvailabilityToBooked(string seatList)
@@ -221,7 +223,7 @@ namespace Cineverse
         private void btn_transactionComplete_Click(object sender, EventArgs e)
         {
 
-            if (lbl_change.Text.Equals("CHANGE: ₱"))
+            if (lbl_change.Text.Equals("CHANGE: ₱") || lbl_change.Text.Equals("CHANGE: ₱  "))
             {
                 MessageBox.Show("Insufficient Cash.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -494,10 +496,6 @@ namespace Cineverse
                 pnl_progress.Location = new Point(206, 222);
 
             }
-
-          
         }
-
-       
     }
 }

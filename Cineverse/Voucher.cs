@@ -21,5 +21,10 @@ namespace Cineverse
         {
             this.Close();
         }
+
+        private void btn_backToDashboard_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

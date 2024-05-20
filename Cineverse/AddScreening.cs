@@ -113,10 +113,28 @@ namespace Cineverse
             if (dgv_booking.Rows.Count > 1)
             {
                 object lastDGVTime = dgv_booking.Rows[lastIndexDGVTime].Cells["Time"].Value;
+                string lastDGVDuration = dgv_booking.Rows[lastIndexDGVTime].Cells["Duration"].Value.ToString().Replace("hr", "").Replace("mins", "").Trim();
+
+                string[] timeParts = lastDGVDuration.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                int hours = 0;
+                int minutes = 0;
+
+                if (timeParts.Length > 0)
+                {
+                    hours = int.Parse(timeParts[0]);
+                }
+                if (timeParts.Length > 1)
+                {
+                    minutes = int.Parse(timeParts[1]);
+                }
+
+                int lastDurationfromDGV = (hours * 60) + minutes;
+
                 // Parse time from DataGridView with AM/PM
                 DateTime endTimeFromDGV = DateTime.Parse(lastDGVTime.ToString());
 
-                endTimeFromDGV = endTimeFromDGV.AddMinutes(Convert.ToInt32(GlobalDuration));
+                endTimeFromDGV = endTimeFromDGV.AddMinutes(Convert.ToInt32(lastDurationfromDGV));
 
                 if (startTime <= endTimeFromDGV)
                 {
@@ -154,49 +172,59 @@ namespace Cineverse
         {
             MySqlConnection conn = DBConnection.getConnection();
 
+           
             try
             {
-                conn.Open();
-                MySqlCommand insertScreeningcmd = new MySqlCommand();
-
-                foreach (string date in cmb_datesAdded.Items)
+                if (cmb_datesAdded.Items.Count > 0 && cmb_timeAdded.Items.Count > 0)
                 {
-                    foreach (string time in cmb_timeAdded.Items)
+                    conn.Open();
+                    MySqlCommand insertScreeningcmd = new MySqlCommand();
+
+                    foreach (string date in cmb_datesAdded.Items)
                     {
-
-                        string insertScreeningQuery = "INSERT INTO screening (movie_id, date, start_time) VALUES (@Movie_Id, @Date, @Time);";
-                        insertScreeningcmd = new MySqlCommand(insertScreeningQuery, conn);
-                        insertScreeningcmd.Parameters.AddWithValue("@Movie_Id", AddMovie.movieId);
-                        insertScreeningcmd.Parameters.AddWithValue("@Date", date);
-                        insertScreeningcmd.Parameters.AddWithValue("@Time", time);
-                        insertScreeningcmd.ExecuteNonQuery();
-
-
-                        List<string> excludedSeatCodes = new List<string> { "A2", "A3", "A4", "A17", "A18", "A19", "B2", "B3", "B19", "C8", "C13", "D8", "D13", "E8", "E13", "F8", "F13", "G8", "G13", "H8", "H13", "I8", "I13", "J8", "J13" };
-                        int screeningId = (int)insertScreeningcmd.LastInsertedId;
-
-                        for (char row = 'A'; row <= 'J'; row++)
+                        foreach (string time in cmb_timeAdded.Items)
                         {
-                            for (int seatNum = 2; seatNum <= 19; seatNum++)
-                            {
-                                string seatCodes = $"{row}{seatNum}";
 
-                                if (!excludedSeatCodes.Contains(seatCodes))
+                            string insertScreeningQuery = "INSERT INTO screening (movie_id, date, start_time) VALUES (@Movie_Id, @Date, @Time);";
+                            insertScreeningcmd = new MySqlCommand(insertScreeningQuery, conn);
+                            insertScreeningcmd.Parameters.AddWithValue("@Movie_Id", AddMovie.movieId);
+                            insertScreeningcmd.Parameters.AddWithValue("@Date", date);
+                            insertScreeningcmd.Parameters.AddWithValue("@Time", time);
+                            insertScreeningcmd.ExecuteNonQuery();
+
+
+                            List<string> excludedSeatCodes = new List<string> { "A2", "A3", "A4", "A17", "A18", "A19", "B2", "B3", "B19", "C8", "C13", "D8", "D13", "E8", "E13", "F8", "F13", "G8", "G13", "H8", "H13", "I8", "I13", "J8", "J13" };
+                            int screeningId = (int)insertScreeningcmd.LastInsertedId;
+
+                            for (char row = 'A'; row <= 'J'; row++)
+                            {
+                                for (int seatNum = 2; seatNum <= 19; seatNum++)
                                 {
-                                    string generateSeatQuery = "INSERT INTO seats (screening_id, seat_code, availability) VALUES (@Screening_Id, @Seat_code, 1);";
-                                    MySqlCommand generateSeatcmd = new MySqlCommand(generateSeatQuery, conn);
-                                    generateSeatcmd.Parameters.AddWithValue("@Screening_Id", screeningId);
-                                    generateSeatcmd.Parameters.AddWithValue("@Seat_code", seatCodes);
-                                    generateSeatcmd.ExecuteNonQuery();
+                                    string seatCodes = $"{row}{seatNum}";
+
+                                    if (!excludedSeatCodes.Contains(seatCodes))
+                                    {
+                                        string generateSeatQuery = "INSERT INTO seats (screening_id, seat_code, availability) VALUES (@Screening_Id, @Seat_code, 1);";
+                                        MySqlCommand generateSeatcmd = new MySqlCommand(generateSeatQuery, conn);
+                                        generateSeatcmd.Parameters.AddWithValue("@Screening_Id", screeningId);
+                                        generateSeatcmd.Parameters.AddWithValue("@Seat_code", seatCodes);
+                                        generateSeatcmd.ExecuteNonQuery();
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                MessageBox.Show("Screening successfully added.");
+                    MessageBox.Show("Screening successfully added.");
 
-                cmb_datesAdded.Items.Clear();
-                cmb_timeAdded.Items.Clear();
+                    cmb_datesAdded.Items.Clear();
+                    cmb_timeAdded.Items.Clear();
+                    currentDateScreeningsWithCinemaNumber(cinemaNum);
+                } 
+                else
+                {
+                    MessageBox.Show("No date or time added.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            
             }
             catch (Exception ex)
             {

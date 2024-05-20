@@ -499,7 +499,7 @@
             this.pnl_progress.Controls.Add(this.label13);
             this.pnl_progress.Controls.Add(this.lbl_paymentInProgress);
             this.pnl_progress.Controls.Add(this.panel7);
-            this.pnl_progress.Location = new System.Drawing.Point(209, 152);
+            this.pnl_progress.Location = new System.Drawing.Point(206, 222);
             this.pnl_progress.Name = "pnl_progress";
             this.pnl_progress.Size = new System.Drawing.Size(399, 436);
             this.pnl_progress.TabIndex = 35;
