@@ -106,7 +106,7 @@
             this.lbl_forgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_forgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_forgotPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
-            this.lbl_forgotPass.Location = new System.Drawing.Point(221, 470);
+            this.lbl_forgotPass.Location = new System.Drawing.Point(225, 538);
             this.lbl_forgotPass.Name = "lbl_forgotPass";
             this.lbl_forgotPass.Size = new System.Drawing.Size(147, 18);
             this.lbl_forgotPass.TabIndex = 10;
@@ -211,7 +211,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
             this.guna2Button1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(113, 512);
+            this.guna2Button1.Location = new System.Drawing.Point(113, 481);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(375, 40);
             this.guna2Button1.TabIndex = 1;
