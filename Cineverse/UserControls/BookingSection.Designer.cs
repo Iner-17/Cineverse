@@ -73,6 +73,8 @@
             // 
             // dgv_booking
             // 
+            this.dgv_booking.AllowUserToAddRows = false;
+            this.dgv_booking.AllowUserToDeleteRows = false;
             this.dgv_booking.AllowUserToResizeColumns = false;
             this.dgv_booking.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
