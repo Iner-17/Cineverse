@@ -23,7 +23,7 @@ namespace Cineverse
         public static string GlobalLabelCinemaNumber { get; set; }
         public static string GlobalDuration { get; set; }
 
-        int cinemaNum = 0;
+        int cinemaNum = 0;  
         public AddScreening()
         {
             InitializeComponent();
