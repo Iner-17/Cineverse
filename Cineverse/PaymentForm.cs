@@ -420,6 +420,9 @@ namespace Cineverse
             {
                 lbl_change.Text = "CHANGE: ₱";
             }
+
+
+
             ReceiptForm.Cash = cashPayement.ToString();
             ReceiptForm.Change = change.ToString();
         }

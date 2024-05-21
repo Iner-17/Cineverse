@@ -571,6 +571,7 @@
             this.txt_cash.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txt_cash.Location = new System.Drawing.Point(84, 76);
             this.txt_cash.Name = "txt_cash";
+            this.txt_cash.ShortcutsEnabled = false;
             this.txt_cash.Size = new System.Drawing.Size(259, 66);
             this.txt_cash.TabIndex = 31;
             this.txt_cash.TextChanged += new System.EventHandler(this.txt_cash_TextChanged);
