@@ -148,11 +148,11 @@
             // 
             this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(22, 647);
+            this.label10.Location = new System.Drawing.Point(22, 645);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 19);
             this.label10.TabIndex = 41;
-            this.label10.Text = "VAT:";
+            this.label10.Text = "VAT (12%):";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_currentDateAndTime
@@ -202,7 +202,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(21, 675);
+            this.label3.Location = new System.Drawing.Point(21, 672);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 19);
             this.label3.TabIndex = 31;
@@ -273,7 +273,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(21, 585);
+            this.label6.Location = new System.Drawing.Point(21, 586);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 19);
             this.label6.TabIndex = 22;

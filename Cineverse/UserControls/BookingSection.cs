@@ -120,15 +120,6 @@ namespace Cineverse.UserControls
                         lbl_ticketPrice.Text = "₱" + price.ToString("F2");
                         lbl_priceTotal.Text = "₱" + priceTotal.ToString("F2");
 
-                        lbl_cash.Text = "₱ " + cash.ToString("F2");
-                        if (change == 0)
-                        {
-                            lbl_change.Text = change.ToString();
-                        }
-                        else
-                        {
-                            lbl_change.Text = "₱ " + change.ToString("F2");
-                        }
                     }
                 }
                 catch (Exception ex)

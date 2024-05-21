@@ -16,7 +16,6 @@ namespace Cineverse
     public partial class StatisticsForm : Form
     {
 
-        private bool todayButtonisActive = false;
         private bool dailyButtonisActive = false;
         private bool weeklyButtonisActive = false;
         private bool monthlyButtonisActive = false;
@@ -27,11 +26,12 @@ namespace Cineverse
 
         private void StatisticsForm_Load(object sender, EventArgs e)
         {
-            btn_today_Click(this, EventArgs.Empty);
+            btn_daily_Click(this, EventArgs.Empty);
             TodayStatisticsRevenue();
             populateDonutChart();
         }
 
+        // BEST SELLING MOVIES 
         private void populateDonutChart()
         {
             TopMoviesChart.Series.Clear();
@@ -39,7 +39,7 @@ namespace Cineverse
 
             string mostSoldMovie = "SELECT movies.title, SUM(cineverse_revenue.total_amount) AS Total " +
                 "FROM movies INNER JOIN bookings ON movies.movie_id = bookings.movie_id " +
-                "INNER JOIN cineverse_revenue ON bookings.booking_id = cineverse_revenue.booking_id GROUP BY movies.title";
+                "INNER JOIN cineverse_revenue ON bookings.booking_id = cineverse_revenue.booking_id GROUP BY movies.title ORDER BY total DESC LIMIT 5";
             MySqlCommand mostSoldMoviecmd = new MySqlCommand(mostSoldMovie, conn);
 
             DataTable dt = new DataTable();
@@ -69,8 +69,6 @@ namespace Cineverse
 
             TopMoviesChart.Series.Add(series);
         }
-
-
 
 
 
@@ -586,36 +584,9 @@ namespace Cineverse
             RevenueChart.Titles.Add(chartTitle);
         }
 
-        //TODAY ONCLICK - DISPLAY PER TIME REVENUE
-        private void btn_today_Click(object sender, EventArgs e)
-        {
-            btn_today.BackColor = Color.FromArgb(31, 178, 198);
-            btn_today.ForeColor = Color.Black;
-
-            btn_daily.BackColor = Color.FromArgb(20, 32, 32);
-            btn_daily.ForeColor = Color.White;
-
-            btn_weekly.BackColor = Color.FromArgb(20, 32, 32);
-            btn_weekly.ForeColor = Color.White;
-
-            btn_monthly.BackColor = Color.FromArgb(20, 32, 32);
-            btn_monthly.ForeColor = Color.White;
-
-            todayButtonisActive = true;
-            dailyButtonisActive = false;
-            weeklyButtonisActive = false;
-            monthlyButtonisActive = false;
-
-            todayRevenue();
-            TodayStatisticsRevenue();
-        }
-
         //DAILY ONCLICK - DISPLAY PER DAY REVENUE
         private void btn_daily_Click(object sender, EventArgs e)
         {
-            btn_today.BackColor = Color.FromArgb(20, 32, 32);
-            btn_today.ForeColor = Color.White;
-
             btn_daily.BackColor = Color.FromArgb(31, 178, 198);
             btn_daily.ForeColor = Color.Black;
 
@@ -625,7 +596,6 @@ namespace Cineverse
             btn_monthly.BackColor = Color.FromArgb(20, 32, 32);
             btn_monthly.ForeColor = Color.White;
 
-            todayButtonisActive = false;
             dailyButtonisActive = true;
             weeklyButtonisActive = false;
             monthlyButtonisActive = false;
@@ -637,9 +607,6 @@ namespace Cineverse
         //WEEKLY ONCLICK - DISPLAY PER WEEK REVENUE
         private void btn_weekly_Click(object sender, EventArgs e)
         {
-            btn_today.BackColor = Color.FromArgb(20, 32, 32);
-            btn_today.ForeColor = Color.White;
-
             btn_daily.BackColor = Color.FromArgb(20, 32, 32);
             btn_daily.ForeColor = Color.White;
 
@@ -649,7 +616,7 @@ namespace Cineverse
             btn_monthly.BackColor = Color.FromArgb(20, 32, 32);
             btn_monthly.ForeColor = Color.White;
 
-            todayButtonisActive = false;
+         
             dailyButtonisActive = false;
             weeklyButtonisActive = true;
             monthlyButtonisActive = false;
@@ -661,9 +628,6 @@ namespace Cineverse
         //MONTHLY ONCLICK - DISPLAY PER MONTH REVENUE
         private void btn_monthly_Click(object sender, EventArgs e)
         {
-            btn_today.BackColor = Color.FromArgb(20, 32, 32);
-            btn_today.ForeColor = Color.White;
-
             btn_daily.BackColor = Color.FromArgb(20, 32, 32);
             btn_daily.ForeColor = Color.White;
 
@@ -673,7 +637,6 @@ namespace Cineverse
             btn_monthly.BackColor = Color.FromArgb(31, 178, 198);
             btn_monthly.ForeColor = Color.Black;
 
-            todayButtonisActive = false;
             dailyButtonisActive = false;
             weeklyButtonisActive = false;
             monthlyButtonisActive = true;
@@ -886,33 +849,6 @@ namespace Cineverse
         //HOVER EFFECTS
         #region button Effects
 
-        private void btn_today_MouseEnter(object sender, EventArgs e)
-        {
-            if (todayButtonisActive == false)
-            {
-                btn_today.BackColor = Color.FromArgb(31, 178, 198);
-                btn_today.ForeColor = Color.Black;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_today_MouseLeave(object sender, EventArgs e)
-        {
-            if (todayButtonisActive == false)
-            {
-                btn_today.BackColor = Color.FromArgb(20, 32, 32);
-                btn_today.ForeColor = Color.White;
-            }
-            else
-            {
-                return;
-            }
-        }
-
-   
         private void btn_daily_MouseEnter(object sender, EventArgs e)
         {
             if (dailyButtonisActive == false)

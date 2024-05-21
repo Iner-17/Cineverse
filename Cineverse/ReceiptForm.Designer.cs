@@ -176,7 +176,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 19);
             this.label10.TabIndex = 43;
-            this.label10.Text = "VAT:";
+            this.label10.Text = "VAT (12%):";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_currentDateAndTime
@@ -194,7 +194,7 @@
             // 
             this.lbl_cash.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cash.ForeColor = System.Drawing.Color.White;
-            this.lbl_cash.Location = new System.Drawing.Point(182, 706);
+            this.lbl_cash.Location = new System.Drawing.Point(182, 709);
             this.lbl_cash.Name = "lbl_cash";
             this.lbl_cash.Size = new System.Drawing.Size(113, 29);
             this.lbl_cash.TabIndex = 38;
@@ -204,7 +204,7 @@
             // 
             this.lbl_change.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_change.ForeColor = System.Drawing.Color.White;
-            this.lbl_change.Location = new System.Drawing.Point(182, 739);
+            this.lbl_change.Location = new System.Drawing.Point(182, 735);
             this.lbl_change.Name = "lbl_change";
             this.lbl_change.Size = new System.Drawing.Size(113, 29);
             this.lbl_change.TabIndex = 37;
