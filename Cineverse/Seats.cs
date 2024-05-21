@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 
 namespace Cineverse
@@ -142,19 +143,11 @@ namespace Cineverse
                 {
                     lbl_moviePrice.Text = "₱" + getPriceData["price"].ToString() + ".00";
                     int dur = Convert.ToInt32(getPriceData["duration"].ToString());
-                    if (dur > 120)
-                    {
-                        hourCounter += 2;
-                        minCounter = dur - 60;
-                        lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
-                    } else if (dur > 60)
-                    {
-                        hourCounter += 1;
-                        minCounter = dur - 60;
-                        lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
-                    }
-                   
                     
+                    hourCounter = dur / 60;
+                    minCounter = dur % 60;
+                    lbl_movieDuration.Text = hourCounter + "hr " + minCounter + "mins";
+             
                 }
                 getPriceData.Close();
             }
