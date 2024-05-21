@@ -61,8 +61,8 @@ namespace Cineverse
             lbl_time.Text = time;
             lbl_dateTime.Text = date;
             lbl_seats.Text = seatLists;
-            lbl_vat.Text = vatValue;    
-            lbl_discount.Text = discountValue.ToString();
+            lbl_vat.Text = Convert.ToDouble(vatValue).ToString("F2");    
+            lbl_discount.Text = discountValue != 0 ? discountValue.ToString("F2") : "0";
             double total = Convert.ToDouble(totalAmount.Replace("₱", ""));
             lbl_total1.Text = "₱" + total.ToString("F2");
             label3.Text = "Discount (" + discount + "):";
