@@ -94,7 +94,12 @@ namespace Cineverse
                     {
                         Username = GetTextBoxValue();
 
-                        TimeINOUT.TimeIn();
+                        if (LoginRole.GetRole(txt_user.Text, hashedPassword) == 2)
+                        {
+                            TimeINOUT.TimeIn();
+                        }
+
+                        LoginRole.GlobalRole = LoginRole.GetRole(txt_user.Text, hashedPassword);
 
                         Dashboard dashboard = new Dashboard();
                         dashboard.Show();

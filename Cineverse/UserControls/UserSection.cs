@@ -21,12 +21,20 @@ namespace Cineverse.UserControls
 
         private void UserSection_Load(object sender, EventArgs e)
         {
+            if (LoginRole.GlobalRole == 1)
+            {
+                label4.Visible= false;
+                lbl_timein.Visible= false;
+                btn_timeOut.Visible= false;
+
+                lbl_myProfile.Text = "ADMIN'S PROFILE";
+            } 
+
 
             DateTime currentDate = DateTime.Now;
             string formattedDate = currentDate.ToString("dddd, MMMMM d, yyyy");
 
             lbl_date.Text = formattedDate;
-
             getUserInfo();
         }
 

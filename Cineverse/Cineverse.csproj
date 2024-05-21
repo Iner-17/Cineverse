@@ -162,6 +162,7 @@
     <Compile Include="ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginRole.cs" />
     <Compile Include="MovieTitle.cs" />
     <Compile Include="NavigationControls.cs" />
     <Compile Include="PaymentForm.cs">

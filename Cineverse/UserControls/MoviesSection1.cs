@@ -23,6 +23,7 @@ namespace Cineverse
         public string Title { get; set; }
         public static string CinemaNumber { get; set; }
 
+
         public MoviesSection1()
         {
             InitializeComponent();
@@ -31,7 +32,12 @@ namespace Cineverse
         public void MoviesSection1_Load(object sender, EventArgs e)
         {
             UpdateMovieList();
+            if (LoginRole.GlobalRole == 2)
+            {
+                btn_addMovies.Visible = false;
+            }
         }
+
 
         //HoverEffects on buttons
         #region HoverEffects on buttons

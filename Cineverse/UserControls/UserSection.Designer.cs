@@ -55,9 +55,9 @@
             this.lbl_myProfile.ForeColor = System.Drawing.Color.White;
             this.lbl_myProfile.Location = new System.Drawing.Point(32, 21);
             this.lbl_myProfile.Name = "lbl_myProfile";
-            this.lbl_myProfile.Size = new System.Drawing.Size(281, 39);
+            this.lbl_myProfile.Size = new System.Drawing.Size(338, 39);
             this.lbl_myProfile.TabIndex = 4;
-            this.lbl_myProfile.Text = "ADMIN PROFILE";
+            this.lbl_myProfile.Text = "CASHIER\'S PROFILE";
             // 
             // lbl_date
             // 

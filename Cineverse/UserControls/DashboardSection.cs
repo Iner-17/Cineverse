@@ -27,6 +27,11 @@ namespace Cineverse
 
         private void DashboardSection_Load(object sender, EventArgs e)
         {
+            if (LoginRole.GlobalRole == 2)
+            {
+                btn_statistics.Visible = false;
+            }
+
             string username = Login.Username;   
             //get firstname from database based on user's username
             MySqlConnection conn = DBConnection.getConnection();
