@@ -24,12 +24,13 @@ namespace Cineverse
 
         int otp;
         private bool isRegistered;
+        
         private void btn_sendCode_Click(object sender, EventArgs e)
         {
             Random random = new Random();
             otp = random.Next(100000, 999999);
 
-            //Checks if email is registered
+            //CHECK IF EMAIL IS REGISTERED
             MySqlConnection conn = DBConnection.getConnection();
             try
             {
@@ -41,6 +42,7 @@ namespace Cineverse
                 MySqlDataReader reader = getFirstNamecmd.ExecuteReader();
 
                 isRegistered = reader.Read();
+                
             }
             catch (Exception ex)
             {
@@ -51,19 +53,21 @@ namespace Cineverse
 
             MailMessage message = new MailMessage();
             message.From = new MailAddress("cineverse24@gmail.com");
-            //email validation
+
+            //EMAIL VALIDATION
             Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
             + "@"
                         + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
+            
             Match match = regex.Match(txt_email.Text);
-      
 
+            //OTP SENDING
             if (match.Success)
             {
                 message.To.Add(txt_email.Text);
 
                 message.Subject = "One Time Password (OTP)";
-                message.Body = "Your OTP is: " + otp;
+                message.Body = "Hi" + "\n\nWe received a request to reset your Cineverse Password. \nEnter the following password reset code:\n\n" + otp;
 
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                 smtp.UseDefaultCredentials = false;
@@ -71,6 +75,7 @@ namespace Cineverse
                 smtp.Credentials = new NetworkCredential("cineverse24@gmail.com", "frcl afxf ckih thgx");
                 smtp.EnableSsl = true;
                 DateTime currentTime = DateTime.Now;
+
 
                 try
                 {
@@ -98,12 +103,6 @@ namespace Cineverse
             
         }
 
-
-        public string getEmail()
-        {
-            return txt_email.Text;
-        }
-
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -115,6 +114,7 @@ namespace Cineverse
             {
                 ResetPasswordForm resetPasswordForm = new ResetPasswordForm();
                 resetPasswordForm.getEmail(txt_email.Text);
+
                 resetPasswordForm.ShowDialog();
                 this.Close();
             } 

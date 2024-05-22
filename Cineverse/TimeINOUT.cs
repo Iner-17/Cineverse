@@ -11,6 +11,8 @@ namespace Cineverse
     internal class TimeINOUT
     {
         public static int user_id = 0;
+
+        //METHOD SET TIME IN
         public static void TimeIn()
         {
 
@@ -31,6 +33,7 @@ namespace Cineverse
             finally { conn.Close(); }
         }
 
+        //METHOD SET TIMEOUT
         public static void TimeOut()
         {
             int latestId = 0;

@@ -12,7 +12,6 @@ namespace Cineverse
     {
         public static int GlobalRole = 0;
 
-
         public static int GetRole(string username, string password)
         {
             int role = 0;

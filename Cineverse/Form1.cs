@@ -1,4 +1,4 @@
-﻿using ExpenseApp;
+﻿using Cineverse;
 using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
@@ -11,14 +11,17 @@ namespace Cineverse
 {
     public partial class Login : Form
     {
+        
         public static string Username { get; private set; }
 
         
         public Login()
         {
             InitializeComponent();
-            this.AcceptButton = guna2Button1;
+            this.AcceptButton = guna2Button1; 
         }
+
+        // USE ENTER TO LOGIN
         private void Login_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -27,7 +30,7 @@ namespace Cineverse
             }
         }
 
-        //send username to dashboard
+        //SHOW FIRSTNAME TO DASHBOARD
         public string GetTextBoxValue()
         {
             return txt_user.Text;
@@ -38,9 +41,8 @@ namespace Cineverse
             panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
         }
        
-
         
-        // LOGIN QUERY
+        //METHOD - LOGIN QUERY
         public void login()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -67,7 +69,7 @@ namespace Cineverse
                         string passwordPlaceholder = "Enter Password";
                         string usernameInput = txt_user.Text.Trim();
 
-
+                        // ERROR WHEN EMPTY
                         if (string.IsNullOrEmpty(usernameInput) || usernameInput == usernamePlaceholder)
                         {
                             txt_user.BorderColor = Color.Red;
@@ -90,15 +92,18 @@ namespace Cineverse
                             ep_password.SetError(txt_pass, string.Empty);
                         }
                     }
+                    // ENCRYPTED PASSWORD CHECK
                     else if (hashedPassword.Equals(Security.Encrypt(txt_pass.Text)))
                     {
                         Username = GetTextBoxValue();
 
+                        //CASHIER LOGIN ROLE
                         if (LoginRole.GetRole(txt_user.Text, hashedPassword) == 2)
                         {
                             TimeINOUT.TimeIn();
                         }
 
+                        //SET GLOBAL ROLE
                         LoginRole.GlobalRole = LoginRole.GetRole(txt_user.Text, hashedPassword);
 
                         Dashboard dashboard = new Dashboard();
@@ -127,17 +132,21 @@ namespace Cineverse
             }
         }
 
+        //LOGIN BUTTON 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             login();
         }
 
+        //SIGNUP BUTTON
         private void signup_Click(object sender, EventArgs e)
         {
             SignUp signupfrm = new SignUp();
             signupfrm.Show();
             this.Hide();
         }
+
+        #region PLACEHOLDER EFFECTS
 
         private void txt_user_Enter(object sender, EventArgs e)
         {
@@ -183,7 +192,9 @@ namespace Cineverse
                 }
             }
         }
+        #endregion 
 
+        // SHOW AND HIDE PASSWORD
         private void btn_show_Click(object sender, EventArgs e)
         {
             if (txt_pass.UseSystemPasswordChar == false)
@@ -203,6 +214,7 @@ namespace Cineverse
             btn_hide.BackColor = Color.Black;
         }
 
+        //ERROR PROVIDER 
         private void txt_user_TextChanged(object sender, EventArgs e)
         {
             string userInput = txt_user.Text.Trim();
@@ -229,7 +241,7 @@ namespace Cineverse
         }
 
 
-        //space disabled
+        //SPACE DISABLED
         private void txt_user_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
@@ -238,12 +250,14 @@ namespace Cineverse
             }
         }
 
+        
         private void lbl_forgotPass_Click(object sender, EventArgs e)
         {
             ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
             forgotPasswordForm.ShowDialog();
         }
 
+        //EXIT BUTTON
         private void panel5_Click(object sender, EventArgs e)
         {
             Application.Exit();

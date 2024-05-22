@@ -15,7 +15,7 @@ namespace Cineverse.UserControls
 {
     public partial class SynopsisSection : UserControl
     {
-
+        //GLOBALLING TOOLBOX CONTROLS
         public static ComboBox GlobalComboBox { get; set; }
         public static Label GlobalLabelTitle { get; set; }
         public static Label GlobalLabelRating { get; set; }
@@ -32,6 +32,7 @@ namespace Cineverse.UserControls
             
         }
 
+        //QUERY GETTING TITLE ADD TO COMBOBOX
         public void SynopsisSection_Load(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -63,6 +64,7 @@ namespace Cineverse.UserControls
             GlobalComboBox = cbo_titleLists;
             GlobalPictureBox = pb_Poster1;
 
+            //MOVIE DETAILS QUERY BASED ON TITLE ONLOAD
             try
             {
                 conn.Open();
@@ -103,7 +105,7 @@ namespace Cineverse.UserControls
             finally { conn.Close(); }
         }
       
-       
+       //GET MOVIE DETAILS BASED ON TITLE CHANGE
         private void cbo_titleLists_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();

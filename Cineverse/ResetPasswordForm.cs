@@ -1,4 +1,4 @@
-﻿using ExpenseApp;
+﻿using Cineverse;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -18,6 +18,7 @@ namespace Cineverse
         private string firstName = "";
         private string email = "";
         ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
+
         public ResetPasswordForm()
         {
             InitializeComponent();
@@ -27,8 +28,7 @@ namespace Cineverse
 
         private void ResetPasswordForm_Load(object sender, EventArgs e)
         {
-            
-
+            //GET FIRSTNAME USING EMAIL
             MySqlConnection conn = DBConnection.getConnection();
 
             try
@@ -43,7 +43,7 @@ namespace Cineverse
                 while (reader.Read())
                 {
                     firstName = reader["firstname"].ToString();
-                    user_firstName.Text = "Hi, " + firstName;
+                    user_firstName.Text = "Hi, " + firstName + "!";
                     
                 }
             }
@@ -51,7 +51,7 @@ namespace Cineverse
             {
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            MessageBox.Show(email);
+           
         }
 
         public void getEmail(string Email)
@@ -65,7 +65,7 @@ namespace Cineverse
         }
 
         
-
+        //SHOW AND HIDE PASSWORD
         private void chk_showPass_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -81,27 +81,29 @@ namespace Cineverse
                 }
         }
 
+        //HOVER EFFECTS
         private void chk_showPass_MouseEnter(object sender, EventArgs e)
         {
             chk_showPass.ClientRectangle.Contains(chk_showPass.PointToClient(Cursor.Position));
             
                 chk_showPass.ForeColor = Color.FromArgb(31, 178, 198); 
                 Font underlineFont = new Font(chk_showPass.Font, FontStyle.Underline); 
-                chk_showPass.Font = underlineFont; // Apply the underline font
-            
+                chk_showPass.Font = underlineFont; 
         }
 
         private void chk_showPass_MouseLeave(object sender, EventArgs e)
         {
             chk_showPass.ForeColor = SystemColors.Window; 
-            chk_showPass.Font = new Font(chk_showPass.Font, FontStyle.Regular); // Remove underline
+            chk_showPass.Font = new Font(chk_showPass.Font, FontStyle.Regular); 
         }
+
 
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
             string password = Security.Encrypt(txt_confirmPass.Text);
 
+            //METHOD FROM SIGNUP FORM PASSWORD VALIDATION
             if(SignUp.IsValidPassword(txt_newPass.Text))
             {       
                 if (txt_newPass.Text == txt_confirmPass.Text)

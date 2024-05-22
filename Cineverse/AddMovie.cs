@@ -22,6 +22,7 @@ namespace Cineverse
             InitializeComponent();
         }
 
+        
         private string fileName = "";
 
         private void btn_saveMovie_Click(object sender, EventArgs e)
@@ -32,6 +33,8 @@ namespace Cineverse
 
         public static int movieId = 0;
 
+
+        //SAVE MOVIE QUERY
         public void saveMovie()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -39,6 +42,7 @@ namespace Cineverse
             if(txt_addTitle.Text != "" && txt_addPrice.Text != "" && cbo_addGenre.Text != "" && txt_addDuration.Text != "" && pictureBox1.Image != null && txt_description.Text != "" && cbo_rating.Text != "" && cbo_cinemaNum.Text != "" )
             {
                 int TitleInt = 0;
+                //MOVIE TITLE EXISTING VALIDATION
                 try
                 {
                     conn.Open();
@@ -62,6 +66,7 @@ namespace Cineverse
                 else 
                 { 
 
+                //INSERT MOVIE DETAILS QUERY
                 try
                 {
                     conn.Open();
@@ -111,7 +116,8 @@ namespace Cineverse
             }
             
         }
-           // UPLOAD IMAGE
+
+        // UPLOAD IMAGE
         private void btn_uploadImage_Click(object sender, EventArgs e) 
         {
             try
@@ -133,6 +139,7 @@ namespace Cineverse
 
         }
 
+        
         private void SaveImage(string filename)
         {
         }
@@ -146,11 +153,10 @@ namespace Cineverse
 
             if (dashboard != null)
             {
-                // Close the other form if it's open
+                
                 dashboard.Close();
             }
 
-            // Open the other form
             dashboard = new Dashboard();
             dashboard.btn_movies_Click(this, EventArgs.Empty);
             
@@ -162,7 +168,8 @@ namespace Cineverse
         private void cbo_cinemaNum_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
-
+            
+            //CINEMA NUMBER FULL
             try
             {
                 conn.Open();
@@ -181,8 +188,6 @@ namespace Cineverse
                         cbo_cinemaNum.SelectedIndex = - 1;
                         btn_saveMovie.Focus();
                     }
-
-
                 }
             }
             catch (Exception ex)
@@ -191,6 +196,7 @@ namespace Cineverse
             finally { conn.Close(); }   
         }
 
+        //PRICE AND DURATION VALIDATION
         private void txt_addPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))

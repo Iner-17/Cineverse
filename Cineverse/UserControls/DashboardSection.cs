@@ -19,7 +19,7 @@ namespace Cineverse
     public partial class DashboardSection : UserControl
     {
         private string username;
-        public string Title { get; set; }
+        public string Title { get; set; } //PASS TITLE TO SEATS FORM 
         public DashboardSection()
         {
             InitializeComponent();
@@ -27,13 +27,14 @@ namespace Cineverse
 
         private void DashboardSection_Load(object sender, EventArgs e)
         {
+            //REMOVE STAT BUTTON FOR CASHIER ROLE
             if (LoginRole.GlobalRole == 2)
             {
                 btn_statistics.Visible = false;
             }
 
             string username = Login.Username;   
-            //get firstname from database based on user's username
+            //DISPLAY FIRSTNAME 
             MySqlConnection conn = DBConnection.getConnection();
             try
             {
@@ -57,7 +58,7 @@ namespace Cineverse
             }
             finally { conn.Close(); }
 
-            //show current time & date
+        //CURRENT DATE AND TIME
             UpdateTime();
 
             Timer timer = new Timer();
@@ -69,22 +70,27 @@ namespace Cineverse
             string formattedDate = currentDate.ToString("dddd, MMMMM d, yyyy");
 
             lbl_date.Text = formattedDate;
-
+            
+            //OVERVIEW METHODS
             UpdateNumberOfMovies();
-
-           
             UpdateBookings();
-
-
             displayMovieDashboard();
-           
-
         }
 
+        private void Timer_tick(Object sender, EventArgs e)
+        {
+            UpdateTime();
+        }
+        private void UpdateTime()
+        {
+            lbl_time.Text = string.Format("{0:hh  :  mm  :  ss   tt}", DateTime.Now).ToUpper();
+        }
+
+
+        // THREE MOVIES DISPLAY
         public void displayMovieDashboard()
         {
             MySqlConnection conn = DBConnection.getConnection();
-
 
             for (int i = 1; i <= 3; i++)
             {
@@ -122,7 +128,8 @@ namespace Cineverse
                         Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = duration + " mins";
                         Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = genre;
                         Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "₱" + price;
-                    } else
+                    } 
+                    else // EMPTY - PLACEHOLDER DISPLAY
                     {
                         lbl_title.Text = "Title";
                         pb_poster.Image = Properties.Resources.PosterPlaceholder1;
@@ -131,7 +138,6 @@ namespace Cineverse
                         Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "Price";
                     }
                 }
-
 
                 catch (Exception ex1)
                 {
@@ -142,12 +148,15 @@ namespace Cineverse
 
             
         }
+
+        //NUMBER OF BOOKINGS & REVENUE
         public void UpdateBookings()
         {
 
             DateTime dateTime = DateTime.Now;
             MySqlConnection conn = DBConnection.getConnection();
-            //getting total bookings
+           
+            //BOOKINGS
             try
             {
                 conn.Open();
@@ -173,7 +182,7 @@ namespace Cineverse
             finally { conn.Close(); }
 
 
-            //getting total revenue
+            //REVENUE
             try
             {
                 conn.Open();
@@ -202,16 +211,7 @@ namespace Cineverse
             finally { conn.Close(); }
         }
 
-        private void Timer_tick(Object sender, EventArgs e)
-        {
-            UpdateTime();
-        }
-        private void UpdateTime()
-        {
-            lbl_time.Text = string.Format("{0:hh  :  mm  :  ss   tt}", DateTime.Now).ToUpper();
-            //lbl_time.Text = string.Format("{0:hh:mm:ss tt}", DateTime.Now);
-        }
-
+        //NUM OF SCHEDULED MOVIES
         public void UpdateNumberOfMovies()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -234,6 +234,7 @@ namespace Cineverse
             }
         }
 
+        //GET TICKETS BUTTON TO SEATS FORM
         private void btn_getTickets1_Click(object sender, EventArgs e)
         {
             if (lbl_title1.Text.Equals("Title"))
@@ -290,7 +291,8 @@ namespace Cineverse
                 ((Form)this.TopLevelControl).Close();
             }
         }
-
+        //HOVER EFFECTS
+        #region HOVER EFFECTS
         private void btn_getTickets3_MouseEnter_1(object sender, EventArgs e)
         {
             btn_getTickets3.BackColor = Color.FromArgb(31, 178, 198);
@@ -337,13 +339,6 @@ namespace Cineverse
             lbl_viewAll.ForeColor = Color.White;
         }
 
-        private void lbl_viewAll_Click(object sender, EventArgs e)
-        {
-
-            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
-            dashboard1.btn_movies_Click(this, EventArgs.Empty);
-        }
-
         private void btn_statistics_MouseEnter(object sender, EventArgs e)
         {
             btn_statistics.BackColor = Color.FromArgb(31, 178, 198);
@@ -354,6 +349,15 @@ namespace Cineverse
         {
             btn_statistics.BackColor = Color.FromArgb(20, 32, 32);
             btn_statistics.ForeColor = Color.White;
+        }
+        #endregion
+
+        
+        private void lbl_viewAll_Click(object sender, EventArgs e)
+        {
+
+            Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
+            dashboard1.btn_movies_Click(this, EventArgs.Empty);
         }
 
         private void btn_statistics_Click(object sender, EventArgs e)

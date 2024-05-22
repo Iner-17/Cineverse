@@ -35,6 +35,7 @@ namespace Cineverse
             cinemaNum = Convert.ToInt32(lbl_cinemaNumber.Text);
         }
 
+        //SCREENING SHOW BASED ON DATE
         private void currentDateScreeningsWithCinemaNumber(int cinemaNumber)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -73,13 +74,13 @@ namespace Cineverse
 
         }
 
+        //ADD SCREENING DATE
         private void dtp_date_ValueChanged(object sender, EventArgs e)
         {
             currentDateScreeningsWithCinemaNumber(cinemaNum);
         }
 
-
-
+        //SCREENING DATE VALIDATION FOR PASSED DATE
         private void btn_addDate_Click_1(object sender, EventArgs e)
         {
             if (dtp_date.Value < DateTime.Today)
@@ -99,19 +100,21 @@ namespace Cineverse
             }
         }
 
+        
         private void btn_addTime_Click(object sender, EventArgs e)
         {
 
             string inputTime = dtp_time.Text;
             DateTime startTime = DateTime.ParseExact(inputTime, "HH:mm", null);
 
-            int lastIndexAddedTime = cmb_timeAdded.Items.Count - 1;
-            int lastIndexDGVTime = dgv_booking.Rows.Count - 2;
+            int lastIndexAddedTime = cmb_timeAdded.Items.Count - 1; //COMBO BOX LAST SCREENING TIME
+            int lastIndexDGVTime = dgv_booking.Rows.Count - 2;//DGV LAST SCREENING TIME 
 
-            bool isConflict = false;
+            bool isConflict = false; 
 
             if (dgv_booking.Rows.Count > 1)
             {
+                //CONVERT TIME TO DURATION
                 object lastDGVTime = dgv_booking.Rows[lastIndexDGVTime].Cells["Time"].Value;
                 string lastDGVDuration = dgv_booking.Rows[lastIndexDGVTime].Cells["Duration"].Value.ToString().Replace("hr", "").Replace("mins", "").Trim();
 
@@ -129,7 +132,7 @@ namespace Cineverse
                     minutes = int.Parse(timeParts[1]);
                 }
 
-                int lastDurationfromDGV = (hours * 60) + minutes;
+                int lastDurationfromDGV = (hours * 60) + minutes; //DURATION FINAL
 
                 // Parse time from DataGridView with AM/PM
                 DateTime endTimeFromDGV = DateTime.Parse(lastDGVTime.ToString());
@@ -142,6 +145,7 @@ namespace Cineverse
                 }
             }
 
+            //ADDED SCREENING TIME VALIDATION
             if (lastIndexAddedTime >= 0 && !isConflict)
             {
                 object mostCurrentItem = cmb_timeAdded.Items[lastIndexAddedTime];
@@ -300,6 +304,6 @@ namespace Cineverse
 
             this.Close();
         }
-    
+
     }
 }

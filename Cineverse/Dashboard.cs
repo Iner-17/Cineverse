@@ -29,13 +29,7 @@ namespace Cineverse
             InitializeNavigationControl();
         }
 
-        private void Btn_movies_MouseLeave(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-
-
+        //LIST OF USERCONTROLS
         private void InitializeNavigationControl()
         {
             List<UserControl> userControls = new List<UserControl>()
@@ -46,14 +40,13 @@ namespace Cineverse
                 new BookingSection(),
                 new SynopsisSection(),
                 new UserSection()
-
-
             };
 
             navigationcontrols = new NavigationControls(userControls, panel4);
             
             navigationcontrols.Display(0);
         }
+        //DISPLAY USERCONTROLS
         public void navigateToMovies()
         {
             navigationcontrols.Display(1);
@@ -69,21 +62,13 @@ namespace Cineverse
             navigationcontrols.Display(0);
         }
 
-        public void UpdateMovieList()
-        {
-            
-        }
-
         public void Dashboard_Load(object sender, EventArgs e)
         {
-            //time & date
             MoviesSection1 moviesSection1 = new MoviesSection1();
             moviesSection1.UpdateMovieList();
         }
 
-
-
-
+        //LOGOUT BUTTON
         private void button6_Click(object sender, EventArgs e)
         {
             Login loginfrm = new Login();
@@ -91,9 +76,8 @@ namespace Cineverse
             this.Close();
         }
 
-
-
-        #region Hover effects
+        
+        #region HOVER EFFECTS
 
         private void btn_dashboard_MouseEnter(object sender, EventArgs e)
         {
@@ -239,11 +223,7 @@ namespace Cineverse
 
         #endregion
 
-        private void panel5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        #region ON CLICK EFFECTS ON BUTTON
         public void btn_dashboard_Click(object sender, EventArgs e)
         {
             btn_dashboard.BackColor = Color.FromArgb(31, 178, 198);
@@ -348,8 +328,6 @@ namespace Cineverse
             navigationcontrols.Display(3);
         }
 
-
-
         public void btn_user_Click(object sender, EventArgs e)
         {
             btn_bookings.BackColor = Color.FromArgb(20, 32, 32);
@@ -375,7 +353,11 @@ namespace Cineverse
 
             navigationcontrols.Display(5);
         }
+        #endregion
 
-        
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

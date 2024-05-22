@@ -1,4 +1,4 @@
-﻿using ExpenseApp;
+﻿using Cineverse;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1;
 using System;
@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
@@ -32,6 +33,8 @@ namespace Cineverse
             this.ActiveControl = null;
         }
 
+        //PLACEHOLDER
+        #region PLACEHOLDER EFFECTS
         private void txt_firstName_Enter(object sender, EventArgs e)
         {
 
@@ -89,6 +92,31 @@ namespace Cineverse
             }
         }
 
+        private void txt_username_Enter(object sender, EventArgs e)
+        {
+            if (txt_username.Text == "Username")
+            {
+                lbl_astUsername.Text = "";
+                txt_username.Text = "";
+                txt_username.ForeColor = Color.White;
+            }
+
+            txt_username.BorderColor = Color.White;
+        }
+
+        private void txt_ContactNum_Enter(object sender, EventArgs e)
+        {
+            if (txt_ContactNum.Text == "Contact No.")
+            {
+                lbl_astContactNo.Text = "";
+                txt_ContactNum.Text = "";
+                txt_ContactNum.ForeColor = Color.White;
+            }
+
+        }
+        #endregion
+
+
         private void txt_email_Leave(object sender, EventArgs e)
         {
             if (txt_email.Text == "")
@@ -99,7 +127,8 @@ namespace Cineverse
             }
 
             string email = txt_email.Text;
-
+            
+            // EMAIL VALIDATION - CHAR 
             Regex regex = new Regex(@"^[\w!#$%&'+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)"
                            + "@"
                            + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
@@ -108,9 +137,9 @@ namespace Cineverse
             {
                 txt_email.BorderColor = Color.White;
             } 
-            
-            MySqlConnection conn = DBConnection.getConnection();
 
+            MySqlConnection conn = DBConnection.getConnection();
+            // EMAIL VALIDATION - EXISTING
             try
             {
                 conn.Open();
@@ -135,17 +164,6 @@ namespace Cineverse
         }
 
 
-        private void txt_ContactNum_Enter(object sender, EventArgs e)
-        {
-            if (txt_ContactNum.Text == "Contact No.")
-            {
-                lbl_astContactNo.Text = "";
-                txt_ContactNum.Text = "";
-                txt_ContactNum.ForeColor = Color.White;
-            }
-
-        }
-
         private void txt_ContactNum_Leave(object sender, EventArgs e)
         {
             if (txt_ContactNum.Text == "")
@@ -155,6 +173,7 @@ namespace Cineverse
                 txt_ContactNum.ForeColor = Color.Silver;
             }
 
+            // ERROR CONTACTNUM
             if (!txt_ContactNum.Text.StartsWith("09"))
             {
                 MessageBox.Show("Contact Number should start with 09", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -167,17 +186,24 @@ namespace Cineverse
             }
 
         }
-        private void txt_username_Enter(object sender, EventArgs e)
+
+        //CONTACTNUM VALIDATION
+        private void txt_ContactNum_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txt_username.Text == "Username")
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                lbl_astUsername.Text = "";
-                txt_username.Text = "";
-                txt_username.ForeColor = Color.White;
+                e.Handled = true;
             }
 
-            txt_username.BorderColor = Color.White;
+            if (txt_ContactNum.Text.Length >= 11 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+                txt_ContactNum.BorderColor = Color.White;
+
+            }
+
         }
+
 
         private void txt_username_Leave_1(object sender, EventArgs e)
         {
@@ -188,6 +214,7 @@ namespace Cineverse
                 txt_username.ForeColor = Color.Silver;
             }
 
+            //USERNAME CHECK - EXISTING
             MySqlConnection conn = DBConnection.getConnection();
 
             try
@@ -286,11 +313,13 @@ namespace Cineverse
             this.Close();
         }
 
+        //SIGN UP BUTTON 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             signUp();
         }
 
+        // METHOD SIGNUP - INFO VALIDATION
         public void signUp()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -384,6 +413,7 @@ namespace Cineverse
                     ep_FN.SetError(txt_confirmPassword, string.Empty);
                 }
             }
+            // VALIDATION
             else if (txt_firstName.TextLength < 2)
             {
                 MessageBox.Show("First Name should have at least 2 characters.");
@@ -409,6 +439,7 @@ namespace Cineverse
            
             else
             {
+               //SUCCESSFULLY ADDED ACCOUNT
                 if (IsValidPassword(txt_password.Text))
                 {
                     txt_password.BorderColor = Color.White;
@@ -470,13 +501,10 @@ namespace Cineverse
                     MessageBox.Show("Password should have atleast 8 characters, 1 number, and 1 symbol.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_password.BorderColor = Color.Red;
                 }
-               
             }
-
-           
         }
 
-        //Method for checking password if valid
+        //METHOD PASSWORD VALIDAITON
         public static bool IsValidPassword(string password)
         {
             var hasNumber = new Regex(@"[0-9]+");
@@ -493,24 +521,9 @@ namespace Cineverse
             panel3.BackColor = Color.FromArgb(188, 0, 0, 0);
         }
 
-        private void txt_ContactNum_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-            if (txt_ContactNum.Text.Length >= 11 && e.KeyChar != '\b')
-            {
-                e.Handled = true;
-                txt_ContactNum.BorderColor = Color.White;
-
-            }
-
-        }
-
-
-        #region text change effects
+  
+        //TEXT CHANGED ERROR PROVIDER
+        #region TEXT CHANGE EFFECTS
         private void txt_firstName_TextChanged(object sender, EventArgs e)
         {
             string firstNameInput = txt_firstName.Text.Trim();
@@ -597,6 +610,7 @@ namespace Cineverse
         }
 #endregion
 
+        
         private void txt_email_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
@@ -613,6 +627,7 @@ namespace Cineverse
             }
         }
 
+        //SHOW AND HIDE PASSWORD
         private void btn_show_Click(object sender, EventArgs e)
         {
             if (txt_password.UseSystemPasswordChar == false)
@@ -658,5 +673,6 @@ namespace Cineverse
         {
             Application.Exit();
         }
+
     }
 }

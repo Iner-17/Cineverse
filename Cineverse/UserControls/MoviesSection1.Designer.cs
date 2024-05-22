@@ -701,7 +701,6 @@
             this.lbl_title7.TabIndex = 49;
             this.lbl_title7.Text = "Title";
             this.lbl_title7.Visible = false;
-            this.lbl_title7.Click += new System.EventHandler(this.lbl_title7_Click);
             // 
             // panel1
             // 
@@ -723,7 +722,6 @@
             this.lbl_price1.TabIndex = 80;
             this.lbl_price1.Text = "Price";
             this.lbl_price1.Visible = false;
-            this.lbl_price1.Click += new System.EventHandler(this.lbl_price1_Click);
             // 
             // lbl_price2
             // 

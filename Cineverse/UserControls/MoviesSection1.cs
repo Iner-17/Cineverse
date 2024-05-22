@@ -20,7 +20,7 @@ namespace Cineverse
     public partial class MoviesSection1 : UserControl
     {
         private string username;
-        public string Title { get; set; }
+        public string Title { get; set; } 
         public static string CinemaNumber { get; set; }
 
 
@@ -31,13 +31,14 @@ namespace Cineverse
 
         public void MoviesSection1_Load(object sender, EventArgs e)
         {
+            
             UpdateMovieList();
+            //HIDE ADD MOVIES BUTTON
             if (LoginRole.GlobalRole == 2)
             {
-                btn_addMovies.Visible = false;
+                btn_addMovies.Visible = false; 
             }
         }
-
 
         //HoverEffects on buttons
         #region HoverEffects on buttons
@@ -203,17 +204,8 @@ namespace Cineverse
 
         #endregion
 
-        private void btn_backk_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (this.ParentForm is Dashboard dashboard)
-            {
-                // Display the Dashboard user control
-                dashboard.navigationcontrols.Display(0);
-            }
-        }
 
-
-
+        //METHOD DISPLAY MOVIES PER CINEMA NUM
         public void UpdateMovieList()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -226,7 +218,7 @@ namespace Cineverse
                 if(lbl_title != null && lbl_title.Text == "Title")
                 {
 
-                    //cinema number 1
+                    //CINEMA 1
                     try
                     {
                         conn.Open();
@@ -290,7 +282,7 @@ namespace Cineverse
             }
 
 
-            //cinema number 2
+            //CINEMA 2
 
             for (int i = 4; i <= 6; i++)
             {
@@ -367,7 +359,7 @@ namespace Cineverse
                 }
             }
 
-            //cinema number 2
+            //CINEMA 3
 
             for (int i = 7; i <= 9; i++)
             {
@@ -444,9 +436,7 @@ namespace Cineverse
                 }
             }
 
-
-
-            //cinema number 4
+            //CINEMA 4
 
             for (int i = 10; i <= 12; i++)
             {
@@ -524,31 +514,16 @@ namespace Cineverse
           
         }
 
-        private void reset()
-        {
-            for (int i = 1; i <= 12; i++)
-            {
-                PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
-                Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
-                Image placeholder = Cineverse.Properties.Resources.PosterPlaceholder;
-
-                lbl_title.Text = "Title";
-                Controls.Find("lbl_rating" + i, true).FirstOrDefault().Text = "Rating";
-                Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = "Duration";
-                Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = "Genre";
-                Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "Price";
-                pb_poster.Image = placeholder;
-            }
-        }
-
-        //RELOAD
       
+        //GET TICKETS BUTTON 
         private void btn_gt1_Click(object sender, EventArgs e)
         {
+            //NO MOVIE
             if (lbl_title1.Text.Equals("Title"))
             {
                 return;
             }
+            //HAS MOVIE
             else
             {
                 Title = lbl_title1.Text;
@@ -580,7 +555,6 @@ namespace Cineverse
 
                 ((Form)this.TopLevelControl).Close();
             }
-            
         }
 
         private void btn_gt3_Click(object sender, EventArgs e)
@@ -772,12 +746,8 @@ namespace Cineverse
                 ((Form)this.TopLevelControl).Close();
             }
         }
-
-        private void lbl_price1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        //SYNOPSIS BUTTONS PASSING TITLE
         private void label3_Click(object sender, EventArgs e)
         {
             navigateSynopsis(lbl_title1.Text);
@@ -838,6 +808,7 @@ namespace Cineverse
             navigateSynopsis(lbl_title12.Text);
         }
 
+        // METHOD FOR SYNOPSIS BUTTON
         private void navigateSynopsis(string movieTitle)
         {
 
@@ -902,11 +873,7 @@ namespace Cineverse
             
         }
 
-        private void lbl_title7_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //DELETE BUTTON BASED ON TITLE
         private void panel3_Click(object sender, EventArgs e)
         {
             deleteButton(lbl_title1.Text);
@@ -967,6 +934,7 @@ namespace Cineverse
             deleteButton(lbl_title12.Text);
         }
 
+        //METHOD DELETE BUTTON
         private void deleteButton(string movieTitle)
         {
 
@@ -977,10 +945,10 @@ namespace Cineverse
                "Delete Confirmation",
                MessageBoxButtons.YesNo,
                MessageBoxIcon.Question,
-               MessageBoxDefaultButton.Button1 // Default button is "Yes"
+               MessageBoxDefaultButton.Button1 
 
             );
-
+            // YES - DELETE SUCCESSFULLY
             if (result == DialogResult.Yes)
             {
                 MySqlConnection conn = DBConnection.getConnection();
@@ -1033,6 +1001,24 @@ namespace Cineverse
             }
         }
 
-        
+        //RESET AFTER DELETE
+        private void reset()
+        {
+            for (int i = 1; i <= 12; i++)
+            {
+                PictureBox pb_poster = Controls.Find("pb_Poster" + i, true).FirstOrDefault() as PictureBox;
+                Label lbl_title = Controls.Find("lbl_title" + i, true).FirstOrDefault() as Label;
+                Image placeholder = Cineverse.Properties.Resources.PosterPlaceholder;
+
+                lbl_title.Text = "Title";
+                Controls.Find("lbl_rating" + i, true).FirstOrDefault().Text = "Rating";
+                Controls.Find("lbl_duration" + i, true).FirstOrDefault().Text = "Duration";
+                Controls.Find("lbl_genre" + i, true).FirstOrDefault().Text = "Genre";
+                Controls.Find("lbl_price" + i, true).FirstOrDefault().Text = "Price";
+                pb_poster.Image = placeholder;
+            }
+        }
+
+
     }
 }

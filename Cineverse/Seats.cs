@@ -15,6 +15,8 @@ namespace Cineverse
     public partial class Seats : Form
     {
         private string username;
+
+        //SEATS COLOR
         public string TitleFromMovieSection { get; set; }
         Color selectedColor = Color.FromArgb(225, 48, 48);
         Color availableColor = Color.DimGray;
@@ -25,6 +27,7 @@ namespace Cineverse
         private string currentTime;
         private string seatList;
 
+        //DATA PASSED TO PAYMENT FORM
         private void passDataToPaymentForm()
         {
             currentTitle = cbo_titleLists.Text;
@@ -38,11 +41,10 @@ namespace Cineverse
                 paymentForm.GetDataFromSeatForm(currentTitle, currentDate, currentTime, seatList);
                 paymentForm.Show();
 
-
                 this.Hide();
             } else
             {
-                MessageBox.Show("All fields are required.");
+                MessageBox.Show("All fields are required.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
             }
         }
@@ -65,7 +67,7 @@ namespace Cineverse
             
 
             MySqlConnection conn = DBConnection.getConnection();
-            //Set movie lists
+            //COMBOBOX SET ALL TITLE
             try
             {
                 conn.Open();
@@ -93,6 +95,7 @@ namespace Cineverse
                 cbo_titleLists.Text = titleFromMovieSection;
             }
 
+            //CINEMA NUMBER TOP LEFT
             try
             {
                 conn.Open();
@@ -120,6 +123,7 @@ namespace Cineverse
             }
         }
 
+        //TITLE CHANGE QUERY FOR MOVIE DETAILS
         private void cbo_titleLists_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -157,7 +161,7 @@ namespace Cineverse
             }
             finally { conn.Close(); }
 
-            //set dates based on title
+            //CHANGE  TITLE GET DATE
             try
             {
                 conn.Open();
@@ -182,6 +186,7 @@ namespace Cineverse
             finally { conn.Close(); }
         }
 
+        // CHANGE DATE GET TIME
         private void cbo_dateLists_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -212,6 +217,7 @@ namespace Cineverse
             finally { conn.Close(); }
         }
 
+        //CHANGE TIME, CHANGE SEAT AVAILABILITY
         private void cbo_timeLists_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -338,6 +344,7 @@ namespace Cineverse
                                 seatPanel.BackColor = availableColor;
                             }
                         };
+                        // CLEAR ALL BUTTONS
                         lbl_clearAll.MouseClick += (sender, e) =>
                         {
                             if (seatPanel.BackColor == selectedColor)
@@ -349,9 +356,6 @@ namespace Cineverse
                     }
                 }
             }
-            
-
-            
             
         }
         
@@ -371,6 +375,7 @@ namespace Cineverse
             this.Close();
         }
 
+        #region HOVER EFFECTS
         private void btn_back_MouseEnter(object sender, EventArgs e)
         {
             btn_back.BackColor = Color.FromArgb(31, 178, 198);
@@ -404,6 +409,7 @@ namespace Cineverse
         {
             lbl_clearAll.ForeColor= Color.White;
         }
+        #endregion
 
         private void btn_payment_Click(object sender, EventArgs e)
         {
