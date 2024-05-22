@@ -207,12 +207,12 @@
             this.lbl_screeningdate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_screeningdate.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_screeningdate.ForeColor = System.Drawing.Color.White;
-            this.lbl_screeningdate.Location = new System.Drawing.Point(685, 128);
+            this.lbl_screeningdate.Location = new System.Drawing.Point(829, 207);
             this.lbl_screeningdate.Name = "lbl_screeningdate";
             this.lbl_screeningdate.Size = new System.Drawing.Size(240, 38);
             this.lbl_screeningdate.TabIndex = 53;
             this.lbl_screeningdate.Text = "January 01, 2024";
-            this.lbl_screeningdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_screeningdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dgv_booking
             // 
@@ -248,7 +248,7 @@
             this.dgv_booking.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_booking.EnableHeadersVisualStyles = false;
             this.dgv_booking.GridColor = System.Drawing.Color.Black;
-            this.dgv_booking.Location = new System.Drawing.Point(536, 296);
+            this.dgv_booking.Location = new System.Drawing.Point(536, 268);
             this.dgv_booking.Name = "dgv_booking";
             this.dgv_booking.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -271,7 +271,7 @@
             this.dgv_booking.RowTemplate.Height = 50;
             this.dgv_booking.RowTemplate.ReadOnly = true;
             this.dgv_booking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_booking.Size = new System.Drawing.Size(533, 406);
+            this.dgv_booking.Size = new System.Drawing.Size(533, 434);
             this.dgv_booking.TabIndex = 52;
             // 
             // label1
@@ -340,9 +340,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(530, 234);
+            this.label3.Location = new System.Drawing.Point(530, 207);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 38);
+            this.label3.Size = new System.Drawing.Size(141, 38);
             this.label3.TabIndex = 62;
             this.label3.Text = "CINEMA ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -352,9 +352,9 @@
             this.lbl_cinemaNumber.BackColor = System.Drawing.Color.Transparent;
             this.lbl_cinemaNumber.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cinemaNumber.ForeColor = System.Drawing.Color.White;
-            this.lbl_cinemaNumber.Location = new System.Drawing.Point(658, 234);
+            this.lbl_cinemaNumber.Location = new System.Drawing.Point(664, 207);
             this.lbl_cinemaNumber.Name = "lbl_cinemaNumber";
-            this.lbl_cinemaNumber.Size = new System.Drawing.Size(55, 38);
+            this.lbl_cinemaNumber.Size = new System.Drawing.Size(31, 38);
             this.lbl_cinemaNumber.TabIndex = 63;
             this.lbl_cinemaNumber.Text = "2";
             this.lbl_cinemaNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

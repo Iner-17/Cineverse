@@ -467,7 +467,7 @@ namespace Cineverse
                 }
                 else
                 {
-                    MessageBox.Show("Password should have atleast 8 characters, 1 number, and 1 symbol.");
+                    MessageBox.Show("Password should have atleast 8 characters, 1 number, and 1 symbol.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_password.BorderColor = Color.Red;
                 }
                
