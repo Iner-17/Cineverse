@@ -935,7 +935,7 @@ namespace Cineverse
         }
 
         //METHOD DELETE BUTTON
-        private void deleteButton(string movieTitle)
+        public void deleteButton(string movieTitle)
         {
 
             if (movieTitle != "Title") { 

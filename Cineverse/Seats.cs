@@ -56,28 +56,47 @@ namespace Cineverse
             SelectingSeats();
             CheckAndRemovePastDates();
         }
+
+        //REMOVE SCREENING DATE IF BEHIND THE CURRENT DATE
         private void CheckAndRemovePastDates()
-        {
-            DateTime currentDate = DateTime.Now;
+    {
+            DateTime currentDate = DateTime.Now.Date;
             var itemsToRemove = cbo_dateLists.Items
                 .Cast<string>()
                 .Where(dateStr =>
                 {
                     DateTime date;
                     bool isValidDate = DateTime.TryParseExact(dateStr, "MMMM  dd,  yyyy", null, System.Globalization.DateTimeStyles.None, out date);
-                    return isValidDate && date < currentDate;
+                    return isValidDate && date.Date < currentDate; 
                 })
                 .ToList();
 
             foreach (var item in itemsToRemove)
             {
-                cbo_dateLists.Items.Remove(item);
+                MySqlConnection conn = DBConnection.getConnection();
+
+                try
+                {
+                    conn.Open();
+                    string deleteScreening = "DELETE screening FROM screening INNER JOIN movies ON screening.movie_id = movies.movie_id WHERE date = @Date AND title = @Title";
+                    MySqlCommand cmd = new MySqlCommand(deleteScreening, conn);
+                    cmd.Parameters.AddWithValue("Date", item);
+                    cmd.Parameters.AddWithValue("Title", cbo_titleLists.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
             }
         }
 
         private void cbo_dateLists_Click(object sender, EventArgs e)
         {
-            CheckAndRemovePastDates();
+            //CheckAndRemovePastDates();
         }
 
         public Seats ()
@@ -208,6 +227,15 @@ namespace Cineverse
                 MessageBox.Show("An error occured." + currentTitle);
             }
             finally { conn.Close(); }
+
+            CheckAndRemovePastDates();
+            if (cbo_dateLists.Items.Count <= 0)
+            {
+                MessageBox.Show("This movie currently has no screening anymore");
+
+                MoviesSection1 moviesSection1 = new MoviesSection1();
+                moviesSection1.deleteButton(cbo_titleLists.Text);
+            }
         }
 
         // CHANGE DATE GET TIME
