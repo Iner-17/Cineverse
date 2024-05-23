@@ -142,7 +142,6 @@
             this.lbl_vat.Size = new System.Drawing.Size(113, 25);
             this.lbl_vat.TabIndex = 42;
             this.lbl_vat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_vat.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
@@ -479,7 +478,6 @@
             this.pb_posterSelected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_posterSelected.TabIndex = 16;
             this.pb_posterSelected.TabStop = false;
-            this.pb_posterSelected.Click += new System.EventHandler(this.pb_posterSelected_Click);
             // 
             // label5
             // 

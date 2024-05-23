@@ -24,13 +24,14 @@ namespace Cineverse.UserControls
             InitializeComponent();
         }
 
+        //CBO TITLE
         private void ScheduleSection_Load(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
             try
             {
                 conn.Open();
-
+                
                 string query = "select distinct title from movies";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -52,7 +53,7 @@ namespace Cineverse.UserControls
             getSchedule();
         }
 
-
+        //DATA GRID VIEW QUERY
         public void getSchedule()
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -112,6 +113,7 @@ namespace Cineverse.UserControls
             getSchedule();
         }
 
+        //TODAY'S SCHEDULE
         private void btn_today_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -139,6 +141,7 @@ namespace Cineverse.UserControls
                 finally { conn.Close(); }
             } else
             {
+                //SCHEDULE OF SELECTED MOVIE ON CBO - TODAY
                 try
                 {
                     conn.Open();
@@ -177,6 +180,7 @@ namespace Cineverse.UserControls
 
         }
 
+        //CBO SELECTED MOVIES
         private void cbo_movies_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -206,6 +210,7 @@ namespace Cineverse.UserControls
             
         }
 
+        #region HOVER EFFECTS
         private void lbl_refresh_MouseEnter(object sender, EventArgs e)
         {
             lbl_refresh.ForeColor = Color.FromArgb(31, 178, 198);
@@ -297,7 +302,9 @@ namespace Cineverse.UserControls
             }
             
         }
+        #endregion
 
+        //DISPLAY WEEKLY SCHEDULE
         private void btn_thisWeek_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();

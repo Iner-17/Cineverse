@@ -24,27 +24,7 @@ namespace Cineverse
             InitializeComponent();
         }
 
-        
 
-        private void btn_backToDashboard_Click(object sender, EventArgs e)
-        {
-            Dashboard dashboard1 = new Dashboard();
-            //dashboard1.btn_dashboard_Click(this, EventArgs.Empty);
-            dashboard1.Show();
-            ((Form)this.TopLevelControl).Close();
-        }
-
-        private void btn_print_MouseEnter(object sender, EventArgs e)
-        {
-            btn_print.BackColor = Color.FromArgb(31, 178, 198);
-            btn_print.ForeColor = Color.Black;
-        }
-
-        private void btn_print_MouseLeave(object sender, EventArgs e)
-        {
-            btn_print.BackColor = Color.FromArgb(20, 32, 32);
-            btn_print.ForeColor = Color.White;
-        }
 
         public void passDataToReceiptForm(string title, string genre, string cinema_number, string time, string date, string seatLists, string vatValue, string discount, string totalAmount)
         {
@@ -86,9 +66,6 @@ namespace Cineverse
                     lbl_tcktPrice.Text = "₱ " + Convert.ToDouble(reader["price"]).ToString("F2");
                     price = Convert.ToDouble(reader["price"]);
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -114,12 +91,31 @@ namespace Cineverse
             }
         }
 
+        private void btn_backToDashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard1 = new Dashboard();
+            dashboard1.Show();
+            ((Form)this.TopLevelControl).Close();
+        }
+
         private void panel5_Click(object sender, EventArgs e)
         {
             Seats seats = new Seats();
             seats.Show();
 
             this.Hide();
+        }
+
+        private void btn_print_MouseEnter(object sender, EventArgs e)
+        {
+            btn_print.BackColor = Color.FromArgb(31, 178, 198);
+            btn_print.ForeColor = Color.Black;
+        }
+
+        private void btn_print_MouseLeave(object sender, EventArgs e)
+        {
+            btn_print.BackColor = Color.FromArgb(20, 32, 32);
+            btn_print.ForeColor = Color.White;
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Cineverse.UserControls
             try
             {
                 conn.Open();
-
+                //DATA GRID VIEW QUERY
                 string getListquery = @"
                         SELECT 
                             booking_id AS `Transaction ID`,
@@ -62,6 +62,7 @@ namespace Cineverse.UserControls
 
         private void dgv_booking_SelectionChanged(object sender, EventArgs e)
         {
+            //DISPLAY CLICKED CELLS TO MINI RECEIPT
             int bookingId = 0;
             if (dgv_booking.SelectedRows.Count > 0)
             {

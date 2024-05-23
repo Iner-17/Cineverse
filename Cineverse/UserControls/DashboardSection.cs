@@ -149,7 +149,7 @@ namespace Cineverse
             
         }
 
-        //NUMBER OF BOOKINGS & REVENUE
+        //TODAY'S BOOKINGS & REVENUE
         public void UpdateBookings()
         {
 

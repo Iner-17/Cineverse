@@ -28,6 +28,8 @@ namespace Cineverse
             InitializeComponent();
         }
         
+
+        //PASS DETAILS FROM SEATS FORM
         public void GetDataFromSeatForm(string title, string date_, string time, string seatLists)
         {
             DateTime date = DateTime.ParseExact(date_, "MMMM  dd,  yyyy", System.Globalization.CultureInfo.InvariantCulture);
@@ -43,6 +45,7 @@ namespace Cineverse
             movieTitle = title;
         }
 
+        //RECEIPT DETAILS
         private void PaymentForm_Load(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -129,7 +132,7 @@ namespace Cineverse
             }
         }
 
-
+        //VOUCHER DISCOOUNT
         private void btn_voucher_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -174,6 +177,7 @@ namespace Cineverse
             
         }
 
+        //SEATS AVAILABILITY
         private void UpdateAvailabilityToBooked(string seatList)
         {
             MySqlConnection conn = DBConnection.getConnection();
@@ -183,7 +187,7 @@ namespace Cineverse
                 string[] selectedSeats = seatList.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
                 string updateAvailabilityQuery = "UPDATE seats SET availability = 0 WHERE screening_id IN (SELECT screening_id FROM screening INNER JOIN movies ON screening.movie_id = movies.movie_id WHERE movies.title = @Title AND screening.date = @Date AND screening.start_time = @Time) AND seat_code IN (";
 
-                // Add seat codes to the update query
+                // SEATS CODE
                 for (int i = 0; i < selectedSeats.Length; i++)
                 {
                     updateAvailabilityQuery += $"@SeatCode{i}";
@@ -196,19 +200,19 @@ namespace Cineverse
                 MySqlCommand updateAvailabilityCmd = new MySqlCommand(updateAvailabilityQuery, conn);
                 updateAvailabilityCmd.Parameters.AddWithValue("@Title", lbl_titlePayment.Text);
 
-                // Split lbl_dateTime.Text to extract date and time separately
+                //FILDER DATE OF A SELECTED MOVIE
                 string[] dateTimeParts = lbl_dateTime.Text.Split(new string[] { " • " }, StringSplitOptions.RemoveEmptyEntries);
-                string date = dateTimeParts[0].Trim(); // date is the first part
+                string date = dateTimeParts[0].Trim();
                 updateAvailabilityCmd.Parameters.AddWithValue("@Date", date);
                 updateAvailabilityCmd.Parameters.AddWithValue("@Time", lbl_time.Text);
 
-                // Add parameters for each seat code
+                
                 for (int i = 0; i < selectedSeats.Length; i++)
                 {
                     updateAvailabilityCmd.Parameters.AddWithValue($"SeatCode{i}", selectedSeats[i]);
                 }
 
-                // Execute the update command
+                // EXECUTE THE UPDATE COMMAND
                 updateAvailabilityCmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -220,6 +224,7 @@ namespace Cineverse
 
         int lastInsertedId = 0;
 
+        
         private void btn_transactionComplete_Click(object sender, EventArgs e)
         {
 
@@ -230,6 +235,7 @@ namespace Cineverse
 
             else
             {
+                //CHANGE COLOR OF SEATS TO BLUE
                 UpdateAvailabilityToBooked(lbl_seats.Text);
 
                 int movie_id = 0;
@@ -240,6 +246,7 @@ namespace Cineverse
 
                 MySqlConnection conn = DBConnection.getConnection();
 
+                
                 try
                 {
                     conn.Open();
@@ -261,7 +268,8 @@ namespace Cineverse
 
                 MySqlCommand cmd = new MySqlCommand();
                 int bookingId = 0;
-                //Insert into bookings
+
+                //TO INSERT IN BOOKING SECTION
                 try
                 {
                     DateTime date = DateTime.Now;
@@ -290,7 +298,8 @@ namespace Cineverse
                 {
                     conn.Close();
                 }
-                //Insert into receipt
+
+                //INSERT INTO RECEIPT FORM
                 try
                 {
                 
@@ -314,7 +323,8 @@ namespace Cineverse
                 {
                     conn.Close();
                 }
-                //insert into cineverse revenue
+
+                //INSERT INTO CINEVERSE REVENUE - DATABASE
                 try
                 {
 
@@ -346,6 +356,54 @@ namespace Cineverse
             }
         }
 
+        //CASH VALIDATION
+        private void txt_cash_TextChanged(object sender, EventArgs e)
+        {
+            double cashPayement = 0;
+            double change = 0;
+            if (txt_cash.Text.Equals(""))
+            {
+                return;
+            }
+            else
+            {
+                cashPayement = Convert.ToDouble(txt_cash.Text);
+            }
+
+            double total2 = Convert.ToDouble(lbl_total2.Text.Replace("₱", ""));
+
+            if (cashPayement > total2)
+            {
+                lbl_change.Text = "CHANGE: ₱" + (cashPayement - total2);
+                change = (cashPayement - total2);
+            }
+            else if (cashPayement == (countSeat * price))
+            {
+                lbl_change.Text = "CHANGE: ₱ ";
+                change = (cashPayement - total2);
+            }
+            else if (cashPayement == ((countSeat * price) / 2))
+            {
+                lbl_change.Text = "CHANGE: ₱ ";
+            }
+            else
+            {
+                lbl_change.Text = "CHANGE: ₱";
+            }
+
+            ReceiptForm.Cash = cashPayement.ToString();
+            ReceiptForm.Change = change.ToString();
+        }
+
+        private void txt_cash_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
         private int dotCount = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -370,6 +428,7 @@ namespace Cineverse
             timer_paymentInProgress.Stop();
         }
 
+        #region HOVER EFFECTS 
         private void btn_voucher_MouseEnter(object sender, EventArgs e)
         {
             btn_submit.BackColor = Color.FromArgb(31, 178, 198);
@@ -382,69 +441,7 @@ namespace Cineverse
             btn_submit.ForeColor = Color.White;
         }
 
-        private void pb_posterSelected_Click(object sender, EventArgs e)
-        {
-
-        }
-
       
-
-        private void txt_cash_TextChanged(object sender, EventArgs e)
-        {
-            double cashPayement = 0;
-            double change = 0;
-            if (txt_cash.Text.Equals(""))
-            {
-                return;
-            } 
-            else
-            {
-               cashPayement = Convert.ToDouble(txt_cash.Text);
-            }
-
-            double total2 = Convert.ToDouble(lbl_total2.Text.Replace("₱", ""));
-
-            if (cashPayement > total2)
-            {
-                lbl_change.Text = "CHANGE: ₱" + (cashPayement - total2);
-                change = (cashPayement - total2);
-            }
-            else if (cashPayement == (countSeat * price))
-            {
-                lbl_change.Text = "CHANGE: ₱ ";
-                change = (cashPayement - total2);
-            } else if (cashPayement == ((countSeat * price) / 2))
-            {
-                lbl_change.Text = "CHANGE: ₱ ";
-            } else
-            {
-                lbl_change.Text = "CHANGE: ₱";
-            }
-
-
-
-            ReceiptForm.Cash = cashPayement.ToString();
-            ReceiptForm.Change = change.ToString();
-        }
-
-        private void txt_cash_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-
-
-
-
-
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btn_back_MouseEnter(object sender, EventArgs e)
         {
             btn_back.BackColor = Color.FromArgb(31, 178, 198);
@@ -457,21 +454,7 @@ namespace Cineverse
             btn_back.ForeColor = Color.White;
         }
 
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            Seats seats = new Seats();
-            seats.Show();
 
-            this.Hide();
-        }
-
-        private void panel5_Click(object sender, EventArgs e)
-        {
-            Seats seats = new Seats();
-            seats.Show();
-
-            this.Hide();
-        }
         private void btn_enterVoucherCode_MouseEnter_1(object sender, EventArgs e)
         {
             btn_enterVoucherCode.BackColor = Color.FromArgb(31, 178, 198);
@@ -499,6 +482,23 @@ namespace Cineverse
                 pnl_progress.Location = new Point(206, 222);
 
             }
+        }
+#endregion
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Seats seats = new Seats();
+            seats.Show();
+
+            this.Hide();
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Seats seats = new Seats();
+            seats.Show();
+
+            this.Hide();
         }
     }
 }
