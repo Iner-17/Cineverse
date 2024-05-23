@@ -217,11 +217,6 @@
             this.cbo_cinemaNum.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_cinemaNum.ForeColor = System.Drawing.SystemColors.Menu;
             this.cbo_cinemaNum.FormattingEnabled = true;
-            this.cbo_cinemaNum.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
             this.cbo_cinemaNum.Location = new System.Drawing.Point(504, 267);
             this.cbo_cinemaNum.Name = "cbo_cinemaNum";
             this.cbo_cinemaNum.Size = new System.Drawing.Size(100, 27);
@@ -258,13 +253,6 @@
             this.cbo_rating.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_rating.ForeColor = System.Drawing.SystemColors.Menu;
             this.cbo_rating.FormattingEnabled = true;
-            this.cbo_rating.Items.AddRange(new object[] {
-            "G",
-            "PG",
-            "R",
-            "R-13",
-            "R-16",
-            "R-18"});
             this.cbo_rating.Location = new System.Drawing.Point(354, 267);
             this.cbo_rating.Name = "cbo_rating";
             this.cbo_rating.Size = new System.Drawing.Size(116, 27);
@@ -277,19 +265,6 @@
             this.cbo_addGenre.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_addGenre.ForeColor = System.Drawing.SystemColors.Menu;
             this.cbo_addGenre.FormattingEnabled = true;
-            this.cbo_addGenre.Items.AddRange(new object[] {
-            "Action",
-            "Animation",
-            "Comedy",
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Romance",
-            "Romantic Comedy",
-            "Science Fiction",
-            "Thriller",
-            "Western"});
             this.cbo_addGenre.Location = new System.Drawing.Point(116, 267);
             this.cbo_addGenre.Name = "cbo_addGenre";
             this.cbo_addGenre.Size = new System.Drawing.Size(211, 27);
@@ -359,6 +334,7 @@
             this.Name = "AddMovie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.AddMovie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
