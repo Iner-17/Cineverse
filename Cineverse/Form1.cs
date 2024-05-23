@@ -55,18 +55,17 @@ namespace Cineverse
                     string hashedPassword = "";
 
                     conn.Open();
-                    string loginQuery = "SELECT user_id, password FROM accounts WHERE username=@username OR email=@Email";
+                    string loginQuery = "SELECT user_id, password FROM accounts WHERE username=@username";
                     MySqlCommand loginCmd = new MySqlCommand(loginQuery, conn);
                     loginCmd.Parameters.AddWithValue("@username", txt_user.Text);
-                    loginCmd.Parameters.AddWithValue("@Email", txt_user.Text);
                     MySqlDataReader reader = loginCmd.ExecuteReader();
                     while (reader.Read()) { 
                     hashedPassword = reader["password"].ToString();
                         TimeINOUT.user_id = Convert.ToInt32(reader["user_id"].ToString());
                     }
 
-                    if (txt_user.Text.Equals("Enter Username or Email") && txt_pass.Text.Equals("Enter Password")) {
-                        string usernamePlaceholder = "Enter Username or Email";
+                    if (txt_user.Text.Equals("Enter Username") && txt_pass.Text.Equals("Enter Password")) {
+                        string usernamePlaceholder = "Enter Username";
                         string passwordPlaceholder = "Enter Password";
                         string usernameInput = txt_user.Text.Trim();
 
@@ -115,7 +114,7 @@ namespace Cineverse
                     {
                         MessageBox.Show("Incorrect username or password", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         txt_pass.UseSystemPasswordChar = false;
-                        txt_user.Text = "Enter Username or Email";
+                        txt_user.Text = "Enter Username";
                         txt_pass.Text = "Enter Password";
 
                     }
@@ -151,7 +150,7 @@ namespace Cineverse
 
         private void txt_user_Enter(object sender, EventArgs e)
         {
-            if (txt_user.Text == "Enter Username or Email")
+            if (txt_user.Text == "Enter Username")
             {
                 txt_user.Text = "";
                 txt_user.ForeColor = Color.White;
@@ -162,7 +161,7 @@ namespace Cineverse
         {
             if (txt_user.Text == "")
             {
-                txt_user.Text = "Enter Username or Email";
+                txt_user.Text = "Enter Username";
                 txt_user.ForeColor = Color.Silver;
                
             }
@@ -221,7 +220,7 @@ namespace Cineverse
             string userInput = txt_user.Text.Trim();
 
 
-            if (!string.IsNullOrEmpty(userInput) && userInput != "Enter Username or Email")
+            if (!string.IsNullOrEmpty(userInput) && userInput != "Enter Username")
             {
                 txt_user.BorderColor = SystemColors.ControlDark;
                 ep_username.SetError(txt_user, string.Empty);

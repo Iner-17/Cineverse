@@ -362,7 +362,7 @@ namespace Cineverse
                 if (string.IsNullOrEmpty(emailInput) || emailInput == emailPlaceholder)
                 {
                     txt_email.BorderColor = Color.Red;
-                    ep_FN.SetError(txt_email, "You'll use this when you log in and if you need to reset your Password.");
+                    ep_FN.SetError(txt_email, "You'll use this when you need to reset your Password.");
                 }
                 else
                 {
