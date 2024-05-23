@@ -55,9 +55,10 @@ namespace Cineverse
                     string hashedPassword = "";
 
                     conn.Open();
-                    string loginQuery = "SELECT user_id, password FROM accounts WHERE username=@username";
+                    string loginQuery = "SELECT user_id, password FROM accounts WHERE username=@username OR email=@Email";
                     MySqlCommand loginCmd = new MySqlCommand(loginQuery, conn);
                     loginCmd.Parameters.AddWithValue("@username", txt_user.Text);
+                    loginCmd.Parameters.AddWithValue("@Email", txt_user.Text);
                     MySqlDataReader reader = loginCmd.ExecuteReader();
                     while (reader.Read()) { 
                     hashedPassword = reader["password"].ToString();

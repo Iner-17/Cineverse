@@ -31,6 +31,83 @@ namespace Cineverse
 
         }
 
+        private void AddMovie_Load(object sender, EventArgs e)
+        {
+            listGenre();
+            listCinemaNumber();
+            listMovieRating();
+        }
+
+        private void listGenre()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+                string query = "SELECT cm_genreList FROM cm_genre";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cbo_addGenre.Items.Add(reader["cm_genreList"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }   
+        }
+
+        private void listCinemaNumber()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+                string query = "SELECT cm_cinemaNumber FROM cm_cinemanumber";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cbo_cinemaNum.Items.Add(reader["cm_cinemaNumber"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+        }
+
+        private void listMovieRating()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+
+            try
+            {
+                conn.Open();
+                string query = "SELECT cm_movieRating FROM cm_movierating";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cbo_rating.Items.Add(reader["cm_movieRating"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+        }
+
+
         public static int movieId = 0;
 
 
@@ -212,5 +289,7 @@ namespace Cineverse
                 e.Handled = true;
             }
         }
+
+       
     }
 }
