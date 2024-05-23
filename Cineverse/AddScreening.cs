@@ -29,6 +29,8 @@ namespace Cineverse
             InitializeComponent();
         }
 
+
+
         private void AddScreening_Load(object sender, EventArgs e)
         {
             lbl_cinemaNumber.Text = GlobalLabelCinemaNumber;

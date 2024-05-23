@@ -337,6 +337,7 @@
             this.cbo_dateLists.Size = new System.Drawing.Size(270, 36);
             this.cbo_dateLists.TabIndex = 22;
             this.cbo_dateLists.SelectedIndexChanged += new System.EventHandler(this.cbo_dateLists_SelectedIndexChanged);
+            this.cbo_dateLists.Click += new System.EventHandler(this.cbo_dateLists_Click);
             // 
             // cbo_titleLists
             // 

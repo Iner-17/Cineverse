@@ -54,6 +54,30 @@ namespace Cineverse
             InitializeComponent();
             this.username = username;
             SelectingSeats();
+            CheckAndRemovePastDates();
+        }
+        private void CheckAndRemovePastDates()
+        {
+            DateTime currentDate = DateTime.Now;
+            var itemsToRemove = cbo_dateLists.Items
+                .Cast<string>()
+                .Where(dateStr =>
+                {
+                    DateTime date;
+                    bool isValidDate = DateTime.TryParseExact(dateStr, "MMMM  dd,  yyyy", null, System.Globalization.DateTimeStyles.None, out date);
+                    return isValidDate && date < currentDate;
+                })
+                .ToList();
+
+            foreach (var item in itemsToRemove)
+            {
+                cbo_dateLists.Items.Remove(item);
+            }
+        }
+
+        private void cbo_dateLists_Click(object sender, EventArgs e)
+        {
+            CheckAndRemovePastDates();
         }
 
         public Seats ()
@@ -416,5 +440,7 @@ namespace Cineverse
             passDataToPaymentForm();
 
         }
+
+       
     }
 }
