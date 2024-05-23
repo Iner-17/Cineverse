@@ -49,6 +49,7 @@
             this.btn_monthly = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_yearly = new System.Windows.Forms.Button();
             this.btn_weekly = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -216,7 +217,7 @@
             this.btn_daily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_daily.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_daily.ForeColor = System.Drawing.Color.White;
-            this.btn_daily.Location = new System.Drawing.Point(135, 28);
+            this.btn_daily.Location = new System.Drawing.Point(34, 26);
             this.btn_daily.Name = "btn_daily";
             this.btn_daily.Size = new System.Drawing.Size(211, 42);
             this.btn_daily.TabIndex = 24;
@@ -236,7 +237,7 @@
             this.btn_monthly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_monthly.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_monthly.ForeColor = System.Drawing.Color.White;
-            this.btn_monthly.Location = new System.Drawing.Point(621, 28);
+            this.btn_monthly.Location = new System.Drawing.Point(504, 24);
             this.btn_monthly.Name = "btn_monthly";
             this.btn_monthly.Size = new System.Drawing.Size(211, 42);
             this.btn_monthly.TabIndex = 26;
@@ -259,6 +260,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel2.Controls.Add(this.btn_yearly);
             this.panel2.Controls.Add(this.btn_weekly);
             this.panel2.Controls.Add(this.RevenueChart);
             this.panel2.Controls.Add(this.btn_monthly);
@@ -267,6 +269,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(969, 660);
             this.panel2.TabIndex = 13;
+            // 
+            // btn_yearly
+            // 
+            this.btn_yearly.BackColor = System.Drawing.Color.Transparent;
+            this.btn_yearly.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_yearly.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_yearly.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_yearly.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(178)))), ((int)(((byte)(198)))));
+            this.btn_yearly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_yearly.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_yearly.ForeColor = System.Drawing.Color.White;
+            this.btn_yearly.Location = new System.Drawing.Point(737, 24);
+            this.btn_yearly.Name = "btn_yearly";
+            this.btn_yearly.Size = new System.Drawing.Size(204, 42);
+            this.btn_yearly.TabIndex = 28;
+            this.btn_yearly.Text = "Yearly";
+            this.btn_yearly.UseVisualStyleBackColor = false;
+            this.btn_yearly.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_weekly
             // 
@@ -278,7 +298,7 @@
             this.btn_weekly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_weekly.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_weekly.ForeColor = System.Drawing.Color.White;
-            this.btn_weekly.Location = new System.Drawing.Point(378, 28);
+            this.btn_weekly.Location = new System.Drawing.Point(270, 26);
             this.btn_weekly.Name = "btn_weekly";
             this.btn_weekly.Size = new System.Drawing.Size(211, 42);
             this.btn_weekly.TabIndex = 27;
@@ -454,5 +474,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btn_yearly;
     }
 }

@@ -19,6 +19,7 @@ namespace Cineverse
         private bool dailyButtonisActive = false;
         private bool weeklyButtonisActive = false;
         private bool monthlyButtonisActive = false;
+        private bool yearlyButtonisActive = false;
         public StatisticsForm()
         {
             InitializeComponent();
@@ -398,6 +399,71 @@ namespace Cineverse
             }
         }
 
+        private void DisplayYearlyRevenueChart(DataTable tbl)
+        {
+            RevenueChart.Series.Clear();
+            ResetChartArea();
+            if (tbl == null || tbl.Rows.Count == 0) return;
+
+            var sortedRevenue = tbl.AsEnumerable().OrderBy(row =>
+            {
+                int yearNumber = row.Field<int>("YearNumber");
+                return yearNumber;
+            });
+
+            Series splineSeries = new Series("Total Revenue")
+            {
+                ChartType = SeriesChartType.Spline,
+                BorderWidth = 2,
+                Color = Color.FromArgb(31, 178, 198),
+                MarkerStyle = MarkerStyle.Circle,
+                MarkerSize = 10
+            };
+
+            Series areaSeries = new Series("Gradient Area")
+            {
+                ChartType = SeriesChartType.SplineArea,
+                BorderWidth = 0
+            };
+            areaSeries.BackGradientStyle = GradientStyle.TopBottom;
+
+            foreach (DataRow row in sortedRevenue)
+            {
+                int yearNumber = row.Field<int>("YearNumber");
+                double totalRevenue = Convert.ToDouble(row["Revenue"]);
+
+                DataPoint dataPoint = new DataPoint(yearNumber, totalRevenue);
+                dataPoint.MarkerStyle = MarkerStyle.Circle;
+                dataPoint.MarkerSize = 10;
+                dataPoint.BorderWidth = 2;
+                splineSeries.Points.Add(dataPoint);
+                areaSeries.Points.Add(dataPoint);
+            }
+
+            areaSeries.Color = Color.FromArgb(31, 178, 198);
+            RevenueChart.Series.Add(splineSeries);
+            RevenueChart.Series.Add(areaSeries);
+
+            var chartArea = RevenueChart.ChartAreas[0];
+            chartArea.AxisX.Minimum = tbl.AsEnumerable().Min(row => row.Field<int>("YearNumber")) - 0.5;
+            chartArea.AxisX.Maximum = tbl.AsEnumerable().Max(row => row.Field<int>("YearNumber")) + 0.5;
+            chartArea.AxisX.Interval = 1;
+            chartArea.AxisX.LabelStyle.Interval = 1;
+            chartArea.AxisX.LabelStyle.Enabled = true;
+
+            RevenueChart.BackColor = Color.FromArgb(27, 28, 30);
+            RevenueChart.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(64, 64, 64);
+            RevenueChart.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(64, 64, 64);
+            RevenueChart.ChartAreas[0].AxisX.LineColor = Color.White;
+            RevenueChart.ChartAreas[0].AxisY.LineColor = Color.White;
+            RevenueChart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            RevenueChart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+
+            chartArea.AxisX.Title = "YEAR";
+            chartArea.AxisY.Title = "REVENUE ₱";
+        }
+
+
         //HOURLY QUERY
         private void todayRevenue()
         {
@@ -584,6 +650,59 @@ namespace Cineverse
             RevenueChart.Titles.Add(chartTitle);
         }
 
+        private void YearlyRevenue()
+        {
+            MySqlConnection conn = DBConnection.getConnection();
+            DateTime currentDate = DateTime.Today;
+            DateTime firstDayOfYear = new DateTime(currentDate.Year, 1, 1);
+            DateTime lastDayOfYear = new DateTime(currentDate.Year, 12, 31);
+
+            try
+            {
+                conn.Open();
+
+                string getListquery = @"
+        SELECT 
+            YEAR(STR_TO_DATE(currentDate, '%d/%m/%Y')) AS YearNumber, 
+            SUM(ticket_total) AS Revenue 
+        FROM 
+            bookings 
+        WHERE 
+            STR_TO_DATE(currentDate, '%d/%m/%Y') BETWEEN STR_TO_DATE(@StartDate, '%d/%m/%Y') AND STR_TO_DATE(@EndDate, '%d/%m/%Y')
+        GROUP BY 
+            YEAR(STR_TO_DATE(currentDate, '%d/%m/%Y'))";
+
+                MySqlCommand getListcmd = new MySqlCommand(getListquery, conn);
+                getListcmd.Parameters.AddWithValue("@StartDate", firstDayOfYear.ToString("dd/MM/yyyy • dddd"));
+                getListcmd.Parameters.AddWithValue("@EndDate", lastDayOfYear.ToString("dd/MM/yyyy • dddd"));
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(getListcmd);
+
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+
+                // Display the yearly revenue chart using the method
+                DisplayYearlyRevenueChart(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            Title chartTitle = new Title("CINÉVERSE'S YEARLY REVENUE")
+            {
+                Font = new Font("Montserrat", 20, FontStyle.Bold),
+                ForeColor = Color.White,
+                Alignment = ContentAlignment.TopCenter
+            };
+
+            RevenueChart.Titles.Clear();
+            RevenueChart.Titles.Add(chartTitle);
+        }
+
         //DAILY ONCLICK - DISPLAY PER DAY REVENUE
         private void btn_daily_Click(object sender, EventArgs e)
         {
@@ -596,9 +715,13 @@ namespace Cineverse
             btn_monthly.BackColor = Color.FromArgb(20, 32, 32);
             btn_monthly.ForeColor = Color.White;
 
+            btn_yearly.BackColor = Color.FromArgb(20, 32, 32);
+            btn_yearly.ForeColor = Color.White;
+
             dailyButtonisActive = true;
             weeklyButtonisActive = false;
             monthlyButtonisActive = false;
+            yearlyButtonisActive = false;
 
             DailyRevenue();
             TodayStatisticsRevenue();
@@ -616,10 +739,14 @@ namespace Cineverse
             btn_monthly.BackColor = Color.FromArgb(20, 32, 32);
             btn_monthly.ForeColor = Color.White;
 
-         
+            btn_yearly.BackColor = Color.FromArgb(20, 32, 32);
+            btn_yearly.ForeColor = Color.White;
+
+
             dailyButtonisActive = false;
             weeklyButtonisActive = true;
             monthlyButtonisActive = false;
+            yearlyButtonisActive = false;
 
             WeeklyRevenue();
             WeeklyStatisticsRevenue();
@@ -637,14 +764,40 @@ namespace Cineverse
             btn_monthly.BackColor = Color.FromArgb(31, 178, 198);
             btn_monthly.ForeColor = Color.Black;
 
+            btn_yearly.BackColor = Color.FromArgb(20, 32, 32);
+            btn_yearly.ForeColor = Color.White;
+
             dailyButtonisActive = false;
             weeklyButtonisActive = false;
             monthlyButtonisActive = true;
-
+            yearlyButtonisActive = false;
             MonthlyRevenue();
             MonthlyStatisticsRevenue();
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btn_daily.BackColor = Color.FromArgb(20, 32, 32);
+            btn_daily.ForeColor = Color.White;
+
+            btn_weekly.BackColor = Color.FromArgb(20, 32, 32);
+            btn_weekly.ForeColor = Color.White;
+
+            btn_monthly.BackColor = Color.FromArgb(20, 32, 32);
+            btn_monthly.ForeColor = Color.White;
+
+            btn_yearly.BackColor = Color.FromArgb(31, 178, 198);
+            btn_yearly.ForeColor = Color.Black;
+
+            dailyButtonisActive = false;
+            weeklyButtonisActive = false;
+            monthlyButtonisActive = false;
+            monthlyButtonisActive = true;
+
+            YearlyRevenue();
+            YearlyStatisticsRevenue();
+        }
 
         //TODAY'S STATISCTICS
         public void TodayStatisticsRevenue()
@@ -846,6 +999,75 @@ namespace Cineverse
         }
 
 
+        //YEARLY STATISTIC
+        public void YearlyStatisticsRevenue()
+        {
+            DateTime currentDate = DateTime.Now;
+            MySqlConnection conn = DBConnection.getConnection();
+
+            // Get the first and last day of the current year
+            DateTime firstDayOfYear = new DateTime(currentDate.Year, 1, 1);
+            DateTime lastDayOfYear = new DateTime(currentDate.Year, 12, 31);
+
+            // Get total bookings for the current year
+            try
+            {
+                conn.Open();
+                string getBookingsData = "SELECT SUM(ticket_quantity) FROM bookings WHERE currentDate BETWEEN @StartDate AND @EndDate;";
+                MySqlCommand cmd = new MySqlCommand(getBookingsData, conn);
+                cmd.Parameters.AddWithValue("@StartDate", firstDayOfYear.ToString("dd/MM/yyyy"));
+                cmd.Parameters.AddWithValue("@EndDate", lastDayOfYear.ToString("dd/MM/yyyy"));
+                object result = cmd.ExecuteScalar();
+
+                if (result == null || result == DBNull.Value)
+                {
+                    lbl_totalTransactions.Text = "0";
+                }
+                else
+                {
+                    lbl_totalTransactions.Text = result.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving yearly statistics: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            // Get total revenue for the current year
+            try
+            {
+                conn.Open();
+                string getRevenueData = "SELECT SUM(ticket_total) FROM bookings WHERE currentDate BETWEEN @StartDate AND @EndDate;";
+                MySqlCommand cmd = new MySqlCommand(getRevenueData, conn);
+                cmd.Parameters.AddWithValue("@StartDate", firstDayOfYear.ToString("dd/MM/yyyy"));
+                cmd.Parameters.AddWithValue("@EndDate", lastDayOfYear.ToString("dd/MM/yyyy"));
+                object result = cmd.ExecuteScalar();
+
+                double totalRevenue = result == DBNull.Value ? 0 : Convert.ToDouble(result);
+                if (result == null || result == DBNull.Value)
+                {
+                    lbl_totalRevenue.Text = "₱0";
+                }
+                else
+                {
+                    double totalRev = Convert.ToDouble(result);
+                    lbl_totalRevenue.Text = "₱" + totalRev.ToString("F2");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving yearly revenue: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         //HOVER EFFECTS
         #region button Effects
 
@@ -941,5 +1163,7 @@ namespace Cineverse
             dashboard.Show();
             this.Close();
         }
+
+        
     }
 }
