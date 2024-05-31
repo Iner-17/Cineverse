@@ -41,7 +41,7 @@ namespace Cineverse
         private void listGenre()
         {
             MySqlConnection conn = DBConnection.getConnection();
-
+            List<string> genreList = new List<string>();
             try
             {
                 conn.Open();
@@ -51,14 +51,23 @@ namespace Cineverse
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    cbo_addGenre.Items.Add(reader["cm_genreList"].ToString());
+                    genreList.Add(reader["cm_genreList"].ToString());
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { conn.Close(); }   
+            finally 
+            {
+                conn.Close();
+                genreList.Sort();
+            }   
+
+            foreach (string genre in genreList)
+            {
+                cbo_addGenre.Items.Add(genre);
+            }
         }
 
         private void listCinemaNumber()

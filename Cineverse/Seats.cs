@@ -99,6 +99,7 @@ namespace Cineverse
             //CheckAndRemovePastDates();
         }
 
+      
         public Seats ()
         {
             InitializeComponent();
