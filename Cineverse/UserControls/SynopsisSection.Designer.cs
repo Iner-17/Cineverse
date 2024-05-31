@@ -45,6 +45,7 @@
             this.pb_Poster1 = new System.Windows.Forms.PictureBox();
             this.cbo_titleLists = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Poster1)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +80,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -152,7 +154,7 @@
             this.lbl_rating.ForeColor = System.Drawing.Color.White;
             this.lbl_rating.Location = new System.Drawing.Point(354, 122);
             this.lbl_rating.Name = "lbl_rating";
-            this.lbl_rating.Size = new System.Drawing.Size(60, 21);
+            this.lbl_rating.Size = new System.Drawing.Size(59, 19);
             this.lbl_rating.TabIndex = 87;
             this.lbl_rating.Text = "Rating";
             // 
@@ -199,7 +201,7 @@
             this.lbl_genre1.ForeColor = System.Drawing.Color.White;
             this.lbl_genre1.Location = new System.Drawing.Point(354, 160);
             this.lbl_genre1.Name = "lbl_genre1";
-            this.lbl_genre1.Size = new System.Drawing.Size(56, 21);
+            this.lbl_genre1.Size = new System.Drawing.Size(54, 19);
             this.lbl_genre1.TabIndex = 83;
             this.lbl_genre1.Text = "Genre";
             // 
@@ -211,7 +213,7 @@
             this.lbl_duration1.ForeColor = System.Drawing.Color.White;
             this.lbl_duration1.Location = new System.Drawing.Point(354, 141);
             this.lbl_duration1.Name = "lbl_duration1";
-            this.lbl_duration1.Size = new System.Drawing.Size(75, 21);
+            this.lbl_duration1.Size = new System.Drawing.Size(76, 19);
             this.lbl_duration1.TabIndex = 81;
             this.lbl_duration1.Text = "Duration";
             // 
@@ -266,6 +268,18 @@
             this.label4.Text = "- MOVIE TITLE -";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::Cineverse.Properties.Resources.edit;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Location = new System.Drawing.Point(748, 93);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(24, 23);
+            this.panel2.TabIndex = 103;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
             // SynopsisSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +320,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel2;
     }
 }

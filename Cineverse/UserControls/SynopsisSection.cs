@@ -165,6 +165,16 @@ namespace Cineverse.UserControls
             Dashboard dashboard1 = (Dashboard)Application.OpenForms["Dashboard"];
             dashboard1.btn_movies_Click(this, EventArgs.Empty);
         }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            EditDetails edit = new EditDetails();
+            EditDetails.title = lbl_Title1.Text;
+            edit.Show();
+
+            ((Form)this.TopLevelControl).Close();
+
+        }
     }
     
 }

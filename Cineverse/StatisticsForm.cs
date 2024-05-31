@@ -399,6 +399,7 @@ namespace Cineverse
             }
         }
 
+        //YEARLY QUERY
         private void DisplayYearlyRevenueChart(DataTable tbl)
         {
             RevenueChart.Series.Clear();
@@ -793,7 +794,7 @@ namespace Cineverse
             dailyButtonisActive = false;
             weeklyButtonisActive = false;
             monthlyButtonisActive = false;
-            monthlyButtonisActive = true;
+            yearlyButtonisActive = true;
 
             YearlyRevenue();
             YearlyStatisticsRevenue();
@@ -1154,6 +1155,33 @@ namespace Cineverse
             }
         }
 
+        private void btn_yearly_MouseEnter(object sender, EventArgs e)
+        {
+            if (yearlyButtonisActive == false)
+            {
+                btn_yearly.BackColor = Color.FromArgb(31, 178, 198);
+                btn_yearly.ForeColor = Color.Black;
+            }
+            else
+            {
+                return;
+            }
+
+        }
+
+        private void btn_yearly_MouseLeave(object sender, EventArgs e)
+        {
+            if (yearlyButtonisActive == false)
+            {
+                btn_yearly.BackColor = Color.FromArgb(20, 32, 32);
+                btn_yearly.ForeColor = Color.White;
+            }
+            else
+            {
+                return;
+            }
+        }
+
         #endregion
 
         //EXIT BUTTON
@@ -1164,6 +1192,6 @@ namespace Cineverse
             this.Close();
         }
 
-        
+       
     }
 }

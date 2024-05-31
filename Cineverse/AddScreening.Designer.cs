@@ -45,7 +45,6 @@
             this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbl_screeningdate = new System.Windows.Forms.Label();
             this.dgv_booking = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -201,18 +200,6 @@
             this.label6.Size = new System.Drawing.Size(182, 19);
             this.label6.TabIndex = 41;
             this.label6.Text = "Enter Screening Date";
-            // 
-            // lbl_screeningdate
-            // 
-            this.lbl_screeningdate.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_screeningdate.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_screeningdate.ForeColor = System.Drawing.Color.White;
-            this.lbl_screeningdate.Location = new System.Drawing.Point(829, 207);
-            this.lbl_screeningdate.Name = "lbl_screeningdate";
-            this.lbl_screeningdate.Size = new System.Drawing.Size(240, 38);
-            this.lbl_screeningdate.TabIndex = 53;
-            this.lbl_screeningdate.Text = "January 01, 2024";
-            this.lbl_screeningdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dgv_booking
             // 
@@ -372,7 +359,6 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbl_screeningdate);
             this.Controls.Add(this.dgv_booking);
             this.Controls.Add(this.btn_addScreening);
             this.Controls.Add(this.dtp_time);
@@ -410,7 +396,6 @@
         private System.Windows.Forms.DateTimePicker dtp_date;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.Label lbl_screeningdate;
         private System.Windows.Forms.DataGridView dgv_booking;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;

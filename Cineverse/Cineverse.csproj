@@ -156,6 +156,12 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDetails.Designer.cs">
+      <DependentUpon>EditDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDetails.resx">
+      <DependentUpon>EditDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>

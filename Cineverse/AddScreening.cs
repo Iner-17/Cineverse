@@ -110,7 +110,7 @@ namespace Cineverse
             DateTime startTime = DateTime.ParseExact(inputTime, "HH:mm", null);
 
             int lastIndexAddedTime = cmb_timeAdded.Items.Count - 1; //COMBO BOX LAST SCREENING TIME
-            int lastIndexDGVTime = dgv_booking.Rows.Count - 2;//DGV LAST SCREENING TIME 
+            int lastIndexDGVTime = dgv_booking.Rows.Count - 1;//DGV LAST SCREENING TIME 
 
             bool isConflict = false; 
 

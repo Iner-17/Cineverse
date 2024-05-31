@@ -287,6 +287,8 @@
             this.btn_yearly.Text = "Yearly";
             this.btn_yearly.UseVisualStyleBackColor = false;
             this.btn_yearly.Click += new System.EventHandler(this.button1_Click);
+            this.btn_yearly.MouseEnter += new System.EventHandler(this.btn_yearly_MouseEnter);
+            this.btn_yearly.MouseLeave += new System.EventHandler(this.btn_yearly_MouseLeave);
             // 
             // btn_weekly
             // 
